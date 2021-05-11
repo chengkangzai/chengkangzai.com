@@ -21,7 +21,7 @@ class Post extends Model
     ];
 
     protected $fillable = [
-        'content', 'title', 'status'
+        'content', 'title', 'status', 'slug'
     ];
 
     /**
