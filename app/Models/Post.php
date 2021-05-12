@@ -10,6 +10,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
  * @method static inRandomOrder()
+ * @method static paginate()
  */
 class Post extends Model
 {

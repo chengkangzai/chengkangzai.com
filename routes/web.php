@@ -20,7 +20,7 @@ Route::get('/', function () {
 });
 Route::view('home', 'home');
 
-Route::group(['prefix' => 'admin', 'middleware' => 'auth', 'name' => 'admin',], function () {
+Route::group(['prefix' => 'admin', 'middleware' => 'auth', 'name' => 'admin', 'as' => 'admin.'], function () {
     Route::resource('posts', PostController::class);
 });
 
