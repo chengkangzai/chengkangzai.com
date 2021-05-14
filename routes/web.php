@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::view('home', 'home');
+Route::view('home', 'home')->name('home');
 
 Route::group(['prefix' => 'admin', 'middleware' => 'auth', 'name' => 'admin', 'as' => 'admin.'], function () {
     Route::resource('posts', PostController::class);
