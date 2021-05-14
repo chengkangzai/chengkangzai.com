@@ -24,7 +24,8 @@
                                 <li>Create</li>
                             </ul>
                         </div>
-                        <form onsubmit="return onSubmitCreatePostForm(event)" action="{{route('admin.posts.store')}}" method="POST" id="createPostForm"
+                        <form onsubmit="return onSubmitCreatePostForm(event)" action="{{route('admin.posts.store')}}"
+                              method="POST" id="createPostForm"
                               class="space-y-3 dark:text-white mb-2 px-5">
                             @csrf
                             <div class="space-y-2">
@@ -38,7 +39,7 @@
                                 <select id="tags" name="tags[]"
                                         class="w-full border bg-white border-gray-400 text-gray-800 placeholder-gray-400 rounded focus:border-transparent focus:outline-none focus:shadow-outline px-3 py-2">
                                     @foreach(\Spatie\Tags\Tag::all() as $tag)
-                                        <option value="{{$tag->id}}">{{$tag->name}}</option>
+                                        <option value="{{$tag->name}}">{{$tag->name}}</option>
                                     @endforeach
                                 </select>
                             </div>
@@ -123,6 +124,7 @@
     <script src="https://cdn.jsdelivr.net/npm/tom-select@1.1/dist/js/tom-select.complete.min.js"></script>
     <script>
         new TomSelect('#tags', {
+            items: [],
             maxItems: 10
         });
     </script>

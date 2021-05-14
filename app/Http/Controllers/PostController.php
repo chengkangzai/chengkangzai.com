@@ -2,12 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StorePostRequest;
 use App\Models\Post;
+use DB;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
-use Illuminate\Http\Request;
-use Illuminate\Http\Response;
+use Illuminate\Http\RedirectResponse;
+use Str;
+use Throwable;
 
 class PostController extends Controller
 {
@@ -18,7 +21,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::withCount('comments')->paginate(10);
+        $posts = Post::withCount('comments')->with('tags')->paginate(5);
         return view('admin.post.index', compact('posts'));
     }
 
@@ -35,57 +38,79 @@ class PostController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param Request $request
-     * @return Response
+     * @param StorePostRequest $request
+     * @return RedirectResponse
+     * @throws Throwable
      */
-    public function store(Request $request)
+    public function store(StorePostRequest $request): RedirectResponse
     {
-        dd($request->all());
+        DB::transaction(function () use ($request) {
+            $post = Post::create([
+                'title' => $request->title,
+                'content' => $request->get('content'),
+                'status' => Post::STATUS[$request->get('status')],
+                'slug' => Str::slug($request->title)
+            ]);
+            return $post->attachTags($request->get('tags'));
+        });
+
+        return redirect()->route('admin.posts.index');
     }
 
     /**
      * Display the specified resource.
      *
      * @param Post $post
-     * @return Response
+     * @return Application|Factory|View
      */
     public function show(Post $post)
     {
-        echo $post;
+        return view('admin.post.show', compact('post'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
      * @param Post $post
-     * @return Response
+     * @return Application|Factory|View
      */
     public function edit(Post $post)
     {
-        echo $post;
+        return view('admin.post.edit', compact('post'));
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param Request $request
+     * @param StorePostRequest $request
      * @param Post $post
-     * @return Response
+     * @return string
+     * @throws Throwable
      */
-    public function update(Request $request, Post $post)
+    public function update(StorePostRequest $request, Post $post): string
     {
-        //
+        DB::transaction(function () use ($request, $post) {
+            $post->update([
+                'title' => $request->title,
+                'content' => $request->get('content'),
+                'status' => Post::STATUS[$request->get('status')],
+                'slug' => Str::slug($request->title)
+            ]);
+            return $post->syncTags($request->get('tags'));
+        });
+        return redirect()->route('admin.posts.index');
     }
 
     /**
      * Remove the specified resource from storage.
      *
      * @param Post $post
-     * @return Response
+     * @return RedirectResponse
      */
-    public function destroy(Post $post)
+    public function destroy(Post $post): RedirectResponse
     {
         $post->delete();
+        return back();
 
     }
 }

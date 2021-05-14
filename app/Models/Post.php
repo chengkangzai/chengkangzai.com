@@ -12,6 +12,8 @@ use Spatie\Tags\HasTags;
 /**
  * @method static inRandomOrder()
  * @method static paginate()
+ * @method static create(array $validated)
+ * @method static withCount(string $string)
  */
 class Post extends Model
 {

@@ -13,7 +13,6 @@
             </ul>
         </div>
 
-
         <div class="flex justify-end">
             <a href="{{route('admin.posts.create')}}"
                class="rounded-lg focus:outline-none bg-green-500 p-2 mb-2 text-white hover:shadow-lg hover:bg-green-700 dark:hover:shadow text-base font-thin float-right">
@@ -22,23 +21,31 @@
 
         <table class="w-full border ">
             <thead>
-            <tr class="bg-gray-100 text-center border-b text-base text-gray-600">
+            <tr class="bg-gray-100 dark:bg-gray-800 text-center border-b text-base text-gray-600 dark:text-gray-400">
                 <td class="p-2 border-r"> ID</td>
                 <td class="p-2 border-r"> Title</td>
                 <td class="p-2 border-r"> Status</td>
-                <td class="p-2 border-r"> Slug</td>
                 <td class="p-2 border-r"> Total Comment</td>
+                <td class="p-2 border-r"> Tag</td>
                 <td class="p-2 border-r"> Action</td>
             </tr>
             </thead>
             <tbody>
             @forelse($posts as $post)
-                <tr class="bg-gray-100 text-center border-b text-base text-gray-600">
+                <tr class="bg-gray-100 dark:bg-gray-800 text-center border-b text-base text-gray-600 dark:text-gray-400">
                     <td class="p-2 border-r">{{$post->id}}</td>
                     <td class="p-2 border-r">{{$post->title}}</td>
                     <td class="p-2 border-r">{{$post->status}}</td>
-                    <td class="p-2 border-r">{{$post->slug}}</td>
                     <td class="p-2 border-r">{{$post->comments_count}}</td>
+                    <td class="p-2 border-r">
+                        <ul>
+                        @forelse($post->tags as $tag)
+                            <li>{{$tag->name ?? ''}}</li>
+                        @empty
+                            {{'-'}}
+                        @endforelse
+                        </ul>
+                    </td>
                     <td class="p-2 border-r">
                         <a href="{{route('admin.posts.show',$post)}}"
                            class="bg-green-500 hover:bg-green-700 p-2 text-white hover:shadow-lg text-xs font-thin">Show</a>
@@ -48,7 +55,8 @@
                               method="POST">
                             @csrf
                             @method('DELETE')
-                            <input class="bg-red-500 hover:bg-red-700 p-2 text-white hover:shadow-lg text-xs font-thin" type="submit"
+                            <input class="bg-red-500 hover:bg-red-700 p-2 text-white hover:shadow-lg text-xs font-thin"
+                                   type="submit"
                                    value="Remove"/>
                         </form>
                     </td>
