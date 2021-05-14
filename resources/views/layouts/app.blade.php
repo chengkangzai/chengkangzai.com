@@ -6,6 +6,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ config('app.name') }}</title>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    @yield('cdn')
     @yield('style')
 </head>
 <body>
@@ -39,7 +40,7 @@
             </div>
         </nav>
     </header>
-    <main class="flex h-auto ">
+    <main class="flex h-auto bg-white dark:bg-black ">
         @yield('content')
     </main>
 
