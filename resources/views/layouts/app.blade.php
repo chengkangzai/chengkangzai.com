@@ -10,19 +10,26 @@
     @yield('style')
 </head>
 <body>
-<div class="w-full h-screen bg-gray-200 dark:bg-gray-900 ">
+<div class="w-full h-screen bg-white dark:bg-black ">
     <header class="bg-teal-100">
         <nav class="flex justify-between w-full from-blue-400 bg-gradient-to-r to-purple-600 text-white p-4">
             <a href="/"><span class="font-semibold text-xl tracking-tight">{{ config('app.name') }}</span></a>
             <div class="md:items-center md:w-auto flex">
                 <div class="md:flex hidden">
-                    <a class="block md:text-white mr-4" href="/link">Link 1</a>
-                    <a class="block md:text-white mr-4" href="/link">Link 2</a>
-                    <a class="block md:text-white mr-4" href="/link">Link 3</a>
-                    <a class="block md:text-white mr-4" href="/link">Link 4</a>
+                    {{--                    <a class="block md:text-white mr-4" href="/link">Link 1</a>--}}
+                    {{--                    <a class="block md:text-white mr-4" href="/link">Link 2</a>--}}
+                    {{--                    <a class="block md:text-white mr-4" href="/link">Link 3</a>--}}
+                    {{--                    <a class="block md:text-white mr-4" href="/link">Link 4</a>--}}
                 </div>
                 <div class="flex text-sm">
                     @auth
+                        @if(request()->is("admin/*"))
+                            <a class="p-2 ml-2 bg-teal-500 text-gray-100 font-semibold leading-none border border-teal-600 rounded hover:border-transparent hover:bg-teal-600"
+                               href="{{url('/')}}">{{__('Main Page')}}</a>
+                        @else
+                            <a class="p-2 ml-2 bg-teal-500 text-gray-100 font-semibold leading-none border border-teal-600 rounded hover:border-transparent hover:bg-teal-600"
+                               href="{{route('admin.home')}}">{{__('Home')}}</a>
+                        @endif
                         <a class="p-2 ml-2 bg-white text-gray-500 font-semibold leading-none border border-gray-100 rounded hover:border-transparent hover:bg-gray-100"
                            href="{{route('logout')}}"
                            onclick="event.preventDefault();
@@ -43,8 +50,8 @@
     <main class="flex h-auto bg-white dark:bg-black ">
         @yield('content')
     </main>
-
+    @yield('footer')
 </div>
 </body>
-    @yield('script')
+@yield('script')
 </html>
