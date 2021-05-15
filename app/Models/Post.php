@@ -14,6 +14,8 @@ use Spatie\Tags\HasTags;
  * @method static paginate()
  * @method static create(array $validated)
  * @method static withCount(string $string)
+ * @method static latest()
+ * @property mixed status
  */
 class Post extends Model
 {
