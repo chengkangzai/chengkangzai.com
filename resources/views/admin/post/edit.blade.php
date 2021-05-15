@@ -16,7 +16,7 @@
                         <div
                             class="py-3 px-5 mb-2 bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 rounded-md text-sm border border-gray-200 dark:border-gray-600">
                             <ul class="flex">
-                                <li><a href="{{route('home')}}" class="underline font-semibold">Home</a></li>
+                                <li><a href="{{route('admin.home')}}" class="underline font-semibold">Home</a></li>
                                 <li><span class="mx-2">/</span></li>
                                 <li><a href="{{route('admin.posts.index')}}" class="underline font-semibold">Post</a>
                                 </li>

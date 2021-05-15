@@ -5,7 +5,7 @@
 <div class="w-64 h-screen bg-white dark:bg-gray-800 " >
     <div class="flex items-center justify-center mt-10">
 
-        <a class="text-gray-600 dark:text-gray-100 text-2xl" href="{{route('home')}}">{{config('app.name')}}</a>
+        <a class="text-gray-600 dark:text-gray-100 text-2xl" href="{{route('admin.home')}}">{{config('app.name')}}</a>
     </div>
 
     <nav class="mt-10">
