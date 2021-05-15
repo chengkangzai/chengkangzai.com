@@ -59,7 +59,7 @@
                             <input name="content" type="hidden" id="content" value="{{old('content',$post->content)}}">
 
                             <div id="editor" class="dark:bg-white dark:text-black bg-white">
-                                {{old('content',$post->content)}}
+                                {!!  old('content',$post->content)!!}
                             </div>
 
                             <div class="flex justify-end pt-2">

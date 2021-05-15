@@ -22,7 +22,7 @@
                                 <li>Show</li>
                             </ul>
                         </div>
-                        <table class="table w-1/2 border mx-auto">
+                        <table class="table w-1/2 border mx-auto mb-4">
                             <thead>
                             <tr class="bg-gray-100 dark:bg-gray-800 text-center border-b text-base text-gray-600 dark:text-gray-400">
                                 <td class="border p-2">ID</td>
@@ -36,14 +36,16 @@
                                 <td class="border p-2">Tag</td>
                                 <td>
                                     @foreach($post->tags as $tag)
-                                    ~ {{$tag->name}}
+                                        ~ {{$tag->name}}
                                     @endforeach
                                 </td>
                             </tr>
                             </thead>
                         </table>
-                        <div class="dark:text-white" id="editor">
-                            {{$post->content}}
+                        <div class="pb-8 w-4/5 mx-auto">
+                            <div class="dark:text-white dark:bg-dark" id="editor">
+                                {!!  $post->content!!}
+                            </div>
                         </div>
 
                     </div>
@@ -60,14 +62,11 @@
 
         const editor = new Quill('#editor', {
             theme: 'snow',
+            readonly: true,
             scrollingContainer: null
         });
 
-        setTimeout(function () {
-            //Set dark theme
-            document.querySelector(".ql-toolbar").classList.add("bg-white")
-        }, 50)
-
+        document.querySelector(".ql-toolbar").remove()
 
 
     </script>

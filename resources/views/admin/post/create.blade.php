@@ -24,6 +24,21 @@
                                 <li>Create</li>
                             </ul>
                         </div>
+                        @if ($errors->any())
+                            <div
+                                class="block text-sm text-left text-red-600 bg-red-200 border border-red-400 h-auto flex items-center p-4 rounded-sm"
+                                role="alert">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li class="flex items-start">
+                                            <p class="ml-2">
+                                                {{$error}}
+                                            </p>
+                                        </li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
                         <form onsubmit="return onSubmitCreatePostForm(event)" action="{{route('admin.posts.store')}}"
                               method="POST" id="createPostForm"
                               class="space-y-3 dark:text-white mb-2 px-5">
@@ -57,7 +72,7 @@
                             <input name="content" type="hidden" id="content">
 
                             <div id="editor" class="dark:bg-white dark:text-black bg-white">
-                                <br><br><br><br><br><br><br><br><br><br><br><br><br>
+                                {!! old('content',"<br><br><br><br>") !!}
                             </div>
 
                             <div class="flex justify-end pt-2">
