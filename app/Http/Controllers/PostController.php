@@ -51,7 +51,9 @@ class PostController extends Controller
                 'status' => Post::STATUS[$request->get('status')],
                 'slug' => Str::slug($request->title)
             ]);
-            return $post->attachTags($request->get('tags'));
+            if ($request->get('tags')) {
+                $post->attachTags($request->get('tags'));
+            }
         });
 
         return redirect()->route('admin.posts.index');
@@ -96,7 +98,9 @@ class PostController extends Controller
                 'status' => Post::STATUS[$request->get('status')],
                 'slug' => Str::slug($request->title)
             ]);
-            return $post->syncTags($request->get('tags'));
+            if ($request->get('tags')) {
+                $post->syncTags($request->get('tags'));
+            }
         });
         return redirect()->route('admin.posts.index');
     }
