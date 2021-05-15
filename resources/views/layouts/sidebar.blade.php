@@ -35,9 +35,13 @@
 
             <div x-show="open" class="bg-gray-100 dark:bg-gray-700">
                 <a class="py-2 px-16 block text-sm text-gray-600 dark:text-gray-100 hover:bg-blue-500 hover:text-white "
-                   href="{{route('admin.posts.index')}}">{{__('Manage Blog')}}</a>
+                   href="{{route('admin.posts.index')}}">{{__('Post')}}</a>
                 <a class="py-2 px-16 block text-sm text-gray-600 dark:text-gray-100 hover:bg-blue-500 hover:text-white "
-                   href="#">{{__('Manage Work')}}</a>
+                   href="#">{{__('Comments')}}</a>
+                <a class="py-2 px-16 block text-sm text-gray-600 dark:text-gray-100 hover:bg-blue-500 hover:text-white "
+                   href="#">{{__('Tags')}}</a>
+                <a class="py-2 px-16 block text-sm text-gray-600 dark:text-gray-100 hover:bg-blue-500 hover:text-white "
+                   href="#">{{__('Work')}}</a>
             </div>
         </div>
 
