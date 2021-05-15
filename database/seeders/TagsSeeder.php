@@ -22,6 +22,8 @@ class TagsSeeder extends Seeder
             'Capacitor',
             'Firebase',
             'PHP',
+            'Synology',
+            'DSM'
         ]);
 
         Post::inRandomOrder()->first()->attachTag(Tag::findFromString('Laravel'));
