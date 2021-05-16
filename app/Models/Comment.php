@@ -18,7 +18,7 @@ class Comment extends Model
     ];
 
     protected $fillable = [
-        'comment', 'email', 'name', 'post_id',
+        'comment', 'email', 'name', 'post_id', 'status'
     ];
 
     /**
@@ -28,7 +28,6 @@ class Comment extends Model
     {
         return $this->belongsTo(Post::class);
     }
-
 
 
 }
