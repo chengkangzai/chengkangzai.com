@@ -30,6 +30,7 @@ Route::group(['as' => 'public.'], function () {
         Route::get('/', [PublicPostController::class, 'index'])->name('index');
         Route::get('{post:slug}', [PublicPostController::class, 'show'])->name('show');
     });
+    Route::resource('posts.comments', PublicPostCommentController::class)->only(['store']);
 });
 
 

@@ -1,13 +1,15 @@
-<footer class="bg-white dark:bg-gray-900 w-full py-6 px-4 border-t-2 "><!-- marging just for display-->
-    <div class="flex items-center justify-between my-4">
-        <p class="text-blue-500 px-2 pt-6">All rights reserved</p>
-        <p class="text-blue-500 px-2 pt-6">Built with
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-500 inline" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd" />
+<footer class="bg-white dark:bg-gray-900 w-full pb-6 md:pt-6 px-4 border-t-2">
+    <div class="items-center justify-between md:flex py-6 text-center ">
+        <p class="text-blue-500 px-6">All rights reserved</p>
+        <p class="text-blue-500 px-6">Built with
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-500 inline" viewBox="0 0 20 20"
+                 fill="currentColor">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"/>
             </svg>
-            by Ching Cheng Kang.</p>
-        <div class="flex items-center px-2 pt-6">
-
+            by Ching Cheng Kang.
+        </p>
+        <div class="flex items-center px-6">
             <a href="mailto:pycck@hotmail.com">
                 <svg fill="none" class="h-6 w-6 text-blue-600 mr-6" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -34,4 +36,15 @@
             </a>
         </div>
     </div>
+{{--    <div class="block md:hidden">--}}
+{{--        <p class="text-blue-500 px-2 pt-6">All rights reserved</p>--}}
+{{--        <p class="text-blue-500 px-2 pt-6">Built with--}}
+{{--            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-500 inline" viewBox="0 0 20 20"--}}
+{{--                 fill="currentColor">--}}
+{{--                <path fill-rule="evenodd" clip-rule="evenodd"--}}
+{{--                      d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"/>--}}
+{{--            </svg>--}}
+{{--            by Ching Cheng Kang.--}}
+{{--        </p>--}}
+{{--    </div>--}}
 </footer>

@@ -7,7 +7,6 @@ use Exception;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
-use Illuminate\Http\Response;
 
 class PublicPostController extends Controller
 {
@@ -34,6 +33,7 @@ class PublicPostController extends Controller
     public function show(Post $post)
     {
         abort_if($post->status !== Post::STATUS['PUBLISH'], 404);
+        $post->load('comments');
         return view('public.post.show', compact('post'));
     }
 
