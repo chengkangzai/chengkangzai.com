@@ -16,8 +16,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::group(['as' => 'public.'], function () {
+
+//    Route::get('/', function () {
+//
+//    });
+    Route::view('/', 'welcome')->name('index');
+    Route::view('about', 'public.about')->name('about');
+    Route::view('work', 'public.work')->name('work');
 });
 
 Route::domain('blog.' . env('APP_DOMAIN'))->group(function () {
