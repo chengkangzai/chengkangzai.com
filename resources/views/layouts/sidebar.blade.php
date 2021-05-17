@@ -120,7 +120,7 @@
             <img class="h-6 w-6 rounded-full mr-3 object-cover"
                  src="https://avatars.githubusercontent.com/u/43839286?s=60&v=4"
                  alt="avatar">
-            <span>{{auth()->user()->name}}</span>
+            <span>{{auth()->user()->name ?? ""}}</span>
         </a>
     </div>
 </div>
