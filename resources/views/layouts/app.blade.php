@@ -3,81 +3,56 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
-    <title>{{ config('app.name', 'Laravel') }}</title>
-
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-
-    <!-- Styles -->
+    <title>{{ config('app.name') }}</title>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    @yield('cdn')
+    @yield('style')
 </head>
 <body>
-<div id="app">
-    <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-        <div class="container">
-            <a class="navbar-brand" href="{{ url('/') }}">
-                {{ config('app.name', 'Laravel') }}
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                <span class="navbar-toggler-icon"></span>
-            </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <!-- Left Side Of Navbar -->
-                <ul class="navbar-nav mr-auto">
+<div class="h-screen bg-white dark:bg-black ">
+    <header class="bg-teal-100 w-full" style="width: 100% !important;">
+        <nav class="flex justify-between w-full from-blue-400 bg-gradient-to-r to-purple-600 text-white p-4">
+            <a href="/"><span class="font-semibold text-xl tracking-tight">{{ config('app.name') }}</span></a>
+            <div class="md:items-center md:w-auto flex">
+{{--                <div class="md:flex hidden">--}}
+                    {{--                    <a class="block md:text-white mr-4" href="/link">Link 1</a>--}}
+                    {{--                    <a class="block md:text-white mr-4" href="/link">Link 2</a>--}}
+                    {{--                    <a class="block md:text-white mr-4" href="/link">Link 3</a>--}}
+                    {{--                    <a class="block md:text-white mr-4" href="/link">Link 4</a>--}}
+{{--                </div>--}}
+                <div class="flex text-sm">
+                    @auth
+                        @if(request()->is("admin/*"))
+                            <a class="hidden md:block p-2 ml-2 bg-teal-500 text-gray-100 font-semibold leading-none border border-teal-600 rounded hover:border-transparent hover:bg-teal-600"
+                               href="{{url('/')}}">{{__('Main Page')}}</a>
+                        @else
+                            <a class="hidden md:block p-2 ml-2 bg-teal-500 text-gray-100 font-semibold leading-none border border-teal-600 rounded hover:border-transparent hover:bg-teal-600"
+                               href="{{route('admin.home')}}">{{__('Home')}}</a>
+                        @endif
+                        <a class=" p-2 ml-2 bg-white text-gray-500 font-semibold leading-none border border-gray-100 rounded hover:border-transparent hover:bg-gray-100"
+                           href="{{route('logout')}}"
+                           onclick="event.preventDefault();
+                            document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
 
-                </ul>
-
-                <!-- Right Side Of Navbar -->
-                <ul class="navbar-nav ml-auto">
-                    <!-- Authentication Links -->
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="hidden">
+                            @csrf
+                        </form>
+                    @endauth
                     @guest
-                        @if (Route::has('login'))
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                            </li>
-                        @endif
-
-                        @if (Route::has('register'))
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                            </li>
-                        @endif
-                    @else
-                        <li class="nav-item dropdown">
-                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                {{ Auth::user()->name }}
-                            </a>
-
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ route('logout') }}"
-                                   onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                    {{ __('Logout') }}
-                                </a>
-
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                    @csrf
-                                </form>
-                            </div>
-                        </li>
+                        <a class="p-2 ml-2 bg-teal-500 text-gray-100 font-semibold leading-none border border-teal-600 rounded hover:border-transparent hover:bg-teal-600"
+                           href="{{route('login')}}">{{__('Login')}}</a>
                     @endguest
-                </ul>
+                </div>
             </div>
-        </div>
-    </nav>
-
-    <main class="py-4">
+        </nav>
+    </header>
+    <main class="h-auto bg-white dark:bg-black w-full px-3 md:px-0 @if(request()->is('admin/*')) flex @endif">
         @yield('content')
     </main>
+    @yield('footer')
 </div>
 </body>
+@yield('script')
 </html>

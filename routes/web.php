@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\PublicPostCommentController;
+use App\Http\Controllers\PublicPostController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,17 +20,19 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::group(['prefix' => 'posts'], function () {
-    Route::get('/', [PostController::class, 'index']);
-    Route::get('{post:slug}', [PostController::class, 'show']);
+Route::domain('blog.' . env('APP_DOMAIN'))->group(function () {
+    Route::group(['prefix' => 'admin', 'middleware' => 'auth', 'as' => 'admin.'], function () {
+        Route::view('home', 'home')->name('home');
+        Route::resource('posts', PostController::class);
+    });
 
-    Route::group(['middleware' => 'auth'], function () {
-        Route::get('create', [PostController::class, 'create']);
-        Route::get('{post}/edit', [PostController::class, 'edit']);
-        Route::put('{post}', [PostController::class, 'update']);
-        Route::delete('{post}', [PostController::class, 'destroy']);
+    Route::group(['as' => 'public.'], function () {
+        Route::group(['prefix' => 'posts', 'as' => 'posts.'], function () {
+            Route::get('/', [PublicPostController::class, 'index'])->name('index');
+            Route::get('{post:slug}', [PublicPostController::class, 'show'])->name('show');
+        });
+        Route::resource('posts.comments', PublicPostCommentController::class)->only(['store']);
     });
 
 });
 
-Route::view('home', 'home');
