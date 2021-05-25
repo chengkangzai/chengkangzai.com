@@ -25,7 +25,7 @@
                     @else
                         <a class="block md:text-white mr-4 " href="{{route('public.index')}}">About Me</a>
                     @endif
-                <a class="block md:text-white mr-4" href="{{route('public.posts.index')}}">My Blog</a>
+                <a class="block md:text-white mr-4" href="{{route('public.posts.index')}}">Blog</a>
                 </div>
                 {{--                    <a class="block md:text-white mr-4" href="/link">Link 4</a>--}}
                 <div class="flex text-sm">
