@@ -452,7 +452,7 @@
 @section('script')
     <script>
         var typed = new Typed('#typed', {
-            strings: ['A Web Developer', 'A Fullstack Developer', 'An Laravel Developer', 'An Angular Developer', 'An Ionic Developer', 'A Self-learner'],
+            strings: ['Web Developer', 'Fullstack Developer', 'Laravel Developer', 'Angular Developer', 'Ionic Developer', 'Self-learner'],
             typeSpeed: 40,
             backSpeed: 60,
             loop: true,
