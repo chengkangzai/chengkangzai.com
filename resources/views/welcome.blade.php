@@ -51,9 +51,11 @@
                     class="flex flex-col items-start w-full pt-0 mb-16 text-left lg:flex-grow md:w-1/2 xl:mr-20 md:pr-24 md:mb-0 ">
                     <h1 class="mb-8 text-5xl font-bold tracking-tighter text-black md:text-5xl title-font dark:text-white">
                         Hi, I am <br>Ching Cheng Kang(CCK) <span class="wave">👋🏻</span></h1>
+                    <div style="min-height: 40px" >
                     <span
-                        class="text-2xl text-base leading-relaxed text-left text-gray-400 inline-block dark:text-gray-200 "
+                        class="text-2xl text-base leading-relaxed text-left text-gray-400 inline-block dark:text-gray-200"
                         id="typed"></span>
+                    </div>
                     <p class="w-full mt-2 mb-8 text-sm text-left text-gray-600">
                         ⚡️ Fun fact: I convert Coffee to Code ☕️
                     </p>
