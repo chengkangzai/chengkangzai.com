@@ -72,7 +72,8 @@
         </section>
 
         <section class="flex flex-wrap w-full mx-auto pb-8" id="about-me">
-            <div class="md:w-1/3 sm:w-full bg-white dark:bg-black flex items-center justify-center px-5 py-8 transform hover:scale-110 transition duration-300 ">
+            <div
+                class="md:w-1/3 sm:w-full bg-white dark:bg-black flex items-center justify-center px-5 py-8 transform hover:scale-110 transition duration-300 ">
                 <div
                     class="w-full mx-auto rounded-lg bg-gray-50 dark:bg-gray-800 shadow-lg px-5 pt-5 my5 pb-10 text-gray-800"
                     x-data="{ cn: true }">
@@ -132,7 +133,8 @@
                 </div>
             </div>
 
-            <div class="md:w-1/3 sm:w-full bg-white dark:bg-black flex items-center justify-center px-5 py-8 transform hover:scale-110 transition duration-300 ">
+            <div
+                class="md:w-1/3 sm:w-full bg-white dark:bg-black flex items-center justify-center px-5 py-8 transform hover:scale-110 transition duration-300 ">
                 <div
                     class="w-full mx-auto rounded-lg bg-gray-50 dark:bg-gray-800 shadow-lg text-gray-800 py-11">
                     <div class="w-full mb-10 ">
@@ -151,7 +153,8 @@
                 </div>
             </div>
 
-            <div class="md:w-1/3 sm:w-full bg-white dark:bg-black flex items-center justify-center px-5 py-8 transform hover:scale-110 transition duration-300 ">
+            <div
+                class="md:w-1/3 sm:w-full bg-white dark:bg-black flex items-center justify-center px-5 py-8 transform hover:scale-110 transition duration-300 ">
                 <div
                     class="w-full mx-auto rounded-lg bg-gray-50 dark:bg-gray-800 shadow-lg text-gray-800 py-16">
                     <div class="w-full mb-10 ">
@@ -214,7 +217,8 @@
                         <div class="w-full mb-10 mt-5">
                             <div>
                                 <a href="{{$work->url ?? "#"}}" target="_blank">
-                                    <img src="{{$work->imgLink ?? "#"}}" alt="" class="w-full rounded-lg mb-3" loading="lazy">
+                                    <img src="{{$work->imgLink ?? "#"}}" alt="" class="w-full rounded-lg mb-3"
+                                         loading="lazy">
                                 </a>
                             </div>
                             <h2 class="dark:text-white text-2xl font-bold title-font mb-2">{{$work->name}} </h2>
@@ -329,9 +333,9 @@
                         </div>
                         <div
                             class="order-1 bg-blue-500 rounded-lg shadow-xl w-5/12 px-6 py-4 transform hover:scale-110 transition duration-300">
-                            <h3 class="mb-3 font-bold text-white text-xl">Technical Assistant, Head of Accommodation
-                                Team in
-                                APU </h3>
+                            <h3 class="mb-3 font-bold text-white text-xl">
+                                Technical Assistant, Head of Accommodation Team in APU
+                            </h3>
                             <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
                                 - Led a team of technical assistants to provide support services to the university's
                                 accommodation unit.
@@ -362,12 +366,10 @@
                             </h3>
                             <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
                                 As an intern, I managed to fix the migration file and prepare the bootstrap seeder with
-                                the
-                                most optimal speed and solve multiple frontend problems by using Laravel for the
-                                in-house
-                                application
-                                <a href="https://strateqgroup.com/smart-managed-services/" class="underline">SMART
-                                    SD</a>.
+                                the most optimal speed and solve multiple frontend problems by using Laravel for the
+                                in-house application
+                                <a href="https://strateqgroup.com/smart-managed-services/" class="underline">
+                                    SMART SD</a>.
                             </p>
                         </div>
                     </div>
