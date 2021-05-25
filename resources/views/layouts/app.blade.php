@@ -14,14 +14,20 @@
 <div class="h-screen bg-white dark:bg-black ">
     <header class="bg-teal-100 w-full" style="width: 100% !important;">
         <nav class="flex justify-between w-full from-blue-400 bg-gradient-to-r to-purple-600 text-white p-4">
-            <a href="{{route('public.index')}}"><span class="font-semibold text-xl tracking-tight">{{ config('app.name') }}</span></a>
+            <a href="{{route('public.index')}}"><span
+                    class="font-semibold text-xl tracking-tight">{{ config('app.name') }}</span></a>
             <div class="md:items-center md:w-auto flex">
                 <div class="md:flex hidden">
-                    <a class="block md:text-white mr-4 " href="{{route('public.about')}}">About Me</a>
-                    <a class="block md:text-white mr-4" href="{{route('public.work')}}">My Work</a>
-                    <a class="block md:text-white mr-4" href="{{route('public.posts.index')}}">My Blog</a>
-{{--                    <a class="block md:text-white mr-4" href="/link">Link 4</a>--}}
+                    @if(request()->is('/'))
+                        <a class="block md:text-white mr-4 " href="#about-me">About Me</a>
+                        <a class="block md:text-white mr-4" href="#work">My Work</a>
+                        <a class="block md:text-white mr-4" href="#experience">Experience</a>
+                    @else
+                        <a class="block md:text-white mr-4 " href="{{route('public.index')}}">About Me</a>
+                    @endif
+                <a class="block md:text-white mr-4" href="{{route('public.posts.index')}}">My Blog</a>
                 </div>
+                {{--                    <a class="block md:text-white mr-4" href="/link">Link 4</a>--}}
                 <div class="flex text-sm">
                     @auth
                         @if(request()->is("admin/*"))
