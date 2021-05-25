@@ -90,10 +90,10 @@
                                           d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/>
                                 </svg>
                             </p>
-                            <p class="text-2xl text-black text-center pb-3 dark:text-white ">What that I believe in</p>
+                            <p class="text-2xl text-black text-center pb-3 dark:text-white ">What I believe in</p>
                         </div>
                         <div class="text-3xl text-indigo-500 text-left leading-tight h-3">“</div>
-                        <ol x-show="cn">
+                        <ul x-show="cn" class="list-disc list-inside list">
                             <li class="text-white text-gray-600 dark:text-gray-200 text-center px-5">1.
                                 面对问题是解决问题的第一步。
                             </li>
@@ -106,8 +106,8 @@
                             <li class="text-white text-gray-600 dark:text-gray-200 text-center px-5">4.
                                 你不解决问题，问题会解决你。
                             </li>
-                        </ol>
-                        <ol x-show="!cn" style="display: none">
+                        </ul>
+                        <ol x-show="!cn" style="display: none" class="list-disc list-inside list">
                             <li class="text-white text-gray-600 dark:text-gray-200 text-center px-5">1.
                                 Facing the problem is the first matter of the business.
                             </li>
