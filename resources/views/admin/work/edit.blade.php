@@ -21,7 +21,7 @@
                                 <li><a href="{{route('admin.works.index')}}" class="underline font-semibold">Works</a>
                                 </li>
                                 <li><span class="mx-2">/</span></li>
-                                <li>Create</li>
+                                <li>Update</li>
                             </ul>
                         </div>
                         @if ($errors->any())
@@ -43,6 +43,7 @@
                               method="POST" id="createPostForm" enctype="multipart/form-data"
                               class="space-y-3 dark:text-white mb-2 px-5">
                             @csrf
+                            @method('PUT')
                             <div class="space-y-2">
                                 <label for="name" class="block font-medium tracking-tight">Name</label>
                                 <input id="name" type="text" placeholder="Name" name="name"
