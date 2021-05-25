@@ -12,6 +12,7 @@ use Spatie\Tags\HasTags;
  * @method static paginate(int $int)
  * @method static create(array $array)
  * @method static latest()
+ * @method static active()
  */
 class Works extends Model
 {
@@ -32,6 +33,4 @@ class Works extends Model
     {
         return $query->where('status', '1');
     }
-
-
 }
