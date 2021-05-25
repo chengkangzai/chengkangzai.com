@@ -49,7 +49,7 @@
             <div class="container flex flex-col items-center px-5 min-h-screen py-8 mx-auto md:flex-row lg:px-28">
                 <div
                     class="flex flex-col items-start w-full pt-0 mb-16 text-left lg:flex-grow md:w-1/2 xl:mr-20 md:pr-24 md:mb-0 ">
-                    <h1 class="mb-8 text-5xl font-black tracking-tighter text-black md:text-5xl title-font dark:text-white">
+                    <h1 class="mb-8 text-5xl font-bold tracking-tighter text-black md:text-5xl title-font dark:text-white">
                         Hi, I am <br>Ching Cheng Kang(CCK) <span class="wave">👋🏻</span></h1>
                     <span
                         class="text-2xl text-base leading-relaxed text-left text-gray-400 inline-block dark:text-gray-200 "
