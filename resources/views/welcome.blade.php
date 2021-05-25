@@ -51,12 +51,9 @@
                     class="flex flex-col items-start w-full pt-0 mb-16 text-left lg:flex-grow md:w-1/2 xl:mr-20 md:pr-24 md:mb-0 ">
                     <h1 class="mb-8 text-5xl font-black tracking-tighter text-black md:text-5xl title-font dark:text-white">
                         Hi, I am <br>Ching Cheng Kang(CCK) <span class="wave">👋🏻</span></h1>
-                    <span class="text-2xl text-base leading-relaxed text-left text-gray-400 inline-block dark:text-gray-200 "
-                          id="typed"></span>
-                    <div id="typed-strings" class="hidden">
-                        <p>Typed.js is a <strong>JavaScript</strong> library.</p>
-                        <p>It <em>types</em> out sentences.</p>
-                    </div>
+                    <span
+                        class="text-2xl text-base leading-relaxed text-left text-gray-400 inline-block dark:text-gray-200 "
+                        id="typed"></span>
                     <p class="w-full mt-2 mb-8 text-sm text-left text-gray-600">
                         ⚡️ Fun fact: I convert Coffee to Code ☕️
                     </p>
@@ -65,7 +62,6 @@
                            class="flex items-center px-6 py-2 mt-auto font-semibold text-white dark:text-black transition duration-300 ease-in-out transform bg-black dark:bg-white rounded-lg hover:bg-gray-800 dark:hover:bg-gray-200 hover:to-black dark:hover:to-white focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2">
                             SEE MY RESUME
                         </a>
-
                     </div>
                 </div>
                 <div class="w-full lg:w-5/6 lg:max-w-lg md:w-1/2">
@@ -76,7 +72,7 @@
         </section>
 
         <section class="flex flex-wrap w-full mx-auto pb-8" id="about-me">
-            <div class="md:w-1/3 sm:w-full bg-white dark:bg-black flex items-center justify-center px-5 py-8 ">
+            <div class="md:w-1/3 sm:w-full bg-white dark:bg-black flex items-center justify-center px-5 py-8 transform hover:scale-110 transition duration-300 ">
                 <div
                     class="w-full mx-auto rounded-lg bg-gray-50 dark:bg-gray-800 shadow-lg px-5 pt-5 my5 pb-10 text-gray-800"
                     x-data="{ cn: true }">
@@ -95,7 +91,8 @@
                         </div>
                         <div class="text-3xl text-indigo-500 text-left leading-tight h-3">“</div>
                         <ol x-show="cn">
-                            <li class="text-white text-gray-600 dark:text-gray-200 text-center px-5">1. 面对问题是解决问题的第一步。
+                            <li class="text-white text-gray-600 dark:text-gray-200 text-center px-5">1.
+                                面对问题是解决问题的第一步。
                             </li>
                             <li class="text-white text-gray-600 dark:text-gray-200 text-center px-5">2.
                                 把小问题解决了，就没有大问题。
@@ -103,24 +100,22 @@
                             <li class="text-white text-gray-600 dark:text-gray-200 text-center px-5">3.
                                 把所有的小问题都解决了，就根本没有问题。
                             </li>
-                            <li class="text-white text-gray-600 dark:text-gray-200 text-center px-5">4. 你不解决问题，问题会解决你。
+                            <li class="text-white text-gray-600 dark:text-gray-200 text-center px-5">4.
+                                你不解决问题，问题会解决你。
                             </li>
                         </ol>
                         <ol x-show="!cn" style="display: none">
-                            <li class="text-white text-gray-600 dark:text-gray-200 text-center px-5">1. Facing the
-                                problem
-                                is the first matter of the business.
+                            <li class="text-white text-gray-600 dark:text-gray-200 text-center px-5">1.
+                                Facing the problem is the first matter of the business.
                             </li>
-                            <li class="text-white text-gray-600 dark:text-gray-200 text-center px-5">2. When small
-                                problem
-                                is fixed, there will not have major problem.
+                            <li class="text-white text-gray-600 dark:text-gray-200 text-center px-5">2.
+                                When small problem is fixed, there will not have major problem.
                             </li>
-                            <li class="text-white text-gray-600 dark:text-gray-200 text-center px-5">3. When all small
-                                problem are fixed, there will not have any problem.
+                            <li class="text-white text-gray-600 dark:text-gray-200 text-center px-5">3.
+                                When all small problem are fixed, there will not have any problem.
                             </li>
-                            <li class="text-white text-gray-600 dark:text-gray-200 text-center px-5">4. If you dont
-                                settle
-                                the problem, the problem will try to settle you.
+                            <li class="text-white text-gray-600 dark:text-gray-200 text-center px-5">4.
+                                If you dont settle the problem, the problem will try to settle you.
                             </li>
                         </ol>
                         <p class="text-sm text-gray-600 text-center px-5">
@@ -137,7 +132,7 @@
                 </div>
             </div>
 
-            <div class="md:w-1/3 sm:w-full bg-white dark:bg-black flex items-center justify-center px-5 py-8">
+            <div class="md:w-1/3 sm:w-full bg-white dark:bg-black flex items-center justify-center px-5 py-8 transform hover:scale-110 transition duration-300 ">
                 <div
                     class="w-full mx-auto rounded-lg bg-gray-50 dark:bg-gray-800 shadow-lg text-gray-800 py-11">
                     <div class="w-full mb-10 ">
@@ -156,7 +151,7 @@
                 </div>
             </div>
 
-            <div class="md:w-1/3 sm:w-full bg-white dark:bg-black flex items-center justify-center px-5 py-8">
+            <div class="md:w-1/3 sm:w-full bg-white dark:bg-black flex items-center justify-center px-5 py-8 transform hover:scale-110 transition duration-300 ">
                 <div
                     class="w-full mx-auto rounded-lg bg-gray-50 dark:bg-gray-800 shadow-lg text-gray-800 py-16">
                     <div class="w-full mb-10 ">
@@ -208,32 +203,32 @@
         <section class="flex flex-wrap -m-4 dark:text-white w-full mx-auto pb-20 md:pb-0">
             <div class="w-full">
                 <h1 class="mb-2 text-2xl font-black text-black text-center dark:text-white lg:text-3xl md:text-2xl">
-                    These is some of my Work :3 </h1>
+                    These are some of my Work :3 </h1>
             </div>
 
             @forelse($works as $work)
-                <div class="md:w-1/3 sm:w-full bg-white dark:bg-black flex items-center justify-center px-5 py-8"
+                <div class="md:w-1/3 sm:w-full bg-white dark:bg-black flex items-center justify-center px-5 py-8  "
                      id="work">
                     <div
-                        class="w-full mx-auto rounded-lg bg-gray-50 dark:bg-gray-800 shadow-lg text-gray-800 px-5">
+                        class="w-full mx-auto rounded-lg bg-gray-50 dark:bg-gray-800 shadow-lg text-gray-800 px-5 transform hover:scale-110 transition duration-300">
                         <div class="w-full mb-10 mt-5">
                             <div>
-                                <a href="{{$work->url}}" target="_blank">
-                                    <img src="{{$work->imgLink}}" alt="" class="w-full rounded-lg mb-3" loading="lazy">
+                                <a href="{{$work->url ?? "#"}}" target="_blank">
+                                    <img src="{{$work->imgLink ?? "#"}}" alt="" class="w-full rounded-lg mb-3" loading="lazy">
                                 </a>
                             </div>
                             <h2 class="dark:text-white text-2xl font-bold title-font mb-2">{{$work->name}} </h2>
                             <p class="dark:text-white leading-relaxed text-base">{{$work->description}}</p>
                             <div
                                 class="text-center mt-2 leading-none flex items-start w-full mt-4 text-blue-700 dark:text-blue-400 mb-4">
-                                <a rel="noopener" target="_blank" href="{{$work->url}}">
+                                <a rel="noopener" target="_blank" href="{{$work->url ?? "#"}}">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"
                                          class="dark:text-blue-400 fill-current">
                                         <path
                                             d="M16.36,14C16.44,13.34 16.5,12.68 16.5,12C16.5,11.32 16.44,10.66 16.36,10H19.74C19.9,10.64 20,11.31 20,12C20,12.69 19.9,13.36 19.74,14M14.59,19.56C15.19,18.45 15.65,17.25 15.97,16H18.92C17.96,17.65 16.43,18.93 14.59,19.56M14.34,14H9.66C9.56,13.34 9.5,12.68 9.5,12C9.5,11.32 9.56,10.65 9.66,10H14.34C14.43,10.65 14.5,11.32 14.5,12C14.5,12.68 14.43,13.34 14.34,14M12,19.96C11.17,18.76 10.5,17.43 10.09,16H13.91C13.5,17.43 12.83,18.76 12,19.96M8,8H5.08C6.03,6.34 7.57,5.06 9.4,4.44C8.8,5.55 8.35,6.75 8,8M5.08,16H8C8.35,17.25 8.8,18.45 9.4,19.56C7.57,18.93 6.03,17.65 5.08,16M4.26,14C4.1,13.36 4,12.69 4,12C4,11.31 4.1,10.64 4.26,10H7.64C7.56,10.66 7.5,11.32 7.5,12C7.5,12.68 7.56,13.34 7.64,14M12,4.03C12.83,5.23 13.5,6.57 13.91,8H10.09C10.5,6.57 11.17,5.23 12,4.03M18.92,8H15.97C15.65,6.75 15.19,5.55 14.59,4.44C16.43,5.07 17.96,6.34 18.92,8M12,2C6.47,2 2,6.5 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"></path>
                                     </svg>
                                 </a>
-                                <a href="{{$work->github_url}}" rel="noopener" target="_blank">
+                                <a href="{{$work->github_url ?? "#"}}" rel="noopener" target="_blank">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"
                                          class="dark:text-white fill-current">
                                         <path
@@ -241,7 +236,8 @@
                                     </svg>
                                 </a>
                             </div>
-                            <div class="text-center mt-2 leading-none flex items-start w-full mt-4 dark:text-whiteß mb-4">
+                            <div
+                                class="text-center mt-2 leading-none flex items-start w-full mt-4 dark:text-whiteß mb-4">
                                 <span class="inline">
                                 Build with
                                     @foreach($work->tags as $tag)
@@ -259,7 +255,11 @@
                     </div>
                 </div>
             @empty
-                <p>No Active Work now @@</p>
+                <div class="w-full border-lg border rounded-lg mt-6">
+                    <h1 class="my-20 text-xl font-black text-black text-center dark:text-white lg:text-2xl">
+                        No Active Work now @@
+                    </h1>
+                </div>
             @endforelse
         </section>
 
@@ -336,12 +336,11 @@
                                 - Led a team of technical assistants to provide support services to the university's
                                 accommodation unit.
                                 <br>
-                                - Work together with ISP's technician regarding network issue that requires their
-                                attention
+                                - Work together with ISP's technician regarding network issue
                                 <br>
                                 - Ensure the network accessibility within the university campus
                                 <br>
-                                - Maintained, managed, and monitored technical facilities and infrastructure within the
+                                - Maintain, manage, and monitor technical facilities and infrastructure within the
                                 campus
                                 <br>
                             </p>
@@ -451,7 +450,7 @@
 @section('script')
     <script>
         var typed = new Typed('#typed', {
-            strings: ['A Web Developer', 'A Fullstack Developer', 'An Angular Developer'],
+            strings: ['A Web Developer', 'A Fullstack Developer', 'An Laravel Developer', 'An Angular Developer', 'An Ionic Developer', 'A Self-learner'],
             typeSpeed: 40,
             backSpeed: 60,
             loop: true,
