@@ -36,7 +36,7 @@
                     <td class="p-2 border-r">{{$work->id}}</td>
                     <td class="p-2 border-r">{{$work->name}}</td>
                     <td class="p-2 border-r">{{$work->description}}</td>
-                    <td class="p-2 border-r">{{$work->active ? 'YES' : 'NO'}}</td>
+                    <td class="p-2 border-r">{{$work->status ? 'YES' : 'NO'}}</td>
                     <td class="p-2 border-r">
                         <ul>
                             @forelse($work->tags as $tag)
@@ -46,7 +46,6 @@
                             @endforelse
                         </ul>
                     </td>
-{{--                    @dd($work)--}}
                     <td class="p-2 border-r">
                         <a href="{{route('admin.works.show',$work)}}"
                            class="bg-green-500 hover:bg-green-700 p-2 text-white hover:shadow-lg text-xs font-thin">Show</a>
