@@ -43,7 +43,7 @@
             </div>
         </div>
 
-        <div class="flex flex-wrap dark:text-white w-full mx-auto mb-4 mt-4">
+        <div class="flex flex-wrap dark:text-white w-full mx-auto pb-4 pt-4">
             <div class="mx-auto mb-6">
                 <h3 class="text-2xl text-center">Comment Section</h3>
             </div>
@@ -69,14 +69,14 @@
                 <div id="task-comments" class="pt-4">
                     @forelse($post->comments as $comment)
                         <div
-                            class="bg-white rounded-lg p-3 flex flex-col justify-center items-center md:items-start shadow-lg mb-4">
+                            class="bg-white dark:bg-gray-700 rounded-lg p-3 flex flex-col justify-center items-center md:items-start shadow-lg mb-4">
                             <div class="flex flex-row justify-center mr-2">
                                 <img alt="avatar" width="48" height="48"
-                                     class="rounded-full w-10 h-10 mr-4 shadow-lg mb-4"
+                                     class="rounded-full w-10 h-10 mr-4 shadow-lg mb-4 bg-white"
                                      src="https://cdn1.iconfinder.com/data/icons/technology-devices-2/100/Profile-512.png">
-                                <h3 class="text-purple-600 font-semibold text-lg text-center md:text-left ">{{$comment->name}}</h3>
+                                <h3 class="text-purple-600 dark:text-purple-300 font-semibold text-lg text-center md:text-left ">{{$comment->name}}</h3>
                             </div>
-                            <p class="text-gray-600 text-lg text-center md:text-left w-9/12 ">
+                            <p class="text-gray-600 dark:text-gray-200 text-lg text-center md:text-left w-9/12 ">
                                 {{$comment->comment}}
                             </p>
                         </div>
