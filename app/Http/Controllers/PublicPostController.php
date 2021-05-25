@@ -33,7 +33,10 @@ class PublicPostController extends Controller
     public function show(Post $post)
     {
         abort_if($post->status !== Post::STATUS['PUBLISH'], 404);
-        $post->load('comments');
+        cache()->remember('public-Posts-' . $post->slug, 60 * 60 * 24, function () use ($post) {
+            $post->load('comments');
+            return $post;
+        });
         return view('public.post.show', compact('post'));
     }
 

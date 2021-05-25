@@ -33,15 +33,15 @@
                         </span>
             </button>
 
-            <div x-show="open" class="bg-gray-100 dark:bg-gray-700">
-                <a class="py-2 px-16 block text-sm text-gray-600 dark:text-gray-100 hover:bg-blue-500 hover:text-white "
+            <div x-show="open" class="">
+                <a class="py-2 px-16 block text-sm text-gray-600 dark:text-gray-100 hover:bg-blue-500 hover:text-white @if(request()->is('admin/posts*')) bg-purple-200 dark:bg-purple-700  @else bg-gray-100 dark:bg-gray-700 @endif"
                    href="{{route('admin.posts.index')}}">{{__('Post')}}</a>
-                <a class="py-2 px-16 block text-sm text-gray-600 dark:text-gray-100 hover:bg-blue-500 hover:text-white "
+                <a class="py-2 px-16 block text-sm text-gray-600 dark:text-gray-100 hover:bg-blue-500 hover:text-white @if(request()->is('admin/comments*')) bg-purple-200 dark:bg-purple-700  @else bg-gray-100 dark:bg-gray-700 @endif"
                    href="#">{{__('Comments')}}</a>
-                <a class="py-2 px-16 block text-sm text-gray-600 dark:text-gray-100 hover:bg-blue-500 hover:text-white "
+                <a class="py-2 px-16 block text-sm text-gray-600 dark:text-gray-100 hover:bg-blue-500 hover:text-white @if(request()->is('admin/tags*')) bg-purple-200 dark:bg-purple-700  @else bg-gray-100 dark:bg-gray-700 @endif"
                    href="#">{{__('Tags')}}</a>
-                <a class="py-2 px-16 block text-sm text-gray-600 dark:text-gray-100 hover:bg-blue-500 hover:text-white "
-                   href="#">{{__('Work')}}</a>
+                <a class="py-2 px-16 block text-sm text-gray-600 dark:text-gray-100 hover:bg-blue-500 hover:text-white @if(request()->is('admin/works*')) bg-purple-200 dark:bg-purple-700  @else bg-gray-100 dark:bg-gray-700 @endif"
+                   href="{{route('admin.works.index')}}">{{__('Work')}}</a>
             </div>
         </div>
 
@@ -120,7 +120,7 @@
             <img class="h-6 w-6 rounded-full mr-3 object-cover"
                  src="https://avatars.githubusercontent.com/u/43839286?s=60&v=4"
                  alt="avatar">
-            <span>{{auth()->user()->name}}</span>
+            <span>{{auth()->user()->name ?? ""}}</span>
         </a>
     </div>
 </div>

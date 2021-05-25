@@ -3,13 +3,13 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="xl:w-8/12 md:w-10/12 mx-auto pt-20 ">
+    <div class="md:w-10/12 mx-auto pt-20 ">
         <div class="dark:text-white mb-12 pb-12 border-b-2">
             <h1 class="text-4xl inline pr-5">{{config('app.name')}}</h1> ||
             <p class="inline pl-5">Just Random Sharing Blog for tech</p>
         </div>
 
-        <div class="flex flex-wrap -m-4 dark:text-white w-full mx-auto mb-20">
+        <div class="flex flex-wrap -m-4 dark:text-white w-full mx-auto pb-32">
             @foreach($posts as $post)
                 <div class="xl:w-1/3 md:w-1/2 p-4 block sm:w-full">
                     <a class="border border-gray-300 p-6 rounded-lg bg-gray-100 dark:bg-gray-900 block"
