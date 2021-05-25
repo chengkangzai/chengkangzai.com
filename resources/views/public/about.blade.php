@@ -4,16 +4,16 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="xl:w-10/12 md:w-10/12 mx-auto pt-10 ">
+    <div class=" md:w-11/12 mx-auto pt-8 ">
         <div class="dark:text-white my-5 pb-6 border-b-2">
             <h1 class="text-4xl inline pr-5">{{config('app.name')}}</h1> ||
             <p class="inline pl-5">Just Random Sharing Blog for tech</p>
         </div>
 
-        <div class="flex flex-wrap w-full mx-auto">
-            <div class="md:w-1/3 sm:w-full bg-white dark:bg-black flex items-center justify-center px-5  ">
+        <div class="flex flex-wrap w-full mx-auto pb-8">
+            <div class="md:w-1/3 sm:w-full bg-white dark:bg-black flex items-center justify-center px-5 py-8 ">
                 <div
-                    class="w-full mx-auto rounded-lg bg-white dark:bg-gray-800 shadow-lg px-5 pt-5 my5 pb-10 text-gray-800"
+                    class="w-full mx-auto rounded-lg bg-gray-50 dark:bg-gray-800 shadow-lg px-5 pt-5 my5 pb-10 text-gray-800"
                     x-data="{ cn: true }">
                     <div class="w-full mb-10 ">
                         <div>
@@ -71,9 +71,9 @@
                 </div>
             </div>
 
-            <div class="md:w-1/3 sm:w-full bg-white dark:bg-black flex items-center justify-center px-5 py-20">
+            <div class="md:w-1/3 sm:w-full bg-white dark:bg-black flex items-center justify-center px-5 py-8">
                 <div
-                    class="w-full mx-auto rounded-lg bg-white dark:bg-gray-800 shadow-lg text-gray-800 py-10">
+                    class="w-full mx-auto rounded-lg bg-gray-50 dark:bg-gray-800 shadow-lg text-gray-800 py-11">
                     <div class="w-full mb-10 ">
                         <p class="text-2xl text-black text-center pb-3 dark:text-white ">$whoami</p>
                         <p class="text-white text-gray-600 dark:text-gray-200 px-5">
@@ -90,9 +90,9 @@
                 </div>
             </div>
 
-            <div class="md:w-1/3 sm:w-full bg-white dark:bg-black flex items-center justify-center px-5 py-20">
+            <div class="md:w-1/3 sm:w-full bg-white dark:bg-black flex items-center justify-center px-5 py-8">
                 <div
-                    class="w-full mx-auto rounded-lg bg-white dark:bg-gray-800 shadow-lg text-gray-800 py-10">
+                    class="w-full mx-auto rounded-lg bg-gray-50 dark:bg-gray-800 shadow-lg text-gray-800 py-16">
                     <div class="w-full mb-10 ">
                         <p class="text-2xl text-black text-center pb-3 dark:text-white ">Get in touch</p>
                         <p class="text-white text-gray-600 dark:text-gray-200 px-5">
@@ -102,7 +102,7 @@
                             </svg>
                             Github :
                             <a class="underline"
-                               href="https://www.github.com/chengkangzai">https://www.github.com/chengkangzai</a>
+                               href="https://www.github.com/chengkangzai">https://github.com/chengkangzai</a>
                         </p>
                         <p class="text-white text-gray-600 dark:text-gray-200 px-5">
                             <svg class="h-6 w-6 fill-current text-blue-600 inline" viewBox="0 0 512 512">
@@ -111,7 +111,7 @@
                             </svg>
                             Linkedin :
                             <a class="underline"
-                               href="https://www.linkedin.com/in/chingchengkang/">https://www.linkedin.com/in/chingchengkang/</a>
+                               href="https://www.linkedin.com/in/chingchengkang/">https://linkedin.com/in/chingchengkang/</a>
                         </p>
                         <p class="text-white text-gray-600 dark:text-gray-200 px-5">
                             <svg class="h-6 w-6 fill-current inline text-blue-600" viewBox="0 0 512 512">
@@ -139,7 +139,7 @@
             </div>
         </div>
 
-        <div class="container rounded-lg bg-gray-100 dark:bg-gray-800 mx-auto w-full h-full min-h-full flex-wrap ">
+        <div class="container rounded-lg bg-gray-50 dark:bg-gray-800 mx-auto w-full h-full min-h-full flex-wrap ">
             <h1 class="text-black dark:text-white text-4xl text-center py-8">My Roadmap</h1>
             <hr>
             <div class="relative wrap overflow-hidden p-10 h-full">
@@ -186,6 +186,9 @@
                             excellent condition of 400+ PC, 100+ Projectors, and countless student and staff laptops and
                             solve some of the problems.
                         </p>
+                        <p class="text-sm leading-snug tracking-wide pt-2 text-white">
+                            December 2020 - Present
+                        </p>
                     </div>
                 </div>
 
@@ -197,6 +200,28 @@
                     </div>
                     <div
                         class="order-1 bg-blue-500 rounded-lg shadow-xl w-5/12 px-6 py-4 transform hover:scale-110 transition duration-300">
+                        <h3 class="mb-3 font-bold text-white text-xl">Technical Assistant, Head of Accommodation Team in APU </h3>
+                        <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
+                            - Led a team of technical assistants to provide support services to the university's accommodation unit.
+                            <br>
+                            - Work together with ISP's technician regarding network issue that requires their attention
+                            <br>
+                            - Ensure the network accessibility within the university campus
+                            <br>
+                            - Maintained, managed, and monitored technical facilities and infrastructure within the campus
+                            <br>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+                    <div class="order-1 w-5/12"></div>
+                    <div
+                        class="z-20 flex items-center order-1 bg-gray-800  dark:bg-gray-100 shadow-xl w-8 h-8 rounded-full transform hover:scale-125 transition duration-300">
+                        <h1 class="mx-auto text-white font-semibold text-lg dark:text-black">4</h1>
+                    </div>
+                    <div
+                        class="order-1 bg-indigo-500 rounded-lg shadow-xl w-5/12 px-6 py-4 transform hover:scale-110 transition duration-300">
                         <h3 class="mb-3 font-bold text-white text-xl">Intern as Junior Web Developer in
                             <a href="https://strateqgroup.com/prs/" class="underline">
                                 Strateq Group (PRS)
@@ -211,14 +236,14 @@
                     </div>
                 </div>
 
-                <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+                <div class="mb-8 flex justify-between items-center w-full right-timeline ">
                     <div class="order-1 w-5/12"></div>
                     <div
                         class="z-20 flex items-center order-1 bg-gray-800  dark:bg-gray-100 shadow-xl w-8 h-8 rounded-full transform hover:scale-125 transition duration-300">
-                        <h1 class="mx-auto text-white font-semibold text-lg dark:text-black">4</h1>
+                        <h1 class="mx-auto font-semibold text-lg text-white dark:text-black">5</h1>
                     </div>
                     <div
-                        class="order-1 bg-indigo-500 rounded-lg shadow-xl w-5/12 px-6 py-4 transform hover:scale-110 transition duration-300">
+                        class="order-1 bg-blue-500 rounded-lg shadow-xl w-5/12 px-6 py-4 transform hover:scale-110 transition duration-300">
                         <h3 class="mb-3 font-bold text-white text-xl">Graduated from
                             <a class="underline"
                                href="https://www.apu.edu.my/">
@@ -234,16 +259,17 @@
                         </p>
                         <small class="text-xs line-through text-gray-400">Only if i can round off to 4.0</small>
                     </div>
+
                 </div>
 
-                <div class="mb-8 flex justify-between items-center w-full right-timeline ">
+                <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
                     <div class="order-1 w-5/12"></div>
                     <div
                         class="z-20 flex items-center order-1 bg-gray-800  dark:bg-gray-100 shadow-xl w-8 h-8 rounded-full transform hover:scale-125 transition duration-300">
-                        <h1 class="mx-auto font-semibold text-lg text-white dark:text-black">5</h1>
+                        <h1 class="mx-auto text-white font-semibold text-lg dark:text-black">6</h1>
                     </div>
                     <div
-                        class="order-1 bg-blue-500 rounded-lg shadow-xl w-5/12 px-6 py-4 transform hover:scale-110 transition duration-300">
+                        class="order-1 bg-indigo-500 rounded-lg shadow-xl w-5/12 px-6 py-4 transform hover:scale-110 transition duration-300">
                         <h3 class="mb-3 font-bold text-white text-xl">Continue to persuade study in
                             <a class="underline"
                                href="https://www.apu.edu.my/">
@@ -260,17 +286,16 @@
                             September 2020 - Present
                         </p>
                     </div>
-
                 </div>
 
-                <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+                <div class="mb-8 flex justify-between items-center w-full right-timeline ">
                     <div class="order-1 w-5/12"></div>
                     <div
                         class="z-20 flex items-center order-1 bg-gray-800  dark:bg-gray-100 shadow-xl w-8 h-8 rounded-full transform hover:scale-125 transition duration-300">
-                        <h1 class="mx-auto text-white font-semibold text-lg dark:text-black">6</h1>
+                        <h1 class="mx-auto font-semibold text-lg text-white dark:text-black">5</h1>
                     </div>
                     <div
-                        class="order-1 bg-indigo-500 rounded-lg shadow-xl w-5/12 px-6 py-4 transform hover:scale-110 transition duration-300">
+                        class="order-1 bg-blue-500 rounded-lg shadow-xl w-5/12 px-6 py-4 transform hover:scale-110 transition duration-300">
                         <h3 class="mb-3 font-bold text-white text-xl">Internship at
                             <a class="underline" href="https://www.mysoftinn.com/">Softinn Solutions</a>
                         </h3>
@@ -278,6 +303,7 @@
                             To be explore
                         </p>
                     </div>
+
                 </div>
             </div>
         </div>
