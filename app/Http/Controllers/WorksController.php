@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreWorksRequest;
+use App\Http\Requests\UpdateWorksRequest;
 use App\Models\Works;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
@@ -74,7 +75,6 @@ class WorksController extends Controller
         $client = $s3->getDriver()->getAdapter();
         $imgLink = $s3->getAwsTemporaryUrl($client, Works::S3_PATH . '/' . $work->picture_name, now()->addHours(24), []);
 
-
         return view('admin.work.show', compact('work', 'imgLink'));
     }
 
@@ -95,9 +95,29 @@ class WorksController extends Controller
      * @param StoreWorksRequest $request
      * @param Works $work
      * @return RedirectResponse
+     * @throws Throwable
      */
-    public function update(StoreWorksRequest $request, Works $work)
+    public function update(UpdateWorksRequest $request, Works $work)
     {
+        DB::transaction(function () use ($request, $work) {
+            if ($request->hasFile('picture')) {
+                Storage::disk('s3')->delete(Works::S3_PATH . $work->picture_name);
+                $path = $request->file('picture')->store(Works::S3_PATH, 's3');
+            }
+
+            $work->update([
+                'name' => $request->name,
+                'description' => $request->description,
+                'picture_name' => !$request->hasFile('picture') ? $work->picture_name : basename($path),
+                'url' => $request->url,
+                'github_url' => $request->github_url,
+                'status' => $request->status,
+            ]);
+            if ($request->get('tags')) {
+                $work->attachTags($request->get('tags'));
+            }
+            return $work;
+        });
         $work->update($request->validated());
         return redirect()->route('admin.works.index');
     }

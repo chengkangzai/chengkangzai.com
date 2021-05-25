@@ -27,7 +27,7 @@ class StoreWorksRequest extends FormRequest
             'name' => ['required', 'string'],
             'description' => ['required', 'string'],
             'tags' => ['array'],
-            'picture' => ['required', 'mimes:jpg,bmp,png,jpeg'],
+            'picture' => ['required', 'mimes:jpg,bmp,png,jpeg,gif'],
             'url' => ['string'],
             'github_url' => ['string'],
             'status' => ['required', 'string']
