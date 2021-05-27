@@ -54,7 +54,7 @@
             </div>
         </nav>
     </header>
-    <main class="h-auto bg-white dark:bg-black w-full px-3 md:px-0 @if(request()->is('admin/*')) flex @endif">
+    <main class="bg-white dark:bg-black w-full px-3 md:px-0 @if(request()->is('admin/*')) flex @else min-h-screen  @endif">
         @yield('content')
     </main>
     @yield('footer')
