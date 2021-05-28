@@ -1,5 +1,5 @@
 <footer class="bg-white dark:bg-gray-900 w-full pb-6 md:pt-6 px-4 border-t-2">
-    <div class="hidden md:block  items-center justify-between md:flex py-6 text-center ">
+    <div class="hidden sm:block items-center justify-between md:flex py-6 text-center ">
         <p class="text-blue-500 px-6">All rights reserved</p>
         <p class="text-blue-500 px-6">Built with
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-500 inline" viewBox="0 0 20 20"
