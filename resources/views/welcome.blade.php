@@ -210,8 +210,8 @@
 
         <section class="flex flex-wrap -m-4 dark:text-white w-full mx-auto pb-20 md:pb-0">
             <div class="w-full">
-                <h1 class="mb-2 text-2xl font-black text-black text-center dark:text-white lg:text-3xl md:text-2xl">
-                    These are some of my Work :3 </h1>
+                <h2 class="mb-2 text-2xl font-black text-black text-center dark:text-white lg:text-3xl md:text-2xl">
+                    These are some of my Work :3 </h2>
             </div>
 
             @forelse($works as $work)
@@ -265,9 +265,9 @@
                 </div>
             @empty
                 <div class="w-full border-lg border rounded-lg mt-6">
-                    <h1 class="my-20 text-xl font-black text-black text-center dark:text-white lg:text-2xl">
+                    <h6 class="my-20 text-xl font-black text-black text-center dark:text-white lg:text-2xl">
                         No Active Work now @@
-                    </h1>
+                    </h6>
                 </div>
             @endforelse
         </section>
@@ -275,9 +275,9 @@
         <section class="md:py-32 hidden md:block">
             <div class="container rounded-lg bg-gray-50 dark:bg-gray-800 mx-auto w-full h-full min-h-full flex-wrap "
                  id="roadmap">
-                <h1 class="mb-2 text-2xl font-black text-black text-center dark:text-white lg:text-3xl md:text-2xl py-12"
+                <h6 class="mb-2 text-2xl font-black text-black text-center dark:text-white lg:text-3xl md:text-2xl py-12"
                     id="experience">
-                    The Experience</h1>
+                    The Experience</h6>
                 <hr>
                 <div class="relative wrap overflow-hidden p-10 h-full">
                     <div class="border-2-2 absolute border-opacity-20 border-gray-700 dark:border-white h-full border"
@@ -286,7 +286,7 @@
                         <div class="order-1 w-5/12"></div>
                         <div
                             class="z-20 flex items-center order-1 bg-gray-800 dark:bg-gray-100 shadow-xl w-8 h-8 rounded-full transform hover:scale-125 transition duration-300">
-                            <h1 class="mx-auto font-semibold text-lg text-white dark:text-black ">1</h1>
+                            <h6 class="mx-auto font-semibold text-lg text-white dark:text-black ">1</h6>
                         </div>
                         <div
                             class=" order-1 bg-blue-500 rounded-lg shadow-xl w-5/12 px-6 py-4 transform hover:scale-110 transition duration-300">
@@ -312,7 +312,7 @@
                         <div class="order-1 w-5/12"></div>
                         <div
                             class="z-20 flex items-center order-1 bg-gray-800 dark:bg-gray-100 shadow-xl w-8 h-8 rounded-full transform hover:scale-125 transition duration-300">
-                            <h1 class="mx-auto text-white font-semibold text-lg dark:text-black">2</h1>
+                            <h6 class="mx-auto text-white font-semibold text-lg dark:text-black">2</h6>
                         </div>
                         <div
                             class="order-1 bg-indigo-500 rounded-lg shadow-xl w-5/12 px-6 py-4 transform hover:scale-110 transition duration-300">
@@ -333,7 +333,7 @@
                         <div class="order-1 w-5/12"></div>
                         <div
                             class="z-20 flex items-center order-1 bg-gray-800  dark:bg-gray-100 shadow-xl w-8 h-8 rounded-full transform hover:scale-125 transition duration-300">
-                            <h1 class="mx-auto font-semibold text-lg text-white dark:text-black">3</h1>
+                            <h6 class="mx-auto font-semibold text-lg text-white dark:text-black">3</h6>
                         </div>
                         <div
                             class="order-1 bg-blue-500 rounded-lg shadow-xl w-5/12 px-6 py-4 transform hover:scale-110 transition duration-300">
@@ -359,7 +359,7 @@
                         <div class="order-1 w-5/12"></div>
                         <div
                             class="z-20 flex items-center order-1 bg-gray-800  dark:bg-gray-100 shadow-xl w-8 h-8 rounded-full transform hover:scale-125 transition duration-300">
-                            <h1 class="mx-auto text-white font-semibold text-lg dark:text-black">4</h1>
+                            <h6 class="mx-auto text-white font-semibold text-lg dark:text-black">4</h6>
                         </div>
                         <div
                             class="order-1 bg-indigo-500 rounded-lg shadow-xl w-5/12 px-6 py-4 transform hover:scale-110 transition duration-300">
@@ -384,7 +384,7 @@
                         <div class="order-1 w-5/12"></div>
                         <div
                             class="z-20 flex items-center order-1 bg-gray-800  dark:bg-gray-100 shadow-xl w-8 h-8 rounded-full transform hover:scale-125 transition duration-300">
-                            <h1 class="mx-auto font-semibold text-lg text-white dark:text-black">5</h1>
+                            <h6 class="mx-auto font-semibold text-lg text-white dark:text-black">5</h6>
                         </div>
                         <div
                             class="order-1 bg-blue-500 rounded-lg shadow-xl w-5/12 px-6 py-4 transform hover:scale-110 transition duration-300">
@@ -409,7 +409,7 @@
                         <div class="order-1 w-5/12"></div>
                         <div
                             class="z-20 flex items-center order-1 bg-gray-800  dark:bg-gray-100 shadow-xl w-8 h-8 rounded-full transform hover:scale-125 transition duration-300">
-                            <h1 class="mx-auto text-white font-semibold text-lg dark:text-black">6</h1>
+                            <h6 class="mx-auto text-white font-semibold text-lg dark:text-black">6</h6>
                         </div>
                         <div
                             class="order-1 bg-indigo-500 rounded-lg shadow-xl w-5/12 px-6 py-4 transform hover:scale-110 transition duration-300">
@@ -435,7 +435,7 @@
                         <div class="order-1 w-5/12"></div>
                         <div
                             class="z-20 flex items-center order-1 bg-gray-800  dark:bg-gray-100 shadow-xl w-8 h-8 rounded-full transform hover:scale-125 transition duration-300">
-                            <h1 class="mx-auto font-semibold text-lg text-white dark:text-black">5</h1>
+                            <h6 class="mx-auto font-semibold text-lg text-white dark:text-black">5</h6>
                         </div>
                         <div
                             class="order-1 bg-blue-500 rounded-lg shadow-xl w-5/12 px-6 py-4 transform hover:scale-110 transition duration-300">
