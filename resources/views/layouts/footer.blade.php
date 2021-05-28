@@ -1,5 +1,5 @@
-<footer class="bg-white dark:bg-gray-900 w-full pb-6 md:pt-6 px-4 border-t-2">
-    <div class="hidden sm:block items-center justify-between md:flex py-6 text-center ">
+<footer class="bg-white dark:bg-gray-900 w-full pb-6 md:pt-6 px-4 border-t-2 mx-auto ">
+    <div class="hidden sm:flex items-center justify-between md:flex py-6 text-center ">
         <p class="text-blue-500 px-6">All rights reserved</p>
         <p class="text-blue-500 px-6">Built with
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-500 inline" viewBox="0 0 20 20"
@@ -9,7 +9,7 @@
             </svg>
             by Ching Cheng Kang.
         </p>
-        <div class="flex items-center px-6 text-center mx-auto">
+        <div class="flex items-center px-6">
             <a href="mailto:hi@chengkangzai.com"  rel="noreferrer" target="_blank">
                 <svg fill="none" class="h-6 w-6 text-blue-600 mr-6" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
