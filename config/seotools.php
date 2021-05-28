@@ -41,7 +41,7 @@ return [
             'url'         => null, // Set null for using Url::current(), set false to total remove
             'type'        => false,
             'site_name'   => false,
-            'images'      => [asset('src/bighead.jpeg')],
+            'images'      => [base_path('src/bighead.jpeg')],
         ],
     ],
     'twitter' => [
@@ -62,7 +62,7 @@ return [
             'description' => "Ching Cheng Kang's Personal Blog and also act as his own knowledge base ! (He is a forgetful person)", // set false to total remove
             'url'         => false, // Set null for using Url::current(), set false to total remove
             'type'        => 'WebPage',
-            'images'      => [asset('src/bighead.jpeg')],
+            'images'      => [base_path('src/bighead.jpeg')],
         ],
     ],
 ];
