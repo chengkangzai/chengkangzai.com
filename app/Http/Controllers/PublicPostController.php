@@ -8,6 +8,7 @@ use Exception;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
+use Str;
 
 class PublicPostController extends Controller
 {
@@ -20,7 +21,7 @@ class PublicPostController extends Controller
     public function index()
     {
         SEOTools::setTitle('Blog');
-        $posts = cache()->remember('public-Posts', 60 * 60 * 24 , function () {
+        $posts = cache()->remember('public-Posts', 60 * 60 * 24, function () {
             return Post::latest()->published()->with('tags')->paginate(10);
         });
         return view('public.post.index', compact('posts'));
@@ -37,6 +38,7 @@ class PublicPostController extends Controller
     {
         abort_if($post->status !== Post::STATUS['PUBLISH'], 404);
         SEOTools::setTitle($post->title);
+        SEOTools::setDescription(Str::words(strip_tags($post->content)));
         cache()->remember('public-Posts-' . $post->slug, 60 * 60 * 24, function () use ($post) {
             $post->load('comments');
             return $post;
