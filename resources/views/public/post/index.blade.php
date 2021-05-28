@@ -1,5 +1,3 @@
-{{--TODO SEO--}}
-{{--https://github.com/artesaos/seotools--}}
 @extends('layouts.app')
 
 @section('content')
@@ -18,7 +16,7 @@
                         {{--                        <svg class=" fill-current h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M0 32l34.9 395.8L191.5 480l157.6-52.2L384 32H0zm308.2 127.9H124.4l4.1 49.4h175.6l-13.6 148.4-97.9 27v.3h-1.1l-98.7-27.3-6-75.8h47.7L138 320l53.5 14.5 53.7-14.5 6-62.2H84.3L71.5 112.2h241.1l-4.4 47.7z"/></svg>--}}
                         {{--                    </div>--}}
                         <h2 class="text-2xl font-bold title-font mb-2">{{$post->title}} </h2>
-                        <p class="leading-relaxed text-base">{!! Str::words($post->content,20) !!}</p>
+                        <p class="leading-relaxed text-base">{{ Str::words(strip_tags($post->content),20) }}</p>
 
                         <div class="text-center mt-2 leading-none flex justify-between w-full">
                     <span class=" mr-3 inline-flex items-center leading-none text-sm  py-1 ">
