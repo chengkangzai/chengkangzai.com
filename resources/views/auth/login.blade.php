@@ -4,7 +4,7 @@
     {{--    https://tailwindcomponents.com/component/login-register-form--}}
 
     <div
-        class="rounded-lg sm:border-2 px-4 my-40 lg:px-24 py-16 lg:max-w-xl sm:max-w-md w-full text-center dark:bg-gray-700 mx-auto">
+        class="max-h-screen rounded-lg sm:border-2 px-4 my-40 lg:px-24 py-16 lg:max-w-xl sm:max-w-md w-full text-center dark:bg-gray-700 mx-auto">
         <form class="text-center" method="POST" action="{{ route('login') }}">
             @csrf
             <h1 class="tracking-wider mb-8 w-full text-gray-600 dark:text-white text-3xl">
