@@ -7,7 +7,7 @@
 @section('content')
     <div class="xl:w-8/12 md:w-10/12 mx-auto pt-20 ">
         <div class="dark:text-white mb-12 pb-12 border-b-2">
-            <h1 class="text-4xl inline pr-5">{{config('app.name')}}</h1> ||
+            <h2 class="text-4xl inline pr-5">{{config('app.name')}}</h2> ||
             <p class="inline pl-5">Just Random Sharing Blog for tech</p>
         </div>
 
