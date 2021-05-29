@@ -19,11 +19,11 @@
             <div class="md:items-center md:w-auto flex">
                 <div class="md:flex hidden">
                     @if(request()->is('/'))
-                        <a class="block md:text-white mr-4 " href="#about-me">About Me</a>
-                        <a class="block md:text-white mr-4" href="#work">My Work</a>
-                        <a class="block md:text-white mr-4" href="#experience">Experience</a>
+                        <a class="block font-medium md:text-white mr-4 " href="#about-me">About Me</a>
+                        <a class="block font-medium md:text-white mr-4" href="#work">My Work</a>
+                        <a class="block font-medium md:text-white mr-4" href="#experience">Experience</a>
                     @else
-                        <a class="block md:text-white mr-4 " href="{{route('public.index')}}">About Me</a>
+                        <a class="block font-medium md:text-white mr-4 " href="{{route('public.index')}}">About Me</a>
                     @endif
                 <a class="block md:text-white mr-4" href="{{route('public.posts.index')}}">Blog</a>
                 </div>
