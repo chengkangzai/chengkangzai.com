@@ -46,10 +46,6 @@
                             @csrf
                         </form>
                     @endauth
-                    @guest
-                        <a class="p-2 ml-2 bg-teal-500 text-gray-100 font-semibold leading-none border border-teal-600 rounded hover:border-transparent hover:bg-teal-600"
-                           href="{{route('login')}}">{{__('Login')}}</a>
-                    @endguest
                 </div>
             </div>
         </nav>
