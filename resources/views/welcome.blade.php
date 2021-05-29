@@ -93,7 +93,7 @@
                             <p class="text-2xl text-black text-center pb-3 dark:text-white ">What I believe in</p>
                         </div>
                         <div class="text-3xl text-indigo-500 text-left leading-tight h-3">“</div>
-                        <ul x-show="cn" class="list-disc list-inside list">
+                        <ul x-show="cn">
                             <li class="text-white text-gray-600 dark:text-gray-200 text-center px-5">1.
                                 面对问题是解决问题的第一步。
                             </li>
@@ -107,7 +107,7 @@
                                 你不解决问题，问题会解决你。
                             </li>
                         </ul>
-                        <ol x-show="!cn" style="display: none" class="list-disc list-inside list">
+                        <ol x-show="!cn" style="display: none">
                             <li class="text-white text-gray-600 dark:text-gray-200 text-center px-5">1.
                                 Facing the problem is the first matter of the business.
                             </li>
@@ -246,7 +246,7 @@
                                 </a>
                             </div>
                             <div
-                                class="text-center mt-2 leading-none flex items-start w-full mt-4 dark:text-whiteß mb-4">
+                                class="text-center mt-2 leading-none flex items-start w-full mt-4 dark:text-white mb-4">
                                 <span class="inline">
                                 Build with
                                     @foreach($work->tags as $tag)
