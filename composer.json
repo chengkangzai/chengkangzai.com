@@ -15,6 +15,7 @@
         "laravel/tinker": "^2.5",
         "league/flysystem-aws-s3-v3": "~1.0",
         "league/flysystem-cached-adapter": "~1.0",
+        "renatomarinho/laravel-page-speed": "^2.0",
         "spatie/laravel-tags": "3.1.0"
     },
     "require-dev": {
