@@ -2,6 +2,18 @@
     <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
 @endsection
 
+@section('style')
+    <style>
+        .ql-editor p {
+            font-size: 1.4rem;
+        }
+
+        .ql-editor ul li {
+            font-size: 1.2rem;
+        }
+    </style>
+@endsection
+
 @extends('layouts.app')
 
 @section('content')
@@ -107,7 +119,8 @@
         });
 
 
-        document.querySelector(".ql-toolbar").remove()
+        document.querySelector(".ql-toolbar").remove();
+        document.querySelector(".ql-editor").contentEditable = false;
 
     </script>
 @endsection
