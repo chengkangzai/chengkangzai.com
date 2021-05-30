@@ -1,7 +1,6 @@
 @section('cdn')
     <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/tom-select@1.1/dist/css/tom-select.css" rel="stylesheet">
-
 @endsection
 
 @extends('layouts.app')
@@ -111,10 +110,8 @@
             scrollingContainer: null
         });
 
-        setTimeout(function () {
-            //Set dark theme
-            document.querySelector(".ql-toolbar").classList.add("bg-white")
-        }, 50)
+        document.querySelector(".ql-toolbar").classList.add("bg-white");
+
 
         //https://stackoverflow.com/questions/46840665/how-to-submit-forms-with-quilljs-and-body-parser
         function onSubmitCreatePostForm() {
