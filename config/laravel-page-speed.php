@@ -11,8 +11,8 @@ return [
     | You would probably replace that in your local configuration to get a readable output.
     |
     */
-//    'enable' => !(env("APP_ENV") == "local"),
-    'enable' => true,
+    'enable' => !(env("APP_ENV") == "local"),
+//    'enable' => true,
 
     /*
     |--------------------------------------------------------------------------
