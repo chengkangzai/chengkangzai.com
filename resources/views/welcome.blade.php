@@ -107,7 +107,7 @@
                                 你不解决问题，问题会解决你。
                             </li>
                         </ul>
-                        <ol x-show="!cn" style="display: none">
+                        <ol x-show="!cn">
                             <li class="text-white text-gray-600 dark:text-gray-200 text-center px-5">1.
                                 Facing the problem is the first matter of the business.
                             </li>
