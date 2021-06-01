@@ -10,13 +10,17 @@
     @yield('style')
 </head>
 <body>
-
 <div class="h-screen bg-white dark:bg-black ">
     <header class="bg-teal-100 w-full" style="width: 100% !important;">
         <nav class="flex justify-between w-full from-blue-400 bg-gradient-to-r to-purple-600 text-white p-4">
-            <a href="{{route('public.index')}}"><span
-                    class="font-semibold text-xl tracking-tight">{{ config('app.name') }}</span></a>
+            <div class="flex align-middle my-auto">
+                <a href="{{route('public.index')}}">
+                    <span class="font-semibold text-xl tracking-tight align-middle">{{ config('app.name') }}</span>
+                </a>
+            </div>
             <div class="md:items-center md:w-auto flex">
+
+                {{--Big Sreen--}}
                 <div class="md:flex hidden">
                     @if(request()->is('/'))
                         <a class="block font-medium md:text-white mr-4 " href="#about-me">About Me</a>
@@ -25,9 +29,16 @@
                     @else
                         <a class="block font-medium md:text-white mr-4 " href="{{route('public.index')}}">About Me</a>
                     @endif
-                <a class="block md:text-white mr-4" href="{{route('public.posts.index')}}">Blog</a>
+                    <a class="block md:text-white mr-4" href="{{route('public.posts.index')}}">Blog</a>
                 </div>
-                {{--                    <a class="block md:text-white mr-4" href="/link">Link 4</a>--}}
+
+                {{--Mobile--}}
+                @if(request()->is('/'))
+                    <div class="flex md:hidden">
+                        <a class="leading-none border border-teal-600 rounded border p-2 font-medium md:text-white "
+                           href="{{route('public.posts.index')}}">Blog</a>
+                    </div>
+                @endif
                 <div class="flex text-sm">
                     @auth
                         @if(request()->is("admin/*"))
@@ -39,8 +50,9 @@
                         @endif
                         <a class=" p-2 ml-2 bg-white text-gray-500 font-semibold leading-none border border-gray-100 rounded hover:border-transparent hover:bg-gray-100"
                            href="{{route('logout')}}"
-                           onclick="event.preventDefault();
-                            document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
+                           onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                            {{ __('Logout') }}
+                        </a>
 
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="hidden">
                             @csrf
