@@ -81,7 +81,7 @@
                     x-data="{ cn: true }">
                     <div class="w-full mb-10 ">
                         <div>
-                            <p class="text-right text-black dark:text-white text-xl" role="button"
+                            <p class="text-right text-black dark:text-white text-xl animate-bounce" role="button"
                                title="Click me to translate">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 right-0" fill="none"
                                      viewBox="0 0 24 24" @click="cn = !cn"
