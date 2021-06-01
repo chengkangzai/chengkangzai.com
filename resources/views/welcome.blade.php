@@ -44,6 +44,13 @@
 @endsection
 
 @section('content')
+    <button onclick="topFunction()" id="rocket" title="Go to top" style="display: none"
+            class="z-50 p-2 rounded-lg border bg-white border-black fixed bottom-4 right-4 md:right-2 md:bottom-8 md:p-3 cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-black" fill="none" viewBox="0 0 24 24"
+             stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7l4-4m0 0l4 4m-4-4v18"/>
+        </svg>
+    </button>
     <div class="md:w-11/12 mx-auto ">
         <section class="text-gray-700 ">
             <div class="container flex flex-col items-center px-5 min-h-screen py-8 mx-auto md:flex-row lg:px-28">
@@ -83,9 +90,9 @@
                         <div>
                             <p class="text-right text-black dark:text-white text-xl" role="button"
                                title="Click me to translate">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 right-0" fill="none"
-                                     viewBox="0 0 24 24" @click="cn = !cn"
-                                     stroke="currentColor">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 right-0 animate-bounce"
+                                     fill="none"
+                                     viewBox="0 0 24 24" @click="cn = !cn" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                           d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/>
                                 </svg>
@@ -457,6 +464,20 @@
 
 @section('script')
     <script>
+        window.onscroll = () => {
+            if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+                document.getElementById("rocket").style.display = "block";
+            } else {
+                document.getElementById("rocket").style.display = "none";
+            }
+        };
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
         var typed = new Typed('#typed', {
             strings: ['Web Developer', 'Fullstack Developer', 'Laravel Developer', 'Angular Developer', 'Ionic Developer', 'Firebase Developer', 'Self-learner'],
             typeSpeed: 40,
