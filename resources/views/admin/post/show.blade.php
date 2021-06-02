@@ -1,5 +1,5 @@
 @section('cdn')
-    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+    <script src="{{asset('ckeditor5/build/ckeditor.js')}}"></script>
 @endsection
 @extends('layouts.app')
 
@@ -10,7 +10,7 @@
             <div class="flex flex-col w-full">
                 <div class="overflow-auto h-screen">
 
-                    <div class="table w-full h-auto p-2">
+                    <div class="w-full h-auto p-2">
                         <div
                             class="py-3 px-5 mb-2 bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 rounded-md text-sm border border-gray-200 dark:border-gray-600">
                             <ul class="flex">
@@ -35,14 +35,16 @@
                             <tr class="bg-gray-100 dark:bg-gray-800 text-center border-b text-base text-gray-600 dark:text-gray-400">
                                 <td class="border p-2">Tag</td>
                                 <td>
-                                    @foreach($post->tags as $tag)
-                                        ~ {{$tag->name}}
-                                    @endforeach
+                                    <ul class="list-inside list-disc">
+                                        @foreach($post->tags as $tag)
+                                            <li> {{$tag->name}} </li>
+                                        @endforeach
+                                    </ul>
                                 </td>
                             </tr>
                             </thead>
                         </table>
-                        <div class="pb-8 w-4/5 mx-auto">
+                        <div class="pb-8 w-4/5  mx-auto border-black">
                             <div class="dark:text-white dark:bg-dark" id="editor">
                                 {!!  $post->content!!}
                             </div>
@@ -56,18 +58,12 @@
 @endsection
 
 @section('script')
-    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
-
     <script>
-
-        const editor = new Quill('#editor', {
-            theme: 'snow',
-            readonly: true,
-            scrollingContainer: null
-        });
-
-        document.querySelector(".ql-toolbar").remove()
-
-
+        ClassicEditor
+            .create(document.querySelector('#editor'))
+            .then(editor => {
+                window.editor = editor;
+                editor.isReadOnly = true;
+            })
     </script>
 @endsection

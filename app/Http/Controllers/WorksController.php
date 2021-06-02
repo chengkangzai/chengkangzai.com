@@ -92,7 +92,7 @@ class WorksController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param StoreWorksRequest $request
+     * @param UpdateWorksRequest $request
      * @param Works $work
      * @return RedirectResponse
      * @throws Throwable
@@ -131,6 +131,9 @@ class WorksController extends Controller
     public function destroy(Works $work): RedirectResponse
     {
         $work->delete();
+        if (Storage::disk('s3')->exists(Works::S3_PATH . $work->picture_name)) {
+            Storage::disk('s3')->delete(Works::S3_PATH . $work->picture_name);
+        }
         return back();
     }
 }

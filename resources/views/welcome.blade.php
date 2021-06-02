@@ -88,7 +88,7 @@
                     x-data="{ cn: true }">
                     <div class="w-full mb-10 ">
                         <div>
-                            <p class="text-right text-black dark:text-white text-xl" role="button"
+                            <p class="text-right text-black dark:text-white text-xl animate-bounce" role="button"
                                title="Click me to translate">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 right-0 animate-bounce"
                                      fill="none"
@@ -114,7 +114,7 @@
                                 你不解决问题，问题会解决你。
                             </li>
                         </ul>
-                        <ol x-show="!cn" style="display: none">
+                        <ol x-show="!cn">
                             <li class="text-white text-gray-600 dark:text-gray-200 text-center px-5">1.
                                 Facing the problem is the first matter of the business.
                             </li>

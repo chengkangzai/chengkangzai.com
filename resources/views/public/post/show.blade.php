@@ -1,31 +1,12 @@
 @section('cdn')
-    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
-@endsection
-
-@section('style')
-    <style>
-        .ql-editor p {
-            font-size: 1.4rem;
-        }
-
-        .ql-editor ul li {
-            font-size: 1.2rem;
-        }
-    </style>
+    <script src="{{asset('ckeditor5/build/ckeditor.js')}}"></script>
 @endsection
 
 @extends('layouts.app')
 
 @section('content')
-    <button onclick="topFunction()" id="rocket" title="Go to top" style="display: none"
-            class="z-50 p-2 rounded-lg border bg-white border-black fixed bottom-4 right-4 md:right-2 md:bottom-8 md:p-3 cursor-pointer">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-black" fill="none" viewBox="0 0 24 24"
-             stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7l4-4m0 0l4 4m-4-4v18"/>
-        </svg>
-    </button>
     <div class="xl:w-8/12 md:w-10/12 mx-auto pt-20 ">
-        <div class="dark:text-white mb-12 pb-12 border-b-2 leading-snug">
+        <div class="dark:text-white mb-12 pb-12 border-b-2">
             <h2 class="text-4xl inline pr-5">{{config('app.name')}}</h2> ||
             <p class="inline pl-5">Just Random Sharing Blog for tech</p>
         </div>
@@ -114,35 +95,13 @@
 
 
 @section('script')
-    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
-
     <script>
-
-        const editor = new Quill('#editor', {
-            theme: 'snow',
-            module: {toolbar: []},
-            scrollingContainer: null,
-            readonly: true
-        });
-
-
-        document.querySelector(".ql-toolbar").remove();
-        document.querySelector(".ql-editor").contentEditable = false;
-
-        window.onscroll = () => {
-            if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30 ) {
-                document.getElementById("rocket").style.display = "block";
-            } else {
-                document.getElementById("rocket").style.display = "none";
-            }
-        };
-
-        // When the user clicks on the button, scroll to the top of the document
-        function topFunction() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-        }
-
+        ClassicEditor
+            .create(document.querySelector('#editor'))
+            .then(editor => {
+                window.editor = editor;
+                editor.isReadOnly = true;
+            });
     </script>
 @endsection
 
