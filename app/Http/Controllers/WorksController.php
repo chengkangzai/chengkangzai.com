@@ -92,7 +92,7 @@ class WorksController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param StoreWorksRequest $request
+     * @param UpdateWorksRequest $request
      * @param Works $work
      * @return RedirectResponse
      * @throws Throwable
