@@ -1,6 +1,5 @@
 @section('cdn')
     <link href="https://cdn.jsdelivr.net/npm/tom-select@1.1/dist/css/tom-select.css" rel="stylesheet">
-    <script src="{{asset('ckeditor5/build/ckeditor.js')}}"></script>
 @endsection
 
 @extends('layouts.app')
