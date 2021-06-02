@@ -38,7 +38,7 @@
                             </tr>
                             <tr class="bg-gray-100 dark:bg-gray-800 text-center border-b text-base text-gray-600 dark:text-gray-400">
                                 <td class="border p-2">Image</td>
-                                <td><img src="{{$work->imageLink}}" alt="Image for Work"></td>
+                                <td><img src="{{$imgLink}}" alt="Image for Work" class="mx-auto"></td>
                             </tr>
                             @if($work->url)
                             <tr class="bg-gray-100 dark:bg-gray-800 text-center border-b text-base text-gray-600 dark:text-gray-400">

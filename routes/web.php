@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ImageController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\PublicIndexController;
 use App\Http\Controllers\PublicPostCommentController;
@@ -36,5 +37,6 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'web'], 'as' => 'adm
     Route::view('home', 'admin.home')->name('home');
     Route::resource('posts', PostController::class);
     Route::resource('works', WorksController::class);
+    Route::post('image/store',[ImageController::class,'store'])->name('image.store');
 });
 
