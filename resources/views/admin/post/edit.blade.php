@@ -1,6 +1,6 @@
 @section('cdn')
-    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/tom-select@1.1/dist/css/tom-select.css" rel="stylesheet">
+    <script src="{{asset('ckeditor5/build/ckeditor.js')}}"></script>
 @endsection
 
 @extends('layouts.app')
@@ -40,7 +40,9 @@
                                 <select id="tags" name="tags[]"
                                         class="w-full border bg-white border-gray-400 text-gray-800 placeholder-gray-400 rounded focus:border-transparent focus:outline-none focus:shadow-outline px-3 py-2">
                                     @foreach(\Spatie\Tags\Tag::all() as $tag)
-                                        <option value="{{$tag->name}}">{{$tag->name}}</option>
+                                        <option value="{{$tag->name}}"
+                                                @if($post->tags->contains($tag->name)) selected @endif
+                                        >{{$tag->name}}</option>
                                     @endforeach
                                 </select>
                             </div>
@@ -50,22 +52,21 @@
                                 <select name="status" id="status"
                                         class="w-full border border-gray-400 text-gray-800 placeholder-gray-400 rounded focus:border-transparent focus:outline-none focus:shadow-outline px-3 py-2">
                                     @foreach(\App\Models\Post::STATUS as $key => $status)
-                                        <option value="{{$key}}">{{$status}}</option>
+                                        <option value="{{$key}}"
+                                                @if($post->status == $status) selected @endif>{{$status}}</option>
                                     @endforeach
                                 </select>
                             </div>
 
-                            <input name="content" type="hidden" id="content" value="{{old('content',$post->content)}}">
-
-                            <div id="editor" class="dark:bg-white dark:text-black bg-white">
-                                {!!  old('content',$post->content)!!}
+                            <div class="space-y-2">
+                                <label for="editor" class="block font-medium tracking-tight">Content</label>
+                                <textarea id="editor" class="dark:bg-white dark:text-black bg-white"
+                                          style="width: 100vw" name="content">
+                                    {!! $post->content !!}
+                                </textarea>
                             </div>
 
                             <div class="flex justify-end pt-2">
-                                {{--                                <button type="button"--}}
-                                {{--                                        class="inline-flex items-center text-white px-5 py-2 rounded-lg overflow-hidden focus:outline-none bg-indigo-500 hover:bg-indigo-600 font-semibold tracking-tight">--}}
-                                {{--                                    Publish--}}
-                                {{--                                </button>--}}
                                 <input type="submit" value="Submit"
                                        class="inline-flex items-center text-white px-5 py-2 rounded-lg overflow-hidden focus:outline-none bg-indigo-500 hover:bg-indigo-600 font-semibold tracking-tight">
                             </div>
@@ -79,47 +80,7 @@
 @endsection
 
 @section('script')
-    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
-
-    <script>
-        const toolbarOptions = [
-            [{'header': [1, 2, 3, 4, 5, 6, false]}],
-            [{'size': ['small', false, 'large', 'huge']}],  // custom dropdown
-            [{'font': []}],
-
-            ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
-            ['blockquote', 'code-block'],
-
-            [{'header': 1}, {'header': 2}],               // custom button values
-            [{'list': 'ordered'}, {'list': 'bullet'}],
-            [{'script': 'sub'}, {'script': 'super'}],      // superscript/subscript
-            [{'indent': '-1'}, {'indent': '+1'}],          // outdent/indent
-            [{'direction': 'rtl'}],                         // text direction
-
-            [{'color': []}, {'background': []}],          // dropdown with defaults from theme
-            [{'align': []}],
-
-            ['clean'],                                         // remove formatting button
-        ];
-
-        const editor = new Quill('#editor', {
-            modules: {
-                toolbar: toolbarOptions,
-            },
-            theme: 'snow',
-            scrollingContainer: null
-        });
-
-        document.querySelector(".ql-toolbar").classList.add("bg-white");
-
-
-        //https://stackoverflow.com/questions/46840665/how-to-submit-forms-with-quilljs-and-body-parser
-        function onSubmitCreatePostForm() {
-            var laHidden = document.querySelector("#content");
-            laHidden.value = document.querySelector(".ql-editor").innerHTML;
-        }
-
-    </script>
+    @include('partial.CKEDITOR')
     <script src="https://cdn.jsdelivr.net/npm/tom-select@1.1/dist/js/tom-select.complete.min.js"></script>
     <script>
         var control = new TomSelect('#tags', {

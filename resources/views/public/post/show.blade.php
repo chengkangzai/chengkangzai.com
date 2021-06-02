@@ -1,17 +1,5 @@
 @section('cdn')
-    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
-@endsection
-
-@section('style')
-    <style>
-        .ql-editor p {
-            font-size: 1.4rem;
-        }
-
-        .ql-editor ul li {
-            font-size: 1.2rem;
-        }
-    </style>
+    <script src="{{asset('ckeditor5/build/ckeditor.js')}}"></script>
 @endsection
 
 @extends('layouts.app')
@@ -107,21 +95,13 @@
 
 
 @section('script')
-    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
-
     <script>
-
-        const editor = new Quill('#editor', {
-            theme: 'snow',
-            module: {toolbar: []},
-            scrollingContainer: null,
-            readonly: true
-        });
-
-
-        document.querySelector(".ql-toolbar").remove();
-        document.querySelector(".ql-editor").contentEditable = false;
-
+        ClassicEditor
+            .create(document.querySelector('#editor'))
+            .then(editor => {
+                window.editor = editor;
+                editor.isReadOnly = true;
+            });
     </script>
 @endsection
 
