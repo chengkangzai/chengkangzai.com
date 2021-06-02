@@ -1,6 +1,5 @@
 @section('cdn')
     <link href="https://cdn.jsdelivr.net/npm/tom-select@1.1/dist/css/tom-select.css" rel="stylesheet">
-    <script src="{{asset('ckeditor5/build/ckeditor.js')}}"></script>
 @endsection
 
 @extends('layouts.app')
@@ -38,8 +37,7 @@
                                 </ul>
                             </div>
                         @endif
-                        <form onsubmit="return onSubmitCreatePostForm(event)" action="{{route('admin.posts.store')}}"
-                              method="POST" id="createPostForm"
+                        <form action="{{route('admin.posts.store')}}" method="POST" id="createPostForm"
                               class="space-y-3 dark:text-white mb-2 px-5">
                             @csrf
                             <div class="space-y-2">
