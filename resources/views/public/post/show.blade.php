@@ -1,10 +1,11 @@
-@section('cdn')
+@push('cdn')
     <script src="{{asset('ckeditor5/build/ckeditor.js')}}"></script>
-@endsection
+@endpush
 
 @extends('layouts.app')
 
 @section('content')
+    @include('partial.rocket')
     <div class="xl:w-8/12 md:w-10/12 mx-auto pt-20 ">
         <div class="dark:text-white mb-12 pb-12 border-b-2">
             <h2 class="text-4xl inline pr-5">{{config('app.name')}}</h2> ||
@@ -38,8 +39,10 @@
                     @endforeach
                     </span>
             </div>
-            <div id="editor" class="text-4xl w-full">
-                {!! $post->content !!}
+            <div class="w-screen">
+                <div id="editor" class="w-screen mx-auto">
+                    {!! $post->content !!}
+                </div>
             </div>
         </div>
 
@@ -52,9 +55,9 @@
                     @csrf
                     <div class="w-full space-x-4 mx-auto flex mb-3">
                         <input id="name" type="text" placeholder="Name (required) " name="name"
-                               class="w-1/2 text-center border border-gray-400 text-gray-800 placeholder-gray-400 rounded focus:shadow-outline py-2"/>
+                                                         class="w-1/2 text-center border border-gray-400 text-gray-800 placeholder-gray-400 rounded focus:shadow-outline py-2"/>
                         <input id="email" type="email" placeholder="Email (required) " name="email"
-                               class="w-1/2 text-center border border-gray-400 text-gray-800 placeholder-gray-400 rounded focus:shadow-outline py-2"/>
+                                                          class="w-1/2 text-center border border-gray-400 text-gray-800 placeholder-gray-400 rounded focus:shadow-outline py-2"/>
                     </div>
                     <textarea
                         class="w-full shadow-inner p-4 border border-gray-400 mb-4 rounded-lg focus:shadow-outline text-2xl"
@@ -94,7 +97,7 @@
 @endsection
 
 
-@section('script')
+@push('script')
     <script>
         ClassicEditor
             .create(document.querySelector('#editor'))
@@ -103,7 +106,7 @@
                 editor.isReadOnly = true;
             });
     </script>
-@endsection
+@endpush
 
 @section('footer')
     @include('layouts.footer')

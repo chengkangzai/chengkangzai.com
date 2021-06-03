@@ -6,8 +6,8 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     {!! SEO::generate(true) !!}
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    @yield('cdn')
-    @yield('style')
+    @stack('cdn')
+    @stack('style')
 </head>
 <body>
 <div class="h-screen bg-white dark:bg-black ">
@@ -68,5 +68,5 @@
     @yield('footer')
 </div>
 </body>
-@yield('script')
+@stack('script')
 </html>

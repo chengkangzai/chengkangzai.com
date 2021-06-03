@@ -1,8 +1,6 @@
-@section('cdn')
-    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+@push('cdn')
     <link href="https://cdn.jsdelivr.net/npm/tom-select@1.1/dist/css/tom-select.css" rel="stylesheet">
-
-@endsection
+@endpush
 
 @extends('layouts.app')
 
@@ -106,7 +104,7 @@
 
 @endsection
 
-@section('script')
+@push('script')
     <script src="https://cdn.jsdelivr.net/npm/tom-select@1.1/dist/js/tom-select.complete.min.js"></script>
     <script>
         new TomSelect('#tags', {
@@ -115,4 +113,4 @@
         });
     </script>
 
-@endsection
+@endpush
