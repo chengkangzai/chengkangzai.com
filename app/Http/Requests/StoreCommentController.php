@@ -24,9 +24,9 @@ class StoreCommentController extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => ['string', 'required'],
-            'email' => ['email', 'required'],
-            'comment' => ['string', 'required'],
+            'name' => ['required', 'string',],
+            'email' => ['required', 'email',],
+            'comment' => ['required', 'string',],
         ];
     }
 }
