@@ -1,10 +1,12 @@
 <?php
 
+use App\Http\Controllers\CommentController;
 use App\Http\Controllers\ImageController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\PublicIndexController;
 use App\Http\Controllers\PublicPostCommentController;
 use App\Http\Controllers\PublicPostController;
+use App\Http\Controllers\TagController;
 use App\Http\Controllers\WorksController;
 use Illuminate\Support\Facades\Route;
 
@@ -34,9 +36,11 @@ Route::group(['as' => 'public.'], function () {
  * Admin Page
  */
 Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'web'], 'as' => 'admin.'], function () {
+    Route::post('image/store', [ImageController::class, 'store'])->name('image.store');
     Route::view('home', 'admin.home')->name('home');
     Route::resource('posts', PostController::class);
     Route::resource('works', WorksController::class);
-    Route::post('image/store',[ImageController::class,'store'])->name('image.store');
+    Route::resource('tags', TagController::class)->except(['show']);
+    Route::resource('comment', CommentController::class)->only('index', 'destroy');
 });
 
