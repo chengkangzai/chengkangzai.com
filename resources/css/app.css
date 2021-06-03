@@ -16,6 +16,7 @@
 .ck-content > p,
 .ck-content > pre {
     margin: revert;
+    color: black;
 }
 
 .ck-content > ol,
@@ -23,10 +24,12 @@
     list-style: revert;
     margin: revert;
     padding: revert;
+    color: black;
 }
 
 .ck-content > table {
     border-collapse: revert;
+    color: black;
 }
 
 .ck-content > h1,
@@ -37,5 +40,6 @@
 .ck-content > h6 {
     font-size: revert;
     font-weight: revert;
+    color: black;
 }
 /*END CKEDITOR Style because of Tailwind*/
