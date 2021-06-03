@@ -1,4 +1,7 @@
-<script src="{{asset('ckeditor5/build/ckeditor.js')}}"></script>
+@push('cdn')
+    <script src="{{asset('ckeditor5/build/ckeditor.js')}}"></script>
+@endpush
+
 <script>
     class ImageUploadAdapter {
         constructor(loader) {

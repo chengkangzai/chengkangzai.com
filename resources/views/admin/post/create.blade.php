@@ -1,6 +1,6 @@
-@section('cdn')
+@push('cdn')
     <link href="https://cdn.jsdelivr.net/npm/tom-select@1.1/dist/css/tom-select.css" rel="stylesheet">
-@endsection
+@endpush
 
 @extends('layouts.app')
 
@@ -86,7 +86,7 @@
 
 @endsection
 
-@section('script')
+@push('script')
     @include('partial.CKEDITOR')
     <script src="https://cdn.jsdelivr.net/npm/tom-select@1.1/dist/js/tom-select.complete.min.js"></script>
     <script>
@@ -96,4 +96,4 @@
         });
     </script>
 
-@endsection
+@endpush

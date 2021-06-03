@@ -1,6 +1,3 @@
-@section('cdn')
-    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
-@endsection
 @extends('layouts.app')
 
 @section('content')
@@ -68,19 +65,3 @@
     </div>
 @endsection
 
-@section('script')
-    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
-
-    <script>
-
-        const editor = new Quill('#editor', {
-            theme: 'snow',
-            readonly: true,
-            scrollingContainer: null
-        });
-
-        document.querySelector(".ql-toolbar").remove()
-
-
-    </script>
-@endsection

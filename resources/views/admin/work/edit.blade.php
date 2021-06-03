@@ -1,8 +1,6 @@
-@section('cdn')
-    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+@push('cdn')
     <link href="https://cdn.jsdelivr.net/npm/tom-select@1.1/dist/css/tom-select.css" rel="stylesheet">
-
-@endsection
+@endpush
 
 @extends('layouts.app')
 
@@ -111,50 +109,7 @@
 
 @endsection
 
-@section('script')
-    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
-
-    <script>
-        const toolbarOptions = [
-            [{'header': [1, 2, 3, 4, 5, 6, false]}],
-            [{'size': ['small', false, 'large', 'huge']}],  // custom dropdown
-            [{'font': []}],
-
-            ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
-            ['blockquote', 'code-block'],
-
-            [{'header': 1}, {'header': 2}],               // custom button values
-            [{'list': 'ordered'}, {'list': 'bullet'}],
-            [{'script': 'sub'}, {'script': 'super'}],      // superscript/subscript
-            [{'indent': '-1'}, {'indent': '+1'}],          // outdent/indent
-            [{'direction': 'rtl'}],                         // text direction
-
-            [{'color': []}, {'background': []}],          // dropdown with defaults from theme
-            [{'align': []}],
-
-            ['clean'],                                         // remove formatting button
-        ];
-
-        const editor = new Quill('#editor', {
-            modules: {
-                toolbar: toolbarOptions,
-            },
-            theme: 'snow',
-            scrollingContainer: null
-        });
-
-        setTimeout(function () {
-            //Set dark theme
-            document.querySelector(".ql-toolbar").classList.add("bg-white")
-        }, 50)
-
-        //https://stackoverflow.com/questions/46840665/how-to-submit-forms-with-quilljs-and-body-parser
-        function onSubmitCreatePostForm() {
-            var laHidden = document.querySelector("#content");
-            laHidden.value = document.querySelector(".ql-editor").innerHTML;
-        }
-
-    </script>
+@push('script')
     <script src="https://cdn.jsdelivr.net/npm/tom-select@1.1/dist/js/tom-select.complete.min.js"></script>
     <script>
         var control = new TomSelect('#tags', {
@@ -164,4 +119,4 @@
 
     </script>
 
-@endsection
+@endpush
