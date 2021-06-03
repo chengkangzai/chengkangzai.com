@@ -28,8 +28,8 @@ class UpdateWorksRequest extends FormRequest
             'description' => ['required', 'string'],
             'tags' => ['array'],
             'picture' => ['mimes:jpg,bmp,png,jpeg,gif'],
-            'url' => ['string'],
-            'github_url' => ['string'],
+            'url' => ['nullable', 'string'],
+            'github_url' => ['nullable', 'string'],
             'status' => ['required', 'string']
         ];
     }
