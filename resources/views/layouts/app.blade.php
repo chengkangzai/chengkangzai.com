@@ -29,7 +29,7 @@
                     @else
                         <a class="block font-medium md:text-white mr-4 " href="{{route('public.index')}}">About Me</a>
                     @endif
-                    <a class="block md:text-white mr-4" href="{{route('public.posts.index')}}">Blog</a>
+                    <a class="block md:text-white mr-4 font-black" href="{{route('public.posts.index')}}">Blog</a>
                 </div>
 
                 {{--Mobile--}}
