@@ -1,6 +1,6 @@
-@section('cdn')
+@push('cdn')
     <script src="{{asset('ckeditor5/build/ckeditor.js')}}"></script>
-@endsection
+@endpush
 @extends('layouts.app')
 
 @section('content')
@@ -57,7 +57,7 @@
     </div>
 @endsection
 
-@section('script')
+@push('script')
     <script>
         ClassicEditor
             .create(document.querySelector('#editor'))
@@ -66,4 +66,4 @@
                 editor.isReadOnly = true;
             })
     </script>
-@endsection
+@endpush
