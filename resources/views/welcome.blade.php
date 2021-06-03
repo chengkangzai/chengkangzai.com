@@ -129,8 +129,7 @@
                     </div>
                     <div class="w-full">
                         <p class="text-md text-indigo-500 font-bold text-center" x-show="cn">柯文哲</p>
-                        <p class="text-md text-indigo-500 font-bold text-center" x-show="!cn" style="display: none">Ko
-                            Wen-Je</p>
+                        <p class="text-md text-indigo-500 font-bold text-center" x-show="!cn">Ko Wen-Je</p>
                         <p class="text-xs text-gray-500 text-center">@KP_Taipei</p>
                     </div>
                 </div>
