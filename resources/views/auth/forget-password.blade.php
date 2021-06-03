@@ -8,21 +8,7 @@
             <h1 class="tracking-wider mb-8 w-full text-gray-600 text-3xl dark:text-white">
                 {{__('Reset Password')}}
             </h1>
-            @if ($errors->any())
-                <div
-                    class="block text-sm text-left text-red-600 bg-red-200 border border-red-400 h-auto flex items-center p-4 rounded-sm"
-                    role="alert">
-                    <ul>
-                        @foreach ($errors->all() as $error)
-                            <li class="flex items-start">
-                                <p class="ml-2">
-                                    {{$error}}
-                                </p>
-                            </li>
-                        @endforeach
-                    </ul>
-                </div>
-            @endif
+            @include('partial.error-card')
             <div class="py-2 text-left">
                 <input type="email" name="email"
                        class="bg-gray-200 border-2 border-gray-100 focus:outline-none bg-gray-100 block w-full py-2 px-4 rounded-lg focus:border-gray-700"

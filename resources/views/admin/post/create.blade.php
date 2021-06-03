@@ -22,21 +22,7 @@
                                 <li>Create</li>
                             </ul>
                         </div>
-                        @if ($errors->any())
-                            <div
-                                class="block text-sm text-left text-red-600 bg-red-200 border border-red-400 h-auto flex items-center p-4 rounded-sm"
-                                role="alert">
-                                <ul>
-                                    @foreach ($errors->all() as $error)
-                                        <li class="flex items-start">
-                                            <p class="ml-2">
-                                                {{$error}}
-                                            </p>
-                                        </li>
-                                    @endforeach
-                                </ul>
-                            </div>
-                        @endif
+                        @include('partial.error-card')
                         <form action="{{route('admin.posts.store')}}" method="POST" id="createPostForm"
                               class="space-y-3 dark:text-white mb-2 px-5">
                             @csrf
@@ -69,8 +55,8 @@
 
                             <div class="space-y-2">
                                 <label for="editor" class="block font-medium tracking-tight">Content</label>
-                                <textarea id="editor" class="dark:bg-white dark:text-black bg-white"
-                                          style="width: 100vw" name="content"></textarea>
+                                <textarea id="editor" style="width: 100vw" name="content"
+                                          class="dark:bg-white dark:text-black bg-white"></textarea>
                             </div>
 
                             <div class="flex justify-end pt-2">

@@ -10,22 +10,7 @@
             <h1 class="tracking-wider mb-8 w-full text-gray-600 text-3xl dark:text-white">
                 {{ __('Reset Password') }}
             </h1>
-            @if ($errors->any())
-                <div
-                    class="block text-sm text-left text-red-600 bg-red-200 border border-red-400 h-auto flex items-center p-4 rounded-sm"
-                    role="alert">
-                    <ul>
-                        @foreach ($errors->all() as $error)
-                            <li class="flex items-start">
-                                <p class="ml-2">
-                                    {{$error}}
-                                </p>
-                            </li>
-                        @endforeach
-                    </ul>
-                </div>
-            @endif
-
+            @include('partial.error-card')
 
             <div class="py-2 text-left">
                 <input type="password" name="password"

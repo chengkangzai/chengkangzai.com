@@ -22,8 +22,8 @@
                                 <li>Create</li>
                             </ul>
                         </div>
-                        <form onsubmit="return onSubmitCreatePostForm(event)"
-                              action="{{route('admin.posts.update',$post)}}"
+                        @include('partial.error-card')
+                        <form action="{{route('admin.posts.update',$post)}}"
                               method="POST" id="createPostForm" class="space-y-3 dark:text-white mb-2 px-5">
                             @method('PUT')
                             @csrf
@@ -59,7 +59,7 @@
 
                             <div class="space-y-2">
                                 <label for="editor" class="block font-medium tracking-tight">Content</label>
-                                <textarea id="editor" class="dark:bg-white dark:text-black bg-white"
+                                <textarea id="editor" class="dark:bg-white dark:text-black bg-white" name="content"
                                           style="width: 100vw" name="content">
                                     {!! $post->content !!}
                                 </textarea>

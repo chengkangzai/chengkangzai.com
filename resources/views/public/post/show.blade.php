@@ -50,17 +50,20 @@
             <div class="mx-auto mb-6">
                 <h3 class="text-2xl text-center">Comment Section</h3>
             </div>
+            <div class="w-full mb-2">
+                @include('partial.error-card')
+            </div>
             <section class="rounded-b-lg w-full">
                 <form action="{{route('public.posts.comments.store',['post'=>$post])}}" method="post">
                     @csrf
                     <div class="w-full space-x-4 mx-auto flex mb-3">
-                        <input id="name" type="text" placeholder="Name (required) " name="name"
-                                                         class="w-1/2 text-center border border-gray-400 text-gray-800 placeholder-gray-400 rounded focus:shadow-outline py-2"/>
-                        <input id="email" type="email" placeholder="Email (required) " name="email"
-                                                          class="w-1/2 text-center border border-gray-400 text-gray-800 placeholder-gray-400 rounded focus:shadow-outline py-2"/>
+                        <input id="name" type="text" placeholder="Name (required) " name="name" required
+                               class="w-1/2 text-center border border-gray-400 text-gray-800 placeholder-gray-400 rounded focus:shadow-outline py-2"/>
+                        <input id="email" type="email" placeholder="Email (required) " name="email" required
+                               class="w-1/2 text-center border border-gray-400 text-gray-800 placeholder-gray-400 rounded focus:shadow-outline py-2"/>
                     </div>
-                    <textarea
-                        class="w-full shadow-inner p-4 border border-gray-400 mb-4 rounded-lg focus:shadow-outline text-2xl"
+                    <textarea required
+                        class="w-full shadow-inner p-4 border border-gray-400 mb-4 rounded-lg focus:shadow-outline text-2xl dark:text-black"
                         placeholder="Drop your Comment here" cols="6" rows="6" id="comment_content" name="comment"
                         spellcheck="false"></textarea>
                     <button
@@ -70,6 +73,7 @@
                 </form>
 
                 <div id="task-comments" class="pt-4">
+
                     @forelse($post->comments as $comment)
                         <div
                             class="bg-white dark:bg-gray-700 rounded-lg p-3 flex flex-col justify-center items-center md:items-start shadow-lg mb-4">
