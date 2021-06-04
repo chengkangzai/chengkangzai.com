@@ -7,6 +7,7 @@ use App\Http\Controllers\PublicIndexController;
 use App\Http\Controllers\PublicPostCommentController;
 use App\Http\Controllers\PublicPostController;
 use App\Http\Controllers\TagController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\WorksController;
 use Illuminate\Support\Facades\Route;
 
@@ -38,6 +39,8 @@ Route::group(['as' => 'public.'], function () {
 Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'web'], 'as' => 'admin.'], function () {
     Route::post('image/store', [ImageController::class, 'store'])->name('image.store');
     Route::view('home', 'admin.home')->name('home');
+    Route::post('user/changePassword/{user}', [UserController::class, 'changePassword'])->name('user.changePassword');
+    Route::resource('user', UserController::class)->only(['edit']);
     Route::resource('posts', PostController::class);
     Route::resource('works', WorksController::class);
     Route::resource('tags', TagController::class)->except(['show']);
