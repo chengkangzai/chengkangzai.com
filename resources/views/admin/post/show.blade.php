@@ -1,6 +1,3 @@
-@push('cdn')
-    <script src="{{asset('ckeditor5/build/ckeditor.js')}}"></script>
-@endpush
 @extends('layouts.app')
 
 @section('content')
@@ -58,6 +55,7 @@
 @endsection
 
 @push('script')
+    <script src="{{asset('ckeditor5/build/ckeditor.js')}}"></script>
     <script>
         ClassicEditor
             .create(document.querySelector('#editor'))
