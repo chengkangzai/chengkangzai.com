@@ -23,7 +23,6 @@
                         <form action="{{route('admin.user.changePassword',auth()->user())}}"
                               method="POST" id="createPostForm"
                               class="space-y-3 dark:text-white mb-2 px-5 w-full sm:w-2/3 mx-auto">
-                            @method('PUT')
                             @csrf
 
                             <div class="space-y-2">
@@ -34,28 +33,28 @@
                             </div>
 
                             <div class="space-y-2">
-                                <label for="current_password" class="block font-medium tracking-tight">
+                                <label for="old_password" class="block font-medium tracking-tight">
                                     Current Password
                                 </label>
-                                <input id="current_password" type="password" placeholder="Current Password"
-                                       name="current_password"
+                                <input id="old_password" type="password" placeholder="Current Password"
+                                       name="old_password"
                                        class="w-full border border-gray-400 text-gray-800 placeholder-gray-400 rounded focus:border-transparent focus:outline-none focus:shadow-outline px-3 py-2"/>
                             </div>
 
                             <hr class="border border-t-4">
 
                             <div class="space-y-2">
-                                <label for="password" class="block font-medium tracking-tight">Password</label>
-                                <input id="password" type="password" placeholder="Password" name="password"
+                                <label for="new_password" class="block font-medium tracking-tight">Password</label>
+                                <input id="new_password" type="password" placeholder="Password" name="new_password"
                                        class="w-full border border-gray-400 text-gray-800 placeholder-gray-400 rounded focus:border-transparent focus:outline-none focus:shadow-outline px-3 py-2"/>
                             </div>
 
                             <div class="space-y-2">
-                                <label for="password_confirm" class="block font-medium tracking-tight">
+                                <label for="new_password_confirmation" class="block font-medium tracking-tight">
                                     Password Confirm
                                 </label>
-                                <input id="password_confirm" type="password" placeholder="Confirm Password"
-                                       name="password_confirm"
+                                <input id="new_password_confirmation" type="password" placeholder="Confirm Password"
+                                       name="new_password_confirmation"
                                        class="w-full border border-gray-400 text-gray-800 placeholder-gray-400 rounded focus:border-transparent focus:outline-none focus:shadow-outline px-3 py-2"/>
                             </div>
 

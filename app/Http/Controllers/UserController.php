@@ -35,11 +35,13 @@ class UserController extends Controller
     public function changePassword(User $user, Request $request)
     {
         $request->validate([
+            'name' => ['required'],
             'old_password' => ['required', 'password:web'],
             'new_password' => ['required', 'string', 'min:8', 'confirmed']
         ]);
 
         $user->update([
+            'name' => $request->name,
             'password' => Hash::make($request->get('new_password'))
         ]);
 
