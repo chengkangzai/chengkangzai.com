@@ -46,15 +46,15 @@
     @include('partial.rocket')
     <div class="md:w-11/12 mx-auto ">
         <section class="text-gray-700 ">
-            <div class="container flex flex-col items-center px-5 min-h-screen py-8 mx-auto md:flex-row lg:px-28">
+            <div class="container flex flex-col items-center px-5 min-h-screen mx-auto md:flex-row lg:px-28">
                 <div
-                    class="flex flex-col items-start w-full pt-0 mb-16 text-left lg:flex-grow md:w-1/2 xl:mr-20 md:pr-24 md:mb-0 ">
+                    class="w-full lg:flex-grow sm:w-1/2 flex flex-col items-start min-h-screen sm:min-h-full py-16 sm:py-8 mb-16 text-left  ">
                     <h1 class="mb-8 text-5xl font-bold tracking-tighter text-black md:text-5xl title-font dark:text-white">
                         Hi, I am <br>Ching Cheng Kang(CCK) <span class="wave">👋🏻</span></h1>
                     <div style="min-height: 40px">
-                    <span
-                        class="text-2xl text-base leading-relaxed text-left text-gray-400 inline-block dark:text-gray-200"
-                        id="typed"></span>
+                        <span id="typed"
+                              class="text-2xl text-base leading-relaxed text-left text-gray-400 inline-block dark:text-gray-200">
+                        </span>
                     </div>
                     <p class="w-full mt-2 mb-8 text-sm text-left dark:text-gray-400 text-dark-600">
                         ⚡️ Fun fact: I convert Coffee to Code ☕️
@@ -65,12 +65,23 @@
                             SEE MY RESUME
                         </a>
                     </div>
+                    <div
+                        class="container flex flex-col items-center sm:items-start w-full align-bottom text-center mx-auto mt-28 sm:mt-8 ">
+                        <a href="#about-me">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="animate-bounce h-8 w-8" fill="none"
+                                 viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
-                <div class="w-full lg:w-5/6 lg:max-w-lg md:w-1/2">
+                <div class="w-full lg:w-5/6 lg:max-w-lg sm:w-1/2">
                     <img class="object-cover object-center rounded-lg " alt="hero"
                          src="{{asset('src/bighead.jpeg')}}">
                 </div>
             </div>
+
         </section>
 
         <section class="flex flex-wrap w-full mx-auto pb-8" id="about-me">
@@ -147,8 +158,7 @@
                         <br>
                         <p class="text-white text-gray-600 dark:text-gray-200 px-5">
                             My knowledge in this field are currently self-experience & academically, so they might look
-                            fundamental and
-                            simple in the meantime.
+                            fundamental and simple in the meantime.
                         </p>
                     </div>
 
