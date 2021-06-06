@@ -60,7 +60,7 @@
                         ⚡️ Fun fact: I convert Coffee to Code ☕️
                     </p>
                     <div class="flex flex-col justify-center lg:flex-row">
-                        <a role="button" href="{{asset('src/resume.pdf')}}"
+                        <a role="button" href="{{asset('resume.pdf')}}"
                            class="flex items-center px-6 py-2 mt-auto font-semibold text-white dark:text-black transition duration-300 ease-in-out transform bg-black dark:bg-white rounded-lg hover:bg-gray-800 dark:hover:bg-gray-200 hover:to-black dark:hover:to-white focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2">
                             SEE MY RESUME
                         </a>

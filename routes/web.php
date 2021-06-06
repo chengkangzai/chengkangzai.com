@@ -26,6 +26,7 @@ use Illuminate\Support\Facades\Route;
  */
 Route::group(['as' => 'public.'], function () {
     Route::get('/', [PublicIndexController::class, 'index'])->name('index');
+    Route::redirect('resume', 'resume.pdf');
     Route::group(['prefix' => 'posts', 'as' => 'posts.'], function () {
         Route::get('/', [PublicPostController::class, 'index'])->name('index');
         Route::get('{post:slug}', [PublicPostController::class, 'show'])->name('show');
