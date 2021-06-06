@@ -48,7 +48,7 @@
         <section class="text-gray-700 ">
             <div class="container flex flex-col items-center px-5 min-h-screen mx-auto md:flex-row lg:px-28">
                 <div
-                    class="w-full lg:flex-grow sm:w-1/2 flex flex-col items-start min-h-screen sm:min-h-full py-16 sm:py-8 mb-16 text-left  ">
+                    class="w-full lg:flex-grow sm:w-1/2 flex flex-col items-start min-h-screen sm:min-h-full py-16 sm:py-8 text-left  ">
                     <h1 class="mb-8 text-5xl font-bold tracking-tighter text-black md:text-5xl title-font dark:text-white">
                         Hi, I am <br>Ching Cheng Kang(CCK) <span class="wave">👋🏻</span></h1>
                     <div style="min-height: 40px">
