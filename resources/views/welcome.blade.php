@@ -54,6 +54,7 @@
                     <div style="min-height: 40px">
                         <span id="typed"
                               class="text-2xl text-base leading-relaxed text-left text-gray-400 inline-block dark:text-gray-200">
+                            Laravel Developer
                         </span>
                     </div>
                     <p class="w-full mt-2 mb-8 text-sm text-left dark:text-gray-400 text-dark-600">
@@ -67,7 +68,7 @@
                     </div>
                     <div
                         class="container flex flex-col items-center sm:items-start w-full align-bottom text-center mx-auto mt-28 sm:mt-8 ">
-                        <a href="#about-me">
+                        <a href="#about-me" aria-label="Skip to about me ">
                             <svg xmlns="http://www.w3.org/2000/svg" class="animate-bounce h-8 w-8" fill="none"
                                  viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -138,9 +139,9 @@
                         <div class="text-3xl text-indigo-500 text-right leading-tight h-3 -mt-3">”</div>
                     </div>
                     <div class="w-full">
-                        <p class="text-md text-indigo-500 font-bold text-center" x-show="cn">柯文哲</p>
-                        <p class="text-md text-indigo-500 font-bold text-center" x-show="!cn">Ko Wen-Je</p>
-                        <p class="text-xs text-gray-500 text-center">@KP_Taipei</p>
+                        <p class="text-md text-indigo-400 font-bold text-center" x-show="cn">柯文哲</p>
+                        <p class="text-md text-indigo-400 font-bold text-center" x-show="!cn">Ko Wen-Je</p>
+                        <p class="text-xs text-gray-400 text-center">@KP_Taipei</p>
                     </div>
                 </div>
             </div>
@@ -307,11 +308,11 @@
                     <div class="mb-8 flex justify-between items-center w-full right-timeline">
                         <div class="order-1 w-5/12"></div>
                         <div
-                            class="z-20 flex items-center order-1 bg-gray-800 dark:bg-gray-100 shadow-xl w-8 h-8 rounded-full transform hover:scale-125 transition duration-300">
+                            class="z-20 flex items-center order-1 bg-gray-600 dark:bg-gray-100 shadow-xl w-8 h-8 rounded-full transform hover:scale-125 transition duration-300">
                             <p class="mx-auto font-semibold text-lg text-white dark:text-black ">1</p>
                         </div>
                         <div
-                            class=" order-1 bg-blue-500 rounded-lg shadow-xl w-5/12 px-6 py-4 transform hover:scale-110 transition duration-300">
+                            class=" order-1 bg-blue-700 rounded-lg shadow-xl w-5/12 px-6 py-4 transform hover:scale-110 transition duration-300">
                             <h3 class="mb-3 font-bold text-white text-xl">
                                 Persuade Study in
                                 <a class="underline" rel="noreferrer" target="_blank" href="https://www.apu.edu.my/">
@@ -337,7 +338,7 @@
                             <p class="mx-auto text-white font-semibold text-lg dark:text-black">2</p>
                         </div>
                         <div
-                            class="order-1 bg-indigo-500 rounded-lg shadow-xl w-5/12 px-6 py-4 transform hover:scale-110 transition duration-300">
+                            class="order-1 bg-indigo-600 rounded-lg shadow-xl w-5/12 px-6 py-4 transform hover:scale-110 transition duration-300">
                             <h3 class="mb-3 font-bold text-white text-xl">Technical Assistant in APU</h3>
                             <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
                                 As a Technical Assistant (a group of around 50 members), we managed to maintain the
@@ -358,7 +359,7 @@
                             <p class="mx-auto font-semibold text-lg text-white dark:text-black">3</p>
                         </div>
                         <div
-                            class="order-1 bg-blue-500 rounded-lg shadow-xl w-5/12 px-6 py-4 transform hover:scale-110 transition duration-300">
+                            class="order-1 bg-blue-600 rounded-lg shadow-xl w-5/12 px-6 py-4 transform hover:scale-110 transition duration-300">
                             <h3 class="mb-3 font-bold text-white text-xl">
                                 Technical Assistant, Head of Accommodation Team in APU
                             </h3>
@@ -384,7 +385,7 @@
                             <p class="mx-auto text-white font-semibold text-lg dark:text-black">4</p>
                         </div>
                         <div
-                            class="order-1 bg-indigo-500 rounded-lg shadow-xl w-5/12 px-6 py-4 transform hover:scale-110 transition duration-300">
+                            class="order-1 bg-indigo-600 rounded-lg shadow-xl w-5/12 px-6 py-4 transform hover:scale-110 transition duration-300">
                             <h3 class="mb-3 font-bold text-white text-xl">Intern as Junior Web Developer in
                                 <a href="https://strateqgroup.com/prs/" class="underline" rel="noreferrer"
                                    target="_blank">
@@ -409,7 +410,7 @@
                             <p class="mx-auto font-semibold text-lg text-white dark:text-black">5</p>
                         </div>
                         <div
-                            class="order-1 bg-blue-500 rounded-lg shadow-xl w-5/12 px-6 py-4 transform hover:scale-110 transition duration-300">
+                            class="order-1 bg-blue-600 rounded-lg shadow-xl w-5/12 px-6 py-4 transform hover:scale-110 transition duration-300">
                             <h3 class="mb-3 font-bold text-white text-xl">Graduated from
                                 <a class="underline" rel="noreferrer" target="_blank" href="https://www.apu.edu.my/">
                                     Asia Pacific University</a>
@@ -422,7 +423,7 @@
                                 </a>
                                 with CGPA of 3.47
                             </p>
-                            <small class="text-xs line-through text-gray-400">Only if i can round off to 4.0</small>
+                            <small class="text-xs line-through text-gray-100">Only if i can round off to 4.0</small>
                         </div>
 
                     </div>
@@ -434,7 +435,7 @@
                             <p class="mx-auto text-white font-semibold text-lg dark:text-black">6</p>
                         </div>
                         <div
-                            class="order-1 bg-indigo-500 rounded-lg shadow-xl w-5/12 px-6 py-4 transform hover:scale-110 transition duration-300">
+                            class="order-1 bg-indigo-600 rounded-lg shadow-xl w-5/12 px-6 py-4 transform hover:scale-110 transition duration-300">
                             <h3 class="mb-3 font-bold text-white text-xl">Continue to persuade study in
                                 <a class="underline" rel="noreferrer" target="_blank"
                                    href="https://www.apu.edu.my/">
@@ -460,7 +461,7 @@
                             <p class="mx-auto font-semibold text-lg text-white dark:text-black">5</p>
                         </div>
                         <div
-                            class="order-1 bg-blue-500 rounded-lg shadow-xl w-5/12 px-6 py-4 transform hover:scale-110 transition duration-300">
+                            class="order-1 bg-blue-600 rounded-lg shadow-xl w-5/12 px-6 py-4 transform hover:scale-110 transition duration-300">
                             <h3 class="mb-3 font-bold text-white text-xl">Internship at
                                 <a class="underline" href="https://www.mysoftinn.com/" rel="noreferrer" target="_blank">
                                     Softinn Solutions</a>
