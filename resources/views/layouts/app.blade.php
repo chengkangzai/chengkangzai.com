@@ -9,6 +9,14 @@
     <link rel="manifest" href="/site.webmanifest">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     {!! SEO::generate(true) !!}
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G0TL352WKG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-G0TL352WKG');
+    </script>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     @stack('cdn')
     @stack('style')
