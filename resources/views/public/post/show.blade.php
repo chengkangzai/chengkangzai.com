@@ -59,9 +59,9 @@
                                class="w-1/2 text-center border border-gray-400 text-gray-800 placeholder-gray-400 rounded focus:shadow-outline py-2"/>
                     </div>
                     <textarea required
-                        class="w-full shadow-inner p-4 border border-gray-400 mb-4 rounded-lg focus:shadow-outline text-2xl dark:text-black"
-                        placeholder="Drop your Comment here" cols="6" rows="6" id="comment_content" name="comment"
-                        spellcheck="false"></textarea>
+                              class="w-full shadow-inner p-4 border border-gray-400 mb-4 rounded-lg focus:shadow-outline text-2xl dark:text-black"
+                              placeholder="Drop your Comment here" cols="6" rows="6" id="comment_content" name="comment"
+                              spellcheck="false"></textarea>
                     <button
                         class="font-bold py-2 px-4 w-full bg-purple-400 text-lg text-white shadow-md rounded-lg ">
                         Comment

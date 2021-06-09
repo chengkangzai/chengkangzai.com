@@ -31,7 +31,8 @@
                     <td class="p-2 border-r">{{$comment->name}}</td>
                     <td class="p-2 border-r">{{$comment->email}}</td>
                     <td class="p-2 border-r">{{$comment->comment}}</td>
-                    <td class="p-2 border-r"><a href="{{route('public.posts.show',$comment->post)}}" class="underline">{{$comment->post->title}}</a></td>
+                    <td class="p-2 border-r"><a href="{{route('public.posts.show',$comment->post)}}"
+                                                class="underline">{{$comment->post->title}}</a></td>
 
                     <td class="p-2 border-r">
                         <form action="{{route('admin.comment.destroy',$comment)}}" class="inline" method="POST">

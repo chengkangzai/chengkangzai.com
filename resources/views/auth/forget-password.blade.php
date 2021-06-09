@@ -1,7 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="rounded-lg sm:border-2 px-4 my-40 lg:px-24 py-16 lg:max-w-xl sm:max-w-md w-full text-center bg-white dark:bg-gray-700 mx-auto">
+    <div
+        class="rounded-lg sm:border-2 px-4 my-40 lg:px-24 py-16 lg:max-w-xl sm:max-w-md w-full text-center bg-white dark:bg-gray-700 mx-auto">
 
         <form class="text-center" method="POST" action="{{ route('password.email') }}">
             @csrf

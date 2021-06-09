@@ -22,7 +22,7 @@
                                 <li>Update</li>
                             </ul>
                         </div>
-                      @include('partial.error-card')
+                        @include('partial.error-card')
                         <form action="{{route('admin.works.update',$work)}}"
                               method="POST" id="createPostForm" enctype="multipart/form-data"
                               class="space-y-3 dark:text-white mb-2 px-5">

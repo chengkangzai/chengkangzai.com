@@ -39,11 +39,11 @@
                     <td class="p-2 border-r">{{$post->comments_count}}</td>
                     <td class="p-2 border-r">
                         <ul>
-                        @forelse($post->tags as $tag)
-                            <li>{{$tag->name ?? ''}}</li>
-                        @empty
-                            {{'-'}}
-                        @endforelse
+                            @forelse($post->tags as $tag)
+                                <li>{{$tag->name ?? ''}}</li>
+                            @empty
+                                {{'-'}}
+                            @endforelse
                         </ul>
                     </td>
                     <td class="p-2 border-r">

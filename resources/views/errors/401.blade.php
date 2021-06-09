@@ -448,7 +448,8 @@
         </div>
     </div>
     <div class="relative pb-full md:flex md:pb-0 md:min-h-screen w-full md:w-1/2">
-        <div style="background-image: url({{asset('src/svg/401-illustration.svg')}});" class="absolute pin bg-cover bg-no-repeat md:bg-right lg:bg-center">
+        <div style="background-image: url({{asset('src/svg/401-illustration.svg')}});"
+             class="absolute pin bg-cover bg-no-repeat md:bg-right lg:bg-center">
         </div>
     </div>
 </div>

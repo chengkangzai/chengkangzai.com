@@ -8,12 +8,16 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    {!! SEO::generate(true) !!}
-    <!-- Global site tag (gtag.js) - Google Analytics -->
+{!! SEO::generate(true) !!}
+<!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-G0TL352WKG"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
         gtag('js', new Date());
         gtag('config', 'G-G0TL352WKG');
     </script>
@@ -74,7 +78,8 @@
             </div>
         </nav>
     </header>
-    <main class="bg-white dark:bg-black w-full px-3 md:px-0 @if(request()->is('admin/*')) flex @else min-h-screen  @endif">
+    <main
+        class="bg-white dark:bg-black w-full px-3 md:px-0 @if(request()->is('admin/*')) flex @else min-h-screen  @endif">
         @yield('content')
     </main>
     @yield('footer')

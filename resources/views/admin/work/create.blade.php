@@ -38,7 +38,7 @@
                                 <select id="tags" name="tags[]"
                                         class="w-full border bg-white border-gray-400 text-gray-800 placeholder-gray-400 rounded focus:border-transparent focus:outline-none focus:shadow-outline px-3 py-2">
                                     @foreach(\Spatie\Tags\Tag::all() as $tag)
-                                        <option value="{{$tag->name}}" >{{$tag->name}}</option>
+                                        <option value="{{$tag->name}}">{{$tag->name}}</option>
                                     @endforeach
                                 </select>
                             </div>
@@ -57,7 +57,8 @@
 
                             <div class="space-y-2">
                                 <label for="picture" class="block font-medium tracking-tight">Picture</label>
-                                <input id="picture" name="picture" type="file" accept="image/*" value="{{old('picture')}}"
+                                <input id="picture" name="picture" type="file" accept="image/*"
+                                       value="{{old('picture')}}"
                                        class="w-full border bg-white border-gray-400 text-gray-800 placeholder-gray-400 rounded focus:border-transparent focus:outline-none focus:shadow-outline px-3 py-2"/>
                             </div>
 

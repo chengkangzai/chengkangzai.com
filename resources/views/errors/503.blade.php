@@ -435,6 +435,7 @@
     <div class="w-full md:w-1/2 bg-white flex items-center justify-center ">
         <div class="max-w-sm m-8">
             <div class="text-black text-5xl md:text-15xl font-black">503</div>
+            <div class="text-black md:text-7xl font-black uppercase">Server is under maintenance now, Please come back later</div>
             <div class="w-16 h-1 bg-teal-light my-3 md:my-6"></div>
             <p class="text-grey-darker text-2xl md:text-3xl font-light mb-8 leading-normal">
                 {{__('Sorry, the page you are looking for could not be found.')}}</p>
