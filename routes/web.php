@@ -42,7 +42,10 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'web'], 'as' => 'adm
     Route::view('home', 'admin.home')->name('home');
     Route::post('user/changePassword/{user}', [UserController::class, 'changePassword'])->name('user.changePassword');
     Route::resource('user', UserController::class)->only(['edit']);
+
+    Route::get('posts/{postId}/restore', [PostController::class, 'restore'])->name('posts.restore');
     Route::resource('posts', PostController::class);
+
     Route::resource('works', WorksController::class);
     Route::resource('tags', TagController::class)->except(['show']);
     Route::resource('comment', CommentController::class)->only('index', 'destroy');

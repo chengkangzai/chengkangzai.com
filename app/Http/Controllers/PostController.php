@@ -114,7 +114,16 @@ class PostController extends Controller
     public function destroy(Post $post): RedirectResponse
     {
         $post->delete();
-        return back();
+        return back()
+            ->with('undo', 'Post Delete Successfully. <a href="' . route('admin.posts.restore', $post->id) . '" class="underline"> Whoops, Undo it</a>');
+    }
 
+    public function restore($postId)
+    {
+        $post = Post::withTrashed()->findOrFail($postId);
+        if ($post->trashed()) {
+            $post->restore();
+        }
+        return redirect()->back()->with('message', 'Post restored');
     }
 }

@@ -51,7 +51,7 @@
                            class="bg-green-500 hover:bg-green-700 p-2 text-white hover:shadow-lg text-xs font-thin">Show</a>
                         <a href="{{route('admin.works.edit',$work)}}"
                            class="bg-blue-500 hover:bg-blue-700 p-2 text-white hover:shadow-lg text-xs font-thin">Edit</a>
-                        <form action="{{route('admin.works.destroy',$work)}}" class="inline" method="POST">
+                        <form action="{{route('admin.works.destroy',$work)}}" class="inline" method="POST" onsubmit="return confirm('Are you sure ? This action cannot be ')">
                             @csrf
                             @method('DELETE')
                             <input class="bg-red-500 hover:bg-red-700 p-2 text-white hover:shadow-lg text-xs font-thin"
