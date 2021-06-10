@@ -36,7 +36,7 @@
                     </span>
             </div>
             <div class="w-screen">
-                <div id="editor" class="w-screen mx-auto">
+                <div id="editor" class="w-screen mx-auto hidden">
                     {!! $post->content !!}
                 </div>
             </div>
@@ -50,7 +50,7 @@
                 @include('partial.error-card')
             </div>
             <section class="rounded-b-lg w-full">
-                <form action="{{route('public.posts.comments.store',['post'=>$post])}}" method="post">
+                <form action="{{route('public.posts.comments.store', $post)}}" method="post">
                     @csrf
                     <div class="w-full space-x-4 mx-auto flex mb-3">
                         <input id="name" type="text" placeholder="Name (required) " name="name" required
