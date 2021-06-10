@@ -60,7 +60,7 @@ class WorksController extends Controller
             }
             return $work;
         });
-        return redirect()->route('admin.home');
+        return redirect()->route('admin.works.index');
     }
 
     /**
