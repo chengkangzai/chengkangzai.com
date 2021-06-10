@@ -18,7 +18,7 @@
                class="rounded-lg focus:outline-none bg-green-500 p-2 mb-2 text-white hover:shadow-lg hover:bg-green-700 dark:hover:shadow text-base font-thin float-right">
                 Create New Post</a>
         </div>
-
+        @include('partial.undo-card')
         <table class="w-full border ">
             <thead>
             <tr class="bg-gray-100 dark:bg-gray-800 text-center border-b text-base text-gray-600 dark:text-gray-400">

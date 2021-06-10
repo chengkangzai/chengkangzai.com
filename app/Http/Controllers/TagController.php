@@ -77,6 +77,7 @@ class TagController extends Controller
 
     /**
      * @param Tag $tag
+     * @return RedirectResponse
      */
     public function destroy(Tag $tag)
     {
