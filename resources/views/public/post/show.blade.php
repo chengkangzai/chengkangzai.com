@@ -3,10 +3,7 @@
 @section('content')
     @include('partial.rocket')
     <div class="xl:w-8/12 md:w-10/12 mx-auto pt-20 ">
-        <div class="dark:text-white mb-12 pb-12 border-b-2">
-            <h2 class="text-4xl inline pr-5">{{config('app.name')}}</h2> ||
-            <p class="inline pl-5">Just Random Sharing Blog for tech</p>
-        </div>
+        @include('partial.public-heading')
 
         <div class="flex flex-wrap -m-4 dark:text-white w-full mx-auto mb-6">
             <div class="mx-auto text-center pb-8 ">
@@ -63,13 +60,12 @@
                               placeholder="Drop your Comment here" cols="6" rows="6" id="comment_content" name="comment"
                               spellcheck="false"></textarea>
                     <button
-                        class="font-bold py-2 px-4 w-full bg-purple-400 text-lg text-white shadow-md rounded-lg ">
+                        class="font-bold py-2 px-4 w-full bg-purple-600 text-lg text-white shadow-md rounded-lg ">
                         Comment
                     </button>
                 </form>
 
                 <div id="task-comments" class="pt-4">
-
                     @forelse($post->comments as $comment)
                         <div
                             class="bg-white dark:bg-gray-700 rounded-lg p-3 flex flex-col justify-center items-center md:items-start shadow-lg mb-4">
@@ -84,7 +80,7 @@
                             </p>
                         </div>
                     @empty
-                        <p class="text-gray-600 text-lg block text-center w-full ">
+                        <p class="text-gray-800 dark:text-gray-300 text-lg block text-center w-full ">
                             Its empty down here...
                         </p>
                     @endforelse

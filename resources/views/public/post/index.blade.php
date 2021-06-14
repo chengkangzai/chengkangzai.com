@@ -3,10 +3,7 @@
 @section('content')
     @include('partial.rocket')
     <div class="md:w-10/12 mx-auto pt-20 ">
-        <div class="dark:text-white mb-12 pb-12 border-b-2">
-            <h1 class="text-4xl inline pr-5">{{config('app.name')}}</h1> ||
-            <p class="inline pl-5">Just Random Sharing Blog for tech</p>
-        </div>
+        @include('partial.public-heading')
 
         <div class="flex flex-wrap -m-4 dark:text-white w-full mx-auto pb-32">
             @foreach($posts as $post)
