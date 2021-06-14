@@ -80,7 +80,7 @@
                             </p>
                         </div>
                     @empty
-                        <p class="text-gray-800 dark:text-gray-300 text-lg block text-center w-full ">
+                        <p class="text-gray-800 dark:text-white text-lg block text-center w-full ">
                             Its empty down here...
                         </p>
                     @endforelse
