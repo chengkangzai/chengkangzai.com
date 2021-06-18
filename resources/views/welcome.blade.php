@@ -53,7 +53,7 @@
                         Hi, I am <br>Ching Cheng Kang(CCK) <span class="wave">👋🏻</span></h1>
                     <div style="min-height: 40px">
                         <span id="typed"
-                              class="text-2xl text-base leading-relaxed text-left text-gray-400 inline-block dark:text-gray-200">
+                              class="text-2xl text-base leading-relaxed text-left text-gray-500 inline-block dark:text-gray-200">
                             Laravel Developer
                         </span>
                     </div>
@@ -139,9 +139,9 @@
                         <div class="text-3xl text-indigo-500 text-right leading-tight h-3 -mt-3">”</div>
                     </div>
                     <div class="w-full">
-                        <p class="text-md text-indigo-400 font-bold text-center" x-show="cn">柯文哲</p>
-                        <p class="text-md text-indigo-400 font-bold text-center" x-show="!cn">Ko Wen-Je</p>
-                        <p class="text-xs text-gray-400 text-center">@KP_Taipei</p>
+                        <p class="text-md text-indigo-700 dark:text-indigo-400 font-bold text-center" x-show="cn">柯文哲</p>
+                        <p class="text-md text-indigo-700 dark:text-indigo-400 font-bold text-center" x-show="!cn">Ko Wen-Je</p>
+                        <p class="text-xs text-gray-700 dark:text-gray-400 text-center">@KP_Taipei</p>
                     </div>
                 </div>
             </div>
