@@ -176,7 +176,8 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-        FortifyServiceProvider::class
+        FortifyServiceProvider::class,
+        Barryvdh\TranslationManager\ManagerServiceProvider::class,
     ],
 
     /*
@@ -233,3 +234,8 @@ return [
     ],
 
 ];
+
+//sail chown -R $USER:www-data storage
+//sail chown -R $USER:www-data bootstrap/cache
+//chmod -R 775 storage
+//chmod -R 775 bootstrap/cache
