@@ -24,7 +24,7 @@
     "Remove": "删除",
     "Update": "更新",
     "Create New Tag": "创建新标签",
-    "Work": "工作",
+    "Work": "作品",
     "Description": "描述",
     "Image": "图像",
     "Project URL": "项目网址",
@@ -55,7 +55,7 @@
     "Too Many Request": "请求过多",
     "Server error": "服务器错误",
     "Server Error": "服务器错误",
-    "My Work": "我的工作",
+    "My Work": "我的作品",
     "Experience": "经验",
     "Blog": "博客",
     "Main Page": "主页",
@@ -78,6 +78,7 @@
     "SEE MY RESUME": "查看我的简历",
     "Click me to translate": "点我翻译",
     "What I believe in": "我相信的",
+    "I'm 22-year-old Malaysian that passionate about making software that simplify people's life.": "我是 22 岁的马来西亚人，热衷于制作简化人们生活的软件。",
     "My knowledge in this field are currently self-experience & academically, so they might look\n                            fundamental and simple in the meantime.": "我在这个领域的知识目前是自我经验和学术上的，所以在此期间它们可能看起来很基本和简单。",
     "Get in touch": "保持联系",
     "These are some of my Work": "这些是我的一些作品",
@@ -117,5 +118,6 @@
     "Firebase Developer": "Firebase 开发人员",
     "Self-learner": "自学者",
     "Intern as Junior Web Developer in": "初级 Web 开发人员",
-    "I'm :age-year-old Malaysian that passionate about making software that simplify people's life.": "我是:age岁的马来西亚人，热衷于制作简化人们生活的软件。"
+    "I'm :age-year-old Malaysian that passionate about making software that simplify people's life.": "我是:age岁的马来西亚人，热衷于制作简化人们生活的软件。",
+    "Profile": "个人作品集"
 }
