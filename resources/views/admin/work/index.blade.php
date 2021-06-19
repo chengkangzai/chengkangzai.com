@@ -26,7 +26,7 @@
                 <td class="p-2 border-r"> {{__('ID')}}</td>
                 <td class="p-2 border-r"> {{__('Name')}}</td>
                 <td class="p-2 border-r"> {{__('Description')}}</td>
-                <td class="p-2 border-r"> {{__('Active')}}</td>
+                <td class="p-2 border-r"> {{__('Status')}}</td>
                 <td class="p-2 border-r"> {{__('Tag')}}</td>
                 <td class="p-2 border-r"> {{__('Action')}}</td>
             </tr>
@@ -37,7 +37,7 @@
                     <td class="p-2 border-r">{{$work->id}}</td>
                     <td class="p-2 border-r">{{$work->name}}</td>
                     <td class="p-2 border-r">{{$work->description}}</td>
-                    <td class="p-2 border-r">{{$work->status ? __('YES') : __('NO')}}</td>
+                    <td class="p-2 border-r">{{$work->status ? __('Active') : __('Deactivate')}}</td>
                     <td class="p-2 border-r">
                         <ul>
                             @forelse($work->tags as $tag)
