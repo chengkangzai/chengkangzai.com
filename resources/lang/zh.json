@@ -78,12 +78,11 @@
     "SEE MY RESUME": "查看我的简历",
     "Click me to translate": "点我翻译",
     "What I believe in": "我相信的",
-    "I'm :age-year-old Malaysian that passionate about making software that simplify people's life.": "我是:age岁的马来西亚人，热衷于制作简化人们生活的软件。",
     "My knowledge in this field are currently self-experience & academically, so they might look\n                            fundamental and simple in the meantime.": "我在这个领域的知识目前是自我经验和学术上的，所以在此期间它们可能看起来很基本和简单。",
     "Get in touch": "保持联系",
     "These are some of my Work": "这些是我的一些作品",
     "Image for the work": "作品图片",
-    "Build with": "构建与",
+    "Build with": "构建于",
     "No Active Work now": "现在没有活跃的项目",
     "My Experiences": "我的经历",
     "Persuade Study in": "继续进修于",
@@ -106,7 +105,7 @@
     "Graduated from": "毕业于",
     "with CGPA of 3.47": "CGPA 为 3.47",
     "Only if i can round off to 4.0<": "要是可以四舍五入到 4.0就好了",
-    "Continue to persuade study in": "继续进修",
+    "Continue to persuade study in": "继续进修于",
     "BSc (Hons) in Software Engineering": "软件工程理学士（荣誉）",
     "September": "九月",
     "Internship at": "实习地点",
@@ -117,5 +116,6 @@
     "Ionic Developer": "Ionic 开发者",
     "Firebase Developer": "Firebase 开发人员",
     "Self-learner": "自学者",
-    "Intern as Junior Web Developer in": "初级 Web 开发人员"
+    "Intern as Junior Web Developer in": "初级 Web 开发人员",
+    "I'm :age-year-old Malaysian that passionate about making software that simplify people's life.": "我是:age岁的马来西亚人，热衷于制作简化人们生活的软件。"
 }
