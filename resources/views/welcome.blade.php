@@ -153,7 +153,7 @@
                     <div class="w-full mb-10 text-center">
                         <p class="text-2xl text-black text-center pb-3 dark:text-white ">$whoami</p>
                         <p class="text-white text-gray-600 dark:text-gray-200 px-5 ">
-                            {{__("I'm :age-year-old Malaysian that passionate about making software that simplify people's life.",['age'=>22])}}
+                            {{__("I'm :age-year-old Malaysian that passionate about making software that simplify people's life.",['age'=>\Carbon\Carbon::parse("1999-05-03")->age])}}
                         </p>
                         <br>
                         <p class="text-white text-gray-600 dark:text-gray-200 px-5">
