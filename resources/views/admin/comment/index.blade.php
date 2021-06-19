@@ -39,7 +39,7 @@
                             @csrf
                             @method('DELETE')
                             <input class="bg-red-500 hover:bg-red-700 p-2 text-white hover:shadow-lg text-xs font-thin"
-                                   type="submit" value="Remove"/>
+                                   type="submit" value="{{__('Remove')}}"/>
                         </form>
                     </td>
                 </tr>
