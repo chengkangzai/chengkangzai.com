@@ -1,9 +1,9 @@
 <?php
 return [
-    'google_translate_api_key' => 'AIzaSyBvm3QNmTpkEY8Vim6UsCRZwAeY5BY6mhw',
+    'google_translate_api_key' => '',
     'yandex_translate_api_key' => null,
     'custom_api_translator' => null,
-    'custom_api_translator_key' => 'AIzaSyBvm3QNmTpkEY8Vim6UsCRZwAeY5BY6mhw',
+    'custom_api_translator_key' => '',
     'api_limit_settings' => [
         'no_requests_per_batch' => 5,
         'sleep_time_between_batches' => 1
