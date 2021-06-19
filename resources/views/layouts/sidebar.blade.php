@@ -113,9 +113,8 @@
     <div class="absolute bottom-0 my-8">
         <a class="flex items-center py-2 px-8 text-gray-700 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-100"
            href="{{route('admin.user.edit',auth()->user())}}">
-            <img class="h-6 w-6 rounded-full mr-3 object-cover"
-                 src="https://avatars.githubusercontent.com/u/43839286?s=60&v=4"
-                 alt="avatar">
+            <img src="https://avatars.githubusercontent.com/u/43839286?s=60&v=4" alt="avatar"
+                 class="h-6 w-6 rounded-full mr-3 object-cover">
             <span>{{auth()->user()->name }}</span>
         </a>
     </div>

@@ -14,12 +14,14 @@
                         <div
                             class="py-3 px-5 mb-2 bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 rounded-md text-sm border border-gray-200 dark:border-gray-600">
                             <ul class="flex">
-                                <li><a href="{{route('admin.home')}}" class="underline font-semibold">Home</a></li>
-                                <li><span class="mx-2">/</span></li>
-                                <li><a href="{{route('admin.tags.index')}}" class="underline font-semibold">Tags</a>
+                                <li><a href="{{route('admin.home')}}" class="underline font-semibold">{{__('Home')}}</a>
                                 </li>
                                 <li><span class="mx-2">/</span></li>
-                                <li>Update</li>
+                                <li><a href="{{route('admin.tags.index')}}"
+                                       class="underline font-semibold">{{__('Tags')}}</a>
+                                </li>
+                                <li><span class="mx-2">/</span></li>
+                                <li>{{__('Update')}}</li>
                             </ul>
                         </div>
                         @include('partial.error-card')
@@ -29,13 +31,13 @@
                             @csrf
                             @method('PUT')
                             <div class="space-y-2">
-                                <label for="name" class="block font-medium tracking-tight">Name</label>
-                                <input id="name" type="text" placeholder="Name" name="name"
+                                <label for="name" class="block font-medium tracking-tight">{{__('Name')}}</label>
+                                <input id="name" type="text" placeholder="{{__('Name')}}" name="name"
                                        value="{{old('name',$tag->name)}}"
                                        class="w-full border border-gray-400 text-gray-800 placeholder-gray-400 rounded focus:border-transparent focus:outline-none focus:shadow-outline px-3 py-2"/>
                             </div>
                             <div class="flex justify-end pt-2">
-                                <input type="submit" value="Submit"
+                                <input type="submit" value="{{__('Submit')}}"
                                        class="inline-flex items-center text-white px-5 py-2 rounded-lg overflow-hidden focus:outline-none bg-indigo-500 hover:bg-indigo-600 font-semibold tracking-tight">
                             </div>
                         </form>

@@ -39,34 +39,39 @@
                 {{--Big Sreen--}}
                 <div class="md:flex hidden">
                     @if(request()->is('/'))
-                        <a class="block font-medium md:text-white mr-4 " href="#about-me">About Me</a>
-                        <a class="block font-medium md:text-white mr-4" href="#work">My Work</a>
-                        <a class="block font-medium md:text-white mr-4" href="#experience">Experience</a>
+                        <a class="block font-medium md:text-white mr-4 " href="#about-me">{{__('About Me')}}</a>
+                        <a class="block font-medium md:text-white mr-4" href="#work">{{__('My Work')}}</a>
+                        <a class="block font-medium md:text-white mr-4" href="#experience">{{__('Experience')}}</a>
                     @else
-                        <a class="block font-medium md:text-white mr-4 " href="{{route('public.index')}}">About Me</a>
+                        <a class="block font-medium md:text-white mr-4 " href="{{route('public.index')}}">
+                            {{__('About Me')}}</a>
                     @endif
-                    <a class="block md:text-white mr-4 font-black" href="{{route('public.posts.index')}}">Blog</a>
+                    <a class="block md:text-white mr-4 font-black"
+                       href="{{route('public.posts.index')}}">{{__('Blog')}}</a>
                 </div>
 
                 {{--Mobile--}}
                 @if(request()->is('/'))
                     <div class="flex md:hidden">
-                        <a class="leading-none border border-teal-600 rounded border p-2 font-medium md:text-white "
-                           href="{{route('public.posts.index')}}">Blog</a>
+                        <a href="{{route('public.posts.index')}}"
+                           class="leading-none border border-teal-600 rounded border p-2 font-medium md:text-white ">
+                            {{__('Blog')}}</a>
                     </div>
                 @endif
                 <div class="flex text-sm">
                     @auth
                         @if(request()->is("admin/*"))
-                            <a class="hidden md:block p-2 ml-2 bg-teal-500 text-gray-100 font-semibold leading-none border border-teal-600 rounded hover:border-transparent hover:bg-teal-600"
-                               href="{{url('/')}}">{{__('Main Page')}}</a>
+                            <a href="{{url('/')}}"
+                               class="hidden md:block p-2 ml-2 bg-teal-500 text-gray-100 font-semibold leading-none border border-teal-600 rounded hover:border-transparent hover:bg-teal-600">
+                                {{__('Main Page')}}</a>
                         @else
-                            <a class="hidden md:block p-2 ml-2 bg-teal-500 text-gray-100 font-semibold leading-none border border-teal-600 rounded hover:border-transparent hover:bg-teal-600"
-                               href="{{route('admin.home')}}">{{__('Home')}}</a>
+                            <a href="{{route('admin.home')}}"
+                               class="hidden md:block p-2 ml-2 bg-teal-500 text-gray-100 font-semibold leading-none border border-teal-600 rounded hover:border-transparent hover:bg-teal-600">
+                                {{__('Home')}}</a>
                         @endif
-                        <a class=" p-2 ml-2 bg-white text-gray-500 font-semibold leading-none border border-gray-100 rounded hover:border-transparent hover:bg-gray-100"
-                           href="{{route('logout')}}"
-                           onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                        <a href="{{route('logout')}}"
+                           onclick="event.preventDefault();document.getElementById('logout-form').submit();"
+                           class=" p-2 ml-2 bg-white text-gray-500 font-semibold leading-none border border-gray-100 rounded hover:border-transparent hover:bg-gray-100">
                             {{ __('Logout') }}
                         </a>
 
