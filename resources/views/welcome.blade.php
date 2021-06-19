@@ -153,8 +153,7 @@
                     <div class="w-full mb-10 text-center">
                         <p class="text-2xl text-black text-center pb-3 dark:text-white ">$whoami</p>
                         <p class="text-white text-gray-600 dark:text-gray-200 px-5 ">
-{{-- TODO calculate age \Carbon\Carbon::parse("1999-05-03")->age--}}
-                            {{__("I'm 22-year-old Malaysian that passionate about making software that simplify people's life.")}}
+                            {{__("I'm :age-year-old Malaysian that passionate about making software that simplify people's life.",['age'=>22])}}
                         </p>
                         <br>
                         <p class="text-white text-gray-600 dark:text-gray-200 px-5">
@@ -383,7 +382,7 @@
                         </div>
                         <div
                             class="order-1 bg-indigo-600 rounded-lg shadow-xl w-5/12 px-6 py-4 transform hover:scale-110 transition duration-300">
-                            <h3 class="mb-3 font-bold text-white text-xl">{{('Intern as Junior Web Developer in')}}
+                            <h3 class="mb-3 font-bold text-white text-xl">{{__('Intern as Junior Web Developer in')}}
                                 <a href="https://strateqgroup.com/prs/" class="underline" rel="noreferrer"
                                    target="_blank">
                                     Strateq Group (PRS)
