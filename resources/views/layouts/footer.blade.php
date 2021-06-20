@@ -1,13 +1,13 @@
 <footer class="bg-white dark:bg-gray-900 w-full pb-6 md:pt-6 px-4 border-t-2 mx-auto ">
     <div class="hidden sm:flex items-center justify-between md:flex py-6 text-center ">
-        <p class="text-blue-600 dark:text-blue-400 px-6">All rights reserved</p>
-        <p class="text-blue-600 dark:text-blue-400 px-6">Built with
+        <p class="text-blue-600 dark:text-blue-400 px-6">{{__('All rights reserved')}}</p>
+        <p class="text-blue-600 dark:text-blue-400 px-6">{{__('Built with')}}
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-500 inline" viewBox="0 0 20 20"
                  fill="currentColor">
                 <path fill-rule="evenodd" clip-rule="evenodd"
                       d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"/>
             </svg>
-            by Ching Cheng Kang.
+            {{__('By Ching Cheng Kang')}}
         </p>
         <div class="flex items-center px-6">
             <a href="mailto:hi@chengkangzai.com" rel="noreferrer" target="_blank" aria-label="Email to me">
@@ -40,14 +40,14 @@
         </div>
     </div>
     <div class="block sm:hidden items-center text-center">
-        <p class="text-blue-600 dark:text-blue-400 px-2 pt-6">All rights reserved</p>
-        <p class="text-blue-600 dark:text-blue-400 px-2 pt-6">Built with
+        <p class="text-blue-600 dark:text-blue-400 px-2 pt-6">{{__('All rights reserved')}}</p>
+        <p class="text-blue-600 dark:text-blue-400 px-2 pt-6">{{__('Built with')}}
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-500 inline" viewBox="0 0 20 20"
                  fill="currentColor">
                 <path fill-rule="evenodd" clip-rule="evenodd"
                       d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"/>
             </svg>
-            by Ching Cheng Kang.
+            {{__('By Ching Cheng Kang')}}
         </p>
     </div>
 </footer>

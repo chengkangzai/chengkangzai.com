@@ -20,7 +20,7 @@ class PublicPostController extends Controller
      */
     public function index()
     {
-        SEOTools::setTitle('Blog');
+        SEOTools::setTitle(__('Blog'));
         $posts = cache()->remember('public-Posts', 60 * 60 * 24, function () {
             return Post::latest()->published()->with('tags')->paginate(10);
         });

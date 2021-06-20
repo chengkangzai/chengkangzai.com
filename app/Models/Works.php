@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Builder;
 use Spatie\Tags\HasTags;
+use Spatie\Translatable\HasTranslations;
 
 /**
  * @method static paginate(int $int)
@@ -16,7 +17,7 @@ use Spatie\Tags\HasTags;
  */
 class Works extends Model
 {
-    use HasFactory, SoftDeletes, HasTags;
+    use HasFactory, SoftDeletes, HasTags, HasTranslations;
 
     const STATUS = [
         'DEACTIVATE' => 0,
@@ -28,6 +29,8 @@ class Works extends Model
     protected $fillable = [
         'name', 'description', 'picture_name', 'url', 'github_url', 'status'
     ];
+
+    public $translatable = ['description'];
 
     public function scopeActive(Builder $query): Builder
     {

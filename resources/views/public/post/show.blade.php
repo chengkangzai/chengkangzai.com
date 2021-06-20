@@ -41,7 +41,7 @@
 
         <div class="flex flex-wrap dark:text-white w-full mx-auto pb-4 pt-4">
             <div class="mx-auto mb-6">
-                <h3 class="text-2xl text-center">Comment Section</h3>
+                <h3 class="text-2xl text-center">{{__('Comment Section')}}</h3>
             </div>
             <div class="w-full mb-2">
                 @include('partial.error-card')
@@ -50,18 +50,19 @@
                 <form action="{{route('public.posts.comments.store', $post)}}" method="post">
                     @csrf
                     <div class="w-full space-x-4 mx-auto flex mb-3">
-                        <input id="name" type="text" placeholder="Name (required) " name="name" required
+                        <input id="name" type="text" placeholder="{{__('Name (required)')}} " name="name" required
                                class="w-1/2 text-center border border-gray-400 text-gray-800 placeholder-gray-400 rounded focus:shadow-outline py-2"/>
-                        <input id="email" type="email" placeholder="Email (required) " name="email" required
+                        <input id="email" type="email" placeholder="{{__('Email (required)')}} " name="email" required
                                class="w-1/2 text-center border border-gray-400 text-gray-800 placeholder-gray-400 rounded focus:shadow-outline py-2"/>
                     </div>
                     <textarea required
                               class="w-full shadow-inner p-4 border border-gray-400 mb-4 rounded-lg focus:shadow-outline text-2xl dark:text-black"
-                              placeholder="Drop your Comment here" cols="6" rows="6" id="comment_content" name="comment"
+                              placeholder="{{__('Drop your Comment here')}}" cols="6" rows="6" id="comment_content"
+                              name="comment"
                               spellcheck="false"></textarea>
                     <button
                         class="font-bold py-2 px-4 w-full bg-purple-600 text-lg text-white shadow-md rounded-lg ">
-                        Comment
+                        {{__('Comment')}}
                     </button>
                 </form>
 
@@ -81,15 +82,13 @@
                         </div>
                     @empty
                         <p class="text-gray-800 dark:text-white text-lg block text-center w-full ">
-                            Its empty down here...
+                            {{__('Its empty down here...')}}
                         </p>
                     @endforelse
                 </div>
             </section>
         </div>
     </div>
-
-
 @endsection
 
 

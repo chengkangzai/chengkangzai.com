@@ -10,6 +10,7 @@ use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\DB;
+use Spatie\Tags\Tag;
 use Storage;
 use Throwable;
 
@@ -114,7 +115,10 @@ class WorksController extends Controller
                 'status' => $request->status,
             ]);
             if ($request->get('tags')) {
-                $work->attachTags($request->get('tags'));
+                $work->syncTags($request->get('tags'));
+            }
+            if ($request->missing('tags')) {
+                $work->detachTags(Tag::all());
             }
             return $work;
         });

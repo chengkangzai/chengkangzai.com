@@ -176,7 +176,8 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-        FortifyServiceProvider::class
+        FortifyServiceProvider::class,
+        Barryvdh\TranslationManager\ManagerServiceProvider::class,
     ],
 
     /*

@@ -1,7 +1,4 @@
 @extends('layouts.app')
-@push('cdn')
-    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-@endpush
 @push('style')
     <style>
         html {
@@ -48,22 +45,22 @@
         <section class="text-gray-700 ">
             <div class="container flex flex-col items-center px-5 min-h-screen mx-auto md:flex-row lg:px-28">
                 <div
-                    class="w-full lg:flex-grow sm:w-1/2 flex flex-col items-start min-h-screen sm:min-h-full py-16 sm:py-8 text-left  ">
-                    <h1 class="mb-8 text-5xl font-bold tracking-tighter text-black md:text-5xl title-font dark:text-white">
-                        Hi, I am <br>Ching Cheng Kang(CCK) <span class="wave">👋🏻</span></h1>
+                    class="w-full lg:flex-grow lg:w-3/5 flex flex-col items-start min-h-screen sm:min-h-full py-16 sm:py-8 text-left  ">
+                    <h1 class="mb-8 text-5xl font-bold tracking-tighter text-black lg:text-5xl title-font dark:text-white">
+                        {{__('Hi, I am')}} <br> {{__('Ching Cheng Kang')}} (CCK) <span class="wave">👋🏻</span></h1>
                     <div style="min-height: 40px">
                         <span id="typed"
                               class="text-2xl text-base leading-relaxed text-left text-gray-500 inline-block dark:text-gray-200">
-                            Laravel Developer
+                            {{__('Laravel Developer')}}
                         </span>
                     </div>
                     <p class="w-full mt-2 mb-8 text-sm text-left dark:text-gray-400 text-dark-600">
-                        ⚡️ Fun fact: I convert Coffee to Code ☕️
+                        ⚡️ {{__('Fun fact: I convert Coffee to Code')}} ☕️
                     </p>
                     <div class="flex flex-col justify-center lg:flex-row">
                         <a role="button" href="{{asset('resume.pdf')}}"
                            class="flex items-center px-6 py-2 mt-auto font-semibold text-white dark:text-black transition duration-300 ease-in-out transform bg-black dark:bg-white rounded-lg hover:bg-gray-800 dark:hover:bg-gray-200 hover:to-black dark:hover:to-white focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2">
-                            SEE MY RESUME
+                            {{__('SEE MY RESUME')}}
                         </a>
                     </div>
                     <div
@@ -78,7 +75,7 @@
                     </div>
                 </div>
                 <div class="w-full lg:w-5/6 lg:max-w-lg sm:w-1/2">
-                    <img class="object-cover object-center rounded-lg " alt="hero"
+                    <img class="object-cover object-center rounded-lg lg:w-4/5 mx-auto" alt="hero"
                          src="{{asset('src/bighead.jpeg')}}">
                 </div>
             </div>
@@ -88,21 +85,19 @@
         <section class="flex flex-wrap w-full mx-auto pb-8" id="about-me">
             <div
                 class="md:w-1/3 w-full bg-white dark:bg-black flex items-center justify-center px-5 py-8 transform hover:scale-110 transition duration-300 ">
-                <div
-                    class="w-full mx-auto rounded-lg bg-gray-50 dark:bg-gray-800 shadow-lg px-5 pt-5 my5 pb-10 text-gray-800"
-                    x-data="{ cn: true }">
-                    <div class="w-full mb-10 ">
+                <div x-data="{ cn: true }"
+                     class="w-full mx-auto rounded-lg bg-gray-50 dark:bg-gray-800 shadow-lg px-5 pt-5 my5 pb-10 text-gray-800">
+                    <div class="w-full mb-10">
                         <div>
-                            <p class="text-right text-black dark:text-white text-xl animate-bounce" role="button"
-                               title="Click me to translate">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 right-0 animate-bounce"
-                                     fill="none"
-                                     viewBox="0 0 24 24" @click="cn = !cn" stroke="currentColor">
+                            <p title="{{__('Click me to translate')}}"
+                               class="text-right text-black dark:text-white text-xl animate-bounce" role="button">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" @click="cn = !cn"
+                                     viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6 right-0 animate-bounce">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                           d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/>
                                 </svg>
                             </p>
-                            <p class="text-2xl text-black text-center pb-3 dark:text-white ">What I believe in</p>
+                            <p class="text-2xl text-black text-center pb-3 dark:text-white">{{__('What I believe in')}}</p>
                         </div>
                         <div class="text-3xl text-indigo-500 text-left leading-tight h-3">“</div>
                         <ul x-show="cn">
@@ -139,8 +134,10 @@
                         <div class="text-3xl text-indigo-500 text-right leading-tight h-3 -mt-3">”</div>
                     </div>
                     <div class="w-full">
-                        <p class="text-md text-indigo-700 dark:text-indigo-400 font-bold text-center" x-show="cn">柯文哲</p>
-                        <p class="text-md text-indigo-700 dark:text-indigo-400 font-bold text-center" x-show="!cn">Ko Wen-Je</p>
+                        <p class="text-md text-indigo-700 dark:text-indigo-400 font-bold text-center" x-show="cn">
+                            柯文哲</p>
+                        <p class="text-md text-indigo-700 dark:text-indigo-400 font-bold text-center" x-show="!cn">
+                            Ko Wen-Je</p>
                         <p class="text-xs text-gray-700 dark:text-gray-400 text-center">@KP_Taipei</p>
                     </div>
                 </div>
@@ -153,13 +150,12 @@
                     <div class="w-full mb-10 text-center">
                         <p class="text-2xl text-black text-center pb-3 dark:text-white ">$whoami</p>
                         <p class="text-white text-gray-600 dark:text-gray-200 px-5 ">
-                            I'm {{\Carbon\Carbon::parse("1999-05-03")->age}}-year-old Malaysian that passionate about
-                            making software that simplify people's life.
+                            {{__("I'm :age-year-old Malaysian that passionate about making software that simplify people's life.",['age'=>\Carbon\Carbon::parse("1999-05-03")->age])}}
                         </p>
                         <br>
                         <p class="text-white text-gray-600 dark:text-gray-200 px-5">
-                            My knowledge in this field are currently self-experience & academically, so they might look
-                            fundamental and simple in the meantime.
+                            {{__('My knowledge in this field are currently self-experience & academically, so they might look
+                            fundamental and simple in the meantime.')}}
                         </p>
                     </div>
 
@@ -171,7 +167,7 @@
                 <div
                     class="w-full mx-auto rounded-lg bg-gray-50 dark:bg-gray-800 shadow-lg text-gray-800 py-8">
                     <div class="w-full mb-10 ">
-                        <p class="text-2xl text-black text-center pb-3 dark:text-white ">Get in touch</p>
+                        <p class="text-2xl text-black text-center pb-3 dark:text-white ">{{__('Get in touch')}}</p>
                         <div class="space-x-4 space-y-2">
                             <p></p>
                             <p class="text-white text-gray-600 dark:text-gray-200">
@@ -224,7 +220,7 @@
         <section class="flex flex-wrap -m-4 dark:text-white w-full mx-auto pb-20 md:pb-0">
             <div class="w-full">
                 <h2 class="mb-2 text-2xl font-black text-black text-center dark:text-white lg:text-3xl md:text-2xl">
-                    These are some of my Work :3 </h2>
+                    {{__('These are some of my Work')}} :3 </h2>
             </div>
 
             @forelse($works as $work)
@@ -236,9 +232,8 @@
                             <div class="w-full">
                                 <a href="{{$work->url ?? "#"}}" target="_blank" rel="noreferrer"
                                    aria-label="Link to open {{$work->name}}">
-                                    <img src="{{$work->imgLink ?? "#"}}" alt=""
-                                         class="w-full h-72 rounded-lg mb-3 object-cover"
-                                         loading="lazy">
+                                    <img src="{{$work->imgLink ?? "#"}}" alt="{{__('Image for the work')}}"
+                                         loading="lazy" class="w-full h-72 rounded-lg mb-3 object-cover">
                                 </a>
                             </div>
                             <h2 class="dark:text-white text-2xl font-bold title-font mb-2">{{$work->name}} </h2>
@@ -249,8 +244,7 @@
                                     <a rel="noopener" target="_blank" href="{{$work->url ?? "#"}}"
                                        aria-label="Link to open {{$work->name}}">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
-                                             viewBox="0 0 24 24"
-                                             class="dark:text-blue-400 fill-current">
+                                             viewBox="0 0 24 24" class="dark:text-blue-400 fill-current">
                                             <path
                                                 d="M16.36,14C16.44,13.34 16.5,12.68 16.5,12C16.5,11.32 16.44,10.66 16.36,10H19.74C19.9,10.64 20,11.31 20,12C20,12.69 19.9,13.36 19.74,14M14.59,19.56C15.19,18.45 15.65,17.25 15.97,16H18.92C17.96,17.65 16.43,18.93 14.59,19.56M14.34,14H9.66C9.56,13.34 9.5,12.68 9.5,12C9.5,11.32 9.56,10.65 9.66,10H14.34C14.43,10.65 14.5,11.32 14.5,12C14.5,12.68 14.43,13.34 14.34,14M12,19.96C11.17,18.76 10.5,17.43 10.09,16H13.91C13.5,17.43 12.83,18.76 12,19.96M8,8H5.08C6.03,6.34 7.57,5.06 9.4,4.44C8.8,5.55 8.35,6.75 8,8M5.08,16H8C8.35,17.25 8.8,18.45 9.4,19.56C7.57,18.93 6.03,17.65 5.08,16M4.26,14C4.1,13.36 4,12.69 4,12C4,11.31 4.1,10.64 4.26,10H7.64C7.56,10.66 7.5,11.32 7.5,12C7.5,12.68 7.56,13.34 7.64,14M12,4.03C12.83,5.23 13.5,6.57 13.91,8H10.09C10.5,6.57 11.17,5.23 12,4.03M18.92,8H15.97C15.65,6.75 15.19,5.55 14.59,4.44C16.43,5.07 17.96,6.34 18.92,8M12,2C6.47,2 2,6.5 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"></path>
                                         </svg>
@@ -260,18 +254,18 @@
                                     <a href="{{$work->github_url}}" rel="noopener" target="_blank"
                                        aria-label="Link to open Project Repository">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
-                                             viewBox="0 0 24 24"
-                                             class="dark:text-white fill-current">
+                                             viewBox="0 0 24 24" class="dark:text-white fill-current">
                                             <path
                                                 d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z"></path>
                                         </svg>
                                     </a>
                                 @endif
                             </div>
-                            <div
-                                class="text-center mt-2 leading-none flex items-start w-full mt-4 dark:text-white mb-4">
+                            @if($work->tags->count()!==0)
+                                <div
+                                    class="text-center mt-2 leading-none flex items-start w-full mt-4 dark:text-white mb-4">
                                 <span class="inline">
-                                Build with
+                                {{__('Build with')}}
                                     @foreach($work->tags as $tag)
                                         @if ($loop->last)
                                             {{$tag->name}}
@@ -281,7 +275,8 @@
                                     @endforeach
 
                                 </span>
-                            </div>
+                                </div>
+                            @endif
                         </div>
 
                     </div>
@@ -289,18 +284,18 @@
             @empty
                 <div class="w-full border-lg border rounded-lg mt-6">
                     <h6 class="my-20 text-xl font-black text-black text-center dark:text-white lg:text-2xl">
-                        No Active Work now @@
+                        {{__('No Active Work now')}} @@
                     </h6>
                 </div>
             @endforelse
         </section>
 
         <section class="md:py-32 hidden md:block">
-            <div class="container rounded-lg bg-gray-50 dark:bg-gray-800 mx-auto w-full h-full min-h-full flex-wrap "
-                 id="roadmap">
-                <h2 class="mb-2 text-2xl font-black text-black text-center dark:text-white lg:text-3xl md:text-2xl py-12"
-                    id="experience">
-                    My Experiences</h2>
+            <div id="roadmap"
+                 class="container rounded-lg bg-gray-50 dark:bg-gray-800 mx-auto w-full h-full min-h-full flex-wrap ">
+                <h2 id="experience"
+                    class="mb-2 text-2xl font-black text-black text-center dark:text-white lg:text-3xl md:text-2xl py-12">
+                    {{__('My Experiences')}}</h2>
                 <hr>
                 <div class="relative wrap overflow-hidden p-10 h-full">
                     <div class="border-2-2 absolute border-opacity-20 border-gray-700 dark:border-white h-full border"
@@ -314,18 +309,19 @@
                         <div
                             class=" order-1 bg-blue-700 rounded-lg shadow-xl w-5/12 px-6 py-4 transform hover:scale-110 transition duration-300">
                             <h3 class="mb-3 font-bold text-white text-xl">
-                                Persuade Study in
+                                {{__('Persuade Study in')}}
                                 <a class="underline" rel="noreferrer" target="_blank" href="https://www.apu.edu.my/">
-                                    Asia Pacific University</a>
+                                    {{__('Asia Pacific University')}}</a>
                             </h3>
                             <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
-                                Major :
+                                {{__('Major :')}}
                                 <a href="https://www.apu.edu.my/our-courses/pre-university-studies/diploma-programmes/diploma-information-communication-technology"
                                    class="underline" rel="noreferrer" target="_blank">
-                                    Diploma in Information Technology with a specialism in Software Engineering</a>
+                                    {{__('Diploma in Information Technology with a specialism in Software Engineering')}}
+                                </a>
                             </p>
                             <p class="text-sm leading-snug tracking-wide pt-2 text-white">
-                                May 2018
+                                {{__('May')}} 2018
                             </p>
 
                         </div>
@@ -339,15 +335,14 @@
                         </div>
                         <div
                             class="order-1 bg-indigo-600 rounded-lg shadow-xl w-5/12 px-6 py-4 transform hover:scale-110 transition duration-300">
-                            <h3 class="mb-3 font-bold text-white text-xl">Technical Assistant in APU</h3>
+                            <h3 class="mb-3 font-bold text-white text-xl">{{__('Technical Assistant in APU')}}</h3>
                             <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
-                                As a Technical Assistant (a group of around 50 members), we managed to maintain the
+                                {{__('As a Technical Assistant (a group of around 50 members), we managed to maintain the
                                 excellent condition of 400+ PC, 100+ Projectors, and countless student and staff laptops
-                                and
-                                solve some of the problems.
+                                and solve some of the problems.')}}
                             </p>
                             <p class="text-sm leading-snug tracking-wide pt-2 text-white">
-                                December 2020 - Present
+                                {{__('December')}} 2020 - {{__('Present')}}
                             </p>
                         </div>
                     </div>
@@ -361,18 +356,18 @@
                         <div
                             class="order-1 bg-blue-600 rounded-lg shadow-xl w-5/12 px-6 py-4 transform hover:scale-110 transition duration-300">
                             <h3 class="mb-3 font-bold text-white text-xl">
-                                Technical Assistant, Head of Accommodation Team in APU
+                                {{__('Technical Assistant')}}, {{__('Head of Accommodation Team in APU')}}
                             </h3>
                             <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
-                                - Led a team of technical assistants to provide support services to the university's
-                                accommodation unit.
+                                - {{__("Led a team of technical assistants to provide support services to the university's
+                                accommodation unit.")}}
                                 <br>
-                                - Work together with ISP's technician regarding network issue
+                                - {{__("Work together with ISP's technician regarding network issue")}}
                                 <br>
-                                - Ensure the network accessibility within the university campus
+                                - {{__("Ensure the network accessibility within the university campus")}}
                                 <br>
-                                - Maintain, manage, and monitor technical facilities and infrastructure within the
-                                campus
+                                - {{__('Maintain, manage, and monitor technical facilities and infrastructure within the
+                                campus')}}
                                 <br>
                             </p>
                         </div>
@@ -386,19 +381,19 @@
                         </div>
                         <div
                             class="order-1 bg-indigo-600 rounded-lg shadow-xl w-5/12 px-6 py-4 transform hover:scale-110 transition duration-300">
-                            <h3 class="mb-3 font-bold text-white text-xl">Intern as Junior Web Developer in
+                            <h3 class="mb-3 font-bold text-white text-xl">{{__('Intern as Junior Web Developer in')}}
                                 <a href="https://strateqgroup.com/prs/" class="underline" rel="noreferrer"
                                    target="_blank">
                                     Strateq Group (PRS)
                                 </a>
                             </h3>
                             <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
-                                As an intern, I managed to fix the migration file and prepare the bootstrap seeder with
+                                {{__('As an intern, I managed to fix the migration file and prepare the bootstrap seeder with
                                 the most optimal speed and solve multiple frontend problems by using Laravel for the
-                                in-house application
+                                in-house application')}}
                                 <a href="https://strateqgroup.com/smart-managed-services/" class="underline"
                                    rel="noreferrer" target="_blank">
-                                    SMART SD</a>.
+                                    {{__('SMART SD')}}</a>.
                             </p>
                         </div>
                     </div>
@@ -411,19 +406,21 @@
                         </div>
                         <div
                             class="order-1 bg-blue-600 rounded-lg shadow-xl w-5/12 px-6 py-4 transform hover:scale-110 transition duration-300">
-                            <h3 class="mb-3 font-bold text-white text-xl">Graduated from
+                            <h3 class="mb-3 font-bold text-white text-xl">{{__('Graduated from')}}
                                 <a class="underline" rel="noreferrer" target="_blank" href="https://www.apu.edu.my/">
-                                    Asia Pacific University</a>
+                                    {{__('Asia Pacific University')}}</a>
                             </h3>
                             <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
-                                Graduated from
+                                {{__('Graduated from')}}
                                 <a href="https://www.apu.edu.my/our-courses/pre-university-studies/diploma-programmes/diploma-information-communication-technology"
                                    class="underline" rel="noreferrer" target="_blank">
-                                    Diploma in Information Technology with a specialism in Software Engineering
+                                    {{__('Diploma in Information Technology with a specialism in Software Engineering')}}
                                 </a>
-                                with CGPA of 3.47
+                                {{__('with CGPA of 3.47')}}
                             </p>
-                            <small class="text-xs line-through text-gray-100">Only if i can round off to 4.0</small>
+                            <small class="text-xs line-through text-gray-100">
+                                {{__('Only if i can round off to 4.0<')}}
+                            </small>
                         </div>
 
                     </div>
@@ -436,20 +433,20 @@
                         </div>
                         <div
                             class="order-1 bg-indigo-600 rounded-lg shadow-xl w-5/12 px-6 py-4 transform hover:scale-110 transition duration-300">
-                            <h3 class="mb-3 font-bold text-white text-xl">Continue to persuade study in
+                            <h3 class="mb-3 font-bold text-white text-xl">{{__('Continue to persuade study in')}}
                                 <a class="underline" rel="noreferrer" target="_blank"
                                    href="https://www.apu.edu.my/">
-                                    Asia Pacific University
+                                    {{__('Asia Pacific University')}}
                                 </a>
                             </h3>
                             <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
-                                Major :
+                                {{__('Major :')}}
                                 <a href="https://www.apu.edu.my/our-courses/undergraduate-studies/school-computing-technology/bsc-hons-software-engineering"
                                    class="underline" rel="noreferrer" target="_blank">
-                                    BSc (Hons) in Software Engineering</a>
+                                    {{__('BSc (Hons) in Software Engineering')}} </a>
                             </p>
                             <p class="text-sm leading-snug tracking-wide pt-2 text-white">
-                                September 2020 - Present
+                                {{__('September')}} 2020 - {{__('Present')}}
                             </p>
                         </div>
                     </div>
@@ -462,12 +459,13 @@
                         </div>
                         <div
                             class="order-1 bg-blue-600 rounded-lg shadow-xl w-5/12 px-6 py-4 transform hover:scale-110 transition duration-300">
-                            <h3 class="mb-3 font-bold text-white text-xl">Internship at
+                            <h3 class="mb-3 font-bold text-white text-xl">{{__('Internship at')}}
                                 <a class="underline" href="https://www.mysoftinn.com/" rel="noreferrer" target="_blank">
-                                    Softinn Solutions</a>
+                                    Softinn Solutions
+                                </a>
                             </h3>
                             <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
-                                To be explore
+                                {{__('To be explore')}}
                             </p>
                         </div>
 
@@ -481,8 +479,16 @@
 @push('script')
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script>
-        var typed = new Typed('#typed', {
-            strings: ['Web Developer', 'Fullstack Developer', 'Laravel Developer', 'Angular Developer', 'Ionic Developer', 'Firebase Developer', 'Self-learner'],
+        new Typed('#typed', {
+            strings: [
+                '{{__('Web Developer')}}',
+                '{{__('Fullstack Developer')}}',
+                '{{__('Laravel Developer')}}',
+                '{{__('Angular Developer')}}',
+                '{{__('Ionic Developer')}}',
+                '{{__('Firebase Developer')}}',
+                '{{__('Self-learner')}}'
+            ],
             typeSpeed: 40,
             backSpeed: 60,
             loop: true,
@@ -490,7 +496,6 @@
             repeat: true,
             backDelay: 1000,
             startDelay: 1500,
-
         });
     </script>
 @endpush

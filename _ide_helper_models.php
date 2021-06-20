@@ -53,6 +53,7 @@ namespace App\Models{
  * @method static create(array $validated)
  * @method static withCount(string $string)
  * @method static latest()
+ * @property mixed status
  * @property int $id
  * @property string $title
  * @property string $content
@@ -79,9 +80,9 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|Post whereStatus($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Post whereTitle($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Post whereUpdatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Post withAllTags($tags, ?string $type = null)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post withAllTags(\ArrayAccess|\Spatie\Tags\Tag|array $tags, ?string $type = null)
  * @method static \Illuminate\Database\Eloquent\Builder|Post withAllTagsOfAnyType($tags)
- * @method static \Illuminate\Database\Eloquent\Builder|Post withAnyTags($tags, ?string $type = null)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post withAnyTags(\ArrayAccess|\Spatie\Tags\Tag|array $tags, ?string $type = null)
  * @method static \Illuminate\Database\Eloquent\Builder|Post withAnyTagsOfAnyType($tags)
  * @method static \Illuminate\Database\Query\Builder|Post withTrashed()
  * @method static \Illuminate\Database\Query\Builder|Post withoutTrashed()
@@ -133,7 +134,7 @@ namespace App\Models{
  * @method static active()
  * @property int $id
  * @property string $name
- * @property string $description
+ * @property array $description
  * @property string $picture_name
  * @property string|null $url
  * @property string|null $github_url
@@ -141,6 +142,7 @@ namespace App\Models{
  * @property \Illuminate\Support\Carbon|null $deleted_at
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read array $translations
  * @property \Illuminate\Database\Eloquent\Collection|\Spatie\Tags\Tag[] $tags
  * @property-read int|null $tags_count
  * @method static \Database\Factories\WorksFactory factory(...$parameters)
@@ -158,9 +160,9 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|Works whereStatus($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Works whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Works whereUrl($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Works withAllTags($tags, ?string $type = null)
+ * @method static \Illuminate\Database\Eloquent\Builder|Works withAllTags(\ArrayAccess|\Spatie\Tags\Tag|array $tags, ?string $type = null)
  * @method static \Illuminate\Database\Eloquent\Builder|Works withAllTagsOfAnyType($tags)
- * @method static \Illuminate\Database\Eloquent\Builder|Works withAnyTags($tags, ?string $type = null)
+ * @method static \Illuminate\Database\Eloquent\Builder|Works withAnyTags(\ArrayAccess|\Spatie\Tags\Tag|array $tags, ?string $type = null)
  * @method static \Illuminate\Database\Eloquent\Builder|Works withAnyTagsOfAnyType($tags)
  * @method static \Illuminate\Database\Query\Builder|Works withTrashed()
  * @method static \Illuminate\Database\Query\Builder|Works withoutTrashed()

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\ImageController;
+use App\Http\Controllers\LocaleController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\PublicIndexController;
 use App\Http\Controllers\PublicPostCommentController;
@@ -26,6 +27,7 @@ use Illuminate\Support\Facades\Route;
  */
 Route::group(['as' => 'public.'], function () {
     Route::get('/', [PublicIndexController::class, 'index'])->name('index');
+    Route::get('/locale/{locale}', [LocaleController::class, 'changeLocale'])->name('setLocale');
     Route::redirect('resume', 'resume.pdf');
     Route::group(['prefix' => 'posts', 'as' => 'posts.'], function () {
         Route::get('/', [PublicPostController::class, 'index'])->name('index');
