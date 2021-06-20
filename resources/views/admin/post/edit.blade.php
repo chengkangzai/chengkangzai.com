@@ -21,7 +21,7 @@
                                        class="underline font-semibold">{{__('Post')}}</a>
                                 </li>
                                 <li><span class="mx-2">/</span></li>
-                                <li>{{__('Create')}}</li>
+                                <li>{{__('Update')}}</li>
                             </ul>
                         </div>
                         @include('partial.error-card')
