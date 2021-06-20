@@ -80,10 +80,25 @@
                             </div>
 
                             <div class="space-y-2">
-                                <label for="description"
-                                       class="block font-medium tracking-tight">{{__('Description')}}</label>
-                                <textarea name="description" id="description" cols="30" rows="10"
-                                          class="w-full border bg-white border-gray-400 text-gray-800 placeholder-gray-400 rounded focus:border-transparent focus:outline-none focus:shadow-outline px-3 py-2">{{old('description',$work->description)}}</textarea>
+                                <label for="description" class="block font-medium tracking-tight">
+                                    {{__('Description')}} ({{__('English')}})
+                                </label>
+                                <textarea name="description[en]" id="description[en]" cols="30" rows="2"
+                                          class="w-full border bg-white border-gray-400 text-gray-800 placeholder-gray-400 rounded focus:border-transparent focus:outline-none focus:shadow-outline px-3 py-2">{{old('description[en]',$work->translations['description']['en'])}}</textarea>
+                            </div>
+
+                            <div class="space-y-2">
+                                <label for="description" class="block font-medium tracking-tight">
+                                    {{__('Description')}} ({{__('Chinese')}})
+                                </label>
+                                <textarea name="description[zh]" id="description[zh]" cols="30" rows="2"
+                                          class="w-full border bg-white border-gray-400 text-gray-800 placeholder-gray-400 rounded focus:border-transparent focus:outline-none focus:shadow-outline px-3 py-2">
+                                     @if(isset($work->translations['description']['zh']))
+                                        {{old('description[zh]',$work->translations['description']['zh'])}}
+                                    @else
+                                        {{old('description[zh]')}}
+                                    @endif
+                                </textarea>
                             </div>
 
                             <div class="flex justify-end pt-2">
@@ -102,7 +117,7 @@
 @push('script')
     <script src="https://cdn.jsdelivr.net/npm/tom-select@1.1/dist/js/tom-select.complete.min.js"></script>
     <script>
-        var control = new TomSelect('#tags', {
+        new TomSelect('#tags', {
             items: [@foreach($work->tags as $tag)"{{$tag->name}}",@endforeach],
             maxItems: 10
         });

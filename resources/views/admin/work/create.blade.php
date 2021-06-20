@@ -77,10 +77,18 @@
 
                             <div class="space-y-2">
                                 <label for="description" class="block font-medium tracking-tight">
-                                    {{__('Description')}}
+                                    {{__('Description')}} ({{__('English')}})
                                 </label>
-                                <textarea name="description" id="description" cols="30" rows="10"
-                                          class="w-full border bg-white border-gray-400 text-gray-800 placeholder-gray-400 rounded focus:border-transparent focus:outline-none focus:shadow-outline px-3 py-2">{{old('description')}}</textarea>
+                                <textarea name="description[en]" id="description[en]" cols="30" rows="2"
+                                          class="w-full border bg-white border-gray-400 text-gray-800 placeholder-gray-400 rounded focus:border-transparent focus:outline-none focus:shadow-outline px-3 py-2">{{old('description[en]')}}</textarea>
+                            </div>
+
+                            <div class="space-y-2">
+                                <label for="description" class="block font-medium tracking-tight">
+                                    {{__('Description')}} ({{__('Chinese')}})
+                                </label>
+                                <textarea name="description[zh]" id="description[zh]" cols="30" rows="2"
+                                          class="w-full border bg-white border-gray-400 text-gray-800 placeholder-gray-400 rounded focus:border-transparent focus:outline-none focus:shadow-outline px-3 py-2">{{old('description[zh]')}}</textarea>
                             </div>
 
                             <div class="flex justify-end pt-2">

@@ -32,7 +32,26 @@
                             </tr>
                             <tr class="bg-gray-100 dark:bg-gray-800 text-center border-b text-base text-gray-600 dark:text-gray-400">
                                 <td class="border p-2">{{__('Description')}}</td>
-                                <td>{{$work->description}} </td>
+                                <td>
+                                    @foreach($work->translations as $des)
+                                        <table class="mx-auto w-4/5 my-4 border">
+                                            <tr class="border p-2">
+                                                <td class="border p-2">EN</td>
+                                                <td>{{$des['en']}}</td>
+                                            </tr>
+                                            <tr class="border p-2">
+                                                <td class="border p-2">ZH</td>
+                                                <td>
+                                                    @if(isset($des['zh']))
+                                                        {{$des['zh']}}
+                                                    @else
+                                                        NONE
+                                                    @endif
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    @endforeach
+                                </td>
                             </tr>
                             <tr class="bg-gray-100 dark:bg-gray-800 text-center border-b text-base text-gray-600 dark:text-gray-400">
                                 <td class="border p-2">{{__('Image')}}</td>

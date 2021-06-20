@@ -25,7 +25,8 @@ class UpdateWorksRequest extends FormRequest
     {
         return [
             'name' => ['required', 'string'],
-            'description' => ['required', 'string'],
+            'description.en' => ['required', 'string'],
+            'description.zh' => ['required', 'string'],
             'tags' => ['array'],
             'picture' => ['mimes:jpg,bmp,png,jpeg,gif'],
             'url' => ['nullable', 'string'],
