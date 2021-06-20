@@ -8,6 +8,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 {!! SEO::generate(true) !!}
 <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-G0TL352WKG"></script>
@@ -27,51 +28,78 @@
 </head>
 <body>
 <div class="h-screen bg-white dark:bg-black ">
-    <header class="bg-teal-100 w-full" style="width: 100% !important;">
-        <nav class="flex justify-between w-full from-blue-400 bg-gradient-to-r to-purple-600 text-white p-4">
-            <div class="flex align-middle my-auto">
-                <a href="{{route('public.index')}}">
-                    <span class="font-semibold text-xl tracking-tight align-middle">{{ config('app.name') }}</span>
-                </a>
+
+    <header
+        class="w-full text-gray-700 bg-white dark:text-gray-200 dark:bg-gray-800 from-blue-400 bg-gradient-to-r to-purple-600">
+        <div x-data="{ open: false }"
+             class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
+            <div class="p-4 flex flex-row items-center justify-between">
+                <a href="{{route('public.index')}}"
+                   class="text-lg font-semibold text-white tracking-widest uppercase rounded-lg focus:outline-none focus:shadow-outline">
+                    {{config('app.name')}}</a>
+                <button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
+                    <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+                        <path x-show="!open" fill-rule="evenodd" clip-rule="evenodd" class="fill-current text-white dark:hover:text-black"
+                              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"></path>
+                        <path x-show="open" fill-rule="evenodd" clip-rule="evenodd" class="fill-current text-white dark:hover:text-black"
+                              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"></path>
+                    </svg>
+                </button>
             </div>
-            <div class="md:items-center md:w-auto flex">
-
-                {{--Big Sreen--}}
-                <div class="md:flex hidden">
-                    @if(request()->is('/'))
-                        <a class="block font-medium md:text-white mr-4 " href="#about-me">{{__('About Me')}}</a>
-                        <a class="block font-medium md:text-white mr-4" href="#work">{{__('My Work')}}</a>
-                        <a class="block font-medium md:text-white mr-4" href="#experience">{{__('Experience')}}</a>
-                    @else
-                        <a class="block font-medium md:text-white mr-4 " href="{{route('public.index')}}">
-                            {{__('About Me')}}</a>
-                    @endif
-                    <a class="block md:text-white mr-4 font-black"
-                       href="{{route('public.posts.index')}}">{{__('Blog')}}</a>
-                </div>
-
-                {{--Mobile--}}
+            <nav :class="{'flex': open, 'hidden': !open}"
+                 class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row">
                 @if(request()->is('/'))
-                    <div class="flex md:hidden">
-                        <a href="{{route('public.posts.index')}}"
-                           class="leading-none border border-teal-600 rounded border p-2 font-medium md:text-white ">
-                            {{__('Blog')}}</a>
-                    </div>
+                    <a class="px-2 py-2 mt-2 text-md font-bold text-white bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                       href="#about-me">{{__('About Me')}}</a>
+                    <a class="px-2 py-2 mt-2 text-md font-bold text-white bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                       href="#work">{{__('My Work')}}</a>
+                    <a class="px-2 py-2 mt-2 text-md font-bold text-white bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                       href="#experience">{{__('Experience')}}</a>
+                    <a class="px-2 py-2 mt-2 text-md font-bold text-white bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                       href="{{route('public.posts.index')}}">{{__('Blog')}}</a>
+                @else
+                    <a class="px-2 py-2 mt-2 text-md font-bold text-white bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                       href="{{route('public.index')}}">
+                        {{__('About Me')}}</a>
                 @endif
-                <div class="flex text-sm">
+                <div @click.away="open = false" class="relative" x-data="{ open: false }">
+                    <button @click="open = !open"
+                            class="hover:text-black flex flex-row text-white items-center w-full px-4 py-2 mt-2 text-bold text-md text-left bg-transparent rounded-lg dark:bg-transparent dark:focus:text-white dark:hover:text-white dark:focus:bg-gray-600 dark:hover:bg-gray-600 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
+                        <span>{{__('Select Language')}}</span>
+                        <svg viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}"
+                             class="inline w-4 h-4 mt-1 ml-1 text-white fill-current  transition-transform duration-200 transform md:-mt-1">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"></path>
+                        </svg>
+                    </button>
+                    <div x-show="open"
+                         x-transition:enter="transition ease-out duration-100"
+                         x-transition:enter-start="transform opacity-0 scale-95"
+                         x-transition:enter-end="transform opacity-100 scale-100"
+                         x-transition:leave="transition ease-in duration-75"
+                         x-transition:leave-start="transform opacity-100 scale-100"
+                         x-transition:leave-end="transform opacity-0 scale-95"
+                         class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48">
+                        <div class="px-2 py-2 bg-white rounded-md shadow dark:bg-gray-800">
+                            <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                               href="{{route('public.setLocale','en')}}">English</a>
+                            <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                               href="{{route('public.setLocale','zh')}}">简体中文</a>
+                        </div>
+                    </div>
                     @auth
                         @if(request()->is("admin/*"))
                             <a href="{{url('/')}}"
-                               class="hidden md:block p-2 ml-2 bg-teal-500 text-gray-100 font-semibold leading-none border border-teal-600 rounded hover:border-transparent hover:bg-teal-600">
+                               class="leading-none border border-teal-600 rounded border py-2 px-2 ml-4 my-auto font-medium md:text-white ">
                                 {{__('Main Page')}}</a>
                         @else
                             <a href="{{route('admin.home')}}"
-                               class="hidden md:block p-2 ml-2 bg-teal-500 text-gray-100 font-semibold leading-none border border-teal-600 rounded hover:border-transparent hover:bg-teal-600">
+                               class="leading-none border border-teal-600 rounded border py-2 px-2 ml-4 my-auto font-medium md:text-white ">
                                 {{__('Home')}}</a>
                         @endif
                         <a href="{{route('logout')}}"
                            onclick="event.preventDefault();document.getElementById('logout-form').submit();"
-                           class=" p-2 ml-2 bg-white text-gray-500 font-semibold leading-none border border-gray-100 rounded hover:border-transparent hover:bg-gray-100">
+                           class="px-2 py-2 ml-2 leading-none bg-white my-auto text-gray-500 font-semibold border border-gray-100 rounded hover:border-transparent hover:bg-gray-100">
                             {{ __('Logout') }}
                         </a>
 
@@ -79,9 +107,10 @@
                             @csrf
                         </form>
                     @endauth
+
                 </div>
-            </div>
-        </nav>
+            </nav>
+        </div>
     </header>
     <main
         class="bg-white dark:bg-black w-full px-3 md:px-0 @if(request()->is('admin/*')) flex @else min-h-screen  @endif">

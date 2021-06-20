@@ -1,7 +1,3 @@
-@push('cdn')
-    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-@endpush
-
 <div class="w-64 min-h-screen bg-white dark:bg-gray-800 ">
     <div class="flex items-center justify-center mt-10">
         <a class="text-gray-600 dark:text-gray-100 text-2xl" href="{{route('admin.home')}}">{{config('app.name')}}</a>

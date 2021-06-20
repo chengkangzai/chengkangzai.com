@@ -1,7 +1,4 @@
 @extends('layouts.app')
-@push('cdn')
-    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-@endpush
 @push('style')
     <style>
         html {
@@ -48,8 +45,8 @@
         <section class="text-gray-700 ">
             <div class="container flex flex-col items-center px-5 min-h-screen mx-auto md:flex-row lg:px-28">
                 <div
-                    class="w-full lg:flex-grow sm:w-1/2 flex flex-col items-start min-h-screen sm:min-h-full py-16 sm:py-8 text-left  ">
-                    <h1 class="mb-8 text-5xl font-bold tracking-tighter text-black md:text-5xl title-font dark:text-white">
+                    class="w-full lg:flex-grow lg:w-3/5 flex flex-col items-start min-h-screen sm:min-h-full py-16 sm:py-8 text-left  ">
+                    <h1 class="mb-8 text-5xl font-bold tracking-tighter text-black lg:text-5xl title-font dark:text-white">
                         {{__('Hi, I am')}} <br> {{__('Ching Cheng Kang')}} (CCK) <span class="wave">👋🏻</span></h1>
                     <div style="min-height: 40px">
                         <span id="typed"
@@ -78,7 +75,7 @@
                     </div>
                 </div>
                 <div class="w-full lg:w-5/6 lg:max-w-lg sm:w-1/2">
-                    <img class="object-cover object-center rounded-lg " alt="hero"
+                    <img class="object-cover object-center rounded-lg lg:w-4/5 mx-auto" alt="hero"
                          src="{{asset('src/bighead.jpeg')}}">
                 </div>
             </div>
@@ -264,8 +261,9 @@
                                     </a>
                                 @endif
                             </div>
-                            <div
-                                class="text-center mt-2 leading-none flex items-start w-full mt-4 dark:text-white mb-4">
+                            @if($work->tags->count()!==0)
+                                <div
+                                    class="text-center mt-2 leading-none flex items-start w-full mt-4 dark:text-white mb-4">
                                 <span class="inline">
                                 {{__('Build with')}}
                                     @foreach($work->tags as $tag)
@@ -277,7 +275,8 @@
                                     @endforeach
 
                                 </span>
-                            </div>
+                                </div>
+                            @endif
                         </div>
 
                     </div>
