@@ -9,6 +9,7 @@ use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
+use Spatie\Tags\Tag;
 use Str;
 use Throwable;
 
@@ -100,6 +101,9 @@ class PostController extends Controller
             ]);
             if ($request->get('tags')) {
                 $post->syncTags($request->get('tags'));
+            }
+            if ($request->missing('tags')){
+                $post->detachTags(Tag::all());
             }
         });
         return redirect()->route('admin.posts.index');
