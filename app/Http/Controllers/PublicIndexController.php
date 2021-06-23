@@ -16,7 +16,7 @@ class PublicIndexController extends Controller
     public function index()
     {
         $age = Carbon::parse("1999-05-03")->age;
-        SEOTools::setTitle(__('Profile'));
+        SEOTools::setTitle(__('Ching Cheng Kang') . " - " . __('Profile'));
         SEOTools::setDescription(__("I'm :age-year-old Malaysian that passionate about making software that simplify people's life.", ['age' => $age]));
 
         $works = cache()->remember('public-Works', 60 * 60 * 24, function () {
