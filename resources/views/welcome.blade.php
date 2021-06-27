@@ -153,6 +153,14 @@
                             {{__("I'm :age-year-old Malaysian that passionate about making software that simplify people's life.",['age'=>\Carbon\Carbon::parse("1999-05-03")->age])}}
                         </p>
                         <br>
+                        @if($rank>=1)
+                            <a class="text-white text-gray-600 dark:text-gray-200 px-5 underline"
+                               href="https://commits.top/malaysia.html" aria-label="Linkt to Commits.top"
+                               rel="noreferrer">
+                                {{__('No x in most active GitHub users in Malaysia',['rank'=>$rank])}}
+                            </a>
+                        @endif
+                        <br> <br>
                         <p class="text-white text-gray-600 dark:text-gray-200 px-5">
                             {{__('My knowledge in this field are currently self-experience & academically, so they might look
                             fundamental and simple in the meantime.')}}
@@ -479,16 +487,18 @@
 @push('script')
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script>
-        new Typed('#typed', {
-            strings: [
-                '{{__('Web Developer')}}',
+        const string = [
+            '{{__('Laravel Developer')}}',
+            @if($rank>=1)'{{__('No x in most active GitHub users in Malaysia',['rank'=>$rank])}}', @endif
                 '{{__('Fullstack Developer')}}',
-                '{{__('Laravel Developer')}}',
-                '{{__('Angular Developer')}}',
-                '{{__('Ionic Developer')}}',
-                '{{__('Firebase Developer')}}',
-                '{{__('Self-learner')}}'
-            ],
+            '{{__('Web Developer')}}',
+            '{{__('Angular Developer')}}',
+            '{{__('Ionic Developer')}}',
+            '{{__('Firebase Developer')}}',
+            '{{__('Self-learner')}}'
+        ];
+        new Typed('#typed', {
+            strings: string,
             typeSpeed: 40,
             backSpeed: 60,
             loop: true,
