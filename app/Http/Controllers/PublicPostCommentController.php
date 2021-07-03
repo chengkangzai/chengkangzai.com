@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreCommentController;
+use App\Http\Services\WebHookService;
 use App\Models\Post;
 use Illuminate\Http\RedirectResponse;
 
@@ -15,22 +16,15 @@ class PublicPostCommentController extends Controller
      */
     function store(StoreCommentController $request, Post $post): RedirectResponse
     {
-        $post->comments()->create([
+        $comment = $post->comments()->create([
             'name' => $request->name,
             'email' => $request->email,
             'comment' => $request->comment,
             'status' => Post::STATUS['PUBLISH']
         ]);
+
+        app(WebHookService::class)->notifyInDiscord($post, $comment);
+
         return back();
     }
-
-//    function update(Request $request, Post $post, Comment $comment)
-//    {
-//
-//    }
-//
-//    function destroy(Post $post, Comment $comment)
-//    {
-//
-//    }
 }
