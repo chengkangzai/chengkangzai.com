@@ -463,7 +463,7 @@
                         <div class="order-1 w-5/12"></div>
                         <div
                             class="z-20 flex items-center order-1 bg-gray-800  dark:bg-gray-100 shadow-xl w-8 h-8 rounded-full transform hover:scale-125 transition duration-300">
-                            <p class="mx-auto font-semibold text-lg text-white dark:text-black">6</p>
+                            <p class="mx-auto font-semibold text-lg text-white dark:text-black">7</p>
                         </div>
                         <div
                             class="order-1 bg-blue-600 rounded-lg shadow-xl w-5/12 px-6 py-4 transform hover:scale-110 transition duration-300">
