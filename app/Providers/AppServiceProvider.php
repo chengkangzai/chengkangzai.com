@@ -40,11 +40,23 @@ class AppServiceProvider extends ServiceProvider
     }
 
     public function registerClearCacheOnModel(){
+        Post::created(function () {
+            Cache::clear();
+        });
+
         Post::updated(function () {
             Cache::clear();
         });
 
+        Works::created(function () {
+            Cache::clear();
+        });
+
         Works::updated(function () {
+            Cache::clear();
+        });
+
+        Tag::created(function () {
             Cache::clear();
         });
 
