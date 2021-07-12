@@ -19,6 +19,12 @@
     color: black;
 }
 
+.ck-content > p > a {
+    margin: revert;
+    color: revert;
+    text-decoration: revert;
+}
+
 .ck-content > ol,
 .ck-content > ul {
     list-style: revert;
@@ -42,4 +48,5 @@
     font-weight: revert;
     color: black;
 }
+
 /*END CKEDITOR Style because of Tailwind*/
