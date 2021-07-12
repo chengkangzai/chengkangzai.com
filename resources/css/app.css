@@ -19,7 +19,9 @@
     color: black;
 }
 
-.ck-content > p > a {
+.ck-content > p > a,
+.ck-content > p > ol >li > a,
+.ck-content > p > ul >li > a{
     margin: revert;
     color: revert;
     text-decoration: revert;
