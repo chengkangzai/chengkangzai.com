@@ -29,6 +29,7 @@ Route::group(['as' => 'public.'], function () {
     Route::get('/', [PublicIndexController::class, 'index'])->name('index');
     Route::get('/locale/{locale}', [LocaleController::class, 'changeLocale'])->name('setLocale');
     Route::redirect('resume', 'resume.pdf');
+    Route::view('status', 'public.status.index')->name('status.index');
     Route::group(['prefix' => 'posts', 'as' => 'posts.'], function () {
         Route::get('/', [PublicPostController::class, 'index'])->name('index');
         Route::get('{post:slug}', [PublicPostController::class, 'show'])->name('show');
