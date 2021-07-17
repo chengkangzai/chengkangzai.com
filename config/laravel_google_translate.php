@@ -1,6 +1,6 @@
 <?php
 return [
-    'google_translate_api_key' => '',
+    'google_translate_api_key' => env('GOOGLE_TRANSLATE_API_KEY',''),
     'yandex_translate_api_key' => null,
     'custom_api_translator' => null,
     'custom_api_translator_key' => '',
