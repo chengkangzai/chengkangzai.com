@@ -14,7 +14,7 @@
             <div class="py-2 text-left">
                 <input type="email" name="email"
                        class="bg-gray-200 border-2 border-gray-100 focus:outline-none bg-gray-100 block w-full py-2 px-4 rounded-lg focus:border-gray-700"
-                       placeholder="{{ __('E-Mail Address') }}"/>
+                       placeholder="{{ __('E-Mail Address') }}" value="{{old('email','')}}"/>
             </div>
             <div class="py-2 text-left">
                 <input type="password" name="password"
