@@ -1,7 +1,18 @@
 <footer class="bg-white dark:bg-gray-900 w-full pb-6 md:pt-6 px-4 border-t-2 mx-auto ">
     <div class="hidden sm:flex items-center justify-between md:flex py-6 text-center ">
-        <p class="text-blue-600 dark:text-blue-400 px-6">{{__('All rights reserved')}}</p>
-        <p class="text-blue-600 dark:text-blue-400 px-6">{{__('Built with')}}
+        <div class="text-left space-y-4 sm:px-8">
+            <div>
+                <p class="text-yellow-600 dark:text-yellow-400 text-xl font-black">{{__('Navigation')}}</p>
+                <a href="{{route('public.posts.index')}}"
+                   class="text-blue-600 dark:text-blue-400 underline">{{__('Blog')}}</a>
+            </div>
+            <div>
+                <p class="text-yellow-600 dark:text-yellow-400 text-xl font-black">{{__('Easter Egg')}}</p>
+                <a class="text-blue-600 dark:text-blue-400 underline"
+                   href="{{route('public.status.index')}}">{{__('Status')}}</a>
+            </div>
+        </div>
+        <p class="text-blue-600 dark:text-blue-400 px-6">{{__('All rights reserved')}} © <br> {{__('Built with')}}
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-500 inline" viewBox="0 0 20 20"
                  fill="currentColor">
                 <path fill-rule="evenodd" clip-rule="evenodd"
