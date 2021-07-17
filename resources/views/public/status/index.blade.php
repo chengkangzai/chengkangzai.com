@@ -39,9 +39,9 @@
                 <div
                     class="dark:bg-gray-900 bg-gray-50 sw-full text-center p-8 rounded-3xl hover:shadow-lg cursor-pointer">
                     <h2 class="text-2xl">{{__('Until Year 3 Start:')}} </h2>
-                    <p>(2021-11-05)</p>
+                    <p>(2021-11-25)</p>
                     <p class="pt-5 font-semibold text-6xl sm:text-8xl">
-                        {{__('Days',['day'=>\Carbon\Carbon::createFromDate('2021-11-05')->diffInDays()])}}
+                        {{__('Days',['day'=>\Carbon\Carbon::createFromDate('2021-11-25')->diffInDays()])}}
                     </p>
                 </div>
             </div>
