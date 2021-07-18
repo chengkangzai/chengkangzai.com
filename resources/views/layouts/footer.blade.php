@@ -9,7 +9,7 @@
             <div>
                 <p class="text-yellow-600 dark:text-yellow-400 text-xl font-black">{{__('Easter Egg')}}</p>
                 <a class="text-blue-600 dark:text-blue-400 underline"
-                   href="{{route('public.status.index')}}">{{__('Status')}}</a>
+                   href="{{route('public.status.index').'#statusSection'}}">{{__('Status')}}</a>
             </div>
         </div>
         <p class="text-blue-600 dark:text-blue-400 px-6">{{__('All rights reserved')}} © <br> {{__('Built with')}}
