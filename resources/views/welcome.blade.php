@@ -82,158 +82,165 @@
 
         </section>
 
-        <section class="flex flex-wrap w-full mx-auto pb-8" id="about-me">
-            <div
-                class="md:w-1/3 w-full bg-white dark:bg-black flex items-center justify-center px-5 py-8 transform hover:scale-110 transition duration-300 ">
-                <div x-data="{ cn: true }"
-                     class="w-full mx-auto rounded-lg bg-gray-50 dark:bg-gray-800 shadow-lg px-5 pt-5 my5 pb-10 text-gray-800">
-                    <div class="w-full mb-10">
-                        <div>
-                            <p title="{{__('Click me to translate')}}"
-                               class="text-right text-black dark:text-white text-xl animate-bounce" role="button">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" @click="cn = !cn"
-                                     viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6 right-0 animate-bounce">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                          d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/>
-                                </svg>
+        <section id="about-me">
+            <a href="#about-me"
+               class="mb-2 text-2xl font-black text-black block text-center w-full dark:text-white lg:text-3xl md:text-2xl">{{__('About me')}}</a>
+            <div class="flex flex-wrap w-full mx-auto pb-8">
+
+                <div
+                    class="md:w-1/3 w-full bg-white dark:bg-black flex items-center justify-center px-5 py-8 transform hover:scale-110 transition duration-300 ">
+                    <div x-data="{ cn: true }"
+                         class="w-full mx-auto rounded-lg bg-gray-50 dark:bg-gray-800 shadow-lg px-5 pt-5 my5 pb-10 text-gray-800">
+                        <div class="w-full mb-10">
+                            <div>
+                                <p title="{{__('Click me to translate')}}"
+                                   class="text-right text-black dark:text-white text-xl animate-bounce" role="button">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" @click="cn = !cn"
+                                         viewBox="0 0 24 24" stroke="currentColor"
+                                         class="h-6 w-6 right-0 animate-bounce">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                              d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/>
+                                    </svg>
+                                </p>
+                                <p class="text-2xl text-black text-center pb-3 dark:text-white">{{__('What I believe in')}}</p>
+                            </div>
+                            <div class="text-3xl text-indigo-500 text-left leading-tight h-3">“</div>
+                            <ul x-show="cn">
+                                <li class="text-white text-gray-600 dark:text-gray-200 text-center px-5">1.
+                                    面对问题是解决问题的第一步。
+                                </li>
+                                <li class="text-white text-gray-600 dark:text-gray-200 text-center px-5">2.
+                                    把小问题解决了，就没有大问题。
+                                </li>
+                                <li class="text-white text-gray-600 dark:text-gray-200 text-center px-5">3.
+                                    把所有的小问题都解决了，就根本没有问题。
+                                </li>
+                                <li class="text-white text-gray-600 dark:text-gray-200 text-center px-5">4.
+                                    你不解决问题，问题会解决你。
+                                </li>
+                            </ul>
+                            <ol x-show="!cn">
+                                <li class="text-white text-gray-600 dark:text-gray-200 text-center px-5">1.
+                                    Facing the problem is the first matter of the business.
+                                </li>
+                                <li class="text-white text-gray-600 dark:text-gray-200 text-center px-5">2.
+                                    When small problem is fixed, there will not have major problem.
+                                </li>
+                                <li class="text-white text-gray-600 dark:text-gray-200 text-center px-5">3.
+                                    When all small problem are fixed, there will not have any problem.
+                                </li>
+                                <li class="text-white text-gray-600 dark:text-gray-200 text-center px-5">4.
+                                    If you dont settle the problem, the problem will try to settle you.
+                                </li>
+                            </ol>
+                            <p class="text-sm text-gray-600 text-center px-5">
+
                             </p>
-                            <p class="text-2xl text-black text-center pb-3 dark:text-white">{{__('What I believe in')}}</p>
+                            <div class="text-3xl text-indigo-500 text-right leading-tight h-3 -mt-3">”</div>
                         </div>
-                        <div class="text-3xl text-indigo-500 text-left leading-tight h-3">“</div>
-                        <ul x-show="cn">
-                            <li class="text-white text-gray-600 dark:text-gray-200 text-center px-5">1.
-                                面对问题是解决问题的第一步。
-                            </li>
-                            <li class="text-white text-gray-600 dark:text-gray-200 text-center px-5">2.
-                                把小问题解决了，就没有大问题。
-                            </li>
-                            <li class="text-white text-gray-600 dark:text-gray-200 text-center px-5">3.
-                                把所有的小问题都解决了，就根本没有问题。
-                            </li>
-                            <li class="text-white text-gray-600 dark:text-gray-200 text-center px-5">4.
-                                你不解决问题，问题会解决你。
-                            </li>
-                        </ul>
-                        <ol x-show="!cn">
-                            <li class="text-white text-gray-600 dark:text-gray-200 text-center px-5">1.
-                                Facing the problem is the first matter of the business.
-                            </li>
-                            <li class="text-white text-gray-600 dark:text-gray-200 text-center px-5">2.
-                                When small problem is fixed, there will not have major problem.
-                            </li>
-                            <li class="text-white text-gray-600 dark:text-gray-200 text-center px-5">3.
-                                When all small problem are fixed, there will not have any problem.
-                            </li>
-                            <li class="text-white text-gray-600 dark:text-gray-200 text-center px-5">4.
-                                If you dont settle the problem, the problem will try to settle you.
-                            </li>
-                        </ol>
-                        <p class="text-sm text-gray-600 text-center px-5">
-
-                        </p>
-                        <div class="text-3xl text-indigo-500 text-right leading-tight h-3 -mt-3">”</div>
-                    </div>
-                    <div class="w-full">
-                        <p class="text-md text-indigo-700 dark:text-indigo-400 font-bold text-center" x-show="cn">
-                            柯文哲</p>
-                        <p class="text-md text-indigo-700 dark:text-indigo-400 font-bold text-center" x-show="!cn">
-                            Ko Wen-Je</p>
-                        <p class="text-xs text-gray-700 dark:text-gray-400 text-center">@KP_Taipei</p>
-                    </div>
-                </div>
-            </div>
-
-            <div
-                class="md:w-1/3 w-full bg-white dark:bg-black flex items-center justify-center px-5 py-8 transform hover:scale-110 transition duration-300 ">
-                <div
-                    class="w-full mx-auto rounded-lg bg-gray-50 dark:bg-gray-800 shadow-lg text-gray-800 py-11">
-                    <div class="w-full mb-10 text-center">
-                        <p class="text-2xl text-black text-center pb-3 dark:text-white ">$whoami</p>
-                        <p class="text-white text-gray-600 dark:text-gray-200 px-5 ">
-                            {{__("I'm :age-year-old Malaysian that passionate about making software that simplify people's life.",['age'=>\Carbon\Carbon::parse("1999-05-03")->age])}}
-                        </p>
-                        <br>
-                        @if($rank>=1)
-                            <a class="text-white text-gray-600 dark:text-gray-200 px-5 underline"
-                               href="https://commits.top/malaysia.html" aria-label="Linkt to Commits.top"
-                               rel="noreferrer">
-                                {{__('No x in most active GitHub users in Malaysia',['rank'=>$rank])}}
-                            </a>
-                        @endif
-                        <br> <br>
-                        <p class="text-white text-gray-600 dark:text-gray-200 px-5">
-                            {{__('My knowledge in this field are currently self-experience & academically, so they might look
-                            fundamental and simple in the meantime.')}}
-                        </p>
-                    </div>
-
-                </div>
-            </div>
-
-            <div
-                class="md:w-1/3 w-full bg-white dark:bg-black flex items-center justify-center px-5 py-8 transform hover:scale-110 transition duration-300 ">
-                <div
-                    class="w-full mx-auto rounded-lg bg-gray-50 dark:bg-gray-800 shadow-lg text-gray-800 py-8">
-                    <div class="w-full mb-10 ">
-                        <p class="text-2xl text-black text-center pb-3 dark:text-white ">{{__('Get in touch')}}</p>
-                        <div class="space-x-4 space-y-2">
-                            <p></p>
-                            <p class="text-white text-gray-600 dark:text-gray-200">
-                                <svg class="fill-current text-blue-600 inline" viewBox="0 0 512 512" width="35"
-                                     height="35">
-                                    <path xmlns="http://www.w3.org/2000/svg"
-                                          d="M256 32C132.3 32 32 134.9 32 261.7c0 101.5 64.2 187.5 153.2 217.9a17.56 17.56 0 003.8.4c8.3 0 11.5-6.1 11.5-11.4 0-5.5-.2-19.9-.3-39.1a102.4 102.4 0 01-22.6 2.7c-43.1 0-52.9-33.5-52.9-33.5-10.2-26.5-24.9-33.6-24.9-33.6-19.5-13.7-.1-14.1 1.4-14.1h.1c22.5 2 34.3 23.8 34.3 23.8 11.2 19.6 26.2 25.1 39.6 25.1a63 63 0 0025.6-6c2-14.8 7.8-24.9 14.2-30.7-49.7-5.8-102-25.5-102-113.5 0-25.1 8.7-45.6 23-61.6-2.3-5.8-10-29.2 2.2-60.8a18.64 18.64 0 015-.5c8.1 0 26.4 3.1 56.6 24.1a208.21 208.21 0 01112.2 0c30.2-21 48.5-24.1 56.6-24.1a18.64 18.64 0 015 .5c12.2 31.6 4.5 55 2.2 60.8 14.3 16.1 23 36.6 23 61.6 0 88.2-52.4 107.6-102.3 113.3 8 7.1 15.2 21.1 15.2 42.5 0 30.7-.3 55.5-.3 63 0 5.4 3.1 11.5 11.4 11.5a19.35 19.35 0 004-.4C415.9 449.2 480 363.1 480 261.7 480 134.9 379.7 32 256 32z"/>
-                                </svg>
-                                <a class="text-lg underline" rel="noreferrer" target="_blank"
-                                   aria-label="My Github Profile"
-                                   href="https://www.github.com/chengkangzai">@chengkangzai</a>
-                            </p>
-                            <p class="text-white text-gray-600 dark:text-gray-200">
-                                <svg class="fill-current text-blue-600 inline" viewBox="0 0 512 512" width="35"
-                                     height="35">
-                                    <path
-                                        d="M444.17,32H70.28C49.85,32,32,46.7,32,66.89V441.61C32,461.91,49.85,480,70.28,480H444.06C464.6,480,480,461.79,480,441.61V66.89C480.12,46.7,464.6,32,444.17,32ZM170.87,405.43H106.69V205.88h64.18ZM141,175.54h-.46c-20.54,0-33.84-15.29-33.84-34.43,0-19.49,13.65-34.42,34.65-34.42s33.85,14.82,34.31,34.42C175.65,160.25,162.35,175.54,141,175.54ZM405.43,405.43H341.25V296.32c0-26.14-9.34-44-32.56-44-17.74,0-28.24,12-32.91,23.69-1.75,4.2-2.22,9.92-2.22,15.76V405.43H209.38V205.88h64.18v27.77c9.34-13.3,23.93-32.44,57.88-32.44,42.13,0,74,27.77,74,87.64Z"/>
-                                </svg>
-                                <a class="text-lg underline" rel="noreferrer" target="_blank"
-                                   aria-label="My Linkedin Profile"
-                                   href="https://www.linkedin.com/in/chingchengkang/">Ching Cheng Kang</a>
-                            </p>
-                            <p class="text-white text-gray-600 dark:text-gray-200">
-                                <svg class="fill-current inline text-blue-600" viewBox="0 0 512 512" width="35"
-                                     height="35">
-                                    <path
-                                        d="M496,109.5a201.8,201.8,0,0,1-56.55,15.3,97.51,97.51,0,0,0,43.33-53.6,197.74,197.74,0,0,1-62.56,23.5A99.14,99.14,0,0,0,348.31,64c-54.42,0-98.46,43.4-98.46,96.9a93.21,93.21,0,0,0,2.54,22.1,280.7,280.7,0,0,1-203-101.3A95.69,95.69,0,0,0,36,130.4C36,164,53.53,193.7,80,211.1A97.5,97.5,0,0,1,35.22,199v1.2c0,47,34,86.1,79,95a100.76,100.76,0,0,1-25.94,3.4,94.38,94.38,0,0,1-18.51-1.8c12.51,38.5,48.92,66.5,92.05,67.3A199.59,199.59,0,0,1,39.5,405.6,203,203,0,0,1,16,404.2,278.68,278.68,0,0,0,166.74,448c181.36,0,280.44-147.7,280.44-275.8,0-4.2-.11-8.4-.31-12.5A198.48,198.48,0,0,0,496,109.5Z"/>
-                                </svg>
-                                <a class="text-lg underline" rel="noreferrer" target="_blank"
-                                   aria-label="My Twitter Account"
-                                   href="https://twitter.com/chengkangzai">@chengkangzai</a>
-                            </p>
-                            <p class="text-white text-gray-600 dark:text-gray-200">
-                                <svg fill="none" class="inline text-blue-600 " viewBox="0 0 24 24" width="35"
-                                     height="35"
-                                     stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                          d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                                </svg>
-                                <a class="text-lg underline" rel="noreferrer" target="_blank" aria-label="Contact me !"
-                                   href="mailto:hi@chengkangzai.com">hi@chengkangzai.com</a>
-                            </p>
+                        <div class="w-full">
+                            <p class="text-md text-indigo-700 dark:text-indigo-400 font-bold text-center" x-show="cn">
+                                柯文哲</p>
+                            <p class="text-md text-indigo-700 dark:text-indigo-400 font-bold text-center" x-show="!cn">
+                                Ko Wen-Je</p>
+                            <p class="text-xs text-gray-700 dark:text-gray-400 text-center">@KP_Taipei</p>
                         </div>
                     </div>
+                </div>
 
+                <div
+                    class="md:w-1/3 w-full bg-white dark:bg-black flex items-center justify-center px-5 py-8 transform hover:scale-110 transition duration-300 ">
+                    <div
+                        class="w-full mx-auto rounded-lg bg-gray-50 dark:bg-gray-800 shadow-lg text-gray-800 py-11">
+                        <div class="w-full mb-10 text-center">
+                            <p class="text-2xl text-black text-center pb-3 dark:text-white ">$whoami</p>
+                            <p class="text-white text-gray-600 dark:text-gray-200 px-5 ">
+                                {{__("I'm :age-year-old Malaysian that passionate about making software that simplify people's life.",['age'=>\Carbon\Carbon::parse("1999-05-03")->age])}}
+                            </p>
+                            <br>
+                            @if($rank>=1)
+                                <a class="text-white text-gray-600 dark:text-gray-200 px-5 underline"
+                                   href="https://commits.top/malaysia.html" aria-label="Linkt to Commits.top"
+                                   rel="noreferrer">
+                                    {{__('No x in most active GitHub users in Malaysia',['rank'=>$rank])}}
+                                </a>
+                            @endif
+                            <br> <br>
+                            <p class="text-white text-gray-600 dark:text-gray-200 px-5">
+                                {{__('My knowledge in this field are currently self-experience & academically, so they might look
+                                fundamental and simple in the meantime.')}}
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div
+                    class="md:w-1/3 w-full bg-white dark:bg-black flex items-center justify-center px-5 py-8 transform hover:scale-110 transition duration-300 ">
+                    <div
+                        class="w-full mx-auto rounded-lg bg-gray-50 dark:bg-gray-800 shadow-lg text-gray-800 py-8">
+                        <div class="w-full mb-10 ">
+                            <p class="text-2xl text-black text-center pb-3 dark:text-white ">{{__('Get in touch')}}</p>
+                            <div class="space-x-4 space-y-2">
+                                <p></p>
+                                <p class="text-white text-gray-600 dark:text-gray-200">
+                                    <svg class="fill-current text-blue-600 inline" viewBox="0 0 512 512" width="35"
+                                         height="35">
+                                        <path xmlns="http://www.w3.org/2000/svg"
+                                              d="M256 32C132.3 32 32 134.9 32 261.7c0 101.5 64.2 187.5 153.2 217.9a17.56 17.56 0 003.8.4c8.3 0 11.5-6.1 11.5-11.4 0-5.5-.2-19.9-.3-39.1a102.4 102.4 0 01-22.6 2.7c-43.1 0-52.9-33.5-52.9-33.5-10.2-26.5-24.9-33.6-24.9-33.6-19.5-13.7-.1-14.1 1.4-14.1h.1c22.5 2 34.3 23.8 34.3 23.8 11.2 19.6 26.2 25.1 39.6 25.1a63 63 0 0025.6-6c2-14.8 7.8-24.9 14.2-30.7-49.7-5.8-102-25.5-102-113.5 0-25.1 8.7-45.6 23-61.6-2.3-5.8-10-29.2 2.2-60.8a18.64 18.64 0 015-.5c8.1 0 26.4 3.1 56.6 24.1a208.21 208.21 0 01112.2 0c30.2-21 48.5-24.1 56.6-24.1a18.64 18.64 0 015 .5c12.2 31.6 4.5 55 2.2 60.8 14.3 16.1 23 36.6 23 61.6 0 88.2-52.4 107.6-102.3 113.3 8 7.1 15.2 21.1 15.2 42.5 0 30.7-.3 55.5-.3 63 0 5.4 3.1 11.5 11.4 11.5a19.35 19.35 0 004-.4C415.9 449.2 480 363.1 480 261.7 480 134.9 379.7 32 256 32z"/>
+                                    </svg>
+                                    <a class="text-lg underline" rel="noreferrer" target="_blank"
+                                       aria-label="My Github Profile"
+                                       href="https://www.github.com/chengkangzai">@chengkangzai</a>
+                                </p>
+                                <p class="text-white text-gray-600 dark:text-gray-200">
+                                    <svg class="fill-current text-blue-600 inline" viewBox="0 0 512 512" width="35"
+                                         height="35">
+                                        <path
+                                            d="M444.17,32H70.28C49.85,32,32,46.7,32,66.89V441.61C32,461.91,49.85,480,70.28,480H444.06C464.6,480,480,461.79,480,441.61V66.89C480.12,46.7,464.6,32,444.17,32ZM170.87,405.43H106.69V205.88h64.18ZM141,175.54h-.46c-20.54,0-33.84-15.29-33.84-34.43,0-19.49,13.65-34.42,34.65-34.42s33.85,14.82,34.31,34.42C175.65,160.25,162.35,175.54,141,175.54ZM405.43,405.43H341.25V296.32c0-26.14-9.34-44-32.56-44-17.74,0-28.24,12-32.91,23.69-1.75,4.2-2.22,9.92-2.22,15.76V405.43H209.38V205.88h64.18v27.77c9.34-13.3,23.93-32.44,57.88-32.44,42.13,0,74,27.77,74,87.64Z"/>
+                                    </svg>
+                                    <a class="text-lg underline" rel="noreferrer" target="_blank"
+                                       aria-label="My Linkedin Profile"
+                                       href="https://www.linkedin.com/in/chingchengkang/">Ching Cheng Kang</a>
+                                </p>
+                                <p class="text-white text-gray-600 dark:text-gray-200">
+                                    <svg class="fill-current inline text-blue-600" viewBox="0 0 512 512" width="35"
+                                         height="35">
+                                        <path
+                                            d="M496,109.5a201.8,201.8,0,0,1-56.55,15.3,97.51,97.51,0,0,0,43.33-53.6,197.74,197.74,0,0,1-62.56,23.5A99.14,99.14,0,0,0,348.31,64c-54.42,0-98.46,43.4-98.46,96.9a93.21,93.21,0,0,0,2.54,22.1,280.7,280.7,0,0,1-203-101.3A95.69,95.69,0,0,0,36,130.4C36,164,53.53,193.7,80,211.1A97.5,97.5,0,0,1,35.22,199v1.2c0,47,34,86.1,79,95a100.76,100.76,0,0,1-25.94,3.4,94.38,94.38,0,0,1-18.51-1.8c12.51,38.5,48.92,66.5,92.05,67.3A199.59,199.59,0,0,1,39.5,405.6,203,203,0,0,1,16,404.2,278.68,278.68,0,0,0,166.74,448c181.36,0,280.44-147.7,280.44-275.8,0-4.2-.11-8.4-.31-12.5A198.48,198.48,0,0,0,496,109.5Z"/>
+                                    </svg>
+                                    <a class="text-lg underline" rel="noreferrer" target="_blank"
+                                       aria-label="My Twitter Account"
+                                       href="https://twitter.com/chengkangzai">@chengkangzai</a>
+                                </p>
+                                <p class="text-white text-gray-600 dark:text-gray-200">
+                                    <svg fill="none" class="inline text-blue-600 " viewBox="0 0 24 24" width="35"
+                                         height="35"
+                                         stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                              d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                    </svg>
+                                    <a class="text-lg underline" rel="noreferrer" target="_blank"
+                                       aria-label="Contact me !"
+                                       href="mailto:hi@chengkangzai.com">hi@chengkangzai.com</a>
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="flex flex-wrap -m-4 dark:text-white w-full mx-auto pb-20 md:pb-0">
+        <section class="flex flex-wrap -m-4 dark:text-white w-full mx-auto pb-20 md:pb-0" id="work">
             <div class="w-full">
-                <h2 class="mb-2 text-2xl font-black text-black text-center dark:text-white lg:text-3xl md:text-2xl">
-                    {{__('These are some of my Work')}} :3 </h2>
+                <a href="#work"
+                   class="mb-2 text-2xl font-black text-black block text-center dark:text-white lg:text-3xl md:text-2xl">
+                    {{__('These are some of my Work')}} :3 </a>
             </div>
 
             @forelse($works as $work)
-                <div class="md:w-1/3 sm:w-full bg-white dark:bg-black flex items-center justify-center px-5 py-8  "
-                     id="work">
+                <div class="md:w-1/3 sm:w-full bg-white dark:bg-black flex items-center justify-center px-5 py-8">
                     <div
                         class="w-full mx-auto rounded-lg bg-gray-50 dark:bg-gray-800 shadow-lg text-gray-800 px-5 transform hover:scale-110 transition duration-300">
                         <div class="w-full mb-10 mt-5">
@@ -298,12 +305,11 @@
             @endforelse
         </section>
 
-        <section class="md:py-32 hidden md:block">
+        <section class="md:py-32 hidden md:block" id="experience">
             <div id="roadmap"
                  class="container rounded-lg bg-gray-50 dark:bg-gray-800 mx-auto w-full h-full min-h-full flex-wrap ">
-                <h2 id="experience"
-                    class="mb-2 text-2xl font-black text-black text-center dark:text-white lg:text-3xl md:text-2xl py-12">
-                    {{__('My Experiences')}}</h2>
+                <a href="#experience" class="mb-2 text-2xl font-black text-black block text-center dark:text-white lg:text-3xl md:text-2xl py-12">
+                    {{__('My Experiences')}}</a>
                 <hr>
                 <div class="relative wrap overflow-hidden p-10 h-full">
                     <div class="border-2-2 absolute border-opacity-20 border-gray-700 dark:border-white h-full border"
