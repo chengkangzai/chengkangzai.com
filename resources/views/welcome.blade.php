@@ -435,6 +435,9 @@
                             <small class="text-xs line-through text-gray-100">
                                 {{__('Only if i can round off to 4.0<')}}
                             </small>
+                            <p class="text-sm leading-snug tracking-wide pt-2 text-white">
+                                {{__('September')}} 2020
+                            </p>
                         </div>
 
                     </div>
