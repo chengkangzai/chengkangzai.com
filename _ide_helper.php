@@ -3,7 +3,7 @@
 
 /**
  * A helper file for Laravel, to provide autocomplete information to your IDE
- * Generated for Laravel 8.47.0.
+ * Generated for Laravel 8.50.0.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -1972,7 +1972,7 @@
          *
          * @param string $password
          * @param string $attribute
-         * @return bool|null 
+         * @return \App\Models\User|null 
          * @throws \Illuminate\Auth\AuthenticationException
          * @static 
          */ 
@@ -7394,6 +7394,8 @@
             /**
      * 
      *
+     * @method static \Illuminate\Log\Logger withContext(array $context = [])
+     * @method static \Illuminate\Log\Logger withoutContext()
      * @method static void write(string $level, string $message, array $context = [])
      * @method static void listen(\Closure $callback)
      * @see \Illuminate\Log\Logger
@@ -13239,6 +13241,18 @@
                         return $instance->cloud();
         }
                     /**
+         * Build an on-demand disk.
+         *
+         * @param string|array $config
+         * @return \Illuminate\Filesystem\FilesystemAdapter 
+         * @static 
+         */ 
+        public static function build($config)
+        {
+                        /** @var \Illuminate\Filesystem\FilesystemManager $instance */
+                        return $instance->build($config);
+        }
+                    /**
          * Create an instance of the local driver.
          *
          * @param array $config
@@ -14380,6 +14394,17 @@
         {
                         /** @var \Illuminate\Validation\Factory $instance */
                         $instance->replacer($rule, $replacer);
+        }
+                    /**
+         * Indicate that unvalidated array keys should be excluded, even if the parent array was validated.
+         *
+         * @return void 
+         * @static 
+         */ 
+        public static function excludeUnvalidatedArrayKeys()
+        {
+                        /** @var \Illuminate\Validation\Factory $instance */
+                        $instance->excludeUnvalidatedArrayKeys();
         }
                     /**
          * Set the Validator instance resolver.
@@ -17295,6 +17320,70 @@
      
 }
 
+    namespace Intervention\Image\Facades { 
+            /**
+     * 
+     *
+     */ 
+        class Image {
+                    /**
+         * Overrides configuration settings
+         *
+         * @param array $config
+         * @return self 
+         * @static 
+         */ 
+        public static function configure($config = [])
+        {
+                        /** @var \Intervention\Image\ImageManager $instance */
+                        return $instance->configure($config);
+        }
+                    /**
+         * Initiates an Image instance from different input types
+         *
+         * @param mixed $data
+         * @return \Intervention\Image\Image 
+         * @static 
+         */ 
+        public static function make($data)
+        {
+                        /** @var \Intervention\Image\ImageManager $instance */
+                        return $instance->make($data);
+        }
+                    /**
+         * Creates an empty image canvas
+         *
+         * @param int $width
+         * @param int $height
+         * @param mixed $background
+         * @return \Intervention\Image\Image 
+         * @static 
+         */ 
+        public static function canvas($width, $height, $background = null)
+        {
+                        /** @var \Intervention\Image\ImageManager $instance */
+                        return $instance->canvas($width, $height, $background);
+        }
+                    /**
+         * Create new cached image and run callback
+         * (requires additional package intervention/imagecache)
+         *
+         * @param \Closure $callback
+         * @param int $lifetime
+         * @param boolean $returnObj
+         * @return \Image 
+         * @static 
+         */ 
+        public static function cache($callback, $lifetime = null, $returnObj = false)
+        {
+                        /** @var \Intervention\Image\ImageManager $instance */
+                        return $instance->cache($callback, $lifetime, $returnObj);
+        }
+         
+    }
+     
+}
+
     namespace Illuminate\Http { 
             /**
      * 
@@ -17482,7 +17571,7 @@ namespace  {
              * @param mixed $operator
              * @param mixed $value
              * @param string $boolean
-             * @return \Illuminate\Database\Eloquent\Model|static 
+             * @return \Illuminate\Database\Eloquent\Model|static|null 
              * @static 
              */ 
             public static function firstWhere($column, $operator = null, $value = null, $boolean = 'and')
@@ -17820,7 +17909,6 @@ namespace  {
              * @param string $cursorName
              * @param string|null $cursor
              * @return \Illuminate\Contracts\Pagination\CursorPaginator 
-             * @throws \Illuminate\Pagination\CursorPaginationException
              * @static 
              */ 
             public static function cursorPaginate($perPage = null, $columns = [], $cursorName = 'cursor', $cursor = null)
@@ -19175,7 +19263,7 @@ namespace  {
                 /**
              * Add an "or where null" clause to the query.
              *
-             * @param string $column
+             * @param string|array $column
              * @return \Illuminate\Database\Query\Builder 
              * @static 
              */ 
@@ -19853,7 +19941,7 @@ namespace  {
                 /**
              * Add a descending "order by" clause to the query.
              *
-             * @param string $column
+             * @param \Closure|\Illuminate\Database\Query\Builder|\Illuminate\Database\Query\Expression|string $column
              * @return \Illuminate\Database\Query\Builder 
              * @static 
              */ 
@@ -19989,7 +20077,7 @@ namespace  {
                 /**
              * Remove all existing orders and optionally add a new order.
              *
-             * @param string|null $column
+             * @param \Closure|\Illuminate\Database\Query\Builder|\Illuminate\Database\Query\Expression|string|null $column
              * @param string $direction
              * @return \Illuminate\Database\Query\Builder 
              * @static 
@@ -20614,6 +20702,7 @@ namespace  {
             class SEO extends \Artesaos\SEOTools\Facades\SEOTools {}
             class Debugbar extends \Barryvdh\Debugbar\Facade {}
             class Flare extends \Facade\Ignition\Facades\Flare {}
+            class Image extends \Intervention\Image\Facades\Image {}
      
 }
 

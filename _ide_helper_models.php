@@ -12,6 +12,60 @@
 
 namespace App\Models{
 /**
+ * App\Models\CasesMalaysia
+ *
+ * @property int $id
+ * @property string $date
+ * @property int $cases_new
+ * @property int $cluster_import
+ * @property int $cluster_religious
+ * @property int $cluster_community
+ * @property int $cluster_highRisk
+ * @property int $cluster_education
+ * @property int $cluster_detentionCentre
+ * @property int $cluster_workplace
+ * @property int|null $cases_cumulative
+ * @method static \Illuminate\Database\Eloquent\Builder|CasesMalaysia newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|CasesMalaysia newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|CasesMalaysia query()
+ * @method static \Illuminate\Database\Eloquent\Builder|CasesMalaysia whereCasesCumulative($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|CasesMalaysia whereCasesNew($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|CasesMalaysia whereClusterCommunity($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|CasesMalaysia whereClusterDetentionCentre($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|CasesMalaysia whereClusterEducation($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|CasesMalaysia whereClusterHighRisk($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|CasesMalaysia whereClusterImport($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|CasesMalaysia whereClusterReligious($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|CasesMalaysia whereClusterWorkplace($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|CasesMalaysia whereDate($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|CasesMalaysia whereId($value)
+ */
+	class CasesMalaysia extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
+ * App\Models\CasesState
+ *
+ * @property int $id
+ * @property string $date
+ * @property string $state
+ * @property string $cases_new
+ * @property string|null $cases_cumulative
+ * @method static \Illuminate\Database\Eloquent\Builder|CasesState newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|CasesState newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|CasesState query()
+ * @method static \Illuminate\Database\Eloquent\Builder|CasesState whereCasesCumulative($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|CasesState whereCasesNew($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|CasesState whereDate($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|CasesState whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|CasesState whereState($value)
+ */
+	class CasesState extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
  * App\Models\Comment
  *
  * @property int $id
@@ -42,6 +96,46 @@ namespace App\Models{
  * @method static \Illuminate\Database\Query\Builder|Comment withoutTrashed()
  */
 	class Comment extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
+ * App\Models\DeathsMalaysia
+ *
+ * @property int $id
+ * @property string $date
+ * @property int $deaths_new
+ * @property int|null $deaths_new_cumulative
+ * @method static \Illuminate\Database\Eloquent\Builder|DeathsMalaysia newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|DeathsMalaysia newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|DeathsMalaysia query()
+ * @method static \Illuminate\Database\Eloquent\Builder|DeathsMalaysia whereDate($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|DeathsMalaysia whereDeathsNew($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|DeathsMalaysia whereDeathsNewCumulative($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|DeathsMalaysia whereId($value)
+ */
+	class DeathsMalaysia extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
+ * App\Models\DeathsState
+ *
+ * @property int $id
+ * @property string $date
+ * @property string $state
+ * @property int $deaths_new
+ * @property int|null $deaths_commutative
+ * @method static \Illuminate\Database\Eloquent\Builder|DeathsState newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|DeathsState newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|DeathsState query()
+ * @method static \Illuminate\Database\Eloquent\Builder|DeathsState whereDate($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|DeathsState whereDeathsCommutative($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|DeathsState whereDeathsNew($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|DeathsState whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|DeathsState whereState($value)
+ */
+	class DeathsState extends \Eloquent {}
 }
 
 namespace App\Models{
