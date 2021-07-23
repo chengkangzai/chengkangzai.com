@@ -63,7 +63,7 @@
                         {{__('About Me')}}</a>
                 @endif
                 <div @click.away="open = false" class="relative" x-data="{ open: false }">
-                    <button @click="open = !open"
+                    <button @click="open = !open" aria-label="Drop Down trigger"
                             class="hover:text-black flex flex-row text-white items-center w-full px-4 py-2 mt-2 text-bold text-md text-left bg-transparent rounded-lg dark:bg-transparent dark:focus:text-white dark:hover:text-white dark:focus:bg-gray-600 dark:hover:bg-gray-600 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
                         <span>{{__('Select Language')}}</span>
                         <svg viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}"
