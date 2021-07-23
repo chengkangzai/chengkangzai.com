@@ -7,7 +7,6 @@ use App\Models\Works;
 use Artesaos\SEOTools\Facades\SEOTools;
 use Carbon\Carbon;
 use Exception;
-use Illuminate\Support\Facades\Http;
 use Storage;
 
 class PublicIndexController extends Controller
