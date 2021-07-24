@@ -17,7 +17,7 @@ class CreateClustersTable extends Migration
             $table->id();
             $table->string('cluster');
             $table->string('state');
-            $table->string('district');
+            $table->longText('district');
             $table->date('date_announced')->nullable();
             $table->date('date_last_onset')->nullable();
             $table->string('category');
