@@ -25,6 +25,7 @@ class CreateCasesMalaysiasTable extends Migration
             $table->integer('cluster_detentionCentre');
             $table->integer('cluster_workplace');
             $table->integer('cases_cumulative')->nullable();
+            $table->timestamps();
         });
     }
 

@@ -45,6 +45,8 @@ class CovidService
                     'cluster_detentionCentre' => (!isset($dailyCase[7]) || $dailyCase[7] == '') ? 0 : $dailyCase[7],
                     'cluster_workplace' => (!isset($dailyCase[8]) || $dailyCase[8] == '') ? 0 : $dailyCase[8],
                     'cases_cumulative' => $cum,
+                    'created_at' => now(),
+                    'updated_at' => now(),
                 ];
             });
 
@@ -62,6 +64,8 @@ class CovidService
                     'date' => $dailyCase[0],
                     'state' => $state,
                     'cases_new' => $new_cases,
+                    'created_at' => now(),
+                    'updated_at' => now(),
                 ];
             });
     }
@@ -78,7 +82,9 @@ class CovidService
                 return [
                     'date' => $dailyCase[0],
                     'deaths_new' => $newDeath,
-                    'deaths_new_cumulative' => $cum
+                    'deaths_new_cumulative' => $cum,
+                    'created_at' => now(),
+                    'updated_at' => now(),
                 ];
             });
     }
@@ -93,6 +99,8 @@ class CovidService
                     'date' => $dailyCase[0],
                     'state' => (!isset($dailyCase[1]) || $dailyCase[1] == '') ? 0 : $dailyCase[1],
                     'deaths_new' => (!isset($dailyCase[2]) || $dailyCase[2] == '') ? 0 : $dailyCase[2],
+                    'created_at' => now(),
+                    'updated_at' => now(),
                 ];
             });
     }
@@ -107,6 +115,8 @@ class CovidService
                     'date' => $dailyCase[0],
                     'rtk-ag' => (!isset($dailyCase[1]) || $dailyCase[1] == '') ? 0 : $dailyCase[1],
                     'pcr' => (!isset($dailyCase[2]) || $dailyCase[2] == '') ? 0 : $dailyCase[2],
+                    'created_at' => now(),
+                    'updated_at' => now(),
                 ];
             });
     }
@@ -132,10 +142,12 @@ class CovidService
                     'icu' => (!isset($dailyCase[11]) || $dailyCase[11] == '') ? 0 : $dailyCase[11],
                     'deaths' => (!isset($dailyCase[12]) || $dailyCase[12] == '') ? 0 : $dailyCase[12],
                     'recovered' => (!isset($dailyCase[13]) || $dailyCase[13] == '') ? 0 : $dailyCase[13],
+                    'created_at' => now(),
+                    'updated_at' => now(),
                 ];
             })
             ->filter(function ($line) {
-                return count($line) == 14; // Purge data that dont have proper formatting
+                return count($line) == 16; // Purge data that dont have proper formatting
             })
             ->filter(function ($line) {
                 return explode(' ', $line['cluster'])[0] == 'Kluster'; //Get Only With Prefix Cluster
@@ -162,6 +174,8 @@ class CovidService
                     'hosp_covid' => (!isset($dailyCase[10]) || $dailyCase[10] == '') ? 0 : $dailyCase[10],
                     'hosp_pui' => (!isset($dailyCase[11]) || $dailyCase[11] == '') ? 0 : $dailyCase[11],
                     'hosp_noncovid' => (!isset($dailyCase[12]) || $dailyCase[12] == '') ? 0 : $dailyCase[12],
+                    'created_at' => now(),
+                    'updated_at' => now(),
                 ];
             });
     }
@@ -187,6 +201,8 @@ class CovidService
                     'vent_covid' => (!isset($dailyCase[11]) || $dailyCase[11] == '') ? 0 : $dailyCase[11],
                     'vent_pui' => (!isset($dailyCase[12]) || $dailyCase[12] == '') ? 0 : $dailyCase[12],
                     'vent_noncovid' => (!isset($dailyCase[13]) || $dailyCase[13] == '') ? 0 : $dailyCase[13],
+                    'created_at' => now(),
+                    'updated_at' => now(),
                 ];
             });
     }
@@ -210,6 +226,8 @@ class CovidService
                     'pkrc_covid' => (!isset($dailyCase[9]) || $dailyCase[9] == '') ? 0 : $dailyCase[9],
                     'pkrc_pui' => (!isset($dailyCase[10]) || $dailyCase[10] == '') ? 0 : $dailyCase[10],
                     'pkrc_noncovid' => (!isset($dailyCase[11]) || $dailyCase[11] == '') ? 0 : $dailyCase[11],
+                    'created_at' => now(),
+                    'updated_at' => now(),
                 ];
             });
     }
@@ -226,6 +244,8 @@ class CovidService
                     'pop' => (!isset($dailyCase[2]) || $dailyCase[2] == '') ? 0 : $dailyCase[2],
                     'pop_18' => (!isset($dailyCase[3]) || $dailyCase[3] == '') ? 0 : $dailyCase[3],
                     'pop_60' => (!isset($dailyCase[4]) || $dailyCase[4] == '') ? 0 : $dailyCase[4],
+                    'created_at' => now(),
+                    'updated_at' => now(),
                 ];
             });
     }
