@@ -4,6 +4,8 @@
 namespace App\Http\Services;
 
 
+use App\Models\CasesState;
+use App\Models\DeathsState;
 use Http;
 use Illuminate\Support\Collection;
 
@@ -25,13 +27,16 @@ class CovidService
 
     public function getCasesMalaysia(): Collection
     {
+        $cum = 0;
         return collect(explode(PHP_EOL, Http::get(self::url['CASES_MALAYSIA'])))
             ->slice(1, -1)
-            ->map(function ($record) {
+            ->map(function ($record) use ($cum) {
                 $dailyCase = explode(',', $record);
+                $new_cases = (!isset($dailyCase[1]) || $dailyCase[1] == '') ? 0 : $dailyCase[1];
+                $cum = $cum + $new_cases;
                 return [
                     'date' => $dailyCase[0],
-                    'cases_new' => (!isset($dailyCase[1]) || $dailyCase[1] == '') ? 0 : $dailyCase[1],
+                    'cases_new' => $new_cases,
                     'cluster_import' => (!isset($dailyCase[2]) || $dailyCase[2] == '') ? 0 : $dailyCase[2],
                     'cluster_religious' => (!isset($dailyCase[3]) || $dailyCase[3] == '') ? 0 : $dailyCase[3],
                     'cluster_community' => (!isset($dailyCase[4]) || $dailyCase[4] == '') ? 0 : $dailyCase[4],
@@ -39,6 +44,7 @@ class CovidService
                     'cluster_education' => (!isset($dailyCase[6]) || $dailyCase[6] == '') ? 0 : $dailyCase[6],
                     'cluster_detentionCentre' => (!isset($dailyCase[7]) || $dailyCase[7] == '') ? 0 : $dailyCase[7],
                     'cluster_workplace' => (!isset($dailyCase[8]) || $dailyCase[8] == '') ? 0 : $dailyCase[8],
+                    'cases_cumulative' => $cum,
                 ];
             });
 
@@ -50,23 +56,29 @@ class CovidService
             ->slice(1, -1)
             ->map(function ($record) {
                 $dailyCase = explode(',', $record);
+                $state = (!isset($dailyCase[1]) || $dailyCase[1] == '') ? 0 : $dailyCase[1];
+                $new_cases = (!isset($dailyCase[2]) || $dailyCase[2] == '') ? 0 : $dailyCase[2];
                 return [
                     'date' => $dailyCase[0],
-                    'state' => (!isset($dailyCase[1]) || $dailyCase[1] == '') ? 0 : $dailyCase[1],
-                    'cases_new' => (!isset($dailyCase[2]) || $dailyCase[2] == '') ? 0 : $dailyCase[2],
+                    'state' => $state,
+                    'cases_new' => $new_cases,
                 ];
             });
     }
 
     public function getDeathMalaysia()
     {
+        $cum = 0;
         return collect(explode(PHP_EOL, Http::get(self::url['DEATH_MALAYSIA'])))
             ->slice(1, -1)
-            ->map(function ($record) {
+            ->map(function ($record) use ($cum) {
                 $dailyCase = explode(',', $record);
+                $newDeath = (!isset($dailyCase[1]) || $dailyCase[1] == '') ? 0 : $dailyCase[1];
+                $cum = $cum + $newDeath;
                 return [
                     'date' => $dailyCase[0],
-                    'deaths_new' => (!isset($dailyCase[1]) || $dailyCase[1] == '') ? 0 : $dailyCase[1],
+                    'deaths_new' => $newDeath,
+                    'deaths_new_cumulative' => $cum
                 ];
             });
     }
@@ -216,8 +228,36 @@ class CovidService
                     'pop_60' => (!isset($dailyCase[4]) || $dailyCase[4] == '') ? 0 : $dailyCase[4],
                 ];
             });
-
     }
 
 
+    public function updateCumulativeCasesState()
+    {
+        $states = CasesState::distinct()->get('state')->toArray();
+
+        foreach ($states as $state) {
+            $cum = 0;
+            $cases = CasesState::whereState($state)->get();
+            foreach ($cases as $case) {
+                $cum = $cum + $case->cases_new;
+                $case->cases_cumulative = $cum;
+                $case->push();
+            }
+        }
+    }
+
+    public function updateCumulativeDeathState()
+    {
+        $states = DeathsState::distinct()->get('state')->toArray();
+
+        foreach ($states as $state) {
+            $cum = 0;
+            $cases = DeathsState::whereState($state)->get();
+            foreach ($cases as $case) {
+                $cum = $cum + $case->deaths_new;
+                $case->deaths_commutative = $cum;
+                $case->push();
+            }
+        }
+    }
 }

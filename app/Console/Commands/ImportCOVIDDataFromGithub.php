@@ -158,6 +158,11 @@ class ImportCOVIDDataFromGithub extends Command
             CasesState::insert($records);
 
         });
+
+        $this->line('');
+        $this->info('Updating Cumulative Case State ... ');
+
+        $this->covidService->updateCumulativeCasesState();
     }
 
     public function importDeathMalaysia()
@@ -180,6 +185,10 @@ class ImportCOVIDDataFromGithub extends Command
             DeathsState::insert($records);
 
         });
+
+        $this->line('');
+        $this->info('Updating Cumulative Death State ... ');
+        $this->covidService->updateCumulativeDeathState();
 
     }
 
