@@ -23,7 +23,7 @@ class PublicPostCommentController extends Controller
             'status' => Post::STATUS['PUBLISH']
         ]);
 
-        app(WebHookService::class)->notifyInDiscord($post, $comment);
+        app(WebHookService::class)->notifySomeoneCommentedInPost($post, $comment);
 
         return back();
     }
