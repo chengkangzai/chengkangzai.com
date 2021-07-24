@@ -20,6 +20,7 @@ class CreatePopulationsTable extends Migration
             $table->integer('pop');
             $table->integer('pop_18');
             $table->integer('pop_60');
+            $table->timestamps();
         });
     }
 

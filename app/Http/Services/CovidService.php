@@ -4,8 +4,8 @@
 namespace App\Http\Services;
 
 
-use App\Models\CasesState;
-use App\Models\DeathsState;
+use App\Models\Covid\CasesState;
+use App\Models\Covid\DeathsState;
 use Http;
 use Illuminate\Support\Collection;
 

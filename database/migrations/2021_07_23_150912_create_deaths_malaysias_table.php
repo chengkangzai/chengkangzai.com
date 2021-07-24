@@ -18,6 +18,7 @@ class CreateDeathsMalaysiasTable extends Migration
             $table->date('date');
             $table->integer('deaths_new');
             $table->integer('deaths_new_cumulative')->nullable();
+            $table->timestamps();
         });
     }
 

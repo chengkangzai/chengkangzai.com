@@ -27,6 +27,8 @@ return new class extends Migration
             $table->integer('pkrc_covid');
             $table->integer('pkrc_pui');
             $table->integer('pkrc_noncovid');
+
+            $table->timestamps();
         });
     }
 

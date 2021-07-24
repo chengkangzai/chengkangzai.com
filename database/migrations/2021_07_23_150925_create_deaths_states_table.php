@@ -19,6 +19,7 @@ class CreateDeathsStatesTable extends Migration
             $table->string('state');
             $table->integer('deaths_new');
             $table->integer('deaths_commutative')->nullable();
+            $table->timestamps();
         });
     }
 

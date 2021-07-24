@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models;
+namespace App\Models\Covid;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -9,7 +9,6 @@ class DeathsState extends Model
 {
     use HasFactory;
 
-    public $timestamps=false;
     protected $fillable = [
         'id',
         'date',

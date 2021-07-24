@@ -19,6 +19,7 @@ class CreateCasesStatesTable extends Migration
             $table->string('state');
             $table->string('cases_new');
             $table->string('cases_cumulative')->nullable();
+            $table->timestamps();
         });
     }
 

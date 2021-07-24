@@ -32,6 +32,8 @@ return new class extends Migration {
             $table->integer('vent_covid');
             $table->integer('vent_pui');
             $table->integer('vent_noncovid');
+
+            $table->timestamps();
         });
     }
 

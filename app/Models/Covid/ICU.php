@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models;
+namespace App\Models\Covid;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -10,7 +10,7 @@ class ICU extends Model
     use HasFactory;
 
     protected $table = 'icus';
-    public $timestamps = false;
+
     protected $fillable = [
         'id',
         'date',

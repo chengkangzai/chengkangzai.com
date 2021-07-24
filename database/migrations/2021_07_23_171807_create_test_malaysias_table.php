@@ -18,6 +18,7 @@ class CreateTestMalaysiasTable extends Migration
             $table->date('date');
             $table->integer('rtk-ag');
             $table->integer('pcr');
+            $table->timestamps();
         });
     }
 

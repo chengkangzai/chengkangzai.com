@@ -28,7 +28,7 @@ class CreateHospitalsTable extends Migration
             $table->integer('hosp_covid');
             $table->integer('hosp_pui');
             $table->integer('hosp_noncovid');
-
+            $table->timestamps();
         });
     }
 

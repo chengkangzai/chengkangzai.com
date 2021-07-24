@@ -29,6 +29,7 @@ class CreateClustersTable extends Migration
             $table->integer('icu');
             $table->integer('deaths');
             $table->integer('recovered');
+            $table->timestamps();
         });
     }
 

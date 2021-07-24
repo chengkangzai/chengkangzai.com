@@ -1,22 +1,20 @@
 <?php
 
-namespace App\Models;
+namespace App\Models\Covid;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class TestMalaysia extends Model
+class DeathsMalaysia extends Model
 {
     use HasFactory;
 
-    public $timestamps = false;
-
-    protected $table = 'test_malaysia';
+    protected $table = 'deaths_malaysia';
 
     protected $fillable = [
         'id',
         'date',
-        'trk-ag',
-        'pcr',
+        'deaths_new',
+        'deaths_new_cumulative',
     ];
 }
