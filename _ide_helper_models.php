@@ -12,7 +12,41 @@
 
 namespace App\Models{
 /**
- * App\Models\CasesMalaysia
+ * App\Models\Comment
+ *
+ * @property int $id
+ * @property string $comment
+ * @property string $email
+ * @property string $name
+ * @property string $status
+ * @property int $post_id
+ * @property \Illuminate\Support\Carbon|null $deleted_at
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read \App\Models\Post $post
+ * @method static \Database\Factories\CommentFactory factory(...$parameters)
+ * @method static \Illuminate\Database\Eloquent\Builder|Comment newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Comment newQuery()
+ * @method static \Illuminate\Database\Query\Builder|Comment onlyTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder|Comment query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Comment whereComment($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Comment whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Comment whereDeletedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Comment whereEmail($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Comment whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Comment whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Comment wherePostId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Comment whereStatus($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Comment whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Query\Builder|Comment withTrashed()
+ * @method static \Illuminate\Database\Query\Builder|Comment withoutTrashed()
+ */
+	class Comment extends \Eloquent {}
+}
+
+namespace App\Models\Covid{
+/**
+ * App\Models\Covid\CasesMalaysia
  *
  * @property int $id
  * @property string $date
@@ -43,9 +77,9 @@ namespace App\Models{
 	class CasesMalaysia extends \Eloquent {}
 }
 
-namespace App\Models{
+namespace App\Models\Covid{
 /**
- * App\Models\CasesState
+ * App\Models\Covid\CasesState
  *
  * @property int $id
  * @property string $date
@@ -64,9 +98,9 @@ namespace App\Models{
 	class CasesState extends \Eloquent {}
 }
 
-namespace App\Models{
+namespace App\Models\Covid{
 /**
- * App\Models\Cluster
+ * App\Models\Covid\Cluster
  *
  * @property int $id
  * @property string $cluster
@@ -105,43 +139,9 @@ namespace App\Models{
 	class Cluster extends \Eloquent {}
 }
 
-namespace App\Models{
+namespace App\Models\Covid{
 /**
- * App\Models\Comment
- *
- * @property int $id
- * @property string $comment
- * @property string $email
- * @property string $name
- * @property string $status
- * @property int $post_id
- * @property \Illuminate\Support\Carbon|null $deleted_at
- * @property \Illuminate\Support\Carbon|null $created_at
- * @property \Illuminate\Support\Carbon|null $updated_at
- * @property-read \App\Models\Post $post
- * @method static \Database\Factories\CommentFactory factory(...$parameters)
- * @method static \Illuminate\Database\Eloquent\Builder|Comment newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Comment newQuery()
- * @method static \Illuminate\Database\Query\Builder|Comment onlyTrashed()
- * @method static \Illuminate\Database\Eloquent\Builder|Comment query()
- * @method static \Illuminate\Database\Eloquent\Builder|Comment whereComment($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Comment whereCreatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Comment whereDeletedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Comment whereEmail($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Comment whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Comment whereName($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Comment wherePostId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Comment whereStatus($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Comment whereUpdatedAt($value)
- * @method static \Illuminate\Database\Query\Builder|Comment withTrashed()
- * @method static \Illuminate\Database\Query\Builder|Comment withoutTrashed()
- */
-	class Comment extends \Eloquent {}
-}
-
-namespace App\Models{
-/**
- * App\Models\DeathsMalaysia
+ * App\Models\Covid\DeathsMalaysia
  *
  * @property int $id
  * @property string $date
@@ -158,9 +158,9 @@ namespace App\Models{
 	class DeathsMalaysia extends \Eloquent {}
 }
 
-namespace App\Models{
+namespace App\Models\Covid{
 /**
- * App\Models\DeathsState
+ * App\Models\Covid\DeathsState
  *
  * @property int $id
  * @property string $date
@@ -179,9 +179,9 @@ namespace App\Models{
 	class DeathsState extends \Eloquent {}
 }
 
-namespace App\Models{
+namespace App\Models\Covid{
 /**
- * App\Models\Hospital
+ * App\Models\Covid\Hospital
  *
  * @property int $id
  * @property string $date
@@ -218,9 +218,9 @@ namespace App\Models{
 	class Hospital extends \Eloquent {}
 }
 
-namespace App\Models{
+namespace App\Models\Covid{
 /**
- * App\Models\ICU
+ * App\Models\Covid\ICU
  *
  * @property int $id
  * @property string $date
@@ -259,9 +259,9 @@ namespace App\Models{
 	class ICU extends \Eloquent {}
 }
 
-namespace App\Models{
+namespace App\Models\Covid{
 /**
- * App\Models\PKRC
+ * App\Models\Covid\PKRC
  *
  * @property int $id
  * @property string $date
@@ -296,9 +296,9 @@ namespace App\Models{
 	class PKRC extends \Eloquent {}
 }
 
-namespace App\Models{
+namespace App\Models\Covid{
 /**
- * App\Models\Population
+ * App\Models\Covid\Population
  *
  * @property int $id
  * @property string $state
@@ -317,6 +317,25 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|Population whereState($value)
  */
 	class Population extends \Eloquent {}
+}
+
+namespace App\Models\Covid{
+/**
+ * App\Models\Covid\TestMalaysia
+ *
+ * @property int $id
+ * @property string $date
+ * @property int $rtk-ag
+ * @property int $pcr
+ * @method static \Illuminate\Database\Eloquent\Builder|TestMalaysia newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|TestMalaysia newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|TestMalaysia query()
+ * @method static \Illuminate\Database\Eloquent\Builder|TestMalaysia whereDate($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|TestMalaysia whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|TestMalaysia wherePcr($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|TestMalaysia whereRtkAg($value)
+ */
+	class TestMalaysia extends \Eloquent {}
 }
 
 namespace App\Models{
@@ -363,25 +382,6 @@ namespace App\Models{
  * @method static \Illuminate\Database\Query\Builder|Post withoutTrashed()
  */
 	class Post extends \Eloquent {}
-}
-
-namespace App\Models{
-/**
- * App\Models\TestMalaysia
- *
- * @property int $id
- * @property string $date
- * @property int $rtk-ag
- * @property int $pcr
- * @method static \Illuminate\Database\Eloquent\Builder|TestMalaysia newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|TestMalaysia newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|TestMalaysia query()
- * @method static \Illuminate\Database\Eloquent\Builder|TestMalaysia whereDate($value)
- * @method static \Illuminate\Database\Eloquent\Builder|TestMalaysia whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|TestMalaysia wherePcr($value)
- * @method static \Illuminate\Database\Eloquent\Builder|TestMalaysia whereRtkAg($value)
- */
-	class TestMalaysia extends \Eloquent {}
 }
 
 namespace App\Models{
