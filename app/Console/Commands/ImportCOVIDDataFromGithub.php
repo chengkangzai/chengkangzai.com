@@ -12,7 +12,6 @@ use App\Models\ICU;
 use App\Models\PKRC;
 use App\Models\Population;
 use App\Models\TestMalaysia;
-use Carbon\Carbon;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Http;
 
@@ -69,10 +68,10 @@ class ImportCOVIDDataFromGithub extends Command
         $this->line('');
         $this->info('importing.. TestMalaysia');
         $this->importTestMalaysia();
-        //TODO
-//        $this->line('');
-//        $this->info('importing.. Cluster');
-//        $this->importCluster();
+
+        $this->line('');
+        $this->info('importing.. Cluster');
+        $this->importCluster();
 
         $this->line('');
         $this->info('importing.. Hospitals');
@@ -89,7 +88,6 @@ class ImportCOVIDDataFromGithub extends Command
         $this->line('');
         $this->info('importing.. Population');
         $this->importMalaysiaPopulation();
-
 
         return 0;
     }
@@ -237,14 +235,13 @@ class ImportCOVIDDataFromGithub extends Command
         $records = collect(explode(PHP_EOL, $raw))
             ->slice(1, -1)
             ->map(function ($record) {
-                $dailyCase = explode(',', $record);
-                echo $dailyCase[1];
+                $dailyCase = str_getcsv($record);
                 return [
                     'cluster' => $dailyCase[0],
                     'state' => $dailyCase[1],
                     'district' => $dailyCase[2] ?? 'null',
-                    'date_announced' => Carbon::parse($dailyCase[3]),
-                    'date_last_onset' => Carbon::parse($dailyCase[4]),
+                    'date_announced' => $dailyCase[3] ?? null,
+                    'date_last_onset' => $dailyCase[4] ?? null,
                     'category' => $dailyCase[5] ?? 'null',
                     'status' => (!isset($dailyCase[6]) || $dailyCase[6] == '') ? 0 : $dailyCase[6],
                     'cases_new' => (!isset($dailyCase[7]) || $dailyCase[7] == '') ? 0 : $dailyCase[7],
@@ -255,6 +252,12 @@ class ImportCOVIDDataFromGithub extends Command
                     'deaths' => (!isset($dailyCase[12]) || $dailyCase[12] == '') ? 0 : $dailyCase[12],
                     'recovered' => (!isset($dailyCase[13]) || $dailyCase[13] == '') ? 0 : $dailyCase[13],
                 ];
+            })
+            ->filter(function ($line) {
+                return count($line) == 14; // Purge data that dont have proper formatting
+            })
+            ->filter(function ($line) {
+                return explode(' ', $line['cluster'])[0] == 'Kluster'; //Get Only With Prefix Cluster
             });
 
         $records->chunk(5000);
