@@ -332,6 +332,7 @@ namespace App\Models{
  * @property int $id
  * @property string $title
  * @property string $content
+ * @property string $status
  * @property string $slug
  * @property \Illuminate\Support\Carbon|null $deleted_at
  * @property \Illuminate\Support\Carbon|null $created_at
