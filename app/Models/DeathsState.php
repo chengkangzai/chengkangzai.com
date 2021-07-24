@@ -15,6 +15,6 @@ class DeathsState extends Model
         'date',
         'state',
         'deaths_new',
-        'deaths_new_commutative',
+        'deaths_commutative',
     ];
 }

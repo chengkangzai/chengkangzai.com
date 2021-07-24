@@ -10,7 +10,8 @@ class DeathsMalaysia extends Model
     use HasFactory;
 
     protected $table = 'deaths_malaysia';
-    public $timestamps=false;
+    
+    public $timestamps = false;
 
     protected $fillable = [
         'id',

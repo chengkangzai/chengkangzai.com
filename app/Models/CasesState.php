@@ -16,5 +16,6 @@ class CasesState extends Model
         'date',
         'state',
         'cases_new',
+        'cases_cumulative'
     ];
 }
