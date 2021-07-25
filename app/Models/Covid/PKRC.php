@@ -26,4 +26,24 @@ class PKRC extends Model
         'pkrc_pui',
         'pkrc_noncovid',
     ];
+
+    const STATE = [
+        "Johor" => "Johor",
+        "Kedah" => "Kedah",
+        "Kelantan" => "Kelantan",
+        "Melaka" => "Melaka",
+        "Negeri Sembilan" => "Negeri Sembilan",
+        "Pahang" => "Pahang",
+        "Penang" => "Penang",
+        "Perak" => "Perak",
+        "Perlis" => "Perlis",
+        "Sabah" => "Sabah",
+        "Sarawak" => "Sarawak",
+        "Selangor" => "Selangor",
+        "Terengganu" => "Terengganu",
+        "W.P. Kuala Lumpur" => "W.P. Kuala Lumpur",
+        "W.P. Labuan" => "W.P. Labuan",
+        "W.P. Putrajaya" => "W.P. Putrajaya",
+    ];
+
 }
