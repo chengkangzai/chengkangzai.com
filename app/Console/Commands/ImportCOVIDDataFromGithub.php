@@ -113,9 +113,9 @@ class ImportCOVIDDataFromGithub extends Command
             if (app()->environment('production')) {
                 app(WebHookService::class)->notifyInGeneral('DAMN STH went WRONG : \n\n' . $exception->getMessage(), WebHookService::COLOR['RED']);
             }
-        } catch (Throwable $e) {
+        } catch (Throwable $exception) {
             if (app()->environment('production')) {
-                app(WebHookService::class)->notifyInGeneral('DAMN STH went WRONG : \n\n' . $e->getMessage(), WebHookService::COLOR['RED']);
+                app(WebHookService::class)->notifyInGeneral('DAMN STH went WRONG : \n\n' . $exception->getMessage(), WebHookService::COLOR['RED']);
             }
         }
 
