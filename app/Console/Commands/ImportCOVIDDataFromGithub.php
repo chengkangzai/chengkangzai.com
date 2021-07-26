@@ -2,7 +2,7 @@
 
 namespace App\Console\Commands;
 
-use App\Http\Services\CovidService;
+use App\Http\Services\ImportCovidFromGithubService;
 use App\Http\Services\WebHookService;
 use App\Models\Covid\CasesMalaysia;
 use App\Models\Covid\CasesState;
@@ -37,9 +37,9 @@ class ImportCOVIDDataFromGithub extends Command
     protected $description = 'Import Covid Cases From Github';
 
     /**
-     * @var CovidService|Application|mixed
+     * @var ImportCovidFromGithubService|Application|mixed
      */
-    private CovidService $covidService;
+    private ImportCovidFromGithubService $covidService;
 
     /**
      * Create a new command instance.
@@ -49,13 +49,14 @@ class ImportCOVIDDataFromGithub extends Command
     public function __construct()
     {
         parent::__construct();
-        $this->covidService = app(CovidService::class);
+        $this->covidService = app(ImportCovidFromGithubService::class);
     }
 
     /**
      * Execute the console command.
      *
      * @return int
+     * @throws Throwable
      */
     public function handle(): int
     {
