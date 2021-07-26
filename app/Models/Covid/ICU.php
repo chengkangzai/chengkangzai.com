@@ -2,6 +2,7 @@
 
 namespace App\Models\Covid;
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -36,7 +37,7 @@ class ICU extends Model
         "Melaka" => "Melaka",
         "Negeri Sembilan" => "Negeri Sembilan",
         "Pahang" => "Pahang",
-        "Penang" => "Penang",
+        "Pulau Pinang" => "Pulau Pinang",
         "Perak" => "Perak",
         "Perlis" => "Perlis",
         "Sabah" => "Sabah",
@@ -47,4 +48,9 @@ class ICU extends Model
         "W.P. Labuan" => "W.P. Labuan",
         "W.P. Putrajaya" => "W.P. Putrajaya",
     ];
+
+    public function scopeLatestOne(Builder $query): Builder
+    {
+        return $query->orderByDesc('date')->take(16);
+    }
 }

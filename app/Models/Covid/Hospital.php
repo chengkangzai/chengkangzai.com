@@ -32,7 +32,7 @@ class Hospital extends Model
         "Melaka" => "Melaka",
         "Negeri Sembilan" => "Negeri Sembilan",
         "Pahang" => "Pahang",
-        "Penang" => "Penang",
+        "Pulau Pinang" => "Pulau Pinang",
         "Perak" => "Perak",
         "Perlis" => "Perlis",
         "Sabah" => "Sabah",
