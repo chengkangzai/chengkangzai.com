@@ -59,6 +59,9 @@ namespace App\Models\Covid{
  * @property int $cluster_detentionCentre
  * @property int $cluster_workplace
  * @property int|null $cases_cumulative
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @method static \Illuminate\Database\Eloquent\Builder|CasesMalaysia latestOne()
  * @method static \Illuminate\Database\Eloquent\Builder|CasesMalaysia newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|CasesMalaysia newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|CasesMalaysia query()
@@ -71,8 +74,10 @@ namespace App\Models\Covid{
  * @method static \Illuminate\Database\Eloquent\Builder|CasesMalaysia whereClusterImport($value)
  * @method static \Illuminate\Database\Eloquent\Builder|CasesMalaysia whereClusterReligious($value)
  * @method static \Illuminate\Database\Eloquent\Builder|CasesMalaysia whereClusterWorkplace($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|CasesMalaysia whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|CasesMalaysia whereDate($value)
  * @method static \Illuminate\Database\Eloquent\Builder|CasesMalaysia whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|CasesMalaysia whereUpdatedAt($value)
  */
 	class CasesMalaysia extends \Eloquent {}
 }
@@ -86,14 +91,19 @@ namespace App\Models\Covid{
  * @property string $state
  * @property string $cases_new
  * @property string|null $cases_cumulative
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @method static \Illuminate\Database\Eloquent\Builder|CasesState latestOne()
  * @method static \Illuminate\Database\Eloquent\Builder|CasesState newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|CasesState newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|CasesState query()
  * @method static \Illuminate\Database\Eloquent\Builder|CasesState whereCasesCumulative($value)
  * @method static \Illuminate\Database\Eloquent\Builder|CasesState whereCasesNew($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|CasesState whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|CasesState whereDate($value)
  * @method static \Illuminate\Database\Eloquent\Builder|CasesState whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|CasesState whereState($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|CasesState whereUpdatedAt($value)
  */
 	class CasesState extends \Eloquent {}
 }
@@ -117,6 +127,8 @@ namespace App\Models\Covid{
  * @property int $icu
  * @property int $deaths
  * @property int $recovered
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
  * @method static \Illuminate\Database\Eloquent\Builder|Cluster newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Cluster newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Cluster query()
@@ -125,6 +137,7 @@ namespace App\Models\Covid{
  * @method static \Illuminate\Database\Eloquent\Builder|Cluster whereCasesTotal($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Cluster whereCategory($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Cluster whereCluster($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Cluster whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Cluster whereDateAnnounced($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Cluster whereDateLastOnset($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Cluster whereDeaths($value)
@@ -135,6 +148,7 @@ namespace App\Models\Covid{
  * @method static \Illuminate\Database\Eloquent\Builder|Cluster whereState($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Cluster whereStatus($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Cluster whereTests($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Cluster whereUpdatedAt($value)
  */
 	class Cluster extends \Eloquent {}
 }
@@ -147,13 +161,18 @@ namespace App\Models\Covid{
  * @property string $date
  * @property int $deaths_new
  * @property int|null $deaths_new_cumulative
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @method static \Illuminate\Database\Eloquent\Builder|DeathsMalaysia latestOne()
  * @method static \Illuminate\Database\Eloquent\Builder|DeathsMalaysia newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|DeathsMalaysia newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|DeathsMalaysia query()
+ * @method static \Illuminate\Database\Eloquent\Builder|DeathsMalaysia whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|DeathsMalaysia whereDate($value)
  * @method static \Illuminate\Database\Eloquent\Builder|DeathsMalaysia whereDeathsNew($value)
  * @method static \Illuminate\Database\Eloquent\Builder|DeathsMalaysia whereDeathsNewCumulative($value)
  * @method static \Illuminate\Database\Eloquent\Builder|DeathsMalaysia whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|DeathsMalaysia whereUpdatedAt($value)
  */
 	class DeathsMalaysia extends \Eloquent {}
 }
@@ -167,14 +186,19 @@ namespace App\Models\Covid{
  * @property string $state
  * @property int $deaths_new
  * @property int|null $deaths_commutative
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @method static \Illuminate\Database\Eloquent\Builder|DeathsState latestOne()
  * @method static \Illuminate\Database\Eloquent\Builder|DeathsState newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|DeathsState newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|DeathsState query()
+ * @method static \Illuminate\Database\Eloquent\Builder|DeathsState whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|DeathsState whereDate($value)
  * @method static \Illuminate\Database\Eloquent\Builder|DeathsState whereDeathsCommutative($value)
  * @method static \Illuminate\Database\Eloquent\Builder|DeathsState whereDeathsNew($value)
  * @method static \Illuminate\Database\Eloquent\Builder|DeathsState whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|DeathsState whereState($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|DeathsState whereUpdatedAt($value)
  */
 	class DeathsState extends \Eloquent {}
 }
@@ -197,6 +221,8 @@ namespace App\Models\Covid{
  * @property int $hosp_covid
  * @property int $hosp_pui
  * @property int $hosp_noncovid
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
  * @method static \Illuminate\Database\Eloquent\Builder|Hospital newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Hospital newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Hospital query()
@@ -205,6 +231,7 @@ namespace App\Models\Covid{
  * @method static \Illuminate\Database\Eloquent\Builder|Hospital whereAdmittedTotal($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Hospital whereBeds($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Hospital whereBedsNoncrit($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Hospital whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Hospital whereDate($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Hospital whereDischargedCovid($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Hospital whereDischargedPui($value)
@@ -214,6 +241,7 @@ namespace App\Models\Covid{
  * @method static \Illuminate\Database\Eloquent\Builder|Hospital whereHospPui($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Hospital whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Hospital whereState($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Hospital whereUpdatedAt($value)
  */
 	class Hospital extends \Eloquent {}
 }
@@ -237,6 +265,9 @@ namespace App\Models\Covid{
  * @property int $vent_covid
  * @property int $vent_pui
  * @property int $vent_noncovid
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @method static \Illuminate\Database\Eloquent\Builder|ICU latestOne()
  * @method static \Illuminate\Database\Eloquent\Builder|ICU newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|ICU newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|ICU query()
@@ -244,12 +275,14 @@ namespace App\Models\Covid{
  * @method static \Illuminate\Database\Eloquent\Builder|ICU whereBedIcuCovid($value)
  * @method static \Illuminate\Database\Eloquent\Builder|ICU whereBedIcuRep($value)
  * @method static \Illuminate\Database\Eloquent\Builder|ICU whereBedIcuTotal($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|ICU whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|ICU whereDate($value)
  * @method static \Illuminate\Database\Eloquent\Builder|ICU whereIcuCovid($value)
  * @method static \Illuminate\Database\Eloquent\Builder|ICU whereIcuNoncovid($value)
  * @method static \Illuminate\Database\Eloquent\Builder|ICU whereIcuPui($value)
  * @method static \Illuminate\Database\Eloquent\Builder|ICU whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|ICU whereState($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|ICU whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|ICU whereVent($value)
  * @method static \Illuminate\Database\Eloquent\Builder|ICU whereVentCovid($value)
  * @method static \Illuminate\Database\Eloquent\Builder|ICU whereVentNoncovid($value)
@@ -276,6 +309,8 @@ namespace App\Models\Covid{
  * @property int $pkrc_covid
  * @property int $pkrc_pui
  * @property int $pkrc_noncovid
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
  * @method static \Illuminate\Database\Eloquent\Builder|PKRC newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|PKRC newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|PKRC query()
@@ -283,6 +318,7 @@ namespace App\Models\Covid{
  * @method static \Illuminate\Database\Eloquent\Builder|PKRC whereAdmittedPui($value)
  * @method static \Illuminate\Database\Eloquent\Builder|PKRC whereAdmittedTotal($value)
  * @method static \Illuminate\Database\Eloquent\Builder|PKRC whereBeds($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|PKRC whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|PKRC whereDate($value)
  * @method static \Illuminate\Database\Eloquent\Builder|PKRC whereDischargeCovid($value)
  * @method static \Illuminate\Database\Eloquent\Builder|PKRC whereDischargePui($value)
@@ -292,6 +328,7 @@ namespace App\Models\Covid{
  * @method static \Illuminate\Database\Eloquent\Builder|PKRC wherePkrcNoncovid($value)
  * @method static \Illuminate\Database\Eloquent\Builder|PKRC wherePkrcPui($value)
  * @method static \Illuminate\Database\Eloquent\Builder|PKRC whereState($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|PKRC whereUpdatedAt($value)
  */
 	class PKRC extends \Eloquent {}
 }
@@ -306,15 +343,19 @@ namespace App\Models\Covid{
  * @property int $pop
  * @property int $pop_18
  * @property int $pop_60
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
  * @method static \Illuminate\Database\Eloquent\Builder|Population newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Population newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Population query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Population whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Population whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Population whereIdxs($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Population wherePop($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Population wherePop18($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Population wherePop60($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Population whereState($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Population whereUpdatedAt($value)
  */
 	class Population extends \Eloquent {}
 }
@@ -327,13 +368,18 @@ namespace App\Models\Covid{
  * @property string $date
  * @property int $rtk-ag
  * @property int $pcr
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @method static \Illuminate\Database\Eloquent\Builder|TestMalaysia latestOne()
  * @method static \Illuminate\Database\Eloquent\Builder|TestMalaysia newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|TestMalaysia newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|TestMalaysia query()
+ * @method static \Illuminate\Database\Eloquent\Builder|TestMalaysia whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|TestMalaysia whereDate($value)
  * @method static \Illuminate\Database\Eloquent\Builder|TestMalaysia whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|TestMalaysia wherePcr($value)
  * @method static \Illuminate\Database\Eloquent\Builder|TestMalaysia whereRtkAg($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|TestMalaysia whereUpdatedAt($value)
  */
 	class TestMalaysia extends \Eloquent {}
 }
