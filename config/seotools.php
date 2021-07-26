@@ -9,9 +9,9 @@ return [
          * The default configurations to be used by the meta generator.
          */
         'defaults'       => [
-            'title'        => "CCK's Blog", // set false to total remove
+            'title'        => "CCK", // set false to total remove
             'titleBefore'  => true, // Put defaults.title before page title, like 'It's Over 9000! - Dashboard'
-            'description'  => "Ching Cheng Kang's Personal Blog and also act as his own knowledge base ! (He is a forgetful person)", // set false to total remove
+            'description'  => "Ching Cheng Kang's Personal Website and also act as his own knowledge base ! (He is a forgetful person)", // set false to total remove
             'separator'    => ' - ',
             'keywords'     => ['chengkangzai','Ching Cheng Kang','Cheng Kang','Malaysia Laravel Developer'],
             'canonical'    => null, // Set null for using Url::current(), set false to total remove
@@ -36,8 +36,8 @@ return [
          * The default configurations to be used by the opengraph generator.
          */
         'defaults' => [
-            'title'       => "CCK's Blog", // set false to total remove
-            'description' => "Ching Cheng Kang's Personal Blog and also act as his own knowledge base ! (He is a forgetful person)", // set false to total remove
+            'title'       => "CCK", // set false to total remove
+            'description' => "Ching Cheng Kang's Personal Website and also act as his own knowledge base ! (He is a forgetful person)", // set false to total remove
             'url'         => null, // Set null for using Url::current(), set false to total remove
             'type'        => false,
             'site_name'   => false,
@@ -58,8 +58,8 @@ return [
          * The default configurations to be used by the json-ld generator.
          */
         'defaults' => [
-            'title'       => "CCK's Blog", // set false to total remove
-            'description' => "Ching Cheng Kang's Personal Blog and also act as his own knowledge base ! (He is a forgetful person)", // set false to total remove
+            'title'       => "CCK ", // set false to total remove
+            'description' => "Ching Cheng Kang's Personal Website and also act as his own knowledge base ! (He is a forgetful person)", // set false to total remove
             'url'         => false, // Set null for using Url::current(), set false to total remove
             'type'        => 'WebPage',
             'images'      => [Config('app.url').'/src/bighead.jpeg'],
