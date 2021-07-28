@@ -2,6 +2,7 @@
 
 namespace App\Models\Covid;
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -44,5 +45,8 @@ class Hospital extends Model
         "W.P. Putrajaya" => "W.P. Putrajaya",
     ];
 
-
+    public function scopeLatestOne(Builder $query): Builder
+    {
+        return $query->orderByDesc('date')->take(16)->orderBy('state');
+    }
 }

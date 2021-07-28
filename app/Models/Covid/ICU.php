@@ -51,6 +51,6 @@ class ICU extends Model
 
     public function scopeLatestOne(Builder $query): Builder
     {
-        return $query->orderByDesc('date')->take(16);
+        return $query->orderByDesc('date')->take(16)->orderBy('state');
     }
 }
