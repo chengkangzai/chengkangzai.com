@@ -5,6 +5,7 @@ use App\Http\Controllers\ImageController;
 use App\Http\Controllers\LocaleController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\PublicIndexController;
+use App\Http\Controllers\PublicPandemicController;
 use App\Http\Controllers\PublicPostCommentController;
 use App\Http\Controllers\PublicPostController;
 use App\Http\Controllers\TagController;
@@ -33,6 +34,9 @@ Route::group(['as' => 'public.'], function () {
     Route::group(['prefix' => 'posts', 'as' => 'posts.'], function () {
         Route::get('/', [PublicPostController::class, 'index'])->name('index');
         Route::get('{post:slug}', [PublicPostController::class, 'show'])->name('show');
+    });
+    Route::group(['prefix' => 'pandemic', 'as' => 'pandemic.'], function () {
+        Route::get('/', [PublicPandemicController::class, 'index'])->name('index');
     });
     Route::resource('posts.comments', PublicPostCommentController::class)->only(['store']);
 });

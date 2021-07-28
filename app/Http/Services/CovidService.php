@@ -4,280 +4,82 @@
 namespace App\Http\Services;
 
 
+use App\Models\Covid\CasesMalaysia;
 use App\Models\Covid\CasesState;
+use App\Models\Covid\DeathsMalaysia;
 use App\Models\Covid\DeathsState;
-use Http;
+use App\Models\Covid\Hospital;
+use App\Models\Covid\ICU;
+use App\Models\Covid\PKRC;
+use App\Models\Covid\Population;
 use Illuminate\Support\Collection;
 
 class CovidService
 {
 
-    const url = [
-        'CASES_MALAYSIA' => 'https://raw.githubusercontent.com/MoH-Malaysia/covid19-public/main/epidemic/cases_malaysia.csv',
-        'CASES_STATE' => 'https://raw.githubusercontent.com/MoH-Malaysia/covid19-public/main/epidemic/cases_state.csv',
-        'DEATH_MALAYSIA' => 'https://raw.githubusercontent.com/MoH-Malaysia/covid19-public/main/epidemic/deaths_malaysia.csv',
-        'DEATH_STATE' => 'https://raw.githubusercontent.com/MoH-Malaysia/covid19-public/main/epidemic/cases_state.csv',
-        'TEST_MALAYSIA' => 'https://raw.githubusercontent.com/MoH-Malaysia/covid19-public/main/epidemic/tests_malaysia.csv',
-        'CLUSTER' => 'https://raw.githubusercontent.com/MoH-Malaysia/covid19-public/main/epidemic/clusters.csv',
-        'HOSPITAL' => 'https://raw.githubusercontent.com/MoH-Malaysia/covid19-public/main/epidemic/hospital.csv',
-        'ICU' => 'https://raw.githubusercontent.com/MoH-Malaysia/covid19-public/main/epidemic/icu.csv',
-        'PKRC' => 'https://raw.githubusercontent.com/MoH-Malaysia/covid19-public/main/epidemic/pkrc.csv',
-        'POPULATION' => 'https://raw.githubusercontent.com/MoH-Malaysia/covid19-public/main/static/population.csv',
-    ];
-
-    public function getCasesMalaysia(): Collection
+    public function __construct()
     {
-        $cum = 0;
-        return collect(explode(PHP_EOL, Http::get(self::url['CASES_MALAYSIA'])))
-            ->slice(1, -1)
-            ->map(function ($record) use ($cum) {
-                $dailyCase = explode(',', $record);
-                $new_cases = (!isset($dailyCase[1]) || $dailyCase[1] == '') ? 0 : $dailyCase[1];
-                $cum = $cum + $new_cases;
-                return [
-                    'date' => $dailyCase[0],
-                    'cases_new' => $new_cases,
-                    'cluster_import' => (!isset($dailyCase[2]) || $dailyCase[2] == '') ? 0 : $dailyCase[2],
-                    'cluster_religious' => (!isset($dailyCase[3]) || $dailyCase[3] == '') ? 0 : $dailyCase[3],
-                    'cluster_community' => (!isset($dailyCase[4]) || $dailyCase[4] == '') ? 0 : $dailyCase[4],
-                    'cluster_highRisk' => (!isset($dailyCase[5]) || $dailyCase[5] == '') ? 0 : $dailyCase[5],
-                    'cluster_education' => (!isset($dailyCase[6]) || $dailyCase[6] == '') ? 0 : $dailyCase[6],
-                    'cluster_detentionCentre' => (!isset($dailyCase[7]) || $dailyCase[7] == '') ? 0 : $dailyCase[7],
-                    'cluster_workplace' => (!isset($dailyCase[8]) || $dailyCase[8] == '') ? 0 : $dailyCase[8],
-                    'cases_cumulative' => $cum,
-                    'created_at' => now(),
-                    'updated_at' => now(),
-                ];
-            });
-
+        $this->caseMalaysia = CasesMalaysia::latestOne()->get()->first();
+        $this->deathMalaysia = DeathsMalaysia::latestOne()->get()->first();
+        $this->caseState = CasesState::latestOne()->get(['state', 'cases_new', 'cases_cumulative']);
+        $this->deathState = DeathsState::latestOne()->get(['state', 'deaths_new', 'deaths_commutative']);
+        $this->population = Population::all(['state', 'pop']);
+        $this->ICU = ICU::latestOne()->get();
+        $this->hospital = Hospital::latestOne()->get()->dd();
+        $this->pkrc = PKRC::latestOne()->get();
     }
 
-    public function getCasesState(): Collection
+    public function getDashboardValue(): Collection
     {
-        return collect(explode(PHP_EOL, Http::get(self::url['CASES_STATE'])))
-            ->slice(1, -1)
-            ->map(function ($record) {
-                $dailyCase = explode(',', $record);
-                $state = (!isset($dailyCase[1]) || $dailyCase[1] == '') ? 0 : $dailyCase[1];
-                $new_cases = (!isset($dailyCase[2]) || $dailyCase[2] == '') ? 0 : $dailyCase[2];
-                return [
-                    'date' => $dailyCase[0],
-                    'state' => $state,
-                    'cases_new' => $new_cases,
-                    'created_at' => now(),
-                    'updated_at' => now(),
-                ];
-            });
+        $collect = collect();
+
+        $collect->new_cases = $this->caseMalaysia->cases_new;
+        $collect->new_cases_cum = $this->caseMalaysia->cases_cumulative;
+        $collect->new_cases_updated_at = $this->caseMalaysia->date;
+        $collect->new_death = $this->deathMalaysia->deaths_new;
+        $collect->new_death_cum = $this->deathMalaysia->deaths_new_cumulative;
+        $collect->new_death_updated_at = $this->deathMalaysia->date;
+
+//        $collect->active_case = $this->activeCase();
+//        $collect->recovered_case = $this->recoveredCase();
+//        $collect->in_treatment = $this->inTreatment();
+        $collect->icu_malaysia = $this->ICU->pluck('icu_covid', 'state')->sum();
+        $collect->ventilator_malaysia = $this->ICU->pluck('vent_covid')->sum();
+        $collect->icu_malaysia_updated_at = $this->ICU->pluck('date')->first();
+
+        $collect->new_cases_state = $this->caseState->pluck('cases_new', 'state');
+        $collect->new_cases_state_cum = $this->caseState->pluck('cases_cumulative', 'state');
+        $collect->newDeath_state = $this->deathState->pluck('deaths_new', 'state');
+        $collect->newDeath_state_cum = $this->deathState->pluck('deaths_commutative', 'state');
+
+//        $collect->icu_covid;
+
+
+        $collect->population_state = $this->population->pluck('pop', 'state');
+        $collect->pop = $this->population->where('idxs', 0)->pluck('pop')->first();
+
+        return $collect;
     }
 
-    public function getDeathMalaysia()
+    private function activeCase()
     {
-        $cum = 0;
-        return collect(explode(PHP_EOL, Http::get(self::url['DEATH_MALAYSIA'])))
-            ->slice(1, -1)
-            ->map(function ($record) use ($cum) {
-                $dailyCase = explode(',', $record);
-                $newDeath = (!isset($dailyCase[1]) || $dailyCase[1] == '') ? 0 : $dailyCase[1];
-                $cum = $cum + $newDeath;
-                return [
-                    'date' => $dailyCase[0],
-                    'deaths_new' => $newDeath,
-                    'deaths_new_cumulative' => $cum,
-                    'created_at' => now(),
-                    'updated_at' => now(),
-                ];
-            });
+        //Need to find those are not identify in cluster
+//        $clusterCount = Cluster::select('cases_active')->where('status', 'active')->get()->pluck('cases_active')->sum();
+//        $hospitalCount = Hospital::LatestOne()->select('hosp_covid')->get()->pluck('hosp_covid')->sum();
+//        $pkrcCount = PKRC::LatestOne()->get()->map(fn($record) => $record->pkrc_covid + $record->pkrc_pui)->sum();
+//        $icuCount = $this->ICU->map(fn($record) => $record->icu_covid + $record->vent_covid)->sum();
+//        return $clusterCount + $hospitalCount + $pkrcCount + $icuCount;
     }
 
-    public function getDeathState(): Collection
+    private function recoveredCase(): int
     {
-        return collect(explode(PHP_EOL, Http::get(self::url['DEATH_STATE'])))
-            ->slice(1, -1)
-            ->map(function ($record) {
-                $dailyCase = explode(',', $record);
-                return [
-                    'date' => $dailyCase[0],
-                    'state' => (!isset($dailyCase[1]) || $dailyCase[1] == '') ? 0 : $dailyCase[1],
-                    'deaths_new' => (!isset($dailyCase[2]) || $dailyCase[2] == '') ? 0 : $dailyCase[2],
-                    'created_at' => now(),
-                    'updated_at' => now(),
-                ];
-            });
+        return 0; //TODO
     }
 
-    public function getTestMalaysia()
+    private function inTreatment(): int
     {
-        return collect(explode(PHP_EOL, Http::get(self::url['TEST_MALAYSIA'])))
-            ->slice(1, -1)
-            ->map(function ($record) {
-                $dailyCase = explode(',', $record);
-                return [
-                    'date' => $dailyCase[0],
-                    'rtk-ag' => (!isset($dailyCase[1]) || $dailyCase[1] == '') ? 0 : $dailyCase[1],
-                    'pcr' => (!isset($dailyCase[2]) || $dailyCase[2] == '') ? 0 : $dailyCase[2],
-                    'created_at' => now(),
-                    'updated_at' => now(),
-                ];
-            });
-    }
-
-    public function getCluster(): Collection
-    {
-        return collect(explode(PHP_EOL, Http::get(self::url['CLUSTER'])))
-            ->slice(1, -1)
-            ->map(function ($record) {
-                $dailyCase = str_getcsv($record);
-                return [
-                    'cluster' => $dailyCase[0],
-                    'state' => $dailyCase[1],
-                    'district' => $dailyCase[2] ?? 'null',
-                    'date_announced' => $dailyCase[3] ?? null,
-                    'date_last_onset' => $dailyCase[4] ?? null,
-                    'category' => $dailyCase[5] ?? 'null',
-                    'status' => (!isset($dailyCase[6]) || $dailyCase[6] == '') ? 0 : $dailyCase[6],
-                    'cases_new' => (!isset($dailyCase[7]) || $dailyCase[7] == '') ? 0 : $dailyCase[7],
-                    'cases_total' => (!isset($dailyCase[8]) || $dailyCase[8] == '') ? 0 : $dailyCase[8],
-                    'cases_active' => (!isset($dailyCase[9]) || $dailyCase[9] == '') ? 0 : $dailyCase[9],
-                    'tests' => (!isset($dailyCase[10]) || $dailyCase[10] == '') ? 0 : $dailyCase[10],
-                    'icu' => (!isset($dailyCase[11]) || $dailyCase[11] == '') ? 0 : $dailyCase[11],
-                    'deaths' => (!isset($dailyCase[12]) || $dailyCase[12] == '') ? 0 : $dailyCase[12],
-                    'recovered' => (!isset($dailyCase[13]) || $dailyCase[13] == '') ? 0 : $dailyCase[13],
-                    'created_at' => now(),
-                    'updated_at' => now(),
-                ];
-            })
-            ->filter(function ($line) {
-                return count($line) == 16; // Purge data that dont have proper formatting
-            })
-            ->filter(function ($line) {
-                return explode(' ', $line['cluster'])[0] == 'Kluster'; //Get Only With Prefix Cluster
-            });
-    }
-
-    public function getHospitals(): Collection
-    {
-        return collect(explode(PHP_EOL, Http::get(self::url['HOSPITAL'])))
-            ->slice(1, -1)
-            ->map(function ($record) {
-                $dailyCase = explode(',', $record);
-                return [
-                    'date' => $dailyCase[0],
-                    'state' => $dailyCase[1],
-                    'beds' => (!isset($dailyCase[2]) || $dailyCase[2] == '') ? 0 : $dailyCase[2],
-                    'beds_noncrit' => (!isset($dailyCase[3]) || $dailyCase[3] == '') ? 0 : $dailyCase[3],
-                    'admitted_pui' => (!isset($dailyCase[4]) || $dailyCase[4] == '') ? 0 : $dailyCase[4],
-                    'admitted_covid' => (!isset($dailyCase[5]) || $dailyCase[5] == '') ? 0 : $dailyCase[5],
-                    'admitted_total' => (!isset($dailyCase[6]) || $dailyCase[6] == '') ? 0 : $dailyCase[6],
-                    'discharged_pui' => (!isset($dailyCase[7]) || $dailyCase[7] == '') ? 0 : $dailyCase[7],
-                    'discharged_covid' => (!isset($dailyCase[8]) || $dailyCase[8] == '') ? 0 : $dailyCase[8],
-                    'discharged_total' => (!isset($dailyCase[9]) || $dailyCase[9] == '') ? 0 : $dailyCase[9],
-                    'hosp_covid' => (!isset($dailyCase[10]) || $dailyCase[10] == '') ? 0 : $dailyCase[10],
-                    'hosp_pui' => (!isset($dailyCase[11]) || $dailyCase[11] == '') ? 0 : $dailyCase[11],
-                    'hosp_noncovid' => (!isset($dailyCase[12]) || $dailyCase[12] == '') ? 0 : $dailyCase[12],
-                    'created_at' => now(),
-                    'updated_at' => now(),
-                ];
-            });
-    }
-
-    public function getICU(): Collection
-    {
-        return collect(explode(PHP_EOL, Http::get(self::url['ICU'])))
-            ->slice(1, -1)
-            ->map(function ($record) {
-                $dailyCase = explode(',', $record);
-                return [
-                    'date' => $dailyCase[0],
-                    'state' => $dailyCase[1],
-                    'bed_icu' => (!isset($dailyCase[2]) || $dailyCase[2] == '') ? 0 : $dailyCase[2],
-                    'bed_icu_rep' => (!isset($dailyCase[3]) || $dailyCase[3] == '') ? 0 : $dailyCase[3],
-                    'bed_icu_total' => (!isset($dailyCase[4]) || $dailyCase[4] == '') ? 0 : $dailyCase[4],
-                    'bed_icu_covid' => (!isset($dailyCase[5]) || $dailyCase[5] == '') ? 0 : $dailyCase[5],
-                    'vent' => (!isset($dailyCase[6]) || $dailyCase[6] == '') ? 0 : $dailyCase[6],
-                    'vent_port' => (!isset($dailyCase[7]) || $dailyCase[7] == '') ? 0 : $dailyCase[7],
-                    'icu_covid' => (!isset($dailyCase[8]) || $dailyCase[8] == '') ? 0 : $dailyCase[8],
-                    'icu_pui' => (!isset($dailyCase[9]) || $dailyCase[9] == '') ? 0 : $dailyCase[9],
-                    'icu_noncovid' => (!isset($dailyCase[10]) || $dailyCase[10] == '') ? 0 : $dailyCase[10],
-                    'vent_covid' => (!isset($dailyCase[11]) || $dailyCase[11] == '') ? 0 : $dailyCase[11],
-                    'vent_pui' => (!isset($dailyCase[12]) || $dailyCase[12] == '') ? 0 : $dailyCase[12],
-                    'vent_noncovid' => (!isset($dailyCase[13]) || $dailyCase[13] == '') ? 0 : $dailyCase[13],
-                    'created_at' => now(),
-                    'updated_at' => now(),
-                ];
-            });
-    }
-
-    public function getPKRC(): Collection
-    {
-        return collect(explode(PHP_EOL, Http::get(self::url['PKRC'])))
-            ->slice(1, -1)
-            ->map(function ($record) {
-                $dailyCase = explode(',', $record);
-                return [
-                    'date' => $dailyCase[0],
-                    'state' => $dailyCase[1],
-                    'beds' => (!isset($dailyCase[2]) || $dailyCase[2] == '') ? 0 : $dailyCase[2],
-                    'admitted_pui' => (!isset($dailyCase[3]) || $dailyCase[3] == '') ? 0 : $dailyCase[3],
-                    'admitted_covid' => (!isset($dailyCase[4]) || $dailyCase[4] == '') ? 0 : $dailyCase[4],
-                    'admitted_total' => (!isset($dailyCase[5]) || $dailyCase[5] == '') ? 0 : $dailyCase[5],
-                    'discharge_pui' => (!isset($dailyCase[6]) || $dailyCase[6] == '') ? 0 : $dailyCase[6],
-                    'discharge_covid' => (!isset($dailyCase[7]) || $dailyCase[7] == '') ? 0 : $dailyCase[7],
-                    'discharge_total' => (!isset($dailyCase[8]) || $dailyCase[8] == '') ? 0 : $dailyCase[8],
-                    'pkrc_covid' => (!isset($dailyCase[9]) || $dailyCase[9] == '') ? 0 : $dailyCase[9],
-                    'pkrc_pui' => (!isset($dailyCase[10]) || $dailyCase[10] == '') ? 0 : $dailyCase[10],
-                    'pkrc_noncovid' => (!isset($dailyCase[11]) || $dailyCase[11] == '') ? 0 : $dailyCase[11],
-                    'created_at' => now(),
-                    'updated_at' => now(),
-                ];
-            });
-    }
-
-    public function getMalaysiaPopulation(): Collection
-    {
-        return collect(explode(PHP_EOL, Http::get(self::url['POPULATION'])))
-            ->slice(1, -1)
-            ->map(function ($record) {
-                $dailyCase = explode(',', $record);
-                return [
-                    'state' => $dailyCase[0],
-                    'idxs' => (!isset($dailyCase[1]) || $dailyCase[1] == '') ? 0 : $dailyCase[1],
-                    'pop' => (!isset($dailyCase[2]) || $dailyCase[2] == '') ? 0 : $dailyCase[2],
-                    'pop_18' => (!isset($dailyCase[3]) || $dailyCase[3] == '') ? 0 : $dailyCase[3],
-                    'pop_60' => (!isset($dailyCase[4]) || $dailyCase[4] == '') ? 0 : $dailyCase[4],
-                    'created_at' => now(),
-                    'updated_at' => now(),
-                ];
-            });
+        return 0; //TODO
     }
 
 
-    public function updateCumulativeCasesState()
-    {
-        $states = CasesState::distinct()->get('state')->toArray();
-
-        foreach ($states as $state) {
-            $cum = 0;
-            $cases = CasesState::whereState($state)->get();
-            foreach ($cases as $case) {
-                $cum = $cum + $case->cases_new;
-                $case->cases_cumulative = $cum;
-                $case->push();
-            }
-        }
-    }
-
-    public function updateCumulativeDeathState()
-    {
-        $states = DeathsState::distinct()->get('state')->toArray();
-
-        foreach ($states as $state) {
-            $cum = 0;
-            $cases = DeathsState::whereState($state)->get();
-            foreach ($cases as $case) {
-                $cum = $cum + $case->deaths_new;
-                $case->deaths_commutative = $cum;
-                $case->push();
-            }
-        }
-    }
 }
