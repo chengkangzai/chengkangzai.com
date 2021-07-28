@@ -81,7 +81,7 @@
         </nav>
     </div>
 </header>
-<main class="container w-full mx-auto text-center bg-white dark:bg-blackc">
+<main class="container w-full mx-auto text-center bg-white dark:bg-black">
     @yield('content')
 </main>
 
