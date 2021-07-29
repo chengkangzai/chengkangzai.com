@@ -107,6 +107,7 @@ class ImportCOVIDDataFromGithub extends Command
                 $this->importMalaysiaPopulation();
             });
 
+            Cache::clear();
             if (app()->environment('production')) {
                 app(WebHookService::class)->notifyInSpam('Covid Data Successfully Inserted', WebHookService::COLOR['GREEN']);
             }
