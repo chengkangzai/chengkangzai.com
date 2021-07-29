@@ -9,7 +9,7 @@ class PublicPandemicController extends Controller
 {
     public function index()
     {
-        SEO::setTitle('COVID Dashboard');
+        SEO::setTitle(__('COVID Dashboard'));
         $dashboardValue = app(CovidService::class)->getDashboardValue();
 
         return view('public.covid.index', compact('dashboardValue'));
