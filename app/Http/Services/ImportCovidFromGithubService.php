@@ -11,18 +11,19 @@ use Illuminate\Support\Collection;
 
 class ImportCovidFromGithubService
 {
+    const baseUrl = 'https://raw.githubusercontent.com/MoH-Malaysia/covid19-public/main';
 
     const url = [
-        'CASES_MALAYSIA' => 'https://raw.githubusercontent.com/MoH-Malaysia/covid19-public/main/epidemic/cases_malaysia.csv',
-        'CASES_STATE' => 'https://raw.githubusercontent.com/MoH-Malaysia/covid19-public/main/epidemic/cases_state.csv',
-        'DEATH_MALAYSIA' => 'https://raw.githubusercontent.com/MoH-Malaysia/covid19-public/main/epidemic/deaths_malaysia.csv',
-        'DEATH_STATE' => 'https://raw.githubusercontent.com/MoH-Malaysia/covid19-public/main/epidemic/deaths_state.csv',
-        'TEST_MALAYSIA' => 'https://raw.githubusercontent.com/MoH-Malaysia/covid19-public/main/epidemic/tests_malaysia.csv',
-        'CLUSTER' => 'https://raw.githubusercontent.com/MoH-Malaysia/covid19-public/main/epidemic/clusters.csv',
-        'HOSPITAL' => 'https://raw.githubusercontent.com/MoH-Malaysia/covid19-public/main/epidemic/hospital.csv',
-        'ICU' => 'https://raw.githubusercontent.com/MoH-Malaysia/covid19-public/main/epidemic/icu.csv',
-        'PKRC' => 'https://raw.githubusercontent.com/MoH-Malaysia/covid19-public/main/epidemic/pkrc.csv',
-        'POPULATION' => 'https://raw.githubusercontent.com/MoH-Malaysia/covid19-public/main/static/population.csv',
+        'CASES_MALAYSIA' => self::baseUrl . '/epidemic/cases_malaysia.csv',
+        'CASES_STATE' => self::baseUrl . '/epidemic/cases_state.csv',
+        'DEATH_MALAYSIA' => self::baseUrl . '/epidemic/deaths_malaysia.csv',
+        'DEATH_STATE' => self::baseUrl . '/epidemic/deaths_state.csv',
+        'TEST_MALAYSIA' => self::baseUrl . '/epidemic/tests_malaysia.csv',
+        'CLUSTER' => self::baseUrl . '/epidemic/clusters.csv',
+        'HOSPITAL' => self::baseUrl . '/epidemic/hospital.csv',
+        'ICU' => self::baseUrl . '/epidemic/icu.csv',
+        'PKRC' => self::baseUrl . '/epidemic/pkrc.csv',
+        'POPULATION' => self::baseUrl . '/static/population.csv',
     ];
 
     public function __construct()
