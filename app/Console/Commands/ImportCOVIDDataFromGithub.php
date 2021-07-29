@@ -14,6 +14,8 @@ use App\Models\Covid\ICU;
 use App\Models\Covid\PKRC;
 use App\Models\Covid\Population;
 use App\Models\Covid\TestMalaysia;
+use Cache;
+use Carbon\Carbon;
 use DB;
 use Exception;
 use Illuminate\Console\Command;
@@ -109,15 +111,15 @@ class ImportCOVIDDataFromGithub extends Command
 
             Cache::clear();
             if (app()->environment('production')) {
-                app(WebHookService::class)->notifyInSpam('Covid Data Successfully Inserted', WebHookService::COLOR['GREEN']);
+                app(WebHookService::class)->notifyInSpam(Carbon::now() . ' : Covid Data Successfully Inserted', WebHookService::COLOR['GREEN']);
             }
         } catch (Exception $exception) {
             if (app()->environment('production')) {
-                app(WebHookService::class)->notifyInGeneral('DAMN STH went WRONG : \n\n' . $exception->getMessage(), WebHookService::COLOR['RED']);
+                app(WebHookService::class)->notifyInGeneral(Carbon::now() . ' : DAMN STH went WRONG : \n\n' . $exception->getMessage(), WebHookService::COLOR['RED']);
             }
         } catch (Throwable $exception) {
             if (app()->environment('production')) {
-                app(WebHookService::class)->notifyInGeneral('DAMN STH went WRONG : \n\n' . $exception->getMessage(), WebHookService::COLOR['RED']);
+                app(WebHookService::class)->notifyInGeneral(Carbon::now() . ' : DAMN STH went WRONG : \n\n' . $exception->getMessage(), WebHookService::COLOR['RED']);
             }
         }
 
