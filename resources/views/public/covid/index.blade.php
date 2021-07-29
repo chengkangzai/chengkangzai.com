@@ -31,7 +31,7 @@
                     : {{\Carbon\Carbon::parse($dashboardValue->updated_at->cluster)->toDateString()}}
                 </li>
             </ul>
-            <p class="font-bold"> * per population</p>
+            <p class="font-bold"> {{__('* per population')}}</p>
         </div>
     </div>
     <div class="mt-2 rounded-3xl">
@@ -58,8 +58,8 @@
                 <h2 class="text-2xl">{{__('Tested')}}</h2>
                 <p class="text-yellow-500 font-bold text-5xl">{{number_format($dashboardValue->new_test)}}</p>
                 <span class="font-bold">
-                    {{__('Positive Rate : ')}}
-                    ({{round(($dashboardValue->new_cases / $dashboardValue->new_test)*100,2)}}%)
+                    {{__('Positive Rate')}}
+                    {{round(($dashboardValue->new_cases / $dashboardValue->new_test)*100,2)}}%
                 </span>
             </div>
 
@@ -130,7 +130,7 @@
                                     <div class="flex">
                                         <div class="ml-4">
                                             <div class="text-sm font-medium text-gray-900">
-                                                {{$state}}
+                                                {{__($state)}}
                                             </div>
                                         </div>
                                     </div>
@@ -241,7 +241,7 @@
                                     <div class="flex">
                                         <div class="ml-4">
                                             <div class="text-sm font-medium text-gray-900">
-                                                {{$state}}
+                                                {{__($state)}}
                                             </div>
                                         </div>
                                     </div>
