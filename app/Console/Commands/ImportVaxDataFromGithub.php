@@ -56,7 +56,7 @@ class ImportVaxDataFromGithub extends Command
     public function handle(): int
     {
         try {
-            DB::transaction(function () {
+//            DB::transaction(function () {
 
                 $this->line('');
                 $this->warn('Truncating DB');
@@ -77,7 +77,7 @@ class ImportVaxDataFromGithub extends Command
                 $this->line('');
                 $this->info('Importing Vax Reg Malaysia');
                 $this->importVaxRegMalaysia();
-            });
+//            });
         } catch (Exception $exception) {
             if (app()->environment('production')) {
                 app(WebHookService::class)->notifyInGeneral(Carbon::now() . ' : DAMN STH went WRONG during importing Vaccine : \n\n' . $exception->getMessage(), WebHookService::COLOR['RED']);
