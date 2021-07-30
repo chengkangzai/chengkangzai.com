@@ -14,6 +14,10 @@ use App\Models\Covid\ICU;
 use App\Models\Covid\PKRC;
 use App\Models\Covid\Population;
 use App\Models\Covid\TestMalaysia;
+use App\Models\Covid\VaxMalaysia;
+use App\Models\Covid\VaxRegMalaysia;
+use App\Models\Covid\VaxRegState;
+use App\Models\Covid\VaxState;
 use Illuminate\Support\Collection;
 
 class CovidService
@@ -21,17 +25,22 @@ class CovidService
 
     public function __construct()
     {
-        $this->caseMalaysia = cache()->remember('caseMalaysia', 60, fn() => CasesMalaysia::latestOne()->get()->first());
-        $this->deathMalaysia = cache()->remember('deathMalaysia', 60, fn() => DeathsMalaysia::latestOne()->get()->first());
-        $this->caseState = cache()->remember('caseState', 60, fn() => CasesState::latestOne()->get(['state', 'cases_new', 'cases_cumulative', 'date']));
-        $this->deathState = cache()->remember('deathState', 60, fn() => DeathsState::latestOne()->get(['state', 'deaths_new', 'deaths_commutative', 'date']));
-        $this->population = cache()->remember('population', 60, fn() => Population::all(['state', 'pop']));
-        $this->ICU = cache()->remember('ICU', 60, fn() => ICU::latestOne()->get(['date', 'state', 'icu_covid']));
-        $this->hospital = cache()->remember('hospital', 60, fn() => Hospital::latestOne()->get(['date', 'state', 'hosp_covid']));
-        $this->pkrc = cache()->remember('pkrc', 60, fn() => PKRC::latestOne()->get(['date', 'state', 'pkrc_covid']));
-        $this->testedMalaysia = cache()->remember('testedMalaysia', 60, fn() => TestMalaysia::latestOne()->get());
-        $this->cluster_count = cache()->remember('cluster_count', 60, fn() => Cluster::whereStatus('active')->count());
-        $this->cluster = cache()->remember('cluster', 60, fn() => Cluster::orderByDesc('id')->first());
+        $secondOfCache = 60;
+        $this->caseMalaysia = cache()->remember('caseMalaysia', $secondOfCache, fn() => CasesMalaysia::latestOne()->get()->first());
+        $this->deathMalaysia = cache()->remember('deathMalaysia', $secondOfCache, fn() => DeathsMalaysia::latestOne()->get()->first());
+        $this->caseState = cache()->remember('caseState', $secondOfCache, fn() => CasesState::latestOne()->get(['state', 'cases_new', 'cases_cumulative', 'date']));
+        $this->deathState = cache()->remember('deathState', $secondOfCache, fn() => DeathsState::latestOne()->get(['state', 'deaths_new', 'deaths_commutative', 'date']));
+        $this->population = cache()->remember('population', $secondOfCache, fn() => Population::all(['state', 'pop']));
+        $this->ICU = cache()->remember('ICU', $secondOfCache, fn() => ICU::latestOne()->get(['date', 'state', 'icu_covid']));
+        $this->hospital = cache()->remember('hospital', $secondOfCache, fn() => Hospital::latestOne()->get(['date', 'state', 'hosp_covid']));
+        $this->pkrc = cache()->remember('pkrc', $secondOfCache, fn() => PKRC::latestOne()->get(['date', 'state', 'pkrc_covid']));
+        $this->testedMalaysia = cache()->remember('testedMalaysia', $secondOfCache, fn() => TestMalaysia::latestOne()->get());
+        $this->cluster_count = cache()->remember('cluster_count', $secondOfCache, fn() => Cluster::whereStatus('active')->count());
+        $this->cluster = cache()->remember('cluster', $secondOfCache, fn() => Cluster::orderByDesc('id')->first());
+        $this->vaxMalaysia = cache()->remember('vaxMalaysia', $secondOfCache, fn() => VaxMalaysia::latestOne()->get());
+        $this->vaxState = cache()->remember('vaxState', $secondOfCache, fn() => VaxState::latestOne()->get());
+        $this->vaxRegState = cache()->remember('vaxRegState', $secondOfCache, fn() => VaxRegState::latestOne()->get());
+        $this->vaxRegMalaysia = cache()->remember('vaxRegMalaysia', $secondOfCache, fn() => VaxRegMalaysia::latestOne()->get());
     }
 
     public function getDashboardValue(): Collection
@@ -49,7 +58,9 @@ class CovidService
         $collect->newDeath_state_cum = $this->deathState->pluck('deaths_commutative', 'state');
 
         $collect->ICU = $this->ICU->pluck('icu_covid', 'state');
+//        $collect->bed_ICU= $this->ICU->pluck('beds_icu_covid','state');
         $collect->hospital = $this->hospital->pluck('hosp_covid', 'state');
+//        $collect->bed_hospital = $this->hospital->pluck('hosp_covid', 'state');
         $collect->PKRC = $this->pkrc->pluck('pkrc_covid', 'state');
 
         $collect->active_cluster_count = $this->cluster_count;
@@ -59,29 +70,26 @@ class CovidService
 
         $collect->new_test = $this->testedMalaysia->pluck('trk-ag')->sum() + $this->testedMalaysia->pluck('pcr')->sum();
 
+        $collect->vax_1st_daily = $this->vaxMalaysia->pluck('dose1_daily')->sum();
+        $collect->vax_2nd_daily = $this->vaxMalaysia->pluck('dose2_daily')->sum();
+
+        $collect->vax_1st_cumulative = $this->vaxMalaysia->pluck('dose1_cumul')->sum();
+        $collect->vax_2nd_cumulative = $this->vaxMalaysia->pluck('dose2_cumul')->sum();
+        $collect->vax_total_cumulative = $this->vaxMalaysia->pluck('total_cumul')->sum();
+
+        $collect->vax_state_1st = $this->vaxState->pluck('dose1_daily', 'state');
+        $collect->vax_state_1st_cum = $this->vaxState->pluck('dose1_cumul', 'state');
+        $collect->vax_state_2st = $this->vaxState->pluck('dose2_daily', 'state');
+        $collect->vax_state_2st_cum = $this->vaxState->pluck('dose2_cumul', 'state');
+        $collect->vax_state_cum = $this->vaxState->pluck('total_cumul', 'state');
+
+        $collect->vax_reg_malaysia = $this->vaxRegMalaysia->first()->total;
+        $collect->percentage_of_reg_malaysia = round(($this->vaxRegMalaysia->first()->total / $collect->pop) * 100);
+
         $collect->updated_at = $this->generateUpdatedAt();
         return $collect;
     }
 
-    private function activeCase()
-    {
-        //Need to find those are not identify in cluster
-//        $clusterCount = Cluster::select('cases_active')->where('status', 'active')->get()->pluck('cases_active')->sum();
-//        $hospitalCount = Hospital::LatestOne()->select('hosp_covid')->get()->pluck('hosp_covid')->sum();
-//        $pkrcCount = PKRC::LatestOne()->get()->map(fn($record) => $record->pkrc_covid + $record->pkrc_pui)->sum();
-//        $icuCount = $this->ICU->map(fn($record) => $record->icu_covid + $record->vent_covid)->sum();
-//        return $clusterCount + $hospitalCount + $pkrcCount + $icuCount;
-    }
-
-    private function recoveredCase(): int
-    {
-        return 0; //TODO
-    }
-
-    private function inTreatment(): int
-    {
-        return 0; //TODO
-    }
 
     private function generateUpdatedAt(): Collection
     {
@@ -93,6 +101,9 @@ class CovidService
         $collect->ICU = $this->ICU->first()->date;
         $collect->tested = $this->testedMalaysia->first()->date;
         $collect->cluster = $this->cluster->created_at;
+        $collect->vaxState = $this->vaxState->first()->date;
+        $collect->vaxMalaysia = $this->vaxMalaysia->first()->date;
+        $collect->vaxReg = $this->vaxRegMalaysia->first()->date;
         return $collect;
     }
 }
