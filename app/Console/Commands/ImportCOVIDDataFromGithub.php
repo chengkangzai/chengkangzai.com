@@ -29,7 +29,7 @@ class ImportCOVIDDataFromGithub extends Command
      *
      * @var string
      */
-    protected $signature = 'covid:import';
+    protected $signature = 'import:covid';
 
     /**
      * The console command description.
@@ -115,11 +115,11 @@ class ImportCOVIDDataFromGithub extends Command
             }
         } catch (Exception $exception) {
             if (app()->environment('production')) {
-                app(WebHookService::class)->notifyInGeneral(Carbon::now() . ' : DAMN STH went WRONG : \n\n' . $exception->getMessage(), WebHookService::COLOR['RED']);
+                app(WebHookService::class)->notifyInGeneral(Carbon::now() . ' : DAMN STH went WRONG during importing covid data: \n\n' . $exception->getMessage(), WebHookService::COLOR['RED']);
             }
         } catch (Throwable $exception) {
             if (app()->environment('production')) {
-                app(WebHookService::class)->notifyInGeneral(Carbon::now() . ' : DAMN STH went WRONG : \n\n' . $exception->getMessage(), WebHookService::COLOR['RED']);
+                app(WebHookService::class)->notifyInGeneral(Carbon::now() . ' : DAMN STH went WRONG during importing covid data: \n\n' . $exception->getMessage(), WebHookService::COLOR['RED']);
             }
         }
 

@@ -24,7 +24,8 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-         $schedule->command('covid:import')->hourly();
+         $schedule->command('import:covid')->hourly();
+         $schedule->command('import:vaccine')->hourly();
     }
 
     /**
