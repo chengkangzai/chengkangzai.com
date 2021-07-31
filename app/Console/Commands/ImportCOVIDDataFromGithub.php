@@ -4,17 +4,7 @@ namespace App\Console\Commands;
 
 use App\Http\Services\ImportCovidFromGithubService;
 use App\Http\Services\WebHookService;
-use App\Models\Covid\CasesMalaysia;
-use App\Models\Covid\CasesState;
-use App\Models\Covid\Cluster;
-use App\Models\Covid\DeathsMalaysia;
-use App\Models\Covid\DeathsState;
-use App\Models\Covid\Hospital;
-use App\Models\Covid\ICU;
-use App\Models\Covid\PKRC;
-use App\Models\Covid\Population;
-use App\Models\Covid\TestMalaysia;
-use Cache;
+ use Cache;
 use Carbon\Carbon;
 use DB;
 use Exception;
@@ -29,7 +19,7 @@ class ImportCOVIDDataFromGithub extends Command
      *
      * @var string
      */
-    protected $signature = 'import:covid';
+    protected $signature = 'import:covid {--force}';
 
     /**
      * The console command description.
@@ -63,51 +53,20 @@ class ImportCOVIDDataFromGithub extends Command
     public function handle(): int
     {
         try {
-//            DB::transaction(function () {
-                $this->line('');
-                $this->warn('Truncating DB');
+            if ($this->option('force')) {
+                $this->line('Truncating DB...');
                 $this->truncateDB();
-
-                $this->line('');
-                $this->info('importing.. CasesMalaysia');
-                $this->importCasesMalaysia();
-
-                $this->line('');
-                $this->info('importing.. CasesState');
-                $this->importCasesState();
-
-                $this->line('');
-                $this->info('importing.. DeathMalaysia');
-                $this->importDeathMalaysia();
-
-                $this->line('');
-                $this->info('importing.. DeathState');
-                $this->importDeathState();
-
-                $this->line('');
-                $this->info('importing.. TestMalaysia');
-                $this->importTestMalaysia();
-
-                $this->line('');
-                $this->info('importing.. Cluster');
-                $this->importCluster();
-
-                $this->line('');
-                $this->info('importing.. Hospitals');
-                $this->importHospitals();
-
-                $this->line('');
-                $this->info('importing.. ICU');
-                $this->importICU();
-
-                $this->line('');
-                $this->info('importing.. PKRC');
-                $this->importPKRC();
-
-                $this->line('');
-                $this->info('importing.. Population');
-                $this->importMalaysiaPopulation();
-//            });
+            }
+            $this->importCasesMalaysia();
+            $this->importCasesState();
+            $this->importDeathMalaysia();
+            $this->importDeathState();
+            $this->importTestMalaysia();
+            $this->importCluster();
+            $this->importHospitals();
+            $this->importICU();
+            $this->importPKRC();
+            $this->importMalaysiaPopulation();
 
             Cache::clear();
             if (app()->environment('production')) {
@@ -145,119 +104,213 @@ class ImportCOVIDDataFromGithub extends Command
     {
         $records = $this->covidService->getCasesMalaysia();
 
+        if (DB::table('cases_malaysia')->count() == $records->count()) {
+            $this->info('[CaseMalaysia] : ' . 'Not inject as the data is the same.');
+            return 0;
+        }
+
+        DB::table('cases_malaysia')->truncate();
+
+        $this->info('[CaseMalaysia] : ' . 'Injecting...');
+
         $this->withProgressBar($records, function ($records) {
-
-            CasesMalaysia::insert($records);
-
+            DB::table('cases_malaysia')->insert($records);
         });
-
+        $this->line('');
+        return 0;
     }
 
     public function importCasesState()
     {
         $records = $this->covidService->getCasesState();
 
+        if (DB::table('cases_states')->count() == $records->count()) {
+            $this->info('[CaseState] : ' . 'Not inject as the data is the same.');
+            return 0;
+        }
+
+        DB::table('cases_states')->truncate();
+
+        $this->info('[CaseState] : ' . 'Injecting...');
+
         $this->withProgressBar($records, function ($records) {
-
-            CasesState::insert($records);
-
+            DB::table('cases_states')->insert($records);
         });
 
         $this->line('');
-        $this->info('Updating Cumulative Case State ... ');
+        $this->info('[CaseState] : ' . 'Updating Cumulative...');
 
         $this->covidService->updateCumulativeCasesState();
+
+        return 0;
     }
 
     public function importDeathMalaysia()
     {
         $records = $this->covidService->getDeathMalaysia();
 
+        if (DB::table('deaths_malaysia')->count() == $records->count()) {
+            $this->info('[DeathMalaysia] : ' . 'Not inject as the data is the same.');
+            return 0;
+        }
+
+        DB::table('deaths_malaysia')->truncate();
+
+        $this->info('[DeathMalaysia] : ' . 'Injecting...');
+
         $this->withProgressBar($records, function ($records) {
-
-            DeathsMalaysia::insert($records);
-
+            DB::table('deaths_malaysia')->insert($records);
         });
+
+        $this->line('');
+
+        return 0;
     }
 
     public function importDeathState()
     {
         $records = $this->covidService->getDeathState();
 
+        if (DB::table('deaths_states')->count() == $records->count()) {
+            $this->info('[DeathState] : ' . 'Not inject as the data is the same.');
+            return 0;
+        }
+
+        DB::table('deaths_states')->truncate();
+
+        $this->info('[DeathState] : ' . 'Injecting...');
+
         $this->withProgressBar($records, function ($records) {
-
-            DeathsState::insert($records);
-
+            DB::table('deaths_states')->insert($records);
         });
 
         $this->line('');
-        $this->info('Updating Cumulative Death State ... ');
+        $this->info('[DeathState] : ' . 'Updating Cumulative... ');
         $this->covidService->updateCumulativeDeathState();
-
+        return 0;
     }
 
     public function importTestMalaysia()
     {
         $records = $this->covidService->getTestMalaysia();
 
+        if (DB::table('test_malaysia')->count() == $records->count()) {
+            $this->info('[TestMalaysia] : ' . 'Not inject as the data is the same.');
+            return 0;
+        }
+
+        DB::table('test_malaysia')->truncate();
+
+        $this->info('[TestMalaysia] : ' . 'Injecting...');
+
         $this->withProgressBar($records, function ($records) {
-
-            TestMalaysia::insert($records);
-
+            DB::table('test_malaysia')->insert($records);
         });
+
+        $this->line('');
+
+        return 0;
     }
 
     public function importCluster()
     {
         $records = $this->covidService->getCluster();
 
+        if (DB::table('clusters')->count() == $records->count()) {
+            $this->info('[Cluster] : ' . 'Not inject as the data is the same.');
+            return 0;
+        }
+
+        DB::table('clusters')->truncate();
+
+        $this->info('[Cluster] : ' . 'Injecting...');
+
         $this->withProgressBar($records, function ($records) {
-
-            Cluster::insert($records);
-
+            DB::table('clusters')->insert($records);
         });
+
+        $this->line('');
+
+        return 0;
     }
 
     public function importHospitals()
     {
         $records = $this->covidService->getHospitals();
 
+        if (DB::table('hospitals')->count() == $records->count()) {
+            $this->info('[Hospital] : ' . 'Not inject as the data is the same.');
+            return 0;
+        }
+
+        DB::table('hospitals')->truncate();
+
+        $this->info('[Hospital] : ' . 'Injecting...');
+
         $this->withProgressBar($records, function ($records) {
-
-            Hospital::insert($records);
-
+            DB::table('hospitals')->insert($records);
         });
+
+        $this->line('');
+
+        return 0;
     }
 
     public function importICU()
     {
         $records = $this->covidService->getICU();
 
+        if (DB::table('icus')->count() == $records->count()) {
+            $this->info('[ICU] : ' . 'Not inject as the data is the same.');
+            return 0;
+        }
+
+        DB::table('icus')->truncate();
+
+        $this->info('[ICU] : ' . 'Injecting...');
+
         $this->withProgressBar($records, function ($records) {
-
-            ICU::insert($records);
-
+            DB::table('icus')->insert($records);
         });
+
+        $this->line('');
+
+        return 0;
     }
 
     public function importPKRC()
     {
         $records = $this->covidService->getPKRC();
 
+        if (DB::table('PKRC')->count() == $records->count()) {
+            $this->info('[PKRC] : ' . 'Not inject as the data is the same.');
+            return 0;
+        }
+
+        DB::table('PKRC')->truncate();
+
+        $this->info('[PKRC] : ' . 'Injecting...');
+
         $this->withProgressBar($records, function ($records) {
-
-            PKRC::insert($records);
-
+            DB::table('PKRC')->insert($records);
         });
+
+        $this->line('');
+
+        return 0;
     }
 
     public function importMalaysiaPopulation()
     {
         $records = $this->covidService->getMalaysiaPopulation();
 
+        DB::table('populations')->truncate();
+
+        $this->info('[Population] : ' . 'Injecting...');
+
         $this->withProgressBar($records, function ($records) {
 
-            Population::insert($records);
+            DB::table('populations')->insert($records);
 
         });
     }

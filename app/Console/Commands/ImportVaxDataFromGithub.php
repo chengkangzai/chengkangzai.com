@@ -5,10 +5,6 @@ namespace App\Console\Commands;
 use App\Http\Services\ImportCovidFromGithubService;
 use App\Http\Services\ImportVaccineFromGithubService;
 use App\Http\Services\WebHookService;
-use App\Models\Covid\VaxMalaysia;
-use App\Models\Covid\VaxRegMalaysia;
-use App\Models\Covid\VaxRegState;
-use App\Models\Covid\VaxState;
 use Cache;
 use Carbon\Carbon;
 use DB;
@@ -24,7 +20,7 @@ class ImportVaxDataFromGithub extends Command
      *
      * @var string
      */
-    protected $signature = 'import:vaccine';
+    protected $signature = 'import:vaccine {--force}';
 
     /**
      * The console command description.
@@ -57,28 +53,13 @@ class ImportVaxDataFromGithub extends Command
     public function handle(): int
     {
         try {
-//            DB::transaction(function () {
-
-                $this->line('');
-                $this->warn('Truncating DB');
+            if ($this->option('force')) {
                 $this->truncateDB();
-
-                $this->line('');
-                $this->info('Importing Vax Malaysia');
-                $this->importVaxMalaysia();
-
-                $this->line('');
-                $this->info('Importing Vax per State');
-                $this->importVaxState();
-
-                $this->line('');
-                $this->info('Importing Vax Reg per State');
-                $this->importVaxRegState();
-
-                $this->line('');
-                $this->info('Importing Vax Reg Malaysia');
-                $this->importVaxRegMalaysia();
-//            });
+            }
+            $this->importVaxMalaysia();
+            $this->importVaxState();
+            $this->importVaxRegState();
+            $this->importVaxRegMalaysia();
 
             Cache::clear();
             if (app()->environment('production')) {
@@ -97,56 +78,95 @@ class ImportVaxDataFromGithub extends Command
         return 0;
     }
 
+
     public function truncateDB()
     {
         DB::table('vax_malaysias')->truncate();
         DB::table('vax_states')->truncate();
-        DB::table('vax_reg_malaysias')->truncate();
         DB::table('vax_reg_states')->truncate();
+        DB::table('vax_reg_malaysias')->truncate();
     }
 
-    public function importVaxMalaysia()
+    /**
+     * @throws Throwable
+     */
+    public function importVaxMalaysia(): int
     {
         $records = $this->vaxService->getVaxMalaysia();
 
+        if (DB::table('vax_malaysias')->count() == $records->count()) {
+            $this->info('[VaxMalaysia] : ' . 'Not inject as the data is the same.');
+            return 0;
+        }
+
+        DB::table('vax_malaysias')->truncate();
+
+        $this->info('[VaxMalaysia] : ' . 'Injecting...');
+
         $this->withProgressBar($records, function ($records) {
-
-            VaxMalaysia::insert($records);
-
+            DB::table('vax_malaysias')->insert($records);
         });
+
+        return 0;
     }
 
-    public function importVaxState()
+    public function importVaxState(): int
     {
         $records = $this->vaxService->getVaxState();
 
+        if (DB::table('vax_states')->count() == $records->count()) {
+            $this->info('[VaxState] : ' . 'Not inject as the data is the same.');
+            return 0;
+        }
+
+        DB::table('vax_states')->truncate();
+
+        $this->info('[VaxState] : ' . 'Injecting...');
+
         $this->withProgressBar($records, function ($records) {
-
-            VaxState::insert($records);
-
+            DB::table('vax_states')->insert($records);
         });
+
+        return 0;
     }
 
-    public function importVaxRegState()
+    public function importVaxRegState(): int
     {
         $records = $this->vaxService->getVaxRegState();
 
+        if (DB::table('vax_reg_states')->count() == $records->count()) {
+            $this->info('[VaxRegState] : ' . 'Not inject as the data is the same.');
+            return 0;
+        }
+
+        DB::table('vax_reg_states')->truncate();
+
+        $this->info('[VaxRegState] : ' . 'Injecting...');
+
         $this->withProgressBar($records, function ($records) {
-
-            VaxRegState::insert($records);
-
+            DB::table('vax_reg_states')->insert($records);
         });
+
+        return 0;
     }
 
-
-    public function importVaxRegMalaysia()
+    public function importVaxRegMalaysia(): int
     {
         $records = $this->vaxService->getVaxRegMalaysia();
 
+        if (DB::table('vax_reg_malaysias')->count() == $records->count()) {
+            $this->info('[VaxRegMalaysia] : ' . 'Not inject as the data is the same.');
+            return 0;
+        }
+
+        DB::table('vax_reg_malaysias')->truncate();
+
+        $this->info('[VaxRegMalaysia] : ' . 'Injecting...');
+
         $this->withProgressBar($records, function ($records) {
-
-            VaxRegMalaysia::insert($records);
-
+            DB::table('vax_reg_malaysias')->insert($records);
         });
+
+        return 0;
     }
 }
