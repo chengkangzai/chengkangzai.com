@@ -9,6 +9,7 @@ use App\Models\Covid\VaxMalaysia;
 use App\Models\Covid\VaxRegMalaysia;
 use App\Models\Covid\VaxRegState;
 use App\Models\Covid\VaxState;
+use Cache;
 use Carbon\Carbon;
 use DB;
 use Exception;
@@ -78,6 +79,11 @@ class ImportVaxDataFromGithub extends Command
                 $this->info('Importing Vax Reg Malaysia');
                 $this->importVaxRegMalaysia();
 //            });
+
+            Cache::clear();
+            if (app()->environment('production')) {
+                app(WebHookService::class)->notifyInSpam(Carbon::now() . ' : Covid Data Successfully Inserted', WebHookService::COLOR['GREEN']);
+            }
         } catch (Exception $exception) {
             if (app()->environment('production')) {
                 app(WebHookService::class)->notifyInGeneral(Carbon::now() . ' : DAMN STH went WRONG during importing Vaccine : \n\n' . $exception->getMessage(), WebHookService::COLOR['RED']);
