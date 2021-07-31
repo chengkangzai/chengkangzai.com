@@ -244,7 +244,7 @@
                             <td class="px-6 py-4 whitespace-nowrap font-bold">
                                 {{number_format($dashboardValue->newDeath_state_cum->sum())}}
                                 <small class="text-xs">
-                                    ({{round($dashboardValue->newDeath_state_cum->sum() / $dashboardValue->pop,2)}}%)
+                                    ({{round($dashboardValue->newDeath_state_cum->sum() / $dashboardValue->pop,4)}}%)
                                 </small>
                             </td>
                         </tr>
@@ -437,11 +437,12 @@
                                             <span class="font-black text-black">*</span> {{__('per population')}}
                                         </p>
                                         <p class="text-sm font-medium text-gray-900">
-                                            {{__('* note that this will not equal the number of people who were fully vaccinated on a given date when Malaysia begins using single-dose vaccines (e.g. CanSino)')}}
+                                            <span class="text-black">*</span> {{__('* note that this will not equal the number of people who were fully vaccinated on a given date when Malaysia begins using single-dose vaccines (e.g. CanSino)')}}
                                         </p>
                                         <p class="text-sm font-medium text-gray-900">
+                                            <span class="text-black">*</span>
                                             {{__('* Percentage is calculated by the population of the state.')}}
-                                            {{__('Non Malaysian such as foreign worker are not calculated in the population')}}
+                                            {{__('Some state are having 100% above vaccination rate is because the vaccine count Non Malaysian as well.')}}
                                         </p>
                                     </div>
                                 </div>
