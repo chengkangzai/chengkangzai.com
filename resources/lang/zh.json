@@ -48,7 +48,7 @@
     "Forgot Your Password?": "忘记密码",
     "Unauthorized": "未经授权",
     "Sorry, the page you are looking for could not be found.": "抱歉，找不到您要找的页面。",
-    "Go Home": "回家",
+    "Go Home": "回到主页",
     "Forbidden": "无权限",
     "Not Found": "未找到",
     "Page Expired": "页面已过期",
@@ -203,5 +203,6 @@
     "Any feedback\/recommendation\/correction is welcomed, contact me by email or twitter": "欢迎任何反馈\/建议\/更正，通过电子邮件或推特与我联系",
     "About and data updated time": "关于这个项目和数据更新时间",
     "Some state are having 100% above vaccination rate is because the vaccine count Non Malaysian as well.": "一些州的疫苗接种率高于 100% 是因为疫苗数量包括非马来西亚人。",
-    "Cases and Death data Updated at": "病例和死亡数据更新于"
+    "Cases and Death data Updated at": "病例和死亡数据更新于",
+    "About this project": "关于这个项目"
 }

@@ -431,13 +431,14 @@
                         <tfoot>
                         <tr class="bg-white">
                             <td class="px-6 py-4 whitespace-nowrap text-left" colspan="6">
-                                <div class="flex">
-                                    <div class="ml-4">
+                                <div class="flex max-w-full">
+                                    <div class="ml-4 ">
                                         <p class="text-sm font-medium text-gray-900">
                                             <span class="font-black text-black">*</span> {{__('per population')}}
                                         </p>
-                                        <p class="text-sm font-medium text-gray-900">
-                                            <span class="text-black">*</span> {{__('* note that this will not equal the number of people who were fully vaccinated on a given date when Malaysia begins using single-dose vaccines (e.g. CanSino)')}}
+                                        <p class="text-sm font-medium text-gray-900  break-words ">
+                                            <span class="text-black">*</span>
+                                            {{__('* note that this will not equal the number of people who were fully vaccinated on a given date when Malaysia begins using single-dose vaccines (e.g. CanSino)')}}
                                         </p>
                                         <p class="text-sm font-medium text-gray-900">
                                             <span class="text-black">*</span>
@@ -568,7 +569,7 @@
     </section>
 
     <div class="sm:py-10 rounded-2xl dark:bg-white dark:text-black my-4 bg-gray-50 shadow" id="about">
-        <h2 class="text-3xl font-bold">About</h2>
+        <h2 class="text-3xl font-bold">{{__('About this project')}}</h2>
         <ul class="text-sm sm:text-base list-disc list-inside">
             <li>
                 {{__('Cases and Death data Updated at')}}
