@@ -82,7 +82,7 @@ class ImportVaxDataFromGithub extends Command
 
             Cache::clear();
             if (app()->environment('production')) {
-                app(WebHookService::class)->notifyInSpam(Carbon::now() . ' : Covid Data Successfully Inserted', WebHookService::COLOR['GREEN']);
+                app(WebHookService::class)->notifyInSpam(Carbon::now() . ' : Vaccine Data Successfully Inserted', WebHookService::COLOR['GREEN']);
             }
         } catch (Exception $exception) {
             if (app()->environment('production')) {
