@@ -559,6 +559,10 @@
         <h2 class="text-3xl font-bold">About</h2>
         <ul class="text-sm sm:text-base list-disc list-inside">
             <li>
+                {{__('Cases and Death data Updated at')}}
+                : {{$dashboardValue->updated_at->casesState}}
+            </li>
+            <li>
                 {{__('Tested data Updated at')}}
                 : {{$dashboardValue->updated_at->tested}}
             </li>
@@ -576,8 +580,7 @@
             </li>
         </ul>
         <div>
-            <p><span
-                    class="font-black text-black">***</span> {{__('Any feedback/recommendation/correction is welcomed, contact me by email or twitter')}}
+            <p><span class="font-black text-black">***</span> {{__('Any feedback/recommendation/correction is welcomed, contact me by email or twitter')}}
             </p>
         </div>
     </div>
