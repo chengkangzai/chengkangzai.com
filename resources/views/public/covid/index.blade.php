@@ -2,8 +2,10 @@
 
 @section('content')
     @include('partial.rocket')
-    <section class="mt-2 rounded-2xl dark:bg-white dark:text-black py-2 bg-gray-50 shadow">
-        <h1 class="text-2xl sm:text-5xl font-bold">{{__('Covid-19 Malaysia Dashboard ')}}🇲🇾🇲🇾🇲🇾</h1>
+    <section class="mt-2 rounded-2xl dark:bg-white dark:text-black py-2 bg-gray-50 shadow" id="malaysia-dashboard">
+        <a href="#malaysia-dashboard">
+            <h1 class="text-2xl sm:text-5xl font-bold">{{__('Covid-19 Malaysia Dashboard ')}}🇲🇾🇲🇾🇲🇾</h1>
+        </a>
         <div>
             <ul class="list-disc list-inside">
                 <li>{{__('Data Source : ')}}
@@ -22,6 +24,9 @@
                 </li>
                 <li>
                     {{__('Me and this project are not affiliated with any Government body')}}
+                </li>
+                <li>
+                    <a href="#about" class="underline text-blue-500">{{__('About and data updated time')}}</a>
                 </li>
             </ul>
             <p class="font-bold"> {{__('* per population')}}</p>
@@ -137,7 +142,7 @@
         </div>
     </section>
 
-    <section class="flex flex-col mt-8">
+    <section class="flex flex-col mt-8" id="case-state">
         <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
             <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
                 <div class="shadow overflow-hidden border-b border-gray-200 rounded-lg">
@@ -145,7 +150,9 @@
                         <thead class="bg-gray-50">
                         <tr>
                             <th colspan="5" class="py-2 border-b">
-                                <h3 class="font-bold text-2xl uppercase">{{__('Cases per States')}}</h3>
+                                <a href="#case-state">
+                                    <h3 class="font-bold text-2xl uppercase">{{__('Cases per States')}}</h3>
+                                </a>
                                 <span
                                     class="inline font-normal text-xs float-right">{{__('Updated at')}} {{$dashboardValue->updated_at->caseState}}</span>
                             </th>
@@ -248,7 +255,7 @@
         </div>
     </section>
 
-    <section class="flex flex-col mt-8">
+    <section class="flex flex-col mt-8" id="vax-state">
         <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
             <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
                 <div class="shadow overflow-hidden border-b border-gray-200 rounded-lg">
@@ -256,7 +263,9 @@
                         <thead class="bg-gray-50">
                         <tr>
                             <th colspan="6" class="py-2 border-b">
-                                <h3 class="font-bold text-2xl uppercase">{{__('Vaccination per States')}}</h3>
+                                <a href="#vax-state">
+                                    <h3 class="font-bold text-2xl uppercase">{{__('Vaccination per States')}}</h3>
+                                </a>
                                 <div class="w-full mx-auto">
                                     <table>
                                         <tr>
@@ -445,7 +454,7 @@
         </div>
     </section>
 
-    <section class="flex flex-col mt-8">
+    <section class="flex flex-col mt-8" id="healthcare-state">
         <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
             <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
                 <div class="shadow overflow-hidden border-b border-gray-200 rounded-lg">
@@ -453,7 +462,9 @@
                         <thead class="bg-gray-50">
                         <tr>
                             <th colspan="5" class="py-2 border-b">
-                                <h3 class="font-bold text-2xl uppercase">{{__('Healthcare per States')}}</h3>
+                                <a href="#healthcare-state">
+                                    <h3 class="font-bold text-2xl uppercase">{{__('Healthcare per States')}}</h3>
+                                </a>
                                 <span
                                     class="inline font-normal text-xs float-right">{{__('Updated at')}} {{$dashboardValue->updated_at->ICU}}</span>
                             </th>
@@ -555,12 +566,12 @@
         </div>
     </section>
 
-    <div class="sm:py-10 rounded-2xl dark:bg-white dark:text-black my-4 bg-gray-50 shadow">
+    <div class="sm:py-10 rounded-2xl dark:bg-white dark:text-black my-4 bg-gray-50 shadow" id="about">
         <h2 class="text-3xl font-bold">About</h2>
         <ul class="text-sm sm:text-base list-disc list-inside">
             <li>
                 {{__('Cases and Death data Updated at')}}
-                : {{$dashboardValue->updated_at->casesState}}
+                : {{$dashboardValue->updated_at->caseState}}
             </li>
             <li>
                 {{__('Tested data Updated at')}}
@@ -580,7 +591,8 @@
             </li>
         </ul>
         <div>
-            <p><span class="font-black text-black">***</span> {{__('Any feedback/recommendation/correction is welcomed, contact me by email or twitter')}}
+            <p><span
+                    class="font-black text-black">***</span> {{__('Any feedback/recommendation/correction is welcomed, contact me by email or twitter')}}
             </p>
         </div>
     </div>

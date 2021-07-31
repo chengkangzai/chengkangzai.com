@@ -22,6 +22,11 @@
         gtag('js', new Date());
         gtag('config', 'G-G0TL352WKG');
     </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     @stack('cdn')
     @stack('style')
