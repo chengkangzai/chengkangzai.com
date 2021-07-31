@@ -63,7 +63,7 @@ class ImportCOVIDDataFromGithub extends Command
     public function handle(): int
     {
         try {
-            DB::transaction(function () {
+//            DB::transaction(function () {
                 $this->line('');
                 $this->warn('Truncating DB');
                 $this->truncateDB();
@@ -107,7 +107,7 @@ class ImportCOVIDDataFromGithub extends Command
                 $this->line('');
                 $this->info('importing.. Population');
                 $this->importMalaysiaPopulation();
-            });
+//            });
 
             Cache::clear();
             if (app()->environment('production')) {

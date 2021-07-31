@@ -337,7 +337,7 @@
                                 <td class="px-6 py-4 whitespace-nowrap">
                                     {{number_format($dose1)}}
                                     <small class="text-xs">
-                                        (+{{ round(($dose1 / $dashboardValue->population_state[$state]*100),4)}}%)
+                                        (+{{ round(($dose1 / $dashboardValue->population_state[$state]*100),2)}}%)
                                     </small>
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap">
@@ -368,7 +368,7 @@
                             <tr>
                                 <td colspan="6">
                                     <div class="relative">
-                                        <div class="overflow-hidden h-3 text-xs flex rounded bg-green-50">
+                                        <div class="overflow-hidden h-2 text-xs flex rounded bg-green-50">
                                             <div
                                                 style="width: {{round($dashboardValue->vax_state_1st_cum[$state] / $dashboardValue->population_state[$state]*100,2)}}%"
                                                 class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-green-300 rounded-r-full">
@@ -393,7 +393,7 @@
                             <td class="px-6 py-4 whitespace-nowrap font-bold">
                                 {{number_format($dashboardValue->vax_state_1st->sum())}}
                                 <small class="text-xs">
-                                    {{'+('.round(($dashboardValue->vax_state_1st->sum() / $dashboardValue->pop)*100,4).'%)'}}
+                                    {{'+('.round(($dashboardValue->vax_state_1st->sum() / $dashboardValue->pop)*100,2).'%)'}}
                                 </small>
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap font-bold">
@@ -405,7 +405,7 @@
                             <td class="px-6 py-4 whitespace-nowrap font-bold">
                                 {{number_format($dashboardValue->vax_state_2st->sum())}}
                                 <small class="text-xs">
-                                    {{'+('.round(($dashboardValue->vax_state_2st->sum() / $dashboardValue->pop)*100,4).'%)'}}
+                                    {{'+('.round(($dashboardValue->vax_state_2st->sum() / $dashboardValue->pop)*100,2).'%)'}}
                                 </small>
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap font-bold">
@@ -557,7 +557,7 @@
 
     <div class="sm:py-10 rounded-2xl dark:bg-white dark:text-black my-4 bg-gray-50 shadow">
         <h2 class="text-3xl font-bold">About</h2>
-        <ul class="list-disc list-inside">
+        <ul class="text-sm sm:text-base list-disc list-inside">
             <li>
                 {{__('Tested data Updated at')}}
                 : {{$dashboardValue->updated_at->tested}}
