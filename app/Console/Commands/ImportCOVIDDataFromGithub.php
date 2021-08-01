@@ -4,7 +4,7 @@ namespace App\Console\Commands;
 
 use App\Http\Services\ImportCovidFromGithubService;
 use App\Http\Services\WebHookService;
- use Cache;
+use Cache;
 use Carbon\Carbon;
 use DB;
 use Exception;
@@ -100,7 +100,7 @@ class ImportCOVIDDataFromGithub extends Command
     }
 
 
-    public function importCasesMalaysia()
+    public function importCasesMalaysia(): int
     {
         $records = $this->covidService->getCasesMalaysia();
 
@@ -120,7 +120,7 @@ class ImportCOVIDDataFromGithub extends Command
         return 0;
     }
 
-    public function importCasesState()
+    public function importCasesState(): int
     {
         $records = $this->covidService->getCasesState();
 
@@ -145,7 +145,7 @@ class ImportCOVIDDataFromGithub extends Command
         return 0;
     }
 
-    public function importDeathMalaysia()
+    public function importDeathMalaysia(): int
     {
         $records = $this->covidService->getDeathMalaysia();
 
@@ -167,7 +167,7 @@ class ImportCOVIDDataFromGithub extends Command
         return 0;
     }
 
-    public function importDeathState()
+    public function importDeathState(): int
     {
         $records = $this->covidService->getDeathState();
 
@@ -190,7 +190,7 @@ class ImportCOVIDDataFromGithub extends Command
         return 0;
     }
 
-    public function importTestMalaysia()
+    public function importTestMalaysia(): int
     {
         $records = $this->covidService->getTestMalaysia();
 
@@ -212,15 +212,12 @@ class ImportCOVIDDataFromGithub extends Command
         return 0;
     }
 
-    public function importCluster()
+    public function importCluster(): int
     {
         $records = $this->covidService->getCluster();
-
-        if (DB::table('clusters')->count() == $records->count()) {
-            $this->info('[Cluster] : ' . 'Not inject as the data is the same.');
-            return 0;
-        }
-
+        /**
+         * Importing Cluster Data anyway as the previous data will be change without adding new cluster
+         */
         DB::table('clusters')->truncate();
 
         $this->info('[Cluster] : ' . 'Injecting...');
@@ -234,7 +231,7 @@ class ImportCOVIDDataFromGithub extends Command
         return 0;
     }
 
-    public function importHospitals()
+    public function importHospitals(): int
     {
         $records = $this->covidService->getHospitals();
 
@@ -256,7 +253,7 @@ class ImportCOVIDDataFromGithub extends Command
         return 0;
     }
 
-    public function importICU()
+    public function importICU(): int
     {
         $records = $this->covidService->getICU();
 
@@ -278,7 +275,7 @@ class ImportCOVIDDataFromGithub extends Command
         return 0;
     }
 
-    public function importPKRC()
+    public function importPKRC(): int
     {
         $records = $this->covidService->getPKRC();
 
