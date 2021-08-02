@@ -226,25 +226,25 @@
                             <td class="px-6 py-4 whitespace-nowrap font-bold">
                                 {{number_format($dashboardValue->new_cases_state->sum())}}
                                 <small class="text-xs">
-                                    (+{{round($dashboardValue->new_cases_state->sum() / $dashboardValue->pop,4)}}%)
+                                    (+{{round(($dashboardValue->new_cases_state->sum() / $dashboardValue->pop)*100,4)}}%)
                                 </small>
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap font-bold">
                                 {{number_format($dashboardValue->new_cases_state_cum->sum())}}
                                 <small class="text-xs">
-                                    ({{round($dashboardValue->new_cases_state_cum->sum() / $dashboardValue->pop,2)}}%)
+                                    ({{round(($dashboardValue->new_cases_state_cum->sum() / $dashboardValue->pop)*100,2)}}%)
                                 </small>
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap font-bold">
                                 {{number_format($dashboardValue->newDeath_state->sum())}}
                                 <small class="text-xs">
-                                    (+{{round($dashboardValue->newDeath_state->sum() / $dashboardValue->pop,4)}}%)
+                                    (+{{round(($dashboardValue->newDeath_state->sum() / $dashboardValue->pop)*100,4)}}%)
                                 </small>
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap font-bold">
                                 {{number_format($dashboardValue->newDeath_state_cum->sum())}}
                                 <small class="text-xs">
-                                    ({{round($dashboardValue->newDeath_state_cum->sum() / $dashboardValue->pop,4)}}%)
+                                    ({{round(($dashboardValue->newDeath_state_cum->sum() / $dashboardValue->pop)*100,4)}}%)
                                 </small>
                             </td>
                         </tr>
