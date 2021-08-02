@@ -59,10 +59,10 @@
             <div class="dark:bg-white bg-gray-50 py-10 rounded-xl shadow ">
                 <h2 class="text-2xl">{{__('Tested')}}</h2>
                 <p class="text-yellow-500 font-bold text-5xl">{{number_format($dashboardValue->new_test)}}</p>
-{{--                <span>--}}
-{{--                    {{__('Positive Rate')}}--}}
-{{--                    {{round(($dashboardValue->new_cases / $dashboardValue->new_test)*100,2)}}%--}}
-{{--                </span>--}}
+                <span>
+                    {{__('Positive Rate')}}
+                    {{round(($dashboardValue->new_cases / $dashboardValue->new_test)*100,2)}}%
+                </span>
             </div>
 
 
@@ -134,7 +134,7 @@
                 <h2 class="text-2xl">{{__('Percentage of Vaccine Register')}}</h2>
                 <p class="text-green-500  font-bold text-5xl">
                     {{number_format($dashboardValue->percentage_of_reg_malaysia).'%'}}
-                    <span class="font-bold text-black text-xl">*</span>
+                    <small class="text-black text-xs">*{{__('Above 18')}}</small>
                 </p>
                 <span>{{__('Registered :')}} {{number_format($dashboardValue->vax_reg_malaysia)}}</span>
 
@@ -226,13 +226,15 @@
                             <td class="px-6 py-4 whitespace-nowrap font-bold">
                                 {{number_format($dashboardValue->new_cases_state->sum())}}
                                 <small class="text-xs">
-                                    (+{{round(($dashboardValue->new_cases_state->sum() / $dashboardValue->pop)*100,4)}}%)
+                                    (+{{round(($dashboardValue->new_cases_state->sum() / $dashboardValue->pop)*100,4)}}
+                                    %)
                                 </small>
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap font-bold">
                                 {{number_format($dashboardValue->new_cases_state_cum->sum())}}
                                 <small class="text-xs">
-                                    ({{round(($dashboardValue->new_cases_state_cum->sum() / $dashboardValue->pop)*100,2)}}%)
+                                    ({{round(($dashboardValue->new_cases_state_cum->sum() / $dashboardValue->pop)*100,2)}}
+                                    %)
                                 </small>
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap font-bold">
@@ -244,7 +246,8 @@
                             <td class="px-6 py-4 whitespace-nowrap font-bold">
                                 {{number_format($dashboardValue->newDeath_state_cum->sum())}}
                                 <small class="text-xs">
-                                    ({{round(($dashboardValue->newDeath_state_cum->sum() / $dashboardValue->pop)*100,4)}}%)
+                                    ({{round(($dashboardValue->newDeath_state_cum->sum() / $dashboardValue->pop)*100,4)}}
+                                    %)
                                 </small>
                             </td>
                         </tr>
@@ -478,19 +481,20 @@
                             </th>
                             <th scope="col"
                                 class="py-4 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                {{__('ICU (Covid)')}}
+                                {{__('ICU (Covid)')}} ({{__('Utilisation')}})
                             </th>
                             <th scope="col"
                                 class="py-4 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                {{__('Hospital (Covid)')}}
+                                {{__('Hospital (Covid)')}} ({{__('Utilisation')}})
                             </th>
                             <th scope="col"
                                 class="py-4 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
                                 {{__('PKRC (Covid)')}} <span class="font-black text-black">*</span>
+                                ({{__('Utilisation')}})
                             </th>
                             <th scope="col"
                                 class="py-4 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                {{__('Total')}}
+                                {{__('Total')}} ({{__('Overall Utilisation')}})
                             </th>
                         </tr>
                         </thead>
@@ -507,21 +511,39 @@
                                     </div>
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap">
-                                    {{number_format($ICU)}}
-                                    <small class="text-xs">
+                                    {{number_format($ICU)}} / {{number_format($dashboardValue->bed_ICU[$state])}}
+                                    @php
+                                    $temp =round(($ICU/$dashboardValue->bed_ICU[$state])*100)
+                                    @endphp
+                                    <small class="text-xs @if($temp > 90) text-red-700 @elseif($temp > 70) text-yellow-700 @endif">
+                                        {{'('.round(($ICU/$dashboardValue->bed_ICU[$state])*100,2).'%)'}}
                                     </small>
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap">
                                     {{number_format($dashboardValue->hospital[$state])}}
+                                    / {{number_format($dashboardValue->bed_hospital[$state])}}
                                     <small class="text-xs">
+                                        {{'('.round(($dashboardValue->hospital[$state]/$dashboardValue->bed_hospital[$state])*100,2).'%)'}}
                                     </small>
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap">
-                                    {{number_format($dashboardValue->PKRC[$state] ?? 0) ?? "N/A"}}
+                                    @if($dashboardValue->PKRC[$state] ?? 0 !== 0 )
+                                        {{number_format($dashboardValue->PKRC[$state] ?? 0) ?? "N/A"}}
+                                        / {{number_format($dashboardValue->bed_PKRC[$state] ?? 0) ?? "N/A"}}
+                                        <small>{{'('.round(($dashboardValue->PKRC[$state]/$dashboardValue->bed_PKRC[$state])*100,2).'%)'}}</small>
+                                    @else
+                                        N/A
+                                    @endif
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap">
-                                    {{number_format($ICU + $dashboardValue->hospital[$state] +($dashboardValue->PKRC[$state] ?? 0))}}
+                                    {{number_format($ICU + $dashboardValue->hospital[$state] + ($dashboardValue->PKRC[$state] ?? 0))}}
+                                    /
+                                    {{number_format($dashboardValue->bed_ICU[$state] + $dashboardValue->bed_hospital[$state] + ($dashboardValue->bed_PKRC[$state] ??0))}}
+                                    @php
+                                        $temp=(($ICU + $dashboardValue->hospital[$state] + ($dashboardValue->PKRC[$state] ?? 0)) /($dashboardValue->bed_ICU[$state] + $dashboardValue->bed_hospital[$state] + ($dashboardValue->bed_PKRC[$state] ??0)))*100;
+                                    @endphp
                                     <small class="text-xs">
+                                        {{'('.round($temp,2).'%)'}}
                                     </small>
                                 </td>
                             </tr>

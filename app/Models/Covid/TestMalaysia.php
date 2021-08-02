@@ -15,7 +15,7 @@ class TestMalaysia extends Model
     protected $fillable = [
         'id',
         'date',
-        'trk-ag',
+        'rtk-ag',
         'pcr',
     ];
 

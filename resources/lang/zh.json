@@ -195,7 +195,7 @@
     "New Dose 2 ": "第二剂",
     "Registered": "已注册",
     "per population": "人均",
-    "* note that this will not equal the number of people who were fully vaccinated on a given date when Malaysia begins using single-dose vaccines (e.g. CanSino)": "请注意，这将不等于马来西亚开始使用单剂量疫苗（例如 CanSino）的特定日期完全接种疫苗的人数",
+    "* note that this will not equal the number of people who were fully vaccinated on a given date when Malaysia begins using single-dose vaccines (e.g. CanSino)": "请注意，当马来西亚开始使用单剂量疫苗（例如康希诺）时，第二剂施打人数并不等于完全接种疫苗人数",
     "* Percentage is calculated by the population of the state.": "百分比是按该州的人口计算的。",
     "Non Malaysian such as foreign worker are not calculated in the population": "非马来西亚人如外劳不计入人口",
     "Vaccination data Updated at": "疫苗接种数据更新于",
@@ -206,5 +206,10 @@
     "Cases and Death data Updated at": "病例和死亡数据更新于",
     "About this project": "关于这个项目",
     "Cases data Updated at": "病例数据更新于",
-    "Death data Updated at": "死亡数据更新于"
+    "Death data Updated at": "死亡数据更新于",
+    "Above 18": "18岁以上人口",
+    "Beds using": "正在使用的病床",
+    "Total Beds": "总床位",
+    "Utilisation": "利用率",
+    "Overall Utilisation": "综合利用率"
 }
