@@ -572,8 +572,12 @@
         <h2 class="text-3xl font-bold">{{__('About this project')}}</h2>
         <ul class="text-sm sm:text-base list-disc list-inside">
             <li>
-                {{__('Cases and Death data Updated at')}}
-                : {{$dashboardValue->updated_at->caseState}}
+                {{__('Cases data Updated at')}}
+                : {{$dashboardValue->updated_at->caseMalaysia}}
+            </li>
+            <li>
+                {{__('Death data Updated at')}}
+                : {{$dashboardValue->updated_at->deathMalaysia}}
             </li>
             <li>
                 {{__('Tested data Updated at')}}
