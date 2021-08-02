@@ -195,13 +195,13 @@
                                 <td class="px-6 py-4 whitespace-nowrap">
                                     {{number_format($newCase)}}
                                     <small class="text-xs">
-                                        (+{{ round(($newCase / $dashboardValue->population_state[$state]*100),4)}}%)
+                                        (+{{ round(($newCase / $dashboardValue->population_state[$state])*100,4)}}%)
                                     </small>
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap">
                                     {{number_format($dashboardValue->new_cases_state_cum[$state])}}
                                     <small class="text-xs">
-                                        {{ '('.round(($dashboardValue->new_cases_state_cum[$state] / $dashboardValue->population_state[$state]*100),2).'%)'}}
+                                        {{ '('.round(($dashboardValue->new_cases_state_cum[$state] / $dashboardValue->population_state[$state])*100,2).'%)'}}
                                     </small>
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap">
@@ -210,7 +210,7 @@
                                 <td class="px-6 py-4 whitespace-nowrap">
                                     {{number_format($dashboardValue->newDeath_state_cum[$state])}}
                                     <small class="text-xs">
-                                        {{ '('.round(($dashboardValue->newDeath_state_cum[$state] / $dashboardValue->population_state[$state]*100),2).'%)'}}
+                                        {{ '('.round(($dashboardValue->newDeath_state_cum[$state] / $dashboardValue->population_state[$state])*100,2).'%)'}}
                                     </small>
                                 </td>
                             </tr>
@@ -352,25 +352,25 @@
                                 <td class="px-6 py-4 whitespace-nowrap">
                                     {{number_format($dashboardValue->vax_state_1st_cum[$state])}}
                                     <small class="text-xs">
-                                        {{ '('.round(($dashboardValue->vax_state_1st_cum[$state] / $dashboardValue->population_state[$state]*100),2).'%)'}}
+                                        {{ '('.round(($dashboardValue->vax_state_1st_cum[$state] / $dashboardValue->population_state[$state])*100,2).'%)'}}
                                     </small>
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap">
                                     {{number_format($dashboardValue->vax_state_2st[$state])}}
                                     <small class="text-xs">
-                                        {{ '(+'.round(($dashboardValue->vax_state_2st[$state] / $dashboardValue->population_state[$state]*100),2).'%)'}}
+                                        {{ '(+'.round(($dashboardValue->vax_state_2st[$state] / $dashboardValue->population_state[$state])*100,2).'%)'}}
                                     </small>
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap">
                                     {{number_format($dashboardValue->vax_state_2st_cum[$state])}}
                                     <small class="text-xs">
-                                        {{ '('.round(($dashboardValue->vax_state_2st_cum[$state] / $dashboardValue->population_state[$state]*100),2).'%)'}}
+                                        {{ '('.round(($dashboardValue->vax_state_2st_cum[$state] / $dashboardValue->population_state[$state])*100,2).'%)'}}
                                     </small>
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap">
                                     {{number_format($dashboardValue->vax_state_cum[$state])}}
                                     <small class="text-xs">
-                                        {{ '('.round(($dashboardValue->vax_state_cum[$state] / $dashboardValue->population_state[$state]*100),2).'%)'}}
+                                        {{ '('.round(($dashboardValue->vax_state_cum[$state] / $dashboardValue->population_state[$state])*100,2).'%)'}}
                                     </small>
                                 </td>
                             </tr>
