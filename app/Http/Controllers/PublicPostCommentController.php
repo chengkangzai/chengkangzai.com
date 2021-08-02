@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreCommentController;
+use App\Http\Requests\StoreCommentRequest;
 use App\Http\Services\WebHookService;
 use App\Models\Post;
 use Illuminate\Http\RedirectResponse;
@@ -10,11 +10,11 @@ use Illuminate\Http\RedirectResponse;
 class PublicPostCommentController extends Controller
 {
     /**
-     * @param StoreCommentController $request
+     * @param StoreCommentRequest $request
      * @param Post $post
      * @return RedirectResponse
      */
-    function store(StoreCommentController $request, Post $post): RedirectResponse
+    function store(StoreCommentRequest $request, Post $post): RedirectResponse
     {
         $comment = $post->comments()->create([
             'name' => $request->name,
