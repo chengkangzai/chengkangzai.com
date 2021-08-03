@@ -4,7 +4,7 @@ namespace App\Console\Commands;
 
 use App\Http\Services\ImportCovidFromGithubService;
 use App\Http\Services\WebHookService;
-use Cache;
+use Artisan;
 use Carbon\Carbon;
 use DB;
 use Exception;
@@ -68,7 +68,7 @@ class ImportCOVIDDataFromGithub extends Command
             $this->importPKRC();
             $this->importMalaysiaPopulation();
 
-            Cache::clear();
+            Artisan::call('cache:clear');
             if (app()->environment('production')) {
                 app(WebHookService::class)->notifyInSpam(Carbon::now() . ' : Covid Data Successfully Inserted', WebHookService::COLOR['GREEN']);
             }

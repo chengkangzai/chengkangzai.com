@@ -5,7 +5,6 @@ namespace App\Console\Commands;
 use App\Http\Services\ImportCovidFromGithubService;
 use App\Http\Services\ImportVaccineFromGithubService;
 use App\Http\Services\WebHookService;
-use Cache;
 use Carbon\Carbon;
 use DB;
 use Exception;
@@ -61,7 +60,7 @@ class ImportVaxDataFromGithub extends Command
             $this->importVaxRegState();
             $this->importVaxRegMalaysia();
 
-            Cache::clear();
+            cache()->clear();
             if (app()->environment('production')) {
                 app(WebHookService::class)->notifyInSpam(Carbon::now() . ' : Vaccine Data Successfully Inserted', WebHookService::COLOR['GREEN']);
             }
