@@ -12,6 +12,8 @@ class TestMalaysia extends Model
 
     protected $table = 'test_malaysia';
 
+    protected $dates = ['date', 'create_at', 'updated_at'];
+
     protected $fillable = [
         'id',
         'date',

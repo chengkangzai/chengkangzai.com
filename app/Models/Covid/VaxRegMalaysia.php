@@ -10,6 +10,8 @@ class VaxRegMalaysia extends Model
 {
     use HasFactory;
 
+    protected $dates = ['date', 'create_at', 'updated_at'];
+
     protected $fillable = [
         'id',
         'state',

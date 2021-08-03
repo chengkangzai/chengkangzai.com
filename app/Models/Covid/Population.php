@@ -9,6 +9,7 @@ class Population extends Model
 {
     use HasFactory;
 
+    protected $dates = ['create_at', 'updated_at'];
 
     protected $fillable = [
         'id',

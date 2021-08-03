@@ -12,6 +12,8 @@ class CasesMalaysia extends Model
 
     protected $table = 'cases_malaysia';
 
+    protected $dates = ['date', 'created_at', 'updated_at'];
+
     protected $fillable = [
         'id',
         'date',

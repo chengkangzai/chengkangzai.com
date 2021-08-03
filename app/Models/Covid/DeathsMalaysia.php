@@ -12,6 +12,8 @@ class DeathsMalaysia extends Model
 
     protected $table = 'deaths_malaysia';
 
+    protected $dates = ['date', 'create_at', 'updated_at'];
+
     protected $fillable = [
         'id',
         'date',

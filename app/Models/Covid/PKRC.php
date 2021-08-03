@@ -12,6 +12,8 @@ class PKRC extends Model
 
     protected $table = 'PKRC';
 
+    protected $dates = ['date', 'create_at', 'updated_at'];
+
     protected $fillable = [
         'id',
         'date',

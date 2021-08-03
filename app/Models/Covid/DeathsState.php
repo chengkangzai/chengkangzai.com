@@ -10,6 +10,8 @@ class DeathsState extends Model
 {
     use HasFactory;
 
+    protected $dates = ['date', 'create_at', 'updated_at'];
+
     const STATE = [
         "Johor" => "Johor",
         "Kedah" => "Kedah",

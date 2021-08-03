@@ -12,6 +12,8 @@ class ICU extends Model
 
     protected $table = 'icus';
 
+    protected $dates = ['date', 'create_at', 'updated_at'];
+
     protected $fillable = [
         'id',
         'date',
