@@ -596,15 +596,15 @@
         <ul class="text-sm sm:text-base list-disc list-inside">
             <li>
                 {{__('Cases data Updated at')}}
-                : {{$dashboardValue->updated_at->caseMalaysia}}
+                : {{$dashboardValue->updated_at->caseMalaysia->toDateString()}}
             </li>
             <li>
                 {{__('Death data Updated at')}}
-                : {{$dashboardValue->updated_at->deathMalaysia}}
+                : {{$dashboardValue->updated_at->deathMalaysia->toDateString()}}
             </li>
             <li>
                 {{__('Tested data Updated at')}}
-                : {{$dashboardValue->updated_at->tested}}
+                : {{$dashboardValue->updated_at->tested->toDateString()}}
             </li>
             <li>
                 {{__('Cluster data Updated at')}}
