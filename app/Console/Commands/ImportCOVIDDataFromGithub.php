@@ -215,9 +215,11 @@ class ImportCOVIDDataFromGithub extends Command
     public function importCluster(): int
     {
         $records = $this->covidService->getCluster();
-        /**
-         * Importing Cluster Data anyway as the previous data will be change without adding new cluster
-         */
+
+        if (DB::table('clusters')->count() == $records->count()) {
+            $this->info('[Cluster] : ' . 'Not inject as the data is the same.');
+            return 0;
+        }
         DB::table('clusters')->truncate();
 
         $this->info('[Cluster] : ' . 'Injecting...');
