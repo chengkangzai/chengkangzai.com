@@ -119,12 +119,12 @@
                 <div class="relative mt-2 w-10/12 mx-auto">
                     <div class="overflow-hidden h-2 text-xs flex rounded bg-green-50">
                         <div
-                            style="width: {{round(($dashboardValue->vax_1st_cumulative/$dashboardValue->pop)*100,2)}}%"
-                            class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-green-300 rounded-r-full">
-                        </div>
-                        <div
                             style="width: {{round(($dashboardValue->vax_2nd_cumulative/$dashboardValue->pop)*100,2)}}%"
                             class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-green-500 rounded-r-full">
+                        </div>
+                        <div
+                            style="width: {{round((($dashboardValue->vax_1st_cumulative/$dashboardValue->pop)*100)-($dashboardValue->vax_2nd_cumulative/$dashboardValue->pop)*100,2)}}%"
+                            class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-green-300 rounded-r-full">
                         </div>
                     </div>
                 </div>
@@ -382,12 +382,12 @@
                                     <div class="relative">
                                         <div class="overflow-hidden h-2 text-xs flex rounded bg-green-50">
                                             <div
-                                                style="width: {{round($dashboardValue->vax_state_1st_cum[$state] / $dashboardValue->population_state[$state]*100,2)}}%"
-                                                class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-green-300 rounded-r-full">
-                                            </div>
-                                            <div
                                                 style="width: {{round(($dashboardValue->vax_state_2st_cum[$state] / $dashboardValue->population_state[$state]*100),2)}}%"
                                                 class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-green-500 rounded-r-full">
+                                            </div>
+                                            <div
+                                                style="width: {{round(($dashboardValue->vax_state_1st_cum[$state] / $dashboardValue->population_state[$state]*100)-($dashboardValue->vax_state_2st_cum[$state] / $dashboardValue->population_state[$state]*100),2)}}%"
+                                                class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-green-300 rounded-r-full">
                                             </div>
                                         </div>
                                     </div>
@@ -513,9 +513,10 @@
                                 <td class="px-6 py-4 whitespace-nowrap">
                                     {{number_format($ICU)}} / {{number_format($dashboardValue->bed_ICU[$state])}}
                                     @php
-                                    $temp =round(($ICU/$dashboardValue->bed_ICU[$state])*100)
+                                        $temp =round(($ICU/$dashboardValue->bed_ICU[$state])*100)
                                     @endphp
-                                    <small class="text-xs @if($temp > 90) text-red-700 @elseif($temp > 70) text-yellow-700 @endif">
+                                    <small
+                                        class="text-xs @if($temp > 90) text-red-700 @elseif($temp > 70) text-yellow-700 @endif">
                                         {{'('.round(($ICU/$dashboardValue->bed_ICU[$state])*100,2).'%)'}}
                                     </small>
                                 </td>
