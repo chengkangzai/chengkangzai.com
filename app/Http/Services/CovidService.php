@@ -41,6 +41,7 @@ class CovidService
         $this->vaxState = cache()->remember('vaxState', $secondOfCache, fn() => VaxState::latestOne()->get());
         $this->vaxRegState = cache()->remember('vaxRegState', $secondOfCache, fn() => VaxRegState::latestOne()->get());
         $this->vaxRegMalaysia = cache()->remember('vaxRegMalaysia', $secondOfCache, fn() => VaxRegMalaysia::latestOne()->get());
+        $this->lastestCaseForPositiveRate= cache()->remember('lastestCaseForPositiveRate',$secondOfCache,fn()=>CasesMalaysia::where('date', $this->testedMalaysia->first()->date)->first());
     }
 
     public function getDashboardValue(): Collection
@@ -71,7 +72,7 @@ class CovidService
         $collect->pop_18 = $this->population->where('idxs', 0)->pluck('pop_18')->first();
 
         $collect->new_test = $this->testedMalaysia->pluck('rtk-ag')->first() + $this->testedMalaysia->pluck('pcr')->first();
-
+        $collect->positive_rate = ($this->lastestCaseForPositiveRate->cases_new / $collect->new_test)*100;
         $collect->vax_1st_daily = $this->vaxMalaysia->pluck('dose1_daily')->sum();
         $collect->vax_2nd_daily = $this->vaxMalaysia->pluck('dose2_daily')->sum();
 

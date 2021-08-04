@@ -61,7 +61,7 @@
                 <p class="text-yellow-500 font-bold text-5xl">{{number_format($dashboardValue->new_test)}}</p>
                 <span>
                     {{__('Positive Rate')}}
-                    {{round(($dashboardValue->new_cases / $dashboardValue->new_test)*100,2)}}%
+                    {{round($dashboardValue->positive_rate,2)}}%
                 </span>
             </div>
 
