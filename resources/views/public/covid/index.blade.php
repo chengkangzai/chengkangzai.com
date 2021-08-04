@@ -154,7 +154,7 @@
                                     <h3 class="font-bold text-2xl uppercase">{{__('Cases per States')}}</h3>
                                 </a>
                                 <span
-                                    class="inline font-normal text-xs float-right">{{__('Updated at')}} {{$dashboardValue->updated_at->caseState}}</span>
+                                    class="inline font-normal text-xs float-right">{{__('Updated at')}} {{$dashboardValue->updated_at->caseState->toDateString()}}</span>
                             </th>
                         </tr>
                         <tr>
@@ -302,7 +302,7 @@
                                     </table>
                                 </div>
                                 <span
-                                    class="inline font-normal text-xs float-right">{{__('Updated at')}} {{$dashboardValue->updated_at->vaxState}}</span>
+                                    class="inline font-normal text-xs float-right">{{__('Updated at')}} {{$dashboardValue->updated_at->vaxState->toDateString()}}</span>
                             </th>
                         </tr>
                         <tr>
@@ -470,7 +470,7 @@
                                     <h3 class="font-bold text-2xl uppercase">{{__('Healthcare per States')}}</h3>
                                 </a>
                                 <span
-                                    class="inline font-normal text-xs float-right">{{__('Updated at')}} {{$dashboardValue->updated_at->ICU}}</span>
+                                    class="inline font-normal text-xs float-right">{{__('Updated at')}} {{$dashboardValue->updated_at->ICU->toDateString()}}</span>
                             </th>
                         </tr>
                         <tr>
