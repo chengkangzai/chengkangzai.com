@@ -509,38 +509,45 @@
                                         </div>
                                     </div>
                                 </td>
+
                                 <td class="px-6 py-4 whitespace-nowrap">
-                                    {{number_format($ICU)}} / {{number_format($dashboardValue->bed_ICU[$state])}}
+                                    {{number_format($ICU)}} / {{number_format($dashboardValue->bed_ICU[$state] ?? 0)}}
                                     @php
-                                        $temp =round(($ICU/$dashboardValue->bed_ICU[$state])*100)
+                                        $temp =round(($ICU/$dashboardValue->bed_ICU[$state] ?? 0)*100)
                                     @endphp
+
                                     <small
                                         class="text-xs @if($temp > 90) text-red-700 @elseif($temp > 70) text-yellow-700 @endif">
-                                        {{'('.round(($ICU/$dashboardValue->bed_ICU[$state])*100,2).'%)'}}
+                                        {{'('.round(($ICU/$dashboardValue->bed_ICU[$state] ?? 0)*100,2).'%)'}}
                                     </small>
+
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap">
-                                    {{number_format($dashboardValue->hospital[$state])}}
-                                    / {{number_format($dashboardValue->bed_hospital[$state])}}
+                                    @if(($dashboardValue->hospital[$state] ?? 0 !== 0) || ($dashboardValue->bed_hospital[$state] ?? 0 !== 0))
+                                        {{number_format($dashboardValue->hospital[$state] ?? 0)}}
+                                        / {{number_format($dashboardValue->bed_hospital[$state] ?? 0)}}
                                     <small class="text-xs">
                                         {{'('.round(($dashboardValue->hospital[$state]/$dashboardValue->bed_hospital[$state])*100,2).'%)'}}
                                     </small>
-                                </td>
-                                <td class="px-6 py-4 whitespace-nowrap">
-                                    @if($dashboardValue->PKRC[$state] ?? 0 !== 0 )
-                                        {{number_format($dashboardValue->PKRC[$state] ?? 0) ?? "N/A"}}
-                                        / {{number_format($dashboardValue->bed_PKRC[$state] ?? 0) ?? "N/A"}}
-                                        <small>{{'('.round(($dashboardValue->PKRC[$state]/$dashboardValue->bed_PKRC[$state])*100,2).'%)'}}</small>
                                     @else
                                         N/A
                                     @endif
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap">
-                                    {{number_format($ICU + $dashboardValue->hospital[$state] + ($dashboardValue->PKRC[$state] ?? 0))}}
+                                    @if($dashboardValue->PKRC[$state] ?? 0 !== 0 )
+                                        {{number_format($dashboardValue->PKRC[$state] ?? 0) ?? "N/A"}}
+                                        / {{number_format($dashboardValue->bed_PKRC[$state] ?? 0) ?? "N/A"}}
+                                        <small>{{'('.round(($dashboardValue->PKRC[$state] /$dashboardValue->bed_PKRC[$state])*100,2).'%)'}}</small>
+                                    @else
+                                        N/A
+                                    @endif
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    {{number_format($ICU + ($dashboardValue->hospital[$state] ?? 0 )+ ($dashboardValue->PKRC[$state] ?? 0))}}
                                     /
-                                    {{number_format($dashboardValue->bed_ICU[$state] + $dashboardValue->bed_hospital[$state] + ($dashboardValue->bed_PKRC[$state] ??0))}}
+                                    {{number_format(($dashboardValue->bed_ICU[$state] ?? 0) + ($dashboardValue->bed_hospital[$state] ?? 0) + ($dashboardValue->bed_PKRC[$state] ??0))}}
                                     @php
-                                        $temp=(($ICU + $dashboardValue->hospital[$state] + ($dashboardValue->PKRC[$state] ?? 0)) /($dashboardValue->bed_ICU[$state] + $dashboardValue->bed_hospital[$state] + ($dashboardValue->bed_PKRC[$state] ??0)))*100;
+                                        $temp=(($ICU + ($dashboardValue->hospital[$state] ?? 0) + ($dashboardValue->PKRC[$state] ?? 0)) /(($dashboardValue->bed_ICU[$state] ?? 0) + ($dashboardValue->bed_hospital[$state] ?? 0) + ($dashboardValue->bed_PKRC[$state] ?? 0)))*100;
                                     @endphp
                                     <small class="text-xs">
                                         {{'('.round($temp,2).'%)'}}
