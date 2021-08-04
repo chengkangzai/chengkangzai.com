@@ -176,7 +176,7 @@
                             </th>
                             <th scope="col"
                                 class="py-4 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                {{__('Cumulative Death')}} ({{__('% per population')}})
+                                {{__('Cumulative Death')}} ({{__('Fatality rate')}})
                             </th>
                         </tr>
                         </thead>
@@ -210,7 +210,7 @@
                                 <td class="px-6 py-4 whitespace-nowrap">
                                     {{number_format($dashboardValue->newDeath_state_cum[$state])}}
                                     <small class="text-xs">
-                                        {{ '('.round(($dashboardValue->newDeath_state_cum[$state] / $dashboardValue->population_state[$state])*100,2).'%)'}}
+                                        {{ '('.round(($dashboardValue->newDeath_state_cum[$state] / $dashboardValue->new_cases_state_cum[$state])*100,2).'%)'}}
                                     </small>
                                 </td>
                             </tr>
@@ -240,13 +240,12 @@
                             <td class="px-6 py-4 whitespace-nowrap font-bold">
                                 {{number_format($dashboardValue->newDeath_state->sum())}}
                                 <small class="text-xs">
-                                    (+{{round(($dashboardValue->newDeath_state->sum() / $dashboardValue->pop)*100,4)}}%)
                                 </small>
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap font-bold">
                                 {{number_format($dashboardValue->newDeath_state_cum->sum())}}
                                 <small class="text-xs">
-                                    ({{round(($dashboardValue->newDeath_state_cum->sum() / $dashboardValue->pop)*100,4)}}
+                                    ({{round(($dashboardValue->newDeath_state_cum->sum() / $dashboardValue->new_cases_state_cum->sum())*100,2)}}
                                     %)
                                 </small>
                             </td>
@@ -274,7 +273,7 @@
                                         <tr>
                                             <td class="w-1/4">
                                                 <div class="relative">
-                                                    <div class="overflow-hidden h-3 text-xs flex rounded bg-green-50">
+                                                    <div class="overflow-hidden h-2 text-xs flex rounded bg-green-50">
                                                         <div
                                                             style="width: 100%"
                                                             class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-green-300 rounded-full">
@@ -288,7 +287,7 @@
 
                                             <td class="w-1/4">
                                                 <div class="relative">
-                                                    <div class="overflow-hidden h-3 text-xs flex rounded bg-green-50">
+                                                    <div class="overflow-hidden h-2 text-xs flex rounded bg-green-50">
                                                         <div
                                                             style="width: 100%"
                                                             class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-green-500 rounded-full">
