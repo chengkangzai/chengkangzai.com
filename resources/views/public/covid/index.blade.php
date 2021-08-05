@@ -526,9 +526,9 @@
                                     @if(($dashboardValue->hospital[$state] ?? 0 !== 0) || ($dashboardValue->bed_hospital[$state] ?? 0 !== 0))
                                         {{number_format($dashboardValue->hospital[$state] ?? 0)}}
                                         / {{number_format($dashboardValue->bed_hospital[$state] ?? 0)}}
-                                    <small class="text-xs">
-                                        {{'('.round(($dashboardValue->hospital[$state]/$dashboardValue->bed_hospital[$state])*100,2).'%)'}}
-                                    </small>
+                                        <small class="text-xs">
+                                            {{'('.round(($dashboardValue->hospital[$state]/$dashboardValue->bed_hospital[$state])*100,2).'%)'}}
+                                        </small>
                                     @else
                                         N/A
                                     @endif
