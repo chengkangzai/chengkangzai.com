@@ -4,10 +4,10 @@
     @include('partial.rocket')
     <section class="mt-2 rounded-2xl dark:bg-white dark:text-black py-2 bg-gray-50 shadow" id="malaysia-dashboard">
         <a href="#malaysia-dashboard">
-            <h1 class="text-2xl sm:text-5xl font-bold">{{__('Covid-19 Malaysia Dashboard ')}}🇲🇾🇲🇾🇲🇾</h1>
+            <h1 class="text-2xl sm:text-5xl font-bold px-2">{{__('Covid-19 Malaysia Dashboard ')}}🇲🇾🇲🇾🇲🇾</h1>
         </a>
         <div>
-            <ul class="list-disc list-inside">
+            <ul class="list-disc list-inside px-2">
                 <li>{{__('Data Source : ')}}
                     <a href="https://github.com/MoH-Malaysia/covid19-public/tree/main/epidemic" rel="noreferrer"
                        class="underline text-blue-500">
@@ -69,10 +69,6 @@
             <div class="dark:bg-white bg-gray-50 py-10 rounded-xl shadow ">
                 <h2 class="text-2xl">{{__('Deaths')}}</h2>
                 <p class="text-gray-500  font-bold text-5xl">{{number_format($dashboardValue->new_death)}}</p>
-                <span>
-                    (+{{round(($dashboardValue->new_death / $dashboardValue->pop)*100,4)}}%)
-                    <span class="font-bold">*</span>
-                </span>
             </div>
 
 
@@ -80,8 +76,8 @@
                 <h2 class="text-2xl">{{__('Cumulative Death')}}</h2>
                 <p class="text-gray-500  font-bold text-5xl">{{number_format($dashboardValue->new_death_cum)}}</p>
                 <span>
-                    ({{round(($dashboardValue->new_death_cum/$dashboardValue->pop)*100,4)}}%)
-                    <span class="font-bold">*</span>
+                    {{__('Fatality rate')}} :
+                    {{round(($dashboardValue->new_death_cum/$dashboardValue->new_cases_cum)*100,4)}}%
                 </span>
             </div>
             {{--TODO add admited Ventilator and total Ventilator--}}
@@ -597,7 +593,7 @@
         </div>
     </section>
 
-    <div class="sm:py-10 rounded-2xl dark:bg-white dark:text-black my-4 bg-gray-50 shadow" id="about">
+    <div class="py-10 px-2 rounded-2xl dark:bg-white dark:text-black my-4 bg-gray-50 shadow" id="about">
         <h2 class="text-3xl font-bold">{{__('About this project')}}</h2>
         <ul class="text-sm sm:text-base list-disc list-inside">
             <li>
