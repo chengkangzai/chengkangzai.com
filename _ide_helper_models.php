@@ -49,7 +49,7 @@ namespace App\Models\Covid{
  * App\Models\Covid\CasesMalaysia
  *
  * @property int $id
- * @property string $date
+ * @property \Illuminate\Support\Carbon $date
  * @property int $cases_new
  * @property int $cluster_import
  * @property int $cluster_religious
@@ -87,7 +87,7 @@ namespace App\Models\Covid{
  * App\Models\Covid\CasesState
  *
  * @property int $id
- * @property string $date
+ * @property \Illuminate\Support\Carbon $date
  * @property string $state
  * @property string $cases_new
  * @property string|null $cases_cumulative
@@ -116,8 +116,8 @@ namespace App\Models\Covid{
  * @property string $cluster
  * @property string $state
  * @property string $district
- * @property string|null $date_announced
- * @property string|null $date_last_onset
+ * @property \Illuminate\Support\Carbon|null $date_announced
+ * @property \Illuminate\Support\Carbon|null $date_last_onset
  * @property string $category
  * @property string $status
  * @property int $cases_new
@@ -129,6 +129,9 @@ namespace App\Models\Covid{
  * @property int $recovered
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
+ * @method static \Illuminate\Database\Eloquent\Builder|Cluster active()
+ * @method static \Illuminate\Database\Eloquent\Builder|Cluster filterByClusterName($clusterName)
+ * @method static \Illuminate\Database\Eloquent\Builder|Cluster filterByState($state)
  * @method static \Illuminate\Database\Eloquent\Builder|Cluster newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Cluster newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Cluster query()
@@ -158,7 +161,7 @@ namespace App\Models\Covid{
  * App\Models\Covid\DeathsMalaysia
  *
  * @property int $id
- * @property string $date
+ * @property \Illuminate\Support\Carbon $date
  * @property int $deaths_new
  * @property int|null $deaths_new_cumulative
  * @property \Illuminate\Support\Carbon|null $created_at
@@ -182,7 +185,7 @@ namespace App\Models\Covid{
  * App\Models\Covid\DeathsState
  *
  * @property int $id
- * @property string $date
+ * @property \Illuminate\Support\Carbon $date
  * @property string $state
  * @property int $deaths_new
  * @property int|null $deaths_commutative
@@ -208,7 +211,7 @@ namespace App\Models\Covid{
  * App\Models\Covid\Hospital
  *
  * @property int $id
- * @property string $date
+ * @property \Illuminate\Support\Carbon $date
  * @property string $state
  * @property int $beds
  * @property int $beds_noncrit Non Critical Beds
@@ -252,7 +255,7 @@ namespace App\Models\Covid{
  * App\Models\Covid\ICU
  *
  * @property int $id
- * @property string $date
+ * @property \Illuminate\Support\Carbon $date
  * @property string $state
  * @property int $bed_icu
  * @property int $bed_icu_rep
@@ -298,7 +301,7 @@ namespace App\Models\Covid{
  * App\Models\Covid\PKRC
  *
  * @property int $id
- * @property string $date
+ * @property \Illuminate\Support\Carbon $date
  * @property string $state
  * @property int $beds
  * @property int $admitted_pui
@@ -367,7 +370,7 @@ namespace App\Models\Covid{
  * App\Models\Covid\TestMalaysia
  *
  * @property int $id
- * @property string $date
+ * @property \Illuminate\Support\Carbon $date
  * @property int $rtk-ag
  * @property int $pcr
  * @property \Illuminate\Support\Carbon|null $created_at
@@ -391,7 +394,7 @@ namespace App\Models\Covid{
  * App\Models\Covid\VaxMalaysia
  *
  * @property int $id
- * @property string $date
+ * @property \Illuminate\Support\Carbon $date
  * @property int $dose1_daily
  * @property int $dose2_daily
  * @property int $total_daily
@@ -423,7 +426,7 @@ namespace App\Models\Covid{
  * App\Models\Covid\VaxRegMalaysia
  *
  * @property int $id
- * @property string $date
+ * @property \Illuminate\Support\Carbon $date
  * @property string $state
  * @property int $total
  * @property int $phase2
@@ -463,7 +466,7 @@ namespace App\Models\Covid{
  * App\Models\Covid\VaxRegState
  *
  * @property int $id
- * @property string $date
+ * @property \Illuminate\Support\Carbon $date
  * @property string $state
  * @property int $total
  * @property int $phase2
@@ -503,7 +506,7 @@ namespace App\Models\Covid{
  * App\Models\Covid\VaxState
  *
  * @property int $id
- * @property string $date
+ * @property \Illuminate\Support\Carbon $date
  * @property string $state
  * @property int $dose1_daily
  * @property int $dose2_daily

@@ -30,6 +30,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     @stack('cdn')
     @stack('style')
+    @livewireStyles
 </head>
 <body class="bg-white dark:bg-black">
 
@@ -44,18 +45,20 @@
             </a>
         </div>
         <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center dark:text-white space-x-2">
-{{--            <a class=" cursor-pointer dark:hover:text-white hover:text-gray-900 dark:hover:bg-gray-600 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline rounded-lg px-2 py-2 text-bold">--}}
-{{--                First Link--}}
-{{--            </a>--}}
-{{--            <a class=" cursor-pointer dark:hover:text-white hover:text-gray-900 dark:hover:bg-gray-600 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline rounded-lg px-2 py-2 text-bold">--}}
-{{--                Second Link--}}
-{{--            </a>--}}
-{{--            <a class=" cursor-pointer dark:hover:text-white hover:text-gray-900 dark:hover:bg-gray-600 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline rounded-lg px-2 py-2 text-bold">--}}
-{{--                Third Link--}}
-{{--            </a>--}}
-{{--            <a class=" cursor-pointer dark:hover:text-white hover:text-gray-900 dark:hover:bg-gray-600 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline rounded-lg px-2 py-2 text-bold">--}}
-{{--                Fourth Link--}}
-{{--            </a>--}}
+            <a href="{{route('public.pandemic.index')}}"
+                class=" cursor-pointer dark:hover:text-white hover:text-gray-900 dark:hover:bg-gray-600 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline rounded-lg px-2 py-2 text-bold @if(request()->is('pandemic'))) bg-gray-50 dark:bg-gray-800 font-bold @endif">
+                {{__('Dashboard')}}
+            </a>
+            <a href="{{route('public.pandemic.clusters')}}"
+               class="cursor-pointer dark:hover:text-white hover:text-gray-900 dark:hover:bg-gray-600 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline rounded-lg px-2 py-2 text-bold @if(request()->is('pandemic/clusters'))) bg-gray-50 dark:bg-gray-800 font-bold @endif">
+                {{__('Clusters')}}
+            </a>
+            {{--            <a class=" cursor-pointer dark:hover:text-white hover:text-gray-900 dark:hover:bg-gray-600 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline rounded-lg px-2 py-2 text-bold">--}}
+            {{--                Third Link--}}
+            {{--            </a>--}}
+            {{--            <a class=" cursor-pointer dark:hover:text-white hover:text-gray-900 dark:hover:bg-gray-600 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline rounded-lg px-2 py-2 text-bold">--}}
+            {{--                Fourth Link--}}
+            {{--            </a>--}}
             <div @click.away="open = false" class="relative" x-data="{ open: false }">
                 <button @click="open = !open" aria-label="Drop Down trigger"
                         class="hover:text-black flex flex-row dark:text-white text-black items-center w-full px-2 py-2 mt-2 text-bold text-md text-left bg-transparent rounded-lg dark:bg-transparent dark:focus:text-white dark:hover:text-white dark:focus:bg-gray-600 dark:hover:bg-gray-600 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
@@ -95,4 +98,5 @@
 @yield('footer')
 </body>
 @stack('script')
+@livewireScripts
 </html>
