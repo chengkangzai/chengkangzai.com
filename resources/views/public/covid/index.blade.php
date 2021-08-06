@@ -366,9 +366,9 @@
                                     </small>
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap">
-                                    {{number_format($dashboardValue->vax_state_cum[$state])}}
+                                    {{number_format($dashboardValue->vax_reg_state[$state])}}
                                     <small class="text-xs">
-                                        {{ '('.round(($dashboardValue->vax_state_cum[$state] / $dashboardValue->population_state[$state])*100,2).'%)'}}
+                                        {{ '('.round(($dashboardValue->vax_reg_state[$state] / $dashboardValue->population_state[$state])*100,2).'%)'}}
                                     </small>
                                 </td>
                             </tr>
@@ -400,29 +400,32 @@
                             <td class="px-6 py-4 whitespace-nowrap font-bold">
                                 {{number_format($dashboardValue->vax_state_1st->sum())}}
                                 <small class="text-xs">
-                                    {{'+('.round(($dashboardValue->vax_state_1st->sum() / $dashboardValue->pop)*100,2).'%)'}}
+                                    {{'+('.round(($dashboardValue->vax_state_1st->sum() / $dashboardValue->pop_18)*100,2).'%)'}}
                                 </small>
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap font-bold">
                                 {{number_format($dashboardValue->vax_state_1st_cum->sum())}}
                                 <small class="text-xs">
-                                    {{'('.round(($dashboardValue->vax_state_1st_cum->sum() / $dashboardValue->pop)*100,2).'%)'}}
+                                    {{'('.round(($dashboardValue->vax_state_1st_cum->sum() / $dashboardValue->pop_18)*100,2).'%)'}}
                                 </small>
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap font-bold">
                                 {{number_format($dashboardValue->vax_state_2st->sum())}}
                                 <small class="text-xs">
-                                    {{'+('.round(($dashboardValue->vax_state_2st->sum() / $dashboardValue->pop)*100,2).'%)'}}
+                                    {{'+('.round(($dashboardValue->vax_state_2st->sum() / $dashboardValue->pop_18)*100,2).'%)'}}
                                 </small>
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap font-bold">
                                 {{number_format($dashboardValue->vax_state_2st_cum->sum())}}
                                 <small class="text-xs">
-                                    {{'('.round(($dashboardValue->vax_state_2st_cum->sum() / $dashboardValue->pop)*100,2).'%)'}}
+                                    {{'('.round(($dashboardValue->vax_state_2st_cum->sum() / $dashboardValue->pop_18)*100,2).'%)'}}
                                 </small>
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap font-bold">
-                                {{number_format($dashboardValue->vax_state_cum->sum())}}
+                                {{number_format($dashboardValue->vax_reg_state->sum())}}
+                                <small class="text-xs">
+                                    {{'('.round(($dashboardValue->vax_reg_state->sum() / $dashboardValue->pop_18)*100,2).'%)'}}
+                                </small>
                             </td>
                         </tr>
                         </tbody>
