@@ -67,7 +67,7 @@ class CovidService
 
         $collect->active_cluster_count = $this->cluster_count;
 
-        $collect->population_state = $this->population->pluck('pop', 'state');
+        $collect->population_state = $this->population->pluck('pop_18', 'state');
         $collect->pop = $this->population->where('idxs', 0)->pluck('pop')->first();
         $collect->pop_18 = $this->population->where('idxs', 0)->pluck('pop_18')->first();
 
@@ -88,6 +88,7 @@ class CovidService
 
         $collect->vax_reg_malaysia = $this->vaxRegMalaysia->first()->total;
         $collect->percentage_of_reg_malaysia = round(($this->vaxRegMalaysia->first()->total / $collect->pop_18) * 100);
+        $collect->vax_reg_state = $this->vaxRegState->pluck('total', 'state');
 
         $collect->updated_at = $this->generateUpdatedAt();
         return $collect;
