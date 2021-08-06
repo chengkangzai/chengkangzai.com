@@ -30,6 +30,16 @@ class Cluster extends Model
         'recovered',
     ];
 
+    const CLUSTER_CATEGORY = [
+        "import" => "Import",
+        "religious" => "Religious",
+        "workplace" => "Workplace",
+        "highRisk" => "High Risk",
+        "community" => "Community",
+        "detentionCentre" => "Detention Centre",
+        "education" => "Education",
+    ];
+
     const STATE = [
         "Johor" => "Johor",
         "Kedah" => "Kedah",
