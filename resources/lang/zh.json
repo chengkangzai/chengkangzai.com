@@ -227,5 +227,14 @@
     "Detention Centre": "看守所",
     "Education": "教育",
     "All": "所有",
-    "A page that help to search or query the Covid-19 cluster in Malaysia": "有助于搜索或查询马来西亚 Covid-19 集群的页面"
+    "A page that help to search or query the Covid-19 cluster in Malaysia": "有助于搜索或查询马来西亚 Covid-19 集群的页面",
+    "Showing": "显示",
+    "to": "到",
+    "of": "的结果，从",
+    "results": "的资料中",
+    "Go to page :page": "转到第 :page 页",
+    "Search any input": "搜索任何输入",
+    "Search by any keyword": "按任意关键字搜索",
+    "Filter By Cluster Category": "按感染群类别过滤",
+    "Filter By State": "按州过滤"
 }

@@ -227,5 +227,14 @@
     "Detention Centre": "Detention Centre",
     "Education": "Education",
     "A page that help to search or query the Covid-19 cluster in Malaysia": "A page that help to search or query the Covid-19 cluster in Malaysia",
-    "All": "All"
+    "All": "All",
+    "Showing": "Showing",
+    "to": "to",
+    "of": "of",
+    "results": "results",
+    "Go to page :page": "Go to page :page",
+    "Search any input": "Search any input",
+    "Search by any keyword": "Search by any keyword",
+    "Filter By Cluster Category": "Filter By Cluster Category",
+    "Filter By State": "Filter By State"
 }
