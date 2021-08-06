@@ -60,7 +60,7 @@
                 <h2 class="text-2xl">{{__('Tested')}}</h2>
                 <p class="text-yellow-500 font-bold text-5xl">{{number_format($dashboardValue->new_test)}}</p>
                 <span>
-                    {{__('Positive Rate')}}
+                    {{__('Positive Rate')}}:
                     {{round($dashboardValue->positive_rate,2)}}%
                 </span>
             </div>
