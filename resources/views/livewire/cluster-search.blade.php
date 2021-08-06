@@ -2,17 +2,17 @@
     <div class="w-full my-2 py-4 px-4 rounded-2xl dark:bg-white">
         <div class="pb-2">
             <label class="text-left w-full">
-                <span>Search any input</span>
+                <span>{{__('Search any input')}}</span>
                 <input type="text" class="mx-12 px-8 py-2 border rounded-xl border-blue-300 "
                        wire:model.debounce.500ms="search"
-                       placeholder="Search any keyword">
+                       placeholder="{{__('Search by any keyword')}}">
             </label>
         </div>
         <div class="pb-2">
             <label class="text-left w-full">
-                <span>Filter By Cluster Category</span>
+                <span>{{__('Filter By Cluster Category')}}</span>
                 <select wire:model="categoryFilter" class="mx-8 px-12 py-2 border rounded-xl border-blue-300">
-                    <option value="" selected>All</option>
+                    <option value="" selected>{{__('All')}}</option>
                     <option value="" disabled>--------</option>
                     @foreach(\App\Models\Covid\Cluster::CLUSTER_CATEGORY as $key=> $category)
                         <option value="{{$key}}">{{__($category)}}</option>
@@ -22,9 +22,9 @@
         </div>
         <div class="pb-2">
             <label class="text-left w-full">
-                <span>Filter By State</span>
+                <span>{{__('Filter By State')}}</span>
                 <select wire:model="state" class="mx-8 px-12 py-2 border rounded-xl border-blue-300">
-                    <option value="" selected>All</option>
+                    <option value="" selected>{{__('All')}}</option>
                     <option value="" disabled>--------</option>
                     @foreach(\App\Models\Covid\Cluster::STATE as $key=> $state)
                         <option value="{{$key}}">{{__($state)}}</option>
