@@ -30,6 +30,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     @stack('cdn')
     @stack('style')
+    @livewireStyles
 </head>
 <body class="bg-white dark:bg-black">
 
@@ -95,4 +96,5 @@
 @yield('footer')
 </body>
 @stack('script')
+@livewireScripts
 </html>
