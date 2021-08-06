@@ -53,6 +53,21 @@
         </div>
     </div>
     <div class="block sm:hidden items-center text-center">
+        <div class="text-center space-y-4 my-2">
+            <div>
+                <p class="text-yellow-600 dark:text-yellow-400 text-xl font-black">{{__('Navigation')}}</p>
+                <a href="{{route('public.posts.index')}}"
+                   class="text-blue-600 block dark:text-blue-400 underline">{{__('Blog')}}</a>
+                <a href="{{route('public.pandemic.index')}}"
+                   class="text-blue-600 block dark:text-blue-400 underline">{{__('Covid Dashboard')}}</a>
+            </div>
+            <div>
+                <p class="text-yellow-600 dark:text-yellow-400 text-xl font-black">{{__('Easter Egg')}}</p>
+                <a class="text-blue-600 dark:text-blue-400 underline"
+                   href="{{route('public.status.index').'#statusSection'}}">{{__('Status')}}</a>
+            </div>
+        </div>
+        <hr>
         <p class="text-blue-600 dark:text-blue-400 px-2 pt-6">{{__('All rights reserved')}}</p>
         <p class="text-blue-600 dark:text-blue-400 px-2 pt-6">{{__('Built with')}}
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-500 inline" viewBox="0 0 20 20"
