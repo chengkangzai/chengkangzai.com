@@ -6,6 +6,7 @@ use App\Models\Covid\Cluster;
 use DB;
 use Livewire\Component;
 use Livewire\WithPagination;
+use SEO;
 
 class ClusterSearch extends Component
 {
@@ -21,6 +22,8 @@ class ClusterSearch extends Component
 
     public function mount()
     {
+        SEO::setTitle(__('COVID Dashboard') . ' - ' . __('Clusters'));
+        SEO::setDescription(__('A page that help to search or query the Covid-19 cluster in Malaysia'));
         $this->updated_at = cache()->remember('cluster', 60, fn() => Cluster::orderByDesc('id')->first())->updated_at;
     }
 
