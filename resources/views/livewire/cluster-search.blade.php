@@ -1,5 +1,5 @@
 <div class="min-h-screen">
-    <div class="w-full my-2 py-4 px-4 rounded-2xl dark:bg-white">
+    <div class="w-full my-2 py-4 px-4 rounded-2xl dark:bg-white bg-gray-50 rounded-2xl shadow">
         <div class="pb-2">
             <label class="text-left w-full">
                 <span>{{__('Search any input')}}</span>
@@ -42,7 +42,7 @@
                     <table class="min-w-full divide-y divide-gray-200">
                         <thead class="bg-gray-50">
                         <tr>
-                            <th colspan="8" class="py-2 border-b">
+                            <th colspan="9" class="py-2 border-b">
                                 <a href="#healthcare-state">
                                     <h3 class="font-bold text-2xl uppercase">{{__('Active Cluster')}}</h3>
                                 </a>
@@ -62,6 +62,10 @@
                             <th scope="col"
                                 class="px-2 py-4 text-center text-xs font-medium text-gray-500 uppercase tracking-wider border-r">
                                 {{__('District')}}
+                            </th>
+                            <th scope="col"
+                                class="px-2 py-4 text-center text-xs font-medium text-gray-500 uppercase tracking-wider border-r">
+                                {{__('Cluster Category')}}
                             </th>
                             <th scope="col" wire:click="sort('cases_new')"
                                 class="px-2 py-4 text-center text-xs font-medium text-gray-500 uppercase tracking-wider border-r cursor-pointer hover:text-blue-500 hover:font-bold">
@@ -92,7 +96,6 @@
                                     <div class="flex">
                                         <div class="ml-4">
                                             <div class="text-sm font-medium text-gray-900">
-                                                {{--{{$cluster->date_announced->format('Y/m/d')}}--}}
                                                 {{str_replace('Kluster','K.',$cluster->cluster)}}
                                             </div>
                                         </div>
@@ -122,6 +125,9 @@
                                     @endif
                                 </td>
                                 <td class="py-4 whitespace-nowrap border-r">
+                                    {{__(\App\Models\Covid\Cluster::CLUSTER_CATEGORY[$cluster->category])}}
+                                </td>
+                                <td class="py-4 whitespace-nowrap border-r">
                                     {{$cluster->cases_new}}
                                 </td>
                                 <td class="py-4 whitespace-nowrap border-r">
@@ -144,7 +150,7 @@
                         </tbody>
                         <tfoot>
                         <tr>
-                            <td colspan="8" class="bg-white py-2 px-2">
+                            <td colspan="9" class="bg-white py-2 px-2">
                                 {{$clusters->links()}}
                             </td>
                         </tr>
