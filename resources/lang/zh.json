@@ -234,7 +234,8 @@
     "results": "个资料中",
     "Go to page :page": "转到第 :page 页",
     "Search any input": "搜索任何输入",
-    "Search by any keyword": "按任意关键字搜索",
-    "Filter By Cluster Category": "按感染群类别过滤",
-    "Filter By State": "按州过滤"
+    "Search by any keyword": "依据任意关键字搜索",
+    "Filter By Cluster Category": "依据感染群类别过滤",
+    "Filter By State": "依据州属过滤",
+    "Cluster Category": "感染群类别"
 }
