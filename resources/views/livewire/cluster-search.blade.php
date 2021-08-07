@@ -90,7 +90,7 @@
                         </tr>
                         </thead>
                         <tbody class="bg-white divide-y divide-gray-200">
-                        @foreach($clusters as $cluster)
+                        @forelse($clusters as $cluster)
                             <tr class="@if($loop->even) bg-gray-50 @endif ">
                                 <td class="px-6 py-4 whitespace-nowrap ">
                                     <div class="flex">
@@ -146,7 +146,13 @@
                                     {{$cluster->date_last_onset->format('d/m/y')}}
                                 </td>
                             </tr>
-                        @endforeach
+                        @empty
+                            <tr>
+                                <td colspan="9" class="py-4 whitespace-nowrap border-r">
+                                    {{__('No Data')}}
+                                </td>
+                            </tr>
+                        @endforelse
                         </tbody>
                         <tfoot>
                         <tr>
