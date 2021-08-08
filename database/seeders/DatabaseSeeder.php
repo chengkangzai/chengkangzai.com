@@ -2,6 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Console\Commands\ImportCOVIDDataFromGithub;
+use Artisan;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -20,5 +22,8 @@ class DatabaseSeeder extends Seeder
             TagsSeeder::class,
             WorksSeeder::class
         ]);
+
+        Artisan::call('import:covid');
+        Artisan::call('import:vaccine');
     }
 }
