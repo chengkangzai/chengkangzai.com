@@ -41,7 +41,6 @@ class CovidService
         $this->vaxState = cache()->remember('vaxState', $secondOfCache, fn() => VaxState::latestOne()->get());
         $this->vaxRegState = cache()->remember('vaxRegState', $secondOfCache, fn() => VaxRegState::latestOne()->get());
         $this->vaxRegMalaysia = cache()->remember('vaxRegMalaysia', $secondOfCache, fn() => VaxRegMalaysia::latestOne()->get());
-        $this->lastestCaseForPositiveRate = cache()->remember('lastestCaseForPositiveRate', $secondOfCache, fn() => CasesMalaysia::where('date', $this->testedMalaysia->first()->date)->first());
     }
 
     public function getDashboardValue(): Collection
@@ -71,8 +70,9 @@ class CovidService
         $collect->pop = $this->population->where('idxs', 0)->pluck('pop')->first();
         $collect->pop_18 = $this->population->where('idxs', 0)->pluck('pop_18')->first();
 
-        $collect->new_test = $this->testedMalaysia->pluck('rtk-ag')->first() + $this->testedMalaysia->pluck('pcr')->first();
-        $collect->positive_rate = ($this->lastestCaseForPositiveRate->cases_new / $collect->new_test) * 100;
+        $collect->new_test = $this->getTotalTest();
+        $collect->positive_rate = $this->getPositiveRate();
+
         $collect->vax_1st_daily = $this->vaxMalaysia->pluck('dose1_daily')->sum();
         $collect->vax_2nd_daily = $this->vaxMalaysia->pluck('dose2_daily')->sum();
 
@@ -109,5 +109,39 @@ class CovidService
         $collect->vaxMalaysia = $this->vaxMalaysia->first()->date;
         $collect->vaxReg = $this->vaxRegMalaysia->first()->date;
         return $collect;
+    }
+
+    private function getPositiveRate()
+    {
+        $dateOfTest = $this->testedMalaysia->first()->date;
+        $dateOfCase = $this->caseMalaysia->date;
+
+        $collect = collect();
+        $collect->rate = 0;
+
+        if ($dateOfCase == $dateOfTest) {
+            $collect->rate = ($this->caseMalaysia->cases_new / $this->getTotalTest()) * 100;
+            $collect->date = $dateOfCase;
+        }
+
+        if ($dateOfTest < $dateOfCase) {
+            $testMalaysia = cache()->remember('covid.positive.testMalaysia', 60, fn() => TestMalaysia::whereDate('date', $dateOfTest)->get()->first());
+            $totalTest = $testMalaysia->pcr + $testMalaysia->get('rtk-ag')->first();
+            $collect->rate = ($this->caseMalaysia->cases_new / $totalTest) * 100;
+            $collect->date = $dateOfTest;
+        }
+
+        if ($dateOfCase < $dateOfTest) {
+            $caseMalaysia = cache()->remember('covid.positive.caseMalaysia', 60, fn() => CasesMalaysia::whereDate('date', $dateOfCase)->get()->first());
+            $collect->rate = ($caseMalaysia->cases_new / $this->getTotalTest()) * 100;
+            $collect->date = $dateOfCase;
+        }
+
+        return $collect;
+    }
+
+    private function getTotalTest()
+    {
+        return $this->testedMalaysia->pluck('rtk-ag')->first() + $this->testedMalaysia->pluck('pcr')->first();
     }
 }
