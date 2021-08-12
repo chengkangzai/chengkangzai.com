@@ -120,7 +120,7 @@ class ImportCovidFromGithubService
                 $dailyCase = explode(',', $record);
                 return [
                     'date' => $dailyCase[0],
-                    'rtk-ag' => (!isset($dailyCase[1]) || $dailyCase[1] == '') ? 0 : $dailyCase[1],
+                    'rtk_ag' => (!isset($dailyCase[1]) || $dailyCase[1] == '') ? 0 : $dailyCase[1],
                     'pcr' => (!isset($dailyCase[2]) || $dailyCase[2] == '') ? 0 : $dailyCase[2],
                     'created_at' => now(),
                     'updated_at' => now(),
