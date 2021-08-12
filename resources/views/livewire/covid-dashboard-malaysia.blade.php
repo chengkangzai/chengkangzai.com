@@ -24,13 +24,13 @@
         <div class="dark:bg-white bg-gray-50 py-10 rounded-xl shadow ">
             <h2 class="text-2xl">{{__('Tested')}}</h2>
             <p class="text-yellow-500 font-bold text-5xl">{{number_format($dashboardValue->new_test)}}</p>
-            <span>
-                {{__('Positive Rate')}}:
-                <span class="font-bold">{{round($dashboardValue->positive_rate->rate,2)}}%</span>
-            </span>
-            <small class="text-xs">
-                ({{$dashboardValue->positive_rate->date->format('Y-m-d')}})
-            </small>
+{{--            <span>--}}
+{{--                {{__('Positive Rate')}}:--}}
+{{--                <span class="font-bold">{{round($dashboardValue->positive_rate->rate,2)}}%</span>--}}
+{{--            </span>--}}
+{{--            <small class="text-xs">--}}
+{{--                ({{$dashboardValue->positive_rate->date->format('Y-m-d')}})--}}
+{{--            </small>--}}
 
         </div>
 
