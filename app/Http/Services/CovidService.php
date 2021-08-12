@@ -125,14 +125,14 @@ class CovidService
         }
 
         if ($dateOfTest < $dateOfCase) {
-            $testMalaysia = cache()->remember('covid.positive.testMalaysia', 60, fn() => TestMalaysia::whereDate('date', $dateOfTest)->get()->first());
-            $totalTest = $testMalaysia->pcr + $testMalaysia->pluck('rtk-ag')->first();
+            $testMalaysia = cache()->remember('covid.positive.testMalaysia',60,fn()=>TestMalaysia::where('date', $dateOfTest)->orderByDesc('id')->first());
+            $totalTest = $testMalaysia->pcr + $testMalaysia->rtk_ag;
             $collect->rate = ($this->caseMalaysia->cases_new / $totalTest) * 100;
             $collect->date = $dateOfTest;
         }
 
         if ($dateOfCase < $dateOfTest) {
-            $caseMalaysia = cache()->remember('covid.positive.caseMalaysia', 60, fn() => CasesMalaysia::whereDate('date', $dateOfCase)->get()->first());
+            $caseMalaysia = cache()->remember('covid.positive.caseMalaysia', 60, fn() => CasesMalaysia::where('date', $dateOfCase)->orderByDesc('id')->first());
             $collect->rate = ($caseMalaysia->cases_new / $this->getTotalTest()) * 100;
             $collect->date = $dateOfCase;
         }
@@ -142,6 +142,6 @@ class CovidService
 
     private function getTotalTest()
     {
-        return $this->testedMalaysia->pluck('rtk-ag')->first() + $this->testedMalaysia->pluck('pcr')->first();
+        return $this->testedMalaysia->pluck('rtk_ag')->first() + $this->testedMalaysia->pluck('pcr')->first();
     }
 }
