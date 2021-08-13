@@ -6,7 +6,7 @@
     @livewire('covid-dashboard-malaysia')
     @livewire('covid-dashboard-cases-state')
     @livewire('covid-dashboard-vax-state')
-    @livewire('covid-dashboard-health-care-state')
+{{--    @livewire('covid-dashboard-health-care-state')--}}
     @livewire('covid-dashboard-about')
 @endsection
 
