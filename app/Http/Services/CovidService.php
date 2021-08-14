@@ -32,7 +32,7 @@ class CovidService
         $this->deathState = cache()->remember('deathState', $secondOfCache, fn() => DeathsState::latestOne()->get(['state', 'deaths_new', 'deaths_commutative', 'date']));
         $this->population = cache()->remember('population', $secondOfCache, fn() => Population::all(['state', 'pop', 'pop_18']));
         $this->ICU = cache()->remember('ICU', $secondOfCache, fn() => ICU::latestOne()->get(['date', 'state', 'icu_covid', 'bed_icu_covid']));
-        $this->hospital = cache()->remember('hospital', $secondOfCache, fn() => Hospital::latestOne()->get(['date', 'state', 'hosp_covid', 'beds']));
+        $this->hospital = cache()->remember('hospital', $secondOfCache, fn() => Hospital::latestOne()->get(['date', 'state', 'hosp_covid', 'beds_covid']));
         $this->pkrc = cache()->remember('pkrc', $secondOfCache, fn() => PKRC::latestOne()->get(['date', 'state', 'pkrc_covid', 'beds']));
         $this->testedMalaysia = cache()->remember('testedMalaysia', $secondOfCache, fn() => TestMalaysia::latestOne()->get());
         $this->cluster_count = cache()->remember('cluster_count', $secondOfCache, fn() => Cluster::whereStatus('active')->count());
@@ -60,7 +60,7 @@ class CovidService
         $collect->ICU = $this->ICU->pluck('icu_covid', 'state');
         $collect->bed_ICU = $this->ICU->pluck('bed_icu_covid', 'state');
         $collect->hospital = $this->hospital->pluck('hosp_covid', 'state');
-        $collect->bed_hospital = $this->hospital->pluck('beds', 'state');
+        $collect->bed_covid = $this->hospital->pluck('beds_covid', 'state');
         $collect->PKRC = $this->pkrc->pluck('pkrc_covid', 'state');
         $collect->bed_PKRC = $this->pkrc->pluck('beds', 'state');
 

@@ -17,6 +17,7 @@ class Hospital extends Model
         'date',
         'state',
         'beds',
+        'beds_covid',
         'beds_noncrit',
         'admitted_covid',
         'admitted_total',
