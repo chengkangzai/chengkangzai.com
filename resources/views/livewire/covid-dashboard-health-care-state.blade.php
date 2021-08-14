@@ -63,11 +63,11 @@
 
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap">
-                                @if(($dashboardValue->hospital[$state] ?? 0 !== 0) || ($dashboardValue->bed_hospital[$state] ?? 0 !== 0))
+                                @if(($dashboardValue->hospital[$state] ?? 0 !== 0) || ($dashboardValue->bed_covid[$state] ?? 0 !== 0))
                                     {{number_format($dashboardValue->hospital[$state] ?? 0)}}
-                                    / {{number_format($dashboardValue->bed_hospital[$state] ?? 0)}}
+                                    / {{number_format($dashboardValue->bed_covid[$state] ?? 0)}}
                                     <small class="text-xs">
-                                        {{'('.round(($dashboardValue->hospital[$state]/$dashboardValue->bed_hospital[$state])*100,2).'%)'}}
+                                        {{'('.round(($dashboardValue->hospital[$state]/$dashboardValue->bed_covid[$state])*100,2).'%)'}}
                                     </small>
                                 @else
                                     N/A
@@ -85,9 +85,9 @@
                             <td class="px-6 py-4 whitespace-nowrap">
                                 {{number_format($ICU + ($dashboardValue->hospital[$state] ?? 0 )+ ($dashboardValue->PKRC[$state] ?? 0))}}
                                 /
-                                {{number_format(($dashboardValue->bed_ICU[$state] ?? 0) + ($dashboardValue->bed_hospital[$state] ?? 0) + ($dashboardValue->bed_PKRC[$state] ??0))}}
+                                {{number_format(($dashboardValue->bed_ICU[$state] ?? 0) + ($dashboardValue->bed_covid[$state] ?? 0) + ($dashboardValue->bed_PKRC[$state] ??0))}}
                                 @php
-                                    $temp=(($ICU + ($dashboardValue->hospital[$state] ?? 0) + ($dashboardValue->PKRC[$state] ?? 0)) /(($dashboardValue->bed_ICU[$state] ?? 0) + ($dashboardValue->bed_hospital[$state] ?? 0) + ($dashboardValue->bed_PKRC[$state] ?? 0)))*100;
+                                    $temp=(($ICU + ($dashboardValue->hospital[$state] ?? 0) + ($dashboardValue->PKRC[$state] ?? 0)) /(($dashboardValue->bed_ICU[$state] ?? 0) + ($dashboardValue->bed_covid[$state] ?? 0) + ($dashboardValue->bed_PKRC[$state] ?? 0)))*100;
                                 @endphp
                                 <small class="text-xs">
                                     {{'('.round($temp,2).'%)'}}
