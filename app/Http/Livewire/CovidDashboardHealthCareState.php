@@ -22,6 +22,7 @@ class CovidDashboardHealthCareState extends Component
     public $bed_covid;
     public $PKRC;
     public $bed_PKRC;
+    public $updated_at;
     /**
      * Calculated Value
      */
@@ -65,6 +66,8 @@ class CovidDashboardHealthCareState extends Component
         $icu = $healthCareService->getICU($this->orderBy, $this->orderDirection);
         $hospital = $healthCareService->getHospital($this->orderBy, $this->orderDirection);
         $pkrc = $healthCareService->getPKRC($this->orderBy, $this->orderDirection);
+
+        $this->updated_at = $icu->first()->updated_at->format('Y-m-d');
 
         $this->ICUs = $icu->pluck('icu_covid', 'state');
         $this->bed_ICU = $icu->pluck('bed_icu_covid', 'state');
