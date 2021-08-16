@@ -9,8 +9,9 @@
                             <a href="#healthcare-state">
                                 <h3 class="font-bold text-2xl uppercase">{{__('Healthcare per States')}}</h3>
                             </a>
-                            {{--                            <span--}}
-                            {{--                                class="inline font-normal text-xs float-right">{{__('Updated at')}} {{$dashboardValue->updated_at->ICU->toDateString()}}</span>--}}
+                            <span class="inline font-normal text-xs float-right">
+                                {{__('Updated at')}} {{$updated_at}}
+                            </span>
                         </th>
                     </tr>
                     <tr>
