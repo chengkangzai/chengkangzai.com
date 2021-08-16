@@ -87,10 +87,6 @@
                         style="width: {{round(($dashboardValue->vax_2nd_cumulative/$dashboardValue->pop)*100,2)}}%"
                         class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-green-500 rounded-r-full">
                     </div>
-                    <div
-                        style="width: {{round((($dashboardValue->vax_1st_cumulative/$dashboardValue->pop)*100)-($dashboardValue->vax_2nd_cumulative/$dashboardValue->pop)*100,2)}}%"
-                        class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-green-300 rounded-r-full">
-                    </div>
                 </div>
             </div>
         </div>
