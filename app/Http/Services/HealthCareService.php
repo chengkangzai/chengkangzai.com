@@ -9,42 +9,56 @@ use Illuminate\Database\Eloquent\Collection;
 
 class HealthCareService
 {
+
+    private int $cacheSecond;
+
+    public function __construct()
+    {
+        $this->cacheSecond = 60;
+    }
+
     public function getHospital($orderBy = 'state', $orderDirection = 'asc')
     {
-        return Hospital::query()
-            ->orderByDesc('date')
-            ->take(16)
-            ->get()
-            ->map(function ($hospital) {
-                $hospital->covid_utilization = ($hospital->hosp_covid / $hospital->beds_covid) * 100;
-                return $hospital;
-            });
+        return cache()->remember('HealthCare.Hospital', $this->cacheSecond, function (){
+            return Hospital::query()
+                ->orderByDesc('date')
+                ->take(16)
+                ->get()
+                ->map(function ($hospital) {
+                    $hospital->covid_utilization = ($hospital->hosp_covid / $hospital->beds_covid) * 100;
+                    return $hospital;
+                });
+        });
     }
 
     public function getICU($orderBy = 'state', $orderDirection = 'asc')
     {
-        return ICU::query()
-            ->orderByDesc('date')
-            ->take(16)
-            ->get()
-            ->map(function ($icu) {
-                if (($icu->icu_covid ?? 0) !== 0 || ($icu->bed_icu_covid ?? 0) !== 0) {
-                    $icu->covid_utilization = ($icu->icu_covid / $icu->bed_icu_covid) * 100;
-                }
-                return $icu;
-            });
+        return cache()->remember('HealthCare.ICU', $this->cacheSecond, function (){
+            return ICU::query()
+                ->orderByDesc('date')
+                ->take(16)
+                ->get()
+                ->map(function ($icu) {
+                    if (($icu->icu_covid ?? 0) !== 0 || ($icu->bed_icu_covid ?? 0) !== 0) {
+                        $icu->covid_utilization = ($icu->icu_covid / $icu->bed_icu_covid) * 100;
+                    }
+                    return $icu;
+                });
+        });
     }
 
     public function getPKRC($orderBy = 'state', $orderDirection = 'asc')
     {
-        return PKRC::query()
-            ->orderByDesc('date')
-            ->take(16)
-            ->get()
-            ->map(function ($pkrc) {
-                $pkrc->covid_utilization = ($pkrc->pkrc_covid / $pkrc->beds) * 100;
-                return $pkrc;
-            });
+        return cache()->remember('HealthCare.PKRC', $this->cacheSecond,function (){
+            return PKRC::query()
+                ->orderByDesc('date')
+                ->take(16)
+                ->get()
+                ->map(function ($pkrc) {
+                    $pkrc->covid_utilization = ($pkrc->pkrc_covid / $pkrc->beds) * 100;
+                    return $pkrc;
+                });
+        });
     }
 
     public function getTotalOccupancyByState(Collection $icu, Collection $hospital, Collection $pkrc)
