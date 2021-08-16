@@ -9,8 +9,9 @@
                             <a href="#healthcare-state">
                                 <h3 class="font-bold text-2xl uppercase">{{__('Healthcare per States')}}</h3>
                             </a>
-                            <span
-                                class="inline font-normal text-xs float-right">{{__('Updated at')}} {{$dashboardValue->updated_at->ICU->toDateString()}}</span>
+                            <span class="inline font-normal text-xs float-right">
+                                {{__('Updated at')}} {{$updated_at}}
+                            </span>
                         </th>
                     </tr>
                     <tr>
@@ -32,13 +33,13 @@
                             ({{__('Utilisation')}})
                         </th>
                         <th scope="col"
-                            class="py-4 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
+                            class="py-4 text-center text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer hover:text-blue-500 hover:font-bold">
                             {{__('Total')}} ({{__('Overall Utilisation')}})
                         </th>
                     </tr>
                     </thead>
                     <tbody class="bg-white divide-y divide-gray-200">
-                    @foreach($dashboardValue->ICU as $state => $ICU)
+                    @foreach($ICUs as $state => $ICU)
                         <tr class="@if($loop->even) bg-gray-50 @endif">
                             <td class="px-6 py-4 whitespace-nowrap">
                                 <div class="flex">
@@ -51,46 +52,42 @@
                             </td>
 
                             <td class="px-6 py-4 whitespace-nowrap">
-                                {{number_format($ICU)}} / {{number_format($dashboardValue->bed_ICU[$state] ?? 0)}}
-                                @php
-                                    $temp =round(($ICU/$dashboardValue->bed_ICU[$state] ?? 0)*100)
-                                @endphp
-
+                                {{number_format($ICU)}} / {{number_format($bed_ICU[$state] ?? 0)}}
                                 <small
-                                    class="text-xs @if($temp > 90) text-red-700 @elseif($temp > 70) text-yellow-700 @endif">
-                                    {{'('.round(($ICU/$dashboardValue->bed_ICU[$state] ?? 0)*100,2).'%)'}}
+                                    class="text-xs @if($icu_covid_util[$state] > 90) text-red-700 @elseif($icu_covid_util[$state] > 70) text-yellow-700 @endif">
+                                    {{'('.number_format($icu_covid_util[$state],2).'%)'}}
                                 </small>
 
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap">
-                                @if(($dashboardValue->hospital[$state] ?? 0 !== 0) || ($dashboardValue->bed_covid[$state] ?? 0 !== 0))
-                                    {{number_format($dashboardValue->hospital[$state] ?? 0)}}
-                                    / {{number_format($dashboardValue->bed_covid[$state] ?? 0)}}
-                                    <small class="text-xs">
-                                        {{'('.round(($dashboardValue->hospital[$state]/$dashboardValue->bed_covid[$state])*100,2).'%)'}}
+                                @if(($hospitals[$state] ?? 0 !== 0) || ($bed_covid[$state] ?? 0 !== 0))
+                                    {{number_format($hospitals[$state] ?? 0)}}
+                                    / {{number_format($bed_covid[$state] ?? 0)}}
+                                    <small
+                                        class="text-xs @if($hospital_covid_util[$state] > 90) text-red-700 @elseif($hospital_covid_util[$state] > 70) text-yellow-700 @endif">
+                                        {{'('.round($hospital_covid_util[$state],2).'%)'}}
                                     </small>
                                 @else
                                     N/A
                                 @endif
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap">
-                                @if($dashboardValue->PKRC[$state] ?? 0 !== 0 )
-                                    {{number_format($dashboardValue->PKRC[$state] ?? 0) ?? "N/A"}}
-                                    / {{number_format($dashboardValue->bed_PKRC[$state] ?? 0) ?? "N/A"}}
-                                    <small>{{'('.round(($dashboardValue->PKRC[$state] /$dashboardValue->bed_PKRC[$state])*100,2).'%)'}}</small>
+                                @if($PKRC[$state] ?? 0 !== 0 )
+                                    {{number_format($PKRC[$state] ?? 0) ?? "N/A"}}
+                                    / {{number_format($bed_PKRC[$state] ?? 0) ?? "N/A"}}
+                                    <small
+                                        class="text-xs @if($pkrc_covid_util[$state] > 90) text-red-700 @elseif($pkrc_covid_util[$state] > 70) text-yellow-700 @endif">
+                                        {{'('.round($pkrc_covid_util[$state],2).'%)'}}
+                                    </small>
                                 @else
                                     N/A
                                 @endif
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap">
-                                {{number_format($ICU + ($dashboardValue->hospital[$state] ?? 0 )+ ($dashboardValue->PKRC[$state] ?? 0))}}
-                                /
-                                {{number_format(($dashboardValue->bed_ICU[$state] ?? 0) + ($dashboardValue->bed_covid[$state] ?? 0) + ($dashboardValue->bed_PKRC[$state] ??0))}}
-                                @php
-                                    $temp=(($ICU + ($dashboardValue->hospital[$state] ?? 0) + ($dashboardValue->PKRC[$state] ?? 0)) /(($dashboardValue->bed_ICU[$state] ?? 0) + ($dashboardValue->bed_covid[$state] ?? 0) + ($dashboardValue->bed_PKRC[$state] ?? 0)))*100;
-                                @endphp
-                                <small class="text-xs">
-                                    {{'('.round($temp,2).'%)'}}
+                                {{$totalOccupancyByState[$state]}} / {{$totalCovidBedByState[$state]}}
+                                <small
+                                    class="text-xs @if($totalUlizationByState[$state] > 90) text-red-700 @elseif($totalUlizationByState[$state] > 70) text-yellow-700 @endif">
+                                    {{'('.round($totalUlizationByState[$state],2).'%)'}}
                                 </small>
                             </td>
                         </tr>
@@ -104,16 +101,29 @@
                             </div>
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap font-bold">
-                            {{number_format($dashboardValue->ICU->sum())}}
+                            {{number_format($ICUs->sum())}} / {{number_format($bed_ICU->sum())}}
+                            <small class="text-xs">
+                                {{'('.number_format(($ICUs->sum() / $bed_ICU->sum())*100,2).'%)'}}
+                            </small>
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap font-bold">
-                            {{number_format($dashboardValue->hospital->sum())}}
+                            {{number_format($hospitals->sum())}} / {{number_format($bed_covid->sum())}}
+                            <small class="text-xs">
+                                {{'('.number_format(($hospitals->sum() / $bed_covid->sum())*100,2).'%)'}}
+                            </small>
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap font-bold">
-                            {{number_format($dashboardValue->PKRC->sum())}}
+                            {{number_format($PKRC->sum())}} / {{number_format($bed_PKRC->sum())}}
+                            <small class="text-xs">
+                                {{'('.number_format(($PKRC->sum() / $bed_PKRC->sum())*100,2).'%)'}}
+                            </small>
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap font-bold">
-                            {{number_format($dashboardValue->ICU->sum() + $dashboardValue->hospital->sum() + $dashboardValue->PKRC->sum())}}
+                            {{number_format($ICUs->sum() + $hospitals->sum() + $PKRC->sum())}} /
+                            {{number_format($bed_ICU->sum() + $bed_covid->sum() + $bed_PKRC->sum())}}
+                            <small class="text-xs">
+                                {{'('.number_format(($ICUs->sum() + $hospitals->sum() + $PKRC->sum())/($bed_ICU->sum() + $bed_covid->sum() + $bed_PKRC->sum())/3*100,2).'%)'}}
+                            </small>
                         </td>
                     </tr>
                     </tbody>
