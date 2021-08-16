@@ -14,24 +14,24 @@
                         </th>
                     </tr>
                     <tr>
-                        <th scope="col" wire:click="sort('state')"
-                            class="py-4 text-center text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer hover:text-blue-500 hover:font-bold">
+                        <th scope="col"
+                            class="py-4 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
                             {{__('State')}}
                         </th>
-                        <th scope="col" wire:click="sort('icu_covid')"
-                            class="py-4 text-center text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer hover:text-blue-500 hover:font-bold">
+                        <th scope="col"
+                            class="py-4 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
                             {{__('ICU (Covid)')}} ({{__('Utilisation')}})
                         </th>
-                        <th scope="col" wire:click="sort('hospital_covid')"
-                            class="py-4 text-center text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer hover:text-blue-500 hover:font-bold">
+                        <th scope="col"
+                            class="py-4 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
                             {{__('Hospital (Covid)')}} ({{__('Utilisation')}})
                         </th>
-                        <th scope="col" wire:click="sort('pkrc_covid')"
-                            class="py-4 text-center text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer hover:text-blue-500 hover:font-bold">
+                        <th scope="col"
+                            class="py-4 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
                             {{__('PKRC (Covid)')}} <span class="font-black text-black">*</span>
                             ({{__('Utilisation')}})
                         </th>
-                        <th scope="col" wire:click="sort('util')"
+                        <th scope="col"
                             class="py-4 text-center text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer hover:text-blue-500 hover:font-bold">
                             {{__('Total')}} ({{__('Overall Utilisation')}})
                         </th>
@@ -84,7 +84,8 @@
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap">
                                 {{$totalOccupancyByState[$state]}} / {{$totalCovidBedByState[$state]}}
-                                <small class="text-xs @if($totalUlizationByState[$state] > 90) text-red-700 @elseif($totalUlizationByState[$state] > 70) text-yellow-700 @endif">
+                                <small
+                                    class="text-xs @if($totalUlizationByState[$state] > 90) text-red-700 @elseif($totalUlizationByState[$state] > 70) text-yellow-700 @endif">
                                     {{'('.round($totalUlizationByState[$state],2).'%)'}}
                                 </small>
                             </td>
