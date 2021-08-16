@@ -19,10 +19,11 @@ class HealthCareService
 
     public function getHospital($orderBy = 'state', $orderDirection = 'asc')
     {
-        return cache()->remember('HealthCare.Hospital', $this->cacheSecond, function (){
+        return cache()->remember('HealthCare.Hospital', $this->cacheSecond, function () use ($orderBy, $orderDirection) {
             return Hospital::query()
                 ->orderByDesc('date')
                 ->take(16)
+                ->orderBy($orderBy, $orderDirection)
                 ->get()
                 ->map(function ($hospital) {
                     $hospital->covid_utilization = ($hospital->hosp_covid / $hospital->beds_covid) * 100;
@@ -33,10 +34,11 @@ class HealthCareService
 
     public function getICU($orderBy = 'state', $orderDirection = 'asc')
     {
-        return cache()->remember('HealthCare.ICU', $this->cacheSecond, function (){
+        return cache()->remember('HealthCare.ICU', $this->cacheSecond, function () use ($orderDirection, $orderBy) {
             return ICU::query()
                 ->orderByDesc('date')
                 ->take(16)
+                ->orderBy($orderBy, $orderDirection)
                 ->get()
                 ->map(function ($icu) {
                     if (($icu->icu_covid ?? 0) !== 0 || ($icu->bed_icu_covid ?? 0) !== 0) {
@@ -49,10 +51,11 @@ class HealthCareService
 
     public function getPKRC($orderBy = 'state', $orderDirection = 'asc')
     {
-        return cache()->remember('HealthCare.PKRC', $this->cacheSecond,function (){
+        return cache()->remember('HealthCare.PKRC', $this->cacheSecond, function () use ($orderDirection, $orderBy) {
             return PKRC::query()
                 ->orderByDesc('date')
                 ->take(16)
+                ->orderBy($orderBy, $orderDirection)
                 ->get()
                 ->map(function ($pkrc) {
                     $pkrc->covid_utilization = ($pkrc->pkrc_covid / $pkrc->beds) * 100;
