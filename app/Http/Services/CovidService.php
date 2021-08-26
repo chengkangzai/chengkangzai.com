@@ -74,7 +74,7 @@ class CovidService
         $collect->vax_state_cum = $this->vaxState->pluck('total_cumul', 'state');
 
         $collect->vax_reg_malaysia = $this->vaxRegMalaysia->first()->total;
-        $collect->percentage_of_reg_malaysia = round(($this->vaxRegMalaysia->first()->total / $collect->pop_18) * 100);
+        $collect->percentage_of_reg_malaysia = round(($this->vaxRegMalaysia->first()->total / $collect->pop) * 100);
         $collect->vax_reg_state = $this->vaxRegState->pluck('total', 'state');
 
         $collect->updated_at = $this->generateUpdatedAt();

@@ -95,7 +95,7 @@
             <h2 class="text-2xl">{{__('Percentage of Vaccine Register')}}</h2>
             <p class="text-green-500  font-bold text-5xl">
                 {{number_format($dashboardValue->percentage_of_reg_malaysia).'%'}}
-                <small class="text-black text-xs">*{{__('Above 18')}}</small>
+                <small class="text-black text-xs">*{{__('% Per Population')}}</small>
             </p>
             <span>{{__('Registered :')}} {{number_format($dashboardValue->vax_reg_malaysia)}}</span>
 
