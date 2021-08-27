@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ebdf36c16d7c2cd99355ec29d3981ccc",
+    "content-hash": "e880f0ae51a94adf64601e182c193932",
     "packages": [
         {
             "name": "artesaos/seotools",
@@ -4248,6 +4248,56 @@
                 "source": "https://github.com/rize/UriTemplate/tree/0.3.3"
             },
             "time": "2021-02-22T15:03:38+00:00"
+        },
+        {
+            "name": "silviolleite/laravelpwa",
+            "version": "2.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/silviolleite/laravel-pwa.git",
+                "reference": "5f7135d2ee870af01793c9fdf6b1b932b546e20e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/silviolleite/laravel-pwa/zipball/5f7135d2ee870af01793c9fdf6b1b932b546e20e",
+                "reference": "5f7135d2ee870af01793c9fdf6b1b932b546e20e",
+                "shasum": ""
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "LaravelPWA\\Providers\\LaravelPWAServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "LaravelPWA\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Silvio Luis Leite",
+                    "email": "silviolleite@gmail.com"
+                }
+            ],
+            "description": "Looks like an app, feels like an app, but NOT an app.",
+            "keywords": [
+                "laravel",
+                "php",
+                "progressive web apps",
+                "pwa"
+            ],
+            "support": {
+                "issues": "https://github.com/silviolleite/laravel-pwa/issues",
+                "source": "https://github.com/silviolleite/laravel-pwa/tree/2.0.3"
+            },
+            "time": "2020-08-20T12:19:16+00:00"
         },
         {
             "name": "spatie/browsershot",
@@ -11746,5 +11796,5 @@
         "php": "^7.4|^8.0"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.0.0"
+    "plugin-api-version": "2.1.0"
 }

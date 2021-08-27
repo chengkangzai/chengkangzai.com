@@ -30,6 +30,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     @stack('cdn')
     @stack('style')
+    @laravelPWA
     @livewireStyles
 </head>
 <body class="bg-white dark:bg-black">
