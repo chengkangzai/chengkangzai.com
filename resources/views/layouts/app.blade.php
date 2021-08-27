@@ -23,6 +23,7 @@
         gtag('config', 'G-G0TL352WKG');
     </script>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    @laravelPWA
     @stack('cdn')
     @stack('style')
 </head>
