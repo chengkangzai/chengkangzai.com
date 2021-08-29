@@ -25,8 +25,6 @@ class CovidService
         $secondOfCache = 60;
         $this->caseMalaysia = cache()->remember('caseMalaysia', $secondOfCache, fn() => CasesMalaysia::latestOne()->get()->first());
         $this->deathMalaysia = cache()->remember('deathMalaysia', $secondOfCache, fn() => DeathsMalaysia::latestOne()->get()->first());
-        $this->caseState = cache()->remember('caseState', $secondOfCache, fn() => CasesState::latestOne()->get(['state', 'cases_new', 'cases_cumulative', 'date']));
-        $this->deathState = cache()->remember('deathState', $secondOfCache, fn() => DeathsState::latestOne()->get(['state', 'deaths_new', 'deaths_commutative', 'date']));
         $this->population = cache()->remember('population', $secondOfCache, fn() => Population::all(['state', 'pop', 'pop_18']));
         $this->testedMalaysia = cache()->remember('testedMalaysia', $secondOfCache, fn() => TestMalaysia::latestOne()->get());
         $this->cluster_count = cache()->remember('cluster_count', $secondOfCache, fn() => Cluster::whereStatus('active')->count());
@@ -45,11 +43,6 @@ class CovidService
         $collect->new_cases_cum = $this->caseMalaysia->cases_cumulative;
         $collect->new_death = $this->deathMalaysia->deaths_new;
         $collect->new_death_cum = $this->deathMalaysia->deaths_new_cumulative;
-
-        $collect->new_cases_state = $this->caseState->pluck('cases_new', 'state');
-        $collect->new_cases_state_cum = $this->caseState->pluck('cases_cumulative', 'state');
-        $collect->newDeath_state = $this->deathState->pluck('deaths_new', 'state');
-        $collect->newDeath_state_cum = $this->deathState->pluck('deaths_commutative', 'state');
 
         $collect->active_cluster_count = $this->cluster_count;
 
@@ -86,9 +79,7 @@ class CovidService
     {
         $collect = collect();
         $collect->caseMalaysia = $this->caseMalaysia->date;
-        $collect->caseState = $this->caseState->first()->date;
         $collect->deathMalaysia = $this->deathMalaysia->date;
-        $collect->deathState = $this->deathState->first()->date;
         $collect->tested = $this->testedMalaysia->first()->date;
         $collect->cluster = $this->cluster->created_at;
         $collect->vaxState = $this->vaxState->first()->date;
