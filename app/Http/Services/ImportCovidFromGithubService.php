@@ -270,26 +270,26 @@ class ImportCovidFromGithubService
 
     public function updateCumulativeCasesState()
     {
-        $states = CasesState::distinct()->get('state')->toArray();
+        $totalCase = CasesState::all();
 
-        foreach ($states as $state) {
+        foreach (CasesState::STATE as $state) {
             $cum = 0;
-            $cases = CasesState::whereState($state)->get();
+            $cases = $totalCase->filter(fn($case) => $case->state == $state);
             foreach ($cases as $case) {
                 $cum = $cum + $case->cases_new;
                 $case->cases_cumulative = $cum;
-                $case->push();
+                $case->save();
             }
         }
     }
 
     public function updateCumulativeDeathState()
     {
-        $states = DeathsState::distinct()->get('state')->toArray();
+        $totalDeath = DeathsState::all();
 
-        foreach ($states as $state) {
+        foreach (DeathsState::STATE as $state) {
             $cum = 0;
-            $cases = DeathsState::whereState($state)->get();
+            $cases = $totalDeath->filter(fn($death) => $death->state == $state);
             foreach ($cases as $case) {
                 $cum = $cum + $case->deaths_new;
                 $case->deaths_commutative = $cum;
