@@ -23,7 +23,7 @@ class DatabaseSeeder extends Seeder
             WorksSeeder::class
         ]);
 
-        Artisan::call('import:covid');
-        Artisan::call('import:vaccine');
+        exec('php artisan import:covid');
+        exec('php artisan import:vaccine');
     }
 }

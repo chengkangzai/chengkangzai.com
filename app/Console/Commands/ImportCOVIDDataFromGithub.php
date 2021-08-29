@@ -62,6 +62,7 @@ class ImportCOVIDDataFromGithub extends Command
             $this->importDeathMalaysia();
             $this->importDeathState();
             $this->importTestMalaysia();
+            $this->importTestState();
             $this->importCluster();
             $this->importHospitals();
             $this->importICU();
@@ -92,6 +93,7 @@ class ImportCOVIDDataFromGithub extends Command
         DB::table('deaths_malaysia')->truncate();
         DB::table('deaths_states')->truncate();
         DB::table('test_malaysia')->truncate();
+        DB::table('test_states')->truncate();
         DB::table('clusters')->truncate();
         DB::table('hospitals')->truncate();
         DB::table('icus')->truncate();
@@ -312,6 +314,22 @@ class ImportCOVIDDataFromGithub extends Command
             DB::table('populations')->insert($records);
 
         });
+    }
+
+    private function importTestState()
+    {
+        $records = $this->covidService->getTestState();
+
+        DB::table('test_states')->truncate();
+
+        $this->info('[TestState] : ' . 'Injecting...');
+
+        $this->withProgressBar($records, function ($records) {
+
+            DB::table('test_states')->insert($records);
+
+        });
+
     }
 
 }

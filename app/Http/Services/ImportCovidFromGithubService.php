@@ -19,6 +19,7 @@ class ImportCovidFromGithubService
         'DEATH_MALAYSIA' => self::baseUrl . '/epidemic/deaths_malaysia.csv',
         'DEATH_STATE' => self::baseUrl . '/epidemic/deaths_state.csv',
         'TEST_MALAYSIA' => self::baseUrl . '/epidemic/tests_malaysia.csv',
+        'TEST_STATE' => self::baseUrl . '/epidemic/tests_state.csv',
         'CLUSTER' => self::baseUrl . '/epidemic/clusters.csv',
         'HOSPITAL' => self::baseUrl . '/epidemic/hospital.csv',
         'ICU' => self::baseUrl . '/epidemic/icu.csv',
@@ -131,6 +132,23 @@ class ImportCovidFromGithubService
                     'date' => $dailyCase[0],
                     'rtk_ag' => (!isset($dailyCase[1]) || $dailyCase[1] == '') ? 0 : $dailyCase[1],
                     'pcr' => (!isset($dailyCase[2]) || $dailyCase[2] == '') ? 0 : $dailyCase[2],
+                    'created_at' => now(),
+                    'updated_at' => now(),
+                ];
+            });
+    }
+
+    public function getTestState(): Collection
+    {
+        return collect(explode(PHP_EOL, Http::get(self::url['TEST_STATE'])))
+            ->slice(1, -1)
+            ->map(function ($record) {
+                $dailyCase = explode(',', $record);
+                return [
+                    'date' => $dailyCase[0],
+                    'state' => (!isset($dailyCase[1]) || $dailyCase[1] == '') ? 0 : $dailyCase[1],
+                    'rtk-ag' => (!isset($dailyCase[2]) || $dailyCase[2] == '') ? 0 : $dailyCase[2],
+                    'pcr' => (!isset($dailyCase[3]) || $dailyCase[3] == '') ? 0 : $dailyCase[3],
                     'created_at' => now(),
                     'updated_at' => now(),
                 ];
