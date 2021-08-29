@@ -1,9 +1,9 @@
 {
-    "name": "CCK",
+    "name": "CCK - Covid Dashboard",
     "short_name": "CCK",
-    "start_url": "/",
+    "start_url": "/pandemic",
     "display" : "standalone",
-    "description": "Personal Portfolio",
+    "description": "A Dashboard to monitoring Covid 19 Cases, HealthCare Facilities and Vaccine Status",
     "orientation" : "any",
     "icons": [
         {
