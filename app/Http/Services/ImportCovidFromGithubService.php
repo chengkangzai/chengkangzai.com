@@ -43,13 +43,15 @@ class ImportCovidFromGithubService
                 return [
                     'date' => $dailyCase[0],
                     'cases_new' => $new_cases,
-                    'cluster_import' => (!isset($dailyCase[2]) || $dailyCase[2] == '') ? 0 : $dailyCase[2],
-                    'cluster_religious' => (!isset($dailyCase[3]) || $dailyCase[3] == '') ? 0 : $dailyCase[3],
-                    'cluster_community' => (!isset($dailyCase[4]) || $dailyCase[4] == '') ? 0 : $dailyCase[4],
-                    'cluster_highRisk' => (!isset($dailyCase[5]) || $dailyCase[5] == '') ? 0 : $dailyCase[5],
-                    'cluster_education' => (!isset($dailyCase[6]) || $dailyCase[6] == '') ? 0 : $dailyCase[6],
-                    'cluster_detentionCentre' => (!isset($dailyCase[7]) || $dailyCase[7] == '') ? 0 : $dailyCase[7],
-                    'cluster_workplace' => (!isset($dailyCase[8]) || $dailyCase[8] == '') ? 0 : $dailyCase[8],
+                    'cases_import' => $dailyCase[2] ?? 0,
+                    'cases_recovered' => $dailyCase[3] ?? 0,
+                    'cluster_import' => (!isset($dailyCase[4]) || $dailyCase[4] == '') ? 0 : $dailyCase[4],
+                    'cluster_religious' => (!isset($dailyCase[5]) || $dailyCase[5] == '') ? 0 : $dailyCase[5],
+                    'cluster_community' => (!isset($dailyCase[6]) || $dailyCase[6] == '') ? 0 : $dailyCase[6],
+                    'cluster_highRisk' => (!isset($dailyCase[7]) || $dailyCase[7] == '') ? 0 : $dailyCase[7],
+                    'cluster_education' => (!isset($dailyCase[8]) || $dailyCase[8] == '') ? 0 : $dailyCase[8],
+                    'cluster_detentionCentre' => (!isset($dailyCase[9]) || $dailyCase[9] == '') ? 0 : $dailyCase[9],
+                    'cluster_workplace' => (!isset($dailyCase[10]) || $dailyCase[10] == '') ? 0 : $dailyCase[10],
                     'cases_cumulative' => $cumCasesMalaysia,
                     'created_at' => now(),
                     'updated_at' => now(),
@@ -66,10 +68,14 @@ class ImportCovidFromGithubService
                 $dailyCase = explode(',', $record);
                 $state = (!isset($dailyCase[1]) || $dailyCase[1] == '') ? 0 : $dailyCase[1];
                 $new_cases = (!isset($dailyCase[2]) || $dailyCase[2] == '') ? 0 : $dailyCase[2];
+                $cases_import = (!isset($dailyCase[3]) || $dailyCase[3] == '') ? 0 : $dailyCase[3];
+                $cases_recovered = (!isset($dailyCase[4]) || $dailyCase[4] == '') ? 0 : $dailyCase[4];
                 return [
                     'date' => $dailyCase[0],
                     'state' => $state,
                     'cases_new' => $new_cases,
+                    'cases_import' => $cases_import,
+                    'cases_recovered' => $cases_recovered,
                     'cases_cumulative' => 0,
                     'created_at' => now(),
                     'updated_at' => now(),
@@ -77,7 +83,7 @@ class ImportCovidFromGithubService
             });
     }
 
-    public function getDeathMalaysia()
+    public function getDeathMalaysia(): Collection
     {
         global $cumDeathMalaysia;
         return collect(explode(PHP_EOL, Http::get(self::url['DEATH_MALAYSIA'])))
@@ -85,10 +91,12 @@ class ImportCovidFromGithubService
             ->map(function ($record) use (&$cumDeathMalaysia) {
                 $dailyCase = explode(',', $record);
                 $newDeath = (!isset($dailyCase[1]) || $dailyCase[1] == '') ? 0 : $dailyCase[1];
+                $bidDeath = (!isset($dailyCase[2]) || $dailyCase[2] == '') ? 0 : $dailyCase[2];
                 $cumDeathMalaysia = $cumDeathMalaysia + $newDeath;
                 return [
                     'date' => $dailyCase[0],
                     'deaths_new' => $newDeath,
+                    'deaths_bid' => $bidDeath,
                     'deaths_new_cumulative' => $cumDeathMalaysia,
                     'created_at' => now(),
                     'updated_at' => now(),
@@ -106,13 +114,14 @@ class ImportCovidFromGithubService
                     'date' => $dailyCase[0],
                     'state' => (!isset($dailyCase[1]) || $dailyCase[1] == '') ? 0 : $dailyCase[1],
                     'deaths_new' => (!isset($dailyCase[2]) || $dailyCase[2] == '') ? 0 : $dailyCase[2],
+                    'deaths_bid' => (!isset($dailyCase[3]) || $dailyCase[3] == '') ? 0 : $dailyCase[3],
                     'created_at' => now(),
                     'updated_at' => now(),
                 ];
             });
     }
 
-    public function getTestMalaysia()
+    public function getTestMalaysia(): Collection
     {
         return collect(explode(PHP_EOL, Http::get(self::url['TEST_MALAYSIA'])))
             ->slice(1, -1)

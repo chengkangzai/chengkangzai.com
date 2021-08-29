@@ -26,6 +26,8 @@ class CasesMalaysia extends Model
         'cluster_detentionCentre',
         'cluster_workplace',
         'cases_cumulative',
+        'cases_import',
+        'cases_recovered',
     ];
 
     public function scopeLatestOne(Builder $query): Builder

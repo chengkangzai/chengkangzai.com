@@ -36,6 +36,7 @@ class DeathsState extends Model
         'date',
         'state',
         'deaths_new',
+        'deaths_bid',
         'deaths_commutative',
     ];
 

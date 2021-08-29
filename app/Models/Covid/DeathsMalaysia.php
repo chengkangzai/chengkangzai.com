@@ -18,6 +18,7 @@ class DeathsMalaysia extends Model
         'id',
         'date',
         'deaths_new',
+        'deaths_bid',
         'deaths_new_cumulative',
     ];
 
