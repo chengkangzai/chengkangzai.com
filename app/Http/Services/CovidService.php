@@ -5,10 +5,8 @@ namespace App\Http\Services;
 
 
 use App\Models\Covid\CasesMalaysia;
-use App\Models\Covid\CasesState;
 use App\Models\Covid\Cluster;
 use App\Models\Covid\DeathsMalaysia;
-use App\Models\Covid\DeathsState;
 use App\Models\Covid\Population;
 use App\Models\Covid\TestMalaysia;
 use App\Models\Covid\VaxMalaysia;
@@ -102,7 +100,7 @@ class CovidService
         }
 
         if ($dateOfTest < $dateOfCase) {
-            $testMalaysia = cache()->remember('covid.positive.testMalaysia',60,fn()=>TestMalaysia::where('date', $dateOfTest)->orderByDesc('id')->first());
+            $testMalaysia = cache()->remember('covid.positive.testMalaysia', 60, fn() => TestMalaysia::where('date', $dateOfTest)->orderByDesc('id')->first());
             $totalTest = $testMalaysia->pcr + $testMalaysia->rtk_ag;
             $collect->rate = ($this->caseMalaysia->cases_new / $totalTest) * 100;
             $collect->date = $dateOfTest;
