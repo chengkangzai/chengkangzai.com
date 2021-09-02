@@ -67,7 +67,7 @@ class CovidDashboardHealthCareState extends Component
         $hospital = $healthCareService->getHospital($this->orderBy, $this->orderDirection);
         $pkrc = $healthCareService->getPKRC($this->orderBy, $this->orderDirection);
 
-        $this->updated_at = $icu->first()->updated_at->format('Y-m-d');
+        $this->updated_at = $icu->first()->date->toDateString();
 
         $this->ICUs = $icu->pluck('icu_covid', 'state');
         $this->bed_ICU = $icu->pluck('bed_icu_covid', 'state');
