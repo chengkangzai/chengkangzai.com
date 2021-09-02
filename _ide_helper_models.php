@@ -51,6 +51,9 @@ namespace App\Models\Covid{
  * @property int $id
  * @property \Illuminate\Support\Carbon $date
  * @property int $cases_new
+ * @property int $cases_import
+ * @property int $cases_recovered_cumulative
+ * @property int $cases_recovered
  * @property int $cluster_import
  * @property int $cluster_religious
  * @property int $cluster_community
@@ -66,7 +69,10 @@ namespace App\Models\Covid{
  * @method static \Illuminate\Database\Eloquent\Builder|CasesMalaysia newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|CasesMalaysia query()
  * @method static \Illuminate\Database\Eloquent\Builder|CasesMalaysia whereCasesCumulative($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|CasesMalaysia whereCasesImport($value)
  * @method static \Illuminate\Database\Eloquent\Builder|CasesMalaysia whereCasesNew($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|CasesMalaysia whereCasesRecovered($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|CasesMalaysia whereCasesRecoveredCumulative($value)
  * @method static \Illuminate\Database\Eloquent\Builder|CasesMalaysia whereClusterCommunity($value)
  * @method static \Illuminate\Database\Eloquent\Builder|CasesMalaysia whereClusterDetentionCentre($value)
  * @method static \Illuminate\Database\Eloquent\Builder|CasesMalaysia whereClusterEducation($value)
@@ -90,6 +96,9 @@ namespace App\Models\Covid{
  * @property \Illuminate\Support\Carbon $date
  * @property string $state
  * @property string $cases_new
+ * @property int $cases_import
+ * @property int $cases_recovered
+ * @property int $cases_recovered_cumulative
  * @property string|null $cases_cumulative
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
@@ -98,7 +107,10 @@ namespace App\Models\Covid{
  * @method static \Illuminate\Database\Eloquent\Builder|CasesState newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|CasesState query()
  * @method static \Illuminate\Database\Eloquent\Builder|CasesState whereCasesCumulative($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|CasesState whereCasesImport($value)
  * @method static \Illuminate\Database\Eloquent\Builder|CasesState whereCasesNew($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|CasesState whereCasesRecovered($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|CasesState whereCasesRecoveredCumulative($value)
  * @method static \Illuminate\Database\Eloquent\Builder|CasesState whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|CasesState whereDate($value)
  * @method static \Illuminate\Database\Eloquent\Builder|CasesState whereId($value)
@@ -163,6 +175,8 @@ namespace App\Models\Covid{
  * @property int $id
  * @property \Illuminate\Support\Carbon $date
  * @property int $deaths_new
+ * @property int $deaths_bid_cumulative
+ * @property int $deaths_bid
  * @property int|null $deaths_new_cumulative
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
@@ -172,6 +186,8 @@ namespace App\Models\Covid{
  * @method static \Illuminate\Database\Eloquent\Builder|DeathsMalaysia query()
  * @method static \Illuminate\Database\Eloquent\Builder|DeathsMalaysia whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|DeathsMalaysia whereDate($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|DeathsMalaysia whereDeathsBid($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|DeathsMalaysia whereDeathsBidCumulative($value)
  * @method static \Illuminate\Database\Eloquent\Builder|DeathsMalaysia whereDeathsNew($value)
  * @method static \Illuminate\Database\Eloquent\Builder|DeathsMalaysia whereDeathsNewCumulative($value)
  * @method static \Illuminate\Database\Eloquent\Builder|DeathsMalaysia whereId($value)
@@ -188,6 +204,8 @@ namespace App\Models\Covid{
  * @property \Illuminate\Support\Carbon $date
  * @property string $state
  * @property int $deaths_new
+ * @property int $deaths_bid_cumulative
+ * @property int $deaths_bid
  * @property int|null $deaths_commutative
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
@@ -197,6 +215,8 @@ namespace App\Models\Covid{
  * @method static \Illuminate\Database\Eloquent\Builder|DeathsState query()
  * @method static \Illuminate\Database\Eloquent\Builder|DeathsState whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|DeathsState whereDate($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|DeathsState whereDeathsBid($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|DeathsState whereDeathsBidCumulative($value)
  * @method static \Illuminate\Database\Eloquent\Builder|DeathsState whereDeathsCommutative($value)
  * @method static \Illuminate\Database\Eloquent\Builder|DeathsState whereDeathsNew($value)
  * @method static \Illuminate\Database\Eloquent\Builder|DeathsState whereId($value)
@@ -214,6 +234,7 @@ namespace App\Models\Covid{
  * @property \Illuminate\Support\Carbon $date
  * @property string $state
  * @property int $beds
+ * @property int $beds_covid Bed for covid
  * @property int $beds_noncrit Non Critical Beds
  * @property int $admitted_pui
  * @property int $admitted_covid
@@ -234,6 +255,7 @@ namespace App\Models\Covid{
  * @method static \Illuminate\Database\Eloquent\Builder|Hospital whereAdmittedPui($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Hospital whereAdmittedTotal($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Hospital whereBeds($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Hospital whereBedsCovid($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Hospital whereBedsNoncrit($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Hospital whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Hospital whereDate($value)
@@ -371,7 +393,7 @@ namespace App\Models\Covid{
  *
  * @property int $id
  * @property \Illuminate\Support\Carbon $date
- * @property int $rtk-ag
+ * @property int $rtk_ag
  * @property int $pcr
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
@@ -387,6 +409,32 @@ namespace App\Models\Covid{
  * @method static \Illuminate\Database\Eloquent\Builder|TestMalaysia whereUpdatedAt($value)
  */
 	class TestMalaysia extends \Eloquent {}
+}
+
+namespace App\Models\Covid{
+/**
+ * App\Models\Covid\TestState
+ *
+ * @property int $id
+ * @property \Illuminate\Support\Carbon $date
+ * @property string $state
+ * @property int $rtk_ag
+ * @property int $pcr
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @method static \Illuminate\Database\Eloquent\Builder|TestState latestOne()
+ * @method static \Illuminate\Database\Eloquent\Builder|TestState newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|TestState newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|TestState query()
+ * @method static \Illuminate\Database\Eloquent\Builder|TestState whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|TestState whereDate($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|TestState whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|TestState wherePcr($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|TestState whereRtkAg($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|TestState whereState($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|TestState whereUpdatedAt($value)
+ */
+	class TestState extends \Eloquent {}
 }
 
 namespace App\Models\Covid{

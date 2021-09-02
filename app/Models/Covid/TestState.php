@@ -6,11 +6,19 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class DeathsState extends Model
+class TestState extends Model
 {
     use HasFactory;
 
     protected $dates = ['date', 'create_at', 'updated_at'];
+
+    protected $fillable = [
+        'id',
+        'date',
+        'state',
+        'rtk_ag',
+        'pcr',
+    ];
 
     const STATE = [
         "Johor" => "Johor",
@@ -31,18 +39,9 @@ class DeathsState extends Model
         "W.P. Putrajaya" => "W.P. Putrajaya",
     ];
 
-    protected $fillable = [
-        'id',
-        'date',
-        'state',
-        'deaths_new',
-        'deaths_bid',
-        'deaths_commutative',
-        'deaths_bid_cumulative',
-    ];
-
     public function scopeLatestOne(Builder $query): Builder
     {
-        return $query->orderByDesc('date')->take(16)->orderBy('state');
+        return $query->orderByDesc('date')->take(16);
     }
+
 }

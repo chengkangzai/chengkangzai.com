@@ -5,12 +5,13 @@
                 <table class="min-w-full divide-y divide-gray-200">
                     <thead class="bg-gray-50">
                     <tr>
-                        <th colspan="5" class="py-2 border-b">
+                        <th colspan="6" class="py-2 border-b">
                             <a href="#case-state">
                                 <h3 class="font-bold text-2xl uppercase">{{__('Cases per States')}}</h3>
                             </a>
-                            <span
-                                class="inline font-normal text-xs float-right">{{__('Updated at')}} {{$dashboardValue->updated_at->caseState->toDateString()}}</span>
+                            <span class="inline font-normal text-xs float-right">
+                                {{__('Updated at')}} {{$updated_at}}
+                            </span>
                         </th>
                     </tr>
                     <tr>
@@ -20,7 +21,7 @@
                         </th>
                         <th scope="col"
                             class="py-4 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
-                            {{__('New Case')}} ({{__('% per population')}})
+                            {{__('New Case')}}
                         </th>
                         <th scope="col"
                             class="py-4 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -34,10 +35,14 @@
                             class="py-4 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
                             {{__('Cumulative Death')}} ({{__('Fatality rate')}})
                         </th>
+                        <th scope="col"
+                            class="py-4 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
+                            {{__('Tested')}}* ({{__('Positive Rate')}})
+                        </th>
                     </tr>
                     </thead>
                     <tbody class="bg-white divide-y divide-gray-200">
-                    @foreach($dashboardValue->new_cases_state as $state => $newCase)
+                    @foreach($newCase as $state => $n)
                         <tr class="@if($loop->even) bg-gray-50 @endif">
                             <td class="px-6 py-4 whitespace-nowrap">
                                 <div class="flex">
@@ -49,24 +54,28 @@
                                 </div>
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap">
-                                {{number_format($newCase)}}
+                                {{number_format($newCase[$state])}}
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                {{number_format($cumCase[$state])}}
                                 <small class="text-xs">
-                                    (+{{ round(($newCase / $dashboardValue->population_state[$state])*100,4)}}%)
+                                    {{ '('.number_format($cumCasePrecentage[$state],2).'%)'}}
                                 </small>
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap">
-                                {{number_format($dashboardValue->new_cases_state_cum[$state])}}
+                                {{number_format($newDeath[$state])}}
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                {{number_format($cumDeath[$state])}}
                                 <small class="text-xs">
-                                    {{ '('.round(($dashboardValue->new_cases_state_cum[$state] / $dashboardValue->population_state[$state])*100,2).'%)'}}
+                                    {{ '('.number_format($fatalityRate[$state],2).'%)'}}
                                 </small>
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap">
-                                {{number_format($dashboardValue->newDeath_state[$state])}}
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                {{number_format($dashboardValue->newDeath_state_cum[$state])}}
-                                <small class="text-xs">
-                                    {{ '('.round(($dashboardValue->newDeath_state_cum[$state] / $dashboardValue->new_cases_state_cum[$state])*100,2).'%)'}}
+                                {{number_format($tests[$state])}}
+                                <small
+                                    class="text-xs @if($positiveRate[$state] > 10) text-red-700 @elseif($positiveRate[$state] > 5) text-yellow-700 @endif">
+                                    {{ '('.round($positiveRate[$state],2).'%)'}}
                                 </small>
                             </td>
                         </tr>
@@ -80,33 +89,47 @@
                             </div>
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap font-bold">
-                            {{number_format($dashboardValue->new_cases_state->sum())}}
+                            {{number_format($newCase->sum())}}
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap font-bold">
+                            {{number_format($cumCase->sum())}}
                             <small class="text-xs">
-                                (+{{round(($dashboardValue->new_cases_state->sum() / $dashboardValue->pop)*100,4)}}
-                                %)
+                                {{'('.number_format($cumCasePrecentage->avg(),2).'%)'}}
                             </small>
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap font-bold">
-                            {{number_format($dashboardValue->new_cases_state_cum->sum())}}
-                            <small class="text-xs">
-                                ({{round(($dashboardValue->new_cases_state_cum->sum() / $dashboardValue->pop)*100,2)}}
-                                %)
-                            </small>
-                        </td>
-                        <td class="px-6 py-4 whitespace-nowrap font-bold">
-                            {{number_format($dashboardValue->newDeath_state->sum())}}
+                            {{number_format($newDeath->sum())}}
                             <small class="text-xs">
                             </small>
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap font-bold">
-                            {{number_format($dashboardValue->newDeath_state_cum->sum())}}
+                            {{number_format($cumDeath->sum())}}
                             <small class="text-xs">
-                                ({{round(($dashboardValue->newDeath_state_cum->sum() / $dashboardValue->new_cases_state_cum->sum())*100,2)}}
-                                %)
+                                {{ '('.number_format($fatalityRate->avg(),2).'%)'}}
+                            </small>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap font-bold">
+                            {{number_format($tests->sum())}}
+                            <small class="text-xs">
+                                {{'('.number_format($positiveRate->avg()).'%)'}}
                             </small>
                         </td>
                     </tr>
                     </tbody>
+                    <tfoot>
+                    <tr class="bg-white">
+                        <td class="px-6 py-4 whitespace-nowrap text-left" colspan="6">
+                            <div class="flex max-w-full">
+                                <div class="ml-4 ">
+                                    <p class="text-sm font-medium text-gray-900">
+                                        <span class="text-black">*</span>
+                                        {{__('Not necessarily unique individuals')}}
+                                    </p>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    </tfoot>
                 </table>
             </div>
         </div>
