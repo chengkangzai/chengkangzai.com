@@ -65,10 +65,38 @@ class CasesStateService
 
     }
 
-
-    public function calcPositiveRate(Collection $cases, Collection $tests)
+    public function calcFatalityRate(Collection $cases, Collection $deaths): Collection
     {
+        $deaths = $deaths->pluck('deaths_commutative', 'state');
+        return $cases->map(function ($cases) use ($deaths) {
+            $cases->fatalityRate = ($deaths[$cases->state] / $cases->cases_cumulative) * 100;
+            return $cases;
+        })->pluck('fatalityRate', 'state');
+    }
 
+    public function calcPositiveRate(Collection $cases, Collection $tests): Collection
+    {
+        $tests = $tests->pluck('totaltest', 'state');
+        return $cases->map(function ($cases) use ($tests) {
+            $cases->positiveRate = ($cases->cases_new / $tests[$cases->state]) * 100;
+            return $cases;
+        })->pluck('positiveRate', 'state');
+
+    }
+
+    private function getTestDateShouldQuery(): string
+    {
+        $dateOfTest = TestState::query()->orderByDesc('date')->take(1)->get()->first()->date;
+        $dateOfCase = CasesState::query()->orderByDesc('date')->take(1)->get()->first()->date;
+
+        if ($dateOfCase == $dateOfTest) {
+            return $dateOfCase;
+        }
+
+        if ($dateOfTest < $dateOfCase) {
+            return $dateOfTest;
+        }
+        return $dateOfCase;
     }
 
 
