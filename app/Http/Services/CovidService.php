@@ -112,7 +112,7 @@ class CovidService
 
         if ($dateOfTest < $dateOfCase) {
             $testMalaysia = cache()->remember('covid.positive.testMalaysia',60,fn()=>TestMalaysia::where('date', $dateOfTest)->orderByDesc('id')->first());
-            $totalTest = $testMalaysia->pcr + $testMalaysia->rtk_ag;
+            $totalTest = $testMalaysia->pcr + $testMalaysia->pluck('rtk_ag')->first();
             $collect->rate = ($this->caseMalaysia->cases_new / $totalTest) * 100;
             $collect->date = $dateOfTest;
         }
