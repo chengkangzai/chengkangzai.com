@@ -10,7 +10,7 @@
                                 <h3 class="font-bold text-2xl uppercase">{{__('Cases per States')}}</h3>
                             </a>
                             <span class="inline font-normal text-xs float-right">
-                                {{__('Data on :')}} {{$updated_at}}
+                                {{__('Updated at')}} {{$updated_at}}
                             </span>
                         </th>
                     </tr>
@@ -37,7 +37,7 @@
                         </th>
                         <th scope="col"
                             class="py-4 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
-                            {{__('Test')}}* ({{__('Positive Rate')}})
+                            {{__('Tested')}}* ({{__('Positive Rate')}})
                         </th>
                     </tr>
                     </thead>
