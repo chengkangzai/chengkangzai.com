@@ -35,12 +35,15 @@ class ImportCovidFromGithubService
     public function getCasesMalaysia(): Collection
     {
         global $cumCasesMalaysia;
+        global $cumRecoveredMalaysia;
         return collect(explode(PHP_EOL, Http::get(self::url['CASES_MALAYSIA'])))
             ->slice(1, -1)
-            ->map(function ($record) use (&$cumCasesMalaysia) {
+            ->map(function ($record) use (&$cumCasesMalaysia, &$cumRecoveredMalaysia) {
                 $dailyCase = str_getcsv(str_replace("\"", "", $record));
                 $new_cases = (!isset($dailyCase[1]) || $dailyCase[1] == '') ? 0 : $dailyCase[1];
                 $cumCasesMalaysia = $cumCasesMalaysia + $new_cases;
+                $new_recovered = (!isset($dailyCase[3]) || $dailyCase[3] == '') ? 0 : $dailyCase[3];
+                $cumRecoveredMalaysia = $new_recovered + $cumRecoveredMalaysia;
                 return [
                     'date' => $dailyCase[0],
                     'cases_new' => $new_cases,
@@ -54,6 +57,7 @@ class ImportCovidFromGithubService
                     'cluster_detentionCentre' => (!isset($dailyCase[9]) || $dailyCase[9] == '') ? 0 : $dailyCase[9],
                     'cluster_workplace' => (!isset($dailyCase[10]) || $dailyCase[10] == '') ? 0 : $dailyCase[10],
                     'cases_cumulative' => $cumCasesMalaysia,
+                    'cases_recovered_cumulative' => $cumCasesMalaysia,
                     'created_at' => now(),
                     'updated_at' => now(),
                 ];
@@ -78,6 +82,7 @@ class ImportCovidFromGithubService
                     'cases_import' => $cases_import,
                     'cases_recovered' => $cases_recovered,
                     'cases_cumulative' => 0,
+                    'cases_recovered_cumulative' => 0,
                     'created_at' => now(),
                     'updated_at' => now(),
                 ];
@@ -87,18 +92,21 @@ class ImportCovidFromGithubService
     public function getDeathMalaysia(): Collection
     {
         global $cumDeathMalaysia;
+        global $cumBidMalaysia;
         return collect(explode(PHP_EOL, Http::get(self::url['DEATH_MALAYSIA'])))
             ->slice(1, -1)
-            ->map(function ($record) use (&$cumDeathMalaysia) {
+            ->map(function ($record) use (&$cumDeathMalaysia, &$cumBidMalaysia) {
                 $dailyCase = explode(',', $record);
                 $newDeath = (!isset($dailyCase[1]) || $dailyCase[1] == '') ? 0 : $dailyCase[1];
                 $bidDeath = (!isset($dailyCase[2]) || $dailyCase[2] == '') ? 0 : $dailyCase[2];
                 $cumDeathMalaysia = $cumDeathMalaysia + $newDeath;
+                $cumBidMalaysia = $cumBidMalaysia + $bidDeath;
                 return [
                     'date' => $dailyCase[0],
                     'deaths_new' => $newDeath,
                     'deaths_bid' => $bidDeath,
                     'deaths_new_cumulative' => $cumDeathMalaysia,
+                    'deaths_bid_cumulative' => $cumBidMalaysia,
                     'created_at' => now(),
                     'updated_at' => now(),
                 ];
@@ -116,6 +124,7 @@ class ImportCovidFromGithubService
                     'state' => (!isset($dailyCase[1]) || $dailyCase[1] == '') ? 0 : $dailyCase[1],
                     'deaths_new' => (!isset($dailyCase[2]) || $dailyCase[2] == '') ? 0 : $dailyCase[2],
                     'deaths_bid' => (!isset($dailyCase[3]) || $dailyCase[3] == '') ? 0 : $dailyCase[3],
+                    'deaths_bid_cumulative' => 0,
                     'created_at' => now(),
                     'updated_at' => now(),
                 ];
@@ -147,7 +156,7 @@ class ImportCovidFromGithubService
                 return [
                     'date' => $dailyCase[0],
                     'state' => (!isset($dailyCase[1]) || $dailyCase[1] == '') ? 0 : $dailyCase[1],
-                    'rtk-ag' => (!isset($dailyCase[2]) || $dailyCase[2] == '') ? 0 : $dailyCase[2],
+                    'rtk_ag' => (!isset($dailyCase[2]) || $dailyCase[2] == '') ? 0 : $dailyCase[2],
                     'pcr' => (!isset($dailyCase[3]) || $dailyCase[3] == '') ? 0 : $dailyCase[3],
                     'created_at' => now(),
                     'updated_at' => now(),
@@ -291,12 +300,15 @@ class ImportCovidFromGithubService
         $totalCase = CasesState::all();
 
         foreach (CasesState::STATE as $state) {
-            $cum = 0;
+            $cumCase = 0;
+            $cumRecovered = 0;
             $cases = $totalCase->filter(fn($case) => $case->state == $state);
             foreach ($cases as $case) {
-                $cum = $cum + $case->cases_new;
-                $case->cases_cumulative = $cum;
-                $case->save();
+                $cumCase = $cumCase + $case->cases_new;
+                $case->cases_cumulative = $cumCase;
+                $cumRecovered = $cumRecovered + $case->cases_recovered;
+                $case->cases_recovered_cumulative = $cumRecovered;
+                $case->push();
             }
         }
     }
