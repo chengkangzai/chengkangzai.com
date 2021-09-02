@@ -6,13 +6,14 @@ use App\Models\Covid\CasesState;
 use App\Models\Covid\DeathsState;
 use App\Models\Covid\Population;
 use App\Models\Covid\TestState;
-use Ramsey\Collection\Collection;
+use Cache;
+use Illuminate\Support\Collection;
 
 class CasesStateService
 {
 
     private int $cacheSecond;
-    public \Illuminate\Support\Collection $population;
+    public Collection $population;
 
     public function __construct()
     {
@@ -22,42 +23,45 @@ class CasesStateService
 
     public function getCases()
     {
-        return CasesState::query()
-            ->orderByDesc('date')
-            ->take(16)
-            ->orderBy('state')
-            ->get()
-            ->map(function ($cases) {
-                $cases->newPercentage = ($cases->cases_new / $this->population[$cases->state]) * 100;
-                $cases->cumPercentage = ($cases->cases_cumulative / $this->population[$cases->state]) * 100;
-                return $cases;
-            });
+        return Cache::remember('CasesState.Cases', $this->cacheSecond, function () {
+            return CasesState::query()
+                ->orderByDesc('date')
+                ->take(16)
+                ->orderBy('state')
+                ->get()
+                ->map(function ($cases) {
+                    $cases->newPercentage = ($cases->cases_new / $this->population[$cases->state]) * 100;
+                    $cases->cumPercentage = ($cases->cases_cumulative / $this->population[$cases->state]) * 100;
+                    return $cases;
+                });
+        });
     }
 
     public function getDeath()
     {
-        return DeathsState::query()
-            ->orderByDesc('date')
-            ->take(16)
-            ->orderBy('state')
-            ->get()
-            ->map(function ($death) {
-                $death->cumPercentage = ($death->deaths_commutative / $this->population[$death->state]) * 100;
-                return $death;
-            });
+        return Cache::remember('CasesState.Death', $this->cacheSecond, function () {
+            return DeathsState::query()
+                ->orderByDesc('date')
+                ->take(16)
+                ->orderBy('state')
+                ->get();
+        });
     }
 
     public function getTest()
     {
-        return TestState::query()
-            ->orderByDesc('date')
-            ->take(16)
-            ->orderBy('state')
-            ->get()
-            ->map(function ($test) {
-                $test->totaltest = $test->rtk_ag + $test->pcr;
-                return $test;
-            });
+        return Cache::remember('CasesState.Test', $this->cacheSecond, function () {
+            return TestState::query()
+                ->whereDate('date', $this->getTestDateShouldQuery())
+                ->orderByDesc('date')
+                ->take(16)
+                ->orderBy('state')
+                ->get()
+                ->map(function ($test) {
+                    $test->totaltest = $test->rtk_ag + $test->pcr;
+                    return $test;
+                });
+        });
 
     }
 
