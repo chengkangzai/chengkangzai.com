@@ -237,5 +237,6 @@
     "Search by any keyword": "依据任意关键字搜索",
     "Filter By Cluster Category": "依据感染群类别过滤",
     "Filter By State": "依据州属过滤",
-    "Cluster Category": "感染群类别"
+    "Cluster Category": "感染群类别",
+    "Not necessarily unique individuals": "不一定是独特的个体"
 }
