@@ -7,31 +7,40 @@ use App\Http\Services\CasesStateService;
 
 class CovidDashboardCasesState extends CovidComponent
 {
-
-    public $cases;
-    public $death;
-    public $tests;
+    public $updated_at;
 
     public $newCase;
     public $newDeath;
     public $cumCase;
     public $cumCasePrecentage;
     public $cumDeath;
-    public $cumDeathPrecentage;
+    public $fatalityRate;
+    public $tests;
+    public $positiveRate;
+    public $newRecovered;
+    public $cumRecovered;
 
     public function render(CasesStateService $service)
     {
-        $this->cases = $service->getCases();
-        $this->death = $service->getDeath();
-        $this->tests = $service->getTest();
+        $cases = $service->getCases();
+        $death = $service->getDeath();
+        $tests = $service->getTest();
 
-        $this->newCase = $this->cases->pluck('cases_new', 'state');
-        $this->cumCase = $this->cases->pluck('cases_cumulative', 'state');
-        $this->cumCasePrecentage = $this->cases->pluck('cumPercentage', 'state');
+        $this->updated_at = $cases->first()->date->toDateString();
 
-        $this->newDeath = $this->death->pluck('deaths_new', 'state');
-        $this->cumDeath = $this->death->pluck('deaths_commutative', 'state');
-        $this->cumDeathPrecentage = $this->death->pluck('cumPercentage', 'state');
+        $this->newCase = $cases->pluck('cases_new', 'state');
+        $this->cumCase = $cases->pluck('cases_cumulative', 'state');
+        $this->cumCasePrecentage = $cases->pluck('cumPercentage', 'state');
+
+        $this->newRecovered = $cases->pluck('cases_recovered', 'state');
+        $this->cumRecovered = $cases->pluck('cases_recovered_cumulative', 'state');
+
+        $this->newDeath = $death->pluck('deaths_new', 'state');
+        $this->cumDeath = $death->pluck('deaths_commutative', 'state');
+        $this->fatalityRate = $service->calcFatalityRate($cases, $death);
+
+        $this->tests = $tests->pluck('totaltest', 'state');
+        $this->positiveRate = $service->calcPositiveRate($cases, $tests);
 
 
         return view('livewire.covid-dashboard-cases-state');
