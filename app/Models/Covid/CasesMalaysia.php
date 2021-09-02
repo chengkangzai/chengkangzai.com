@@ -28,6 +28,7 @@ class CasesMalaysia extends Model
         'cases_cumulative',
         'cases_import',
         'cases_recovered',
+        'cases_recovered_cumulative',
     ];
 
     public function scopeLatestOne(Builder $query): Builder

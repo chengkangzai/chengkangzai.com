@@ -15,6 +15,7 @@ class AddColumnToDeathsMalaysiasTable extends Migration
     {
         Schema::table('deaths_malaysia', function (Blueprint $table) {
             $table->integer('deaths_bid')->after('deaths_new');
+            $table->integer('deaths_bid_cumulative')->after('deaths_new');
         });
     }
 
@@ -27,6 +28,7 @@ class AddColumnToDeathsMalaysiasTable extends Migration
     {
         Schema::table('deaths_malaysia', function (Blueprint $table) {
             $table->removeColumn('deaths_bid');
+            $table->removeColumn('deaths_bid_cumulative');
         });
     }
 }

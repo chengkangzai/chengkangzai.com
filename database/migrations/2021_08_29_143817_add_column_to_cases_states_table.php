@@ -16,6 +16,7 @@ class AddColumnToCasesStatesTable extends Migration
         Schema::table('cases_states', function (Blueprint $table) {
             $table->integer('cases_import')->after('cases_new');
             $table->integer('cases_recovered')->after('cases_import');
+            $table->integer('cases_recovered_cumulative')->after('cases_recovered');
         });
     }
 
@@ -29,6 +30,7 @@ class AddColumnToCasesStatesTable extends Migration
         Schema::table('cases_states', function (Blueprint $table) {
             $table->removeColumn('cases_import');
             $table->removeColumn('cases_recovered');
+            $table->removeColumn('cases_recovered_cumulative');
         });
     }
 }

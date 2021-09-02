@@ -36,9 +36,10 @@ class CasesState extends Model
         'date',
         'state',
         'cases_new',
-        'cases_cumulative',
         'cases_import',
+        'cases_recovered_cumulative',
         'cases_recovered',
+        'cases_cumulative',
     ];
 
     public function scopeLatestOne(Builder $query): Builder

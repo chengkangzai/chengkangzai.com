@@ -17,7 +17,7 @@ class CreateTestStatesTable extends Migration
             $table->id();
             $table->date('date');
             $table->string('state');
-            $table->integer('rtk-ag');
+            $table->integer('rtk_ag');
             $table->integer('pcr');
             $table->timestamps();
         });
