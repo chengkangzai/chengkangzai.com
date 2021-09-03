@@ -6,18 +6,18 @@
             <div class="block sm:grid sm:grid-cols-4 sm:grid-rows-3 gap-4 p-4 space-y-4 sm:space-y-0 dark:text-white">
                 <div
                     class="dark:bg-gray-900 bg-gray-50 col-span-2 w-full text-center p-8 rounded-3xl hover:shadow-lg cursor-pointer">
-                    <h2 class="text-2xl">{{__('Day passed since 1st dose of AstraZeneca vaccine :')}}</h2>
-                    <p>(2021-07-08)</p>
+                    <h2 class="text-2xl">{{__('Day passed since 2nd dose of AstraZeneca vaccine :')}}</h2>
+                    <p>(2021-09-09)</p>
                     <p class="pt-5 font-semibold text-6xl ">
-                        {{__('Days',['day'=>\Carbon\Carbon::createFromDate('2021-07-08')->diffInDays()])}}
+                        {{__('Days',['day'=>\Carbon\Carbon::createFromDate('2021-09-09')->diffInDays()])}}
                     </p>
                 </div>
                 <div
                     class="dark:bg-gray-900 bg-gray-50 col-span-2 w-full text-center p-8 rounded-3xl hover:shadow-lg cursor-pointer">
-                    <h2 class="text-2xl">{{__('Next dose of AstraZeneca vaccine is on:')}}</h2>
-                    <p>(2021-09-09)</p>
+                    <h2 class="text-2xl">{{__('Days until fully vaccinated : ')}}</h2>
+                    <p>(2021-09-23)</p>
                     <p class="pt-5 font-semibold text-6xl ">
-                        {{__('Days',['day'=>\Carbon\Carbon::createFromDate('2021-09-09')->diffInDays()])}}
+                        {{__('Days',['day'=>\Carbon\Carbon::createFromDate('2021-09-09')->addDays(14)->diffInDays()])}}
                     </p>
                 </div>
                 <div
