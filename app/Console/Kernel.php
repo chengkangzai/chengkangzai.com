@@ -29,7 +29,9 @@ class Kernel extends ConsoleKernel
     {
         $schedule->command('import:covid')->hourly();
         $schedule->command('import:vaccine')->hourly();
-        $schedule->command('backup:monitor')->hourly();
+        $schedule->command('backup:run')->monthly();
+        $schedule->command('backup:clean')->monthly();
+        $schedule->command('backup:monitor')->monthly();
     }
 
     /**
