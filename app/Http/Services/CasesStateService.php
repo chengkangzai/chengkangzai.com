@@ -13,12 +13,10 @@ class CasesStateService
 {
 
     private int $cacheSecond;
-    public Collection $population;
 
     public function __construct()
     {
         $this->cacheSecond = 60;
-        $this->population = Population::pluck('pop', 'state');
     }
 
     public function getCases()
@@ -30,8 +28,9 @@ class CasesStateService
                 ->orderBy('state')
                 ->get()
                 ->map(function ($cases) {
-                    $cases->newPercentage = ($cases->cases_new / $this->population[$cases->state]) * 100;
-                    $cases->cumPercentage = ($cases->cases_cumulative / $this->population[$cases->state]) * 100;
+                    $pop = $this->getPop()[$cases->state];
+                    $cases->newPercentage = ($cases->cases_new / $pop) * 100;
+                    $cases->cumPercentage = ($cases->cases_cumulative / $pop) * 100;
                     return $cases;
                 });
         });
@@ -52,7 +51,7 @@ class CasesStateService
     {
         return Cache::remember('CasesState.Test', $this->cacheSecond, function () {
             return TestState::query()
-                ->whereDate('date', $this->getTestDateShouldQuery())
+                ->where('date', $this->getTestDateShouldQuery())
                 ->orderByDesc('date')
                 ->take(16)
                 ->orderBy('state')
@@ -65,19 +64,19 @@ class CasesStateService
 
     }
 
-    public function calcFatalityRate(Collection $cases, Collection $deaths): Collection
+    public function calcFatalityRate(): Collection
     {
-        $deaths = $deaths->pluck('deaths_commutative', 'state');
-        return $cases->map(function ($cases) use ($deaths) {
+        $deaths = $this->getDeath()->pluck('deaths_commutative', 'state');
+        return $this->getCases()->map(function ($cases) use ($deaths) {
             $cases->fatalityRate = ($deaths[$cases->state] / $cases->cases_cumulative) * 100;
             return $cases;
         })->pluck('fatalityRate', 'state');
     }
 
-    public function calcPositiveRate(Collection $cases, Collection $tests): Collection
+    public function calcPositiveRate(): Collection
     {
-        $tests = $tests->pluck('totaltest', 'state');
-        return $cases->map(function ($cases) use ($tests) {
+        $tests = $this->getTest()->pluck('totaltest', 'state');
+        return $this->getCases()->map(function ($cases) use ($tests) {
             $cases->positiveRate = ($cases->cases_new / $tests[$cases->state]) * 100;
             return $cases;
         })->pluck('positiveRate', 'state');
@@ -97,6 +96,13 @@ class CasesStateService
             return $dateOfTest;
         }
         return $dateOfCase;
+    }
+
+    private function getPop(): Collection
+    {
+        return Cache::remember('Population', $this->cacheSecond, function () {
+            return Population::all();
+        })->pluck('pop', 'state');
     }
 
 
