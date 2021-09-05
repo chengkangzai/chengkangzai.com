@@ -4,8 +4,9 @@ namespace App\Http\Livewire;
 
 
 use App\Http\Services\CasesStateService;
+use Livewire\Component;
 
-class CovidDashboardCasesState extends CovidComponent
+class CovidDashboardCasesState extends Component
 {
     public $updated_at;
 
