@@ -5,7 +5,7 @@ namespace App\Http\Services;
 use App\Models\Covid\Hospital;
 use App\Models\Covid\ICU;
 use App\Models\Covid\PKRC;
-use Illuminate\Database\Eloquent\Collection;
+
 
 class HealthCareService
 {
@@ -64,13 +64,13 @@ class HealthCareService
         });
     }
 
-    public function getTotalOccupancyByState(Collection $icu, Collection $hospital, Collection $pkrc)
+    public function getTotalOccupancyByState()
     {
-        return $icu
-            ->map(function ($icu) use ($hospital, $pkrc) {
+        return $this->getICU()
+            ->map(function ($icu) {
                 $icuOccupy = $icu->icu_covid;
-                $hospitalOccupy = $hospital->pluck('hosp_covid', 'state')[$icu['state']];
-                $pkrcOccupy = $pkrc->pluck('pkrc_covid', 'state')->get($icu['state']);
+                $hospitalOccupy = $this->getHospital()->pluck('hosp_covid', 'state')[$icu['state']];
+                $pkrcOccupy = $this->getPKRC()->pluck('pkrc_covid', 'state')->get($icu['state']);
 
                 $icu->totalOccupy = $icuOccupy + $hospitalOccupy + $pkrcOccupy;
                 return $icu;
@@ -78,13 +78,13 @@ class HealthCareService
             ->pluck('totalOccupy', 'state');
     }
 
-    public function getTotalCovidBedByState(Collection $icu, Collection $hospital, Collection $pkrc)
+    public function getTotalCovidBedByState()
     {
-        return $icu
-            ->map(function ($icu) use ($hospital, $pkrc) {
+        return $this->getICU()
+            ->map(function ($icu) {
                 $icuBed = $icu->bed_icu_covid;
-                $hospitalBed = $hospital->pluck('beds_covid', 'state')[$icu['state']];
-                $pkrcBed = $pkrc->pluck('beds', 'state')[$icu['state']] ?? 0;
+                $hospitalBed = $this->getHospital()->pluck('beds_covid', 'state')[$icu['state']];
+                $pkrcBed = $this->getPKRC()->pluck('beds', 'state')[$icu['state']] ?? 0;
 
                 $icu->totalCovidBed = $icuBed + $hospitalBed + $pkrcBed;
                 return $icu;
@@ -92,13 +92,13 @@ class HealthCareService
             ->pluck('totalCovidBed', 'state');
     }
 
-    public function getTotalUtilizationByState(Collection $icu, Collection $hospital, Collection $pkrc)
+    public function getTotalUtilizationByState()
     {
-        return $icu
-            ->map(function ($icu) use ($hospital, $pkrc) {
+        return $this->getICU()
+            ->map(function ($icu)  {
                 $icuUtil = $icu->covid_utilization;
-                $hospitalUtil = $hospital->pluck('covid_utilization', 'state')[$icu['state']];
-                $pkrcUtil = $pkrc->pluck('covid_utilization', 'state')[$icu['state']] ?? 0;
+                $hospitalUtil = $this->getHospital()->pluck('covid_utilization', 'state')[$icu['state']];
+                $pkrcUtil = $this->getICU()->pluck('covid_utilization', 'state')[$icu['state']] ?? 0;
 
                 $icu->utilPrecent = ($icuUtil + $hospitalUtil + $pkrcUtil) / 3;
                 return $icu;
