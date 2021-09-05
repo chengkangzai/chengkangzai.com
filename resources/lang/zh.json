@@ -238,5 +238,11 @@
     "Filter By Cluster Category": "依据感染群类别过滤",
     "Filter By State": "依据州属过滤",
     "Cluster Category": "感染群类别",
-    "Not necessarily unique individuals": "不一定是独特的个体"
+    "Not necessarily unique individuals": "不一定是独特的个体",
+    "Active Cases In Malaysia": "马来西亚的活跃案例",
+    "Brought in Death (BID) ": "到医院时已死亡（BID）",
+    "New recovered Case": "新康复的案例",
+    "Cumulative recovered": "累计康复案例",
+    "Day passed since 2nd dose of AstraZeneca vaccine :": "自第 2 剂阿斯利康疫苗以来已过去了一天：",
+    "Days until fully vaccinated : ": "距离完全接种疫苗的天数："
 }
