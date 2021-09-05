@@ -57,7 +57,7 @@ class ImportCovidFromGithubService
                     'cluster_detentionCentre' => (!isset($dailyCase[9]) || $dailyCase[9] == '') ? 0 : $dailyCase[9],
                     'cluster_workplace' => (!isset($dailyCase[10]) || $dailyCase[10] == '') ? 0 : $dailyCase[10],
                     'cases_cumulative' => $cumCasesMalaysia,
-                    'cases_recovered_cumulative' => $cumCasesMalaysia,
+                    'cases_recovered_cumulative' => $cumRecoveredMalaysia,
                     'created_at' => now(),
                     'updated_at' => now(),
                 ];
