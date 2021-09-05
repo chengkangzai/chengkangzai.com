@@ -79,9 +79,9 @@ class CovidDashboardHealthCareState extends Component
         $this->bed_PKRC = $pkrc->pluck('beds', 'state');
         $this->pkrc_covid_util = $pkrc->pluck('covid_utilization', 'state');
 
-        $this->totalOccupancyByState = $healthCareService->getTotalOccupancyByState($icu, $hospital, $pkrc);
-        $this->totalCovidBedByState = $healthCareService->getTotalCovidBedByState($icu, $hospital, $pkrc);
-        $this->totalUlizationByState = $healthCareService->getTotalUtilizationByState($icu, $hospital, $pkrc);
+        $this->totalOccupancyByState = $healthCareService->getTotalOccupancyByState();
+        $this->totalCovidBedByState = $healthCareService->getTotalCovidBedByState();
+        $this->totalUlizationByState = $healthCareService->getTotalUtilizationByState();
 
         return view('livewire.covid-dashboard-health-care-state');
     }

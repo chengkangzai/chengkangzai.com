@@ -3,10 +3,18 @@
 namespace App\Http\Livewire;
 
 
-class CovidDashboardAbout extends CovidComponent
+use App\Http\Services\CasesMalaysiaService;
+use Illuminate\Support\Collection;
+use Livewire\Component;
+
+class CovidDashboardAbout extends Component
 {
-    public function render()
+    public Collection $timestamp;
+
+    public function render(CasesMalaysiaService $service)
     {
+        $this->timestamp = $service->getTimestamp();
+
         return view('livewire.covid-dashboard-about');
     }
 }

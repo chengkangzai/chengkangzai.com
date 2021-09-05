@@ -2,102 +2,115 @@
     <div class="sm:grid sm:grid-cols-3 sm:grid-rows-3 sm:gap-2 space-y-2 sm:space-y-0">
         <div class="dark:bg-white bg-gray-50 py-10 rounded-xl shadow ">
             <h2 class="text-2xl">{{__('New Case')}}</h2>
-            <p class="text-red-500  font-bold text-5xl">{{number_format($dashboardValue->new_cases)}}</p>
-            <span>
-                    (+{{round(($dashboardValue->new_cases / $dashboardValue->pop)*100,4)}}%)
-                    <span class="font-bold">*</span>
-                </span>
+            <p class="text-red-500 font-bold text-5xl">{{number_format($cases->cases_new)}}</p>
+            <span>(+{{round($cases->newPercentage,2)}}%)
+                <span class="font-bold">*</span>
+            </span>
         </div>
-
 
         <div class="dark:bg-white bg-gray-50 py-10 rounded-xl shadow ">
             <h2 class="text-2xl">{{__('Cumulative Case')}}</h2>
-            <p class="text-red-500  font-bold text-5xl">{{number_format($dashboardValue->new_cases_cum)}}</p>
-            <span>
-                    ({{round(($dashboardValue->new_cases_cum/$dashboardValue->pop)*100,4)}}%)
-                    <span class="font-bold">*</span>
-                </span>
+            <p class="text-red-500 font-bold text-5xl">{{number_format($cases->cases_cumulative)}}</p>
+            <span>(+{{round($cases->cumPercentage,2)}}%)
+                <span class="font-bold">*</span>
+            </span>
         </div>
-
-
 
         <div class="dark:bg-white bg-gray-50 py-10 rounded-xl shadow ">
-            <h2 class="text-2xl">{{__('Tested')}}</h2>
-            <p class="text-yellow-500 font-bold text-5xl">{{number_format($dashboardValue->new_test)}}</p>
-            <span>
-                {{__('Positive Rate')}}:
-                <span class="font-bold">{{round($dashboardValue->positive_rate->rate,2)}}%</span>
-            </span>
-            <small class="text-xs">
-                ({{$dashboardValue->positive_rate->date->format('Y-m-d')}})
-            </small>
-
+            <h2 class="text-2xl">{{__('Active Cases In Malaysia')}}</h2>
+            <p class="text-red-500 font-bold text-5xl">{{number_format($cases->activeCases)}}</p>
         </div>
+
+
+
 
 
         <div class="dark:bg-white bg-gray-50 py-10 rounded-xl shadow ">
             <h2 class="text-2xl">{{__('Deaths')}}</h2>
-            <p class="text-gray-500  font-bold text-5xl">{{number_format($dashboardValue->new_death)}}</p>
+            <p class="text-gray-500  font-bold text-5xl">{{number_format($death->deaths_new)}}</p>
+            <span> {{__('Brought in Death (BID) ')}} :
+                <span class="text-gray-500 font-extrabold">{{$death->deaths_bid}}</span>
+            </span>
+        </div>
+
+        <div class="dark:bg-white bg-gray-50 py-10 rounded-xl shadow ">
+            <h2 class="text-2xl">{{__('Cumulative Death')}}</h2>
+            <p class="text-gray-500  font-bold text-5xl">{{number_format($death->deaths_new_cumulative)}}</p>
+            <span> {{__('Fatality rate')}} :{{number_format($fatalityRate,2)}}% </span>
         </div>
 
 
         <div class="dark:bg-white bg-gray-50 py-10 rounded-xl shadow ">
-            <h2 class="text-2xl">{{__('Cumulative Death')}}</h2>
-            <p class="text-gray-500  font-bold text-5xl">{{number_format($dashboardValue->new_death_cum)}}</p>
+            <h2 class="text-2xl">{{__('Tested')}}</h2>
+            <p class="text-yellow-500 font-bold text-5xl">{{number_format($test->totalTest)}}</p>
             <span>
-                    {{__('Fatality rate')}} :
-                    {{round(($dashboardValue->new_death_cum/$dashboardValue->new_cases_cum)*100,4)}}%
-                </span>
+                {{__('Positive Rate')}}:
+                <span class="font-bold">{{number_format($positiveRate,2)}}%</span>
+            </span>
+            <small class="text-xs">
+                ({{$test->date->format('Y-m-d')}})
+            </small>
+        </div>
+
+
+        <div class="dark:bg-white bg-gray-50 py-10 rounded-xl shadow ">
+            <h2 class="text-2xl">{{__('New recovered Case')}}</h2>
+            <p class="text-blue-500 font-bold text-5xl">{{number_format($cases->cases_recovered)}}</p>
+        </div>
+
+        <div class="dark:bg-white bg-gray-50 py-10 rounded-xl shadow ">
+            <h2 class="text-2xl">{{__('Cumulative recovered')}}</h2>
+            <p class="text-blue-500  font-bold text-5xl">{{number_format($cases->cases_recovered_cumulative)}}</p>
         </div>
 
         <div class="dark:bg-white bg-gray-50 py-10 rounded-xl shadow ">
             <h2 class="text-2xl">{{__('Active Cluster In Malaysia')}}</h2>
-            <p class="text-yellow-500 font-bold text-5xl">{{number_format($dashboardValue->active_cluster_count)}}</p>
+            <p class="text-yellow-500 font-bold text-5xl">{{number_format($clusterCount)}}</p>
         </div>
 
-        <div class="dark:bg-white bg-gray-50 py-8 rounded-xl shadow ">
+        <div class="dark:bg-white bg-gray-50 py-6 rounded-xl shadow ">
             <h2 class="text-2xl">{{__('New Dose 1 Jabbed')}}</h2>
             <p class="text-green-500  font-bold text-5xl">
-                {{number_format($dashboardValue->vax_1st_daily)}}</p>
-            <span>{{__('Cumulative :')}}  {{number_format($dashboardValue->vax_1st_cumulative)}}</span>
-            <span>{{'('.round(($dashboardValue->vax_1st_cumulative/$dashboardValue->pop)*100,2).'%)'}}
-                    <span class="font-bold">*</span>
-                </span>
+                {{number_format($vax->dose1_daily)}}</p>
+            <span>{{__('Cumulative :')}}  {{number_format($vax->dose1_cumul)}}</span>
+            <span>{{'('.number_format($vax->firstDosePercent,2).'%)'}}
+            <span class="font-bold">*</span>
+            </span>
             <div class="relative mt-2 w-10/12 mx-auto">
                 <div class="overflow-hidden h-2 text-xs flex rounded bg-green-50">
                     <div
-                        style="width: {{round(($dashboardValue->vax_1st_cumulative/$dashboardValue->pop)*100,2)}}%"
+                        style="width: {{round($vax->firstDosePercent,2)}}%"
                         class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-green-300 rounded-r-full">
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="dark:bg-white bg-gray-50 py-8 rounded-xl shadow ">
+        <div class="dark:bg-white bg-gray-50 py-6 rounded-xl shadow ">
             <h2 class="text-2xl">{{__('New Dose 2 Jabbed')}}</h2>
             <p class="text-green-500  font-bold text-5xl">
-                {{number_format($dashboardValue->vax_2nd_daily)}}</p>
-            <span>{{__('Cumulative :')}} {{number_format($dashboardValue->vax_2nd_cumulative)}}</span>
-            <span>{{'('.round(($dashboardValue->vax_2nd_cumulative/$dashboardValue->pop)*100,2).'%)'}}
-                    <span class="font-bold">*</span>
+                {{number_format($vax->dose2_daily)}}</p>
+            <span>{{__('Cumulative :')}} {{number_format($vax->dose2_cumul)}}</span>
+            <span>{{'('.number_format($vax->secondDosePercent,2).'%)'}}
+                <span class="font-bold">*</span>
                 </span>
             <div class="relative mt-2 w-10/12 mx-auto">
                 <div class="overflow-hidden h-2 text-xs flex rounded bg-green-50">
                     <div
-                        style="width: {{round(($dashboardValue->vax_2nd_cumulative/$dashboardValue->pop)*100,2)}}%"
+                        style="width: {{round($vax->secondDosePercent,2)}}%"
                         class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-green-500 rounded-r-full">
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="dark:bg-white bg-gray-50 py-10 rounded-xl shadow ">
+        <div class="dark:bg-white bg-gray-50 py-8 rounded-xl shadow ">
             <h2 class="text-2xl">{{__('Percentage of Vaccine Register')}}</h2>
             <p class="text-green-500  font-bold text-5xl">
-                {{number_format($dashboardValue->percentage_of_reg_malaysia).'%'}}
+                {{number_format($vaxReg->registeredPrecent).'%'}}
                 <small class="text-black text-xs">*{{__('% per population')}}</small>
             </p>
-            <span>{{__('Registered :')}} {{number_format($dashboardValue->vax_reg_malaysia)}}</span>
+            <span>{{__('Registered :')}} {{number_format($vaxReg->total)}}</span>
 
         </div>
     </div>

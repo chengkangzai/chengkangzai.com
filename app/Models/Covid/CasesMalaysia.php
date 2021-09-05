@@ -35,4 +35,9 @@ class CasesMalaysia extends Model
     {
         return $query->orderByDesc('date')->take(1);
     }
+
+    public function getActiveCasesAttribute()
+    {
+        return $this->cases_cumulative - $this->cases_recovered_cumulative;
+    }
 }

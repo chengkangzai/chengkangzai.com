@@ -43,7 +43,9 @@
                                 </table>
                             </div>
                             <span
-                                class="inline font-normal text-xs float-right">{{__('Updated at')}} {{$dashboardValue->updated_at->vaxState->toDateString()}}</span>
+                                class="inline font-normal text-xs float-right">
+                                {{__('Updated at')}} {{$timestamp}}
+                            </span>
                         </th>
                     </tr>
                     <tr>
@@ -75,7 +77,7 @@
                     </tr>
                     </thead>
                     <tbody class="bg-white divide-y divide-gray-200">
-                    @foreach($dashboardValue->vax_state_1st as $state => $dose1)
+                    @foreach($dose1_daily as $state => $dose1)
                         <tr class="@if($loop->even) bg-gray-50 @endif">
                             <td class="px-6 py-4 whitespace-nowrap">
                                 <div class="flex">
@@ -89,31 +91,31 @@
                             <td class="px-6 py-4 whitespace-nowrap">
                                 {{number_format($dose1)}}
                                 <small class="text-xs">
-                                    (+{{ round(($dose1 / $dashboardValue->population_state[$state]*100),2)}}%)
+                                    (+{{ round($dose1_dailyPrecent[$state],2)}}%)
                                 </small>
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap">
-                                {{number_format($dashboardValue->vax_state_1st_cum[$state])}}
+                                {{number_format($dose1_cumul[$state])}}
                                 <small class="text-xs">
-                                    {{ '('.round(($dashboardValue->vax_state_1st_cum[$state] / $dashboardValue->population_state[$state])*100,2).'%)'}}
+                                    {{ '('.round($dose1_cumulPrecent[$state],2).'%)'}}
                                 </small>
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap">
-                                {{number_format($dashboardValue->vax_state_2st[$state])}}
+                                {{number_format($dose2_daily[$state])}}
                                 <small class="text-xs">
-                                    {{ '(+'.round(($dashboardValue->vax_state_2st[$state] / $dashboardValue->population_state[$state])*100,2).'%)'}}
+                                    {{ '(+'.round($dose2_dailyPrecent[$state],2).'%)'}}
                                 </small>
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap">
-                                {{number_format($dashboardValue->vax_state_2st_cum[$state])}}
+                                {{number_format($dose2_cumul[$state])}}
                                 <small class="text-xs">
-                                    {{ '('.round(($dashboardValue->vax_state_2st_cum[$state] / $dashboardValue->population_state[$state])*100,2).'%)'}}
+                                    {{ '('.round($dose2_cumulPrecent[$state],2).'%)'}}
                                 </small>
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap">
-                                {{number_format($dashboardValue->vax_reg_state[$state])}}
+                                {{number_format($vaxReg[$state])}}
                                 <small class="text-xs">
-                                    {{ '('.round(($dashboardValue->vax_reg_state[$state] / $dashboardValue->population_state[$state])*100,2).'%)'}}
+                                    {{ '('.round($vaxRegPrecent[$state],2).'%)'}}
                                 </small>
                             </td>
                         </tr>
@@ -122,11 +124,11 @@
                                 <div class="relative">
                                     <div class="overflow-hidden h-2 text-xs flex rounded bg-green-50">
                                         <div
-                                            style="width: {{round(($dashboardValue->vax_state_2st_cum[$state] / $dashboardValue->population_state[$state]*100),2)}}%"
+                                            style="width: {{round(($dose2_cumulPrecent[$state]),2)}}%"
                                             class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-green-500 rounded-r-full">
                                         </div>
                                         <div
-                                            style="width: {{round(($dashboardValue->vax_state_1st_cum[$state] / $dashboardValue->population_state[$state]*100)-($dashboardValue->vax_state_2st_cum[$state] / $dashboardValue->population_state[$state]*100),2)}}%"
+                                            style="width: {{round((($dose1_cumulPrecent[$state])-($dose2_cumulPrecent[$state])),2)}}%"
                                             class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-green-300 rounded-r-full">
                                         </div>
                                     </div>
@@ -143,33 +145,33 @@
                             </div>
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap font-bold">
-                            {{number_format($dashboardValue->vax_state_1st->sum())}}
+                            {{number_format($dose1_daily->sum())}}
                             <small class="text-xs">
-                                {{'+('.round(($dashboardValue->vax_state_1st->sum() / $dashboardValue->pop_18)*100,2).'%)'}}
+                                {{'+('.round($dose1_dailyPrecent->avg(),2).'%)'}}
                             </small>
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap font-bold">
-                            {{number_format($dashboardValue->vax_state_1st_cum->sum())}}
+                            {{number_format($dose1_cumul->sum())}}
                             <small class="text-xs">
-                                {{'('.round(($dashboardValue->vax_state_1st_cum->sum() / $dashboardValue->pop_18)*100,2).'%)'}}
+                                {{'('.round($dose1_cumulPrecent->avg(),2).'%)'}}
                             </small>
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap font-bold">
-                            {{number_format($dashboardValue->vax_state_2st->sum())}}
+                            {{number_format($dose2_daily->sum())}}
                             <small class="text-xs">
-                                {{'+('.round(($dashboardValue->vax_state_2st->sum() / $dashboardValue->pop_18)*100,2).'%)'}}
+                                {{'+('.round($dose2_dailyPrecent->avg(),2).'%)'}}
                             </small>
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap font-bold">
-                            {{number_format($dashboardValue->vax_state_2st_cum->sum())}}
+                            {{number_format($dose2_cumul->sum())}}
                             <small class="text-xs">
-                                {{'('.round(($dashboardValue->vax_state_2st_cum->sum() / $dashboardValue->pop_18)*100,2).'%)'}}
+                                {{'('.round($dose2_cumulPrecent->avg(),2).'%)'}}
                             </small>
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap font-bold">
-                            {{number_format($dashboardValue->vax_reg_state->sum())}}
+                            {{number_format($vaxReg->sum())}}
                             <small class="text-xs">
-                                {{'('.round(($dashboardValue->vax_reg_state->sum() / $dashboardValue->pop_18)*100,2).'%)'}}
+                                {{'('.round($vaxRegPrecent->avg(),2).'%)'}}
                             </small>
                         </td>
                     </tr>

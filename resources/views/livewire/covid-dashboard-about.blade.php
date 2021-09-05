@@ -3,27 +3,27 @@
     <ul class="text-sm sm:text-base list-disc list-inside">
         <li>
             {{__('Cases data Updated at')}}
-            : {{$dashboardValue->updated_at->caseMalaysia->toDateString()}}
+            : {{$timestamp->cases}}
         </li>
         <li>
             {{__('Death data Updated at')}}
-            : {{$dashboardValue->updated_at->deathMalaysia->toDateString()}}
+            : {{$timestamp->death}}
         </li>
         <li>
             {{__('Tested data Updated at')}}
-            : {{$dashboardValue->updated_at->tested->toDateString()}}
+            : {{$timestamp->test}}
         </li>
         <li>
             {{__('Cluster data Updated at')}}
-            : {{\Carbon\Carbon::parse($dashboardValue->updated_at->cluster)->toDateString()}}
+            : {{$timestamp->cluster}}
         </li>
         <li>
             {{__('Vaccination data Updated at')}}
-            : {{\Carbon\Carbon::parse($dashboardValue->updated_at->vaxMalaysia)->toDateString()}}
+            : {{$timestamp->vax}}
         </li>
         <li>
             {{__('Vaccination registration data Updated at')}}
-            : {{\Carbon\Carbon::parse($dashboardValue->updated_at->vaxMalaysia)->toDateString()}}
+            : {{$timestamp->vaxReg}}
         </li>
     </ul>
     <div>
