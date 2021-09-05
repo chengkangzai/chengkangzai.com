@@ -44,4 +44,8 @@ class TestState extends Model
         return $query->orderByDesc('date')->take(16);
     }
 
+    public function getTotalTestAttribute()
+    {
+        return $this->rtk_ag + $this->pcr;
+    }
 }

@@ -25,4 +25,9 @@ class TestMalaysia extends Model
     {
         return $query->orderByDesc('date')->take(1);
     }
+
+    public function getTotalTestAttribute()
+    {
+        return $this->pcr + $this->rtk_ag;
+    }
 }
