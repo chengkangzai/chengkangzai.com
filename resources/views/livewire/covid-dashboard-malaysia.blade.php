@@ -8,13 +8,35 @@
             </span>
         </div>
 
-
         <div class="dark:bg-white bg-gray-50 py-10 rounded-xl shadow ">
             <h2 class="text-2xl">{{__('Cumulative Case')}}</h2>
             <p class="text-red-500 font-bold text-5xl">{{number_format($cases->cases_cumulative)}}</p>
             <span>(+{{round($cases->cumPercentage,2)}}%)
                 <span class="font-bold">*</span>
             </span>
+        </div>
+
+        <div class="dark:bg-white bg-gray-50 py-10 rounded-xl shadow ">
+            <h2 class="text-2xl">{{__('Active Cases In Malaysia')}}</h2>
+            <p class="text-red-500 font-bold text-5xl">{{number_format($cases->activeCases)}}</p>
+        </div>
+
+
+
+
+
+        <div class="dark:bg-white bg-gray-50 py-10 rounded-xl shadow ">
+            <h2 class="text-2xl">{{__('Deaths')}}</h2>
+            <p class="text-gray-500  font-bold text-5xl">{{number_format($death->deaths_new)}}</p>
+            <span> {{__('Brought in Death (BID) ')}} :
+                <span class="text-gray-500 font-extrabold">{{$death->deaths_bid}}</span>
+            </span>
+        </div>
+
+        <div class="dark:bg-white bg-gray-50 py-10 rounded-xl shadow ">
+            <h2 class="text-2xl">{{__('Cumulative Death')}}</h2>
+            <p class="text-gray-500  font-bold text-5xl">{{number_format($death->deaths_new_cumulative)}}</p>
+            <span> {{__('Fatality rate')}} :{{number_format($fatalityRate,2)}}% </span>
         </div>
 
 
@@ -28,23 +50,17 @@
             <small class="text-xs">
                 ({{$test->date->format('Y-m-d')}})
             </small>
-
         </div>
 
 
         <div class="dark:bg-white bg-gray-50 py-10 rounded-xl shadow ">
-            <h2 class="text-2xl">{{__('Deaths')}}</h2>
-            <p class="text-gray-500  font-bold text-5xl">{{number_format($death->deaths_new)}}</p>
-            <span> {{__('Brought in Death (BID) ')}} :
-                <span class="text-gray-500 font-extrabold">{{$death->deaths_bid}}</span>
-            </span>
+            <h2 class="text-2xl">{{__('New recovered Case')}}</h2>
+            <p class="text-blue-500 font-bold text-5xl">{{number_format($cases->cases_recovered)}}</p>
         </div>
 
-
         <div class="dark:bg-white bg-gray-50 py-10 rounded-xl shadow ">
-            <h2 class="text-2xl">{{__('Cumulative Death')}}</h2>
-            <p class="text-gray-500  font-bold text-5xl">{{number_format($death->deaths_new_cumulative)}}</p>
-            <span> {{__('Fatality rate')}} :{{number_format($fatalityRate,2)}}% </span>
+            <h2 class="text-2xl">{{__('Cumulative recovered')}}</h2>
+            <p class="text-blue-500  font-bold text-5xl">{{number_format($cases->cases_recovered_cumulative)}}</p>
         </div>
 
         <div class="dark:bg-white bg-gray-50 py-10 rounded-xl shadow ">
@@ -52,7 +68,7 @@
             <p class="text-yellow-500 font-bold text-5xl">{{number_format($clusterCount)}}</p>
         </div>
 
-        <div class="dark:bg-white bg-gray-50 py-8 rounded-xl shadow ">
+        <div class="dark:bg-white bg-gray-50 py-6 rounded-xl shadow ">
             <h2 class="text-2xl">{{__('New Dose 1 Jabbed')}}</h2>
             <p class="text-green-500  font-bold text-5xl">
                 {{number_format($vax->dose1_daily)}}</p>
@@ -70,7 +86,7 @@
             </div>
         </div>
 
-        <div class="dark:bg-white bg-gray-50 py-8 rounded-xl shadow ">
+        <div class="dark:bg-white bg-gray-50 py-6 rounded-xl shadow ">
             <h2 class="text-2xl">{{__('New Dose 2 Jabbed')}}</h2>
             <p class="text-green-500  font-bold text-5xl">
                 {{number_format($vax->dose2_daily)}}</p>
@@ -88,7 +104,7 @@
             </div>
         </div>
 
-        <div class="dark:bg-white bg-gray-50 py-10 rounded-xl shadow ">
+        <div class="dark:bg-white bg-gray-50 py-8 rounded-xl shadow ">
             <h2 class="text-2xl">{{__('Percentage of Vaccine Register')}}</h2>
             <p class="text-green-500  font-bold text-5xl">
                 {{number_format($vaxReg->registeredPrecent).'%'}}
