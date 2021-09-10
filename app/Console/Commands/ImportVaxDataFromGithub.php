@@ -53,6 +53,7 @@ class ImportVaxDataFromGithub extends Command
     {
         try {
             if ($this->option('force')) {
+                $this->line('Truncating DB...');
                 $this->truncateDB();
             }
             $this->importVaxMalaysia();
