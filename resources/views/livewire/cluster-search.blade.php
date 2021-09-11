@@ -1,4 +1,4 @@
-<div class="min-h-screen">
+<div class="min-h-screen container">
     <div class="w-full my-2 py-4 px-4 rounded-2xl dark:bg-white bg-gray-50 rounded-2xl shadow">
         <div class="pb-2">
             <label class="text-left w-full">
