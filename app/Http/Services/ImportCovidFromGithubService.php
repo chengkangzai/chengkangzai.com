@@ -72,8 +72,8 @@ class ImportCovidFromGithubService
             ->map(function ($record) {
                 $dailyCase = explode(',', $record);
                 $state = (!isset($dailyCase[1]) || $dailyCase[1] == '') ? 0 : $dailyCase[1];
-                $new_cases = (!isset($dailyCase[2]) || $dailyCase[2] == '') ? 0 : $dailyCase[2];
-                $cases_import = (!isset($dailyCase[3]) || $dailyCase[3] == '') ? 0 : $dailyCase[3];
+                $new_cases = (!isset($dailyCase[3]) || $dailyCase[3] == '') ? 0 : $dailyCase[3];
+                $cases_import = (!isset($dailyCase[2]) || $dailyCase[2] == '') ? 0 : $dailyCase[2];
                 $cases_recovered = (!isset($dailyCase[4]) || $dailyCase[4] == '') ? 0 : $dailyCase[4];
                 return [
                     'date' => $dailyCase[0],
