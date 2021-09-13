@@ -27,8 +27,8 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $schedule->command('import:covid')->hourly();
-        $schedule->command('import:vaccine')->hourly();
+        $schedule->command('import:covid')->hourly()->between('06:00', '00:00');
+        $schedule->command('import:vaccine')->hourly()->between('06:00', '00:00');
 
         $schedule->command('backup:run')->daily()->at('03:00');
         $schedule->command('backup:clean')->daily()->at('03:00');
