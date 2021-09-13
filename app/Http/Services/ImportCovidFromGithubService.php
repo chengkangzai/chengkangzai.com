@@ -125,6 +125,7 @@ class ImportCovidFromGithubService
                     'deaths_new' => (!isset($dailyCase[2]) || $dailyCase[2] == '') ? 0 : $dailyCase[2],
                     'deaths_bid' => (!isset($dailyCase[3]) || $dailyCase[3] == '') ? 0 : $dailyCase[3],
                     'deaths_bid_cumulative' => 0,
+                    'deaths_commutative' => 0,
                     'created_at' => now(),
                     'updated_at' => now(),
                 ];
@@ -319,10 +320,14 @@ class ImportCovidFromGithubService
 
         foreach (DeathsState::STATE as $state) {
             $cum = 0;
+            $cumBid = 0;
             $cases = $totalDeath->filter(fn($death) => $death->state == $state);
             foreach ($cases as $case) {
                 $cum = $cum + $case->deaths_new;
                 $case->deaths_commutative = $cum;
+
+                $cumBid = $cumBid + $case->deaths_bid;
+                $case->deaths_bid_cumulative = $cumBid;
                 $case->push();
             }
         }
