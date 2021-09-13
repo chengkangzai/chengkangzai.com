@@ -49,7 +49,7 @@ class ImportVaxDataFromGithub extends Command
      *
      * @return int
      */
-    public function handle(): int
+    public function handle()
     {
         try {
             if ($this->option('force')) {
@@ -74,8 +74,6 @@ class ImportVaxDataFromGithub extends Command
                 app(WebHookService::class)->notifyInGeneral(Carbon::now() . ' : DAMN STH went WRONG during importing Vaccine : \n\n' . $exception->getMessage(), WebHookService::COLOR['RED']);
             }
         }
-
-        return 0;
     }
 
 
@@ -90,13 +88,13 @@ class ImportVaxDataFromGithub extends Command
     /**
      * @throws Throwable
      */
-    public function importVaxMalaysia(): int
+    public function importVaxMalaysia()
     {
         $records = $this->vaxService->getVaxMalaysia();
 
         if (DB::table('vax_malaysias')->count() == $records->count()) {
             $this->info('[VaxMalaysia] : ' . 'Not inject as the data is the same.');
-            return 0;
+            return;
         }
 
         DB::table('vax_malaysias')->truncate();
@@ -106,17 +104,15 @@ class ImportVaxDataFromGithub extends Command
         $this->withProgressBar($records, function ($records) {
             DB::table('vax_malaysias')->insert($records);
         });
-
-        return 0;
     }
 
-    public function importVaxState(): int
+    public function importVaxState()
     {
         $records = $this->vaxService->getVaxState();
 
         if (DB::table('vax_states')->count() == $records->count()) {
             $this->info('[VaxState] : ' . 'Not inject as the data is the same.');
-            return 0;
+            return;
         }
 
         DB::table('vax_states')->truncate();
@@ -126,17 +122,15 @@ class ImportVaxDataFromGithub extends Command
         $this->withProgressBar($records, function ($records) {
             DB::table('vax_states')->insert($records);
         });
-
-        return 0;
     }
 
-    public function importVaxRegState(): int
+    public function importVaxRegState()
     {
         $records = $this->vaxService->getVaxRegState();
 
         if (DB::table('vax_reg_states')->count() == $records->count()) {
             $this->info('[VaxRegState] : ' . 'Not inject as the data is the same.');
-            return 0;
+            return;
         }
 
         DB::table('vax_reg_states')->truncate();
@@ -146,17 +140,15 @@ class ImportVaxDataFromGithub extends Command
         $this->withProgressBar($records, function ($records) {
             DB::table('vax_reg_states')->insert($records);
         });
-
-        return 0;
     }
 
-    public function importVaxRegMalaysia(): int
+    public function importVaxRegMalaysia()
     {
         $records = $this->vaxService->getVaxRegMalaysia();
 
         if (DB::table('vax_reg_malaysias')->count() == $records->count()) {
             $this->info('[VaxRegMalaysia] : ' . 'Not inject as the data is the same.');
-            return 0;
+            return;
         }
 
         DB::table('vax_reg_malaysias')->truncate();
@@ -166,7 +158,5 @@ class ImportVaxDataFromGithub extends Command
         $this->withProgressBar($records, function ($records) {
             DB::table('vax_reg_malaysias')->insert($records);
         });
-
-        return 0;
     }
 }
