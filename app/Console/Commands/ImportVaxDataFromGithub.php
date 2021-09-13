@@ -47,9 +47,9 @@ class ImportVaxDataFromGithub extends Command
     /**
      * Execute the console command.
      *
-     * @return int
+     * @return void
      */
-    public function handle(): int
+    public function handle()
     {
         try {
             if ($this->option('force')) {
@@ -74,8 +74,6 @@ class ImportVaxDataFromGithub extends Command
                 app(WebHookService::class)->notifyInGeneral(Carbon::now() . ' : DAMN STH went WRONG during importing Vaccine : \n\n' . $exception->getMessage(), WebHookService::COLOR['RED']);
             }
         }
-
-        return 0;
     }
 
 
@@ -90,83 +88,103 @@ class ImportVaxDataFromGithub extends Command
     /**
      * @throws Throwable
      */
-    public function importVaxMalaysia(): int
+    public function importVaxMalaysia()
     {
         $records = $this->vaxService->getVaxMalaysia();
 
         if (DB::table('vax_malaysias')->count() == $records->count()) {
             $this->info('[VaxMalaysia] : ' . 'Not inject as the data is the same.');
-            return 0;
+            return;
         }
 
         DB::table('vax_malaysias')->truncate();
 
         $this->info('[VaxMalaysia] : ' . 'Injecting...');
 
-        $this->withProgressBar($records, function ($records) {
-            DB::table('vax_malaysias')->insert($records);
-        });
+        $chunks = $records->chunk(500);
 
-        return 0;
+        $this->output->progressStart($chunks->count());
+
+        foreach ($chunks as $chunk) {
+            DB::table('vax_malaysias')->insert($chunk->toArray());
+            $this->output->progressAdvance();
+        }
+
+        $this->output->progressFinish();
     }
 
-    public function importVaxState(): int
+    public function importVaxState()
     {
         $records = $this->vaxService->getVaxState();
 
         if (DB::table('vax_states')->count() == $records->count()) {
             $this->info('[VaxState] : ' . 'Not inject as the data is the same.');
-            return 0;
+            return;
         }
 
         DB::table('vax_states')->truncate();
 
         $this->info('[VaxState] : ' . 'Injecting...');
 
-        $this->withProgressBar($records, function ($records) {
-            DB::table('vax_states')->insert($records);
-        });
+        $chunks = $records->chunk(500);
 
-        return 0;
+        $this->output->progressStart($chunks->count());
+
+        foreach ($chunks as $chunk) {
+            DB::table('vax_states')->insert($chunk->toArray());
+            $this->output->progressAdvance();
+        }
+
+        $this->output->progressFinish();
     }
 
-    public function importVaxRegState(): int
+    public function importVaxRegState()
     {
         $records = $this->vaxService->getVaxRegState();
 
         if (DB::table('vax_reg_states')->count() == $records->count()) {
             $this->info('[VaxRegState] : ' . 'Not inject as the data is the same.');
-            return 0;
+            return;
         }
 
         DB::table('vax_reg_states')->truncate();
 
         $this->info('[VaxRegState] : ' . 'Injecting...');
 
-        $this->withProgressBar($records, function ($records) {
-            DB::table('vax_reg_states')->insert($records);
-        });
+        $chunks = $records->chunk(500);
 
-        return 0;
+        $this->output->progressStart($chunks->count());
+
+        foreach ($chunks as $chunk) {
+            DB::table('vax_reg_states')->insert($chunk->toArray());
+            $this->output->progressAdvance();
+        }
+
+        $this->output->progressFinish();
     }
 
-    public function importVaxRegMalaysia(): int
+    public function importVaxRegMalaysia()
     {
         $records = $this->vaxService->getVaxRegMalaysia();
 
         if (DB::table('vax_reg_malaysias')->count() == $records->count()) {
             $this->info('[VaxRegMalaysia] : ' . 'Not inject as the data is the same.');
-            return 0;
+            return;
         }
 
         DB::table('vax_reg_malaysias')->truncate();
 
         $this->info('[VaxRegMalaysia] : ' . 'Injecting...');
 
-        $this->withProgressBar($records, function ($records) {
-            DB::table('vax_reg_malaysias')->insert($records);
-        });
+        $chunks = $records->chunk(500);
 
-        return 0;
+        $this->output->progressStart($chunks->count());
+
+        foreach ($chunks as $chunk) {
+            DB::table('vax_reg_malaysias')->insert($chunk->toArray());
+            $this->output->progressAdvance();
+        }
+
+        $this->output->progressFinish();
     }
 }

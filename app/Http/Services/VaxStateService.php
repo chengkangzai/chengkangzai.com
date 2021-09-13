@@ -38,6 +38,14 @@ class VaxStateService
         });
     }
 
+    public function getPop()
+    {
+        return Cache::remember('Population', $this->cacheSecond, function () {
+            return Population::all();
+        })
+            ->pluck('pop', 'state');
+    }
+
     public function getVaxReg(): Collection
     {
         return Cache::remember('VaxState.VaxRegState', $this->cacheSecond, function () {
@@ -51,14 +59,6 @@ class VaxStateService
                     return $vaxRegState;
                 });
         });
-    }
-
-    public function getPop()
-    {
-        return Cache::remember('Population', $this->cacheSecond, function () {
-            return Population::all();
-        })
-            ->pluck('pop', 'state');
     }
 
 
