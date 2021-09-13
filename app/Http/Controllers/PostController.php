@@ -102,7 +102,7 @@ class PostController extends Controller
             if ($request->get('tags')) {
                 $post->syncTags($request->get('tags'));
             }
-            if ($request->missing('tags')){
+            if ($request->missing('tags')) {
                 $post->detachTags(Tag::all());
             }
         });

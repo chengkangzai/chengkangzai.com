@@ -90,6 +90,23 @@ class ImportCovidFromGithubService
         );
     }
 
+    public function calcCumulativeCasesState(Collection $collection): Collection
+    {
+        foreach (CasesState::STATE as $state) {
+            $cumCase = 0;
+            $cumRecovered = 0;
+            $cases = $collection->filter(fn($case) => $case->state == $state);
+            foreach ($cases as $case) {
+                $cumCase = $cumCase + $case->cases_new;
+                $case->cases_cumulative = $cumCase;
+
+                $cumRecovered = $cumRecovered + $case->cases_recovered;
+                $case->cases_recovered_cumulative = $cumRecovered;
+            }
+        }
+        return $collection;
+    }
+
     public function getDeathMalaysia(): Collection
     {
         global $cumDeathMalaysia;
@@ -130,6 +147,23 @@ class ImportCovidFromGithubService
                     return $collect;
                 })
         );
+    }
+
+    public function calcCumulativeDeathState(Collection $collection): Collection
+    {
+        foreach (DeathsState::STATE as $state) {
+            $cum = 0;
+            $cumBid = 0;
+            $cases = $collection->filter(fn($death) => $death->state == $state);
+            foreach ($cases as $case) {
+                $cum = $cum + $case->deaths_new;
+                $case->deaths_commutative = $cum;
+
+                $cumBid = $cumBid + $case->deaths_bid;
+                $case->deaths_bid_cumulative = $cumBid;
+            }
+        }
+        return $collection;
     }
 
     public function getTestMalaysia(): Collection
@@ -293,40 +327,5 @@ class ImportCovidFromGithubService
                     'updated_at' => now(),
                 ];
             });
-    }
-
-
-    public function calcCumulativeCasesState(Collection $collection): Collection
-    {
-        foreach (CasesState::STATE as $state) {
-            $cumCase = 0;
-            $cumRecovered = 0;
-            $cases = $collection->filter(fn($case) => $case->state == $state);
-            foreach ($cases as $case) {
-                $cumCase = $cumCase + $case->cases_new;
-                $case->cases_cumulative = $cumCase;
-
-                $cumRecovered = $cumRecovered + $case->cases_recovered;
-                $case->cases_recovered_cumulative = $cumRecovered;
-            }
-        }
-        return $collection;
-    }
-
-    public function calcCumulativeDeathState(Collection $collection): Collection
-    {
-        foreach (DeathsState::STATE as $state) {
-            $cum = 0;
-            $cumBid = 0;
-            $cases = $collection->filter(fn($death) => $death->state == $state);
-            foreach ($cases as $case) {
-                $cum = $cum + $case->deaths_new;
-                $case->deaths_commutative = $cum;
-
-                $cumBid = $cumBid + $case->deaths_bid;
-                $case->deaths_bid_cumulative = $cumBid;
-            }
-        }
-        return $collection;
     }
 }
