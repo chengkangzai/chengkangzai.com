@@ -4,7 +4,6 @@ namespace App\Console\Commands;
 
 use App\Http\Services\ImportCovidFromGithubService;
 use App\Http\Services\WebHookService;
-use App\Models\Covid\DeathsState;
 use Artisan;
 use Carbon\Carbon;
 use DB;
