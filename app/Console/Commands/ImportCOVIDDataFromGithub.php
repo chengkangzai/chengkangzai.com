@@ -4,6 +4,7 @@ namespace App\Console\Commands;
 
 use App\Http\Services\ImportCovidFromGithubService;
 use App\Http\Services\WebHookService;
+use App\Models\Covid\DeathsState;
 use Artisan;
 use Carbon\Carbon;
 use DB;
@@ -112,10 +113,15 @@ class ImportCOVIDDataFromGithub extends Command
 
         $this->info('[CaseMalaysia] : ' . 'Injecting...');
 
-        $this->withProgressBar($records, function ($records) {
-            DB::table('cases_malaysia')->insert($records);
-        });
-        $this->line('');
+        $chunks = $records->chunk(500);
+        $this->output->progressStart($chunks->count());
+
+        foreach ($chunks as $chunk) {
+            DB::table('cases_malaysia')->insert($chunk->toArray());
+            $this->output->progressAdvance();
+        }
+
+        $this->output->progressFinish();
     }
 
     public function importCasesState()
@@ -131,14 +137,16 @@ class ImportCOVIDDataFromGithub extends Command
 
         $this->info('[CaseState] : ' . 'Injecting...');
 
-        $this->withProgressBar($records, function ($records) {
-            DB::table('cases_states')->insert($records);
-        });
+        $chunks = $records->chunk(500);
 
-        $this->line('');
-        $this->info('[CaseState] : ' . 'Updating Cumulative...');
+        $this->output->progressStart($chunks->count());
 
-        $this->covidService->updateCumulativeCasesState();
+        foreach ($chunks as $chunk) {
+            DB::table('cases_states')->insert($chunk->toArray());
+            $this->output->progressAdvance();
+        }
+
+        $this->output->progressFinish();
     }
 
     public function importDeathMalaysia()
@@ -154,11 +162,16 @@ class ImportCOVIDDataFromGithub extends Command
 
         $this->info('[DeathMalaysia] : ' . 'Injecting...');
 
-        $this->withProgressBar($records, function ($records) {
-            DB::table('deaths_malaysia')->insert($records);
-        });
+        $chunks = $records->chunk(500);
 
-        $this->line('');
+        $this->output->progressStart($chunks->count());
+
+        foreach ($chunks as $chunk) {
+            DB::table('deaths_malaysia')->insert($chunk->toArray());
+            $this->output->progressAdvance();
+        }
+
+        $this->output->progressFinish();
     }
 
     public function importDeathState()
@@ -174,13 +187,16 @@ class ImportCOVIDDataFromGithub extends Command
 
         $this->info('[DeathState] : ' . 'Injecting...');
 
-        $this->withProgressBar($records, function ($records) {
-            DB::table('deaths_states')->insert($records);
-        });
+        $chunks = $records->chunk(500);
 
-        $this->line('');
-        $this->info('[DeathState] : ' . 'Updating Cumulative... ');
-        $this->covidService->updateCumulativeDeathState();
+        $this->output->progressStart($chunks->count());
+
+        foreach ($chunks as $chunk) {
+            DB::table('deaths_states')->insert($chunk->toArray());
+            $this->output->progressAdvance();
+        }
+
+        $this->output->progressFinish();
     }
 
     public function importTestMalaysia()
@@ -196,11 +212,16 @@ class ImportCOVIDDataFromGithub extends Command
 
         $this->info('[TestMalaysia] : ' . 'Injecting...');
 
-        $this->withProgressBar($records, function ($records) {
-            DB::table('test_malaysia')->insert($records);
-        });
+        $chunks = $records->chunk(500);
 
-        $this->line('');
+        $this->output->progressStart($chunks->count());
+
+        foreach ($chunks as $chunk) {
+            DB::table('test_malaysia')->insert($chunk->toArray());
+            $this->output->progressAdvance();
+        }
+
+        $this->output->progressFinish();
     }
 
     private function importTestState()
@@ -216,11 +237,16 @@ class ImportCOVIDDataFromGithub extends Command
 
         $this->info('[TestState] : ' . 'Injecting...');
 
-        $this->withProgressBar($records, function ($records) {
+        $chunks = $records->chunk(500);
 
-            DB::table('test_states')->insert($records);
+        $this->output->progressStart($chunks->count());
 
-        });
+        foreach ($chunks as $chunk) {
+            DB::table('test_states')->insert($chunk->toArray());
+            $this->output->progressAdvance();
+        }
+
+        $this->output->progressFinish();
     }
 
     public function importCluster()
@@ -235,11 +261,16 @@ class ImportCOVIDDataFromGithub extends Command
 
         $this->info('[Cluster] : ' . 'Injecting...');
 
-        $this->withProgressBar($records, function ($records) {
-            DB::table('clusters')->insert($records);
-        });
+        $chunks = $records->chunk(500);
 
-        $this->line('');
+        $this->output->progressStart($chunks->count());
+
+        foreach ($chunks as $chunk) {
+            DB::table('clusters')->insert($chunk->toArray());
+            $this->output->progressAdvance();
+        }
+
+        $this->output->progressFinish();
     }
 
     public function importHospitals()
@@ -255,11 +286,16 @@ class ImportCOVIDDataFromGithub extends Command
 
         $this->info('[Hospital] : ' . 'Injecting...');
 
-        $this->withProgressBar($records, function ($records) {
-            DB::table('hospitals')->insert($records);
-        });
+        $chunks = $records->chunk(500);
 
-        $this->line('');
+        $this->output->progressStart($chunks->count());
+
+        foreach ($chunks as $chunk) {
+            DB::table('hospitals')->insert($chunk->toArray());
+            $this->output->progressAdvance();
+        }
+
+        $this->output->progressFinish();
     }
 
     public function importICU()
@@ -275,11 +311,16 @@ class ImportCOVIDDataFromGithub extends Command
 
         $this->info('[ICU] : ' . 'Injecting...');
 
-        $this->withProgressBar($records, function ($records) {
-            DB::table('icus')->insert($records);
-        });
+        $chunks = $records->chunk(500);
 
-        $this->line('');
+        $this->output->progressStart($chunks->count());
+
+        foreach ($chunks as $chunk) {
+            DB::table('icus')->insert($chunk->toArray());
+            $this->output->progressAdvance();
+        }
+
+        $this->output->progressFinish();
     }
 
     public function importPKRC()
@@ -295,11 +336,16 @@ class ImportCOVIDDataFromGithub extends Command
 
         $this->info('[PKRC] : ' . 'Injecting...');
 
-        $this->withProgressBar($records, function ($records) {
-            DB::table('PKRC')->insert($records);
-        });
+        $chunks = $records->chunk(500);
 
-        $this->line('');
+        $this->output->progressStart($chunks->count());
+
+        foreach ($chunks as $chunk) {
+            DB::table('PKRC')->insert($chunk->toArray());
+            $this->output->progressAdvance();
+        }
+
+        $this->output->progressFinish();
     }
 
     public function importMalaysiaPopulation()
@@ -310,11 +356,16 @@ class ImportCOVIDDataFromGithub extends Command
 
         $this->info('[Population] : ' . 'Injecting...');
 
-        $this->withProgressBar($records, function ($records) {
+        $chunks = $records->chunk(500);
 
-            DB::table('populations')->insert($records);
+        $this->output->progressStart($chunks->count());
 
-        });
+        foreach ($chunks as $chunk) {
+            DB::table('populations')->insert($chunk->toArray());
+            $this->output->progressAdvance();
+        }
+
+        $this->output->progressFinish();
     }
 
 }

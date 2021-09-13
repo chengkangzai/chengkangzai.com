@@ -38,7 +38,7 @@ class ImportVaccineFromGithubService
             });
     }
 
-    public function getVaxState()
+    public function getVaxState(): Collection
     {
         return collect(explode(PHP_EOL, Http::get(self::url['VAX_STATE'])))
             ->slice(1, -1)
@@ -59,7 +59,7 @@ class ImportVaccineFromGithubService
             });
     }
 
-    public function getVaxRegMalaysia()
+    public function getVaxRegMalaysia(): Collection
     {
         return collect(explode(PHP_EOL, Http::get(self::url['VAX_REG_MALAYSIA'])))
             ->slice(1, -1)

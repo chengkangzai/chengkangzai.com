@@ -67,26 +67,27 @@ class ImportCovidFromGithubService
 
     public function getCasesState(): Collection
     {
-        return collect(explode(PHP_EOL, Http::get(self::url['CASES_STATE'])))
-            ->slice(1, -1)
-            ->map(function ($record) {
-                $dailyCase = explode(',', $record);
-                $state = (!isset($dailyCase[1]) || $dailyCase[1] == '') ? 0 : $dailyCase[1];
-                $new_cases = (!isset($dailyCase[3]) || $dailyCase[3] == '') ? 0 : $dailyCase[3];
-                $cases_import = (!isset($dailyCase[2]) || $dailyCase[2] == '') ? 0 : $dailyCase[2];
-                $cases_recovered = (!isset($dailyCase[4]) || $dailyCase[4] == '') ? 0 : $dailyCase[4];
-                return [
-                    'date' => $dailyCase[0],
-                    'state' => $state,
-                    'cases_new' => $new_cases,
-                    'cases_import' => $cases_import,
-                    'cases_recovered' => $cases_recovered,
-                    'cases_cumulative' => 0,
-                    'cases_recovered_cumulative' => 0,
-                    'created_at' => now(),
-                    'updated_at' => now(),
-                ];
-            });
+        return $this->calcCumulativeCasesState(
+            collect(explode(PHP_EOL, Http::get(self::url['CASES_STATE'])))
+                ->slice(1, -1)
+                ->map(function ($record) {
+                    $dailyCase = explode(',', $record);
+                    $state = (!isset($dailyCase[1]) || $dailyCase[1] == '') ? 0 : $dailyCase[1];
+                    $new_cases = (!isset($dailyCase[3]) || $dailyCase[3] == '') ? 0 : $dailyCase[3];
+                    $cases_import = (!isset($dailyCase[2]) || $dailyCase[2] == '') ? 0 : $dailyCase[2];
+                    $cases_recovered = (!isset($dailyCase[4]) || $dailyCase[4] == '') ? 0 : $dailyCase[4];
+                    $collect = new CasesState();
+
+                    $collect->date = $dailyCase[0];
+                    $collect->state = $state;
+                    $collect->cases_new = $new_cases;
+                    $collect->cases_import = $cases_import;
+                    $collect->cases_recovered = $cases_recovered;
+                    $collect->cases_cumulative = 0;
+                    $collect->cases_recovered_cumulative = 0;
+                    return $collect;
+                })
+        );
     }
 
     public function getDeathMalaysia(): Collection
@@ -115,21 +116,20 @@ class ImportCovidFromGithubService
 
     public function getDeathState(): Collection
     {
-        return collect(explode(PHP_EOL, Http::get(self::url['DEATH_STATE'])))
-            ->slice(1, -1)
-            ->map(function ($record) {
-                $dailyCase = explode(',', $record);
-                return [
-                    'date' => $dailyCase[0],
-                    'state' => (!isset($dailyCase[1]) || $dailyCase[1] == '') ? 0 : $dailyCase[1],
-                    'deaths_new' => (!isset($dailyCase[2]) || $dailyCase[2] == '') ? 0 : $dailyCase[2],
-                    'deaths_bid' => (!isset($dailyCase[3]) || $dailyCase[3] == '') ? 0 : $dailyCase[3],
-                    'deaths_bid_cumulative' => 0,
-                    'deaths_commutative' => 0,
-                    'created_at' => now(),
-                    'updated_at' => now(),
-                ];
-            });
+        return $this->calcCumulativeDeathState(
+            collect(explode(PHP_EOL, Http::get(self::url['DEATH_STATE'])))
+                ->slice(1, -1)
+                ->map(function ($record) {
+                    $dailyCase = explode(',', $record);
+                    $collect = new DeathsState();
+
+                    $collect->date = $dailyCase[0];
+                    $collect->state = (!isset($dailyCase[1]) || $dailyCase[1] == '') ? 0 : $dailyCase[1];
+                    $collect->deaths_new = (!isset($dailyCase[2]) || $dailyCase[2] == '') ? 0 : $dailyCase[2];
+                    $collect->deaths_bid = (!isset($dailyCase[3]) || $dailyCase[3] == '') ? 0 : $dailyCase[3];
+                    return $collect;
+                })
+        );
     }
 
     public function getTestMalaysia(): Collection
@@ -296,40 +296,37 @@ class ImportCovidFromGithubService
     }
 
 
-    public function updateCumulativeCasesState()
+    public function calcCumulativeCasesState(Collection $collection): Collection
     {
-        $totalCase = CasesState::all();
-
         foreach (CasesState::STATE as $state) {
             $cumCase = 0;
             $cumRecovered = 0;
-            $cases = $totalCase->filter(fn($case) => $case->state == $state);
+            $cases = $collection->filter(fn($case) => $case->state == $state);
             foreach ($cases as $case) {
                 $cumCase = $cumCase + $case->cases_new;
                 $case->cases_cumulative = $cumCase;
+
                 $cumRecovered = $cumRecovered + $case->cases_recovered;
                 $case->cases_recovered_cumulative = $cumRecovered;
-                $case->push();
             }
         }
+        return $collection;
     }
 
-    public function updateCumulativeDeathState()
+    public function calcCumulativeDeathState(Collection $collection): Collection
     {
-        $totalDeath = DeathsState::all();
-
         foreach (DeathsState::STATE as $state) {
             $cum = 0;
             $cumBid = 0;
-            $cases = $totalDeath->filter(fn($death) => $death->state == $state);
+            $cases = $collection->filter(fn($death) => $death->state == $state);
             foreach ($cases as $case) {
                 $cum = $cum + $case->deaths_new;
                 $case->deaths_commutative = $cum;
 
                 $cumBid = $cumBid + $case->deaths_bid;
                 $case->deaths_bid_cumulative = $cumBid;
-                $case->push();
             }
         }
+        return $collection;
     }
 }

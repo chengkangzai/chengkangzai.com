@@ -47,7 +47,7 @@ class ImportVaxDataFromGithub extends Command
     /**
      * Execute the console command.
      *
-     * @return int
+     * @return void
      */
     public function handle()
     {
@@ -101,9 +101,16 @@ class ImportVaxDataFromGithub extends Command
 
         $this->info('[VaxMalaysia] : ' . 'Injecting...');
 
-        $this->withProgressBar($records, function ($records) {
-            DB::table('vax_malaysias')->insert($records);
-        });
+        $chunks = $records->chunk(500);
+
+        $this->output->progressStart($chunks->count());
+
+        foreach ($chunks as $chunk) {
+            DB::table('vax_malaysias')->insert($chunk->toArray());
+            $this->output->progressAdvance();
+        }
+
+        $this->output->progressFinish();
     }
 
     public function importVaxState()
@@ -119,9 +126,16 @@ class ImportVaxDataFromGithub extends Command
 
         $this->info('[VaxState] : ' . 'Injecting...');
 
-        $this->withProgressBar($records, function ($records) {
-            DB::table('vax_states')->insert($records);
-        });
+        $chunks = $records->chunk(500);
+
+        $this->output->progressStart($chunks->count());
+
+        foreach ($chunks as $chunk) {
+            DB::table('vax_states')->insert($chunk->toArray());
+            $this->output->progressAdvance();
+        }
+
+        $this->output->progressFinish();
     }
 
     public function importVaxRegState()
@@ -137,9 +151,16 @@ class ImportVaxDataFromGithub extends Command
 
         $this->info('[VaxRegState] : ' . 'Injecting...');
 
-        $this->withProgressBar($records, function ($records) {
-            DB::table('vax_reg_states')->insert($records);
-        });
+        $chunks = $records->chunk(500);
+
+        $this->output->progressStart($chunks->count());
+
+        foreach ($chunks as $chunk) {
+            DB::table('vax_reg_states')->insert($chunk->toArray());
+            $this->output->progressAdvance();
+        }
+
+        $this->output->progressFinish();
     }
 
     public function importVaxRegMalaysia()
@@ -155,8 +176,15 @@ class ImportVaxDataFromGithub extends Command
 
         $this->info('[VaxRegMalaysia] : ' . 'Injecting...');
 
-        $this->withProgressBar($records, function ($records) {
-            DB::table('vax_reg_malaysias')->insert($records);
-        });
+        $chunks = $records->chunk(500);
+
+        $this->output->progressStart($chunks->count());
+
+        foreach ($chunks as $chunk) {
+            DB::table('vax_reg_malaysias')->insert($chunk->toArray());
+            $this->output->progressAdvance();
+        }
+
+        $this->output->progressFinish();
     }
 }
