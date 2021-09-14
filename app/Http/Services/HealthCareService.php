@@ -17,65 +17,33 @@ class HealthCareService
         $this->cacheSecond = 60;
     }
 
-    public function getTotalOccupancyByState()
+    public function getICU()
     {
-        return $this->getICU()
+        return cache()->remember('HealthCare.ICU', $this->cacheSecond, fn() => ICU::latestOne()->get())
             ->map(function ($icu) {
-                $icuOccupy = $icu->icu_covid;
-                $hospitalOccupy = $this->getHospital()->pluck('hosp_covid', 'state')[$icu['state']];
-                $pkrcOccupy = $this->getPKRC()->pluck('pkrc_covid', 'state')->get($icu['state']);
-
-                $icu->totalOccupy = $icuOccupy + $hospitalOccupy + $pkrcOccupy;
+                if (($icu->icu_covid ?? 0) !== 0 || ($icu->bed_icu_covid ?? 0) !== 0) {
+                    $icu->covid_utilization = ($icu->icu_covid / $icu->bed_icu_covid) * 100;
+                }
                 return $icu;
-            })
-            ->pluck('totalOccupy', 'state');
+            });
     }
 
-    public function getICU($orderBy = 'state', $orderDirection = 'asc')
+    public function getHospital()
     {
-        return cache()->remember('HealthCare.ICU', $this->cacheSecond, function () use ($orderDirection, $orderBy) {
-            return ICU::query()
-                ->orderByDesc('date')
-                ->take(16)
-                ->orderBy($orderBy, $orderDirection)
-                ->get()
-                ->map(function ($icu) {
-                    if (($icu->icu_covid ?? 0) !== 0 || ($icu->bed_icu_covid ?? 0) !== 0) {
-                        $icu->covid_utilization = ($icu->icu_covid / $icu->bed_icu_covid) * 100;
-                    }
-                    return $icu;
-                });
-        });
+        return cache()->remember('HealthCare.Hospital', $this->cacheSecond, fn() => Hospital::latestOne()->get())
+            ->map(function ($hospital) {
+                $hospital->covid_utilization = ($hospital->hosp_covid / $hospital->beds_covid) * 100;
+                return $hospital;
+            });
     }
 
-    public function getHospital($orderBy = 'state', $orderDirection = 'asc')
+    public function getPKRC()
     {
-        return cache()->remember('HealthCare.Hospital', $this->cacheSecond, function () use ($orderBy, $orderDirection) {
-            return Hospital::query()
-                ->orderByDesc('date')
-                ->take(16)
-                ->orderBy($orderBy, $orderDirection)
-                ->get()
-                ->map(function ($hospital) {
-                    $hospital->covid_utilization = ($hospital->hosp_covid / $hospital->beds_covid) * 100;
-                    return $hospital;
-                });
-        });
-    }
-
-    public function getPKRC($orderBy = 'state', $orderDirection = 'asc')
-    {
-        return cache()->remember('HealthCare.PKRC', $this->cacheSecond, function () use ($orderDirection, $orderBy) {
-            return PKRC::query()
-                ->orderByDesc('date')
-                ->take(16)
-                ->orderBy($orderBy, $orderDirection)
-                ->get()
-                ->map(function ($pkrc) {
-                    $pkrc->covid_utilization = ($pkrc->pkrc_covid / $pkrc->beds) * 100;
-                    return $pkrc;
-                });
-        });
+        return cache()->remember('HealthCare.PKRC', $this->cacheSecond, fn() => PKRC::latestOne()->get())
+            ->map(function ($pkrc) {
+                $pkrc->covid_utilization = ($pkrc->pkrc_covid / $pkrc->beds) * 100;
+                return $pkrc;
+            });
     }
 
     public function getTotalCovidBedByState()
@@ -90,6 +58,20 @@ class HealthCareService
                 return $icu;
             })
             ->pluck('totalCovidBed', 'state');
+    }
+
+    public function getTotalOccupancyByState()
+    {
+        return $this->getICU()
+            ->map(function ($icu) {
+                $icuOccupy = $icu->icu_covid;
+                $hospitalOccupy = $this->getHospital()->pluck('hosp_covid', 'state')[$icu['state']];
+                $pkrcOccupy = $this->getPKRC()->pluck('pkrc_covid', 'state')->get($icu['state']);
+
+                $icu->totalOccupy = $icuOccupy + $hospitalOccupy + $pkrcOccupy;
+                return $icu;
+            })
+            ->pluck('totalOccupy', 'state');
     }
 
     public function getTotalUtilizationByState()
