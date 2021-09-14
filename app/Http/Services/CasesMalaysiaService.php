@@ -10,6 +10,7 @@ use App\Models\Covid\TestMalaysia;
 use App\Models\Covid\VaxMalaysia;
 use App\Models\Covid\VaxRegMalaysia;
 use Cache;
+use Carbon\Carbon;
 use Illuminate\Support\Collection;
 
 class CasesMalaysiaService
@@ -19,7 +20,7 @@ class CasesMalaysiaService
 
     public function __construct()
     {
-        $this->cacheSecond = 60;
+        $this->cacheSecond = Carbon::now()->endOfHour()->diffInSeconds(Carbon::now());
     }
 
     public function getClusterCount()
@@ -70,7 +71,7 @@ class CasesMalaysiaService
     private function getTestDateShouldQuery(): string
     {
         $dateOfTest = TestMalaysia::query()->orderByDesc('date')->take(1)->get()->first()->date;
-        $dateOfCase = CasesMalaysia::query()->orderByDesc('date')->take(1)->get()->first()->date;
+        $dateOfCase = $this->getCases()->date;
 
         if ($dateOfCase == $dateOfTest) {
             return $dateOfCase;
@@ -80,19 +81,6 @@ class CasesMalaysiaService
             return $dateOfTest;
         }
         return $dateOfCase;
-    }
-
-    public function getTimestamp(): Collection
-    {
-        $collect = collect();
-        $collect->cases = $this->getCases()->date->toDateString();
-        $collect->death = $this->getDeath()->date->toDateString();
-        $collect->test = $this->getTest()->date->toDateString();
-        $collect->cluster = Cache::remember('CasesMalaysia.ClusterTimestamp', $this->cacheSecond, fn() => Cluster::orderByDesc('id')->first()->created_at->toDateString());
-        $collect->vax = $this->getVax()->date->toDateString();
-        $collect->vaxReg = $this->getVaxReg()->date->toDateString();
-
-        return $collect;
     }
 
     public function getVax()
@@ -116,5 +104,16 @@ class CasesMalaysiaService
             ->first();
     }
 
+    public function getTimestamp(): Collection
+    {
+        $collect = collect();
+        $collect->cases = $this->getCases()->date->toDateString();
+        $collect->death = $this->getDeath()->date->toDateString();
+        $collect->test = $this->getTest()->date->toDateString();
+        $collect->cluster = Cache::remember('CasesMalaysia.ClusterTimestamp', $this->cacheSecond, fn() => Cluster::orderByDesc('id')->first()->created_at->toDateString());
+        $collect->vax = $this->getVax()->date->toDateString();
+        $collect->vaxReg = $this->getVaxReg()->date->toDateString();
 
+        return $collect;
+    }
 }

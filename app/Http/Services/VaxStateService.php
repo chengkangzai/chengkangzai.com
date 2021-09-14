@@ -6,6 +6,7 @@ use App\Models\Covid\Population;
 use App\Models\Covid\VaxRegState;
 use App\Models\Covid\VaxState;
 use Cache;
+use Carbon\Carbon;
 use Illuminate\Support\Collection;
 
 class VaxStateService
@@ -19,7 +20,7 @@ class VaxStateService
 
     public function __construct()
     {
-        $this->cacheSecond = 60;
+        $this->cacheSecond = Carbon::now()->endOfHour()->diffInSeconds(Carbon::now());
     }
 
     public function getVax(string $filter = self::POP_FILTER['ALL_POPULATION']): Collection
@@ -59,10 +60,6 @@ class VaxStateService
             });
     }
 
-    /**
-     * @param string $filter
-     * @return mixed
-     */
     public function getPop(string $filter = self::POP_FILTER['ALL_POPULATION']): mixed
     {
         return Cache::remember('Population', $this->cacheSecond, function () {

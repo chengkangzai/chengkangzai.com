@@ -5,6 +5,7 @@ namespace App\Http\Services;
 use App\Models\Covid\Hospital;
 use App\Models\Covid\ICU;
 use App\Models\Covid\PKRC;
+use Carbon\Carbon;
 
 
 class HealthCareService
@@ -14,7 +15,7 @@ class HealthCareService
 
     public function __construct()
     {
-        $this->cacheSecond = 60;
+        $this->cacheSecond = Carbon::now()->endOfHour()->diffInSeconds(Carbon::now());
     }
 
     public function getICU()
