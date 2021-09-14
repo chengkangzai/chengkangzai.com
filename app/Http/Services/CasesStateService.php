@@ -30,42 +30,28 @@ class CasesStateService
 
     public function getDeath()
     {
-        return Cache::remember('CasesState.Death', $this->cacheSecond, function () {
-            return DeathsState::query()
-                ->orderByDesc('date')
-                ->take(16)
-                ->orderBy('state')
-                ->get();
-        });
+        return Cache::remember('CasesState.Death', $this->cacheSecond, fn() => DeathsState::latestOne()->get());
     }
 
     public function getCases()
     {
-        return Cache::remember('CasesState.Cases', $this->cacheSecond, function () {
-            return CasesState::query()
-                ->orderByDesc('date')
-                ->take(16)
-                ->orderBy('state')
-                ->get()
-                ->map(function ($cases) {
-                    $pop = $this->getPop()[$cases->state];
-                    $cases->newPercentage = ($cases->cases_new / $pop) * 100;
-                    $cases->cumPercentage = ($cases->cases_cumulative / $pop) * 100;
-                    return $cases;
-                });
-        });
+        return Cache::remember('CasesState.Cases', $this->cacheSecond, fn() => CasesState::latestOne()->get())
+            ->map(function ($cases) {
+                $pop = $this->getPop()[$cases->state];
+                $cases->newPercentage = ($cases->cases_new / $pop) * 100;
+                $cases->cumPercentage = ($cases->cases_cumulative / $pop) * 100;
+                return $cases;
+            });
     }
 
     private function getPop(): Collection
     {
-        return Cache::remember('Population', $this->cacheSecond, function () {
-            return Population::all();
-        })->pluck('pop', 'state');
+        return Cache::remember('Population', $this->cacheSecond, fn() => Population::all())->pluck('pop', 'state');
     }
 
     public function calcPositiveRate(): Collection
     {
-        $tests = $this->getTest()->pluck('totaltest', 'state');
+        $tests = $this->getTest()->pluck('totalTest', 'state');
         return $this->getCases()->map(function ($cases) use ($tests) {
             $cases->positiveRate = ($cases->cases_new / $tests[$cases->state]) * 100;
             return $cases;
@@ -76,18 +62,14 @@ class CasesStateService
     public function getTest()
     {
         return Cache::remember('CasesState.Test', $this->cacheSecond, function () {
-            return TestState::query()
-                ->where('date', $this->getTestDateShouldQuery())
-                ->orderByDesc('date')
-                ->take(16)
-                ->orderBy('state')
-                ->get()
-                ->map(function ($test) {
-                    $test->totaltest = $test->rtk_ag + $test->pcr;
-                    return $test;
-                });
-        });
-
+            return TestState::where('date', $this->getTestDateShouldQuery())
+                ->latestOne()
+                ->get();
+        })
+            ->map(function ($test) {
+                $test->totalTest = $test->rtk_ag + $test->pcr;
+                return $test;
+            });
     }
 
     private function getTestDateShouldQuery(): string

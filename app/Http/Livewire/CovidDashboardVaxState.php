@@ -28,11 +28,12 @@ class CovidDashboardVaxState extends Component
     public Collection $vaxRegPrecent;
 
     public string $timestamp;
+    public mixed $popFilter = VaxStateService::POP_FILTER['ALL'];
 
     #[NoReturn] public function render(VaxStateService $service): Factory|View|Application
     {
-        $vax = $service->getVax();
-        $vaxReg = $service->getVaxReg();
+        $vax = $service->getVax($this->popFilter);
+        $vaxReg = $service->getVaxReg($this->popFilter);
 
         $this->timestamp = $vax->first()->date->toDateString();
 
@@ -50,5 +51,10 @@ class CovidDashboardVaxState extends Component
         $this->vaxRegPrecent = $vaxReg->pluck('registeredPrecent', 'state');
 
         return view('livewire.covid-dashboard-vax-state');
+    }
+
+    #[NoReturn] public function onFilterChange()
+    {
+        dd("hi");
     }
 }

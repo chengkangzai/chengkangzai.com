@@ -4,6 +4,9 @@ namespace App\Http\Livewire;
 
 use App\Models\Covid\Cluster;
 use DB;
+use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
 use Livewire\Component;
 use Livewire\WithPagination;
 use SEO;
@@ -12,11 +15,13 @@ class ClusterSearch extends Component
 {
     use WithPagination;
 
-    public $search = '';
-    public $sort = '';
-    public $sortDirection = 'asc';
-    public $updated_at;
-
+    public string $search = '';
+    public string $sort = '';
+    public string $sortDirection = 'asc';
+    public string $updated_at;
+    /**
+     * For Searching purpose
+     */
     public $categoryFilter;
     public $state;
 
@@ -32,7 +37,7 @@ class ClusterSearch extends Component
         $this->resetPage();
     }
 
-    public function sort($filterBy)
+    public function sort($filterBy): string
     {
         /**
          * Set Ascending or Descending
@@ -52,7 +57,7 @@ class ClusterSearch extends Component
         return $this->sort = $filterBy;
     }
 
-    public function render()
+    public function render(): Factory|View|Application
     {
         return view('livewire.cluster-search', [
             'clusters' => Cluster::query()
