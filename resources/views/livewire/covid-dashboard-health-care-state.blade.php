@@ -86,8 +86,8 @@
                             <td class="px-6 py-4 whitespace-nowrap">
                                 {{$totalOccupancyByState[$state]}} / {{$totalCovidBedByState[$state]}}
                                 <small
-                                    class="text-xs @if($totalUlizationByState[$state] > 90) text-red-700 @elseif($totalUlizationByState[$state] > 70) text-yellow-700 @endif">
-                                    {{'('.round($totalUlizationByState[$state],2).'%)'}}
+                                    class="text-xs @if($totalUtilizationByState[$state] > 90) text-red-700 @elseif($totalUtilizationByState[$state] > 70) text-yellow-700 @endif">
+                                    {{'('.round($totalUtilizationByState[$state],2).'%)'}}
                                 </small>
                             </td>
                         </tr>

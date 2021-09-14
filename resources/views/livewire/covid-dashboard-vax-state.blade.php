@@ -1,4 +1,4 @@
-<section class="flex flex-col mt-8" id="vax-state">
+<section class="flex flex-col mt-8" id="vax-state" xmlns:wire="http://www.w3.org/1999/xhtml">
     <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
         <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
             <div class="shadow overflow-hidden border-b border-gray-200 rounded-lg">
@@ -9,6 +9,21 @@
                             <a href="#vax-state">
                                 <h3 class="font-bold text-2xl uppercase">{{__('Vaccination per States')}}</h3>
                             </a>
+                            <div class="container flex flex-row-reverse">
+                                <label>
+                                    <select class="bg-white ring ring-gray-200 mx-2 px-4 py-1 rounded"
+                                            wire:model="popFilter">
+                                        <option disabled>-----</option>
+                                        @foreach(\App\Http\Services\VaxStateService::POP_FILTER as $key => $filter)
+                                            <option value="{{\App\Http\Services\VaxStateService::POP_FILTER[$key]}}"
+                                            >
+                                                {{$key}}
+                                            </option>
+                                        @endforeach
+                                    </select>
+                                </label>
+                                <span class="py-1">{{__('Filter By')}} : </span>
+                            </div>
                             <div class="w-full mx-auto">
                                 <table>
                                     <tr>
