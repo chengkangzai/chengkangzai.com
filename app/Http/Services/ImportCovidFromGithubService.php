@@ -27,11 +27,6 @@ class ImportCovidFromGithubService
         'POPULATION' => self::baseUrl . '/static/population.csv',
     ];
 
-    public function __construct()
-    {
-        $this->temp = 0;
-    }
-
     public function getCasesMalaysia(): Collection
     {
         global $cumCasesMalaysia;
@@ -208,10 +203,10 @@ class ImportCovidFromGithubService
                 return [
                     'cluster' => $dailyCase[0],
                     'state' => $dailyCase[1],
-                    'district' => $dailyCase[2] ?? 'null',
+                    'district' => $dailyCase[2] ?? '',
                     'date_announced' => $dailyCase[3] ?? null,
                     'date_last_onset' => $dailyCase[4] ?? null,
-                    'category' => $dailyCase[5] ?? 'null',
+                    'category' => $dailyCase[5] ?? '',
                     'status' => $dailyCase[6],
                     'cases_new' => $dailyCase[7],
                     'cases_total' => $dailyCase[8],

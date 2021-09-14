@@ -10,6 +10,8 @@ use App\Models\Covid\TestMalaysia;
 use App\Models\Covid\VaxMalaysia;
 use App\Models\Covid\VaxRegMalaysia;
 use Cache;
+use Carbon\Carbon;
+use Illuminate\Support\Collection;
 
 class CasesMalaysiaService
 {
@@ -18,14 +20,12 @@ class CasesMalaysiaService
 
     public function __construct()
     {
-        $this->cacheSecond = 60;
+        $this->cacheSecond = Carbon::now()->endOfHour()->diffInSeconds(Carbon::now());
     }
 
     public function getClusterCount()
     {
-        return Cache::remember('CasesMalaysia.ClusterCount', $this->cacheSecond, function () {
-            return Cluster::whereStatus('active')->count();
-        });
+        return Cache::remember('CasesMalaysia.ClusterCount', $this->cacheSecond, fn() => Cluster::whereStatus('active')->count());
     }
 
     public function calcFatalityRate(): float|int
@@ -35,33 +35,24 @@ class CasesMalaysiaService
 
     public function getDeath()
     {
-        return Cache::remember('CasesMalaysia.Death', $this->cacheSecond, function () {
-            return DeathsMalaysia::latestOne()->get()->first();
-        });
+        return Cache::remember('CasesMalaysia.Death', $this->cacheSecond, fn() => DeathsMalaysia::latestOne()->get()->first());
     }
 
     public function getCases()
     {
-        return Cache::remember('CasesMalaysia.Cases', $this->cacheSecond, function () {
-            return CasesMalaysia::query()
-                ->orderByDesc('date')
-                ->take(1)
-                ->get()
-                ->map(function ($cases) {
-                    $pop = $this->getPop();
-                    $cases->newPercentage = ($cases->cases_new / $pop) * 100;
-                    $cases->cumPercentage = ($cases->cases_cumulative / $pop) * 100;
-                    return $cases;
-                })
-                ->first();
-        });
+        return Cache::remember('CasesMalaysia.Cases', $this->cacheSecond, fn() => CasesMalaysia::latestOne()->get())
+            ->map(function ($cases) {
+                $pop = $this->getPop();
+                $cases->newPercentage = ($cases->cases_new / $pop) * 100;
+                $cases->cumPercentage = ($cases->cases_cumulative / $pop) * 100;
+                return $cases;
+            })
+            ->first();
     }
 
     public function getPop()
     {
-        return Cache::remember('Population', $this->cacheSecond, function () {
-            return Population::all();
-        })
+        return Cache::remember('Population', $this->cacheSecond, fn() => Population::all())
             ->where('Idxs', 0)
             ->first()
             ->pop;
@@ -74,20 +65,13 @@ class CasesMalaysiaService
 
     public function getTest()
     {
-        return Cache::remember('CasesMalaysia.Test', $this->cacheSecond, function () {
-            return TestMalaysia::query()
-                ->where('date', $this->getTestDateShouldQuery())
-                ->orderByDesc('date')
-                ->take(1)
-                ->get()
-                ->first();
-        });
+        return Cache::remember('CasesMalaysia.Test', $this->cacheSecond, fn() => TestMalaysia::where('date', $this->getTestDateShouldQuery())->first());
     }
 
     private function getTestDateShouldQuery(): string
     {
         $dateOfTest = TestMalaysia::query()->orderByDesc('date')->take(1)->get()->first()->date;
-        $dateOfCase = CasesMalaysia::query()->orderByDesc('date')->take(1)->get()->first()->date;
+        $dateOfCase = $this->getCases()->date;
 
         if ($dateOfCase == $dateOfTest) {
             return $dateOfCase;
@@ -99,7 +83,28 @@ class CasesMalaysiaService
         return $dateOfCase;
     }
 
-    public function getTimestamp()
+    public function getVax()
+    {
+        return Cache::remember('CasesMalaysia.VaxMalaysia', $this->cacheSecond, fn() => VaxMalaysia::latestOne()->get())
+            ->map(function ($vaxMalaysia) {
+                $vaxMalaysia->firstDosePercent = ($vaxMalaysia->dose1_cumul / $this->getPop()) * 100;
+                $vaxMalaysia->secondDosePercent = ($vaxMalaysia->dose2_cumul / $this->getPop()) * 100;
+                return $vaxMalaysia;
+            })
+            ->first();
+    }
+
+    public function getVaxReg()
+    {
+        return Cache::remember('CasesMalaysia.VaxRegMalaysia', $this->cacheSecond, fn() => VaxRegMalaysia::latestOne()->get())
+            ->map(function ($vaxRegMalaysia) {
+                $vaxRegMalaysia->registeredPrecent = ($vaxRegMalaysia->total / $this->getPop()) * 100;
+                return $vaxRegMalaysia;
+            })
+            ->first();
+    }
+
+    public function getTimestamp(): Collection
     {
         $collect = collect();
         $collect->cases = $this->getCases()->date->toDateString();
@@ -111,37 +116,4 @@ class CasesMalaysiaService
 
         return $collect;
     }
-
-    public function getVax()
-    {
-        return Cache::remember('CasesMalaysia.VaxMalaysia', $this->cacheSecond, function () {
-            return VaxMalaysia::query()
-                ->orderByDesc('date')
-                ->take(1)
-                ->get()
-                ->map(function ($vaxMalaysia) {
-                    $vaxMalaysia->firstDosePercent = ($vaxMalaysia->dose1_cumul / $this->getPop()) * 100;
-                    $vaxMalaysia->secondDosePercent = ($vaxMalaysia->dose2_cumul / $this->getPop()) * 100;
-                    return $vaxMalaysia;
-                })
-                ->first();
-        });
-    }
-
-    public function getVaxReg()
-    {
-        return Cache::remember('CasesMalaysia.VaxRegMalaysia', $this->cacheSecond, function () {
-            return VaxRegMalaysia::query()
-                ->orderByDesc('date')
-                ->take(1)
-                ->get()
-                ->map(function ($vaxRegMalaysia) {
-                    $vaxRegMalaysia->registeredPrecent = ($vaxRegMalaysia->total / $this->getPop()) * 100;
-                    return $vaxRegMalaysia;
-                })
-                ->first();
-        });
-    }
-
-
 }

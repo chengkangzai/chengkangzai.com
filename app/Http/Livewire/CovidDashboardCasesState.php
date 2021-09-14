@@ -4,24 +4,28 @@ namespace App\Http\Livewire;
 
 
 use App\Http\Services\CasesStateService;
+use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
+use Illuminate\Support\Collection;
 use Livewire\Component;
 
 class CovidDashboardCasesState extends Component
 {
-    public $updated_at;
+    public string $updated_at;
 
-    public $newCase;
-    public $newDeath;
-    public $cumCase;
-    public $cumCasePrecentage;
-    public $cumDeath;
-    public $fatalityRate;
-    public $tests;
-    public $positiveRate;
-    public $newRecovered;
-    public $cumRecovered;
+    public Collection $newCase;
+    public Collection $newDeath;
+    public Collection $cumCase;
+    public Collection $cumCasePercentage;
+    public Collection $cumDeath;
+    public Collection $fatalityRate;
+    public Collection $tests;
+    public Collection $positiveRate;
+    public Collection $newRecovered;
+    public Collection $cumRecovered;
 
-    public function render(CasesStateService $service)
+    public function render(CasesStateService $service): Factory|View|Application
     {
         $cases = $service->getCases();
         $death = $service->getDeath();
@@ -31,7 +35,7 @@ class CovidDashboardCasesState extends Component
 
         $this->newCase = $cases->pluck('cases_new', 'state');
         $this->cumCase = $cases->pluck('cases_cumulative', 'state');
-        $this->cumCasePrecentage = $cases->pluck('cumPercentage', 'state');
+        $this->cumCasePercentage = $cases->pluck('cumPercentage', 'state');
 
         $this->newRecovered = $cases->pluck('cases_recovered', 'state');
         $this->cumRecovered = $cases->pluck('cases_recovered_cumulative', 'state');
@@ -40,7 +44,7 @@ class CovidDashboardCasesState extends Component
         $this->cumDeath = $death->pluck('deaths_commutative', 'state');
         $this->fatalityRate = $service->calcFatalityRate();
 
-        $this->tests = $tests->pluck('totaltest', 'state');
+        $this->tests = $tests->pluck('totalTest', 'state');
         $this->positiveRate = $service->calcPositiveRate();
 
 

@@ -42,7 +42,7 @@
                     <table class="min-w-full divide-y divide-gray-200">
                         <thead class="bg-gray-50">
                         <tr>
-                            <th colspan="9" class="py-2 border-b">
+                            <th colspan="10" class="py-2 border-b">
                                 <a href="#healthcare-state">
                                     <h3 class="font-bold text-2xl uppercase">{{__('Active Cluster')}}</h3>
                                 </a>
@@ -74,6 +74,10 @@
                             <th scope="col" wire:click="sort('cases_active')"
                                 class="px-2 py-4 text-center text-xs font-medium text-gray-500 uppercase tracking-wider border-r cursor-pointer hover:text-blue-500 hover:font-bold">
                                 {{__('Active Case')}}
+                            </th>
+                            <th scope="col" wire:click="sort('cases_total')"
+                                class="px-2 py-4 text-center text-xs font-medium text-gray-500 uppercase tracking-wider border-r cursor-pointer hover:text-blue-500 hover:font-bold">
+                                {{__('Total Case')}}
                             </th>
                             <th scope="col" wire:click="sort('positiveRate')"
                                 class="px-2 py-4 text-center text-xs font-medium text-gray-500 uppercase tracking-wider border-r cursor-pointer hover:text-blue-500 hover:font-bold">
@@ -134,6 +138,9 @@
                                     {{$cluster->cases_active}}
                                 </td>
                                 <td class="py-4 whitespace-nowrap border-r">
+                                    {{$cluster->cases_total}}
+                                </td>
+                                <td class="py-4 whitespace-nowrap border-r">
                                     {{round(($cluster->cases_total/$cluster->tests)*100,2).'%'}}
                                     <small class="text-xs">
                                         ({{$cluster->cases_total}}/{{$cluster->tests}})
@@ -148,7 +155,7 @@
                             </tr>
                         @empty
                             <tr>
-                                <td colspan="9" class="py-4 whitespace-nowrap border-r">
+                                <td colspan="10" class="py-4 whitespace-nowrap border-r">
                                     {{__('No Data')}}
                                 </td>
                             </tr>
@@ -156,7 +163,7 @@
                         </tbody>
                         <tfoot>
                         <tr>
-                            <td colspan="9" class="bg-white py-2 px-2">
+                            <td colspan="10" class="bg-white py-2 px-2">
                                 {{$clusters->links()}}
                             </td>
                         </tr>

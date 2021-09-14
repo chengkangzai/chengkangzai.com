@@ -8,10 +8,8 @@ use Illuminate\Support\Facades\Http;
 
 class GetTopGithubCommitRankService
 {
-    /**
-     * @return int|mixed|string
-     */
-    public function getTopGithubCommitRank()
+
+    public function getTopGithubCommitRank(): string|int
     {
         $response = Http::get('https://commits.top/malaysia.html');
         $thml = $response->body();

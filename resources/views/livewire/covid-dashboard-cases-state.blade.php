@@ -59,7 +59,7 @@
                             <td class="px-6 py-4 whitespace-nowrap">
                                 {{number_format($cumCase[$state])}}
                                 <small class="text-xs">
-                                    {{ '('.number_format($cumCasePrecentage[$state],2).'%)'}}
+                                    {{ '('.number_format($cumCasePercentage[$state],2).'%)'}}
                                 </small>
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap">
@@ -94,7 +94,7 @@
                         <td class="px-6 py-4 whitespace-nowrap font-bold">
                             {{number_format($cumCase->sum())}}
                             <small class="text-xs">
-                                {{'('.number_format($cumCasePrecentage->avg(),2).'%)'}}
+                                {{'('.number_format($cumCasePercentage->avg(),2).'%)'}}
                             </small>
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap font-bold">

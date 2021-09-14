@@ -9,6 +9,9 @@ use App\Models\Covid\DeathsMalaysia;
 use App\Models\Covid\TestMalaysia;
 use App\Models\Covid\VaxMalaysia;
 use App\Models\Covid\VaxRegMalaysia;
+use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
 use Livewire\Component;
 
 class CovidDashboardMalaysia extends Component
@@ -24,7 +27,7 @@ class CovidDashboardMalaysia extends Component
     public int|float $positiveRate;
     public int|float $fatalityRate;
 
-    public function render(CasesMalaysiaService $service)
+    public function render(CasesMalaysiaService $service): Factory|View|Application
     {
         $this->cases = $service->getCases();
         $this->death = $service->getDeath();

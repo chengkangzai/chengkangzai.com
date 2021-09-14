@@ -18,9 +18,6 @@ class WebHookService
     ];
 
 
-    /**
-     * @return void
-     */
     public function notifySomeoneCommentedInPost(Post $post, Comment $comment)
     {
         Http::asJson()
@@ -36,11 +33,6 @@ class WebHookService
                 ]);
     }
 
-    /**
-     * @param string $title
-     * @param string $color
-     * @return void
-     */
     public function notifyInGeneral(string $title, string $color = self::COLOR['ORANGE'])
     {
         Http::asJson()
@@ -56,11 +48,7 @@ class WebHookService
                 ]);
     }
 
-    /**
-     * @param string $title
-     * @param string $color
-     * @return void
-     */
+
     public function notifyInSpam(string $title, string $color = self::COLOR['ORANGE'])
     {
         Http::asJson()
