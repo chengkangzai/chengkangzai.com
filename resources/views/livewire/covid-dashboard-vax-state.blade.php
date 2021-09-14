@@ -17,7 +17,7 @@
                                         @foreach(\App\Http\Services\VaxStateService::POP_FILTER as $key => $filter)
                                             <option value="{{\App\Http\Services\VaxStateService::POP_FILTER[$key]}}"
                                             >
-                                                {{$key}}
+                                                {{__($key)}}
                                             </option>
                                         @endforeach
                                     </select>
@@ -70,23 +70,23 @@
                         </th>
                         <th scope="col"
                             class="py-4 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
-                            {{__('New Dose 1 ')}} <span class="font-black text-black">*</span>
+                            {{__('New Dose 1 ')}}
                         </th>
                         <th scope="col"
                             class="py-4 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
-                            {{__('Dose 1 Cumulative')}} <span class="font-black text-black">*</span>
+                            {{__('Dose 1 Cumulative')}}
                         </th>
                         <th scope="col"
                             class="py-4 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
-                            {{__('New Dose 2 ')}} <span class="font-black text-black">*</span>
+                            {{__('New Dose 2 ')}}
                         </th>
                         <th scope="col"
                             class="py-4 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
-                            {{__('Dose 2 Cumulative')}} <span class="font-black text-black">*</span>
+                            {{__('Dose 2 Cumulative')}}
                         </th>
                         <th scope="col"
                             class="py-4 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
-                            {{__('Registered')}} <span class="font-black text-black">*</span>
+                            {{__('Registered')}}
                         </th>
 
                     </tr>
@@ -196,9 +196,6 @@
                         <td class="px-6 py-4 whitespace-nowrap text-left" colspan="6">
                             <div class="flex max-w-full">
                                 <div class="ml-4 ">
-                                    <p class="text-sm font-medium text-gray-900">
-                                        <span class="font-black text-black">*</span> {{__('per population')}}
-                                    </p>
                                     <p class="text-sm font-medium text-gray-900  break-words ">
                                         <span class="text-black">*</span>
                                         {{__('* note that this will not equal the number of people who were fully vaccinated on a given date when Malaysia begins using single-dose vaccines (e.g. CanSino)')}}

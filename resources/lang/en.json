@@ -246,5 +246,7 @@
     "Day passed since 2nd dose of AstraZeneca vaccine :": "Day passed since 2nd dose of AstraZeneca vaccine :",
     "Days until fully vaccinated : ": "Days until fully vaccinated :",
     "Total Case": "Total Case",
-    "Filter By": "Filter By"
+    "Filter By": "Filter By",
+    "ALL_POPULATION": "All Population",
+    "ABOVE_18": "Above 18"
 }

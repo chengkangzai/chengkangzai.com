@@ -246,5 +246,7 @@
     "Day passed since 2nd dose of AstraZeneca vaccine :": "自第 2 剂阿斯利康疫苗以来已过去了一天：",
     "Days until fully vaccinated : ": "距离完全接种疫苗的天数：",
     "Total Case": "总案例",
-    "Filter By": "过滤于"
+    "Filter By": "过滤于",
+    "ALL_POPULATION": "总人口",
+    "ABOVE_18": "18岁以上的人口"
 }

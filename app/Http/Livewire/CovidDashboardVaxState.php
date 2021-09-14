@@ -28,7 +28,7 @@ class CovidDashboardVaxState extends Component
     public Collection $vaxRegPrecent;
 
     public string $timestamp;
-    public mixed $popFilter = VaxStateService::POP_FILTER['ALL'];
+    public mixed $popFilter = VaxStateService::POP_FILTER['ALL_POPULATION'];
 
     #[NoReturn] public function render(VaxStateService $service): Factory|View|Application
     {
@@ -53,8 +53,4 @@ class CovidDashboardVaxState extends Component
         return view('livewire.covid-dashboard-vax-state');
     }
 
-    #[NoReturn] public function onFilterChange()
-    {
-        dd("hi");
-    }
 }
