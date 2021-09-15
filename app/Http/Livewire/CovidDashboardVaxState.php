@@ -54,4 +54,8 @@ class CovidDashboardVaxState extends Component
         return view('livewire.covid-dashboard-vax-state');
     }
 
+    public function updatedPopFilter()
+    {
+        $this->emit("vaxPopulationUpdate", $this->popFilter);
+    }
 }

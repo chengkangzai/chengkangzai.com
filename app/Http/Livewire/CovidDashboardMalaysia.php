@@ -6,6 +6,7 @@ namespace App\Http\Livewire;
 use App\Http\Services\CasesMalaysiaService;
 use App\Models\Covid\CasesMalaysia;
 use App\Models\Covid\DeathsMalaysia;
+use App\Models\Covid\Population;
 use App\Models\Covid\TestMalaysia;
 use App\Models\Covid\VaxMalaysia;
 use App\Models\Covid\VaxRegMalaysia;
@@ -36,8 +37,8 @@ class CovidDashboardMalaysia extends Component
         $this->cases = $service->getCases();
         $this->death = $service->getDeath();
         $this->test = $service->getTest();
-        $this->vax = $service->getVax();
-        $this->vaxReg = $service->getVaxReg();
+        $this->vax = $service->getVax(Population::POP_FILTER[$this->popFilter]);
+        $this->vaxReg = $service->getVaxReg(Population::POP_FILTER[$this->popFilter]);
 
         $this->clusterCount = $service->getClusterCount();
         $this->positiveRate = $service->calcPositiveRate();
