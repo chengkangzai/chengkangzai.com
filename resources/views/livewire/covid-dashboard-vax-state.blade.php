@@ -14,9 +14,8 @@
                                     <select class="bg-white ring ring-gray-200 mx-2 px-4 py-1 rounded"
                                             wire:model="popFilter">
                                         <option disabled>-----</option>
-                                        @foreach(\App\Http\Services\VaxStateService::POP_FILTER as $key => $filter)
-                                            <option value="{{\App\Http\Services\VaxStateService::POP_FILTER[$key]}}"
-                                            >
+                                        @foreach(\App\Models\Covid\Population::POP_FILTER as $key => $filter)
+                                            <option value="{{$key}}">
                                                 {{__($key)}}
                                             </option>
                                         @endforeach
