@@ -27,8 +27,10 @@
         </li>
     </ul>
     <div>
-        <p><span
-                class="font-black text-black">***</span> {{__('Any feedback/recommendation/correction is welcomed, contact me by email or twitter')}}
+        <p>
+            <span class="font-black text-black">***</span>
+            {!! __('Any feedback/recommendation/correction is welcomed, contact me by email or twitter')!!}
+
         </p>
     </div>
 </div>
