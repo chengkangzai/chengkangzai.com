@@ -50,14 +50,6 @@ class CasesMalaysiaService
             ->first();
     }
 
-    public function getPop()
-    {
-        return Cache::remember('Population', $this->cacheSecond, fn() => Population::all())
-            ->where('Idxs', 0)
-            ->first()
-            ->pop;
-    }
-
     public function calcPositiveRate(): float|int
     {
         return ($this->getCases()->cases_new / $this->getTest()->totaltest) * 100;
@@ -83,22 +75,23 @@ class CasesMalaysiaService
         return $dateOfCase;
     }
 
-    public function getVax()
+    public function getVax(string $filter = Population::POP_FILTER['ALL_POPULATION'])
     {
         return Cache::remember('CasesMalaysia.VaxMalaysia', $this->cacheSecond, fn() => VaxMalaysia::latestOne()->get())
-            ->map(function ($vaxMalaysia) {
-                $vaxMalaysia->firstDosePercent = ($vaxMalaysia->dose1_cumul / $this->getPop()) * 100;
-                $vaxMalaysia->secondDosePercent = ($vaxMalaysia->dose2_cumul / $this->getPop()) * 100;
+            ->map(function ($vaxMalaysia) use ($filter) {
+                $pop = $this->getPop($filter);
+                $vaxMalaysia->firstDosePercent = ($vaxMalaysia->dose1_cumul / $pop) * 100;
+                $vaxMalaysia->secondDosePercent = ($vaxMalaysia->dose2_cumul / $pop) * 100;
                 return $vaxMalaysia;
             })
             ->first();
     }
 
-    public function getVaxReg()
+    public function getVaxReg(string $filter = Population::POP_FILTER['ALL_POPULATION'])
     {
         return Cache::remember('CasesMalaysia.VaxRegMalaysia', $this->cacheSecond, fn() => VaxRegMalaysia::latestOne()->get())
-            ->map(function ($vaxRegMalaysia) {
-                $vaxRegMalaysia->registeredPrecent = ($vaxRegMalaysia->total / $this->getPop()) * 100;
+            ->map(function ($vaxRegMalaysia) use ($filter) {
+                $vaxRegMalaysia->registeredPrecent = ($vaxRegMalaysia->total / $this->getPop($filter)) * 100;
                 return $vaxRegMalaysia;
             })
             ->first();
@@ -115,5 +108,13 @@ class CasesMalaysiaService
         $collect->vaxReg = $this->getVaxReg()->date->toDateString();
 
         return $collect;
+    }
+
+    public function getPop(string $filter = Population::POP_FILTER['ALL_POPULATION'])
+    {
+        return Cache::remember('Population', $this->cacheSecond, fn() => Population::all())
+            ->where('Idxs', 0)
+            ->first()
+            ->$filter;
     }
 }
