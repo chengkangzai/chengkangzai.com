@@ -27,6 +27,10 @@ class CovidDashboardMalaysia extends Component
     public int|float $positiveRate;
     public int|float $fatalityRate;
 
+    protected $listeners = ['vaxPopulationUpdate'];
+
+    public mixed $popFilter = 'ALL_POPULATION';
+
     public function render(CasesMalaysiaService $service): Factory|View|Application
     {
         $this->cases = $service->getCases();
@@ -40,5 +44,13 @@ class CovidDashboardMalaysia extends Component
         $this->fatalityRate = $service->calcFatalityRate();
 
         return view('livewire.covid-dashboard-malaysia');
+    }
+
+    /**
+     * Listen to vaxPopulation
+     */
+    public function vaxPopulationUpdate(string $popFilter)
+    {
+        $this->popFilter = $popFilter;
     }
 }

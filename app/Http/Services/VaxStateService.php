@@ -11,10 +11,6 @@ use Illuminate\Support\Collection;
 
 class VaxStateService
 {
-    public const POP_FILTER = [
-        'ALL_POPULATION' => 'pop',
-        'ABOVE_18' => 'pop_18'
-    ];
 
     private int $cacheSecond;
 
@@ -23,7 +19,7 @@ class VaxStateService
         $this->cacheSecond = Carbon::now()->endOfHour()->diffInSeconds(Carbon::now());
     }
 
-    public function getVax(string $filter = self::POP_FILTER['ALL_POPULATION']): Collection
+    public function getVax(string $filter = Population::POP_FILTER['ALL_POPULATION']): Collection
     {
         return Cache::remember('VaxState.VaxState', $this->cacheSecond, function () {
             return VaxState::query()
@@ -44,7 +40,7 @@ class VaxStateService
             });
     }
 
-    public function getVaxReg(string $filter = self::POP_FILTER['ALL_POPULATION']): Collection
+    public function getVaxReg(string $filter = Population::POP_FILTER['ALL_POPULATION']): Collection
     {
         return Cache::remember('VaxState.VaxRegState', $this->cacheSecond, function () {
             return VaxRegState::query()
@@ -60,7 +56,7 @@ class VaxStateService
             });
     }
 
-    public function getPop(string $filter = self::POP_FILTER['ALL_POPULATION']): mixed
+    public function getPop(string $filter = Population::POP_FILTER['ALL_POPULATION']): mixed
     {
         return Cache::remember('Population', $this->cacheSecond, function () {
             return Population::all();

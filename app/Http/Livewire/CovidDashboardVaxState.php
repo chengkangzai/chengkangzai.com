@@ -3,6 +3,7 @@
 namespace App\Http\Livewire;
 
 use App\Http\Services\VaxStateService;
+use App\Models\Covid\Population;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
@@ -28,12 +29,12 @@ class CovidDashboardVaxState extends Component
     public Collection $vaxRegPrecent;
 
     public string $timestamp;
-    public mixed $popFilter = VaxStateService::POP_FILTER['ALL_POPULATION'];
+    public mixed $popFilter = 'ALL_POPULATION';
 
     #[NoReturn] public function render(VaxStateService $service): Factory|View|Application
     {
-        $vax = $service->getVax($this->popFilter);
-        $vaxReg = $service->getVaxReg($this->popFilter);
+        $vax = $service->getVax(Population::POP_FILTER[$this->popFilter]);
+        $vaxReg = $service->getVaxReg(Population::POP_FILTER[$this->popFilter]);
 
         $this->timestamp = $vax->first()->date->toDateString();
 

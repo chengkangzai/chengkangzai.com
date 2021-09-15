@@ -38,4 +38,9 @@ class Population extends Model
         "W.P. Labuan" => "W.P. Labuan",
         "W.P. Putrajaya" => "W.P. Putrajaya",
     ];
+
+    public const POP_FILTER = [
+        'ALL_POPULATION' => 'pop',
+        'ABOVE_18' => 'pop_18'
+    ];
 }
