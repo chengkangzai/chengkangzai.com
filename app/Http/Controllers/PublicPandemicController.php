@@ -2,14 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
 use SEO;
 
 class PublicPandemicController extends Controller
 {
-    public function index()
+    public function index(): Factory|View|Application
     {
         SEO::setTitle(__('COVID Dashboard'));
         SEO::setDescription(__('A Dashboard to monitoring Covid 19 Cases, HealthCare Facilities and Vaccine Status'));
+        SEO::addImages(Config('app.url').'/src/ss_pandemic.png');
 
         return view('public.covid.index');
     }
