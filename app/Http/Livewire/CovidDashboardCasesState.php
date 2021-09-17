@@ -24,6 +24,8 @@ class CovidDashboardCasesState extends Component
     public Collection $positiveRate;
     public Collection $newRecovered;
     public Collection $cumRecovered;
+    public Collection $activeCase;
+    public Collection $activeCasePercentage;
 
     public function render(CasesStateService $service): Factory|View|Application
     {
@@ -39,6 +41,9 @@ class CovidDashboardCasesState extends Component
 
         $this->newRecovered = $cases->pluck('cases_recovered', 'state');
         $this->cumRecovered = $cases->pluck('cases_recovered_cumulative', 'state');
+
+        $this->activeCase = $cases->pluck('activeCase', 'state');
+        $this->activeCasePercentage = $cases->pluck('activeCasePercentage', 'state');
 
         $this->newDeath = $death->pluck('deaths_new', 'state');
         $this->cumDeath = $death->pluck('deaths_commutative', 'state');
