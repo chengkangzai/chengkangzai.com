@@ -19,7 +19,7 @@
     </section>
 
     <div class="sm:grid sm:grid-cols-4 sm:grid-rows-3 sm:gap-2 space-y-2 sm:space-y-0">
-        <div class="dark:bg-white bg-gray-50 rounded-xl shadow py-8 lg:row-span-2 lg:py-32 px-4 self-center">
+        <div class="dark:bg-white bg-gray-50 rounded-xl shadow py-8 lg:row-span-2 lg:py-40 px-4 self-center">
             {{--TODO : Use Icon to show the inflow and out flow--}}
             {{--TODO : Change the wording of "ICU,PKRC, Hospital to dynamically" --}}
             <h2 class="text-2xl pb-2">{{__('Inflow and Out Flow of Hospital and ICU')}}</h2>
