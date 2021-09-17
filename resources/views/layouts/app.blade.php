@@ -68,9 +68,15 @@
                 <div @click.away="open = false" class="relative" x-data="{ open: false }">
                     <button @click="open = !open" aria-label="Drop Down trigger"
                             class="hover:text-black flex flex-row text-white items-center w-full px-4 py-2 mt-2 text-bold text-md text-left bg-transparent rounded-lg dark:bg-transparent dark:focus:text-white dark:hover:text-white dark:focus:bg-gray-600 dark:hover:bg-gray-600 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
-                        <span>{{__('Select Language')}}</span>
+                        <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline"
+                             fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                  d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        {{__('Select Language')}}
+                        </span>
                         <svg viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}"
-                             class="inline w-4 h-4 mt-1 ml-1 text-white fill-current  transition-transform duration-200 transform md:-mt-1">
+                             class="inline w-4 h-4 mt-1 ml-1 fill-current transition-transform duration-200 transform md:-mt-1">
                             <path fill-rule="evenodd" clip-rule="evenodd"
                                   d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"></path>
                         </svg>
