@@ -26,6 +26,7 @@ class HealthCareService
                     $icu->covid_utilization = ($icu->icu_covid / $icu->bed_icu_covid) * 100;
                 }
                 $icu->overall_utilization = $icu->getOverallUtilisationAttribute();
+                $icu->vent_utilization = $icu->getVentilationUtilisationAttribute();
                 return $icu;
             });
     }

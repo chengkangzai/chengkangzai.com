@@ -275,6 +275,8 @@ class ImportCovidFromGithubService
                     'vent_covid' => $dailyCase[11],
                     'vent_pui' => $dailyCase[12],
                     'vent_noncovid' => $dailyCase[13],
+                    'vent_used' => $dailyCase[14],
+                    'vent_port_used' => $dailyCase[15],
                     'created_at' => now(),
                     'updated_at' => now(),
                 ];

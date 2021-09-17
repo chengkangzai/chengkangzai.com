@@ -2,7 +2,7 @@
 
 @section('content')
     @include('partial.rocket')
-    <div class="container">
+    <div class="mx-2">
         @livewire('covid-dashboard-head')
         @livewire('covid-dashboard-malaysia')
         @livewire('covid-dashboard-cases-state')
