@@ -1,5 +1,5 @@
 <section class="mt-2 mb-6" id="health-care" xmlns:wire="http://www.w3.org/1999/xhtml">
-    <section class="my-2 rounded-2xl dark:bg-white dark:text-black py-4 bg-gray-50 shadow" id="malaysia-dashboard">
+    <section class="my-2 rounded-2xl dark:bg-white dark:text-black py-12 bg-gray-50 shadow" id="malaysia-dashboard">
         <a href="#health-care">
             <h1 class="text-2xl sm:text-5xl font-bold px-2">{{__('Health Care of :')}} {{__($state)}}</h1>
         </a>
@@ -19,7 +19,7 @@
     </section>
 
     <div class="sm:grid sm:grid-cols-4 sm:grid-rows-3 sm:gap-2 space-y-2 sm:space-y-0">
-        <div class="dark:bg-white bg-gray-50 py-8 rounded-xl shadow row-span-2 py-24">
+        <div class="dark:bg-white bg-gray-50 rounded-xl shadow py-8 lg:row-span-2 lg:py-32 px-4 self-center">
             {{--TODO : Use Icon to show the inflow and out flow--}}
             {{--TODO : Change the wording of "ICU,PKRC, Hospital to dynamically" --}}
             <h2 class="text-2xl pb-2">{{__('Inflow and Out Flow of Hospital and ICU')}}</h2>
@@ -101,7 +101,8 @@
 
         {{--START OF PKRC--}}
         <div class="dark:bg-white bg-gray-50 py-8 rounded-xl shadow ">
-            <h2 class="text-2xl">{{__('Inflow and Out Flow of PKRC')}}</h2>
+            <h2 class="text-2xl pb-6">{{__('Inflow and Out Flow of PKRC')}}</h2>
+            <hr class="mx-4 py-2">
             <p class="text-5xl font-bold">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 inline text-red-500" fill="none"
                      viewBox="0 0 24 24"
