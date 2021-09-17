@@ -31,6 +31,8 @@ class ICU extends Model
         'vent_covid',
         'vent_pui',
         'vent_noncovid',
+        'vent_used',
+        'vent_port_used',
     ];
 
     const STATE = [
@@ -65,5 +67,20 @@ class ICU extends Model
     #[Pure] public function getOverallUtilisationAttribute(): float|int
     {
         return ($this->getTotalPatientAttribute() / $this->bed_icu_total) * 100;
+    }
+
+    public function getTotalVentilatorsAttribute(): float|int
+    {
+        return $this->vent + $this->vent_port;
+    }
+
+    public function getTotalVentilatorsPatientAttribute(): float|int
+    {
+        return $this->vent_covid + $this->vent_pui + $this->vent_noncovid;
+    }
+
+    #[Pure] public function getVentilationUtilisationAttribute(): float|int
+    {
+        return ($this->getTotalVentilatorsPatientAttribute() / $this->getTotalVentilatorsAttribute()) * 100;
     }
 }
