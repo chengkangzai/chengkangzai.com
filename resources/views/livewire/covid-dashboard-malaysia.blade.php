@@ -18,7 +18,10 @@
 
         <div class="dark:bg-white bg-gray-50 py-8 rounded-xl shadow ">
             <h2 class="text-2xl">{{__('Active Cases In Malaysia')}}</h2>
-            <p class="text-red-500 font-bold text-4xl xl:text-5xl">{{number_format($cases->activeCases)}}</p>
+            <p class="text-red-500 font-bold text-4xl xl:text-5xl">{{number_format($cases->activeCase)}}</p>
+            <span>({{number_format($cases->activeCasePercentage,2)}}%)
+                <span class="font-bold">*</span>
+            </span>
         </div>
 
 {{--End of First Row--}}

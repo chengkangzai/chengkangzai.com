@@ -37,10 +37,11 @@ class CasesStateService
     public function getCases()
     {
         return Cache::remember('CasesState.Cases', $this->cacheSecond, fn() => CasesState::latestOne()->get())
-            ->map(function ($cases) {
+            ->map(function (CasesState $cases) {
                 $pop = $this->getPop()[$cases->state];
                 $cases->newPercentage = ($cases->cases_new / $pop) * 100;
                 $cases->cumPercentage = ($cases->cases_cumulative / $pop) * 100;
+                $cases->activeCasePercentage = ($cases->activeCase / $pop) * 100;
                 return $cases;
             });
     }
