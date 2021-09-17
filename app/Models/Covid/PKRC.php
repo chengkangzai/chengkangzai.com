@@ -5,6 +5,7 @@ namespace App\Models\Covid;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use JetBrains\PhpStorm\Pure;
 
 class PKRC extends Model
 {
@@ -52,5 +53,15 @@ class PKRC extends Model
     public function scopeLatestOne(Builder $query): Builder
     {
         return $query->orderByDesc('date')->take(16)->orderBy('state');
+    }
+
+    public function getTotalPatientAttribute()
+    {
+        return $this->pkrc_covid + $this->pkrc_noncovid + $this->pkrc_pui;
+    }
+
+    #[Pure] public function getOverallUtilisationAttribute(): float|int
+    {
+        return ($this->getTotalPatientAttribute() / $this->beds) * 100;
     }
 }

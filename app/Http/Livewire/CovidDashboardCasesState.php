@@ -47,10 +47,10 @@ class CovidDashboardCasesState extends Component
 
         $this->newDeath = $death->pluck('deaths_new', 'state');
         $this->cumDeath = $death->pluck('deaths_commutative', 'state');
-        $this->fatalityRate = $service->calcFatalityRate();
+        $this->fatalityRate = $service->calcFatalityRate()->pluck('fatalityRate', 'state');
 
         $this->tests = $tests->pluck('totalTest', 'state');
-        $this->positiveRate = $service->calcPositiveRate();
+        $this->positiveRate = $service->calcPositiveRate()->pluck('positiveRate', 'state');
 
 
         return view('livewire.covid-dashboard-cases-state');
