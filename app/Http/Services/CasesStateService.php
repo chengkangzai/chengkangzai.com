@@ -25,7 +25,7 @@ class CasesStateService
         return Cache::remember('CasesState.Death', $this->cacheSecond, fn() => DeathsState::latestOne()->get());
     }
 
-    public function getCases()
+    public function getCases(): Collection
     {
         return Cache::remember('CasesState.Cases', $this->cacheSecond, fn() => CasesState::latestOne()->get())
             ->map(function (CasesState $cases) {
@@ -37,7 +37,7 @@ class CasesStateService
             });
     }
 
-    public function getTest()
+    public function getTest(): Collection
     {
         return Cache::remember('CasesState.Test', $this->cacheSecond, function () {
             return TestState::where('date', $this->getTestDateShouldQuery())
@@ -56,7 +56,7 @@ class CasesStateService
         return $this->getCases()->map(function ($cases) use ($tests) {
             $cases->positiveRate = ($cases->cases_new / $tests[$cases->state]) * 100;
             return $cases;
-        })->pluck('positiveRate', 'state');
+        });
 
     }
 
