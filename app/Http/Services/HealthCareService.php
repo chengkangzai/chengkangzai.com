@@ -57,8 +57,7 @@ class HealthCareService
 
                 $icu->totalCovidBed = $icuBed + $hospitalBed + $pkrcBed;
                 return $icu;
-            })
-            ->pluck('totalCovidBed', 'state');
+            });
     }
 
     public function getTotalOccupancyByState()
@@ -71,8 +70,7 @@ class HealthCareService
 
                 $icu->totalOccupy = $icuOccupy + $hospitalOccupy + $pkrcOccupy;
                 return $icu;
-            })
-            ->pluck('totalOccupy', 'state');
+            });
     }
 
     public function getTotalUtilizationByState()
@@ -85,8 +83,7 @@ class HealthCareService
 
                 $icu->utilPrecent = ($icuUtil + $hospitalUtil + $pkrcUtil) / 3;
                 return $icu;
-            })
-            ->pluck('utilPrecent', 'state');
+            });
     }
 
 
