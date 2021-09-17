@@ -9,8 +9,9 @@
     <link rel="manifest" href="/manifest.json">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-{!! SEO::generate(true) !!}
-<!-- Global site tag (gtag.js) - Google Analytics -->
+    {!! SEO::generate(true) !!}
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-G0TL352WKG"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -36,30 +37,39 @@
 <body class="bg-white dark:bg-black">
 
 <header class="text-gray-600 body-font bg-gray-100 dark:bg-gray-900">
-    <div class="container mx-auto flex flex-wrap py-2 flex-col md:flex-row items-center">
-        <div class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+    <div x-data="{ open: false }" class="container mx-auto flex flex-wrap py-2 flex-col md:flex-row items-center">
+        <div  class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
             <a href="{{route('public.index')}}">
                 <img src="{{asset('favicon.ico')}}" alt="" class="w-8"/>
             </a>
             <a href="{{route('public.pandemic.index')}}">
                 <span class="ml-3 text-xl dark:text-white">{{__('COVID Dashboard')}}</span>
             </a>
+            <button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline absolute right-2" @click="open = !open">
+                <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+                    <path x-show="!open" fill-rule="evenodd" clip-rule="evenodd" class="fill-current text-white dark:hover:text-black"
+                          d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"></path>
+                    <path x-show="open" fill-rule="evenodd" clip-rule="evenodd" class="fill-current text-white dark:hover:text-black"
+                          d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"></path>
+                </svg>
+            </button>
         </div>
-        <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center dark:text-white space-x-2">
+        <nav :class="{'flex': open, 'hidden': !open}"
+            class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row dark:text-white">
             <a href="{{route('public.pandemic.index')}}"
-                class=" cursor-pointer dark:hover:text-white hover:text-gray-900 dark:hover:bg-gray-600 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline rounded-lg px-2 py-2 text-bold @if(request()->is('pandemic'))) bg-gray-50 dark:bg-gray-800 font-bold @endif">
+               class="cursor-pointer dark:hover:text-white hover:text-gray-900 dark:hover:bg-gray-600 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline rounded-lg px-2 py-2 text-bold @if(request()->is('pandemic'))) bg-gray-50 dark:bg-gray-800 font-bold @endif">
                 {{__('Dashboard')}}
             </a>
             <a href="{{route('public.pandemic.clusters')}}"
                class="cursor-pointer dark:hover:text-white hover:text-gray-900 dark:hover:bg-gray-600 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline rounded-lg px-2 py-2 text-bold @if(request()->is('pandemic/clusters'))) bg-gray-50 dark:bg-gray-800 font-bold @endif">
                 {{__('Clusters')}}
             </a>
-            {{--            <a class=" cursor-pointer dark:hover:text-white hover:text-gray-900 dark:hover:bg-gray-600 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline rounded-lg px-2 py-2 text-bold">--}}
-            {{--                Third Link--}}
-            {{--            </a>--}}
-            {{--            <a class=" cursor-pointer dark:hover:text-white hover:text-gray-900 dark:hover:bg-gray-600 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline rounded-lg px-2 py-2 text-bold">--}}
-            {{--                Fourth Link--}}
-            {{--            </a>--}}
+{{--            <a class="cursor-pointer dark:hover:text-white hover:text-gray-900 dark:hover:bg-gray-600 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline rounded-lg px-2 py-2 text-bold">--}}
+{{--                Third Link--}}
+{{--            </a>--}}
+{{--            <a class="cursor-pointer dark:hover:text-white hover:text-gray-900 dark:hover:bg-gray-600 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline rounded-lg px-2 py-2 text-bold">--}}
+{{--                Fourth Link--}}
+{{--            </a>--}}
             <div @click.away="open = false" class="relative" x-data="{ open: false }">
                 <button @click="open = !open" aria-label="Drop Down trigger"
                         class="hover:text-black flex flex-row dark:text-white text-black items-center w-full px-2 py-2 mt-2 text-bold text-md text-left bg-transparent rounded-lg dark:bg-transparent dark:focus:text-white dark:hover:text-white dark:focus:bg-gray-600 dark:hover:bg-gray-600 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">

@@ -13,8 +13,13 @@ class PublicPandemicController extends Controller
     {
         SEO::setTitle(__('COVID Dashboard'));
         SEO::setDescription(__('A Dashboard to monitoring Covid 19 Cases, HealthCare Facilities and Vaccine Status'));
-        SEO::addImages(Config('app.url').'/src/ss_pandemic.png');
+        SEO::addImages(Config('app.url') . '/src/ss_pandemic.png');
 
         return view('public.covid.index');
+    }
+
+    public function graph(): Factory|View|Application
+    {
+        return view('public.covid.graph');
     }
 }
