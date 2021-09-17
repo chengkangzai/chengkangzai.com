@@ -65,9 +65,10 @@
                class="cursor-pointer dark:hover:text-white hover:text-gray-900 dark:hover:bg-gray-600 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline rounded-lg px-2 py-2 text-bold @if(request()->is('pandemic/clusters'))) bg-gray-50 dark:bg-gray-800 font-bold @endif">
                 {{__('Clusters')}}
             </a>
-            {{--            <a class="cursor-pointer dark:hover:text-white hover:text-gray-900 dark:hover:bg-gray-600 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline rounded-lg px-2 py-2 text-bold">--}}
-            {{--                Third Link--}}
-            {{--            </a>--}}
+            <a href="{{route('public.pandemic.state')}}"
+               class="cursor-pointer dark:hover:text-white hover:text-gray-900 dark:hover:bg-gray-600 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline rounded-lg px-2 py-2 text-bold">
+                {{__('State View')}}
+            </a>
             {{--            <a class="cursor-pointer dark:hover:text-white hover:text-gray-900 dark:hover:bg-gray-600 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline rounded-lg px-2 py-2 text-bold">--}}
             {{--                Fourth Link--}}
             {{--            </a>--}}
