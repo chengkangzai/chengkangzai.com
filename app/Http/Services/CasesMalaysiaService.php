@@ -41,10 +41,11 @@ class CasesMalaysiaService
     public function getCases()
     {
         return Cache::remember('CasesMalaysia.Cases', $this->cacheSecond, fn() => CasesMalaysia::latestOne()->get())
-            ->map(function ($cases) {
+            ->map(function (CasesMalaysia $cases) {
                 $pop = $this->getPop();
                 $cases->newPercentage = ($cases->cases_new / $pop) * 100;
                 $cases->cumPercentage = ($cases->cases_cumulative / $pop) * 100;
+                $cases->activeCasePercentage = ($cases->activeCase / $pop) * 100;
                 return $cases;
             })
             ->first();
