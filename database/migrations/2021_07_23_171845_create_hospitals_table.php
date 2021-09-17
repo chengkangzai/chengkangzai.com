@@ -19,15 +19,15 @@ class CreateHospitalsTable extends Migration
             $table->string('state');
             $table->integer('beds');
             $table->integer('beds_noncrit')->comment('Non Critical Beds');
-            $table->integer('admitted_pui');
+            $table->integer('admitted_pui')->comment('pui mean Patient under investigation');;
             $table->integer('admitted_covid');
             $table->integer('admitted_total');
             $table->integer('discharged_pui');
             $table->integer('discharged_covid');
             $table->integer('discharged_total');
             $table->integer('hosp_covid');
-            $table->integer('hosp_pui');
-            $table->integer('hosp_noncovid');
+            $table->integer('hosp_pui')->comment('pui mean Patient under investigation');;
+            $table->integer('hosp_noncovid')->comment('Non Critical Patient');;
             $table->timestamps();
         });
     }

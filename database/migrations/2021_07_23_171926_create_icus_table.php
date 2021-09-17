@@ -26,11 +26,11 @@ return new class extends Migration {
             $table->integer('vent_port');
 
             $table->integer('icu_covid');
-            $table->integer('icu_pui');
+            $table->integer('icu_pui')->comment('pui mean Patient under investigation');
             $table->integer('icu_noncovid');
 
             $table->integer('vent_covid');
-            $table->integer('vent_pui');
+            $table->integer('vent_pui')->comment('pui mean Patient under investigation');
             $table->integer('vent_noncovid');
 
             $table->timestamps();
