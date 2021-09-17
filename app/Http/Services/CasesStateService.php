@@ -20,21 +20,12 @@ class CasesStateService
         $this->cacheSecond = Carbon::now()->endOfHour()->diffInSeconds(Carbon::now());
     }
 
-    public function calcFatalityRate(): Collection
-    {
-        $deaths = $this->getDeath()->pluck('deaths_commutative', 'state');
-        return $this->getCases()->map(function ($cases) use ($deaths) {
-            $cases->fatalityRate = ($deaths[$cases->state] / $cases->cases_cumulative) * 100;
-            return $cases;
-        })->pluck('fatalityRate', 'state');
-    }
-
-    public function getDeath()
+    public function getDeath(): Collection
     {
         return Cache::remember('CasesState.Death', $this->cacheSecond, fn() => DeathsState::latestOne()->get());
     }
 
-    public function getCases()
+    public function getCases(): Collection
     {
         return Cache::remember('CasesState.Cases', $this->cacheSecond, fn() => CasesState::latestOne()->get())
             ->map(function (CasesState $cases) {
@@ -46,7 +37,7 @@ class CasesStateService
             });
     }
 
-    public function getTest()
+    public function getTest(): Collection
     {
         return Cache::remember('CasesState.Test', $this->cacheSecond, function () {
             return TestState::where('date', $this->getTestDateShouldQuery())
@@ -69,6 +60,15 @@ class CasesStateService
                 return $cases;
             })
             ->pluck('positiveRate', 'state');
+    }
+
+    public function calcFatalityRate(): Collection
+    {
+        $deaths = $this->getDeath()->pluck('deaths_commutative', 'state');
+        return $this->getCases()->map(function ( $cases) use ($deaths) {
+            $cases->fatalityRate = ($deaths[$cases->state] / $cases->cases_cumulative) * 100;
+            return $cases;
+        });
     }
 
     private function getPop(): Collection
