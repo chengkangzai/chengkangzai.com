@@ -2,6 +2,9 @@
 
 @section('content')
 
+    @livewire('covid-state.head')
+    @livewire('covid-state.dashboard')
+    @livewire('covid-state.health-care')
 
 @endsection
 
