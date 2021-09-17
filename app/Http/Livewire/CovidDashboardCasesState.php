@@ -13,6 +13,7 @@ use Livewire\Component;
 class CovidDashboardCasesState extends Component
 {
     public string $updated_at;
+    public string $positiveRate_updated_at;
 
     public Collection $newCase;
     public Collection $newDeath;
@@ -34,6 +35,7 @@ class CovidDashboardCasesState extends Component
         $tests = $service->getTest();
 
         $this->updated_at = $cases->first()->date->toDateString();
+        $this->positiveRate_updated_at = $tests->first()->date->toDateString();
 
         $this->newCase = $cases->pluck('cases_new', 'state');
         $this->cumCase = $cases->pluck('cases_cumulative', 'state');
