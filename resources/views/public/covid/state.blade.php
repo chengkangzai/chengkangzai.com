@@ -2,7 +2,6 @@
 
 @section('content')
 
-{{--<livewire:graph-covid-malaysia></livewire:graph-covid-malaysia>--}}
 
 @endsection
 
