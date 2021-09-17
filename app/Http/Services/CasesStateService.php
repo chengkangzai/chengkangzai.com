@@ -58,8 +58,7 @@ class CasesStateService
             ->map(function ($cases) use ($tests) {
                 $cases->positiveRate = ($cases->cases_new / $tests[$cases->state]) * 100;
                 return $cases;
-            })
-            ->pluck('positiveRate', 'state');
+            });
     }
 
     public function calcFatalityRate(): Collection
