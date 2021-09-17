@@ -53,11 +53,13 @@ class CasesStateService
     public function calcPositiveRate(): Collection
     {
         $tests = $this->getTest()->pluck('totalTest', 'state');
-        return $this->getCases()->map(function ($cases) use ($tests) {
-            $cases->positiveRate = ($cases->cases_new / $tests[$cases->state]) * 100;
-            return $cases;
-        });
-
+        return CasesState::where('date', $this->getTestDateShouldQuery())
+            ->get()
+            ->map(function ($cases) use ($tests) {
+                $cases->positiveRate = ($cases->cases_new / $tests[$cases->state]) * 100;
+                return $cases;
+            })
+            ->pluck('positiveRate', 'state');
     }
 
     public function calcFatalityRate(): Collection
@@ -86,6 +88,7 @@ class CasesStateService
         if ($dateOfTest < $dateOfCase) {
             return $dateOfTest;
         }
+
         return $dateOfCase;
     }
 

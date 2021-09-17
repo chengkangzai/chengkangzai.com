@@ -139,7 +139,8 @@
                                 <div class="ml-4 ">
                                     <p class="text-sm font-medium text-gray-900">
                                         <span class="text-black">*</span>
-                                        {{__('Not necessarily unique individuals')}}
+                                        {{__('Not necessarily unique individuals')}},
+                                        {{__('Updated at')}} {{$positiveRate_updated_at}}
                                     </p>
                                 </div>
                             </div>
