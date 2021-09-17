@@ -5,7 +5,7 @@
                 <table class="min-w-full divide-y divide-gray-200">
                     <thead class="bg-gray-50">
                     <tr>
-                        <th colspan="6" class="py-2 border-b">
+                        <th colspan="7" class="py-2 border-b">
                             <a href="#case-state">
                                 <h3 class="font-bold text-2xl uppercase">{{__('Cases per States')}}</h3>
                             </a>
@@ -26,6 +26,10 @@
                         <th scope="col"
                             class="py-4 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
                             {{__('Cumulative Case')}} ({{__('% per population')}})
+                        </th>
+                        <th scope="col"
+                            class="py-4 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
+                            {{__('Active Case')}}
                         </th>
                         <th scope="col"
                             class="py-4 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -60,6 +64,12 @@
                                 {{number_format($cumCase[$state])}}
                                 <small class="text-xs">
                                     {{ '('.number_format($cumCasePercentage[$state],2).'%)'}}
+                                </small>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                {{number_format($activeCase[$state])}}
+                                <small class="text-xs">
+                                    {{ '('.number_format($activeCasePercentage[$state],2).'%)'}}
                                 </small>
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap">
@@ -98,6 +108,12 @@
                             </small>
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap font-bold">
+                            {{number_format($activeCase->sum())}}
+                            <small class="text-xs">
+                                {{'('.number_format($activeCasePercentage->avg(),2).'%)'}}
+                            </small>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap font-bold">
                             {{number_format($newDeath->sum())}}
                             <small class="text-xs">
                             </small>
@@ -118,7 +134,7 @@
                     </tbody>
                     <tfoot>
                     <tr class="bg-white">
-                        <td class="px-6 py-4 whitespace-nowrap text-left" colspan="6">
+                        <td class="px-6 py-4 whitespace-nowrap text-left" colspan="7">
                             <div class="flex max-w-full">
                                 <div class="ml-4 ">
                                     <p class="text-sm font-medium text-gray-900">
