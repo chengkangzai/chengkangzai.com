@@ -5,6 +5,7 @@ namespace App\Models\Covid;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use JetBrains\PhpStorm\Pure;
 
 class ICU extends Model
 {
@@ -54,5 +55,15 @@ class ICU extends Model
     public function scopeLatestOne(Builder $query): Builder
     {
         return $query->orderByDesc('date')->take(16)->orderBy('state');
+    }
+
+    public function getTotalPatientAttribute()
+    {
+        return $this->icu_covid + $this->icu_noncovid + $this->icu_pui;
+    }
+
+    #[Pure] public function getOverallUtilisationAttribute(): float|int
+    {
+        return ($this->getTotalPatientAttribute() / $this->bed_icu_total) * 100;
     }
 }

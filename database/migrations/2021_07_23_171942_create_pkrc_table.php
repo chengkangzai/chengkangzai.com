@@ -18,10 +18,10 @@ return new class extends Migration
             $table->date('date');
             $table->string('state');
             $table->integer('beds');
-            $table->integer('admitted_pui');
+            $table->integer('admitted_pui')->comment('pui mean Patient under investigation');;
             $table->integer('admitted_covid');
             $table->integer('admitted_total');
-            $table->integer('discharge_pui');
+            $table->integer('discharge_pui')->comment('pui mean Patient under investigation');;
             $table->integer('discharge_covid');
             $table->integer('discharge_total');
             $table->integer('pkrc_covid');

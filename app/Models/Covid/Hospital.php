@@ -5,6 +5,7 @@ namespace App\Models\Covid;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use JetBrains\PhpStorm\Pure;
 
 class Hospital extends Model
 {
@@ -51,5 +52,22 @@ class Hospital extends Model
     public function scopeLatestOne(Builder $query): Builder
     {
         return $query->orderByDesc('date')->take(16)->orderBy('state');
+    }
+
+
+    public function getTotalPatientAttribute()
+    {
+        return $this->hosp_covid + $this->hosp_noncovid + $this->hosp_pui;
+    }
+
+
+    #[Pure] public function getOverallUtilisationAttribute(): float|int
+    {
+        return ($this->getTotalPatientAttribute() / $this->beds) * 100;
+    }
+
+    public function getCovidUtilisationAttribute(): float|int
+    {
+        return ($this->hosp_covid / $this->beds_covid) * 100;
     }
 }
