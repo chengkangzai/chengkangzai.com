@@ -18,8 +18,8 @@ class PublicPandemicController extends Controller
         return view('public.covid.index');
     }
 
-    public function graph(): Factory|View|Application
+    public function state(): Factory|View|Application
     {
-        return view('public.covid.graph');
+        return view('public.covid.state');
     }
 }

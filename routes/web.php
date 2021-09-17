@@ -38,7 +38,7 @@ Route::group(['as' => 'public.'], function () {
     Route::group(['prefix' => 'pandemic', 'as' => 'pandemic.'], function () {
         Route::get('/', [PublicPandemicController::class, 'index'])->name('index');
         Route::view('clusters', 'public.covid.cluster')->name('clusters');
-        Route::get('graph', [PublicPandemicController::class, 'graph'])->name('graph');
+        Route::get('state', [PublicPandemicController::class, 'state'])->name('state');
     });
     Route::resource('posts.comments', PublicPostCommentController::class)->only(['store']);
 });
