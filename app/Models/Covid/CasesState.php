@@ -52,4 +52,9 @@ class CasesState extends Model
     {
         return $date->format('Y-m-d');
     }
+
+    protected function getActiveCaseAttribute()
+    {
+        return $this->cases_cumulative - $this->cases_recovered_cumulative;
+    }
 }
