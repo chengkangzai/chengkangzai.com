@@ -19,7 +19,7 @@
     </section>
 
     <div class="sm:grid sm:grid-cols-4 sm:grid-rows-3 sm:gap-2 space-y-2 sm:space-y-0">
-        <div class="dark:bg-white bg-gray-50 rounded-xl shadow py-8 lg:row-span-2 lg:py-40 px-4 self-center">
+        <div class="dark:bg-white bg-gray-50 rounded-xl shadow py-8 lg:row-span-2 lg:py-40 px-4 self-center place-self-stretch">
             {{--TODO : Use Icon to show the inflow and out flow--}}
             {{--TODO : Change the wording of "ICU,PKRC, Hospital to dynamically" --}}
             <h2 class="text-2xl pb-2">{{__('Inflow and Out Flow of Hospital and ICU')}}</h2>
@@ -100,11 +100,11 @@
         {{--END OF Hospital --}}
 
         {{--START OF PKRC--}}
-        <div class="dark:bg-white bg-gray-50 py-8 rounded-xl shadow ">
+        <div class="dark:bg-white bg-gray-50 py-8 rounded-xl shadow px-4">
             <h2 class="text-2xl pb-6">{{__('Inflow and Out Flow of PKRC')}}</h2>
-            <hr class="mx-4 py-2">
-            <p class="text-5xl font-bold">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 inline text-red-500" fill="none"
+            <hr class="mx-4">
+            <p class="text-4xl font-bold">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 inline text-red-500" fill="none"
                      viewBox="0 0 24 24"
                      stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -116,8 +116,8 @@
                     N/A
                 @endif
             </p>
-            <p class="text-5xl font-bold">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 inline text-green-500" fill="none"
+            <p class="text-4xl font-bold">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 inline text-green-500" fill="none"
                      viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                           d="M11 15l-3-3m0 0l3-3m-3 3h8M3 12a9 9 0 1118 0 9 9 0 01-18 0z"/>
