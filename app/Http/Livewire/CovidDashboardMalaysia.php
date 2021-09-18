@@ -27,6 +27,7 @@ class CovidDashboardMalaysia extends Component
     public int $clusterCount;
     public int|float $positiveRate;
     public int|float $fatalityRate;
+    public int $positiveRateCase;
 
     protected $listeners = ['vaxPopulationUpdate'];
 
@@ -41,8 +42,11 @@ class CovidDashboardMalaysia extends Component
         $this->vaxReg = $service->getVaxReg(Population::POP_FILTER[$this->popFilter]);
 
         $this->clusterCount = $service->getClusterCount();
-        $this->positiveRate = $service->calcPositiveRate();
         $this->fatalityRate = $service->calcFatalityRate();
+
+        $positiveRateCase = $service->calcPositiveRate();
+        $this->positiveRate = $positiveRateCase->positiveRate;
+        $this->positiveRateCase = $positiveRateCase->cases_new;
 
         return view('livewire.covid-dashboard-malaysia');
     }

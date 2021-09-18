@@ -26,6 +26,7 @@ class Dashboard extends Component
 
     public float $positiveRate;
     public float $fatalityRate;
+    public int $positiveRateCase;
 
     public string $state = 'Johor';
 
@@ -41,7 +42,9 @@ class Dashboard extends Component
         $this->vaxReg = $vaxStateService->getVaxReg()->firstWhere('state', $this->state);
 
         $this->fatalityRate = $casesStateService->calcFatalityRate()->firstWhere('state', $this->state)->fatalityRate;
-        $this->positiveRate = $casesStateService->calcPositiveRate()->firstWhere('state', $this->state)->positiveRate;
+        $positiveRateCase = $casesStateService->calcPositiveRate()->firstWhere('state', $this->state);
+        $this->positiveRate = $positiveRateCase->positiveRate;
+        $this->positiveRateCase = $positiveRateCase->cases_new;
 
         $this->activeClusterCount = Cluster::where('state', $this->state)->count();
 

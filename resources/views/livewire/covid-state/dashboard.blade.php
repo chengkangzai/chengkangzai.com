@@ -46,10 +46,12 @@
             <span>
                 {{__('Positive Rate')}}:
                 <span class="font-bold">{{number_format($positiveRate,2)}}%</span>
+                 <small class="text-xs">({{number_format($positiveRateCase)}}/{{number_format($test->totalTest)}})</small>
             </span>
             <small class="text-xs">
                 ({{$test->date->format('Y-m-d')}})
             </small>
+
         </div>
 
         {{--End of Second Row--}}

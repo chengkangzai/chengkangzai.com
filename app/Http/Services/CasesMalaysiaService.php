@@ -51,9 +51,16 @@ class CasesMalaysiaService
             ->first();
     }
 
-    public function calcPositiveRate(): float|int
+    public function calcPositiveRate()
     {
-        return ($this->getCases()->cases_new / $this->getTest()->totaltest) * 100;
+        $tests = $this->getTest();
+        return CasesMalaysia::where('date', $this->getTestDateShouldQuery())
+            ->get()
+            ->map(function ($cases) use ($tests) {
+                $cases->positiveRate = ($cases->cases_new / $tests->totalTest) * 100;
+                return $cases;
+            })
+            ->first();
     }
 
     public function getTest()
