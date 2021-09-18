@@ -1,4 +1,4 @@
-<section class="mt-2 rounded-2xl dark:bg-white dark:text-black py-8 bg-gray-50 shadow" id="malaysia-dashboard"
+<section class="mt-2 rounded-2xl dark:bg-white dark:text-black py-8 bg-gray-50 shadow" id="malaysia-dashboard" wire:loading.class="opacity-25 transition-opacity"
          xmlns:wire="http://www.w3.org/1999/xhtml">
     <a href="#malaysia-dashboard">
         <h1 class="text-2xl sm:text-5xl font-bold px-2">{{__('Covid-19 Dashboard')}} : {{__($state)}}</h1>

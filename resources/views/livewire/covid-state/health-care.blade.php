@@ -1,5 +1,5 @@
-<section class="mt-2 mb-6" id="health-care" xmlns:wire="http://www.w3.org/1999/xhtml">
-    <section class="my-2 rounded-2xl dark:bg-white dark:text-black py-12 bg-gray-50 shadow" id="malaysia-dashboard">
+<section class="mt-2 mb-2" id="health-care" xmlns:wire="http://www.w3.org/1999/xhtml" wire:loading.class="opacity-25 transition-opacity">
+    <section class="my-2 rounded-2xl dark:bg-white dark:text-black py-12 bg-gray-50 shadow">
         <a href="#health-care">
             <h1 class="text-2xl sm:text-5xl font-bold px-2">{{__('Health Care of :')}} {{__($state)}}</h1>
         </a>
