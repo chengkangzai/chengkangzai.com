@@ -21,7 +21,7 @@
 
 .ck-content > p > a,
 .ck-content > ol > li > a,
-.ck-content > ul > li > a{
+.ck-content > ul > li > a {
     margin: revert;
     color: revert;
     text-decoration: revert;
@@ -52,3 +52,9 @@
 }
 
 /*END CKEDITOR Style because of Tailwind*/
+
+/*Share This CSS Fix*/
+
+#st-1 .st-btn > img  {
+    display: inline !important;
+}

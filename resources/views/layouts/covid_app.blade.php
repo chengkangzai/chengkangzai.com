@@ -33,8 +33,11 @@
     @stack('style')
     @laravelPWA
     @livewireStyles
+    <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=61457a1f13073f0019a43554&product=sticky-share-buttons' async='async'></script>
 </head>
 <body class="bg-white dark:bg-black">
+
+<div class="sharethis-sticky-share-buttons"></div>
 
 <header class="text-gray-600 body-font bg-gray-100 dark:bg-gray-900">
     <div x-data="{ open: false }" class="container mx-auto flex flex-wrap py-2 flex-col md:flex-row items-center">
