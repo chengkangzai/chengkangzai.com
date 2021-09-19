@@ -70,4 +70,9 @@ class Hospital extends Model
     {
         return ($this->hosp_covid / $this->beds_covid) * 100;
     }
+
+    public function scopeStateWithTake(Builder $query, string $state, int $take): Builder
+    {
+        return $query->where('state', $state)->orderByDesc('date')->take($take);
+    }
 }

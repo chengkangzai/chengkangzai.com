@@ -7,6 +7,7 @@ use App\Models\Covid\DeathsState;
 use App\Models\Covid\Hospital;
 use App\Models\Covid\ICU;
 use App\Models\Covid\PKRC;
+use Cache;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Collection;
 
@@ -25,19 +26,23 @@ class CovidStateGraphService
 
     public function getCases($state = 'Johor', $filter = self::FILTER['TWO_WEEK']): array|Collection
     {
-        return CasesState::where('state', $state)->orderByDesc('date')->take($this->getDateScope($filter))->get()->sortBy('date');
+        return Cache::remember(__METHOD__ . $state . $filter, $this->cacheSecond, function () use ($filter, $state) {
+            return CasesState::stateWithTake($state, $this->getDateScope($filter))->get()->sortBy('date');
+        });
     }
 
     public function getDeath($state = 'Johor', $filter = self::FILTER['TWO_WEEK']): Collection
     {
-        return DeathsState::where('state', $state)->orderByDesc('date')->take($this->getDateScope($filter))->get()->sortBy('date');
+        return Cache::remember(__METHOD__ . $state . $filter, $this->cacheSecond, function () use ($filter, $state) {
+            return DeathsState::stateWithTake($state, $this->getDateScope($filter))->get()->sortBy('date');
+        });
     }
 
     public function getHealthCare($state = 'Johor', $filter = self::FILTER['TWO_WEEK'])
     {
-        $icu = ICU::where('state', $state)->orderByDesc('date')->take($this->getDateScope($filter) + 20)->get(['date', 'vent_covid', 'icu_covid']);
-        $hospitals = Hospital::where('state', $state)->orderByDesc('date')->take($this->getDateScope($filter) + 20)->get(['hosp_covid', 'date']);
-        $PKRCS = PKRC::where('state', $state)->orderByDesc('date')->take($this->getDateScope($filter) + 20)->get(['pkrc_covid', 'date']);
+        $icu = Cache::remember(__METHOD__ . 'icu' . $state . $filter, $this->cacheSecond, fn() => ICU::stateWithTake($state, $this->getDateScope($filter))->get(['date', 'vent_covid', 'icu_covid']));
+        $hospitals = Cache::remember(__METHOD__ . 'hospitals' . $state . $filter, $this->cacheSecond, fn() => Hospital::stateWithTake($state, $this->getDateScope($filter))->get(['hosp_covid', 'date']));
+        $PKRCS = Cache::remember(__METHOD__ . 'PKRCS' . $state . $filter, $this->cacheSecond, fn() => PKRC::stateWithTake($state, $this->getDateScope($filter))->get(['pkrc_covid', 'date']));
         $activeCase = $this->getCases($state, $filter);
         return $activeCase->map(function ($activeCase) use ($icu, $hospitals, $PKRCS) {
             $collect = collect();

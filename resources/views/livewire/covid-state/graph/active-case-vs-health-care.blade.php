@@ -6,8 +6,8 @@
 
 @push('script')
     <script>
-        const ActiveCaseVsHealthCareArea = document.getElementById("active-case-vs-health-care").getContext("2d");
-        const ActiveCaseVsHealthCareoptions = {
+        const activeCaseVsHealthCareArea = document.getElementById("active-case-vs-health-care").getContext("2d");
+        const activeCaseVsHealthCareOptions = {
             plugins: {
                 tooltip: {
                     mode: 'index',
@@ -18,8 +18,8 @@
             borderWidth: 1,
             pointBorderWidth: 0.3,
         }
-        let ActiveCaseVsHealthCareChart = new Chart(
-            ActiveCaseVsHealthCareArea,
+        let activeCaseVsHealthCareChart = new Chart(
+            activeCaseVsHealthCareArea,
             {
                 type: 'line',
                 data: {
@@ -40,7 +40,7 @@
                         borderColor: '#F87171',
                         data: {!! $cat2 !!},
                     }, {
-                        label: '{{__('Hospital')}}',
+                        label: '{{__('Hospitalized')}}',
                         backgroundColor: '#EF4444',
                         borderColor: '#EF4444',
                         data: {!! $cat3 !!},
@@ -56,7 +56,7 @@
                         data: {!! $cat5 !!},
                     }]
                 },
-                options: ActiveCaseVsHealthCareoptions
+                options: activeCaseVsHealthCareOptions
             }
         );
 
@@ -68,9 +68,9 @@
             const cat3 = test.detail.cat3;
             const cat4 = test.detail.cat4;
             const cat5 = test.detail.cat5;
-            ActiveCaseVsHealthCareChart.destroy();
-            ActiveCaseVsHealthCareChart = new Chart(
-                ActiveCaseVsHealthCareArea,
+            activeCaseVsHealthCareChart.destroy();
+            activeCaseVsHealthCareChart = new Chart(
+                activeCaseVsHealthCareArea,
                 {
                     type: 'line',
                     data: {
@@ -83,7 +83,7 @@
                         }, {
                             label: '{{__('Home Quarantine')}}',
                             backgroundColor: '#FCA5A5',
-                            borderColorFCA5A5: '#FCA5A5',
+                            borderColor: '#FCA5A5',
                             data: cat1,
                         }, {
                             label: '{{__('PKRC')}}',
@@ -91,7 +91,7 @@
                             borderColor: '#F87171',
                             data: cat2,
                         }, {
-                            label: '{{__('Hospital')}}',
+                            label: '{{__('Hospitalized')}}',
                             backgroundColor: '#EF4444',
                             borderColor: '#EF4444',
                             data: cat3,
@@ -107,7 +107,7 @@
                             data: cat5,
                         }]
                     },
-                    options: ActiveCaseVsHealthCareoptions
+                    options: activeCaseVsHealthCareOptions
                 }
             );
         });

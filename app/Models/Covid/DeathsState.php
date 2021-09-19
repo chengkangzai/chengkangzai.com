@@ -51,4 +51,9 @@ class DeathsState extends Model
     {
         return $date->format('Y-m-d');
     }
+
+    public function scopeStateWithTake(Builder $query, string $state, int $take): Builder
+    {
+        return $query->where('state', $state)->orderByDesc('date')->take($take);
+    }
 }

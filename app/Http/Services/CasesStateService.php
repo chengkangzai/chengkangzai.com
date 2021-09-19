@@ -3,6 +3,7 @@
 namespace App\Http\Services;
 
 use App\Models\Covid\CasesState;
+use App\Models\Covid\Cluster;
 use App\Models\Covid\DeathsState;
 use App\Models\Covid\Population;
 use App\Models\Covid\TestState;
@@ -53,8 +54,9 @@ class CasesStateService
     public function calcPositiveRate(): Collection
     {
         $tests = $this->getTest()->pluck('totalTest', 'state');
-        return CasesState::where('date', $this->getTestDateShouldQuery())
-            ->get()
+        return Cache::remember(__METHOD__, $this->cacheSecond, function () {
+            return CasesState::where('date', $this->getTestDateShouldQuery())->get();
+        })
             ->map(function ($cases) use ($tests) {
                 $cases->positiveRate = ($cases->cases_new / $tests[$cases->state]) * 100;
                 return $cases;
@@ -64,7 +66,7 @@ class CasesStateService
     public function calcFatalityRate(): Collection
     {
         $deaths = $this->getDeath()->pluck('deaths_commutative', 'state');
-        return $this->getCases()->map(function ( $cases) use ($deaths) {
+        return $this->getCases()->map(function ($cases) use ($deaths) {
             $cases->fatalityRate = ($deaths[$cases->state] / $cases->cases_cumulative) * 100;
             return $cases;
         });
@@ -77,7 +79,7 @@ class CasesStateService
 
     private function getTestDateShouldQuery(): string
     {
-        $dateOfTest = TestState::query()->orderByDesc('date')->take(1)->get()->first()->date;
+        $dateOfTest = Cache::remember(__METHOD__, $this->cacheSecond, fn() => TestState::query()->orderByDesc('date')->take(1)->get()->first()->date);
         $dateOfCase = $this->getCases()->first()->date;
 
         if ($dateOfCase == $dateOfTest) {
@@ -89,6 +91,13 @@ class CasesStateService
         }
 
         return $dateOfCase;
+    }
+
+    public function getClusterCount(string $state): int
+    {
+        return Cache::remember(__METHOD__ . $state, $this->cacheSecond, function () use ($state) {
+            return Cluster::where('state', $state)->count();
+        });
     }
 
 

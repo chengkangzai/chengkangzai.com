@@ -271,5 +271,22 @@
     "Usage of PKRC": "Usage of PKRC",
     "Usage of Ventilator": "Usage of Ventilator",
     "Ventilators : ": "Ventilators :",
-    "Portable Ventilators : ": "Portable Ventilators :"
+    "Portable Ventilators : ": "Portable Ventilators :",
+    "Case Distribution": "Case Distribution",
+    "Recovered Case": "Recovered Case",
+    "Death Case": "Death Case",
+    "Confirm Case": "Confirm Case",
+    "Active Case vs Health Care": "Active Case vs Health Care",
+    "Home Quarantine": "Home Quarantine",
+    "PKRC": "PKRC",
+    "Hospitalized": "Hospitalized",
+    "ICU": "ICU",
+    "Ventilated": "Ventilated",
+    "Cases per Day": "Cases per Day",
+    "Statistical Graph of :": "Statistical Graph of :",
+    "TWO_WEEK": "2 Weeks",
+    "ONE_MONTH": "1 Month",
+    "THREE_MONTH": "3 Month",
+    "SIX_MONTH": "6 Month",
+    "ONE_YEAR": "1 Year"
 }

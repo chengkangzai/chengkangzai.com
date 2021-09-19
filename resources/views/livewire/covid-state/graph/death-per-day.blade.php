@@ -1,5 +1,5 @@
 <div>
-    <h2 class="text-2xl pb-2">{{__('Death Case per Day')}}</h2>
+    <h2 class="text-2xl pb-2">{{__('Deaths')}}</h2>
     <hr class="py-2">
     <canvas id="death-case-per-day"></canvas>
 </div>
@@ -25,12 +25,12 @@
                 data: {
                     labels: {!! $date !!},
                     datasets: [{
-                        label: '{{__('Death Case')}}',
+                        label: '{{__('Deaths')}}',
                         backgroundColor: 'rgb(255, 99, 132)',
                         borderColor: 'rgb(255, 99, 132)',
                         data: {!! $deathCase !!},
                     },{
-                        label: '{{__('BID Case')}}',
+                        label: '{{__('Brought in Death (BID) ')}}',
                         backgroundColor: 'rgb(99,120,255)',
                         borderColor: 'rgb(99,120,255)',
                         data: {!! $bidCase !!},
@@ -52,12 +52,12 @@
                     data: {
                         labels: date,
                         datasets: [{
-                            label: '{{__('Death Case')}}',
+                            label: '{{__('Deaths')}}',
                             backgroundColor: 'rgb(255, 99, 132)',
                             borderColor: 'rgb(255, 99, 132)',
                             data: deathCase,
                         }, {
-                            label: '{{__('BID Case')}}',
+                            label: '{{__('Brought in Death (BID) ')}}',
                             backgroundColor: 'rgb(99,120,255)',
                             borderColor: 'rgb(99,120,255)',
                             data: bidCase,

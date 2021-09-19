@@ -6,7 +6,7 @@
 
 @push('script')
     <script>
-        let CaseArea = document.getElementById("case-per-day").getContext("2d");
+        let caseArea = document.getElementById("case-per-day").getContext("2d");
         let caseOptions = {
             plugins: {
                 tooltip: {
@@ -19,7 +19,7 @@
             pointBorderWidth: 0.3,
         }
         let caseChart = new Chart(
-            CaseArea,
+            caseArea,
             {
                 type: 'line',
                 data: {
@@ -30,7 +30,7 @@
                         borderColor: 'rgb(255, 99, 132)',
                         data: {!! $confirmCase !!},
                     },{
-                        label: '{{__('Recover Case')}}',
+                        label: '{{__('Recovered Case')}}',
                         backgroundColor: 'rgb(99,120,255)',
                         borderColor: 'rgb(99,120,255)',
                         data: {!! $recoveredCase !!},
@@ -46,7 +46,7 @@
             const recoveredCase = test.detail.recoveredCase;
             caseChart.destroy();
             caseChart = new Chart(
-                CaseArea,
+                caseArea,
                 {
                     type: 'line',
                     data: {
@@ -57,7 +57,7 @@
                             borderColor: 'rgb(255, 99, 132)',
                             data: confirmCase,
                         }, {
-                            label: '{{__('Recover Case')}}',
+                            label: '{{__('Recovered Case')}}',
                             backgroundColor: 'rgb(99,120,255)',
                             borderColor: 'rgb(99,120,255)',
                             data: recoveredCase,

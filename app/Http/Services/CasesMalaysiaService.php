@@ -54,8 +54,9 @@ class CasesMalaysiaService
     public function calcPositiveRate()
     {
         $tests = $this->getTest();
-        return CasesMalaysia::where('date', $this->getTestDateShouldQuery())
-            ->get()
+        return Cache::remember(__METHOD__, $this->cacheSecond, function () {
+            return CasesMalaysia::where('date', $this->getTestDateShouldQuery())->get();
+        })
             ->map(function ($cases) use ($tests) {
                 $cases->positiveRate = ($cases->cases_new / $tests->totalTest) * 100;
                 return $cases;
@@ -70,7 +71,7 @@ class CasesMalaysiaService
 
     private function getTestDateShouldQuery(): string
     {
-        $dateOfTest = TestMalaysia::query()->orderByDesc('date')->take(1)->get()->first()->date;
+        $dateOfTest = Cache::remember(__METHOD__, $this->cacheSecond, fn() => TestMalaysia::orderByDesc('date')->take(1)->get()->first()->date);
         $dateOfCase = $this->getCases()->date;
 
         if ($dateOfCase == $dateOfTest) {
