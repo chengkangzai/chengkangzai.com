@@ -270,6 +270,18 @@
     "Total Patient of PKRC": "PKRC 患者总数",
     "Usage of PKRC": "PKRC的使用率",
     "Usage of Ventilator": "呼吸机的使用率",
-    "Ventilators : ": "呼吸机：",
-    "Portable Ventilators : ": "便携式呼吸机："
+    "Ventilators : ": "呼吸器：",
+    "Portable Ventilators : ": "便携式呼吸机：",
+    "ICU": "重症监护病房",
+    "PKRC": "新冠肺炎检疫和治疗中心",
+    "Case Distribution": "案例分布",
+    "Recovered Case": "康复案例",
+    "Death Case": "死亡案例",
+    "Confirm Case": "确认案例",
+    "Active Case vs Health Care": "活跃病例对比医疗保健",
+    "Home Quarantine": "居家隔离",
+    "Hospitalized": "住院",
+    "Ventilated": "呼吸器",
+    "Cases per Day": "每天病例数",
+    "Statistical Graph of :": "统计图："
 }
