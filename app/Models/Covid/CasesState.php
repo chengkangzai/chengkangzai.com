@@ -57,4 +57,9 @@ class CasesState extends Model
     {
         return $this->cases_cumulative - $this->cases_recovered_cumulative;
     }
+
+    public function scopeStateWithTake(Builder $query, string $state, int $take): Builder
+    {
+        return $query->where('state', $state)->orderByDesc('date')->take($take);
+    }
 }

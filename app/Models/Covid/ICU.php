@@ -83,4 +83,9 @@ class ICU extends Model
     {
         return ($this->getTotalVentilatorsPatientAttribute() / $this->getTotalVentilatorsAttribute()) * 100;
     }
+
+    public function scopeStateWithTake(Builder $query, string $state, int $take): Builder
+    {
+        return $query->where('state', $state)->orderByDesc('date')->take($take);
+    }
 }
