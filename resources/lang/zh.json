@@ -283,5 +283,10 @@
     "Hospitalized": "住院",
     "Ventilated": "呼吸器",
     "Cases per Day": "每天病例数",
-    "Statistical Graph of :": "统计图："
+    "Statistical Graph of :": "统计图：",
+    "TWO_WEEK": "2周",
+    "ONE_MONTH": "1个月",
+    "THREE_MONTH": "3个月",
+    "SIX_MONTH": "6个月",
+    "ONE_YEAR": "1年"
 }

@@ -283,5 +283,10 @@
     "Hospitalized": "Dimasukkan ke hospital",
     "Ventilated": "Berventilasi",
     "Cases per Day": "Kes seharian",
-    "Statistical Graph of :": "Graf Statistik:"
+    "Statistical Graph of :": "Graf Statistik:",
+    "TWO_WEEK": "2 minggu",
+    "ONE_MONTH": "1 bulan",
+    "THREE_MONTH": "3 bulan",
+    "SIX_MONTH": "6 Bulan",
+    "ONE_YEAR": "1 tahun"
 }
