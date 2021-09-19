@@ -11,7 +11,6 @@ use App\Models\Covid\VaxMalaysia;
 use App\Models\Covid\VaxRegMalaysia;
 use Cache;
 use Carbon\Carbon;
-use Illuminate\Support\Collection;
 
 class CasesMalaysiaService
 {
@@ -106,16 +105,14 @@ class CasesMalaysiaService
             ->first();
     }
 
-    public function getTimestamp(): Collection
+    public function getTimestamp(): array
     {
-        $collect = collect();
-        $collect->cases = $this->getCases()->date->toDateString();
-        $collect->death = $this->getDeath()->date->toDateString();
-        $collect->test = $this->getTest()->date->toDateString();
-        $collect->cluster = Cache::remember('CasesMalaysia.ClusterTimestamp', $this->cacheSecond, fn() => Cluster::orderByDesc('id')->first()->created_at->toDateString());
-        $collect->vax = $this->getVax()->date->toDateString();
-        $collect->vaxReg = $this->getVaxReg()->date->toDateString();
-
+        $collect['cases'] = $this->getCases()->date->toDateString();
+        $collect['death'] = $this->getDeath()->date->toDateString();
+        $collect['test'] = $this->getTest()->date->toDateString();
+        $collect['cluster'] = Cache::remember('CasesMalaysia.ClusterTimestamp', $this->cacheSecond, fn() => Cluster::orderByDesc('id')->first()->created_at->toDateString());
+        $collect['vax'] = $this->getVax()->date->toDateString();
+        $collect['vaxReg'] = $this->getVaxReg()->date->toDateString();
         return $collect;
     }
 

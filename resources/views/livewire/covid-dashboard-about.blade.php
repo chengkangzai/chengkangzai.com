@@ -3,28 +3,27 @@
     <ul class="text-sm sm:text-base list-disc list-inside">
         <li>
             {{__('Cases data Updated at')}}
-            @dd($timestamp)
-            : {{$timestamp->cases}}
+            : {{$timestamp['cases']}}
         </li>
         <li>
             {{__('Death data Updated at')}}
-            : {{$timestamp->death}}
+            : {{$timestamp['death']}}
         </li>
         <li>
             {{__('Tested data Updated at')}}
-            : {{$timestamp->test}}
+            : {{$timestamp['test']}}
         </li>
         <li>
             {{__('Cluster data Updated at')}}
-            : {{$timestamp->cluster}}
+            : {{$timestamp['cluster']}}
         </li>
         <li>
             {{__('Vaccination data Updated at')}}
-            : {{$timestamp->vax}}
+            : {{$timestamp['vax']}}
         </li>
         <li>
             {{__('Vaccination registration data Updated at')}}
-            : {{$timestamp->vaxReg}}
+            : {{$timestamp['vaxReg']}}
         </li>
     </ul>
     <div>
