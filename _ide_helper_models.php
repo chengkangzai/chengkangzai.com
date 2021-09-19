@@ -236,17 +236,20 @@ namespace App\Models\Covid{
  * @property int $beds
  * @property int $beds_covid Bed for covid
  * @property int $beds_noncrit Non Critical Beds
- * @property int $admitted_pui
+ * @property int $admitted_pui pui mean Patient under investigation
  * @property int $admitted_covid
  * @property int $admitted_total
  * @property int $discharged_pui
  * @property int $discharged_covid
  * @property int $discharged_total
  * @property int $hosp_covid
- * @property int $hosp_pui
- * @property int $hosp_noncovid
+ * @property int $hosp_pui pui mean Patient under investigation
+ * @property int $hosp_noncovid Non Critical Patient
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read int|float $covid_utilisation
+ * @property-read int|float $overall_utilisation
+ * @property-read mixed $total_patient
  * @method static \Illuminate\Database\Eloquent\Builder|Hospital latestOne()
  * @method static \Illuminate\Database\Eloquent\Builder|Hospital newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Hospital newQuery()
@@ -286,13 +289,20 @@ namespace App\Models\Covid{
  * @property int $vent
  * @property int $vent_port
  * @property int $icu_covid
- * @property int $icu_pui
+ * @property int $icu_pui pui mean Patient under investigation
  * @property int $icu_noncovid
  * @property int $vent_covid
- * @property int $vent_pui
+ * @property int $vent_pui pui mean Patient under investigation
  * @property int $vent_noncovid
+ * @property int $vent_used
+ * @property int $vent_port_used
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read int|float $overall_utilisation
+ * @property-read mixed $total_patient
+ * @property-read int|float $total_ventilators
+ * @property-read int|float $total_ventilators_patient
+ * @property-read int|float $ventilation_utilisation
  * @method static \Illuminate\Database\Eloquent\Builder|ICU latestOne()
  * @method static \Illuminate\Database\Eloquent\Builder|ICU newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|ICU newQuery()
@@ -313,7 +323,9 @@ namespace App\Models\Covid{
  * @method static \Illuminate\Database\Eloquent\Builder|ICU whereVentCovid($value)
  * @method static \Illuminate\Database\Eloquent\Builder|ICU whereVentNoncovid($value)
  * @method static \Illuminate\Database\Eloquent\Builder|ICU whereVentPort($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|ICU whereVentPortUsed($value)
  * @method static \Illuminate\Database\Eloquent\Builder|ICU whereVentPui($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|ICU whereVentUsed($value)
  */
 	class ICU extends \Eloquent {}
 }
@@ -326,10 +338,10 @@ namespace App\Models\Covid{
  * @property \Illuminate\Support\Carbon $date
  * @property string $state
  * @property int $beds
- * @property int $admitted_pui
+ * @property int $admitted_pui pui mean Patient under investigation
  * @property int $admitted_covid
  * @property int $admitted_total
- * @property int $discharge_pui
+ * @property int $discharge_pui pui mean Patient under investigation
  * @property int $discharge_covid
  * @property int $discharge_total
  * @property int $pkrc_covid
@@ -337,6 +349,8 @@ namespace App\Models\Covid{
  * @property int $pkrc_noncovid
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read int|float $overall_utilisation
+ * @property-read mixed $total_patient
  * @method static \Illuminate\Database\Eloquent\Builder|PKRC latestOne()
  * @method static \Illuminate\Database\Eloquent\Builder|PKRC newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|PKRC newQuery()
@@ -397,6 +411,7 @@ namespace App\Models\Covid{
  * @property int $pcr
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read mixed $total_test
  * @method static \Illuminate\Database\Eloquent\Builder|TestMalaysia latestOne()
  * @method static \Illuminate\Database\Eloquent\Builder|TestMalaysia newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|TestMalaysia newQuery()
@@ -422,6 +437,7 @@ namespace App\Models\Covid{
  * @property int $pcr
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read mixed $total_test
  * @method static \Illuminate\Database\Eloquent\Builder|TestState latestOne()
  * @method static \Illuminate\Database\Eloquent\Builder|TestState newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|TestState newQuery()
