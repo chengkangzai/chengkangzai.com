@@ -66,7 +66,7 @@
             </div>
 
             <div class="bg-gray-50 rounded-xl shadow p-4">
-                <livewire:covid-state.graph.active-case-precentage
+                <livewire:covid-state.graph.active-case-percentage
                     :date="$date"
                     :activeCase="$activeCase"
                     :cumRecoveredCase="$cumRecoveredCase"
