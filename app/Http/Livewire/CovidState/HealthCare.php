@@ -34,4 +34,9 @@ class HealthCare extends Component
     {
         $this->state = $state;
     }
+
+    public function updatedState()
+    {
+        $this->emit("CovidStateUpdate", $this->state);
+    }
 }

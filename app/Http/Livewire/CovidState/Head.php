@@ -11,6 +11,8 @@ class Head extends Component
 {
     public string $state = 'Johor';
 
+    protected $listeners = ['CovidStateUpdate'];
+
     public function render(): Factory|View|Application
     {
         return view('livewire.covid-state.head');
@@ -19,5 +21,10 @@ class Head extends Component
     public function updatedState()
     {
         $this->emit("CovidStateUpdate", $this->state);
+    }
+
+    public function CovidStateUpdate(string $state)
+    {
+        $this->state = $state;
     }
 }
