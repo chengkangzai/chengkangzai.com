@@ -3,6 +3,7 @@
 namespace App\Http\Services;
 
 use App\Models\Covid\CasesState;
+use App\Models\Covid\Cluster;
 use App\Models\Covid\DeathsState;
 use App\Models\Covid\Population;
 use App\Models\Covid\TestState;
@@ -90,6 +91,13 @@ class CasesStateService
         }
 
         return $dateOfCase;
+    }
+
+    public function getClusterCount(string $state): int
+    {
+        return Cache::remember(__METHOD__ . $state, $this->cacheSecond, function () use ($state) {
+            return Cluster::where('state', $state)->count();
+        });
     }
 
 

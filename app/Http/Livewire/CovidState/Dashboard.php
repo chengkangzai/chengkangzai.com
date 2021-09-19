@@ -46,7 +46,7 @@ class Dashboard extends Component
         $this->positiveRate = $positiveRateCase->positiveRate;
         $this->positiveRateCase = $positiveRateCase->cases_new;
 
-        $this->activeClusterCount = Cluster::where('state', $this->state)->count();
+        $this->activeClusterCount = $casesStateService->getClusterCount($this->state);
 
         return view('livewire.covid-state.dashboard');
     }
