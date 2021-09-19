@@ -29,12 +29,14 @@ class Graph extends Component
     public Collection $cat4;
     public Collection $cat5;
 
+    public Collection $cumRecoveredCase;
+    public Collection $cumDeathCase;
+
     public function render(CovidStateGraphService $service): Factory|View|Application
     {
         $cases = $service->getCases($this->state, $this->filter);
         $deaths = $service->getDeath($this->state, $this->filter);
         $healthCareCategory = $service->getHealthCare($this->state, $this->filter);
-
 
         $this->initCasesVariable($cases, $deaths);
         $this->initHealthCareVariable($healthCareCategory);
@@ -68,6 +70,8 @@ class Graph extends Component
             'cat3' => $this->cat3,
             'cat4' => $this->cat4,
             'cat5' => $this->cat5,
+            'cumRecoveredCase' => $this->cumRecoveredCase,
+            'cumDeathCase' => $this->cumDeathCase,
         ]);
     }
 
@@ -86,7 +90,9 @@ class Graph extends Component
         $this->date = $cases->pluck('date')->map(fn($date) => $date->toDateString());
         $this->confirmCase = $cases->pluck('cases_new');
         $this->recoveredCase = $cases->pluck('cases_recovered');
+        $this->cumRecoveredCase = $cases->pluck('cases_recovered_cumulative');
         $this->deathCase = $deaths->pluck('deaths_new');
+        $this->cumDeathCase = $deaths->pluck('deaths_commutative');
         $this->bidCase = $deaths->pluck('deaths_bid');
         $this->activeCase = $cases->pluck('activeCase');
     }
