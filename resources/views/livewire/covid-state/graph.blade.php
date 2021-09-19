@@ -4,7 +4,7 @@
             <a href="#graph-state">
                 <h1 class="text-2xl sm:text-5xl font-bold px-2 py-2">{{__('Statistical Graph of :')}} {{__($state)}}</h1>
             </a>
-            <div class="container flex flex-row-reverse">
+            <div class="container space-y-2 sm:space-y-0 sm:flex sm:flex-row-reverse">
                 <div>
                     <label>
                         {{__('Filter By')}} :
@@ -36,12 +36,13 @@
 
         </section>
 
-        <div class="grid grid-cols-2 mt-2 gap-2">
+        <div class="sm:grid sm:grid-cols-2 sm:mt-2 gap-2 space-y-2 sm:space-y-0">
             <div class="bg-gray-50 rounded-xl shadow p-4">
                 <livewire:covid-state.graph.case-per-day
                     :date="$date"
                     :confirmCase="$confirmCase"
-                    :recoveredCase="$recoveredCase"/>
+                    :recoveredCase="$recoveredCase"
+                />
             </div>
 
             <div class="bg-gray-50 rounded-xl shadow p-4">
@@ -61,6 +62,15 @@
                     :cat3="$cat3"
                     :cat4="$cat4"
                     :cat5="$cat5"
+                />
+            </div>
+
+            <div class="bg-gray-50 rounded-xl shadow p-4">
+                <livewire:covid-state.graph.active-case-precentage
+                    :date="$date"
+                    :activeCase="$activeCase"
+                    :cumRecoveredCase="$cumRecoveredCase"
+                    :cumDeathCase="$cumDeathCase"
                 />
             </div>
         </div>
