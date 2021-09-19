@@ -64,4 +64,9 @@ class PKRC extends Model
     {
         return ($this->getTotalPatientAttribute() / $this->beds) * 100;
     }
+
+    public function scopeStateWithTake(Builder $query, string $state, int $take): Builder
+    {
+        return $query->where('state', $state)->orderByDesc('date')->take($take);
+    }
 }

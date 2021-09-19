@@ -271,5 +271,22 @@
     "Usage of PKRC": "Penggunaan PKRC",
     "Usage of Ventilator": "Penggunaan Alat Bantuan Pernafasan",
     "Ventilators : ": "Alat Bantuan Pernafasan:",
-    "Portable Ventilators : ": "Pengudaraan Alat Bantuan Pernafasan:"
+    "Portable Ventilators : ": "Pengudaraan Alat Bantuan Pernafasan:",
+    "ICU": "ICU",
+    "PKRC": "PKRC",
+    "Case Distribution": "Pembahagian Kes",
+    "Recovered Case": "Kes Dipulihkan",
+    "Death Case": "Kes Kematian",
+    "Confirm Case": "Kes Covid",
+    "Active Case vs Health Care": "Kes Aktif vs Penjagaan Kesihatan",
+    "Home Quarantine": "Kuarantin rumah",
+    "Hospitalized": "Dimasukkan ke hospital",
+    "Ventilated": "Berventilasi",
+    "Cases per Day": "Kes seharian",
+    "Statistical Graph of :": "Graf Statistik:",
+    "TWO_WEEK": "2 minggu",
+    "ONE_MONTH": "1 bulan",
+    "THREE_MONTH": "3 bulan",
+    "SIX_MONTH": "6 Bulan",
+    "ONE_YEAR": "1 tahun"
 }

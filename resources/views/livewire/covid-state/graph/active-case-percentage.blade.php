@@ -8,8 +8,9 @@
 
 @push('script')
     <script>
-        let CaseDistributionChart = new Chart(
-            document.getElementById("active-case-percentage").getContext("2d"),
+        const caseDistributionArea = document.getElementById("active-case-percentage").getContext("2d");
+        let caseDistributionChart = new Chart(
+            caseDistributionArea,
             {
                 type: 'doughnut',
                 data: {
@@ -40,9 +41,9 @@
             const cumRecoveredCase = test.detail.cumRecoveredCase[test.detail.cumRecoveredCase.length - 1];
             const activeCase = test.detail.activeCase[test.detail.activeCase.length - 1];
             const cumDeathCase = test.detail.cumDeathCase[test.detail.cumDeathCase.length - 1];
-            CaseDistributionChart.destroy();
-            CaseDistributionChart = new Chart(
-                document.getElementById("active-case-percentage").getContext("2d"),
+            caseDistributionChart.destroy();
+            caseDistributionChart = new Chart(
+                caseDistributionArea,
                 {
                     type: 'doughnut',
                     data: {

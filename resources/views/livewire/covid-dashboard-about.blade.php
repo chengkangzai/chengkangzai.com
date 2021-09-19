@@ -3,6 +3,7 @@
     <ul class="text-sm sm:text-base list-disc list-inside">
         <li>
             {{__('Cases data Updated at')}}
+            @dd($timestamp)
             : {{$timestamp->cases}}
         </li>
         <li>
