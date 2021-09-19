@@ -6,7 +6,7 @@
 
 @push('script')
     <script>
-        let CaseArea = document.getElementById("case-per-day").getContext("2d");
+        let caseArea = document.getElementById("case-per-day").getContext("2d");
         let caseOptions = {
             plugins: {
                 tooltip: {
@@ -19,7 +19,7 @@
             pointBorderWidth: 0.3,
         }
         let caseChart = new Chart(
-            CaseArea,
+            caseArea,
             {
                 type: 'line',
                 data: {
@@ -46,7 +46,7 @@
             const recoveredCase = test.detail.recoveredCase;
             caseChart.destroy();
             caseChart = new Chart(
-                CaseArea,
+                caseArea,
                 {
                     type: 'line',
                     data: {

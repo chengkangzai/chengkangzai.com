@@ -6,8 +6,8 @@
 
 @push('script')
     <script>
-        const ActiveCaseVsHealthCareArea = document.getElementById("active-case-vs-health-care").getContext("2d");
-        const ActiveCaseVsHealthCareoptions = {
+        const activeCaseVsHealthCareArea = document.getElementById("active-case-vs-health-care").getContext("2d");
+        const activeCaseVsHealthCareOptions = {
             plugins: {
                 tooltip: {
                     mode: 'index',
@@ -18,8 +18,8 @@
             borderWidth: 1,
             pointBorderWidth: 0.3,
         }
-        let ActiveCaseVsHealthCareChart = new Chart(
-            ActiveCaseVsHealthCareArea,
+        let activeCaseVsHealthCareChart = new Chart(
+            activeCaseVsHealthCareArea,
             {
                 type: 'line',
                 data: {
@@ -56,7 +56,7 @@
                         data: {!! $cat5 !!},
                     }]
                 },
-                options: ActiveCaseVsHealthCareoptions
+                options: activeCaseVsHealthCareOptions
             }
         );
 
@@ -68,9 +68,9 @@
             const cat3 = test.detail.cat3;
             const cat4 = test.detail.cat4;
             const cat5 = test.detail.cat5;
-            ActiveCaseVsHealthCareChart.destroy();
-            ActiveCaseVsHealthCareChart = new Chart(
-                ActiveCaseVsHealthCareArea,
+            activeCaseVsHealthCareChart.destroy();
+            activeCaseVsHealthCareChart = new Chart(
+                activeCaseVsHealthCareArea,
                 {
                     type: 'line',
                     data: {
@@ -107,7 +107,7 @@
                             data: cat5,
                         }]
                     },
-                    options: ActiveCaseVsHealthCareoptions
+                    options: activeCaseVsHealthCareOptions
                 }
             );
         });
