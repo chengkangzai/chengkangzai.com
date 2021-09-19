@@ -83,7 +83,7 @@
                         }, {
                             label: '{{__('Home Quarantine')}}',
                             backgroundColor: '#FCA5A5',
-                            borderColorFCA5A5: '#FCA5A5',
+                            borderColor: '#FCA5A5',
                             data: cat1,
                         }, {
                             label: '{{__('PKRC')}}',
