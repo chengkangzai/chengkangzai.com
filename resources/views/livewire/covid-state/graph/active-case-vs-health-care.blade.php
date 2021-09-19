@@ -83,12 +83,12 @@
                         }, {
                             label: '{{__('Home Quarantine')}}',
                             backgroundColor: '#FCA5A5',
-                            borderColorFCA5A5: '#7F1D1D',
+                            borderColorFCA5A5: '#FCA5A5',
                             data: cat1,
                         }, {
                             label: '{{__('PKRC')}}',
-                            backgroundColor: '#B91C1C',
-                            borderColor: '#B91C1C',
+                            backgroundColor: '#F87171',
+                            borderColor: '#F87171',
                             data: cat2,
                         }, {
                             label: '{{__('Hospital')}}',
@@ -97,13 +97,13 @@
                             data: cat3,
                         }, {
                             label: '{{__('ICU')}}',
-                            backgroundColor: '#F87171',
-                            borderColor: '#F87171',
+                            backgroundColor: '#B91C1C',
+                            borderColor: '#B91C1C',
                             data: cat4,
                         }, {
                             label: '{{__('Ventilated')}}',
-                            backgroundColor: '#FCA5A5',
-                            borderColor: '#FCA5A5',
+                            backgroundColor: '#7F1D1D',
+                            borderColor: '#7F1D1D',
                             data: cat5,
                         }]
                     },
