@@ -30,7 +30,7 @@
                         borderColor: 'rgb(255, 99, 132)',
                         data: {!! $confirmCase !!},
                     },{
-                        label: '{{__('Recover Case')}}',
+                        label: '{{__('Recovered Case')}}',
                         backgroundColor: 'rgb(99,120,255)',
                         borderColor: 'rgb(99,120,255)',
                         data: {!! $recoveredCase !!},
@@ -57,7 +57,7 @@
                             borderColor: 'rgb(255, 99, 132)',
                             data: confirmCase,
                         }, {
-                            label: '{{__('Recover Case')}}',
+                            label: '{{__('Recovered Case')}}',
                             backgroundColor: 'rgb(99,120,255)',
                             borderColor: 'rgb(99,120,255)',
                             data: recoveredCase,

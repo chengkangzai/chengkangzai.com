@@ -40,7 +40,7 @@
                         borderColor: '#F87171',
                         data: {!! $cat2 !!},
                     }, {
-                        label: '{{__('Hospital')}}',
+                        label: '{{__('Hospitalized')}}',
                         backgroundColor: '#EF4444',
                         borderColor: '#EF4444',
                         data: {!! $cat3 !!},
@@ -91,7 +91,7 @@
                             borderColor: '#F87171',
                             data: cat2,
                         }, {
-                            label: '{{__('Hospital')}}',
+                            label: '{{__('Hospitalized')}}',
                             backgroundColor: '#EF4444',
                             borderColor: '#EF4444',
                             data: cat3,
