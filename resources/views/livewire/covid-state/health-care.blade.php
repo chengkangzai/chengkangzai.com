@@ -1,4 +1,4 @@
-<section class="mt-2 mb-2" id="health-care" xmlns:wire="http://www.w3.org/1999/xhtml" wire:loading.class="opacity-25 transition-opacity">
+<section class="mt-2 mb-2" id="health-care" xmlns:wire="http://www.w3.org/1999/xhtml" wire:loading.class="animate-pulse">
     <section class="my-2 rounded-2xl dark:bg-white dark:text-black py-12 bg-gray-50 shadow">
         <a href="#health-care">
             <h1 class="text-2xl sm:text-5xl font-bold px-2">{{__('Health Care of :')}} {{__($state)}}</h1>
@@ -19,8 +19,7 @@
     </section>
 
     <div class="sm:grid sm:grid-cols-4 sm:grid-rows-3 sm:gap-2 space-y-2 sm:space-y-0">
-        <div class="dark:bg-white bg-gray-50 rounded-xl shadow py-8 lg:row-span-2 lg:py-40 px-4 self-center place-self-stretch">
-            {{--TODO : Use Icon to show the inflow and out flow--}}
+        <div class="dark:bg-white bg-gray-50 rounded-xl shadow py-8 sm:row-span-2 sm:py-40 px-4 self-center place-self-stretch">
             {{--TODO : Change the wording of "ICU,PKRC, Hospital to dynamically" --}}
             <h2 class="text-2xl pb-2">{{__('Inflow and Out Flow of Hospital and ICU')}}</h2>
             <hr class="mx-4 py-2">
