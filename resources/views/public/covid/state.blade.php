@@ -5,6 +5,7 @@
     @livewire('covid-state.head')
     @livewire('covid-state.dashboard')
     @livewire('covid-state.health-care')
+    @livewire('covid-state.graph')
 </div>
 
 @endsection
