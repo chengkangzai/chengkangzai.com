@@ -78,11 +78,11 @@ class Graph extends Component
 
     public function initHealthCareVariable(Collection $healthCareCategory): void
     {
-        $this->cat1 = $healthCareCategory->pluck('cat1', 'date');
-        $this->cat2 = $healthCareCategory->pluck('cat2', 'date');
-        $this->cat3 = $healthCareCategory->pluck('cat3', 'date');
-        $this->cat4 = $healthCareCategory->pluck('cat4', 'date');
-        $this->cat5 = $healthCareCategory->pluck('cat5', 'date');
+        $this->cat1 = $healthCareCategory->pluck('cat1');
+        $this->cat2 = $healthCareCategory->pluck('cat2');
+        $this->cat3 = $healthCareCategory->pluck('cat3');
+        $this->cat4 = $healthCareCategory->pluck('cat4');
+        $this->cat5 = $healthCareCategory->pluck('cat5');
     }
 
     public function initCasesVariable(Collection $cases, Collection $deaths): void
