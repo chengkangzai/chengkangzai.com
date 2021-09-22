@@ -100,11 +100,11 @@ return new class extends Migration {
      */
     public function dropOldCol(Blueprint $table): void
     {
-        $table->dropColumn('daily_partial');
-        $table->dropColumn('daily_full');
+        $table->dropColumn('dose1_daily');
+        $table->dropColumn('dose2_daily');
         $table->dropColumn('total_daily');
-        $table->dropColumn('cumul_partial');
-        $table->dropColumn('cumul_full');
+        $table->dropColumn('dose1_cumul');
+        $table->dropColumn('dose2_cumul');
         $table->dropColumn('total_cumul');
     }
 
@@ -113,11 +113,11 @@ return new class extends Migration {
      */
     public function addOldCol(Blueprint $table): void
     {
-        $table->integer('daily_partial');
-        $table->integer('daily_full');
+        $table->integer('dose1_daily');
+        $table->integer('dose2_daily');
         $table->integer('total_daily');
-        $table->integer('cumul_partial');
-        $table->integer('cumul_full');
+        $table->integer('dose1_cumul');
+        $table->integer('dose2_cumul');
         $table->integer('total_cumul');
     }
 };
