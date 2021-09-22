@@ -88,8 +88,8 @@ class CasesMalaysiaService
         return Cache::remember('CasesMalaysia.VaxMalaysia', $this->cacheSecond, fn() => VaxMalaysia::latestOne()->get())
             ->map(function ($vaxMalaysia) use ($filter) {
                 $pop = $this->getPop($filter);
-                $vaxMalaysia->firstDosePercent = ($vaxMalaysia->dose1_cumul / $pop) * 100;
-                $vaxMalaysia->secondDosePercent = ($vaxMalaysia->dose2_cumul / $pop) * 100;
+                $vaxMalaysia->firstDosePercent = ($vaxMalaysia->cumul_partial / $pop) * 100;
+                $vaxMalaysia->secondDosePercent = ($vaxMalaysia->cumul_full / $pop) * 100;
                 return $vaxMalaysia;
             })
             ->first();

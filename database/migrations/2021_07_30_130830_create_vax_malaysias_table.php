@@ -16,11 +16,11 @@ return new class extends Migration
         Schema::create('vax_malaysias', function (Blueprint $table) {
             $table->id();
             $table->date('date');
-            $table->integer('dose1_daily');
-            $table->integer('dose2_daily');
+            $table->integer('daily_partial');
+            $table->integer('daily_full');
             $table->integer('total_daily');
-            $table->integer('dose1_cumul');
-            $table->integer('dose2_cumul');
+            $table->integer('cumul_partial');
+            $table->integer('cumul_full');
             $table->integer('total_cumul');
             $table->timestamps();
         });
