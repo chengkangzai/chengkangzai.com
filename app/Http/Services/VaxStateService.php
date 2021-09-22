@@ -25,11 +25,11 @@ class VaxStateService
             ->map(function ($vaxState) use ($filter) {
 
                 $pop = $this->getPop($filter)[$vaxState->state];
-                $vaxState->firstDoseDailyPercent = ($vaxState->dose1_daily / $pop) * 100;
-                $vaxState->secondDoseDailyPercent = ($vaxState->dose2_daily / $pop) * 100;
+                $vaxState->firstDoseDailyPercent = ($vaxState->daily_partial / $pop) * 100;
+                $vaxState->secondDoseDailyPercent = ($vaxState->daily_full / $pop) * 100;
 
-                $vaxState->firstDoseCumulPercent = ($vaxState->dose1_cumul / $pop) * 100;
-                $vaxState->secondDoseCumulPercent = ($vaxState->dose2_cumul / $pop) * 100;
+                $vaxState->firstDoseCumulPercent = ($vaxState->cumul_partial / $pop) * 100;
+                $vaxState->secondDoseCumulPercent = ($vaxState->cumul_full / $pop) * 100;
                 return $vaxState;
             });
     }

@@ -91,7 +91,7 @@
                     </tr>
                     </thead>
                     <tbody class="bg-white divide-y divide-gray-200">
-                    @foreach($dose1_daily as $state => $dose1)
+                    @foreach($daily_partial as $state => $dose1)
                         <tr class="@if($loop->even) bg-gray-50 @endif">
                             <td class="px-6 py-4 whitespace-nowrap">
                                 <div class="flex">
@@ -105,25 +105,25 @@
                             <td class="px-6 py-4 whitespace-nowrap">
                                 {{number_format($dose1)}}
                                 <small class="text-xs">
-                                    (+{{ round($dose1_dailyPrecent[$state],2)}}%)
+                                    (+{{ round($daily_partialPrecent[$state],2)}}%)
                                 </small>
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap">
-                                {{number_format($dose1_cumul[$state])}}
+                                {{number_format($cumul_partial[$state])}}
                                 <small class="text-xs">
-                                    {{ '('.round($dose1_cumulPrecent[$state],2).'%)'}}
+                                    {{ '('.round($cumul_partialPrecent[$state],2).'%)'}}
                                 </small>
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap">
-                                {{number_format($dose2_daily[$state])}}
+                                {{number_format($daily_full[$state])}}
                                 <small class="text-xs">
-                                    {{ '(+'.round($dose2_dailyPrecent[$state],2).'%)'}}
+                                    {{ '(+'.round($daily_fullPrecent[$state],2).'%)'}}
                                 </small>
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap">
-                                {{number_format($dose2_cumul[$state])}}
+                                {{number_format($cumul_full[$state])}}
                                 <small class="text-xs">
-                                    {{ '('.round($dose2_cumulPrecent[$state],2).'%)'}}
+                                    {{ '('.round($cumul_fullPrecent[$state],2).'%)'}}
                                 </small>
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap">
@@ -138,11 +138,11 @@
                                 <div class="relative">
                                     <div class="overflow-hidden h-2 text-xs flex rounded bg-green-50">
                                         <div
-                                            style="width: {{round(($dose2_cumulPrecent[$state]),2)}}%"
+                                            style="width: {{round(($cumul_fullPrecent[$state]),2)}}%"
                                             class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-green-500 rounded-r-full">
                                         </div>
                                         <div
-                                            style="width: {{round((($dose1_cumulPrecent[$state])-($dose2_cumulPrecent[$state])),2)}}%"
+                                            style="width: {{round((($cumul_partialPrecent[$state])-($cumul_fullPrecent[$state])),2)}}%"
                                             class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-green-300 rounded-r-full">
                                         </div>
                                     </div>
@@ -159,27 +159,27 @@
                             </div>
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap font-bold">
-                            {{number_format($dose1_daily->sum())}}
+                            {{number_format($daily_partial->sum())}}
                             <small class="text-xs">
-                                {{'+('.round($dose1_dailyPrecent->avg(),2).'%)'}}
+                                {{'+('.round($daily_partialPrecent->avg(),2).'%)'}}
                             </small>
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap font-bold">
-                            {{number_format($dose1_cumul->sum())}}
+                            {{number_format($cumul_partial->sum())}}
                             <small class="text-xs">
-                                {{'('.round($dose1_cumulPrecent->avg(),2).'%)'}}
+                                {{'('.round($cumul_partialPrecent->avg(),2).'%)'}}
                             </small>
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap font-bold">
-                            {{number_format($dose2_daily->sum())}}
+                            {{number_format($daily_full->sum())}}
                             <small class="text-xs">
-                                {{'+('.round($dose2_dailyPrecent->avg(),2).'%)'}}
+                                {{'+('.round($daily_fullPrecent->avg(),2).'%)'}}
                             </small>
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap font-bold">
-                            {{number_format($dose2_cumul->sum())}}
+                            {{number_format($cumul_full->sum())}}
                             <small class="text-xs">
-                                {{'('.round($dose2_cumulPrecent->avg(),2).'%)'}}
+                                {{'('.round($cumul_fullPrecent->avg(),2).'%)'}}
                             </small>
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap font-bold">

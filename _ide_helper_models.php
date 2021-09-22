@@ -464,27 +464,51 @@ namespace App\Models\Covid{
  *
  * @property int $id
  * @property \Illuminate\Support\Carbon $date
- * @property int $dose1_daily
- * @property int $dose2_daily
- * @property int $total_daily
- * @property int $dose1_cumul
- * @property int $dose2_cumul
- * @property int $total_cumul
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property int $daily_partial
+ * @property int $daily_full
+ * @property int $daily
+ * @property int $daily_partial_child
+ * @property int $daily_full_child
+ * @property int $cumul_partial
+ * @property int $cumul_full
+ * @property int $cumul
+ * @property int $cumul_partial_child
+ * @property int $cumul_full_child
+ * @property int $pfizer1
+ * @property int $pfizer2
+ * @property int $sinovac1
+ * @property int $sinovac2
+ * @property int $astra1
+ * @property int $astra2
+ * @property int $cansino
+ * @property int $pending
  * @method static \Illuminate\Database\Eloquent\Builder|VaxMalaysia latestOne()
  * @method static \Illuminate\Database\Eloquent\Builder|VaxMalaysia newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|VaxMalaysia newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|VaxMalaysia query()
+ * @method static \Illuminate\Database\Eloquent\Builder|VaxMalaysia whereAstra1($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|VaxMalaysia whereAstra2($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|VaxMalaysia whereCansino($value)
  * @method static \Illuminate\Database\Eloquent\Builder|VaxMalaysia whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|VaxMalaysia whereCumul($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|VaxMalaysia whereCumulFull($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|VaxMalaysia whereCumulFullChild($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|VaxMalaysia whereCumulPartial($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|VaxMalaysia whereCumulPartialChild($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|VaxMalaysia whereDaily($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|VaxMalaysia whereDailyFull($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|VaxMalaysia whereDailyFullChild($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|VaxMalaysia whereDailyPartial($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|VaxMalaysia whereDailyPartialChild($value)
  * @method static \Illuminate\Database\Eloquent\Builder|VaxMalaysia whereDate($value)
- * @method static \Illuminate\Database\Eloquent\Builder|VaxMalaysia whereDose1Cumul($value)
- * @method static \Illuminate\Database\Eloquent\Builder|VaxMalaysia whereDose1Daily($value)
- * @method static \Illuminate\Database\Eloquent\Builder|VaxMalaysia whereDose2Cumul($value)
- * @method static \Illuminate\Database\Eloquent\Builder|VaxMalaysia whereDose2Daily($value)
  * @method static \Illuminate\Database\Eloquent\Builder|VaxMalaysia whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|VaxMalaysia whereTotalCumul($value)
- * @method static \Illuminate\Database\Eloquent\Builder|VaxMalaysia whereTotalDaily($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|VaxMalaysia wherePending($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|VaxMalaysia wherePfizer1($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|VaxMalaysia wherePfizer2($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|VaxMalaysia whereSinovac1($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|VaxMalaysia whereSinovac2($value)
  * @method static \Illuminate\Database\Eloquent\Builder|VaxMalaysia whereUpdatedAt($value)
  */
 	class VaxMalaysia extends \Eloquent {}
@@ -577,28 +601,52 @@ namespace App\Models\Covid{
  * @property int $id
  * @property \Illuminate\Support\Carbon $date
  * @property string $state
- * @property int $dose1_daily
- * @property int $dose2_daily
- * @property int $total_daily
- * @property int $dose1_cumul
- * @property int $dose2_cumul
- * @property int $total_cumul
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property int $daily_partial
+ * @property int $daily_full
+ * @property int $daily
+ * @property int $daily_partial_child
+ * @property int $daily_full_child
+ * @property int $cumul_partial
+ * @property int $cumul_full
+ * @property int $cumul
+ * @property int $cumul_partial_child
+ * @property int $cumul_full_child
+ * @property int $pfizer1
+ * @property int $pfizer2
+ * @property int $sinovac1
+ * @property int $sinovac2
+ * @property int $astra1
+ * @property int $astra2
+ * @property int $cansino
+ * @property int $pending
  * @method static \Illuminate\Database\Eloquent\Builder|VaxState latestOne()
  * @method static \Illuminate\Database\Eloquent\Builder|VaxState newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|VaxState newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|VaxState query()
+ * @method static \Illuminate\Database\Eloquent\Builder|VaxState whereAstra1($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|VaxState whereAstra2($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|VaxState whereCansino($value)
  * @method static \Illuminate\Database\Eloquent\Builder|VaxState whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|VaxState whereCumul($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|VaxState whereCumulFull($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|VaxState whereCumulFullChild($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|VaxState whereCumulPartial($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|VaxState whereCumulPartialChild($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|VaxState whereDaily($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|VaxState whereDailyFull($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|VaxState whereDailyFullChild($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|VaxState whereDailyPartial($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|VaxState whereDailyPartialChild($value)
  * @method static \Illuminate\Database\Eloquent\Builder|VaxState whereDate($value)
- * @method static \Illuminate\Database\Eloquent\Builder|VaxState whereDose1Cumul($value)
- * @method static \Illuminate\Database\Eloquent\Builder|VaxState whereDose1Daily($value)
- * @method static \Illuminate\Database\Eloquent\Builder|VaxState whereDose2Cumul($value)
- * @method static \Illuminate\Database\Eloquent\Builder|VaxState whereDose2Daily($value)
  * @method static \Illuminate\Database\Eloquent\Builder|VaxState whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|VaxState wherePending($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|VaxState wherePfizer1($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|VaxState wherePfizer2($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|VaxState whereSinovac1($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|VaxState whereSinovac2($value)
  * @method static \Illuminate\Database\Eloquent\Builder|VaxState whereState($value)
- * @method static \Illuminate\Database\Eloquent\Builder|VaxState whereTotalCumul($value)
- * @method static \Illuminate\Database\Eloquent\Builder|VaxState whereTotalDaily($value)
  * @method static \Illuminate\Database\Eloquent\Builder|VaxState whereUpdatedAt($value)
  */
 	class VaxState extends \Eloquent {}

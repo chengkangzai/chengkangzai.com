@@ -73,8 +73,8 @@
         <div class="dark:bg-white bg-gray-50 py-6 rounded-xl shadow ">
             <h2 class="text-2xl">{{__('New Dose 1 Jabbed')}}</h2>
             <p class="text-green-500  font-bold text-4xl xl:text-5xl">
-                {{number_format($vax->dose1_daily)}}</p>
-            <span>{{__('Cumulative :')}}  {{number_format($vax->dose1_cumul)}}</span>
+                {{number_format($vax->daily_partial)}}</p>
+            <span>{{__('Cumulative :')}}  {{number_format($vax->cumul_partial)}}</span>
             <span>{{'('.number_format($vax->firstDosePercent,2).'%)'}}
             <span class="font-bold">*</span>
             </span>
@@ -91,8 +91,8 @@
         <div class="dark:bg-white bg-gray-50 py-6 rounded-xl shadow ">
             <h2 class="text-2xl">{{__('New Dose 2 Jabbed')}}</h2>
             <p class="text-green-500  font-bold text-4xl xl:text-5xl">
-                {{number_format($vax->dose2_daily)}}</p>
-            <span>{{__('Cumulative :')}} {{number_format($vax->dose2_cumul)}}</span>
+                {{number_format($vax->daily_full)}}</p>
+            <span>{{__('Cumulative :')}} {{number_format($vax->cumul_full)}}</span>
             <span>{{'('.number_format($vax->secondDosePercent,2).'%)'}}
                 <span class="font-bold">*</span>
                 </span>
