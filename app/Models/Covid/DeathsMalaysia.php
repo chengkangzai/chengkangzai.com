@@ -21,6 +21,8 @@ class DeathsMalaysia extends Model
         'deaths_new_cumulative',
         'deaths_bid',
         'deaths_bid_cumulative',
+        'deaths_bid_dod',
+        'deaths_bid_dod_cumulative',
     ];
 
     public function scopeLatestOne(Builder $query): Builder
