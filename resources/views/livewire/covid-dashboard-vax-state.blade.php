@@ -105,31 +105,31 @@
                             <td class="px-6 py-4 whitespace-nowrap">
                                 {{number_format($dose1)}}
                                 <small class="text-xs">
-                                    (+{{ round($daily_partialPrecent[$state],2)}}%)
+                                    (+{{ number_format($daily_partialPrecent[$state],2)}}%)
                                 </small>
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap">
                                 {{number_format($cumul_partial[$state])}}
                                 <small class="text-xs">
-                                    {{ '('.round($cumul_partialPrecent[$state],2).'%)'}}
+                                    {{ '('.number_format($cumul_partialPrecent[$state],2).'%)'}}
                                 </small>
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap">
                                 {{number_format($daily_full[$state])}}
                                 <small class="text-xs">
-                                    {{ '(+'.round($daily_fullPrecent[$state],2).'%)'}}
+                                    {{ '(+'.number_format($daily_fullPrecent[$state],2).'%)'}}
                                 </small>
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap">
                                 {{number_format($cumul_full[$state])}}
                                 <small class="text-xs">
-                                    {{ '('.round($cumul_fullPrecent[$state],2).'%)'}}
+                                    {{ '('.number_format($cumul_fullPrecent[$state],2).'%)'}}
                                 </small>
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap">
                                 {{number_format($vaxReg[$state])}}
                                 <small class="text-xs">
-                                    {{ '('.round($vaxRegPrecent[$state],2).'%)'}}
+                                    {{ '('.number_format($vaxRegPrecent[$state],2).'%)'}}
                                 </small>
                             </td>
                         </tr>
@@ -138,11 +138,11 @@
                                 <div class="relative">
                                     <div class="overflow-hidden h-2 text-xs flex rounded bg-green-50">
                                         <div
-                                            style="width: {{round(($cumul_fullPrecent[$state]),2)}}%"
+                                            style="width: {{number_format(($cumul_fullPrecent[$state]),2)}}%"
                                             class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-green-500 rounded-r-full">
                                         </div>
                                         <div
-                                            style="width: {{round((($cumul_partialPrecent[$state])-($cumul_fullPrecent[$state])),2)}}%"
+                                            style="width: {{number_format((($cumul_partialPrecent[$state])-($cumul_fullPrecent[$state])),2)}}%"
                                             class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-green-300 rounded-r-full">
                                         </div>
                                     </div>
@@ -161,31 +161,31 @@
                         <td class="px-6 py-4 whitespace-nowrap font-bold">
                             {{number_format($daily_partial->sum())}}
                             <small class="text-xs">
-                                {{'+('.round($daily_partialPrecent->avg(),2).'%)'}}
+                                {{'+('.number_format($daily_partialPrecent->avg(),2).'%)'}}
                             </small>
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap font-bold">
                             {{number_format($cumul_partial->sum())}}
                             <small class="text-xs">
-                                {{'('.round($cumul_partialPrecent->avg(),2).'%)'}}
+                                {{'('.number_format($cumul_partialPrecent->avg(),2).'%)'}}
                             </small>
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap font-bold">
                             {{number_format($daily_full->sum())}}
                             <small class="text-xs">
-                                {{'+('.round($daily_fullPrecent->avg(),2).'%)'}}
+                                {{'+('.number_format($daily_fullPrecent->avg(),2).'%)'}}
                             </small>
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap font-bold">
                             {{number_format($cumul_full->sum())}}
                             <small class="text-xs">
-                                {{'('.round($cumul_fullPrecent->avg(),2).'%)'}}
+                                {{'('.number_format($cumul_fullPrecent->avg(),2).'%)'}}
                             </small>
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap font-bold">
                             {{number_format($vaxReg->sum())}}
                             <small class="text-xs">
-                                {{'('.round($vaxRegPrecent->avg(),2).'%)'}}
+                                {{'('.number_format($vaxRegPrecent->avg(),2).'%)'}}
                             </small>
                         </td>
                     </tr>

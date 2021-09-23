@@ -85,7 +85,7 @@
                                 {{number_format($tests[$state])}}
                                 <small
                                     class="text-xs @if($positiveRate[$state] > 10) text-red-700 @elseif($positiveRate[$state] > 5) text-yellow-700 @endif">
-                                    {{ '('.round($positiveRate[$state],2).'%)'}}
+                                    {{ '('.number_format($positiveRate[$state],2).'%)'}}
                                 </small>
                             </td>
                         </tr>

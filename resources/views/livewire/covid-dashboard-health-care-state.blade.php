@@ -65,7 +65,7 @@
                                     / {{number_format($bed_covid[$state] ?? 0)}}
                                     <small
                                         class="text-xs @if($hospital_covid_util[$state] > 100) text-red-900 font-bold @elseif($hospital_covid_util[$state] > 70) text-red-700 @elseif($hospital_covid_util[$state] > 50) text-yellow-700 @endif">
-                                        {{'('.round($hospital_covid_util[$state],2).'%)'}}
+                                        {{'('.number_format($hospital_covid_util[$state],2).'%)'}}
                                     </small>
                                 @else
                                     N/A
@@ -77,7 +77,7 @@
                                     / {{number_format($bed_PKRC[$state] ?? 0) ?? "N/A"}}
                                     <small
                                         class="text-xs @if($pkrc_covid_util[$state] > 100) text-red-900 font-bold @elseif($pkrc_covid_util[$state] > 70) text-red-700 @elseif($pkrc_covid_util[$state] > 50) text-yellow-700 @endif">
-                                        {{'('.round($pkrc_covid_util[$state],2).'%)'}}
+                                        {{'('.number_format($pkrc_covid_util[$state],2).'%)'}}
                                     </small>
                                 @else
                                     N/A
@@ -87,7 +87,7 @@
                                 {{$totalOccupancyByState[$state]}} / {{$totalCovidBedByState[$state]}}
                                 <small
                                     class="text-xs @if($totalUtilizationByState[$state] > 100) text-red-900 font-bold @elseif($totalUtilizationByState[$state] > 70) text-red-700 @elseif($totalUtilizationByState[$state] > 50) text-yellow-700 @endif">
-                                    {{'('.round($totalUtilizationByState[$state],2).'%)'}}
+                                    {{'('.number_format($totalUtilizationByState[$state],2).'%)'}}
                                 </small>
                             </td>
                         </tr>

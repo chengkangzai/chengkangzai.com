@@ -3,7 +3,7 @@
         <div class="dark:bg-white bg-gray-50 py-8 rounded-xl shadow ">
             <h2 class="text-2xl">{{__('New Case')}}</h2>
             <p class="text-red-500 font-bold text-4xl xl:text-5xl">{{number_format($cases->cases_new)}}</p>
-            <span>(+{{round($cases->newPercentage,2)}}%)
+            <span>(+{{number_format($cases->newPercentage,2)}}%)
                 <span class="font-bold">*</span>
             </span>
         </div>
@@ -11,7 +11,7 @@
         <div class="dark:bg-white bg-gray-50 py-8 rounded-xl shadow ">
             <h2 class="text-2xl">{{__('Cumulative Case')}}</h2>
             <p class="text-red-500 font-bold text-4xl xl:text-5xl">{{number_format($cases->cases_cumulative)}}</p>
-            <span>({{round($cases->cumPercentage,2)}}%)
+            <span>({{number_format($cases->cumPercentage,2)}}%)
                 <span class="font-bold">*</span>
             </span>
         </div>
@@ -81,7 +81,7 @@
             <div class="relative mt-2 w-10/12 mx-auto">
                 <div class="overflow-hidden h-2 text-xs flex rounded bg-green-50">
                     <div
-                        style="width: {{round($vax->firstDosePercent,2)}}%"
+                        style="width: {{number_format($vax->firstDosePercent,2)}}%"
                         class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-green-300 rounded-r-full">
                     </div>
                 </div>
@@ -99,7 +99,7 @@
             <div class="relative mt-2 w-10/12 mx-auto">
                 <div class="overflow-hidden h-2 text-xs flex rounded bg-green-50">
                     <div
-                        style="width: {{round($vax->secondDosePercent,2)}}%"
+                        style="width: {{number_format($vax->secondDosePercent,2)}}%"
                         class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-green-500 rounded-r-full">
                     </div>
                 </div>

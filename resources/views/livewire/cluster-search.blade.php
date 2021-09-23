@@ -141,7 +141,7 @@
                                     {{$cluster->cases_total}}
                                 </td>
                                 <td class="py-4 whitespace-nowrap border-r">
-                                    {{round(($cluster->cases_total/$cluster->tests)*100,2).'%'}}
+                                    {{number_format(($cluster->cases_total/$cluster->tests)*100,2).'%'}}
                                     <small class="text-xs">
                                         ({{$cluster->cases_total}}/{{$cluster->tests}})
                                     </small>
