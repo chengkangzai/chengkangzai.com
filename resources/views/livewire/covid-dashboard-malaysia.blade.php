@@ -101,7 +101,7 @@
             <h2 class="text-2xl">{{__('New Dose 2 Jabbed')}}</h2>
             <p class="text-green-500  font-bold text-4xl xl:text-5xl">
                 {{number_format($vax->daily_full)}}
-                <small class="text-xs">{{'+('.number_format($vax->secondDoseCumulPercent,2).'%)'}}</small>
+                <small class="text-xs">{{'(+'.number_format($vax->secondDoseCumulPercent,2).'%)'}}</small>
             </p>
             <span>{{__('Cumulative :')}} {{number_format($vax->cumul_full)}}</span>
             <span>{{'('.number_format($vax->secondDosePercent,2).'%)'}}

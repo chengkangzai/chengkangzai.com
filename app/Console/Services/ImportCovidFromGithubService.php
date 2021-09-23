@@ -107,20 +107,25 @@ class ImportCovidFromGithubService
     {
         global $cumDeathMalaysia;
         global $cumBidMalaysia;
+        global $cumBidDodMalaysia;
         return collect(explode(PHP_EOL, Http::get(self::url['DEATH_MALAYSIA'])))
             ->slice(1, -1)
-            ->map(function ($record) use (&$cumDeathMalaysia, &$cumBidMalaysia) {
+            ->map(function ($record) use ($cumBidDodMalaysia, &$cumDeathMalaysia, &$cumBidMalaysia) {
                 $dailyCase = explode(',', $record);
                 $newDeath = self::takeIndex($dailyCase, 1);
                 $bidDeath = self::takeIndex($dailyCase, 2);
+                $bidDodDeath = self::takeIndex($dailyCase, 3);
                 $cumDeathMalaysia = $cumDeathMalaysia + $newDeath;
                 $cumBidMalaysia = $cumBidMalaysia + $bidDeath;
+                $cumBidDodMalaysia = $cumBidDodMalaysia + $bidDodDeath;
                 return [
                     'date' => $dailyCase[0],
                     'deaths_new' => $newDeath,
                     'deaths_bid' => $bidDeath,
+                    'deaths_bid_dod' => $bidDodDeath,
                     'deaths_new_cumulative' => $cumDeathMalaysia,
                     'deaths_bid_cumulative' => $cumBidMalaysia,
+                    'deaths_bid_dod_cumulative' => $cumBidDodMalaysia,
                     'created_at' => now(),
                     'updated_at' => now(),
                 ];
@@ -137,9 +142,10 @@ class ImportCovidFromGithubService
                     $collect = new DeathsState();
 
                     $collect->date = $dailyCase[0];
-                    $collect->state = self::takeIndex($dailyCase,1);
-                    $collect->deaths_new = self::takeIndex($dailyCase,2);
-                    $collect->deaths_bid = self::takeIndex($dailyCase,3);
+                    $collect->state = self::takeIndex($dailyCase, 1);
+                    $collect->deaths_new = self::takeIndex($dailyCase, 2);
+                    $collect->deaths_bid = self::takeIndex($dailyCase, 3);
+                    $collect->deaths_bid_dod = self::takeIndex($dailyCase, 4);
                     return $collect;
                 })
         );
@@ -150,6 +156,7 @@ class ImportCovidFromGithubService
         foreach (DeathsState::STATE as $state) {
             $cum = 0;
             $cumBid = 0;
+            $cumBidDod = 0;
             $cases = $collection->filter(fn($death) => $death->state == $state);
             foreach ($cases as $case) {
                 $cum = $cum + $case->deaths_new;
@@ -157,6 +164,9 @@ class ImportCovidFromGithubService
 
                 $cumBid = $cumBid + $case->deaths_bid;
                 $case->deaths_bid_cumulative = $cumBid;
+
+                $cumBidDod = $cumBidDod + $case->deaths_bid_dod;
+                $case->deaths_bid_dod_cumulative = $cumBidDod;
             }
         }
         return $collection;
@@ -170,8 +180,8 @@ class ImportCovidFromGithubService
                 $dailyCase = explode(',', $record);
                 return [
                     'date' => $dailyCase[0],
-                    'rtk_ag' => self::takeIndex($dailyCase,1),
-                    'pcr' => self::takeIndex($dailyCase,2),
+                    'rtk_ag' => self::takeIndex($dailyCase, 1),
+                    'pcr' => self::takeIndex($dailyCase, 2),
                     'created_at' => now(),
                     'updated_at' => now(),
                 ];
@@ -186,9 +196,9 @@ class ImportCovidFromGithubService
                 $dailyCase = explode(',', $record);
                 return [
                     'date' => $dailyCase[0],
-                    'state' => self::takeIndex($dailyCase,1),
-                    'rtk_ag' => self::takeIndex($dailyCase,2),
-                    'pcr' => self::takeIndex($dailyCase,3),
+                    'state' => self::takeIndex($dailyCase, 1),
+                    'rtk_ag' => self::takeIndex($dailyCase, 2),
+                    'pcr' => self::takeIndex($dailyCase, 3),
                     'created_at' => now(),
                     'updated_at' => now(),
                 ];
@@ -321,6 +331,7 @@ class ImportCovidFromGithubService
                     'pop' => $dailyCase[2],
                     'pop_18' => $dailyCase[3],
                     'pop_60' => $dailyCase[4],
+                    'pop_12' => $dailyCase[5],
                     'created_at' => now(),
                     'updated_at' => now(),
                 ];

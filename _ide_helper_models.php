@@ -178,6 +178,8 @@ namespace App\Models\Covid{
  * @property int $deaths_new
  * @property int $deaths_bid_cumulative
  * @property int $deaths_bid
+ * @property int $deaths_bid_dod Brought in Death that died of disease
+ * @property int $deaths_bid_dod_cumulative
  * @property int|null $deaths_new_cumulative
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
@@ -189,6 +191,8 @@ namespace App\Models\Covid{
  * @method static \Illuminate\Database\Eloquent\Builder|DeathsMalaysia whereDate($value)
  * @method static \Illuminate\Database\Eloquent\Builder|DeathsMalaysia whereDeathsBid($value)
  * @method static \Illuminate\Database\Eloquent\Builder|DeathsMalaysia whereDeathsBidCumulative($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|DeathsMalaysia whereDeathsBidDod($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|DeathsMalaysia whereDeathsBidDodCumulative($value)
  * @method static \Illuminate\Database\Eloquent\Builder|DeathsMalaysia whereDeathsNew($value)
  * @method static \Illuminate\Database\Eloquent\Builder|DeathsMalaysia whereDeathsNewCumulative($value)
  * @method static \Illuminate\Database\Eloquent\Builder|DeathsMalaysia whereId($value)
@@ -207,6 +211,8 @@ namespace App\Models\Covid{
  * @property int $deaths_new
  * @property int $deaths_bid_cumulative
  * @property int $deaths_bid
+ * @property int $deaths_bid_dod Brought in Death that died of disease
+ * @property int $deaths_bid_dod_cumulative
  * @property int|null $deaths_commutative
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
@@ -219,6 +225,8 @@ namespace App\Models\Covid{
  * @method static \Illuminate\Database\Eloquent\Builder|DeathsState whereDate($value)
  * @method static \Illuminate\Database\Eloquent\Builder|DeathsState whereDeathsBid($value)
  * @method static \Illuminate\Database\Eloquent\Builder|DeathsState whereDeathsBidCumulative($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|DeathsState whereDeathsBidDod($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|DeathsState whereDeathsBidDodCumulative($value)
  * @method static \Illuminate\Database\Eloquent\Builder|DeathsState whereDeathsCommutative($value)
  * @method static \Illuminate\Database\Eloquent\Builder|DeathsState whereDeathsNew($value)
  * @method static \Illuminate\Database\Eloquent\Builder|DeathsState whereId($value)
@@ -389,6 +397,7 @@ namespace App\Models\Covid{
  * @property int $pop
  * @property int $pop_18
  * @property int $pop_60
+ * @property int $pop_12
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @method static \Illuminate\Database\Eloquent\Builder|Population newModelQuery()
@@ -398,6 +407,7 @@ namespace App\Models\Covid{
  * @method static \Illuminate\Database\Eloquent\Builder|Population whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Population whereIdxs($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Population wherePop($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Population wherePop12($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Population wherePop18($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Population wherePop60($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Population whereState($value)

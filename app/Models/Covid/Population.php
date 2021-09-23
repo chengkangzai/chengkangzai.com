@@ -16,6 +16,7 @@ class Population extends Model
         'state',
         'idxs',
         'pop',
+        'pop_12',
         'pop_18',
         'pop_60',
     ];
@@ -41,6 +42,6 @@ class Population extends Model
 
     public const POP_FILTER = [
         'ALL_POPULATION' => 'pop',
-        'ABOVE_18' => 'pop_18'
+        'ABOVE_18' => 'pop_18',
     ];
 }
