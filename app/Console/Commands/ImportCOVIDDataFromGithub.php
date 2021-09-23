@@ -2,7 +2,7 @@
 
 namespace App\Console\Commands;
 
-use App\Http\Services\ImportCovidFromGithubService;
+use App\Console\Services\ImportCovidFromGithubService;
 use App\Http\Services\WebHookService;
 use Artisan;
 use Carbon\Carbon;

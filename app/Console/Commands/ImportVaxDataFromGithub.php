@@ -2,8 +2,8 @@
 
 namespace App\Console\Commands;
 
-use App\Http\Services\ImportCovidFromGithubService;
-use App\Http\Services\ImportVaccineFromGithubService;
+use App\Console\Services\ImportCovidFromGithubService;
+use App\Console\Services\ImportVaccineFromGithubService;
 use App\Http\Services\WebHookService;
 use Carbon\Carbon;
 use DB;

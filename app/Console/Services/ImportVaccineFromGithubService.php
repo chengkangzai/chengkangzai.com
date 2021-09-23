@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\Http\Services;
+namespace App\Console\Services;
 
 
 use Http;
