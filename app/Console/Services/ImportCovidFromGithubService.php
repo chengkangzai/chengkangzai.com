@@ -321,6 +321,7 @@ class ImportCovidFromGithubService
                     'pop' => $dailyCase[2],
                     'pop_18' => $dailyCase[3],
                     'pop_60' => $dailyCase[4],
+                    'pop_12' => $dailyCase[5],
                     'created_at' => now(),
                     'updated_at' => now(),
                 ];
