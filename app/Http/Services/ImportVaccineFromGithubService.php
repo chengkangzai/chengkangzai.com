@@ -44,6 +44,8 @@ class ImportVaccineFromGithubService
                     'astra2' => $this->takeIndex($vax, 16),
                     'cansino' => $this->takeIndex($vax, 17),
                     'pending' => $this->takeIndex($vax, 18),
+                    'created_at' => now(),
+                    'updated_at' => now(),
                 ];
             });
     }
@@ -76,6 +78,8 @@ class ImportVaccineFromGithubService
                     'astra2' => $this->takeIndex($vax, 17),
                     'cansino' => $this->takeIndex($vax, 18),
                     'pending' => $this->takeIndex($vax, 19),
+                    'created_at' => now(),
+                    'updated_at' => now(),
                 ];
             });
     }
