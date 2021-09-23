@@ -24,7 +24,7 @@
             </span>
         </div>
 
-{{--End of First Row--}}
+        {{--End of First Row--}}
         <div class="dark:bg-white bg-gray-50 py-8 rounded-xl shadow ">
             <h2 class="text-2xl">{{__('Deaths')}}</h2>
             <p class="text-gray-500  font-bold text-4xl xl:text-5xl">{{number_format($death->deaths_new)}}</p>
@@ -46,34 +46,43 @@
             <span>
                 {{__('Positive Rate')}}:
                 <span class="font-bold">{{number_format($positiveRate,2)}}%</span>
-                 <small class="text-xs">({{number_format($positiveRateCase)}}/{{number_format($test->totalTest)}})</small>
+                 <small
+                     class="text-xs">({{number_format($positiveRateCase)}}/{{number_format($test->totalTest)}})</small>
             </span>
             <small class="text-xs">
                 ({{$test->date->format('Y-m-d')}})
             </small>
         </div>
 
-{{--End of Second Row--}}
+        {{--End of Second Row--}}
         <div class="dark:bg-white bg-gray-50 py-8 rounded-xl shadow ">
             <h2 class="text-2xl">{{__('New recovered Case')}}</h2>
-            <p class="text-blue-500 font-bold text-4xl xl:text-5xl">{{number_format($cases->cases_recovered)}}</p>
+            <p class="text-blue-500 font-bold text-4xl xl:text-5xl">
+                {{number_format($cases->cases_recovered)}}
+            </p>
         </div>
 
         <div class="dark:bg-white bg-gray-50 py-8 rounded-xl shadow ">
             <h2 class="text-2xl">{{__('Cumulative recovered')}}</h2>
-            <p class="text-blue-500  font-bold text-4xl xl:text-5xl">{{number_format($cases->cases_recovered_cumulative)}}</p>
+            <p class="text-blue-500  font-bold text-4xl xl:text-5xl">
+                {{number_format($cases->cases_recovered_cumulative)}}
+            </p>
         </div>
 
         <div class="dark:bg-white bg-gray-50 py-8 rounded-xl shadow ">
             <h2 class="text-2xl">{{__('Active Cluster In Malaysia')}}</h2>
-            <p class="text-yellow-500 font-bold text-4xl xl:text-5xl">{{number_format($clusterCount)}}</p>
+            <p class="text-yellow-500 font-bold text-4xl xl:text-5xl">
+                {{number_format($clusterCount)}}
+            </p>
         </div>
 
-{{--End of Third Row--}}
+        {{--End of Third Row--}}
         <div class="dark:bg-white bg-gray-50 py-6 rounded-xl shadow ">
             <h2 class="text-2xl">{{__('New Dose 1 Jabbed')}}</h2>
             <p class="text-green-500  font-bold text-4xl xl:text-5xl">
-                {{number_format($vax->daily_partial)}}</p>
+                {{number_format($vax->daily_partial)}}
+                <small class="text-xs">{{'+('.number_format($vax->firstDoseCumulPercent,2).'%)'}}</small>
+            </p>
             <span>{{__('Cumulative :')}}  {{number_format($vax->cumul_partial)}}</span>
             <span>{{'('.number_format($vax->firstDosePercent,2).'%)'}}
             <span class="font-bold">*</span>
@@ -91,7 +100,9 @@
         <div class="dark:bg-white bg-gray-50 py-6 rounded-xl shadow ">
             <h2 class="text-2xl">{{__('New Dose 2 Jabbed')}}</h2>
             <p class="text-green-500  font-bold text-4xl xl:text-5xl">
-                {{number_format($vax->daily_full)}}</p>
+                {{number_format($vax->daily_full)}}
+                <small class="text-xs">{{'+('.number_format($vax->secondDoseCumulPercent,2).'%)'}}</small>
+            </p>
             <span>{{__('Cumulative :')}} {{number_format($vax->cumul_full)}}</span>
             <span>{{'('.number_format($vax->secondDosePercent,2).'%)'}}
                 <span class="font-bold">*</span>
@@ -113,7 +124,7 @@
                 <small class="text-black text-xs">*{{__($popFilter)}}</small>
             </p>
             <span>{{__('Registered :')}} {{number_format($vaxReg->total)}}</span>
-{{--End of Fourth Row--}}
+            {{--End of Fourth Row--}}
         </div>
     </div>
 </section>

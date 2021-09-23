@@ -86,10 +86,13 @@ class CasesMalaysiaService
     public function getVax(string $filter = Population::POP_FILTER['ALL_POPULATION'])
     {
         return Cache::remember('CasesMalaysia.VaxMalaysia', $this->cacheSecond, fn() => VaxMalaysia::latestOne()->get())
-            ->map(function ($vaxMalaysia) use ($filter) {
+            ->map(function (VaxMalaysia $vaxMalaysia) use ($filter) {
                 $pop = $this->getPop($filter);
                 $vaxMalaysia->firstDosePercent = ($vaxMalaysia->cumul_partial / $pop) * 100;
                 $vaxMalaysia->secondDosePercent = ($vaxMalaysia->cumul_full / $pop) * 100;
+
+                $vaxMalaysia->firstDoseCumulPercent = ($vaxMalaysia->daily_partial / $pop) * 100;
+                $vaxMalaysia->secondDoseCumulPercent = ($vaxMalaysia->daily_full / $pop) * 100;
                 return $vaxMalaysia;
             })
             ->first();
