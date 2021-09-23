@@ -45,7 +45,7 @@ class CovidDashboardVaxState extends Component
 
         $this->daily_full = $vax->pluck('daily_full', 'state');
         $this->cumul_full = $vax->pluck('cumul_full', 'state');
-        $this->daily_fullPrecent = $vax->pluck('firstDoseDailyPercent', 'state');
+        $this->daily_fullPrecent = $vax->pluck('secondDoseDailyPercent', 'state');
         $this->cumul_fullPrecent = $vax->pluck('secondDoseCumulPercent', 'state');
 
         $this->vaxReg = $vaxReg->pluck('total', 'state');
