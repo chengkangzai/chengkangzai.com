@@ -23,29 +23,27 @@ class ImportVaccineFromGithubService
         return collect(explode(PHP_EOL, Http::get(self::url['VAX_MALAYSIA'])))
             ->slice(1, -1)
             ->map(function ($record) {
-                $dailyCase = str_getcsv($record);
+                $vax = str_getcsv($record);
                 return [
-                    'date' => $dailyCase[0],
-                    'daily_partial' => (!isset($dailyCase[1]) || $dailyCase[1] == '') ? 0 : $dailyCase[1], //daily_partial
-                    'daily_full' => (!isset($dailyCase[2]) || $dailyCase[2] == '') ? 0 : $dailyCase[2], //daily_full
-                    'daily' => (!isset($dailyCase[3]) || $dailyCase[3] == '') ? 0 : $dailyCase[3], //daily
-                    'daily_partial_child' => (!isset($dailyCase[4]) || $dailyCase[4] == '') ? 0 : $dailyCase[4],
-                    'daily_full_child' => (!isset($dailyCase[5]) || $dailyCase[5] == '') ? 0 : $dailyCase[5],
-                    'cumul_partial' => (!isset($dailyCase[6]) || $dailyCase[6] == '') ? 0 : $dailyCase[6],
-                    'cumul_full' => (!isset($dailyCase[7]) || $dailyCase[7] == '') ? 0 : $dailyCase[7],
-                    'cumul' => (!isset($dailyCase[8]) || $dailyCase[8] == '') ? 0 : $dailyCase[8],
-                    'cumul_partial_child' => (!isset($dailyCase[9]) || $dailyCase[9] == '') ? 0 : $dailyCase[9],
-                    'cumul_full_child' => (!isset($dailyCase[10]) || $dailyCase[10] == '') ? 0 : $dailyCase[10],
-                    'pfizer1' => (!isset($dailyCase[11]) || $dailyCase[11] == '') ? 0 : $dailyCase[11],
-                    'pfizer2' => (!isset($dailyCase[12]) || $dailyCase[12] == '') ? 0 : $dailyCase[12],
-                    'sinovac1' => (!isset($dailyCase[13]) || $dailyCase[13] == '') ? 0 : $dailyCase[13],
-                    'sinovac2' => (!isset($dailyCase[14]) || $dailyCase[14] == '') ? 0 : $dailyCase[14],
-                    'astra1' => (!isset($dailyCase[15]) || $dailyCase[15] == '') ? 0 : $dailyCase[15],
-                    'astra2' => (!isset($dailyCase[16]) || $dailyCase[16] == '') ? 0 : $dailyCase[16],
-                    'cansino' => (!isset($dailyCase[17]) || $dailyCase[17] == '') ? 0 : $dailyCase[17],
-                    'pending' => (!isset($dailyCase[18]) || $dailyCase[18] == '') ? 0 : $dailyCase[18],
-                    'created_at' => now(),
-                    'updated_at' => now(),
+                    'date' => $vax[0],
+                    'daily_partial' => $this->takeIndex($vax, 1),
+                    'daily_full' => $this->takeIndex($vax, 2),
+                    'daily' => $this->takeIndex($vax, 3),
+                    'daily_partial_child' => $this->takeIndex($vax, 4),
+                    'daily_full_child' => $this->takeIndex($vax, 5),
+                    'cumul_partial' => $this->takeIndex($vax, 6),
+                    'cumul_full' => $this->takeIndex($vax, 7),
+                    'cumul' => $this->takeIndex($vax, 8),
+                    'cumul_partial_child' => $this->takeIndex($vax, 9),
+                    'cumul_full_child' => $this->takeIndex($vax, 10),
+                    'pfizer1' => $this->takeIndex($vax, 11),
+                    'pfizer2' => $this->takeIndex($vax, 12),
+                    'sinovac1' => $this->takeIndex($vax, 13),
+                    'sinovac2' => $this->takeIndex($vax, 14),
+                    'astra1' => $this->takeIndex($vax, 15),
+                    'astra2' => $this->takeIndex($vax, 16),
+                    'cansino' => $this->takeIndex($vax, 17),
+                    'pending' => $this->takeIndex($vax, 18),
                 ];
             });
     }
@@ -56,30 +54,28 @@ class ImportVaccineFromGithubService
         return collect(explode(PHP_EOL, Http::get(self::url['VAX_STATE'])))
             ->slice(1, -1)
             ->map(function ($record) {
-                $dailyCase = str_getcsv($record);
+                $vax = str_getcsv($record);
                 return [
-                    'date' => $dailyCase[0],
-                    'state' => $dailyCase[1],
-                    'daily_partial' => (!isset($dailyCase[1 + 1]) || $dailyCase[1 + 1] == '') ? 0 : $dailyCase[1 + 1], //daily_partial
-                    'daily_full' => (!isset($dailyCase[2 + 1]) || $dailyCase[2 + 1] == '') ? 0 : $dailyCase[2 + 1], //daily_full
-                    'daily' => (!isset($dailyCase[3 + 1]) || $dailyCase[3 + 1] == '') ? 0 : $dailyCase[3 + 1], //daily
-                    'daily_partial_child' => (!isset($dailyCase[4 + 1]) || $dailyCase[4 + 1] == '') ? 0 : $dailyCase[4 + 1],
-                    'daily_full_child' => (!isset($dailyCase[5 + 1]) || $dailyCase[5 + 1] == '') ? 0 : $dailyCase[5 + 1],
-                    'cumul_partial' => (!isset($dailyCase[6 + 1]) || $dailyCase[6 + 1] == '') ? 0 : $dailyCase[6 + 1],
-                    'cumul_full' => (!isset($dailyCase[7 + 1]) || $dailyCase[7 + 1] == '') ? 0 : $dailyCase[7 + 1],
-                    'cumul' => (!isset($dailyCase[8 + 1]) || $dailyCase[8 + 1] == '') ? 0 : $dailyCase[8 + 1],
-                    'cumul_partial_child' => (!isset($dailyCase[9 + 1]) || $dailyCase[9 + 1] == '') ? 0 : $dailyCase[9 + 1],
-                    'cumul_full_child' => (!isset($dailyCase[10 + 1]) || $dailyCase[10 + 1] == '') ? 0 : $dailyCase[10 + 1],
-                    'pfizer1' => (!isset($dailyCase[11 + 1]) || $dailyCase[11 + 1] == '') ? 0 : $dailyCase[11 + 1],
-                    'pfizer2' => (!isset($dailyCase[12 + 1]) || $dailyCase[12 + 1] == '') ? 0 : $dailyCase[12 + 1],
-                    'sinovac1' => (!isset($dailyCase[13 + 1]) || $dailyCase[13 + 1] == '') ? 0 : $dailyCase[13 + 1],
-                    'sinovac2' => (!isset($dailyCase[14 + 1]) || $dailyCase[14 + 1] == '') ? 0 : $dailyCase[14 + 1],
-                    'astra1' => (!isset($dailyCase[15 + 1]) || $dailyCase[15 + 1] == '') ? 0 : $dailyCase[15 + 1],
-                    'astra2' => (!isset($dailyCase[16 + 1]) || $dailyCase[16 + 1] == '') ? 0 : $dailyCase[16 + 1],
-                    'cansino' => (!isset($dailyCase[17 + 1]) || $dailyCase[17 + 1] == '') ? 0 : $dailyCase[17 + 1],
-                    'pending' => (!isset($dailyCase[18 + 1]) || $dailyCase[18 + 1] == '') ? 0 : $dailyCase[18 + 1],
-                    'created_at' => now(),
-                    'updated_at' => now(),
+                    'date' => $vax[0],
+                    'state' => $vax[1],
+                    'daily_partial' => $this->takeIndex($vax, 2),
+                    'daily_full' => $this->takeIndex($vax, 3),
+                    'daily' => $this->takeIndex($vax, 4),
+                    'daily_partial_child' => $this->takeIndex($vax, 5),
+                    'daily_full_child' => $this->takeIndex($vax, 6),
+                    'cumul_partial' => $this->takeIndex($vax, 7),
+                    'cumul_full' => $this->takeIndex($vax, 8),
+                    'cumul' => $this->takeIndex($vax, 9),
+                    'cumul_partial_child' => $this->takeIndex($vax, 10),
+                    'cumul_full_child' => $this->takeIndex($vax, 11),
+                    'pfizer1' => $this->takeIndex($vax, 12),
+                    'pfizer2' => $this->takeIndex($vax, 13),
+                    'sinovac1' => $this->takeIndex($vax, 14),
+                    'sinovac2' => $this->takeIndex($vax, 15),
+                    'astra1' => $this->takeIndex($vax, 16),
+                    'astra2' => $this->takeIndex($vax, 17),
+                    'cansino' => $this->takeIndex($vax, 18),
+                    'pending' => $this->takeIndex($vax, 19),
                 ];
             });
     }
@@ -88,48 +84,43 @@ class ImportVaccineFromGithubService
     {
         return collect(explode(PHP_EOL, Http::get(self::url['VAX_REG_MALAYSIA'])))
             ->slice(1, -1)
-            ->map(function ($record) {
-                $dailyCase = str_getcsv($record);
-                return [
-                    'date' => $dailyCase[0],
-                    'state' => $dailyCase[1],
-                    'total' => (!isset($dailyCase[2]) || $dailyCase[2] == '') ? 0 : $dailyCase[2],
-                    'phase2' => (!isset($dailyCase[3]) || $dailyCase[3] == '') ? 0 : $dailyCase[3],
-                    'mysj' => (!isset($dailyCase[4]) || $dailyCase[4] == '') ? 0 : $dailyCase[4],
-                    'call' => (!isset($dailyCase[5]) || $dailyCase[5] == '') ? 0 : $dailyCase[5],
-                    'web' => (!isset($dailyCase[6]) || $dailyCase[6] == '') ? 0 : $dailyCase[6],
-                    'children' => (!isset($dailyCase[7]) || $dailyCase[7] == '') ? 0 : $dailyCase[7],
-                    'elderly' => (!isset($dailyCase[8]) || $dailyCase[8] == '') ? 0 : $dailyCase[8],
-                    'comorb' => (!isset($dailyCase[9]) || $dailyCase[9] == '') ? 0 : $dailyCase[9],
-                    'oku' => (!isset($dailyCase[10]) || $dailyCase[10] == '') ? 0 : $dailyCase[10],
-                    'created_at' => now(),
-                    'updated_at' => now(),
-                ];
-            });
+            ->map(fn($record) => $this->formatVaxReg(str_getcsv($record)));
     }
 
     public function getVaxRegState(): Collection
     {
         return collect(explode(PHP_EOL, Http::get(self::url['VAX_REG_STATE'])))
             ->slice(1, -1)
-            ->map(function ($record) {
-                $dailyCase = str_getcsv($record);
-                return [
-                    'date' => $dailyCase[0],
-                    'state' => $dailyCase[1],
-                    'total' => (!isset($dailyCase[2]) || $dailyCase[2] == '') ? 0 : $dailyCase[2],
-                    'phase2' => (!isset($dailyCase[3]) || $dailyCase[3] == '') ? 0 : $dailyCase[3],
-                    'mysj' => (!isset($dailyCase[4]) || $dailyCase[4] == '') ? 0 : $dailyCase[4],
-                    'call' => (!isset($dailyCase[5]) || $dailyCase[5] == '') ? 0 : $dailyCase[5],
-                    'web' => (!isset($dailyCase[6]) || $dailyCase[6] == '') ? 0 : $dailyCase[6],
-                    'children' => (!isset($dailyCase[7]) || $dailyCase[7] == '') ? 0 : $dailyCase[7],
-                    'elderly' => (!isset($dailyCase[8]) || $dailyCase[8] == '') ? 0 : $dailyCase[8],
-                    'comorb' => (!isset($dailyCase[9]) || $dailyCase[9] == '') ? 0 : $dailyCase[9],
-                    'oku' => (!isset($dailyCase[10]) || $dailyCase[10] == '') ? 0 : $dailyCase[10],
-                    'created_at' => now(),
-                    'updated_at' => now(),
-                ];
-            });
+            ->map(fn($record) => $this->formatVaxReg(str_getcsv($record)));
+    }
+
+    /**
+     * @param array $array
+     * @param int $index
+     * @return mixed
+     */
+    private static function takeIndex(array $array, int $index): mixed
+    {
+        return (!isset($array[$index]) || $array[$index] == '') ? 0 : $array[$index];
+    }
+
+    private function formatVaxReg(array $array): array
+    {
+        return [
+            'date' => $array[0],
+            'state' => $array[1],
+            'total' => $this->takeIndex($array, 2),
+            'phase2' => $this->takeIndex($array, 3),
+            'mysj' => $this->takeIndex($array, 4),
+            'call' => $this->takeIndex($array, 5),
+            'web' => $this->takeIndex($array, 6),
+            'children' => $this->takeIndex($array, 7),
+            'elderly' => $this->takeIndex($array, 8),
+            'comorb' => $this->takeIndex($array, 9),
+            'oku' => $this->takeIndex($array, 10),
+            'created_at' => now(),
+            'updated_at' => now(),
+        ];
     }
 
 }

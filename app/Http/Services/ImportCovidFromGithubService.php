@@ -27,6 +27,7 @@ class ImportCovidFromGithubService
         'POPULATION' => self::baseUrl . '/static/population.csv',
     ];
 
+
     public function getCasesMalaysia(): Collection
     {
         global $cumCasesMalaysia;
@@ -35,22 +36,22 @@ class ImportCovidFromGithubService
             ->slice(1, -1)
             ->map(function ($record) use (&$cumCasesMalaysia, &$cumRecoveredMalaysia) {
                 $dailyCase = str_getcsv(str_replace("\"", "", $record));
-                $new_cases = (!isset($dailyCase[1]) || $dailyCase[1] == '') ? 0 : $dailyCase[1];
+                $new_cases = self::takeIndex($dailyCase, 1);
                 $cumCasesMalaysia = $cumCasesMalaysia + $new_cases;
-                $new_recovered = (!isset($dailyCase[3]) || $dailyCase[3] == '') ? 0 : $dailyCase[3];
+                $new_recovered = self::takeIndex($dailyCase, 3);
                 $cumRecoveredMalaysia = $new_recovered + $cumRecoveredMalaysia;
                 return [
                     'date' => $dailyCase[0],
                     'cases_new' => $new_cases,
                     'cases_import' => $dailyCase[2] ?? 0,
                     'cases_recovered' => $dailyCase[3] ?? 0,
-                    'cluster_import' => (!isset($dailyCase[4]) || $dailyCase[4] == '') ? 0 : $dailyCase[4],
-                    'cluster_religious' => (!isset($dailyCase[5]) || $dailyCase[5] == '') ? 0 : $dailyCase[5],
-                    'cluster_community' => (!isset($dailyCase[6]) || $dailyCase[6] == '') ? 0 : $dailyCase[6],
-                    'cluster_highRisk' => (!isset($dailyCase[7]) || $dailyCase[7] == '') ? 0 : $dailyCase[7],
-                    'cluster_education' => (!isset($dailyCase[8]) || $dailyCase[8] == '') ? 0 : $dailyCase[8],
-                    'cluster_detentionCentre' => (!isset($dailyCase[9]) || $dailyCase[9] == '') ? 0 : $dailyCase[9],
-                    'cluster_workplace' => (!isset($dailyCase[10]) || $dailyCase[10] == '') ? 0 : $dailyCase[10],
+                    'cluster_import' => self::takeIndex($dailyCase, 4),
+                    'cluster_religious' => self::takeIndex($dailyCase, 5),
+                    'cluster_community' => self::takeIndex($dailyCase, 6),
+                    'cluster_highRisk' => self::takeIndex($dailyCase, 7),
+                    'cluster_education' => self::takeIndex($dailyCase, 8),
+                    'cluster_detentionCentre' => self::takeIndex($dailyCase, 9),
+                    'cluster_workplace' => self::takeIndex($dailyCase, 10),
                     'cases_cumulative' => $cumCasesMalaysia,
                     'cases_recovered_cumulative' => $cumRecoveredMalaysia,
                     'created_at' => now(),
@@ -67,10 +68,10 @@ class ImportCovidFromGithubService
                 ->slice(1, -1)
                 ->map(function ($record) {
                     $dailyCase = explode(',', $record);
-                    $state = (!isset($dailyCase[1]) || $dailyCase[1] == '') ? 0 : $dailyCase[1];
-                    $new_cases = (!isset($dailyCase[3]) || $dailyCase[3] == '') ? 0 : $dailyCase[3];
-                    $cases_import = (!isset($dailyCase[2]) || $dailyCase[2] == '') ? 0 : $dailyCase[2];
-                    $cases_recovered = (!isset($dailyCase[4]) || $dailyCase[4] == '') ? 0 : $dailyCase[4];
+                    $state = self::takeIndex($dailyCase, 1);
+                    $new_cases = self::takeIndex($dailyCase, 3);
+                    $cases_import = self::takeIndex($dailyCase, 2);
+                    $cases_recovered = self::takeIndex($dailyCase, 4);
                     $collect = new CasesState();
 
                     $collect->date = $dailyCase[0];
@@ -110,8 +111,8 @@ class ImportCovidFromGithubService
             ->slice(1, -1)
             ->map(function ($record) use (&$cumDeathMalaysia, &$cumBidMalaysia) {
                 $dailyCase = explode(',', $record);
-                $newDeath = (!isset($dailyCase[1]) || $dailyCase[1] == '') ? 0 : $dailyCase[1];
-                $bidDeath = (!isset($dailyCase[2]) || $dailyCase[2] == '') ? 0 : $dailyCase[2];
+                $newDeath = self::takeIndex($dailyCase, 1);
+                $bidDeath = self::takeIndex($dailyCase, 2);
                 $cumDeathMalaysia = $cumDeathMalaysia + $newDeath;
                 $cumBidMalaysia = $cumBidMalaysia + $bidDeath;
                 return [
@@ -136,9 +137,9 @@ class ImportCovidFromGithubService
                     $collect = new DeathsState();
 
                     $collect->date = $dailyCase[0];
-                    $collect->state = (!isset($dailyCase[1]) || $dailyCase[1] == '') ? 0 : $dailyCase[1];
-                    $collect->deaths_new = (!isset($dailyCase[2]) || $dailyCase[2] == '') ? 0 : $dailyCase[2];
-                    $collect->deaths_bid = (!isset($dailyCase[3]) || $dailyCase[3] == '') ? 0 : $dailyCase[3];
+                    $collect->state = self::takeIndex($dailyCase,1);
+                    $collect->deaths_new = self::takeIndex($dailyCase,2);
+                    $collect->deaths_bid = self::takeIndex($dailyCase,3);
                     return $collect;
                 })
         );
@@ -169,8 +170,8 @@ class ImportCovidFromGithubService
                 $dailyCase = explode(',', $record);
                 return [
                     'date' => $dailyCase[0],
-                    'rtk_ag' => (!isset($dailyCase[1]) || $dailyCase[1] == '') ? 0 : $dailyCase[1],
-                    'pcr' => (!isset($dailyCase[2]) || $dailyCase[2] == '') ? 0 : $dailyCase[2],
+                    'rtk_ag' => self::takeIndex($dailyCase,1),
+                    'pcr' => self::takeIndex($dailyCase,2),
                     'created_at' => now(),
                     'updated_at' => now(),
                 ];
@@ -185,9 +186,9 @@ class ImportCovidFromGithubService
                 $dailyCase = explode(',', $record);
                 return [
                     'date' => $dailyCase[0],
-                    'state' => (!isset($dailyCase[1]) || $dailyCase[1] == '') ? 0 : $dailyCase[1],
-                    'rtk_ag' => (!isset($dailyCase[2]) || $dailyCase[2] == '') ? 0 : $dailyCase[2],
-                    'pcr' => (!isset($dailyCase[3]) || $dailyCase[3] == '') ? 0 : $dailyCase[3],
+                    'state' => self::takeIndex($dailyCase,1),
+                    'rtk_ag' => self::takeIndex($dailyCase,2),
+                    'pcr' => self::takeIndex($dailyCase,3),
                     'created_at' => now(),
                     'updated_at' => now(),
                 ];
@@ -324,5 +325,10 @@ class ImportCovidFromGithubService
                     'updated_at' => now(),
                 ];
             });
+    }
+
+    private static function takeIndex(array $array, int $index): mixed
+    {
+        return (!isset($array[$index]) || $array[$index] == '') ? 0 : $array[$index];
     }
 }
