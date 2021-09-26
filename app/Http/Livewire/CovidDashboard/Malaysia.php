@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Livewire;
+namespace App\Http\Livewire\CovidDashboard;
 
 
 use App\Http\Services\CasesMalaysiaService;
@@ -15,7 +15,7 @@ use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Livewire\Component;
 
-class CovidDashboardMalaysia extends Component
+class Malaysia extends Component
 {
 
     public CasesMalaysia $cases;
@@ -48,7 +48,7 @@ class CovidDashboardMalaysia extends Component
         $this->positiveRate = $positiveRateCase->positiveRate;
         $this->positiveRateCase = $positiveRateCase->cases_new;
 
-        return view('livewire.covid-dashboard-malaysia');
+        return view('livewire.covid-dashboard.malaysia');
     }
 
     /**

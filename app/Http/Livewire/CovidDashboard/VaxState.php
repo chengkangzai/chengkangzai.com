@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Livewire;
+namespace App\Http\Livewire\CovidDashboard;
 
 use App\Http\Services\VaxStateService;
 use App\Models\Covid\Population;
@@ -11,7 +11,7 @@ use Illuminate\Support\Collection;
 use JetBrains\PhpStorm\NoReturn;
 use Livewire\Component;
 
-class CovidDashboardVaxState extends Component
+class VaxState extends Component
 {
     public Collection $daily_partial;
     public Collection $daily_full;
@@ -51,7 +51,7 @@ class CovidDashboardVaxState extends Component
         $this->vaxReg = $vaxReg->pluck('total', 'state');
         $this->vaxRegPrecent = $vaxReg->pluck('registeredPrecent', 'state');
 
-        return view('livewire.covid-dashboard-vax-state');
+        return view('livewire.covid-dashboard.vax-state');
     }
 
     public function updatedPopFilter()
