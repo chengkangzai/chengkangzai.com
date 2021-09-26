@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire\CovidDashboard;
 
+use App\Http\Services\CovidState\Graph\CovidMalaysiaGraphService;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
@@ -12,8 +13,6 @@ class Graph extends Component
 {
 
     public string $filter = 'TWO_WEEK';
-
-    protected $listeners = ['CovidStateUpdate'];
 
     public Collection $date;
     public Collection $confirmCase;
@@ -31,8 +30,56 @@ class Graph extends Component
     public Collection $cumRecoveredCase;
     public Collection $cumDeathCase;
 
-    public function render(): Factory|View|Application
+    public function render(CovidMalaysiaGraphService $service): Factory|View|Application
     {
+        $cases = $service->getCases($this->filter);
+        $deaths = $service->getDeath($this->filter);
+        $healthCareCategory = $service->getHealthCare($this->filter);
+
+        $this->initCasesVariable($cases, $deaths);
+        $this->initHealthCareVariable($healthCareCategory);
+
+        $this->notifyChild();
         return view('livewire.covid-dashboard.graph');
+    }
+
+    public function notifyChild()
+    {
+        $this->dispatchBrowserEvent('CovidMalaysiaUpdate', [
+            'date' => $this->date,
+            'confirmCase' => $this->confirmCase,
+            'recoveredCase' => $this->recoveredCase,
+            'deathCase' => $this->deathCase,
+            'bidCase' => $this->bidCase,
+            'activeCase' => $this->activeCase,
+            'cat1' => $this->cat1,
+            'cat2' => $this->cat2,
+            'cat3' => $this->cat3,
+            'cat4' => $this->cat4,
+            'cat5' => $this->cat5,
+            'cumRecoveredCase' => $this->cumRecoveredCase,
+            'cumDeathCase' => $this->cumDeathCase,
+        ]);
+    }
+
+    public function initHealthCareVariable(Collection $healthCareCategory): void
+    {
+        $this->cat1 = $healthCareCategory->pluck('cat1');
+        $this->cat2 = $healthCareCategory->pluck('cat2');
+        $this->cat3 = $healthCareCategory->pluck('cat3');
+        $this->cat4 = $healthCareCategory->pluck('cat4');
+        $this->cat5 = $healthCareCategory->pluck('cat5');
+    }
+
+    public function initCasesVariable(Collection $cases, Collection $deaths): void
+    {
+        $this->date = $cases->pluck('date')->map(fn($date) => $date->toDateString());
+        $this->confirmCase = $cases->pluck('cases_new');
+        $this->recoveredCase = $cases->pluck('cases_recovered');
+        $this->cumRecoveredCase = $cases->pluck('cases_recovered_cumulative');
+        $this->deathCase = $deaths->pluck('deaths_new');
+        $this->cumDeathCase = $deaths->pluck('deaths_new_cumulative');
+        $this->bidCase = $deaths->pluck('deaths_bid');
+        $this->activeCase = $cases->pluck('activeCase');
     }
 }
