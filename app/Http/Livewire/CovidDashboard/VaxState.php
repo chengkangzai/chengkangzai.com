@@ -29,7 +29,7 @@ class VaxState extends Component
     public Collection $vaxRegPrecent;
 
     public string $timestamp;
-    public mixed $popFilter = 'ALL_POPULATION';
+    public mixed $popFilter = 'ABOVE_18';
 
     #[NoReturn] public function render(VaxStateService $service): Factory|View|Application
     {

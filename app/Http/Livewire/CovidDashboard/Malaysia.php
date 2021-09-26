@@ -31,7 +31,7 @@ class Malaysia extends Component
 
     protected $listeners = ['vaxPopulationUpdate'];
 
-    public mixed $popFilter = 'ALL_POPULATION';
+    public mixed $popFilter = 'ABOVE_18';
 
     public function render(CasesMalaysiaService $service): Factory|View|Application
     {
