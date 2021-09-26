@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Livewire;
+namespace App\Http\Livewire\CovidDashboard;
 
 
 use App\Http\Services\HealthCareService;
@@ -10,7 +10,7 @@ use Illuminate\Contracts\View\View;
 use Illuminate\Support\Collection;
 use Livewire\Component;
 
-class CovidDashboardHealthCareState extends Component
+class HealthCareState extends Component
 {
     /**
      * Variable for rendering
@@ -54,6 +54,6 @@ class CovidDashboardHealthCareState extends Component
         $this->totalCovidBedByState = $healthCareService->getTotalCovidBedByState()->pluck('totalCovidBed', 'state');
         $this->totalUtilizationByState = $healthCareService->getTotalUtilizationByState()->pluck('utilPrecent', 'state');
 
-        return view('livewire.covid-dashboard-health-care-state');
+        return view('livewire.covid-dashboard.health-care-state');
     }
 }

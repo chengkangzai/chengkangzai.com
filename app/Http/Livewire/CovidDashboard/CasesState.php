@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Livewire;
+namespace App\Http\Livewire\CovidDashboard;
 
 
 use App\Http\Services\CasesStateService;
@@ -10,7 +10,7 @@ use Illuminate\Contracts\View\View;
 use Illuminate\Support\Collection;
 use Livewire\Component;
 
-class CovidDashboardCasesState extends Component
+class CasesState extends Component
 {
     public string $updated_at;
     public string $positiveRate_updated_at;
@@ -55,6 +55,6 @@ class CovidDashboardCasesState extends Component
         $this->positiveRate = $service->calcPositiveRate()->pluck('positiveRate', 'state');
 
 
-        return view('livewire.covid-dashboard-cases-state');
+        return view('livewire.covid-dashboard.cases-state');
     }
 }

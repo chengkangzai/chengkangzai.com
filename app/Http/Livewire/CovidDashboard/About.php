@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Livewire;
+namespace App\Http\Livewire\CovidDashboard;
 
 
 use App\Http\Services\CasesMalaysiaService;
@@ -9,7 +9,7 @@ use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Livewire\Component;
 
-class CovidDashboardAbout extends Component
+class About extends Component
 {
     public array $timestamp;
 
@@ -17,6 +17,6 @@ class CovidDashboardAbout extends Component
     {
         $this->timestamp = $service->getTimestamp();
 
-        return view('livewire.covid-dashboard-about');
+        return view('livewire.covid-dashboard.about');
     }
 }
