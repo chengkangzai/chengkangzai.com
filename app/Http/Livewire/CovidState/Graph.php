@@ -3,6 +3,7 @@
 namespace App\Http\Livewire\CovidState;
 
 use App\Http\Services\CovidState\Graph\CovidStateGraphService;
+use Carbon\Carbon;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
@@ -87,7 +88,7 @@ class Graph extends Component
 
     public function initCasesVariable(Collection $cases, Collection $deaths): void
     {
-        $this->date = $cases->pluck('date')->map(fn($date) => $date->toDateString());
+        $this->date = $cases->pluck('date')->map(fn($date) => Carbon::parse($date)->toDateString());
         $this->confirmCase = $cases->pluck('cases_new');
         $this->recoveredCase = $cases->pluck('cases_recovered');
         $this->cumRecoveredCase = $cases->pluck('cases_recovered_cumulative');
