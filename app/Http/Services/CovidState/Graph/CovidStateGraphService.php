@@ -11,7 +11,7 @@ class CovidStateGraphService
     public int|float $cacheSecond;
 
     const FILTER = [
-        'TWO_WEEK', 'ONE_MONTH', 'THREE_MONTH', 'SIX_MONTH'
+        'TWO_WEEK', 'ONE_MONTH', 'THREE_MONTH', 'SIX_MONTH', 'ONE_YEAR'
     ];
 
     public function __construct()
