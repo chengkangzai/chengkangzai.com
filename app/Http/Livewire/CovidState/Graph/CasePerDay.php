@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Livewire\Graph;
+namespace App\Http\Livewire\CovidState\Graph;
 
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
@@ -8,15 +8,15 @@ use Illuminate\Contracts\View\View;
 use Illuminate\Support\Collection;
 use Livewire\Component;
 
-class ActiveCasePercentage extends Component
+class CasePerDay extends Component
 {
+
     public Collection $date;
-    public Collection $activeCase;
-    public Collection $cumRecoveredCase;
-    public Collection $cumDeathCase;
+    public Collection $confirmCase;
+    public Collection $recoveredCase;
 
     public function render(): Factory|View|Application
     {
-        return view('livewire.graph.active-case-percentage');
+        return view('livewire.covid-state.graph.case-per-day');
     }
 }
