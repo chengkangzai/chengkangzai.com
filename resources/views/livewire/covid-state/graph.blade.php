@@ -1,4 +1,4 @@
-<div xmlns:wire="http://www.w3.org/1999/xhtml" wire:loading.class="animate-pulse">
+<div xmlns:wire="http://www.w3.org/1999/xhtml" xmlns:livewire="" wire:loading.class="animate-pulse">
     <div class="mb-2">
         <section class="my-2 rounded-2xl dark:bg-white dark:text-black py-8 bg-gray-50 shadow " id="graph-state">
             <a href="#graph-state">
@@ -38,7 +38,7 @@
 
         <div class="sm:grid sm:grid-cols-2 sm:mt-2 gap-2 space-y-2 sm:space-y-0">
             <div class="bg-gray-50 rounded-xl shadow p-4">
-                <livewire:covid-state.graph.case-per-day
+                <livewire:graph.case-per-day
                     :date="$date"
                     :confirmCase="$confirmCase"
                     :recoveredCase="$recoveredCase"
@@ -46,7 +46,7 @@
             </div>
 
             <div class="bg-gray-50 rounded-xl shadow p-4">
-                <livewire:covid-state.graph.death-per-day
+                <livewire:graph.death-per-day
                     :date="$date"
                     :deathCase="$deathCase"
                     :bidCase="$bidCase"
@@ -54,7 +54,7 @@
             </div>
 
             <div class="bg-gray-50 rounded-xl shadow p-4">
-                <livewire:covid-state.graph.active-case-vs-health-care
+                <livewire:graph.active-case-vs-health-care
                     :date="$date"
                     :activeCase="$activeCase"
                     :cat1="$cat1"
@@ -66,7 +66,7 @@
             </div>
 
             <div class="bg-gray-50 rounded-xl shadow p-4">
-                <livewire:covid-state.graph.active-case-percentage
+                <livewire:graph.active-case-percentage
                     :date="$date"
                     :activeCase="$activeCase"
                     :cumRecoveredCase="$cumRecoveredCase"
