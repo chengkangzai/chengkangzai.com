@@ -1,5 +1,5 @@
 <?php
-namespace App\Http\Livewire\CovidState\Graph;
+namespace App\Http\Livewire\Graph;
 
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
@@ -21,6 +21,6 @@ class ActiveCaseVsHealthCare extends Component
 
     public function render(): Factory|View|Application
     {
-        return view('livewire.covid-state.graph.active-case-vs-health-care');
+        return view('livewire.graph.active-case-vs-health-care');
     }
 }

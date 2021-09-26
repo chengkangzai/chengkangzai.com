@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Livewire\CovidState\Graph;
+namespace App\Http\Livewire\Graph;
 
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
@@ -16,6 +16,6 @@ class DeathPerDay extends Component
 
     public function render(): Factory|View|Application
     {
-        return view('livewire.covid-state.graph.death-per-day');
+        return view('livewire.graph.death-per-day');
     }
 }
