@@ -8,6 +8,7 @@
         <livewire:covid-dashboard.cases-state/>
         <livewire:covid-dashboard.vax-state/>
         <livewire:covid-dashboard.health-care-state/>
+        <livewire:covid-dashboard.graph/>
         <livewire:covid-dashboard.about/>
     </div>
 @endsection
