@@ -51,7 +51,7 @@ class ImportCOVIDDataFromGithub extends Command
      */
     public function handle()
     {
-//        try {
+        try {
             if ($this->option('force')) {
                 $this->line('Truncating DB...');
                 $this->truncateDB();
@@ -69,18 +69,18 @@ class ImportCOVIDDataFromGithub extends Command
             $this->importMalaysiaPopulation();
 
             Artisan::call('cache:clear');
-//            if (app()->environment('production')) {
-//                app(WebHookService::class)->notifyInSpam(Carbon::now() . ' : Covid Data Successfully Inserted', WebHookService::COLOR['GREEN']);
-//            }
-//        } catch (Exception $exception) {
-//            if (app()->environment('production')) {
-//                app(WebHookService::class)->notifyInGeneral(Carbon::now() . ' : DAMN STH went WRONG during importing covid data: \n\n' . $exception->getMessage(), WebHookService::COLOR['RED']);
-//            }
-//        } catch (Throwable $exception) {
-//            if (app()->environment('production')) {
-//                app(WebHookService::class)->notifyInGeneral(Carbon::now() . ' : DAMN STH went WRONG during importing covid data: \n\n' . $exception->getMessage(), WebHookService::COLOR['RED']);
-//            }
-//        }
+            if (app()->environment('production')) {
+                app(WebHookService::class)->notifyInSpam(Carbon::now() . ' : Covid Data Successfully Inserted', WebHookService::COLOR['GREEN']);
+            }
+        } catch (Exception $exception) {
+            if (app()->environment('production')) {
+                app(WebHookService::class)->notifyInGeneral(Carbon::now() . ' : DAMN STH went WRONG during importing covid data: \n\n' . $exception->getMessage(), WebHookService::COLOR['RED']);
+            }
+        } catch (Throwable $exception) {
+            if (app()->environment('production')) {
+                app(WebHookService::class)->notifyInGeneral(Carbon::now() . ' : DAMN STH went WRONG during importing covid data: \n\n' . $exception->getMessage(), WebHookService::COLOR['RED']);
+            }
+        }
     }
 
     public function truncateDB()
