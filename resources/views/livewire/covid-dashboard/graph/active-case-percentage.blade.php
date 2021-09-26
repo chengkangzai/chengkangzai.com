@@ -37,7 +37,7 @@
             }
         );
 
-        document.addEventListener('CovidStateUpdate', function (test) {
+        document.addEventListener('CovidMalaysiaUpdate', function (test) {
             const cumRecoveredCase = test.detail.cumRecoveredCase[test.detail.cumRecoveredCase.length - 1];
             const activeCase = test.detail.activeCase[test.detail.activeCase.length - 1];
             const cumDeathCase = test.detail.cumDeathCase[test.detail.cumDeathCase.length - 1];

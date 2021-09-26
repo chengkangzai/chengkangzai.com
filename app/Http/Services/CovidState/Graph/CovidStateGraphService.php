@@ -40,10 +40,31 @@ class CovidStateGraphService
 
     public function getHealthCare($state = 'Johor', $filter = self::FILTER['TWO_WEEK'])
     {
-        $icu = Cache::remember(__METHOD__ . 'icu' . $state . $filter, $this->cacheSecond, fn() => ICU::stateWithTake($state, $this->getDateScope($filter))->get(['date', 'vent_covid', 'icu_covid']));
-        $hospitals = Cache::remember(__METHOD__ . 'hospitals' . $state . $filter, $this->cacheSecond, fn() => Hospital::stateWithTake($state, $this->getDateScope($filter))->get(['hosp_covid', 'date']));
-        $PKRCS = Cache::remember(__METHOD__ . 'PKRCS' . $state . $filter, $this->cacheSecond, fn() => PKRC::stateWithTake($state, $this->getDateScope($filter))->get(['pkrc_covid', 'date']));
-        $activeCase = $this->getCases($state, $filter);
+        $icu = Cache::remember(__METHOD__ . 'icu' . $state . $filter, $this->cacheSecond, function () use ($filter, $state) {
+            return ICU::stateWithTake($state, $this->getDateScope($filter))->get(['date', 'vent_covid', 'icu_covid']);
+        });
+        $hospitals = Cache::remember(__METHOD__ . 'hospitals' . $state . $filter, $this->cacheSecond, function () use ($filter, $state) {
+            return Hospital::stateWithTake($state, $this->getDateScope($filter))->get(['hosp_covid', 'date']);
+        });
+        $PKRCS = Cache::remember(__METHOD__ . 'PKRCS' . $state . $filter, $this->cacheSecond, function () use ($filter, $state) {
+            return PKRC::stateWithTake($state, $this->getDateScope($filter))->get(['pkrc_covid', 'date']);
+        });
+        return $this->formatHealthCare($this->getCases($state, $filter), $icu, $hospitals, $PKRCS);
+    }
+
+    private function getDateScope(string $filter = self::FILTER['TWO_WEEK']): int
+    {
+        return match ($filter) {
+            'ONE_MONTH' => 30,
+            'THREE_MONTH' => 90,
+            'SIX_MONTH' => 180,
+            'ONE_YEAR' => 365,
+            default => 14,
+        };
+    }
+
+    private function formatHealthCare(Collection|array $activeCase, mixed $icu, mixed $hospitals, mixed $PKRCS): \Illuminate\Support\Collection|Collection
+    {
         return $activeCase->map(function ($activeCase) use ($icu, $hospitals, $PKRCS) {
             $collect = collect();
             $collect->cat5 = $icu->firstWhere('date', $activeCase->date)->vent_covid ?? 0;
@@ -57,16 +78,5 @@ class CovidStateGraphService
 
             return $collect;
         });
-    }
-
-    private function getDateScope(string $filter = self::FILTER['TWO_WEEK']): int
-    {
-        return match ($filter) {
-            'ONE_MONTH' => 30,
-            'THREE_MONTH' => 90,
-            'SIX_MONTH' => 180,
-            'ONE_YEAR' => 365,
-            default => 14,
-        };
     }
 }
