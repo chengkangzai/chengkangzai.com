@@ -11,7 +11,7 @@ class CovidMalaysiaGraphService
     public int|float $cacheSecond;
 
     const FILTER = [
-        'TWO_WEEK', 'ONE_MONTH', 'THREE_MONTH', 'SIX_MONTH', 'ONE_YEAR'
+        'TWO_WEEK', 'ONE_MONTH', 'THREE_MONTH', 'SIX_MONTH',
     ];
 
     public function __construct()
@@ -25,7 +25,7 @@ class CovidMalaysiaGraphService
             return DB::table('cases_malaysia')->orderByDesc('date')->take($this->getDateScope($filter))->get()->sortBy('date');
         })
             ->map(function ($case) {
-                $case->activeCase = ($case->cases_cumulative - $case->cases_recovered_cumulative);
+                $case->activeCase=($case->cases_cumulative - $case->cases_recovered_cumulative);
                 return $case;
             });
     }
