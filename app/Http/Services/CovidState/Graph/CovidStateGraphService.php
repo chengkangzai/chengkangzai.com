@@ -2,14 +2,9 @@
 
 namespace App\Http\Services\CovidState\Graph;
 
-use App\Models\Covid\CasesState;
-use App\Models\Covid\DeathsState;
-use App\Models\Covid\Hospital;
-use App\Models\Covid\ICU;
-use App\Models\Covid\PKRC;
 use Cache;
 use Carbon\Carbon;
-use Illuminate\Database\Eloquent\Collection;
+use DB;
 
 class CovidStateGraphService
 {
@@ -24,30 +19,34 @@ class CovidStateGraphService
         $this->cacheSecond = Carbon::now()->endOfHour()->diffInSeconds(Carbon::now());
     }
 
-    public function getCases($state = 'Johor', $filter = self::FILTER['TWO_WEEK']): array|Collection
+    public function getCases($state = 'Johor', $filter = self::FILTER['TWO_WEEK'])
     {
         return Cache::remember(__METHOD__ . $state . $filter, $this->cacheSecond, function () use ($filter, $state) {
-            return CasesState::stateWithTake($state, $this->getDateScope($filter))->get()->sortBy('date');
-        });
+            return DB::table('cases_states')->where('state', $state)->orderByDesc('date')->take($this->getDateScope($filter))->get()->sortBy('date');
+        })
+            ->map(function ($case) {
+                $case->activeCase = $case->cases_cumulative - $case->cases_recovered_cumulative;
+                return $case;
+            });
     }
 
-    public function getDeath($state = 'Johor', $filter = self::FILTER['TWO_WEEK']): Collection
+    public function getDeath($state = 'Johor', $filter = self::FILTER['TWO_WEEK'])
     {
         return Cache::remember(__METHOD__ . $state . $filter, $this->cacheSecond, function () use ($filter, $state) {
-            return DeathsState::stateWithTake($state, $this->getDateScope($filter))->get()->sortBy('date');
+            return DB::table('deaths_states')->where('state', $state)->orderByDesc('date')->take($this->getDateScope($filter))->get()->sortBy('date');
         });
     }
 
     public function getHealthCare($state = 'Johor', $filter = self::FILTER['TWO_WEEK'])
     {
         $icu = Cache::remember(__METHOD__ . 'icu' . $state . $filter, $this->cacheSecond, function () use ($filter, $state) {
-            return ICU::stateWithTake($state, $this->getDateScope($filter))->get(['date', 'vent_covid', 'icu_covid']);
+            return DB::table('icus')->where('state', $state)->orderByDesc('date')->take($this->getDateScope($filter))->get(['date', 'vent_covid', 'icu_covid']);
         });
         $hospitals = Cache::remember(__METHOD__ . 'hospitals' . $state . $filter, $this->cacheSecond, function () use ($filter, $state) {
-            return Hospital::stateWithTake($state, $this->getDateScope($filter))->get(['hosp_covid', 'date']);
+            return DB::table('hospitals')->where('state', $state)->orderByDesc('date')->take($this->getDateScope($filter))->get(['hosp_covid', 'date']);
         });
         $PKRCS = Cache::remember(__METHOD__ . 'PKRCS' . $state . $filter, $this->cacheSecond, function () use ($filter, $state) {
-            return PKRC::stateWithTake($state, $this->getDateScope($filter))->get(['pkrc_covid', 'date']);
+            return DB::table('PKRC')->where('state', $state)->orderByDesc('date')->take($this->getDateScope($filter))->get(['pkrc_covid', 'date']);
         });
         return $this->formatHealthCare($this->getCases($state, $filter), $icu, $hospitals, $PKRCS);
     }
@@ -63,7 +62,7 @@ class CovidStateGraphService
         };
     }
 
-    private function formatHealthCare(Collection|array $activeCase, mixed $icu, mixed $hospitals, mixed $PKRCS): \Illuminate\Support\Collection|Collection
+    private function formatHealthCare($activeCase, $icu, $hospitals, $PKRCS)
     {
         return $activeCase->map(function ($activeCase) use ($icu, $hospitals, $PKRCS) {
             $collect = collect();
@@ -71,10 +70,10 @@ class CovidStateGraphService
             $collect->cat4 = $icu->firstWhere('date', $activeCase->date)->icu_covid ?? 0;
             $collect->cat3 = $hospitals->firstWhere('date', $activeCase->date)->hosp_covid ?? 0;
             $collect->cat2 = $PKRCS->firstWhere('date', $activeCase->date)->pkrc_covid ?? 0;
-            $collect->cat1 = $activeCase->activeCase - $collect->cat5 - $collect->cat4 - $collect->cat3 - $collect->cat2;
+            $collect->active = $activeCase->cases_cumulative - $activeCase->cases_recovered_cumulative;
+            $collect->cat1 = $collect->active - $collect->cat5 - $collect->cat4 - $collect->cat3 - $collect->cat2;
 
-            $collect->active = $activeCase->activeCase;
-            $collect->date = $activeCase->date->toDateString();
+            $collect->date = Carbon::parse($activeCase->date)->toDateString();
 
             return $collect;
         });
