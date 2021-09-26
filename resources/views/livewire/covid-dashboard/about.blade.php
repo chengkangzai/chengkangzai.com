@@ -1,4 +1,4 @@
-<div class="py-10 px-2 rounded-2xl dark:bg-white dark:text-black my-4 bg-gray-50 shadow" id="about">
+<div class="py-10 px-2 rounded-2xl dark:bg-white dark:text-black mb-4 mt-2 bg-gray-50 shadow" id="about">
     <h2 class="text-3xl font-bold">{{__('About this project')}}</h2>
     <ul class="text-sm sm:text-base list-disc list-inside">
         <li>
