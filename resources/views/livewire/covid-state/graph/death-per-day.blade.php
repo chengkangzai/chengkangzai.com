@@ -5,7 +5,7 @@
 </div>
 
 @push('script')
-    <script>
+    <script defer>
         let deathCareArea = document.getElementById("death-case-per-day").getContext("2d");
         let deathCareOptions = {
             plugins: {

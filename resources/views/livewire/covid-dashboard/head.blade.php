@@ -1,9 +1,9 @@
 <section class="mt-2 rounded-2xl dark:bg-white dark:text-black py-2 bg-gray-50 shadow" id="malaysia-dashboard">
     <a href="#malaysia-dashboard">
         <h1 class="text-2xl sm:text-5xl font-bold px-2">{{__('Covid-19 Malaysia Dashboard ')}}
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Flag_of_Malaysia.svg/64px-Flag_of_Malaysia.svg.png" alt="Malaysia Flag" class="inline">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Flag_of_Malaysia.svg/64px-Flag_of_Malaysia.svg.png" alt="Malaysia Flag" class="inline">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Flag_of_Malaysia.svg/64px-Flag_of_Malaysia.svg.png" alt="Malaysia Flag" class="inline">
+            <img height="32" width="64" loading="lazy" src="{{asset('src/64px-Flag_of_Malaysia.svg.png')}}" alt="Malaysia Flag" class="inline">
+            <img height="32" width="64" loading="lazy" src="{{asset('src/64px-Flag_of_Malaysia.svg.png')}}" alt="Malaysia Flag" class="inline">
+            <img height="32" width="64" loading="lazy" src="{{asset('src/64px-Flag_of_Malaysia.svg.png')}}" alt="Malaysia Flag" class="inline">
         </h1>
     </a>
     <div>

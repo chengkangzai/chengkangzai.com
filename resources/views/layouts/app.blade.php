@@ -11,8 +11,8 @@
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 {!! SEO::generate(true) !!}
 <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G0TL352WKG"></script>
-    <script>
+    <script defer src="https://www.googletagmanager.com/gtag/js?id=G-G0TL352WKG"></script>
+    <script defer>
         window.dataLayer = window.dataLayer || [];
 
         function gtag() {

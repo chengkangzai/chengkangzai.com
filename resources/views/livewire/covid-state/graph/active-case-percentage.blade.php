@@ -7,7 +7,7 @@
 </div>
 
 @push('script')
-    <script>
+    <script defer>
         const caseDistributionArea = document.getElementById("active-case-percentage").getContext("2d");
         let caseDistributionChart = new Chart(
             caseDistributionArea,

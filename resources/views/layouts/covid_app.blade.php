@@ -10,10 +10,10 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
     {!! SEO::generate(true) !!}
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G0TL352WKG"></script>
-    <script>
+    <script defer src="https://www.googletagmanager.com/gtag/js?id=G-G0TL352WKG"></script>
+    <script defer>
         window.dataLayer = window.dataLayer || [];
 
         function gtag() {
@@ -33,7 +33,7 @@
     @stack('style')
     @laravelPWA
     @livewireStyles
-    <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=61457a1f13073f0019a43554&product=sticky-share-buttons' async='async'></script>
+    <script defer type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=61457a1f13073f0019a43554&product=sticky-share-buttons' async='async'></script>
 </head>
 <body class="bg-white dark:bg-black">
 
@@ -43,7 +43,7 @@
     <div x-data="{ open: false }" class="container mx-auto flex flex-wrap py-2 flex-col md:flex-row items-center">
         <div class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
             <a href="{{route('public.index')}}">
-                <img src="{{asset('favicon.ico')}}" alt="Go to Profile Page" class="w-8"/>
+                <img src="{{asset('favicon.ico')}}" alt="Go to Profile Page" class="w-8" loading="lazy" width="32" height="32"/>
             </a>
             <a href="{{route('public.pandemic.index')}}">
                 <span class="ml-3 text-xl dark:text-white">{{__('COVID Dashboard')}}</span>
@@ -117,7 +117,8 @@
 </main>
 
 @yield('footer')
-</body>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 @stack('script')
 @livewireScripts
+</body>
 </html>
