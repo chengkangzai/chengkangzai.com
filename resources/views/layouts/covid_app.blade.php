@@ -48,7 +48,7 @@
             <a href="{{route('public.pandemic.index')}}">
                 <span class="ml-3 text-xl dark:text-white">{{__('COVID Dashboard')}}</span>
             </a>
-            <button @click="open = !open"
+            <button @click="open = !open" aria-label="Toggle Drop Down"
                     class="md:hidden rounded-lg focus:outline-none focus:shadow-outline absolute right-2 text-black dark:text-white">
                 <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6 text-black dark:text-white">
                     <path x-show="!open" fill-rule="evenodd" clip-rule="evenodd" class="fill-current"
