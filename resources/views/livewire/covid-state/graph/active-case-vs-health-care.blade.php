@@ -5,7 +5,7 @@
 </div>
 
 @push('script')
-    <script>
+    <script defer>
         const activeCaseVsHealthCareArea = document.getElementById("active-case-vs-health-care").getContext("2d");
         const activeCaseVsHealthCareOptions = {
             plugins: {

@@ -5,7 +5,7 @@
 </div>
 
 @push('script')
-    <script>
+    <script defer>
         let caseArea = document.getElementById("case-per-day").getContext("2d");
         let caseOptions = {
             plugins: {
