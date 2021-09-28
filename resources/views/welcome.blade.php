@@ -76,7 +76,7 @@
                 </div>
                 <div class="w-full lg:w-5/6 lg:max-w-lg sm:w-1/2">
                     <img class="object-cover object-center rounded-lg lg:w-4/5 mx-auto" alt="hero"
-                         src="{{asset('src/bighead.jpeg')}}">
+                         src="{{asset('src/bighead.jpeg')}}" width="409" height="341">
                 </div>
             </div>
 
@@ -158,7 +158,7 @@
                                 {{__("I'm :age-year-old Malaysian that passionate about making software that simplify people's life.",['age'=>\Carbon\Carbon::parse("1999-05-03")->age])}}
                             </p>
                             <br>
-                            @if($rank>=1)
+                            @if($rank >= 1)
                                 <a class="text-white text-gray-600 dark:text-gray-200 px-5 underline"
                                    href="https://commits.top/malaysia.html" aria-label="Linkt to Commits.top"
                                    rel="noreferrer">

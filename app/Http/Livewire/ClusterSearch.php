@@ -22,8 +22,8 @@ class ClusterSearch extends Component
     /**
      * For Searching purpose
      */
-    public string $categoryFilter;
-    public string $state;
+    public string $categoryFilter = '';
+    public string $state = '';
 
     public function mount()
     {
