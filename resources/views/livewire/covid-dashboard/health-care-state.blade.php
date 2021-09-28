@@ -1,4 +1,4 @@
-<section class="flex flex-col mt-2" id="healthcare-state">
+<section class="flex flex-col mt-2" id="healthcare-state" wire:init="load" xmlns:wire="">
     <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
         <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
             <div class="shadow overflow-hidden border-b border-gray-200 rounded-lg">
@@ -101,28 +101,28 @@
                             </div>
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap font-bold">
-                            {{number_format($ICUs->sum())}} / {{number_format($bed_ICU->sum())}}
+                            {{number_format($ICUs->sum())}}
                             <small class="text-xs">
-                                {{'('.number_format(($ICUs->sum() / $bed_ICU->sum())*100,2).'%)'}}
+                                {{'('.number_format($icu_covid_util->avg(),2).'%)'}}
                             </small>
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap font-bold">
-                            {{number_format($hospitals->sum())}} / {{number_format($bed_covid->sum())}}
+                            {{number_format($hospitals->sum())}}
                             <small class="text-xs">
-                                {{'('.number_format(($hospitals->sum() / $bed_covid->sum())*100,2).'%)'}}
+                                {{'('.number_format($hospital_covid_util->avg(),2).'%)'}}
                             </small>
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap font-bold">
-                            {{number_format($PKRC->sum())}} / {{number_format($bed_PKRC->sum())}}
+                            {{number_format($PKRC->sum())}}
                             <small class="text-xs">
-                                {{'('.number_format(($PKRC->sum() / $bed_PKRC->sum())*100,2).'%)'}}
+                                {{'('.number_format($pkrc_covid_util->avg(),2).'%)'}}
                             </small>
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap font-bold">
-                            {{number_format($ICUs->sum() + $hospitals->sum() + $PKRC->sum())}} /
-                            {{number_format($bed_ICU->sum() + $bed_covid->sum() + $bed_PKRC->sum())}}
+                            {{number_format($totalOccupancyByState->sum(),2)}} /
+                            {{number_format($totalCovidBedByState->sum(),2)}}
                             <small class="text-xs">
-                                {{'('.number_format(($ICUs->sum() + $hospitals->sum() + $PKRC->sum())/($bed_ICU->sum() + $bed_covid->sum() + $bed_PKRC->sum())/3*100,2).'%)'}}
+                                {{'('.number_format($totalUtilizationByState->avg(),2).'%)'}}
                             </small>
                         </td>
                     </tr>

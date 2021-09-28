@@ -11,12 +11,22 @@ use Livewire\Component;
 
 class About extends Component
 {
-    public array $timestamp;
+    public array $timestamp = [];
+
+    public bool $readyToLoad = false;
 
     public function render(CasesMalaysiaService $service): Factory|View|Application
     {
-        $this->timestamp = $service->getTimestamp();
+        if ($this->readyToLoad) {
+            $this->timestamp = $service->getTimestamp();
+        }
 
         return view('livewire.covid-dashboard.about');
+    }
+
+    public function load()
+    {
+        $this->readyToLoad = true;
+
     }
 }
