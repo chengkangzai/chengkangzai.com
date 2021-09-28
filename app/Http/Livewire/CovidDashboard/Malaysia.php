@@ -24,16 +24,49 @@ class Malaysia extends Component
     public VaxMalaysia $vax;
     public VaxRegMalaysia $vaxReg;
 
-    public int $clusterCount;
-    public int|float $positiveRate;
-    public int|float $fatalityRate;
-    public int $positiveRateCase;
+    public int $clusterCount = 0;
+    public int|float $positiveRate = 0;
+    public int|float $fatalityRate = 0;
+    public int $positiveRateCase = 0;
 
     protected $listeners = ['vaxPopulationUpdate'];
 
     public mixed $popFilter = 'ABOVE_18';
 
+    public bool $readyToLoad = false;
+
+    public function mount()
+    {
+        $this->cases = new CasesMalaysia();
+        $this->death = new DeathsMalaysia();
+        $this->test = new TestMalaysia();
+        $this->vax = new VaxMalaysia();
+        $this->vaxReg = new VaxRegMalaysia();
+    }
+
     public function render(CasesMalaysiaService $service): Factory|View|Application
+    {
+        if ($this->readyToLoad) {
+            $this->initVariable($service);
+        }
+
+        return view('livewire.covid-dashboard.malaysia');
+    }
+
+    public function load()
+    {
+        $this->readyToLoad = true;
+    }
+
+    /**
+     * Listen to vaxPopulation
+     */
+    public function vaxPopulationUpdate(string $popFilter)
+    {
+        $this->popFilter = $popFilter;
+    }
+
+    private function initVariable(CasesMalaysiaService $service): void
     {
         $this->cases = $service->getCases();
         $this->death = $service->getDeath();
@@ -47,15 +80,5 @@ class Malaysia extends Component
         $positiveRateCase = $service->calcPositiveRate();
         $this->positiveRate = $positiveRateCase->positiveRate;
         $this->positiveRateCase = $positiveRateCase->cases_new;
-
-        return view('livewire.covid-dashboard.malaysia');
-    }
-
-    /**
-     * Listen to vaxPopulation
-     */
-    public function vaxPopulationUpdate(string $popFilter)
-    {
-        $this->popFilter = $popFilter;
     }
 }

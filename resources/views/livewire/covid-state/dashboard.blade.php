@@ -1,4 +1,4 @@
-<section class="mt-2" wire:loading.class="animate-pulse" >
+<section class="mt-2" wire:loading.class="animate-pulse" wire:init="load">
     <div class="sm:grid sm:grid-cols-3 sm:grid-rows-3 sm:gap-2 space-y-2 sm:space-y-0">
         <div class="dark:bg-white bg-gray-50 py-8 rounded-xl shadow ">
             <h2 class="text-2xl">{{__('New Case')}}</h2>
@@ -49,7 +49,7 @@
                  <small class="text-xs">({{number_format($positiveRateCase)}}/{{number_format($test->totalTest)}})</small>
             </span>
             <small class="text-xs">
-                ({{$test->date->format('Y-m-d')}})
+                ({{$test->date?->format('Y-m-d')}})
             </small>
 
         </div>

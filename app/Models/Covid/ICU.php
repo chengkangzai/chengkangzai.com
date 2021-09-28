@@ -66,7 +66,7 @@ class ICU extends Model
 
     #[Pure] public function getOverallUtilisationAttribute(): float|int
     {
-        return ($this->getTotalPatientAttribute() / $this->bed_icu_total) * 100;
+        return ($this->getTotalPatientAttribute() / ($this->bed_icu_total ?? 1)) * 100;
     }
 
     public function getTotalVentilatorsAttribute(): float|int
@@ -81,7 +81,7 @@ class ICU extends Model
 
     #[Pure] public function getVentilationUtilisationAttribute(): float|int
     {
-        return ($this->getTotalVentilatorsPatientAttribute() / $this->getTotalVentilatorsAttribute()) * 100;
+        return ($this->getTotalVentilatorsPatientAttribute() / ($this->totalVentilators ?: 1)) * 100;
     }
 
     public function scopeStateWithTake(Builder $query, string $state, int $take): Builder
