@@ -32,17 +32,34 @@ class Graph extends Component
 
     public Collection $cumRecoveredCase;
     public Collection $cumDeathCase;
+    private CovidStateGraphService $service;
+
+    public bool $readyToLoad = false;
+
+    public function mount()
+    {
+        $this->date = collect();
+        $this->confirmCase = collect();
+        $this->recoveredCase = collect();
+        $this->deathCase = collect();
+        $this->activeCase = collect();
+        $this->bidCase = collect();
+        $this->cat1 = collect();
+        $this->cat2 = collect();
+        $this->cat3 = collect();
+        $this->cat4 = collect();
+        $this->cat5 = collect();
+        $this->cumRecoveredCase = collect();
+        $this->cumDeathCase = collect();
+    }
 
     public function render(CovidStateGraphService $service): Factory|View|Application
     {
-        $cases = $service->getCases($this->state, $this->filter);
-        $deaths = $service->getDeath($this->state, $this->filter);
-        $healthCareCategory = $service->getHealthCare($this->state, $this->filter);
-
-        $this->initCasesVariable($cases, $deaths);
-        $this->initHealthCareVariable($healthCareCategory);
-
-        $this->notifyChild();
+        $this->service = $service;
+        if ($this->readyToLoad) {
+            $this->initVariable();
+            $this->notifyChild();
+        }
 
         return view('livewire.covid-state.graph');
     }
@@ -55,6 +72,11 @@ class Graph extends Component
     public function CovidStateUpdate(string $state)
     {
         $this->state = $state;
+    }
+
+    public function load()
+    {
+        $this->readyToLoad = true;
     }
 
     public function notifyChild()
@@ -76,18 +98,12 @@ class Graph extends Component
         ]);
     }
 
-
-    public function initHealthCareVariable(Collection $healthCareCategory): void
+    public function initVariable(): void
     {
-        $this->cat1 = $healthCareCategory->pluck('cat1');
-        $this->cat2 = $healthCareCategory->pluck('cat2');
-        $this->cat3 = $healthCareCategory->pluck('cat3');
-        $this->cat4 = $healthCareCategory->pluck('cat4');
-        $this->cat5 = $healthCareCategory->pluck('cat5');
-    }
+        $cases = $this->service->getCases($this->state, $this->filter);
+        $deaths = $this->service->getDeath($this->state, $this->filter);
+        $healthCareCategory = $this->service->getCases($this->state, $this->filter);
 
-    public function initCasesVariable(Collection $cases, Collection $deaths): void
-    {
         $this->date = $cases->pluck('date')->map(fn($date) => Carbon::parse($date)->toDateString());
         $this->confirmCase = $cases->pluck('cases_new');
         $this->recoveredCase = $cases->pluck('cases_recovered');
@@ -96,6 +112,12 @@ class Graph extends Component
         $this->cumDeathCase = $deaths->pluck('deaths_commutative');
         $this->bidCase = $deaths->pluck('deaths_bid');
         $this->activeCase = $cases->pluck('activeCase');
+
+        $this->cat1 = $healthCareCategory->pluck('cat1');
+        $this->cat2 = $healthCareCategory->pluck('cat2');
+        $this->cat3 = $healthCareCategory->pluck('cat3');
+        $this->cat4 = $healthCareCategory->pluck('cat4');
+        $this->cat5 = $healthCareCategory->pluck('cat5');
     }
 
 }

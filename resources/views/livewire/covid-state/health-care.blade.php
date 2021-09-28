@@ -1,4 +1,4 @@
-<section class="mt-2 mb-2" id="health-care" xmlns:wire="http://www.w3.org/1999/xhtml"
+<section class="mt-2 mb-2" id="health-care" xmlns:wire="http://www.w3.org/1999/xhtml" wire:init="load"
          wire:loading.class="animate-pulse">
     <section class="my-2 rounded-2xl dark:bg-white dark:text-black py-12 bg-gray-50 shadow">
         <a href="#health-care">
