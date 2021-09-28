@@ -63,12 +63,13 @@ class Hospital extends Model
 
     #[Pure] public function getOverallUtilisationAttribute(): float|int
     {
-        return ($this->getTotalPatientAttribute() / $this->beds) * 100;
+        return ($this->getTotalPatientAttribute() / ($this->beds ?? 1)) * 100;
     }
 
     public function getCovidUtilisationAttribute(): float|int
     {
-        return ($this->hosp_covid / $this->beds_covid) * 100;
+
+        return ($this->hosp_covid / ($this->beds_covid ?? 1)) * 100;
     }
 
     public function scopeStateWithTake(Builder $query, string $state, int $take): Builder
