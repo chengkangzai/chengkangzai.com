@@ -35,13 +35,13 @@
     @livewireStyles
     <script defer type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=61457a1f13073f0019a43554&product=sticky-share-buttons' async='async'></script>
 </head>
-<body class="bg-white dark:bg-black">
+<body class="bg-white dark:bg-black overscroll-none">
 
 <div class="sharethis-sticky-share-buttons"></div>
 
 <header class="text-gray-600 body-font bg-gray-100 dark:bg-gray-900">
     <div x-data="{ open: false }" class="container mx-auto flex flex-wrap py-2 flex-col md:flex-row items-center">
-        <div class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+        <div class="flex title-font font-medium items-center text-gray-900 md:mb-0">
             <a href="{{route('public.index')}}">
                 <img src="{{asset('favicon.ico')}}" alt="Go to Profile Page" class="w-8" loading="lazy" width="32" height="32"/>
             </a>
@@ -59,7 +59,7 @@
             </button>
         </div>
         <nav :class="{'flex': open, 'hidden': !open}"
-             class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row dark:text-white">
+             class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row dark:text-white" >
             <a href="{{route('public.pandemic.index')}}"
                class="cursor-pointer dark:hover:text-white hover:text-gray-900 dark:hover:bg-gray-600 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline rounded-lg px-2 py-2 text-bold @if(request()->is('pandemic'))) bg-gray-50 dark:bg-gray-800 font-bold @endif">
                 {{__('Dashboard')}}

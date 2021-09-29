@@ -28,7 +28,7 @@
     @stack('style')
 </head>
 <body>
-<div class="h-screen bg-white dark:bg-black ">
+<div class="h-screen bg-white dark:bg-black overscroll-none	">
 
     <header
         class="w-full text-gray-700 bg-white dark:text-gray-200 dark:bg-gray-800 from-blue-400 bg-gradient-to-r to-purple-600">
