@@ -1,4 +1,5 @@
-<section class="flex flex-col mt-2" id="vax-state" xmlns:wire="http://www.w3.org/1999/xhtml" wire:init="load">
+<section class="flex flex-col mt-2" id="vax-state" xmlns:wire="http://www.w3.org/1999/xhtml" wire:init="load"
+         wire:loading.class="animate-pulse">
     <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
         <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
             <div class="shadow overflow-hidden border-b border-gray-200 rounded-lg">

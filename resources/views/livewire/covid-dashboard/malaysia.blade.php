@@ -1,6 +1,6 @@
 <section class="mt-2" wire:init="load" xmlns:wire="">
     <div class="sm:grid sm:grid-cols-3 sm:grid-rows-3 sm:gap-2 space-y-2 sm:space-y-0">
-        <div class="dark:bg-white bg-gray-50 py-8 rounded-xl shadow ">
+        <div class="dark:bg-white bg-gray-50 py-4 sm:py-8 rounded-xl shadow ">
             <h2 class="text-2xl">{{__('New Case')}}</h2>
             <p class="text-red-500 font-bold text-4xl xl:text-5xl">{{number_format($cases->cases_new)}}</p>
             <span>(+{{number_format($cases->newPercentage,2)}}%)
@@ -8,7 +8,7 @@
             </span>
         </div>
 
-        <div class="dark:bg-white bg-gray-50 py-8 rounded-xl shadow ">
+        <div class="dark:bg-white bg-gray-50 py-4 sm:py-8 rounded-xl shadow ">
             <h2 class="text-2xl">{{__('Cumulative Case')}}</h2>
             <p class="text-red-500 font-bold text-4xl xl:text-5xl">{{number_format($cases->cases_cumulative)}}</p>
             <span>({{number_format($cases->cumPercentage,2)}}%)
@@ -16,7 +16,7 @@
             </span>
         </div>
 
-        <div class="dark:bg-white bg-gray-50 py-8 rounded-xl shadow ">
+        <div class="dark:bg-white bg-gray-50 py-4 sm:py-8 rounded-xl shadow ">
             <h2 class="text-2xl">{{__('Active Cases In Malaysia')}}</h2>
             <p class="text-red-500 font-bold text-4xl xl:text-5xl">{{number_format($cases->activeCase)}}</p>
             <span>({{number_format($cases->activeCasePercentage,2)}}%)
@@ -25,22 +25,26 @@
         </div>
 
         {{--End of First Row--}}
-        <div class="dark:bg-white bg-gray-50 py-8 rounded-xl shadow ">
+        <div class="dark:bg-white bg-gray-50 py-4 rounded-xl shadow ">
             <h2 class="text-2xl">{{__('Deaths')}}</h2>
             <p class="text-gray-500  font-bold text-4xl xl:text-5xl">{{number_format($death->deaths_new)}}</p>
             <span> {{__('Brought in Death (BID) ')}} :
                 <span class="text-gray-500 font-extrabold">{{$death->deaths_bid}}</span>
             </span>
+            <br>
+            <span> {{__('Died of disease (DOD) ')}} :
+                <span class="text-gray-500 font-extrabold">{{$death->deaths_bid_dod}}</span>
+            </span>
         </div>
 
-        <div class="dark:bg-white bg-gray-50 py-8 rounded-xl shadow ">
+        <div class="dark:bg-white bg-gray-50 py-4 sm:py-8 rounded-xl shadow ">
             <h2 class="text-2xl">{{__('Cumulative Death')}}</h2>
             <p class="text-gray-500  font-bold text-4xl xl:text-5xl">{{number_format($death->deaths_new_cumulative)}}</p>
             <span> {{__('Fatality rate')}} :{{number_format($fatalityRate,2)}}% </span>
         </div>
 
 
-        <div class="dark:bg-white bg-gray-50 py-8 rounded-xl shadow ">
+        <div class="dark:bg-white bg-gray-50 py-4 sm:py-8 rounded-xl shadow ">
             <h2 class="text-2xl">{{__('Tested')}}</h2>
             <p class="text-yellow-500 font-bold text-4xl xl:text-5xl">{{number_format($test->totalTest)}}</p>
             <span>
@@ -55,21 +59,21 @@
         </div>
 
         {{--End of Second Row--}}
-        <div class="dark:bg-white bg-gray-50 py-8 rounded-xl shadow ">
+        <div class="dark:bg-white bg-gray-50 py-4 sm:py-8 rounded-xl shadow ">
             <h2 class="text-2xl">{{__('New recovered Case')}}</h2>
             <p class="text-blue-500 font-bold text-4xl xl:text-5xl">
                 {{number_format($cases->cases_recovered)}}
             </p>
         </div>
 
-        <div class="dark:bg-white bg-gray-50 py-8 rounded-xl shadow ">
+        <div class="dark:bg-white bg-gray-50 py-4 sm:py-8 rounded-xl shadow ">
             <h2 class="text-2xl">{{__('Cumulative recovered')}}</h2>
             <p class="text-blue-500  font-bold text-4xl xl:text-5xl">
                 {{number_format($cases->cases_recovered_cumulative)}}
             </p>
         </div>
 
-        <div class="dark:bg-white bg-gray-50 py-8 rounded-xl shadow ">
+        <div class="dark:bg-white bg-gray-50 py-4 sm:py-8 rounded-xl shadow ">
             <h2 class="text-2xl">{{__('Active Cluster In Malaysia')}}</h2>
             <p class="text-yellow-500 font-bold text-4xl xl:text-5xl">
                 {{number_format($clusterCount)}}
@@ -117,7 +121,7 @@
             </div>
         </div>
 
-        <div class="dark:bg-white bg-gray-50 py-8 rounded-xl shadow ">
+        <div class="dark:bg-white bg-gray-50 py-4 sm:py-8 rounded-xl shadow ">
             <h2 class="text-2xl">{{__('Percentage of Vaccine Register')}}</h2>
             <p class="text-green-500  font-bold text-4xl xl:text-5xl">
                 {{number_format($vaxReg->registeredPrecent).'%'}}

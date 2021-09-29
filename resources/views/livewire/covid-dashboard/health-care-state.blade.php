@@ -1,4 +1,4 @@
-<section class="flex flex-col mt-2" id="healthcare-state" wire:init="load" xmlns:wire="">
+<section class="flex flex-col mt-2" id="healthcare-state" wire:init="load" xmlns:wire="" wire:loading.class="animate-pulse">
     <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
         <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
             <div class="shadow overflow-hidden border-b border-gray-200 rounded-lg">
@@ -33,7 +33,7 @@
                             ({{__('Utilisation')}})
                         </th>
                         <th scope="col"
-                            class="py-4 text-center text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer hover:text-blue-500 hover:font-bold">
+                            class="py-4 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
                             {{__('Total')}} ({{__('Overall Utilisation')}})
                         </th>
                     </tr>
