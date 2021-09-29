@@ -102,7 +102,7 @@ class Graph extends Component
     {
         $cases = $this->service->getCases($this->state, $this->filter);
         $deaths = $this->service->getDeath($this->state, $this->filter);
-        $healthCareCategory = $this->service->getCases($this->state, $this->filter);
+        $healthCareCategory = $this->service->getHealthCare($this->state, $this->filter);
 
         $this->date = $cases->pluck('date')->map(fn($date) => Carbon::parse($date)->toDateString());
         $this->confirmCase = $cases->pluck('cases_new');
