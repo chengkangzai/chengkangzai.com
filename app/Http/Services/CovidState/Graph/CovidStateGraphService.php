@@ -4,7 +4,7 @@ namespace App\Http\Services\CovidState\Graph;
 
 use Cache;
 use Carbon\Carbon;
-use DB;
+use Illuminate\Support\Facades\DB;
 
 class CovidStateGraphService
 {
