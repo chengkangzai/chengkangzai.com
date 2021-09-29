@@ -6,7 +6,7 @@ use App\Console\Services\ImportCovidFromGithubService;
 use App\Http\Services\WebHookService;
 use Artisan;
 use Carbon\Carbon;
-use DB;
+use Illuminate\Support\Facades\DB;
 use Exception;
 use Illuminate\Console\Command;
 use Illuminate\Contracts\Foundation\Application;

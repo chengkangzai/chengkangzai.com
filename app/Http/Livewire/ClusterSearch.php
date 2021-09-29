@@ -3,7 +3,7 @@
 namespace App\Http\Livewire;
 
 use App\Models\Covid\Cluster;
-use DB;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
