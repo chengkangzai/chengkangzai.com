@@ -2,7 +2,10 @@
     "name": "laravel/laravel",
     "type": "project",
     "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "keywords": [
+        "framework",
+        "laravel"
+    ],
     "license": "MIT",
     "require": {
         "php": "^8.0",
@@ -63,6 +66,11 @@
             "@php artisan ide-helper:meta",
             "@php artisan ide-helper:models",
             "@php artisan ide-helper:eloquent"
+        ],
+        "run-translation": [
+            "@php artisan translations:reset",
+            "@php artisan translations:import",
+            "@php artisan translations:find"
         ]
     },
     "extra": {
