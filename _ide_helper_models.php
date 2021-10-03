@@ -54,6 +54,14 @@ namespace App\Models\Covid{
  * @property int $cases_import
  * @property int $cases_recovered_cumulative
  * @property int $cases_recovered
+ * @property int $cases_active
+ * @property int $cases_cluster
+ * @property int $cases_pvax
+ * @property int $cases_fvax
+ * @property int $cases_child
+ * @property int $cases_adolescent
+ * @property int $cases_adult
+ * @property int $cases_elderly
  * @property int $cluster_import
  * @property int $cluster_religious
  * @property int $cluster_community
@@ -68,9 +76,17 @@ namespace App\Models\Covid{
  * @method static \Illuminate\Database\Eloquent\Builder|CasesMalaysia newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|CasesMalaysia newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|CasesMalaysia query()
+ * @method static \Illuminate\Database\Eloquent\Builder|CasesMalaysia whereCasesActive($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|CasesMalaysia whereCasesAdolescent($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|CasesMalaysia whereCasesAdult($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|CasesMalaysia whereCasesChild($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|CasesMalaysia whereCasesCluster($value)
  * @method static \Illuminate\Database\Eloquent\Builder|CasesMalaysia whereCasesCumulative($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|CasesMalaysia whereCasesElderly($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|CasesMalaysia whereCasesFvax($value)
  * @method static \Illuminate\Database\Eloquent\Builder|CasesMalaysia whereCasesImport($value)
  * @method static \Illuminate\Database\Eloquent\Builder|CasesMalaysia whereCasesNew($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|CasesMalaysia whereCasesPvax($value)
  * @method static \Illuminate\Database\Eloquent\Builder|CasesMalaysia whereCasesRecovered($value)
  * @method static \Illuminate\Database\Eloquent\Builder|CasesMalaysia whereCasesRecoveredCumulative($value)
  * @method static \Illuminate\Database\Eloquent\Builder|CasesMalaysia whereClusterCommunity($value)
@@ -98,6 +114,14 @@ namespace App\Models\Covid{
  * @property string $cases_new
  * @property int $cases_import
  * @property int $cases_recovered
+ * @property int $cases_active
+ * @property int $cases_cluster
+ * @property int $cases_pvax
+ * @property int $cases_fvax
+ * @property int $cases_child
+ * @property int $cases_adolescent
+ * @property int $cases_adult
+ * @property int $cases_elderly
  * @property int $cases_recovered_cumulative
  * @property string|null $cases_cumulative
  * @property \Illuminate\Support\Carbon|null $created_at
@@ -107,9 +131,17 @@ namespace App\Models\Covid{
  * @method static \Illuminate\Database\Eloquent\Builder|CasesState newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|CasesState query()
  * @method static \Illuminate\Database\Eloquent\Builder|CasesState stateWithTake(string $state, int $take)
+ * @method static \Illuminate\Database\Eloquent\Builder|CasesState whereCasesActive($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|CasesState whereCasesAdolescent($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|CasesState whereCasesAdult($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|CasesState whereCasesChild($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|CasesState whereCasesCluster($value)
  * @method static \Illuminate\Database\Eloquent\Builder|CasesState whereCasesCumulative($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|CasesState whereCasesElderly($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|CasesState whereCasesFvax($value)
  * @method static \Illuminate\Database\Eloquent\Builder|CasesState whereCasesImport($value)
  * @method static \Illuminate\Database\Eloquent\Builder|CasesState whereCasesNew($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|CasesState whereCasesPvax($value)
  * @method static \Illuminate\Database\Eloquent\Builder|CasesState whereCasesRecovered($value)
  * @method static \Illuminate\Database\Eloquent\Builder|CasesState whereCasesRecoveredCumulative($value)
  * @method static \Illuminate\Database\Eloquent\Builder|CasesState whereCreatedAt($value)
