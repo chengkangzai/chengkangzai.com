@@ -1,42 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-
-<url>
-  <loc>https://chengkangzai.com/</loc>
-  <lastmod>2021-07-23T04:17:22+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://chengkangzai.com/posts</loc>
-  <lastmod>2021-07-23T04:17:22+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://chengkangzai.com/resume.pdf</loc>
-  <lastmod>2021-06-18T01:28:20+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://chengkangzai.com/status</loc>
-  <lastmod>2021-07-23T04:17:22+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://chengkangzai.com/posts/how-to-potentially-fix-weird-windows-behavior</loc>
-  <lastmod>2021-07-23T04:17:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://chengkangzai.com/posts/how-to-fix-error-laravellog-could-not-be-opened</loc>
-  <lastmod>2021-07-23T04:17:22+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+        <loc>https://chengkangzai.com/</loc>
+        <lastmod>2021-10-03T22:40:48+08:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://chengkangzai.com</loc>
+        <lastmod>2021-10-03T22:40:48+08:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://chengkangzai.com/resume.pdf</loc>
+        <lastmod>2021-10-03T22:40:48+08:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://chengkangzai.com/locale/en</loc>
+        <lastmod>2021-10-03T22:40:48+08:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://chengkangzai.com/locale/ms</loc>
+        <lastmod>2021-10-03T22:40:49+08:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://chengkangzai.com/locale/zh</loc>
+        <lastmod>2021-10-03T22:40:49+08:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://chengkangzai.com/status</loc>
+        <lastmod>2021-10-03T22:40:49+08:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://chengkangzai.com/posts</loc>
+        <lastmod>2021-10-03T22:40:49+08:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://chengkangzai.com/pandemic</loc>
+        <lastmod>2021-10-03T22:40:49+08:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://chengkangzai.com/posts/how-to-fix-error-laravellog-could-not-be-opened</loc>
+        <lastmod>2021-10-03T22:40:49+08:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://chengkangzai.com/pandemic/clusters</loc>
+        <lastmod>2021-10-03T22:40:49+08:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://chengkangzai.com/pandemic/state</loc>
+        <lastmod>2021-10-03T22:40:49+08:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
 </urlset>
