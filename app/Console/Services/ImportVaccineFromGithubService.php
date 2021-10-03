@@ -24,26 +24,27 @@ class ImportVaccineFromGithubService
             ->slice(1, -1)
             ->map(function ($record) {
                 $vax = str_getcsv($record);
+                $i = 0;
                 return [
-                    'date' => $vax[0],
-                    'daily_partial' => $this->takeIndex($vax, 1),
-                    'daily_full' => $this->takeIndex($vax, 2),
-                    'daily' => $this->takeIndex($vax, 3),
-                    'daily_partial_child' => $this->takeIndex($vax, 4),
-                    'daily_full_child' => $this->takeIndex($vax, 5),
-                    'cumul_partial' => $this->takeIndex($vax, 6),
-                    'cumul_full' => $this->takeIndex($vax, 7),
-                    'cumul' => $this->takeIndex($vax, 8),
-                    'cumul_partial_child' => $this->takeIndex($vax, 9),
-                    'cumul_full_child' => $this->takeIndex($vax, 10),
-                    'pfizer1' => $this->takeIndex($vax, 11),
-                    'pfizer2' => $this->takeIndex($vax, 12),
-                    'sinovac1' => $this->takeIndex($vax, 13),
-                    'sinovac2' => $this->takeIndex($vax, 14),
-                    'astra1' => $this->takeIndex($vax, 15),
-                    'astra2' => $this->takeIndex($vax, 16),
-                    'cansino' => $this->takeIndex($vax, 17),
-                    'pending' => $this->takeIndex($vax, 18),
+                    'date' => $this->takeIndex($vax, $i++),
+                    'daily_partial' => $this->takeIndex($vax, $i++),
+                    'daily_full' => $this->takeIndex($vax, $i++),
+                    'daily' => $this->takeIndex($vax, $i++),
+                    'daily_partial_child' => $this->takeIndex($vax, $i++),
+                    'daily_full_child' => $this->takeIndex($vax, $i++),
+                    'cumul_partial' => $this->takeIndex($vax, $i++),
+                    'cumul_full' => $this->takeIndex($vax, $i++),
+                    'cumul' => $this->takeIndex($vax, $i++),
+                    'cumul_partial_child' => $this->takeIndex($vax, $i++),
+                    'cumul_full_child' => $this->takeIndex($vax, $i++),
+                    'pfizer1' => $this->takeIndex($vax, $i++),
+                    'pfizer2' => $this->takeIndex($vax, $i++),
+                    'sinovac1' => $this->takeIndex($vax, $i++),
+                    'sinovac2' => $this->takeIndex($vax, $i++),
+                    'astra1' => $this->takeIndex($vax, $i++),
+                    'astra2' => $this->takeIndex($vax, $i++),
+                    'cansino' => $this->takeIndex($vax, $i++),
+                    'pending' => $this->takeIndex($vax, $i++),
                     'created_at' => now(),
                     'updated_at' => now(),
                 ];
@@ -52,32 +53,32 @@ class ImportVaccineFromGithubService
 
     public function getVaxState(): Collection
     {
-        //TODO
         return collect(explode(PHP_EOL, Http::get(self::url['VAX_STATE'])))
             ->slice(1, -1)
             ->map(function ($record) {
                 $vax = str_getcsv($record);
+                $i = 0;
                 return [
-                    'date' => $vax[0],
-                    'state' => $vax[1],
-                    'daily_partial' => $this->takeIndex($vax, 2),
-                    'daily_full' => $this->takeIndex($vax, 3),
-                    'daily' => $this->takeIndex($vax, 4),
-                    'daily_partial_child' => $this->takeIndex($vax, 5),
-                    'daily_full_child' => $this->takeIndex($vax, 6),
-                    'cumul_partial' => $this->takeIndex($vax, 7),
-                    'cumul_full' => $this->takeIndex($vax, 8),
-                    'cumul' => $this->takeIndex($vax, 9),
-                    'cumul_partial_child' => $this->takeIndex($vax, 10),
-                    'cumul_full_child' => $this->takeIndex($vax, 11),
-                    'pfizer1' => $this->takeIndex($vax, 12),
-                    'pfizer2' => $this->takeIndex($vax, 13),
-                    'sinovac1' => $this->takeIndex($vax, 14),
-                    'sinovac2' => $this->takeIndex($vax, 15),
-                    'astra1' => $this->takeIndex($vax, 16),
-                    'astra2' => $this->takeIndex($vax, 17),
-                    'cansino' => $this->takeIndex($vax, 18),
-                    'pending' => $this->takeIndex($vax, 19),
+                    'date' => $this->takeIndex($vax, $i++),
+                    'state' => $this->takeIndex($vax, $i++),
+                    'daily_partial' => $this->takeIndex($vax, $i++),
+                    'daily_full' => $this->takeIndex($vax, $i++),
+                    'daily' => $this->takeIndex($vax, $i++),
+                    'daily_partial_child' => $this->takeIndex($vax, $i++),
+                    'daily_full_child' => $this->takeIndex($vax, $i++),
+                    'cumul_partial' => $this->takeIndex($vax, $i++),
+                    'cumul_full' => $this->takeIndex($vax, $i++),
+                    'cumul' => $this->takeIndex($vax, $i++),
+                    'cumul_partial_child' => $this->takeIndex($vax, $i++),
+                    'cumul_full_child' => $this->takeIndex($vax, $i++),
+                    'pfizer1' => $this->takeIndex($vax, $i++),
+                    'pfizer2' => $this->takeIndex($vax, $i++),
+                    'sinovac1' => $this->takeIndex($vax, $i++),
+                    'sinovac2' => $this->takeIndex($vax, $i++),
+                    'astra1' => $this->takeIndex($vax, $i++),
+                    'astra2' => $this->takeIndex($vax, $i++),
+                    'cansino' => $this->takeIndex($vax, $i++),
+                    'pending' => $this->takeIndex($vax, $i++),
                     'created_at' => now(),
                     'updated_at' => now(),
                 ];
@@ -110,18 +111,19 @@ class ImportVaccineFromGithubService
 
     private function formatVaxReg(array $array): array
     {
+        $i = 0;
         return [
-            'date' => $array[0],
-            'state' => $array[1],
-            'total' => $this->takeIndex($array, 2),
-            'phase2' => $this->takeIndex($array, 3),
-            'mysj' => $this->takeIndex($array, 4),
-            'call' => $this->takeIndex($array, 5),
-            'web' => $this->takeIndex($array, 6),
-            'children' => $this->takeIndex($array, 7),
-            'elderly' => $this->takeIndex($array, 8),
-            'comorb' => $this->takeIndex($array, 9),
-            'oku' => $this->takeIndex($array, 10),
+            'date' => $this->takeIndex($array, $i++),
+            'state' => $this->takeIndex($array, $i++),
+            'total' => $this->takeIndex($array, $i++),
+            'phase2' => $this->takeIndex($array, $i++),
+            'mysj' => $this->takeIndex($array, $i++),
+            'call' => $this->takeIndex($array, $i++),
+            'web' => $this->takeIndex($array, $i++),
+            'children' => $this->takeIndex($array, $i++),
+            'elderly' => $this->takeIndex($array, $i++),
+            'comorb' => $this->takeIndex($array, $i++),
+            'oku' => $this->takeIndex($array, $i++),
             'created_at' => now(),
             'updated_at' => now(),
         ];
