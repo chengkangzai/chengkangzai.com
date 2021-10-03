@@ -13,6 +13,7 @@ class DeathPerDay extends Component
     public Collection $date;
     public Collection $deathCase;
     public Collection $bidCase;
+    public Collection $dodCase;
 
     public function render(): Factory|View|Application
     {

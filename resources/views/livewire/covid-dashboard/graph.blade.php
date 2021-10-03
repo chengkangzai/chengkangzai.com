@@ -35,6 +35,7 @@
                     :date="$date"
                     :deathCase="$deathCase"
                     :bidCase="$bidCase"
+                    :dodCase="$dodCase"
                 />
             </div>
 
