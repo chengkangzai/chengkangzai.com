@@ -211,6 +211,9 @@ namespace App\Models\Covid{
  * @property int $deaths_bid_cumulative
  * @property int $deaths_bid
  * @property int $deaths_bid_dod Brought in Death that died of disease
+ * @property int $deaths_pvax
+ * @property int $deaths_fvax
+ * @property int $deaths_tat Turnaround Time : usual amount of time between the time a specimen is received within the laboratory and the result is available
  * @property int $deaths_bid_dod_cumulative
  * @property int|null $deaths_new_cumulative
  * @property \Illuminate\Support\Carbon|null $created_at
@@ -225,8 +228,11 @@ namespace App\Models\Covid{
  * @method static \Illuminate\Database\Eloquent\Builder|DeathsMalaysia whereDeathsBidCumulative($value)
  * @method static \Illuminate\Database\Eloquent\Builder|DeathsMalaysia whereDeathsBidDod($value)
  * @method static \Illuminate\Database\Eloquent\Builder|DeathsMalaysia whereDeathsBidDodCumulative($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|DeathsMalaysia whereDeathsFvax($value)
  * @method static \Illuminate\Database\Eloquent\Builder|DeathsMalaysia whereDeathsNew($value)
  * @method static \Illuminate\Database\Eloquent\Builder|DeathsMalaysia whereDeathsNewCumulative($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|DeathsMalaysia whereDeathsPvax($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|DeathsMalaysia whereDeathsTat($value)
  * @method static \Illuminate\Database\Eloquent\Builder|DeathsMalaysia whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|DeathsMalaysia whereUpdatedAt($value)
  */
@@ -244,6 +250,9 @@ namespace App\Models\Covid{
  * @property int $deaths_bid_cumulative
  * @property int $deaths_bid
  * @property int $deaths_bid_dod Brought in Death that died of disease
+ * @property int $deaths_pvax
+ * @property int $deaths_fvax
+ * @property int $deaths_tat Turnaround Time : usual amount of time between the time a specimen is received within the laboratory and the result is available
  * @property int $deaths_bid_dod_cumulative
  * @property int|null $deaths_commutative
  * @property \Illuminate\Support\Carbon|null $created_at
@@ -260,7 +269,10 @@ namespace App\Models\Covid{
  * @method static \Illuminate\Database\Eloquent\Builder|DeathsState whereDeathsBidDod($value)
  * @method static \Illuminate\Database\Eloquent\Builder|DeathsState whereDeathsBidDodCumulative($value)
  * @method static \Illuminate\Database\Eloquent\Builder|DeathsState whereDeathsCommutative($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|DeathsState whereDeathsFvax($value)
  * @method static \Illuminate\Database\Eloquent\Builder|DeathsState whereDeathsNew($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|DeathsState whereDeathsPvax($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|DeathsState whereDeathsTat($value)
  * @method static \Illuminate\Database\Eloquent\Builder|DeathsState whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|DeathsState whereState($value)
  * @method static \Illuminate\Database\Eloquent\Builder|DeathsState whereUpdatedAt($value)
