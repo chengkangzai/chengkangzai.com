@@ -45,7 +45,11 @@
                                 <div class="flex">
                                     <div class="ml-4">
                                         <div class="text-sm font-medium text-gray-900">
-                                            {{__($state)}}
+                                            <a href="{{route('public.pandemic.state',['state'=>$state])}}"
+                                               class="underline cursor-pointer"
+                                               title="Click to see State view of {{__($state)}}">
+                                                {{__($state)}}
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
