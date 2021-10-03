@@ -40,18 +40,27 @@ class ImportCovidFromGithubService
                 $cumCasesMalaysia = $cumCasesMalaysia + $new_cases;
                 $new_recovered = self::takeIndex($dailyCase, 3);
                 $cumRecoveredMalaysia = $new_recovered + $cumRecoveredMalaysia;
+                $i = 0;
                 return [
-                    'date' => $dailyCase[0],
-                    'cases_new' => $new_cases,
-                    'cases_import' => $dailyCase[2] ?? 0,
-                    'cases_recovered' => $dailyCase[3] ?? 0,
-                    'cluster_import' => self::takeIndex($dailyCase, 4),
-                    'cluster_religious' => self::takeIndex($dailyCase, 5),
-                    'cluster_community' => self::takeIndex($dailyCase, 6),
-                    'cluster_highRisk' => self::takeIndex($dailyCase, 7),
-                    'cluster_education' => self::takeIndex($dailyCase, 8),
-                    'cluster_detentionCentre' => self::takeIndex($dailyCase, 9),
-                    'cluster_workplace' => self::takeIndex($dailyCase, 10),
+                    'date' => self::takeIndex($dailyCase, $i++),
+                    'cases_new' => self::takeIndex($dailyCase, $i++),
+                    'cases_import' => self::takeIndex($dailyCase, $i++),
+                    'cases_recovered' => self::takeIndex($dailyCase, $i++),
+                    'cases_active' => self::takeIndex($dailyCase, $i++),
+                    'cases_cluster' => self::takeIndex($dailyCase, $i++),
+                    'cases_pvax' => self::takeIndex($dailyCase, $i++),
+                    'cases_fvax' => self::takeIndex($dailyCase, $i++),
+                    'cases_child' => self::takeIndex($dailyCase, $i++),
+                    'cases_adolescent' => self::takeIndex($dailyCase, $i++),
+                    'cases_adult' => self::takeIndex($dailyCase, $i++),
+                    'cases_elderly' => self::takeIndex($dailyCase, $i++),
+                    'cluster_import' => self::takeIndex($dailyCase, $i++),
+                    'cluster_religious' => self::takeIndex($dailyCase, $i++),
+                    'cluster_community' => self::takeIndex($dailyCase, $i++),
+                    'cluster_highRisk' => self::takeIndex($dailyCase, $i++),
+                    'cluster_education' => self::takeIndex($dailyCase, $i++),
+                    'cluster_detentionCentre' => self::takeIndex($dailyCase, $i++),
+                    'cluster_workplace' => self::takeIndex($dailyCase, $i++),
                     'cases_cumulative' => $cumCasesMalaysia,
                     'cases_recovered_cumulative' => $cumRecoveredMalaysia,
                     'created_at' => now(),
@@ -68,17 +77,22 @@ class ImportCovidFromGithubService
                 ->slice(1, -1)
                 ->map(function ($record) {
                     $dailyCase = explode(',', $record);
-                    $state = self::takeIndex($dailyCase, 1);
-                    $new_cases = self::takeIndex($dailyCase, 3);
-                    $cases_import = self::takeIndex($dailyCase, 2);
-                    $cases_recovered = self::takeIndex($dailyCase, 4);
                     $collect = new CasesState();
+                    $i = 0;
+                    $collect->date = self::takeIndex($dailyCase, $i++);
+                    $collect->state = self::takeIndex($dailyCase, $i++);
+                    $collect->cases_new = self::takeIndex($dailyCase, $i++);
+                    $collect->cases_import = self::takeIndex($dailyCase, $i++);
+                    $collect->cases_recovered = self::takeIndex($dailyCase, $i++);
+                    $collect->cases_active = self::takeIndex($dailyCase, $i++);
+                    $collect->cases_cluster = self::takeIndex($dailyCase, $i++);
+                    $collect->cases_pvax = self::takeIndex($dailyCase, $i++);
+                    $collect->cases_fvax = self::takeIndex($dailyCase, $i++);
+                    $collect->cases_child = self::takeIndex($dailyCase, $i++);
+                    $collect->cases_adolescent = self::takeIndex($dailyCase, $i++);
+                    $collect->cases_adult = self::takeIndex($dailyCase, $i++);
+                    $collect->cases_elderly = self::takeIndex($dailyCase, $i++);
 
-                    $collect->date = $dailyCase[0];
-                    $collect->state = $state;
-                    $collect->cases_new = $new_cases;
-                    $collect->cases_import = $cases_import;
-                    $collect->cases_recovered = $cases_recovered;
                     $collect->cases_cumulative = 0;
                     $collect->cases_recovered_cumulative = 0;
                     return $collect;

@@ -41,6 +41,14 @@ class CasesState extends Model
         'cases_recovered_cumulative',
         'cases_recovered',
         'cases_cumulative',
+        'cases_active',
+        'cases_cluster',
+        'cases_pvax',
+        'cases_fvax',
+        'cases_child',
+        'cases_adolescent',
+        'cases_adult',
+        'cases_elderly',
     ];
 
     public function scopeLatestOne(Builder $query): Builder
