@@ -100,7 +100,7 @@ class ImportCovidFromGithubService
         );
     }
 
-    public function calcCumulativeCasesState(Collection $collection): Collection
+    private function calcCumulativeCasesState(Collection $collection): Collection
     {
         foreach (CasesState::STATE as $state) {
             $cumCase = 0;
@@ -126,17 +126,18 @@ class ImportCovidFromGithubService
             ->slice(1, -1)
             ->map(function ($record) use ($cumBidDodMalaysia, &$cumDeathMalaysia, &$cumBidMalaysia) {
                 $item = explode(',', $record);
-                $newDeath = self::takeIndex($item, 1);
-                $bidDeath = self::takeIndex($item, 2);
-                $bidDodDeath = self::takeIndex($item, 3);
-                $cumDeathMalaysia = $cumDeathMalaysia + $newDeath;
-                $cumBidMalaysia = $cumBidMalaysia + $bidDeath;
-                $cumBidDodMalaysia = $cumBidDodMalaysia + $bidDodDeath;
+                $cumDeathMalaysia = $cumDeathMalaysia + self::takeIndex($item, 1);
+                $cumBidMalaysia = $cumBidMalaysia + self::takeIndex($item, 2);
+                $cumBidDodMalaysia = $cumBidDodMalaysia + self::takeIndex($item, 3);
+                $i = 0;
                 return [
-                    'date' => $item[0],
-                    'deaths_new' => $newDeath,
-                    'deaths_bid' => $bidDeath,
-                    'deaths_bid_dod' => $bidDodDeath,
+                    'date' => self::takeIndex($item, $i++),
+                    'deaths_new' => self::takeIndex($item, $i++),
+                    'deaths_bid' => self::takeIndex($item, $i++),
+                    'deaths_bid_dod' => self::takeIndex($item, $i++),
+                    'deaths_pvax' => self::takeIndex($item, $i++),
+                    'deaths_fvax' => self::takeIndex($item, $i++),
+                    'deaths_tat' => self::takeIndex($item, $i++),
                     'deaths_new_cumulative' => $cumDeathMalaysia,
                     'deaths_bid_cumulative' => $cumBidMalaysia,
                     'deaths_bid_dod_cumulative' => $cumBidDodMalaysia,
@@ -161,6 +162,9 @@ class ImportCovidFromGithubService
                     $collect->deaths_new = self::takeIndex($item, $i++);
                     $collect->deaths_bid = self::takeIndex($item, $i++);
                     $collect->deaths_bid_dod = self::takeIndex($item, $i++);
+                    $collect->deaths_pvax = self::takeIndex($item, $i++);
+                    $collect->deaths_fvax = self::takeIndex($item, $i++);
+                    $collect->deaths_tat = self::takeIndex($item, $i++);
                     return $collect;
                 })
         );
