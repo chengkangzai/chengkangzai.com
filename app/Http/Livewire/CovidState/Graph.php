@@ -23,6 +23,7 @@ class Graph extends Component
     public Collection $deathCase;
     public Collection $activeCase;
     public Collection $bidCase;
+    public Collection $dodCase;
 
     public Collection $cat1;
     public Collection $cat2;
@@ -42,6 +43,7 @@ class Graph extends Component
         $this->confirmCase = collect();
         $this->recoveredCase = collect();
         $this->deathCase = collect();
+        $this->dodCase = collect();
         $this->activeCase = collect();
         $this->bidCase = collect();
         $this->cat1 = collect();
@@ -87,6 +89,7 @@ class Graph extends Component
             'recoveredCase' => $this->recoveredCase,
             'deathCase' => $this->deathCase,
             'bidCase' => $this->bidCase,
+            'dodCase' => $this->dodCase,
             'activeCase' => $this->activeCase,
             'cat1' => $this->cat1,
             'cat2' => $this->cat2,
@@ -111,6 +114,7 @@ class Graph extends Component
         $this->deathCase = $deaths->pluck('deaths_new');
         $this->cumDeathCase = $deaths->pluck('deaths_commutative');
         $this->bidCase = $deaths->pluck('deaths_bid');
+        $this->dodCase = $deaths->pluck('deaths_bid_dod');
         $this->activeCase = $cases->pluck('activeCase');
 
         $this->cat1 = $healthCareCategory->pluck('cat1');
