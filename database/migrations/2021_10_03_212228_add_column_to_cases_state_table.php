@@ -40,7 +40,7 @@ class AddColumnToCasesStateTable extends Migration
 
     private function addNewColumn(Blueprint $table): void
     {
-        $table->integer('cases_active')->after('cases_cumulative');
+        $table->integer('cases_active')->after('cases_recovered');
         $table->integer('cases_cluster')->after('cases_active');
         $table->integer('cases_pvax')->after('cases_cluster');
         $table->integer('cases_fvax')->after('cases_pvax');
