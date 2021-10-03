@@ -35,32 +35,32 @@ class ImportCovidFromGithubService
         return collect(explode(PHP_EOL, Http::get(self::url['CASES_MALAYSIA'])))
             ->slice(1, -1)
             ->map(function ($record) use (&$cumCasesMalaysia, &$cumRecoveredMalaysia) {
-                $dailyCase = str_getcsv(str_replace("\"", "", $record));
-                $new_cases = self::takeIndex($dailyCase, 1);
+                $item = str_getcsv(str_replace("\"", "", $record));
+                $new_cases = self::takeIndex($item, 1);
                 $cumCasesMalaysia = $cumCasesMalaysia + $new_cases;
-                $new_recovered = self::takeIndex($dailyCase, 3);
+                $new_recovered = self::takeIndex($item, 3);
                 $cumRecoveredMalaysia = $new_recovered + $cumRecoveredMalaysia;
                 $i = 0;
                 return [
-                    'date' => self::takeIndex($dailyCase, $i++),
-                    'cases_new' => self::takeIndex($dailyCase, $i++),
-                    'cases_import' => self::takeIndex($dailyCase, $i++),
-                    'cases_recovered' => self::takeIndex($dailyCase, $i++),
-                    'cases_active' => self::takeIndex($dailyCase, $i++),
-                    'cases_cluster' => self::takeIndex($dailyCase, $i++),
-                    'cases_pvax' => self::takeIndex($dailyCase, $i++),
-                    'cases_fvax' => self::takeIndex($dailyCase, $i++),
-                    'cases_child' => self::takeIndex($dailyCase, $i++),
-                    'cases_adolescent' => self::takeIndex($dailyCase, $i++),
-                    'cases_adult' => self::takeIndex($dailyCase, $i++),
-                    'cases_elderly' => self::takeIndex($dailyCase, $i++),
-                    'cluster_import' => self::takeIndex($dailyCase, $i++),
-                    'cluster_religious' => self::takeIndex($dailyCase, $i++),
-                    'cluster_community' => self::takeIndex($dailyCase, $i++),
-                    'cluster_highRisk' => self::takeIndex($dailyCase, $i++),
-                    'cluster_education' => self::takeIndex($dailyCase, $i++),
-                    'cluster_detentionCentre' => self::takeIndex($dailyCase, $i++),
-                    'cluster_workplace' => self::takeIndex($dailyCase, $i++),
+                    'date' => self::takeIndex($item, $i++),
+                    'cases_new' => self::takeIndex($item, $i++),
+                    'cases_import' => self::takeIndex($item, $i++),
+                    'cases_recovered' => self::takeIndex($item, $i++),
+                    'cases_active' => self::takeIndex($item, $i++),
+                    'cases_cluster' => self::takeIndex($item, $i++),
+                    'cases_pvax' => self::takeIndex($item, $i++),
+                    'cases_fvax' => self::takeIndex($item, $i++),
+                    'cases_child' => self::takeIndex($item, $i++),
+                    'cases_adolescent' => self::takeIndex($item, $i++),
+                    'cases_adult' => self::takeIndex($item, $i++),
+                    'cases_elderly' => self::takeIndex($item, $i++),
+                    'cluster_import' => self::takeIndex($item, $i++),
+                    'cluster_religious' => self::takeIndex($item, $i++),
+                    'cluster_community' => self::takeIndex($item, $i++),
+                    'cluster_highRisk' => self::takeIndex($item, $i++),
+                    'cluster_education' => self::takeIndex($item, $i++),
+                    'cluster_detentionCentre' => self::takeIndex($item, $i++),
+                    'cluster_workplace' => self::takeIndex($item, $i++),
                     'cases_cumulative' => $cumCasesMalaysia,
                     'cases_recovered_cumulative' => $cumRecoveredMalaysia,
                     'created_at' => now(),
@@ -76,31 +76,31 @@ class ImportCovidFromGithubService
             collect(explode(PHP_EOL, Http::get(self::url['CASES_STATE'])))
                 ->slice(1, -1)
                 ->map(function ($record) {
-                    $dailyCase = explode(',', $record);
-                    $collect = new CasesState();
+                    $item = explode(',', $record);
+                    $case = new CasesState();
                     $i = 0;
-                    $collect->date = self::takeIndex($dailyCase, $i++);
-                    $collect->state = self::takeIndex($dailyCase, $i++);
-                    $collect->cases_new = self::takeIndex($dailyCase, $i++);
-                    $collect->cases_import = self::takeIndex($dailyCase, $i++);
-                    $collect->cases_recovered = self::takeIndex($dailyCase, $i++);
-                    $collect->cases_active = self::takeIndex($dailyCase, $i++);
-                    $collect->cases_cluster = self::takeIndex($dailyCase, $i++);
-                    $collect->cases_pvax = self::takeIndex($dailyCase, $i++);
-                    $collect->cases_fvax = self::takeIndex($dailyCase, $i++);
-                    $collect->cases_child = self::takeIndex($dailyCase, $i++);
-                    $collect->cases_adolescent = self::takeIndex($dailyCase, $i++);
-                    $collect->cases_adult = self::takeIndex($dailyCase, $i++);
-                    $collect->cases_elderly = self::takeIndex($dailyCase, $i++);
+                    $case->date = self::takeIndex($item, $i++);
+                    $case->state = self::takeIndex($item, $i++);
+                    $case->cases_new = self::takeIndex($item, $i++);
+                    $case->cases_import = self::takeIndex($item, $i++);
+                    $case->cases_recovered = self::takeIndex($item, $i++);
+                    $case->cases_active = self::takeIndex($item, $i++);
+                    $case->cases_cluster = self::takeIndex($item, $i++);
+                    $case->cases_pvax = self::takeIndex($item, $i++);
+                    $case->cases_fvax = self::takeIndex($item, $i++);
+                    $case->cases_child = self::takeIndex($item, $i++);
+                    $case->cases_adolescent = self::takeIndex($item, $i++);
+                    $case->cases_adult = self::takeIndex($item, $i++);
+                    $case->cases_elderly = self::takeIndex($item, $i++);
 
-                    $collect->cases_cumulative = 0;
-                    $collect->cases_recovered_cumulative = 0;
-                    return $collect;
+                    $case->cases_cumulative = 0;
+                    $case->cases_recovered_cumulative = 0;
+                    return $case;
                 })
         );
     }
 
-    public function calcCumulativeCasesState(Collection $collection): Collection
+    private function calcCumulativeCasesState(Collection $collection): Collection
     {
         foreach (CasesState::STATE as $state) {
             $cumCase = 0;
@@ -125,18 +125,19 @@ class ImportCovidFromGithubService
         return collect(explode(PHP_EOL, Http::get(self::url['DEATH_MALAYSIA'])))
             ->slice(1, -1)
             ->map(function ($record) use ($cumBidDodMalaysia, &$cumDeathMalaysia, &$cumBidMalaysia) {
-                $dailyCase = explode(',', $record);
-                $newDeath = self::takeIndex($dailyCase, 1);
-                $bidDeath = self::takeIndex($dailyCase, 2);
-                $bidDodDeath = self::takeIndex($dailyCase, 3);
-                $cumDeathMalaysia = $cumDeathMalaysia + $newDeath;
-                $cumBidMalaysia = $cumBidMalaysia + $bidDeath;
-                $cumBidDodMalaysia = $cumBidDodMalaysia + $bidDodDeath;
+                $item = explode(',', $record);
+                $cumDeathMalaysia = $cumDeathMalaysia + self::takeIndex($item, 1);
+                $cumBidMalaysia = $cumBidMalaysia + self::takeIndex($item, 2);
+                $cumBidDodMalaysia = $cumBidDodMalaysia + self::takeIndex($item, 3);
+                $i = 0;
                 return [
-                    'date' => $dailyCase[0],
-                    'deaths_new' => $newDeath,
-                    'deaths_bid' => $bidDeath,
-                    'deaths_bid_dod' => $bidDodDeath,
+                    'date' => self::takeIndex($item, $i++),
+                    'deaths_new' => self::takeIndex($item, $i++),
+                    'deaths_bid' => self::takeIndex($item, $i++),
+                    'deaths_bid_dod' => self::takeIndex($item, $i++),
+                    'deaths_pvax' => self::takeIndex($item, $i++),
+                    'deaths_fvax' => self::takeIndex($item, $i++),
+                    'deaths_tat' => self::takeIndex($item, $i++),
                     'deaths_new_cumulative' => $cumDeathMalaysia,
                     'deaths_bid_cumulative' => $cumBidMalaysia,
                     'deaths_bid_dod_cumulative' => $cumBidDodMalaysia,
@@ -152,14 +153,18 @@ class ImportCovidFromGithubService
             collect(explode(PHP_EOL, Http::get(self::url['DEATH_STATE'])))
                 ->slice(1, -1)
                 ->map(function ($record) {
-                    $dailyCase = explode(',', $record);
-                    $collect = new DeathsState();
+                    $item = explode(',', $record);
+                    $i = 0;
 
-                    $collect->date = $dailyCase[0];
-                    $collect->state = self::takeIndex($dailyCase, 1);
-                    $collect->deaths_new = self::takeIndex($dailyCase, 2);
-                    $collect->deaths_bid = self::takeIndex($dailyCase, 3);
-                    $collect->deaths_bid_dod = self::takeIndex($dailyCase, 4);
+                    $collect = new DeathsState();
+                    $collect->date = self::takeIndex($item, $i++);
+                    $collect->state = self::takeIndex($item, $i++);
+                    $collect->deaths_new = self::takeIndex($item, $i++);
+                    $collect->deaths_bid = self::takeIndex($item, $i++);
+                    $collect->deaths_bid_dod = self::takeIndex($item, $i++);
+                    $collect->deaths_pvax = self::takeIndex($item, $i++);
+                    $collect->deaths_fvax = self::takeIndex($item, $i++);
+                    $collect->deaths_tat = self::takeIndex($item, $i++);
                     return $collect;
                 })
         );
@@ -191,11 +196,12 @@ class ImportCovidFromGithubService
         return collect(explode(PHP_EOL, Http::get(self::url['TEST_MALAYSIA'])))
             ->slice(1, -1)
             ->map(function ($record) {
-                $dailyCase = explode(',', $record);
+                $item = explode(',', $record);
+                $i = 0;
                 return [
-                    'date' => $dailyCase[0],
-                    'rtk_ag' => self::takeIndex($dailyCase, 1),
-                    'pcr' => self::takeIndex($dailyCase, 2),
+                    'date' => self::takeIndex($item, $i++),
+                    'rtk_ag' => self::takeIndex($item, $i++),
+                    'pcr' => self::takeIndex($item, $i++),
                     'created_at' => now(),
                     'updated_at' => now(),
                 ];
@@ -207,12 +213,13 @@ class ImportCovidFromGithubService
         return collect(explode(PHP_EOL, Http::get(self::url['TEST_STATE'])))
             ->slice(1, -1)
             ->map(function ($record) {
-                $dailyCase = explode(',', $record);
+                $item = explode(',', $record);
+                $i = 0;
                 return [
-                    'date' => $dailyCase[0],
-                    'state' => self::takeIndex($dailyCase, 1),
-                    'rtk_ag' => self::takeIndex($dailyCase, 2),
-                    'pcr' => self::takeIndex($dailyCase, 3),
+                    'date' => self::takeIndex($item, $i++),
+                    'state' => self::takeIndex($item, $i++),
+                    'rtk_ag' => self::takeIndex($item, $i++),
+                    'pcr' => self::takeIndex($item, $i++),
                     'created_at' => now(),
                     'updated_at' => now(),
                 ];
@@ -224,22 +231,23 @@ class ImportCovidFromGithubService
         return collect(explode(PHP_EOL, Http::get(self::url['CLUSTER'])))
             ->slice(1, -1)
             ->map(function ($record) {
-                $dailyCase = str_getcsv($record);
+                $item = str_getcsv($record);
+                $i = 0;
                 return [
-                    'cluster' => $dailyCase[0],
-                    'state' => $dailyCase[1],
-                    'district' => $dailyCase[2] ?? '',
-                    'date_announced' => $dailyCase[3] ?? null,
-                    'date_last_onset' => $dailyCase[4] ?? null,
-                    'category' => $dailyCase[5] ?? '',
-                    'status' => $dailyCase[6],
-                    'cases_new' => $dailyCase[7],
-                    'cases_total' => $dailyCase[8],
-                    'cases_active' => $dailyCase[9],
-                    'tests' => $dailyCase[10],
-                    'icu' => $dailyCase[11],
-                    'deaths' => $dailyCase[12],
-                    'recovered' => $dailyCase[13],
+                    'cluster' => self::takeIndex($item, $i++),
+                    'state' => self::takeIndex($item, $i++),
+                    'district' => self::takeIndex($item, $i++),
+                    'date_announced' => self::takeIndex($item, $i++, 'string'),
+                    'date_last_onset' => self::takeIndex($item, $i++, 'string'),
+                    'category' => self::takeIndex($item, $i++),
+                    'status' => self::takeIndex($item, $i++),
+                    'cases_new' => self::takeIndex($item, $i++),
+                    'cases_total' => self::takeIndex($item, $i++),
+                    'cases_active' => self::takeIndex($item, $i++),
+                    'tests' => self::takeIndex($item, $i++),
+                    'icu' => self::takeIndex($item, $i++),
+                    'deaths' => self::takeIndex($item, $i++),
+                    'recovered' => self::takeIndex($item, $i++),
                     'created_at' => now(),
                     'updated_at' => now(),
                 ];
@@ -257,22 +265,23 @@ class ImportCovidFromGithubService
         return collect(explode(PHP_EOL, Http::get(self::url['HOSPITAL'])))
             ->slice(1, -1)
             ->map(function ($record) {
-                $dailyCase = explode(',', $record);
+                $item = explode(',', $record);
+                $i = 0;
                 return [
-                    'date' => $dailyCase[0],
-                    'state' => $dailyCase[1],
-                    'beds' => $dailyCase[2],
-                    'beds_covid' => $dailyCase[3],
-                    'beds_noncrit' => $dailyCase[4],
-                    'admitted_pui' => $dailyCase[5],
-                    'admitted_covid' => $dailyCase[6],
-                    'admitted_total' => $dailyCase[7],
-                    'discharged_pui' => $dailyCase[8],
-                    'discharged_covid' => $dailyCase[9],
-                    'discharged_total' => $dailyCase[10],
-                    'hosp_covid' => $dailyCase[11],
-                    'hosp_pui' => $dailyCase[12],
-                    'hosp_noncovid' => $dailyCase[13],
+                    'date' => self::takeIndex($item, $i++),
+                    'state' => self::takeIndex($item, $i++),
+                    'beds' => self::takeIndex($item, $i++),
+                    'beds_covid' => self::takeIndex($item, $i++),
+                    'beds_noncrit' => self::takeIndex($item, $i++),
+                    'admitted_pui' => self::takeIndex($item, $i++),
+                    'admitted_covid' => self::takeIndex($item, $i++),
+                    'admitted_total' => self::takeIndex($item, $i++),
+                    'discharged_pui' => self::takeIndex($item, $i++),
+                    'discharged_covid' => self::takeIndex($item, $i++),
+                    'discharged_total' => self::takeIndex($item, $i++),
+                    'hosp_covid' => self::takeIndex($item, $i++),
+                    'hosp_pui' => self::takeIndex($item, $i++),
+                    'hosp_noncovid' => self::takeIndex($item, $i++),
                     'created_at' => now(),
                     'updated_at' => now(),
                 ];
@@ -284,24 +293,25 @@ class ImportCovidFromGithubService
         return collect(explode(PHP_EOL, Http::get(self::url['ICU'])))
             ->slice(1, -1)
             ->map(function ($record) {
-                $dailyCase = explode(',', $record);
+                $item = explode(',', $record);
+                $i = 0;
                 return [
-                    'date' => $dailyCase[0],
-                    'state' => $dailyCase[1],
-                    'bed_icu' => $dailyCase[2],
-                    'bed_icu_rep' => $dailyCase[3],
-                    'bed_icu_total' => $dailyCase[4],
-                    'bed_icu_covid' => $dailyCase[5],
-                    'vent' => $dailyCase[6],
-                    'vent_port' => $dailyCase[7],
-                    'icu_covid' => $dailyCase[8],
-                    'icu_pui' => $dailyCase[9],
-                    'icu_noncovid' => $dailyCase[10],
-                    'vent_covid' => $dailyCase[11],
-                    'vent_pui' => $dailyCase[12],
-                    'vent_noncovid' => $dailyCase[13],
-                    'vent_used' => $dailyCase[14],
-                    'vent_port_used' => $dailyCase[15],
+                    'date' => self::takeIndex($item, $i++),
+                    'state' => self::takeIndex($item, $i++),
+                    'bed_icu' => self::takeIndex($item, $i++),
+                    'bed_icu_rep' => self::takeIndex($item, $i++),
+                    'bed_icu_total' => self::takeIndex($item, $i++),
+                    'bed_icu_covid' => self::takeIndex($item, $i++),
+                    'vent' => self::takeIndex($item, $i++),
+                    'vent_port' => self::takeIndex($item, $i++),
+                    'icu_covid' => self::takeIndex($item, $i++),
+                    'icu_pui' => self::takeIndex($item, $i++),
+                    'icu_noncovid' => self::takeIndex($item, $i++),
+                    'vent_covid' => self::takeIndex($item, $i++),
+                    'vent_pui' => self::takeIndex($item, $i++),
+                    'vent_noncovid' => self::takeIndex($item, $i++),
+                    'vent_used' => self::takeIndex($item, $i++),
+                    'vent_port_used' => self::takeIndex($item, $i++),
                     'created_at' => now(),
                     'updated_at' => now(),
                 ];
@@ -313,20 +323,21 @@ class ImportCovidFromGithubService
         return collect(explode(PHP_EOL, Http::get(self::url['PKRC'])))
             ->slice(1, -1)
             ->map(function ($record) {
-                $dailyCase = explode(',', $record);
+                $item = explode(',', $record);
+                $i = 0;
                 return [
-                    'date' => $dailyCase[0],
-                    'state' => $dailyCase[1],
-                    'beds' => $dailyCase[2],
-                    'admitted_pui' => $dailyCase[3],
-                    'admitted_covid' => $dailyCase[4],
-                    'admitted_total' => $dailyCase[5],
-                    'discharge_pui' => $dailyCase[6],
-                    'discharge_covid' => $dailyCase[7],
-                    'discharge_total' => $dailyCase[8],
-                    'pkrc_covid' => $dailyCase[9],
-                    'pkrc_pui' => $dailyCase[10],
-                    'pkrc_noncovid' => $dailyCase[11],
+                    'date' => self::takeIndex($item, $i++),
+                    'state' => self::takeIndex($item, $i++),
+                    'beds' => self::takeIndex($item, $i++),
+                    'admitted_pui' => self::takeIndex($item, $i++),
+                    'admitted_covid' => self::takeIndex($item, $i++),
+                    'admitted_total' => self::takeIndex($item, $i++),
+                    'discharge_pui' => self::takeIndex($item, $i++),
+                    'discharge_covid' => self::takeIndex($item, $i++),
+                    'discharge_total' => self::takeIndex($item, $i++),
+                    'pkrc_covid' => self::takeIndex($item, $i++),
+                    'pkrc_pui' => self::takeIndex($item, $i++),
+                    'pkrc_noncovid' => self::takeIndex($item, $i++),
                     'created_at' => now(),
                     'updated_at' => now(),
                 ];
@@ -338,22 +349,24 @@ class ImportCovidFromGithubService
         return collect(explode(PHP_EOL, Http::get(self::url['POPULATION'])))
             ->slice(1, -1)
             ->map(function ($record) {
-                $dailyCase = explode(',', $record);
+                $item = explode(',', $record);
+                $i = 0;
                 return [
-                    'state' => $dailyCase[0],
-                    'idxs' => $dailyCase[1],
-                    'pop' => $dailyCase[2],
-                    'pop_18' => $dailyCase[3],
-                    'pop_60' => $dailyCase[4],
-                    'pop_12' => $dailyCase[5],
+                    'state' => self::takeIndex($item, $i++),
+                    'idxs' => self::takeIndex($item, $i++),
+                    'pop' => self::takeIndex($item, $i++),
+                    'pop_18' => self::takeIndex($item, $i++),
+                    'pop_60' => self::takeIndex($item, $i++),
+                    'pop_12' => self::takeIndex($item, $i++),
                     'created_at' => now(),
                     'updated_at' => now(),
                 ];
             });
     }
 
-    private static function takeIndex(array $array, int $index): mixed
+    private static function takeIndex(array $array, int $index, $mode = 'number'): mixed
     {
-        return (!isset($array[$index]) || $array[$index] == '') ? 0 : $array[$index];
+        $defaultReturn = $mode == 'string' ? '' : 0;
+        return (!isset($array[$index]) || $array[$index] == '') ? $defaultReturn : $array[$index];
     }
 }

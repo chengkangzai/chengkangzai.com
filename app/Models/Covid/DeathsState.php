@@ -42,6 +42,9 @@ class DeathsState extends Model
         'deaths_bid_cumulative',
         'deaths_bid_dod',
         'deaths_bid_dod_cumulative',
+        'deaths_pvax',
+        'deaths_fvax',
+        'deaths_tat',
     ];
 
     public function scopeLatestOne(Builder $query): Builder

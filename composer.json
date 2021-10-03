@@ -64,7 +64,7 @@
         "run-ide-helper": [
             "@php artisan ide-helper:generate",
             "@php artisan ide-helper:meta",
-            "@php artisan ide-helper:models",
+            "@php artisan ide-helper:models --no-interaction",
             "@php artisan ide-helper:eloquent"
         ],
         "run-translation": [
