@@ -34,7 +34,12 @@ class CasesMalaysiaService
 
     public function getDeath()
     {
-        return Cache::remember('CasesMalaysia.Death', $this->cacheSecond, fn() => DeathsMalaysia::latestOne()->get()->first());
+        return Cache::remember('CasesMalaysia.Death', $this->cacheSecond, fn() => DeathsMalaysia::latestOne()->get())
+            ->map(function (DeathsMalaysia $deaths) {
+                $deaths->date_diffWord = $this->getDiffForHumans($deaths->date);
+                return $deaths;
+            })
+            ->first();
     }
 
     public function getCases()
@@ -45,6 +50,8 @@ class CasesMalaysiaService
                 $cases->newPercentage = ($cases->cases_new / $pop) * 100;
                 $cases->cumPercentage = ($cases->cases_cumulative / $pop) * 100;
                 $cases->activeCasePercentage = ($cases->activeCase / $pop) * 100;
+
+                $cases->date_diffWord = $this->getDiffForHumans($cases->date);
                 return $cases;
             })
             ->first();
@@ -65,7 +72,14 @@ class CasesMalaysiaService
 
     public function getTest()
     {
-        return Cache::remember('CasesMalaysia.Test', $this->cacheSecond, fn() => TestMalaysia::where('date', $this->getTestDateShouldQuery())->first());
+        return Cache::remember('CasesMalaysia.Test', $this->cacheSecond, function () {
+            return TestMalaysia::where('date', $this->getTestDateShouldQuery())->get();
+        })
+            ->map(function ($test) {
+                $test->date_diffWord = $this->getDiffForHumans($test->date);
+                return $test;
+            })
+            ->first();
     }
 
     private function getTestDateShouldQuery(): string
@@ -93,6 +107,9 @@ class CasesMalaysiaService
 
                 $vaxMalaysia->firstDoseCumulPercent = ($vaxMalaysia->daily_partial / $pop) * 100;
                 $vaxMalaysia->secondDoseCumulPercent = ($vaxMalaysia->daily_full / $pop) * 100;
+
+                $vaxMalaysia->date_diffWord = $this->getDiffForHumans($vaxMalaysia->date);
+
                 return $vaxMalaysia;
             })
             ->first();
@@ -103,9 +120,20 @@ class CasesMalaysiaService
         return Cache::remember('CasesMalaysia.VaxRegMalaysia', $this->cacheSecond, fn() => VaxRegMalaysia::latestOne()->get())
             ->map(function ($vaxRegMalaysia) use ($filter) {
                 $vaxRegMalaysia->registeredPrecent = ($vaxRegMalaysia->total / $this->getPop($filter)) * 100;
+
+                $vaxRegMalaysia->date_diffWord = $this->getDiffForHumans($vaxRegMalaysia->date);
                 return $vaxRegMalaysia;
             })
             ->first();
+    }
+
+    public function getCluster()
+    {
+        return Cache::remember(__METHOD__, $this->cacheSecond, function () {
+            $cluster = Cluster::orderByDesc('id')->first();
+            $cluster->date_diffWord = $this->getDiffForHumans($cluster->created_at);
+            return $cluster;
+        });
     }
 
     public function getTimestamp(): array
@@ -113,9 +141,10 @@ class CasesMalaysiaService
         $collect['cases'] = $this->getCases()->date->toDateString();
         $collect['death'] = $this->getDeath()->date->toDateString();
         $collect['test'] = $this->getTest()->date->toDateString();
-        $collect['cluster'] = Cache::remember('CasesMalaysia.ClusterTimestamp', $this->cacheSecond, fn() => Cluster::orderByDesc('id')->first()->created_at->toDateString());
+        $collect['cluster'] = $this->getCluster()->created_at->toDateString();
         $collect['vax'] = $this->getVax()->date->toDateString();
         $collect['vaxReg'] = $this->getVaxReg()->date->toDateString();
+        $collect['test_dateDiffWord'] = $this->getDiffForHumans($this->getTest()->date);
         return $collect;
     }
 
@@ -125,5 +154,10 @@ class CasesMalaysiaService
             ->where('Idxs', 0)
             ->first()
             ->$filter;
+    }
+
+    private function getDiffForHumans($date): string
+    {
+        return Carbon::parse($date)->locale(app()->getLocale())->diffForHumans(['options' => Carbon::ONE_DAY_WORDS]);
     }
 }

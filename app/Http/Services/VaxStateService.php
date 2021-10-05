@@ -30,6 +30,8 @@ class VaxStateService
 
                 $vaxState->firstDoseCumulPercent = ($vaxState->cumul_partial / $pop) * 100;
                 $vaxState->secondDoseCumulPercent = ($vaxState->cumul_full / $pop) * 100;
+
+                $vaxState->date_diffWord = $this->getDiffForHumans($vaxState->date);
                 return $vaxState;
             });
     }
@@ -40,6 +42,8 @@ class VaxStateService
             ->map(function ($vaxRegState) use ($filter) {
                 $pop = $this->getPop($filter)[$vaxRegState->state];
                 $vaxRegState->registeredPrecent = ($vaxRegState->total / $pop) * 100;
+
+                $vaxRegState->date_diffWord = $this->getDiffForHumans($vaxRegState->date);
                 return $vaxRegState;
             });
     }
@@ -49,5 +53,10 @@ class VaxStateService
         return Cache::remember('Population', $this->cacheSecond, function () {
             return Population::all();
         })->pluck($filter, 'state');
+    }
+
+    private function getDiffForHumans($date): string
+    {
+        return Carbon::parse($date)->locale(app()->getLocale())->diffForHumans(['options' => Carbon::ONE_DAY_WORDS]);
     }
 }
