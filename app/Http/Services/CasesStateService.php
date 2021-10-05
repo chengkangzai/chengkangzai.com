@@ -23,7 +23,11 @@ class CasesStateService
 
     public function getDeath(): Collection
     {
-        return Cache::remember('CasesState.Death', $this->cacheSecond, fn() => DeathsState::latestOne()->get());
+        return Cache::remember('CasesState.Death', $this->cacheSecond, fn() => DeathsState::latestOne()->get())
+            ->map(function (DeathsState $deathsState) {
+                $deathsState->date_diffWord = $this->getDiffForHumans($deathsState->date);
+                return $deathsState;
+            });
     }
 
     public function getCases(): Collection
@@ -34,6 +38,7 @@ class CasesStateService
                 $cases->newPercentage = ($cases->cases_new / $pop) * 100;
                 $cases->cumPercentage = ($cases->cases_cumulative / $pop) * 100;
                 $cases->activeCasePercentage = ($cases->activeCase / $pop) * 100;
+                $cases->date_diffWord = $this->getDiffForHumans($cases->date);
                 return $cases;
             });
     }
@@ -47,6 +52,7 @@ class CasesStateService
         })
             ->map(function ($test) {
                 $test->totalTest = $test->rtk_ag + $test->pcr;
+                $test->date_diffWord = $this->getDiffForHumans($test->date);
                 return $test;
             });
     }
@@ -72,9 +78,18 @@ class CasesStateService
         });
     }
 
-    private function getPop(): Collection
+    public function getClusterCount(string $state): int
     {
-        return Cache::remember('Population', $this->cacheSecond, fn() => Population::all())->pluck('pop', 'state');
+        return Cache::remember(__METHOD__ . $state, $this->cacheSecond, function () use ($state) {
+            return Cluster::where('state', $state)->count();
+        });
+    }
+
+    private function getPop(string $filter = Population::POP_FILTER['ALL_POPULATION']): Collection
+    {
+        return Cache::remember('Population', $this->cacheSecond, function () {
+            return Population::all();
+        })->pluck($filter, 'state');
     }
 
     private function getTestDateShouldQuery(): string
@@ -93,11 +108,20 @@ class CasesStateService
         return $dateOfCase;
     }
 
-    public function getClusterCount(string $state): int
+
+    private function getDiffForHumans($date): string
     {
-        return Cache::remember(__METHOD__ . $state, $this->cacheSecond, function () use ($state) {
-            return Cluster::where('state', $state)->count();
-        });
+        return Carbon::parse($date)->locale(app()->getLocale())->diffForHumans(['options' => Carbon::ONE_DAY_WORDS]);
+    }
+
+    public function getTimestamp(): array
+    {
+        $collect['cases'] = $this->getCases()->first()->date->toDateString();
+        $collect['death'] = $this->getDeath()->first()->date->toDateString();
+        $collect['test'] = $this->getTest()->first()->date->toDateString();
+        $collect['cluster'] = Cache::remember(__METHOD__, $this->cacheSecond, fn() => Cluster::orderByDesc('id')->first()->created_at->toDateString());
+        $collect['test_dateDiffWord'] = $this->getDiffForHumans($this->getTest()->last()->date);
+        return $collect;
     }
 
 

@@ -23,6 +23,7 @@ class Malaysia extends Component
     public TestMalaysia $test;
     public VaxMalaysia $vax;
     public VaxRegMalaysia $vaxReg;
+    public array $timestamp = [];
 
     public int $clusterCount = 0;
     public int|float $positiveRate = 0;
@@ -80,5 +81,6 @@ class Malaysia extends Component
         $positiveRateCase = $service->calcPositiveRate();
         $this->positiveRate = $positiveRateCase->positiveRate;
         $this->positiveRateCase = $positiveRateCase->cases_new;
+        $this->timestamp = $service->getTimestamp();
     }
 }
