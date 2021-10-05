@@ -21,6 +21,7 @@ class Dashboard extends Component
     public DeathsState $death;
     public VaxState $vax;
     public VaxRegState $vaxReg;
+    public array $timestamp = [];
     public int $activeClusterCount = 0;
 
     public float $positiveRate = 0;
@@ -76,5 +77,6 @@ class Dashboard extends Component
         $this->positiveRateCase = $positiveRateCase->cases_new;
 
         $this->activeClusterCount = $casesStateService->getClusterCount($this->state);
+        $this->timestamp = $casesStateService->getTimestamp();
     }
 }
