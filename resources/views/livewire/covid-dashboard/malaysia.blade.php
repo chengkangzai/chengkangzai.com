@@ -1,7 +1,7 @@
 <section class="mt-2" wire:init="load" xmlns:wire="">
     <div class="sm:grid sm:grid-cols-3 sm:grid-rows-3 sm:gap-2 space-y-2 sm:space-y-0">
         <div class="dark:bg-white bg-gray-50 py-4 sm:py-8 rounded-xl shadow ">
-            <h2 class="text-2xl">{{__('New Case')}}</h2>
+            <h2 class="text-2xl">{{__('covid.New Case',['day'=>$cases->date_diffWord])}}</h2>
             <p class="text-red-500 font-bold text-4xl xl:text-5xl">{{number_format($cases->cases_new)}}</p>
             <span>(+{{number_format($cases->newPercentage,2)}}%)
                 <span class="font-bold">*</span>
@@ -9,7 +9,7 @@
         </div>
 
         <div class="dark:bg-white bg-gray-50 py-4 sm:py-8 rounded-xl shadow ">
-            <h2 class="text-2xl">{{__('Cumulative Case')}}</h2>
+            <h2 class="text-2xl">{{__('covid.Cumulative Case',['day'=>$cases->date_diffWord])}}</h2>
             <p class="text-red-500 font-bold text-4xl xl:text-5xl">{{number_format($cases->cases_cumulative)}}</p>
             <span>({{number_format($cases->cumPercentage,2)}}%)
                 <span class="font-bold">*</span>
@@ -17,7 +17,7 @@
         </div>
 
         <div class="dark:bg-white bg-gray-50 py-4 sm:py-8 rounded-xl shadow ">
-            <h2 class="text-2xl">{{__('Active Cases In Malaysia')}}</h2>
+            <h2 class="text-2xl">{{__('covid.Active Case',['day'=>$cases->date_diffWord])}}</h2>
             <p class="text-red-500 font-bold text-4xl xl:text-5xl">{{number_format($cases->activeCase)}}</p>
             <span>({{number_format($cases->activeCasePercentage,2)}}%)
                 <span class="font-bold">*</span>
@@ -25,8 +25,8 @@
         </div>
 
         {{--End of First Row--}}
-        <div class="dark:bg-white bg-gray-50 py-4 rounded-xl shadow ">
-            <h2 class="text-2xl">{{__('Deaths')}}</h2>
+        <div class="dark:bg-white bg-gray-50 py-6 rounded-xl shadow ">
+            <h2 class="text-2xl">{{__('covid.Deaths',['day'=>$death->date_diffWord])}}</h2>
             <p class="text-gray-500  font-bold text-4xl xl:text-5xl">{{number_format($death->deaths_new)}}</p>
             <span> {{__('Brought in Death (BID) ')}} :
                 <span class="text-gray-500 font-extrabold">{{$death->deaths_bid}}</span>
@@ -38,14 +38,14 @@
         </div>
 
         <div class="dark:bg-white bg-gray-50 py-4 sm:py-8 rounded-xl shadow ">
-            <h2 class="text-2xl">{{__('Cumulative Death')}}</h2>
+            <h2 class="text-2xl">{{__('covid.Cumulative Death',['day'=>$death->date_diffWord])}}</h2>
             <p class="text-gray-500  font-bold text-4xl xl:text-5xl">{{number_format($death->deaths_new_cumulative)}}</p>
             <span> {{__('Fatality rate')}} :{{number_format($fatalityRate,2)}}% </span>
         </div>
 
 
         <div class="dark:bg-white bg-gray-50 py-4 sm:py-8 rounded-xl shadow ">
-            <h2 class="text-2xl">{{__('Tested')}}</h2>
+            <h2 class="text-2xl">{{__('covid.Tested',['day'=>$test->date_diffWord])}}</h2>
             <p class="text-yellow-500 font-bold text-4xl xl:text-5xl">{{number_format($test->totalTest)}}</p>
             <span>
                 {{__('Positive Rate')}}:
@@ -60,21 +60,21 @@
 
         {{--End of Second Row--}}
         <div class="dark:bg-white bg-gray-50 py-4 sm:py-8 rounded-xl shadow ">
-            <h2 class="text-2xl">{{__('New recovered Case')}}</h2>
+            <h2 class="text-2xl">{{__('covid.New recovered Case',['day'=>$cases->date_diffWord])}}</h2>
             <p class="text-blue-500 font-bold text-4xl xl:text-5xl">
                 {{number_format($cases->cases_recovered)}}
             </p>
         </div>
 
         <div class="dark:bg-white bg-gray-50 py-4 sm:py-8 rounded-xl shadow ">
-            <h2 class="text-2xl">{{__('Cumulative recovered')}}</h2>
+            <h2 class="text-2xl">{{__('covid.Cumulative recovered',['day'=>$cases->date_diffWord])}}</h2>
             <p class="text-blue-500  font-bold text-4xl xl:text-5xl">
                 {{number_format($cases->cases_recovered_cumulative)}}
             </p>
         </div>
 
         <div class="dark:bg-white bg-gray-50 py-4 sm:py-8 rounded-xl shadow ">
-            <h2 class="text-2xl">{{__('Active Cluster In Malaysia')}}</h2>
+            <h2 class="text-2xl">{{__('covid.Active Cluster',['day'=>$timestamp['test_dateDiffWord']??''])}}</h2>
             <p class="text-yellow-500 font-bold text-4xl xl:text-5xl">
                 {{number_format($clusterCount)}}
             </p>
@@ -82,7 +82,7 @@
 
         {{--End of Third Row--}}
         <div class="dark:bg-white bg-gray-50 py-6 rounded-xl shadow ">
-            <h2 class="text-2xl">{{__('New Dose 1 Jabbed')}}</h2>
+            <h2 class="text-2xl">{{__('covid.New Dose 1 Jabbed',['day'=>$vax->date_diffWord])}}</h2>
             <p class="text-green-500  font-bold text-4xl xl:text-5xl">
                 {{number_format($vax->daily_partial)}}
                 <small class="text-xs">{{'+('.number_format($vax->firstDoseCumulPercent,2).'%)'}}</small>
@@ -102,7 +102,7 @@
         </div>
 
         <div class="dark:bg-white bg-gray-50 py-6 rounded-xl shadow ">
-            <h2 class="text-2xl">{{__('New Dose 2 Jabbed')}}</h2>
+            <h2 class="text-2xl">{{__('covid.New Dose 2 Jabbed',['day'=>$vax->date_diffWord])}}</h2>
             <p class="text-green-500  font-bold text-4xl xl:text-5xl">
                 {{number_format($vax->daily_full)}}
                 <small class="text-xs">{{'(+'.number_format($vax->secondDoseCumulPercent,2).'%)'}}</small>
@@ -121,8 +121,8 @@
             </div>
         </div>
 
-        <div class="dark:bg-white bg-gray-50 py-4 sm:py-8 rounded-xl shadow ">
-            <h2 class="text-2xl">{{__('Percentage of Vaccine Register')}}</h2>
+        <div class="dark:bg-white bg-gray-50 py-4 sm:py-6 rounded-xl shadow ">
+            <h2 class="text-2xl">{{__('covid.Percentage of Vaccine Register',['day'=>$vaxReg->date_diffWord])}}</h2>
             <p class="text-green-500  font-bold text-4xl xl:text-5xl">
                 {{number_format($vaxReg->registeredPrecent).'%'}}
                 <small class="text-black text-xs">*{{__($popFilter)}}</small>
