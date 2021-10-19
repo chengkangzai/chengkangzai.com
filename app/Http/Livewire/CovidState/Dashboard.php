@@ -6,6 +6,7 @@ use App\Http\Services\CasesStateService;
 use App\Http\Services\VaxStateService;
 use App\Models\Covid\CasesState;
 use App\Models\Covid\DeathsState;
+use App\Models\Covid\Population;
 use App\Models\Covid\TestState;
 use App\Models\Covid\VaxRegState;
 use App\Models\Covid\VaxState;
@@ -23,6 +24,7 @@ class Dashboard extends Component
     public VaxRegState $vaxReg;
     public array $timestamp = [];
     public int $activeClusterCount = 0;
+    public mixed $popFilter = 'ABOVE_18';
 
     public float $positiveRate = 0;
     public float $fatalityRate = 0;
@@ -30,7 +32,7 @@ class Dashboard extends Component
 
     public string $state = 'Johor';
 
-    protected $listeners = ['CovidStateUpdate'];
+    protected $listeners = ['CovidStateUpdate', 'vaxPopulationUpdate'];
 
     public bool $readyToLoad = false;
 
@@ -62,14 +64,19 @@ class Dashboard extends Component
         $this->state = $state;
     }
 
+    public function vaxPopulationUpdate(string $popFilter)
+    {
+        $this->popFilter = $popFilter;
+    }
+
     private function initVariable(CasesStateService $casesStateService, VaxStateService $vaxStateService): void
     {
         $this->cases = $casesStateService->getCases()->firstWhere('state', $this->state);
         $this->death = $casesStateService->getDeath()->firstWhere('state', $this->state);
         $this->test = $casesStateService->getTest()->firstWhere('state', $this->state);
 
-        $this->vax = $vaxStateService->getVax()->firstWhere('state', $this->state);
-        $this->vaxReg = $vaxStateService->getVaxReg()->firstWhere('state', $this->state);
+        $this->vax = $vaxStateService->getVax(Population::POP_FILTER[$this->popFilter])->firstWhere('state', $this->state);
+        $this->vaxReg = $vaxStateService->getVaxReg(Population::POP_FILTER[$this->popFilter])->firstWhere('state', $this->state);
 
         $this->fatalityRate = $casesStateService->calcFatalityRate()->firstWhere('state', $this->state)->fatalityRate;
         $positiveRateCase = $casesStateService->calcPositiveRate()->firstWhere('state', $this->state);
