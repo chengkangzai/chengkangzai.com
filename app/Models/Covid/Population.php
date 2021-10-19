@@ -43,5 +43,6 @@ class Population extends Model
     public const POP_FILTER = [
         'ALL_POPULATION' => 'pop',
         'ABOVE_18' => 'pop_18',
+        'ABOVE_12' => 'pop_12',
     ];
 }
