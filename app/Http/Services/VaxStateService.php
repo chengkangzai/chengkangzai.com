@@ -52,7 +52,13 @@ class VaxStateService
     {
         return Cache::remember('Population', $this->cacheSecond, function () {
             return Population::all();
-        })->pluck($filter, 'state');
+        })
+            ->map(function (Population $population) {
+                $population->pop_18 = $population->pop_18 + $population->pop_60;
+                $population->pop_12 = $population->pop_12 + $population->pop_18;
+                return $population;
+            })
+            ->pluck($filter, 'state');
     }
 
     private function getDiffForHumans($date): string

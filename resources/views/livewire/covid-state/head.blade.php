@@ -16,5 +16,16 @@
                 @endforeach
             </select>
         </label>
+        <label>
+            <select class="bg-white ring ring-gray-200 mx-2 px-4 py-1 rounded"
+                    wire:model="popFilter">
+                @foreach(\App\Models\Covid\Population::POP_FILTER as $key => $filter)
+                    <option value="{{$key}}">
+                        {{__($key)}}
+                    </option>
+                @endforeach
+            </select>
+        </label>
+        <span class="py-1">{{__('Filter By')}} : </span>
     </div>
 </section>

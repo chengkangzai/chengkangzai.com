@@ -152,6 +152,11 @@ class CasesMalaysiaService
     {
         return Cache::remember('Population', $this->cacheSecond, fn() => Population::all())
             ->where('Idxs', 0)
+            ->map(function (Population $population) {
+                $population->pop_18 = $population->pop_18 + $population->pop_60;
+                $population->pop_12 = $population->pop_12 + $population->pop_18;
+                return $population;
+            })
             ->first()
             ->$filter;
     }
