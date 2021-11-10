@@ -108,11 +108,11 @@
 
                                 <td class="px-6 py-4 whitespace-nowrap text-left border-r border-l">
                                     @if(count(explode(',',$cluster->state))  == 1 )
-                                        {{$cluster->state}}
+                                        {{__($cluster->state)}}
                                     @else
                                         <ul class="list-disc list-inside">
                                             @foreach(explode(',',$cluster->state) as $state)
-                                                <li>{{$state}}</li>
+                                                <li>{{__($state)}}</li>
                                             @endforeach
                                         </ul>
                                     @endif
