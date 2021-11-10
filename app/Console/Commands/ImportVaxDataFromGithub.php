@@ -65,11 +65,7 @@ class ImportVaxDataFromGithub extends Command
             if (app()->environment('production')) {
                 app(WebHookService::class)->notifyInSpam(Carbon::now() . ' : Vaccine Data Successfully Inserted', WebHookService::COLOR['GREEN']);
             }
-        } catch (Exception $exception) {
-            if (app()->environment('production')) {
-                app(WebHookService::class)->notifyInGeneral(Carbon::now() . ' : DAMN STH went WRONG during importing Vaccine : \n\n' . $exception->getMessage(), WebHookService::COLOR['RED']);
-            }
-        } catch (Throwable $exception) {
+        } catch (Throwable|Exception $exception) {
             if (app()->environment('production')) {
                 app(WebHookService::class)->notifyInGeneral(Carbon::now() . ' : DAMN STH went WRONG during importing Vaccine : \n\n' . $exception->getMessage(), WebHookService::COLOR['RED']);
             }

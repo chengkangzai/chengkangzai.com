@@ -6,6 +6,7 @@ namespace App\Console\Services;
 
 use App\Models\Covid\CasesState;
 use App\Models\Covid\DeathsState;
+use App\Models\Covid\Population;
 use Http;
 use Illuminate\Support\Collection;
 
@@ -235,7 +236,10 @@ class ImportCovidFromGithubService
                 $i = 0;
                 return [
                     'cluster' => self::takeIndex($item, $i++),
-                    'state' => self::takeIndex($item, $i++),
+                    'state' =>
+                        collect(explode(',', self::takeIndex($item, $i++)))
+                            ->map(fn($number) => Population::STATE[$number])
+                            ->implode(','),
                     'district' => self::takeIndex($item, $i++),
                     'date_announced' => self::takeIndex($item, $i++, 'string'),
                     'date_last_onset' => self::takeIndex($item, $i++, 'string'),
@@ -251,12 +255,6 @@ class ImportCovidFromGithubService
                     'created_at' => now(),
                     'updated_at' => now(),
                 ];
-            })
-            ->filter(function ($line) {
-                return count($line) == 16; // Purge data that dont have proper formatting
-            })
-            ->filter(function ($line) {
-                return explode(' ', $line['cluster'])[0] == 'Kluster'; //Get Only With Prefix Cluster
             });
     }
 
