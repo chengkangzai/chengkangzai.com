@@ -88,7 +88,7 @@
             <div class="flex flex-wrap w-full mx-auto pb-8">
 
                 <div
-                    class="md:w-1/3 w-full bg-white dark:bg-black flex items-center justify-center px-5 py-8 transform hover:scale-110 transition duration-300 ">
+                    class="md:w-1/3 w-full flex items-center justify-center px-5 py-8 transform hover:scale-110 transition duration-300">
                     <div x-data="{ cn: true }"
                          class="w-full mx-auto rounded-lg bg-gray-50 dark:bg-gray-800 shadow-lg px-5 pt-5 my5 pb-10 text-gray-800">
                         <div class="w-full mb-10">
@@ -149,7 +149,7 @@
                 </div>
 
                 <div
-                    class="md:w-1/3 w-full bg-white dark:bg-black flex items-center justify-center px-5 py-8 transform hover:scale-110 transition duration-300 ">
+                    class="md:w-1/3 w-full flex items-center justify-center px-5 py-8 transform hover:scale-110 transition duration-300">
                     <div
                         class="w-full mx-auto rounded-lg bg-gray-50 dark:bg-gray-800 shadow-lg text-gray-800 py-11">
                         <div class="w-full mb-10 text-center">
@@ -176,7 +176,7 @@
                 </div>
 
                 <div
-                    class="md:w-1/3 w-full bg-white dark:bg-black flex items-center justify-center px-5 py-8 transform hover:scale-110 transition duration-300 ">
+                    class="md:w-1/3 w-full flex items-center justify-center px-5 py-8 transform hover:scale-110 transition duration-300">
                     <div
                         class="w-full mx-auto rounded-lg bg-gray-50 dark:bg-gray-800 shadow-lg text-gray-800 py-8">
                         <div class="w-full mb-10 ">
@@ -240,7 +240,7 @@
             </div>
 
             @forelse($works as $work)
-                <div class="md:w-1/3 sm:w-full bg-white dark:bg-black flex items-center justify-center px-5 py-8">
+                <div class="md:w-1/3 sm:w-full flex items-center justify-center px-5 py-8">
                     <div
                         class="w-full mx-auto rounded-lg bg-gray-50 dark:bg-gray-800 shadow-lg text-gray-800 px-5 transform hover:scale-110 transition duration-300">
                         <div class="w-full mb-10 mt-5">
@@ -482,7 +482,7 @@
                                 </a>
                             </h3>
                             <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
-                                {{__('To be explore')}}
+                                {{__('As a intern, I was responsible for the development of the in house Custom Content Management(CMS) System and various Hotel Website of the company with the use of .NET and .NET Core technology.')}}
                             </p>
                         </div>
 
@@ -498,7 +498,7 @@
     <script>
         const string = [
             '{{__('Laravel Developer')}}',
-            @if($rank>=1)'{{__('No x in most active GitHub users in Malaysia',['rank'=>$rank])}}', @endif
+            @if($rank >= 1)'{{__('No x in most active GitHub users in Malaysia',['rank'=>$rank])}}', @endif
                 '{{__('Fullstack Developer')}}',
             '{{__('Web Developer')}}',
             '{{__('Angular Developer')}}',

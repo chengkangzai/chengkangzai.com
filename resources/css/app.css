@@ -58,3 +58,7 @@
 #st-1 .st-btn > img  {
     display: inline !important;
 }
+
+body {
+    overscroll-behavior-y: none;
+}
