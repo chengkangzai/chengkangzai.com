@@ -1,7 +1,7 @@
 <section class="mt-2" wire:loading.class="animate-pulse" wire:init="load" xmlns:wire="">
     <div class="sm:grid sm:grid-cols-3 sm:grid-rows-3 sm:gap-2 space-y-2 sm:space-y-0">
         <div class="dark:bg-white bg-gray-50 p-4 sm:py-8 rounded-xl shadow ">
-            <h2 class="text-2xl">{{__('covid.New Case',['day'=>$cases->date_diffWord])}}</h2>
+            <h2 class="text-2xl">{{trans('covid.New Case',['day'=>$cases->date_diffWord])}}</h2>
             <p class="text-red-500 font-bold text-4xl xl:text-5xl">{{number_format($cases->cases_new)}}</p>
             <span>(+{{round($cases->newPercentage,2)}}%)
             <span class="font-bold">*</span>
@@ -9,7 +9,7 @@
         </div>
 
         <div class="dark:bg-white bg-gray-50 p-4 sm:py-8 rounded-xl shadow ">
-            <h2 class="text-2xl">{{__('covid.Cumulative Case',['day'=>$cases->date_diffWord])}}</h2>
+            <h2 class="text-2xl">{{trans('covid.Cumulative Case',['day'=>$cases->date_diffWord])}}</h2>
             <p class="text-red-500 font-bold text-4xl xl:text-5xl">{{number_format($cases->cases_cumulative)}}</p>
             <span>({{round($cases->cumPercentage,2)}}%)
             <span class="font-bold">*</span>
@@ -17,7 +17,7 @@
         </div>
 
         <div class="dark:bg-white bg-gray-50 p-4 sm:py-8 rounded-xl shadow ">
-            <h2 class="text-2xl">{{__('covid.Active Case',['day'=>$cases->date_diffWord])}}</h2>
+            <h2 class="text-2xl">{{trans('covid.Active Case',['day'=>$cases->date_diffWord])}}</h2>
             <p class="text-red-500 font-bold text-4xl xl:text-5xl">{{number_format($cases->activeCase)}}</p>
             <span>({{number_format($cases->activeCasePercentage,2)}}%)
             <span class="font-bold">*</span>
@@ -38,14 +38,14 @@
         </div>
 
         <div class="dark:bg-white bg-gray-50 p-4 sm:py-8 rounded-xl shadow ">
-            <h2 class="text-2xl">{{__('covid.Cumulative Death',['day'=>$death->date_diffWord])}}</h2>
+            <h2 class="text-2xl">{{trans('covid.Cumulative Death',['day'=>$death->date_diffWord])}}</h2>
             <p class="text-gray-500  font-bold text-4xl xl:text-5xl">{{number_format($death->deaths_commutative)}}</p>
             <span> {{__('Fatality rate')}} :{{number_format($fatalityRate,2)}}% </span>
         </div>
 
 
         <div class="dark:bg-white bg-gray-50 p-4 sm:py-8 rounded-xl shadow ">
-            <h2 class="text-2xl">{{__('covid.Tested',['day'=>$test->date_diffWord])}}</h2>
+            <h2 class="text-2xl">{{trans('covid.Tested',['day'=>$test->date_diffWord])}}</h2>
             <p class="text-yellow-500 font-bold text-4xl xl:text-5xl">{{number_format($test->totalTest)}}</p>
             <span>
                 {{__('Positive Rate')}}:
@@ -60,17 +60,17 @@
 
         {{--End of Second Row--}}
         <div class="dark:bg-white bg-gray-50 p-4 sm:py-8 rounded-xl shadow ">
-            <h2 class="text-2xl">{{__('covid.New recovered Case',['day'=>$cases->date_diffWord])}}</h2>
+            <h2 class="text-2xl">{{trans('covid.New recovered Case',['day'=>$cases->date_diffWord])}}</h2>
             <p class="text-blue-500 font-bold text-4xl xl:text-5xl">{{number_format($cases->cases_recovered)}}</p>
         </div>
 
         <div class="dark:bg-white bg-gray-50 sm:py-8 rounded-xl shadow ">
-            <h2 class="text-2xl">{{__('covid.Cumulative recovered',['day'=>$cases->date_diffWord])}}</h2>
+            <h2 class="text-2xl">{{trans('covid.Cumulative recovered',['day'=>$cases->date_diffWord])}}</h2>
             <p class="text-blue-500  font-bold text-4xl xl:text-5xl">{{number_format($cases->cases_recovered_cumulative)}}</p>
         </div>
 
         <div class="dark:bg-white bg-gray-50 p-4 sm:py-8 rounded-xl shadow ">
-            <h2 class="text-2xl">{{__('covid.Active Cluster',['day'=>$timestamp['test_dateDiffWord']  ?? ''])}}</h2>
+            <h2 class="text-2xl">{{trans('covid.Active Cluster',['day'=>$timestamp['test_dateDiffWord']  ?? ''])}}</h2>
             <p class="text-yellow-500 font-bold text-4xl xl:text-5xl">{{number_format($activeClusterCount)}}</p>
         </div>
 
@@ -112,7 +112,7 @@
         </div>
 
         <div class="dark:bg-white bg-gray-50 p-4 sm:py-8 rounded-xl shadow ">
-            <h2 class="text-2xl">{{__('covid.Percentage of Vaccine Register',['day'=>$vaxReg->date_diffWord])}}</h2>
+            <h2 class="text-2xl">{{trans('covid.Percentage of Vaccine Register',['day'=>$vaxReg->date_diffWord])}}</h2>
             <p class="text-green-500  font-bold text-4xl xl:text-5xl">
                 {{number_format($vaxReg->registeredPrecent).'%'}}
             </p>
