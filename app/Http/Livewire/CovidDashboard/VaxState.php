@@ -2,7 +2,7 @@
 
 namespace App\Http\Livewire\CovidDashboard;
 
-use App\Http\Services\VaxStateService;
+use App\Http\Services\Covid\VaxStateService;
 use App\Models\Covid\Population;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;

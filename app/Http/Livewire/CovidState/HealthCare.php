@@ -2,7 +2,7 @@
 
 namespace App\Http\Livewire\CovidState;
 
-use App\Http\Services\HealthCareService;
+use App\Http\Services\Covid\HealthCareService;
 use App\Models\Covid\Hospital;
 use App\Models\Covid\ICU;
 use App\Models\Covid\PKRC;

@@ -2,7 +2,7 @@
 
 namespace App\Http\Livewire\CovidState;
 
-use App\Http\Services\CovidState\Graph\CovidStateGraphService;
+use App\Http\Services\Covid\Graph\CovidStateGraphService;
 use Carbon\Carbon;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
