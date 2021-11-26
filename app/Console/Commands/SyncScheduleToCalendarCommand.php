@@ -2,10 +2,9 @@
 
 namespace App\Console\Commands;
 
+use App\Console\Services\CalendarService;
 use App\Models\ScheduleConfig;
-use Carbon\Carbon;
 use Illuminate\Console\Command;
-use Spatie\GoogleCalendar\Event;
 
 class SyncScheduleToCalendarCommand extends Command
 {
@@ -22,6 +21,7 @@ class SyncScheduleToCalendarCommand extends Command
      * @var string
      */
     protected $description = 'run sync command to sync';
+    private CalendarService $calenderService;
 
     /**
      * Create a new command instance.
@@ -30,6 +30,7 @@ class SyncScheduleToCalendarCommand extends Command
      */
     public function __construct()
     {
+        $this->calenderService = new CalendarService();
         parent::__construct();
     }
 
@@ -40,12 +41,19 @@ class SyncScheduleToCalendarCommand extends Command
      */
     public function handle()
     {
-        //one month before, one month after
-        $event = Event::get(Carbon::now()->subMonth(), Carbon::now()->addMonth());
+        $this->info('Starting sync schedule to calendar');
+        $configs = ScheduleConfig::all();
 
-        $config = ScheduleConfig::all();
-//TODO
+        $this->output->progressStart($configs->count());
 
+        foreach ($configs as $config) {
+            $this->calenderService->addEvent($config, $config->user()->get()->first());
+            $this->output->progressAdvance();
+        }
 
+        $this->output->progressFinish();
+        $this->info('Sync schedule to calendar successfully');
+
+        return 0;
     }
 }
