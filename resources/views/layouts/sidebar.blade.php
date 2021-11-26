@@ -42,7 +42,7 @@
         @endcanany
 
         @canany(['schedule_access'])
-            <div x-data="{ open: @if(request()->is('admin/schedule*')) true @else false @endif }">
+            <div x-data="{ open: @if(request()->is('admin/scheduleConfig*')) true @else false @endif }">
                 <button @click="open = !open"
                         class="w-full flex justify-between items-center py-3 px-6 text-gray-600 dark:text-gray-100 cursor-pointer hover:bg-gray-100 hover:text-gray-700 focus:outline-none">
                 <span class="flex items-center">
@@ -65,8 +65,8 @@
                 </button>
 
                 <div x-show="open">
-                    <a class="py-2 px-16 block text-sm text-gray-600 dark:text-gray-100 hover:bg-blue-500 hover:text-white @if(request()->is('admin/schedule*')) bg-purple-200 dark:bg-purple-700@else bg-gray-100 dark:bg-gray-700 @endif"
-                       href="{{route('admin.schedule.index')}}">
+                    <a class="py-2 px-16 block text-sm text-gray-600 dark:text-gray-100 hover:bg-blue-500 hover:text-white @if(request()->is('admin/scheduleConfig*')) bg-purple-200 dark:bg-purple-700 @else bg-gray-100 dark:bg-gray-700 @endif"
+                       href="{{route('admin.scheduleConfig.index')}}">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline" fill="none" viewBox="0 0 24 24"
                              stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
