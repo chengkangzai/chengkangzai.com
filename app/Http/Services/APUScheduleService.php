@@ -9,6 +9,8 @@ class APUScheduleService
 {
     const baseUrl = 'https://s3-ap-southeast-1.amazonaws.com/open-ws/weektimetable';
 
+    private Collection $collection;
+
     public const QUERY_KEY = [
         "INTAKE" => "INTAKE",
         "MODID" => "MODID",
@@ -30,13 +32,39 @@ class APUScheduleService
         "COLOR" => "COLOR",
     ];
 
-    public static function getRaw(): Collection
+    public function __construct()
     {
-        return collect(json_decode(Http::get(self::baseUrl)));
+        $this->collection = collect(json_decode(Http::get(self::baseUrl)));
     }
 
-    public static function where(string $key, $value): Collection
+    public function where(string $key, $value): APUScheduleService
     {
-        return self::getRaw()->where($key, $value);
+        $this->collection = $this->collection->where($key, $value);
+
+        return $this;
     }
+
+    public function query(): APUScheduleService
+    {
+        return $this;
+    }
+
+    public function get(): Collection
+    {
+        return $this->collection;
+    }
+
+    public function getIntakes(): Collection
+    {
+        return $this->collection->pluck('INTAKE')->unique()->sort();
+    }
+
+    public function getGroupings($intake = null): Collection
+    {
+        if ($intake) {
+            return $this->collection->where('INTAKE', $intake)->sort()->pluck('GROUPING')->unique();
+        }
+        return $this->collection->pluck('GROUPING');
+    }
+
 }
