@@ -12,13 +12,15 @@
             </ul>
         </div>
         @include('partial.success-card')
+        @include('partial.error-card')
+
         @if(!$isDoneSetup)
             <div class="bg-gray-50 dark:bg-gray-700 w-full rounded border-2">
                 <h2 class="text-xl text-gray-700 dark:text-gray-200 py-2 px-4">
                     {{__('Hi, Looks like you are first time to use the system, please submit your detail')}}
                 </h2>
             </div>
-            <form action="{{route('admin.schedule.store')}}" method="POST">
+            <form action="{{route('admin.scheduleConfig.store')}}" method="POST">
                 @csrf
                 <div class="bg-gray-50 dark:bg-gray-700 w-1/2 mx-auto rounded border-2 mt-4">
                     <div class="flex flex-wrap -mx-3 mb-6 p-4">
@@ -43,7 +45,8 @@
                                 {{__('Select your Grouping')}}
                                 <select name="grouping" disabled
                                         class="appearance-none block w-full bg-white dark:bg-gray-700 text-gray-700 border border-gray-200 dark:text-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white dark:focus:bg-gray-700  focus:border-gray-500 font-normal text-base">
-                                    <option value="" hidden="" disabled="">{{__('Select your Grouping')}}</option>
+                                    <option value="" hidden="" disabled=""
+                                            selected>{{__('Select your Grouping First')}}</option>
                                 </select>
                             </label>
 
@@ -63,18 +66,49 @@
                 <h2 class="text-xl text-gray-700 dark:text-gray-200 py-2 px-4">
                     {{__('Hello :name, you are already setup your schedule and the schedule will be sync to your calendar whenever its updated')}}
                 </h2>
+                <div class="block my-2">
+                    <a href="{{route('admin.scheduleConfig.edit',$config)}}"
+                       class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline ml-2">
+                        {{__('Edit')}}
+                    </a>
+                    <a href="{{route('admin.schedule.syncNow')}}"
+                       class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline ml-2">
+                        {{__('Sync it NOW!')}}
+                    </a>
+                </div>
                 <table class="w-full border">
                     <tr>
-                        <td class="text-gray-700 dark:text-gray-200 text-sm font-semibold px-4 py-2">{{__('Intake Code')}}
-                            :
+                        <td class="text-gray-700 dark:text-gray-200 text-sm font-semibold px-4 py-2">
+                            {{__('Intake Code')}} :
                         </td>
-                        <td class="text-gray-700 dark:text-gray-200 text-sm font-semibold px-4 py-2">{{$config->intake_code}}</td>
+                        <td class="text-gray-700 dark:text-gray-200 text-sm font-semibold px-4 py-2">
+                            {{$config->intake_code}}
+                        </td>
                     </tr>
                     <tr>
-                        <td class="text-gray-700 dark:text-gray-200 text-sm font-semibold px-4 py-2">{{__('Grouping')}}
-                            :
+                        <td class="text-gray-700 dark:text-gray-200 text-sm font-semibold px-4 py-2">
+                            {{__('Grouping')}} :
                         </td>
-                        <td class="text-gray-700 dark:text-gray-200 text-sm font-semibold px-4 py-2">{{$config->grouping}}</td>
+                        <td class="text-gray-700 dark:text-gray-200 text-sm font-semibold px-4 py-2">
+                            {{$config->grouping}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-gray-700 dark:text-gray-200 text-sm font-semibold px-4 py-2">
+                            {{__('Linked to Microsoft ?')}} :
+                        </td>
+                        @if(auth()->user()->msOauth()->exists())
+                            <td class="text-green-700 dark:text-green-200 text-sm font-semibold px-4 py-2">
+                                {{__('YES')}}
+                            </td>
+                        @else
+                            <td class="text-red-700 dark:text-red-200 text-sm font-semibold px-4 py-2">
+                                {{__('NO')}}
+                                (<a href="{{route('admin.schedule.msOAuth.signin')}}">
+                                    {{__('Click here to link your account')}}
+                                </a>)
+                            </td>
+                        @endif
                     </tr>
                 </table>
             </div>
