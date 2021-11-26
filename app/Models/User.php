@@ -46,4 +46,9 @@ class User extends Authenticatable
     {
         return $this->hasOne(ScheduleConfig::class);
     }
+
+    public function msOauth()
+    {
+        return $this->hasOne(MicrosoftOauth::class);
+    }
 }

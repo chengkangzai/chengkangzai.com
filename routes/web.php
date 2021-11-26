@@ -1,5 +1,6 @@
 <?php
 
+use App\Console\Services\CalendarService;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\ImageController;
 use App\Http\Controllers\LocaleController;
@@ -12,7 +13,11 @@ use App\Http\Controllers\ScheduleController;
 use App\Http\Controllers\TagController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\WorksController;
+use App\Http\Services\APUScheduleService;
+use App\Models\ScheduleConfig;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Route;
+use Spatie\GoogleCalendar\Event;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,6 +33,22 @@ use Illuminate\Support\Facades\Route;
  * Public Page
  */
 Route::group(['as' => 'public.'], function () {
+    Route::get('test', function () {
+        $event = Event::get(Carbon::now()->subMonth(), Carbon::now()->addMonth());
+        $configs = ScheduleConfig::all();
+        $scheduleService = new APUScheduleService();
+
+        foreach ($configs as $config) {
+            $intake = $config->intake_code;
+            $grouping = $config->grouping;
+            $sw = $scheduleService->getSchedule($intake, $grouping)->get();
+
+            $gService = new CalendarService();
+
+            $gService->addEvent($sw, auth()->user());
+
+        }
+    });
     Route::get('/', [PublicIndexController::class, 'index'])->name('index');
     Route::get('/locale/{locale}', [LocaleController::class, 'changeLocale'])->name('setLocale');
     Route::redirect('resume', 'resume.pdf');
@@ -42,6 +63,11 @@ Route::group(['as' => 'public.'], function () {
         Route::get('state', [PublicPandemicController::class, 'state'])->name('state');
     });
     Route::resource('posts.comments', PublicPostCommentController::class)->only(['store']);
+
+    Route::get('unsubscribe/{user}', function () {
+        auth()->user()->scheduleConfig()->delete();
+        echo "You have been successfully unsubscribe";
+    })->name('unsubscribe');
 });
 
 /**
@@ -67,3 +93,9 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'web'], 'as' => 'adm
         Route::resource('/', ScheduleController::class);
     });
 });
+
+//TODO
+// User, Permission and Role Management
+// Make admin page responsive
+// Force user to verify email
+// Fix navigation bar squeeze
