@@ -18,6 +18,7 @@ class CreateScheduleConfigsTable extends Migration
             $table->string('intake_code');
             $table->string('grouping');
             $table->text('except')->nullable();
+            $table->text('emails')->nullable();
             $table->foreignId('user_id')->constrained();
             $table->timestamps();
         });
