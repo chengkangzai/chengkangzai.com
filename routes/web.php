@@ -52,11 +52,12 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'web'], 'as' => 'adm
     Route::post('user/changePassword/{user}', [UserController::class, 'changePassword'])->name('user.changePassword');
     Route::resource('user', UserController::class)->only(['edit']);
 
-    Route::get('posts/{postId}/restore', [PostController::class, 'restore'])->name('posts.restore');
-    Route::resource('posts', PostController::class);
+    Route::middleware('superAdmin')->group(function () {
+        Route::get('posts/{postId}/restore', [PostController::class, 'restore'])->name('posts.restore');
+        Route::resource('posts', PostController::class);
 
-    Route::resource('works', WorksController::class);
-    Route::resource('tags', TagController::class)->except(['show']);
-    Route::resource('comment', CommentController::class)->only('index', 'destroy');
-});
+        Route::resource('works', WorksController::class);
+        Route::resource('tags', TagController::class)->except(['show']);
+        Route::resource('comment', CommentController::class)->only('index', 'destroy');
+    });
 
