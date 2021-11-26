@@ -1,12 +1,13 @@
-<div class="w-64 min-h-screen bg-white dark:bg-gray-800 ">
+<div class="w-2/12 min-h-screen bg-gray-50 dark:bg-gray-800 ">
     <div class="flex items-center justify-center mt-10">
         <a class="text-gray-600 dark:text-gray-100 text-2xl" href="{{route('admin.home')}}">{{config('app.name')}}</a>
     </div>
 
-    <nav class="mt-10">
-        <div x-data="{ open: true }">
-            <button @click="open = !open"
-                    class="w-full flex justify-between items-center py-3 px-6 text-gray-600 dark:text-gray-100 cursor-pointer hover:bg-gray-100 hover:text-gray-700 focus:outline-none">
+    <nav class="mt-10 space-y-2">
+        @canany(['post_access','work_access','comment_access','tag_access'])
+            <div x-data="{ open: @if(request()->is('admin/posts*') || request()->is('admin/works*') || request()->is('admin/comment*') || request()->is('admin/tags*')) true @else false @endif}">
+                <button @click="open = !open"
+                        class="w-full flex justify-between items-center py-3 px-6 text-gray-600 dark:text-gray-100 cursor-pointer hover:bg-gray-100 hover:text-gray-700 focus:outline-none">
                 <span class="flex items-center">
                     <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -17,15 +18,15 @@
                     <span class="mx-4 font-medium">{{__('Dashboard')}}</span>
                 </span>
 
-                <span>
-                    <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <span>
+                    <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path x-show="! open" d="M9 5L16 12L9 19" stroke="currentColor" stroke-width="2"
                               stroke-linecap="round" stroke-linejoin="round" style="display: none;"></path>
                         <path x-show="open" d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="2"
                               stroke-linecap="round" stroke-linejoin="round"></path>
                     </svg>
                 </span>
-            </button>
+                </button>
 
                 <div x-show="open">
                     <a class="py-2 px-16 block text-sm text-gray-600 dark:text-gray-100 hover:bg-blue-500 hover:text-white @if(request()->is('admin/posts*')) bg-purple-200 dark:bg-purple-700  @else bg-gray-100 dark:bg-gray-700 @endif"
