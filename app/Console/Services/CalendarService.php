@@ -31,7 +31,7 @@ class CalendarService
         foreach ($schedules as $schedule) {
             $newEvent = $this->getNewEvent($schedule, $attendees, $user);
 
-            $this->syncCalendar($newEvent);
+            $this->syncCalendar($newEvent, $user);
         }
     }
 
@@ -49,9 +49,9 @@ class CalendarService
         return $attendees;
     }
 
-    private function syncCalendar(array $newEvent)
+    private function syncCalendar(array $newEvent, User $user)
     {
-        $graph = $this->graphService->getGraph();
+        $graph = $this->graphService->getGraph($user);
         $graph->createRequest('POST', '/me/events')
             ->attachBody($newEvent)
             ->setReturnType(Event::class)
