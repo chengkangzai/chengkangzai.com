@@ -4,12 +4,13 @@ use App\Console\Services\CalendarService;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\ImageController;
 use App\Http\Controllers\LocaleController;
+use App\Http\Controllers\MSOauthController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\PublicIndexController;
 use App\Http\Controllers\PublicPandemicController;
 use App\Http\Controllers\PublicPostCommentController;
 use App\Http\Controllers\PublicPostController;
-use App\Http\Controllers\ScheduleController;
+use App\Http\Controllers\ScheduleConfigController;
 use App\Http\Controllers\TagController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\WorksController;
@@ -17,7 +18,6 @@ use App\Http\Services\APUScheduleService;
 use App\Models\ScheduleConfig;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Route;
-use Spatie\GoogleCalendar\Event;
 
 /*
 |--------------------------------------------------------------------------
@@ -73,9 +73,12 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'web'], 'as' => 'adm
     });
 
     Route::group(['prefix' => 'schedule', 'as' => 'schedule.'], function () {
-        Route::post('getGrouping', [ScheduleController::class, 'getGrouping'])->name('getGrouping');
-        Route::resource('/', ScheduleController::class);
+        Route::post('getGrouping', [ScheduleConfigController::class, 'getGrouping'])->name('getGrouping');
+        Route::get('msOAuth', [MSOauthController::class, 'signin'])->name('msOAuth.signin');
+        Route::get('syncNow', [ScheduleConfigController::class, 'syncNow'])->name('syncNow');
+        Route::get('msOAuth/callback', [MSOauthController::class, 'callback'])->name('msOAuth.callback');
     });
+    Route::resource('scheduleConfig', ScheduleConfigController::class);
 });
 
 //TODO
