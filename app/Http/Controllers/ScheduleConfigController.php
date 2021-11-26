@@ -24,19 +24,19 @@ class ScheduleConfigController extends Controller
         return view('admin.schedule.index', compact('isDoneSetup', 'config'));
     }
 
-    public function store(Request $request)
+    public function store(Request $request): RedirectResponse
     {
         $request->user()->scheduleConfig()->create($request->all());
         return redirect()->route('admin.scheduleConfig.index')->with('success', 'Schedule config has been setup');
     }
 
-    public function edit(ScheduleConfig $scheduleConfig)
+    public function edit(ScheduleConfig $scheduleConfig): Factory|View|Application
     {
         $groupings = app(APUScheduleService::class)->getGroupings($scheduleConfig->intake_group);
         return view('admin.schedule.edit', compact('scheduleConfig', 'groupings'));
     }
 
-    public function update(Request $request, ScheduleConfig $scheduleConfig)
+    public function update(Request $request, ScheduleConfig $scheduleConfig): RedirectResponse
     {
         $scheduleConfig->update($request->all());
         return redirect()->route('admin.scheduleConfig.index')->with('success', 'Schedule config has been updated');
