@@ -292,5 +292,21 @@
     "ONE_YEAR": "1 Tahun",
     "Malaysia": "Malaysia",
     "Died of disease (DOD) ": "Meninggal kerana penyakit (DOD)",
-    "As a intern, I was responsible for the development of the in house Custom Content Management(CMS) System and various Hotel Website of the company with the use of .NET and .NET Core technology.": "Sebagai Intern, saya bertanggungjawab untuk pembangunan in-house Content Management System(CMS) dan pelbagai Laman Web Hotel syarikat dengan penggunaan teknologi .NET dan .NET Core."
+    "As a intern, I was responsible for the development of the in house Custom Content Management(CMS) System and various Hotel Website of the company with the use of .NET and .NET Core technology.": "Sebagai Intern, saya bertanggungjawab untuk pembangunan in-house Content Management System(CMS) dan pelbagai Laman Web Hotel syarikat dengan penggunaan teknologi .NET dan .NET Core.",
+    "Schedule": "Jadual",
+    "Select your Intake Code": "Pilih Kod Pengambilan anda",
+    "Select your Grouping": "Pilih Perkumpulan anda",
+    "Save Configuration": "Simpan Konfigurasi",
+    "Hi, Looks like you are first time to use the system, please submit your detail": "Hai, Nampaknya anda pertama kali menggunakan sistem, sila serahkan butiran anda",
+    "Select your Grouping First": "Pilih Pengumpulan anda dahulu",
+    "Hello :name, you are already setup your schedule and the schedule will be sync to your calendar whenever its updated": "Hello :name, anda sudah menyediakan jadual anda dan jadual akan disegerakkan ke kalendar anda apabila ia dikemas kini",
+    "Sync it NOW!": "Sync SEKARANG!",
+    "Intake Code": "Kod Pengambilan",
+    "Grouping": "Grouping",
+    "Linked to Microsoft ?": "Linked ke Microsoft ?",
+    "Click here to link your account": "Klik di sini untuk link akaun anda",
+    "First time? Register here": "Kali pertama? Daftar disini",
+    "Register": "Daftar",
+    "Already have an account? Login here": "Sudah ada akaun? Daftar masuk disini",
+    "Setting": "Tetapan"
 }

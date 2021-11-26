@@ -292,5 +292,21 @@
     "ONE_YEAR": "1 Year",
     "Malaysia": "Malaysia",
     "Died of disease (DOD) ": "Died of disease (DOD)",
-    "As a intern, I was responsible for the development of the in house Custom Content Management(CMS) System and various Hotel Website of the company with the use of .NET and .NET Core technology.": "As an intern, I was responsible for the development of the in house Custom Content Management System(CMS) and various Hotel Website of the company with the use of .NET and .NET Core technology."
+    "As a intern, I was responsible for the development of the in house Custom Content Management(CMS) System and various Hotel Website of the company with the use of .NET and .NET Core technology.": "As an intern, I was responsible for the development of the in house Custom Content Management System(CMS) and various Hotel Website of the company with the use of .NET and .NET Core technology.",
+    "Schedule": "Schedule",
+    "Select your Intake Code": "Select your Intake Code",
+    "Select your Grouping": "Select your Grouping",
+    "Save Configuration": "Save Configuration",
+    "Hi, Looks like you are first time to use the system, please submit your detail": "Hi, Looks like you are first time to use the system, please submit your detail",
+    "Select your Grouping First": "Select your Grouping First",
+    "Hello :name, you are already setup your schedule and the schedule will be sync to your calendar whenever its updated": "Hello :name, you already setup your schedule and the schedule will be sync to your calendar whenever its updated",
+    "Sync it NOW!": "Sync it NOW!",
+    "Intake Code": "Intake Code",
+    "Grouping": "Grouping",
+    "Linked to Microsoft ?": "Linked to Microsoft ?",
+    "Click here to link your account": "Click here to link your account",
+    "First time? Register here": "First time? Register here",
+    "Register": "Register",
+    "Already have an account? Login here": "Already have an account? Login here",
+    "Setting": "Setting"
 }
