@@ -8,6 +8,7 @@ use App\Http\Controllers\PublicIndexController;
 use App\Http\Controllers\PublicPandemicController;
 use App\Http\Controllers\PublicPostCommentController;
 use App\Http\Controllers\PublicPostController;
+use App\Http\Controllers\ScheduleController;
 use App\Http\Controllers\TagController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\WorksController;
@@ -61,3 +62,8 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'web'], 'as' => 'adm
         Route::resource('comment', CommentController::class)->only('index', 'destroy');
     });
 
+    Route::group(['prefix' => 'schedule', 'as' => 'schedule.'], function () {
+        Route::post('getGrouping', [ScheduleController::class, 'getGrouping'])->name('getGrouping');
+        Route::resource('/', ScheduleController::class);
+    });
+});
