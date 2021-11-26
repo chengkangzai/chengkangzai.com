@@ -74,7 +74,7 @@ class CalendarService
             ],
             'body' => [
                 'content' =>
-                    "Hi, $user->name, you have a class of $schedule->MODULE_NAME with lecturer $schedule->NAME ()" .
+                    "Hi, $user->name, you have a class of $schedule->MODULE_NAME with lecturer $schedule->NAME (mailto:$schedule->SAMACCOUNTNAME@staffemail.apu.edu.my)" .
                     " at $schedule->ROOM from $schedule->TIME_FROM to $schedule->TIME_TO",
                 'contentType' => 'text'
             ]
