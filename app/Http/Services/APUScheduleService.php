@@ -67,4 +67,25 @@ class APUScheduleService
         return $this->collection->pluck('GROUPING');
     }
 
+    public function getByIntake($intake): APUScheduleService
+    {
+        $this->collection = $this->collection->where('INTAKE', $intake);
+
+        return $this;
+    }
+
+    public function getByGrouping($grouping): APUScheduleService
+    {
+        $this->collection = $this->collection->where('GROUPING', $grouping);
+
+        return $this;
+    }
+
+    public function getSchedule($intake, $grouping): APUScheduleService
+    {
+        $this->collection = $this->collection->where('INTAKE', $intake)->where('GROUPING', $grouping);
+
+        return $this;
+    }
+
 }
