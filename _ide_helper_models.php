@@ -525,11 +525,13 @@ namespace App\Models\Covid{
  * @property int $daily
  * @property int $daily_partial_child
  * @property int $daily_full_child
+ * @property int $daily_booster
  * @property int $cumul_partial
  * @property int $cumul_full
  * @property int $cumul
  * @property int $cumul_partial_child
  * @property int $cumul_full_child
+ * @property int $cumul_booster
  * @property int $pfizer1
  * @property int $pfizer2
  * @property int $sinovac1
@@ -547,11 +549,13 @@ namespace App\Models\Covid{
  * @method static \Illuminate\Database\Eloquent\Builder|VaxMalaysia whereCansino($value)
  * @method static \Illuminate\Database\Eloquent\Builder|VaxMalaysia whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|VaxMalaysia whereCumul($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|VaxMalaysia whereCumulBooster($value)
  * @method static \Illuminate\Database\Eloquent\Builder|VaxMalaysia whereCumulFull($value)
  * @method static \Illuminate\Database\Eloquent\Builder|VaxMalaysia whereCumulFullChild($value)
  * @method static \Illuminate\Database\Eloquent\Builder|VaxMalaysia whereCumulPartial($value)
  * @method static \Illuminate\Database\Eloquent\Builder|VaxMalaysia whereCumulPartialChild($value)
  * @method static \Illuminate\Database\Eloquent\Builder|VaxMalaysia whereDaily($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|VaxMalaysia whereDailyBooster($value)
  * @method static \Illuminate\Database\Eloquent\Builder|VaxMalaysia whereDailyFull($value)
  * @method static \Illuminate\Database\Eloquent\Builder|VaxMalaysia whereDailyFullChild($value)
  * @method static \Illuminate\Database\Eloquent\Builder|VaxMalaysia whereDailyPartial($value)
@@ -662,11 +666,13 @@ namespace App\Models\Covid{
  * @property int $daily
  * @property int $daily_partial_child
  * @property int $daily_full_child
+ * @property int $daily_booster
  * @property int $cumul_partial
  * @property int $cumul_full
  * @property int $cumul
  * @property int $cumul_partial_child
  * @property int $cumul_full_child
+ * @property int $cumul_booster
  * @property int $pfizer1
  * @property int $pfizer2
  * @property int $sinovac1
@@ -684,11 +690,13 @@ namespace App\Models\Covid{
  * @method static \Illuminate\Database\Eloquent\Builder|VaxState whereCansino($value)
  * @method static \Illuminate\Database\Eloquent\Builder|VaxState whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|VaxState whereCumul($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|VaxState whereCumulBooster($value)
  * @method static \Illuminate\Database\Eloquent\Builder|VaxState whereCumulFull($value)
  * @method static \Illuminate\Database\Eloquent\Builder|VaxState whereCumulFullChild($value)
  * @method static \Illuminate\Database\Eloquent\Builder|VaxState whereCumulPartial($value)
  * @method static \Illuminate\Database\Eloquent\Builder|VaxState whereCumulPartialChild($value)
  * @method static \Illuminate\Database\Eloquent\Builder|VaxState whereDaily($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|VaxState whereDailyBooster($value)
  * @method static \Illuminate\Database\Eloquent\Builder|VaxState whereDailyFull($value)
  * @method static \Illuminate\Database\Eloquent\Builder|VaxState whereDailyFullChild($value)
  * @method static \Illuminate\Database\Eloquent\Builder|VaxState whereDailyPartial($value)
@@ -704,6 +712,38 @@ namespace App\Models\Covid{
  * @method static \Illuminate\Database\Eloquent\Builder|VaxState whereUpdatedAt($value)
  */
 	class VaxState extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
+ * App\Models\MicrosoftOauth
+ *
+ * @property int $id
+ * @property string $accessToken
+ * @property string $refreshToken
+ * @property string $tokenExpires
+ * @property string $userName
+ * @property string $userEmail
+ * @property string $userTimeZone
+ * @property int $user_id
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read \App\Models\User $user
+ * @method static \Illuminate\Database\Eloquent\Builder|MicrosoftOauth newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|MicrosoftOauth newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|MicrosoftOauth query()
+ * @method static \Illuminate\Database\Eloquent\Builder|MicrosoftOauth whereAccessToken($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|MicrosoftOauth whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|MicrosoftOauth whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|MicrosoftOauth whereRefreshToken($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|MicrosoftOauth whereTokenExpires($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|MicrosoftOauth whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|MicrosoftOauth whereUserEmail($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|MicrosoftOauth whereUserId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|MicrosoftOauth whereUserName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|MicrosoftOauth whereUserTimeZone($value)
+ */
+	class MicrosoftOauth extends \Eloquent {}
 }
 
 namespace App\Models{
@@ -754,6 +794,34 @@ namespace App\Models{
 
 namespace App\Models{
 /**
+ * App\Models\ScheduleConfig
+ *
+ * @property int $id
+ * @property string $intake_code
+ * @property string $grouping
+ * @property string|null $except
+ * @property string|null $emails
+ * @property int $user_id
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read \App\Models\User $user
+ * @method static \Illuminate\Database\Eloquent\Builder|ScheduleConfig newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|ScheduleConfig newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|ScheduleConfig query()
+ * @method static \Illuminate\Database\Eloquent\Builder|ScheduleConfig whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|ScheduleConfig whereEmails($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|ScheduleConfig whereExcept($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|ScheduleConfig whereGrouping($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|ScheduleConfig whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|ScheduleConfig whereIntakeCode($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|ScheduleConfig whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|ScheduleConfig whereUserId($value)
+ */
+	class ScheduleConfig extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
  * App\Models\User
  *
  * @property int $id
@@ -766,12 +834,20 @@ namespace App\Models{
  * @property string|null $remember_token
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read \App\Models\MicrosoftOauth|null $msOauth
  * @property-read \Illuminate\Notifications\DatabaseNotificationCollection|\Illuminate\Notifications\DatabaseNotification[] $notifications
  * @property-read int|null $notifications_count
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Spatie\Permission\Models\Permission[] $permissions
+ * @property-read int|null $permissions_count
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Spatie\Permission\Models\Role[] $roles
+ * @property-read int|null $roles_count
+ * @property-read \App\Models\ScheduleConfig|null $scheduleConfig
  * @method static \Database\Factories\UserFactory factory(...$parameters)
  * @method static \Illuminate\Database\Eloquent\Builder|User newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|User newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|User permission($permissions)
  * @method static \Illuminate\Database\Eloquent\Builder|User query()
+ * @method static \Illuminate\Database\Eloquent\Builder|User role($roles, $guard = null)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereEmail($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereEmailVerifiedAt($value)
