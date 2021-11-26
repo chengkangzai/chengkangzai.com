@@ -2,6 +2,7 @@
 
 namespace App\Http\Services;
 
+use App\Models\User;
 use League\OAuth2\Client\Provider\GenericProvider;
 use Microsoft\Graph\Graph as MicrosoftGraph;
 
@@ -27,9 +28,9 @@ class MicrosoftGraphService
         ]);
     }
 
-    public function getGraph(): MicrosoftGraph
+    public function getGraph(User $user): MicrosoftGraph
     {
-        $accessToken = $this->tokenService->getAccessToken(auth()->user());
+        $accessToken = $this->tokenService->getAccessToken($user);
 
         // Create a Graph client
         $graph = new MicrosoftGraph();
