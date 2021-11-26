@@ -15,13 +15,13 @@ class CreateMicrosoftOauthsTable extends Migration
     {
         Schema::create('microsoft_oauths', function (Blueprint $table) {
             $table->id();
-            $table->string('accessToken');
-            $table->string('refreshToken');
-            $table->string('tokenExpires');
+            $table->text('accessToken');
+            $table->text('refreshToken');
+            $table->text('tokenExpires');
             $table->string('userName');
             $table->string('userEmail');
             $table->string('userTimeZone');
-            $table->foreignId('userId')->constrained();
+            $table->foreignId('user_id')->constrained();
             $table->timestamps();
         });
     }
