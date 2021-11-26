@@ -24,6 +24,7 @@
     </script>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     @laravelPWA
+    @livewireStyles
     @stack('cdn')
     @stack('style')
 </head>
@@ -131,4 +132,5 @@
 </div>
 </body>
 @stack('script')
+@livewireScripts
 </html>
