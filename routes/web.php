@@ -33,22 +33,6 @@ use Spatie\GoogleCalendar\Event;
  * Public Page
  */
 Route::group(['as' => 'public.'], function () {
-    Route::get('test', function () {
-        $event = Event::get(Carbon::now()->subMonth(), Carbon::now()->addMonth());
-        $configs = ScheduleConfig::all();
-        $scheduleService = new APUScheduleService();
-
-        foreach ($configs as $config) {
-            $intake = $config->intake_code;
-            $grouping = $config->grouping;
-            $sw = $scheduleService->getSchedule($intake, $grouping)->get();
-
-            $gService = new CalendarService();
-
-            $gService->addEvent($sw, auth()->user());
-
-        }
-    });
     Route::get('/', [PublicIndexController::class, 'index'])->name('index');
     Route::get('/locale/{locale}', [LocaleController::class, 'changeLocale'])->name('setLocale');
     Route::redirect('resume', 'resume.pdf');
