@@ -16,10 +16,10 @@ class CalendarService
     private MicrosoftGraphService $graphService;
     private APUScheduleService $APUSchedule;
 
-    public function __construct(MicrosoftGraphService $graphService, APUScheduleService $APUScheduleService)
+    public function __construct()
     {
-        $this->graphService = $graphService;
-        $this->APUSchedule = $APUScheduleService;
+        $this->graphService = new MicrosoftGraphService();
+        $this->APUSchedule = new APUScheduleService();
     }
 
     public function addEvent($config, User $user)
