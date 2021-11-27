@@ -45,6 +45,7 @@ Route::group(['as' => 'public.'], function () {
     Route::resource('posts.comments', PublicPostCommentController::class)->only(['store']);
 
     Route::get('unsubscribe/{user}', function () {
+        //TODO: unsubscribe
         auth()->user()->scheduleConfig()->delete();
         echo "You have been successfully unsubscribe";
     })->name('unsubscribe');
