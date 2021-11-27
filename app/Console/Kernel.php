@@ -38,7 +38,7 @@ class Kernel extends ConsoleKernel
 
         $schedule->command('sitemap:generate')->daily();
 
-        $schedule->command('schedule:sync')->daily();
+        $schedule->command('schedule:sync')->weekly()->saturdays()->at('06:00');
     }
 
     /**
