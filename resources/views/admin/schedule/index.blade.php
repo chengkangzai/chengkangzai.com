@@ -64,7 +64,7 @@
         @else
             <div class="bg-gray-50 dark:bg-gray-700 w-full rounded border-2">
                 <h2 class="text-xl text-gray-700 dark:text-gray-200 py-2 px-4">
-                    {{__('Hello :name, you are already setup your schedule and the schedule will be sync to your calendar whenever its updated')}}
+                    {{__('Hello :name, you are already setup your schedule and the schedule will be sync to your calendar whenever its updated',['name'=>auth()->user()->name ?? ''])}}
                 </h2>
                 <div class="block my-2">
                     <a href="{{route('admin.scheduleConfig.edit',$config)}}"
