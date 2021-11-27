@@ -8,8 +8,12 @@ use App\Http\Services\APUScheduleService;
 use App\Http\Services\MicrosoftGraphService;
 use App\Http\Services\TimeZoneService;
 use App\Models\User;
+use Carbon\Carbon;
+use DateTimeImmutable;
+use DateTimeInterface;
+use DateTimeZone;
 use JetBrains\PhpStorm\ArrayShape;
-use Microsoft\Graph\Model\Event;
+use Microsoft\Graph\Model;
 
 class CalendarService
 {
@@ -28,10 +32,19 @@ class CalendarService
         $attendees = $this->getAttendees($attendeeAddresses);
         $schedules = $this->APUSchedule->getSchedule($config->intake_code, $config->grouping)->get();
 
+        $events = $this->getEvent($user);
         foreach ($schedules as $schedule) {
-            $newEvent = $this->getNewEvent($schedule, $attendees, $user);
 
-            $this->syncCalendar($newEvent, $user);
+            $isEventCreated = $events->filter(function ($event) use ($schedule) {
+                    return $event->getSubject() === $schedule->MODID
+                        && Carbon::parse($event->getStart()->getDateTime()) == Carbon::parse($schedule->TIME_FROM_ISO)
+                        && Carbon::parse($event->getEnd()->getDateTime()) == Carbon::parse($schedule->TIME_TO_ISO);
+                })->count() > 0;
+
+            if (!$isEventCreated) {
+                $newEvent = $this->formatNewEvent($schedule, $attendees, $user);
+                $this->syncCalendar($newEvent, $user);
+            }
         }
     }
 
@@ -54,23 +67,23 @@ class CalendarService
         $graph = $this->graphService->getGraph($user);
         $graph->createRequest('POST', '/me/events')
             ->attachBody($newEvent)
-            ->setReturnType(Event::class)
+            ->setReturnType(Model\Event::class)
             ->execute();
     }
 
     #[ArrayShape(['subject' => "", 'attendees' => "array", 'start' => "array", 'end' => "array", 'body' => "string[]"])]
-    private function getNewEvent($schedule, array $attendees, User $user): array
+    private function formatNewEvent($schedule, array $attendees, User $user): array
     {
         return [
             'subject' => $schedule->MODID,
             'attendees' => $attendees,
             'start' => [
                 'dateTime' => $schedule->TIME_FROM_ISO,
-                'timeZone' => TimeZoneService::$timeZoneMap['SE Asia Standard Time']
+                'timeZone' => TimeZoneService::$timeZoneMap['Singapore Standard Time']
             ],
             'end' => [
                 'dateTime' => $schedule->TIME_TO_ISO,
-                'timeZone' => TimeZoneService::$timeZoneMap['SE Asia Standard Time']
+                'timeZone' => TimeZoneService::$timeZoneMap['Singapore Standard Time']
             ],
             'body' => [
                 'content' =>
@@ -79,5 +92,41 @@ class CalendarService
                 'contentType' => 'text'
             ]
         ];
+    }
+
+    public function getEvent(User $user)
+    {
+
+        $graph = $this->graphService->getGraph($user);
+
+        $timezone = new DateTimeZone(TimeZoneService::$timeZoneMap["Singapore Standard Time"]);
+
+        // Get start and end of week
+        $startOfWeek = new DateTimeImmutable('sunday -2 week', $timezone);
+        $endOfWeek = new DateTimeImmutable('sunday +2 week', $timezone);
+
+        $queryParams = array(
+            'startDateTime' => $startOfWeek->format(DateTimeInterface::ISO8601),
+            'endDateTime' => $endOfWeek->format(DateTimeInterface::ISO8601),
+            // Only request the properties used by the app
+            '$select' => 'subject,organizer,start,end',
+            // Sort them by start time
+            '$orderby' => 'start/dateTime',
+            // Limit results to 25
+            '$top' => 25
+        );
+
+        // Append query parameters to the '/me/calendarView' url
+        $getEventsUrl = '/me/calendarView?' . http_build_query($queryParams);
+
+        $events = $graph->createRequest('GET', $getEventsUrl)
+            // Add the user's timezone to the Prefer header
+            ->addHeaders(array(
+                'Prefer' => 'outlook.timezone="' . TimeZoneService::$timeZoneMap["Singapore Standard Time"] . '"'
+            ))
+            ->setReturnType(Model\Event::class)
+            ->execute();
+
+        return collect($events);
     }
 }
