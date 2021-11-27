@@ -24,7 +24,7 @@
                         {{__('Filter By')}} :
                         <select class="bg-white ring ring-gray-200 mx-2 px-4 py-1 rounded" wire:model="filter">
                             <option disabled>-----</option>
-                            @foreach(\App\Http\Services\CovidState\Graph\CovidStateGraphService::FILTER as $filter)
+                            @foreach(\App\Http\Services\Covid\Graph\CovidStateGraphService::FILTER as $filter)
                                 <option value="{{$filter}}">
                                     {{__($filter)}}
                                 </option>

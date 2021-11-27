@@ -292,5 +292,21 @@
     "ONE_YEAR": "1年",
     "Malaysia": "马来西亚",
     "Died of disease (DOD) ": "死于疾病 (DOD)",
-    "As a intern, I was responsible for the development of the in house Custom Content Management(CMS) System and various Hotel Website of the company with the use of .NET and .NET Core technology.": "作为实习生，我负责使用.NET和.NET Core技术开发公司内部定制内容管理（CMS）系统和各种酒店网站。"
+    "As a intern, I was responsible for the development of the in house Custom Content Management(CMS) System and various Hotel Website of the company with the use of .NET and .NET Core technology.": "作为实习生，我负责使用.NET和.NET Core技术开发公司内部定制内容管理（CMS）系统和各种酒店网站。",
+    "Schedule": "日程",
+    "Select your Intake Code": "选择您的摄入代码",
+    "Select your Grouping": "选择您的分组",
+    "Save Configuration": "保存配置",
+    "Hi, Looks like you are first time to use the system, please submit your detail": "您好，您是第一次使用该系统，请提交您的详细信息",
+    "Select your Grouping First": "首先选择您的分组",
+    "Hello :name, you are already setup your schedule and the schedule will be sync to your calendar whenever its updated": "您好 :name，您已经设置了您的日程安排，日程安排将在更新时同步到您的日历",
+    "Sync it NOW!": "立即同步！",
+    "Intake Code": "摄入代码",
+    "Grouping": "分组",
+    "Linked to Microsoft ?": "与微软有联系吗？",
+    "Click here to link your account": "单击此处链接您的帐户",
+    "First time? Register here": "第一次？在这里注册",
+    "Register": "登记",
+    "Already have an account? Login here": "已经有一个帐户？这里登录",
+    "Setting": "环境"
 }

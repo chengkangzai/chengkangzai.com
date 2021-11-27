@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Services;
+namespace App\Http\Services\Covid;
 
 use App\Models\Covid\Population;
 use App\Models\Covid\VaxRegState;

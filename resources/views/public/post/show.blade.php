@@ -1,9 +1,12 @@
+@php
+    /* @var App\Models\Post $post */
+@endphp
 @extends('layouts.app')
 
 @section('content')
     @include('partial.rocket')
     <div class="xl:w-8/12 md:w-10/12 mx-auto pt-20 ">
-        @include('partial.public-heading')
+        @include('partial.public-heading', ['title' => __('Just Random Sharing Blog for tech')])
 
         <div class="flex flex-wrap -m-4 dark:text-white w-full mx-auto mb-6">
             <div class="mx-auto text-center pb-8 ">

@@ -17,10 +17,12 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             UserSeeder::class,
+            PermissionSeeder::class,
+            RoleSeeder::class,
             PostSeeder::class,
             CommentSeeder::class,
             TagsSeeder::class,
-            WorksSeeder::class
+            WorksSeeder::class,
         ]);
 
         exec('php artisan import:covid');

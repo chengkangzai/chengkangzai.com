@@ -40,5 +40,13 @@
                 </a>
             </div>
         @endif
+
+        @if (Route::has('register'))
+            <div class="text-center dark:text-white">
+                <a class="hover:underline" href="{{ route('register') }}">
+                    {{ __('First time? Register here') }}
+                </a>
+            </div>
+        @endif
     </div>
 @endsection

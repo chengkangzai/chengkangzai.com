@@ -48,9 +48,10 @@ class FortifyServiceProvider extends ServiceProvider
             SEOTools::setTitle("Login");
             return view('auth.login');
         });
-//        Fortify::registerView(function () {
-//            return view('auth.register');
-//        });
+        Fortify::registerView(function () {
+            SEOTools::setTitle("Register");
+            return view('auth.register');
+        });
         Fortify::requestPasswordResetLinkView(function () {
             SEOTools::setTitle('Forget Password');
             return view('auth.forget-password');

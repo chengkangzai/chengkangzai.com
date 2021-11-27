@@ -2,8 +2,8 @@
 
 namespace App\Http\Livewire\CovidState;
 
-use App\Http\Services\CasesStateService;
-use App\Http\Services\VaxStateService;
+use App\Http\Services\Covid\CasesStateService;
+use App\Http\Services\Covid\VaxStateService;
 use App\Models\Covid\CasesState;
 use App\Models\Covid\DeathsState;
 use App\Models\Covid\Population;

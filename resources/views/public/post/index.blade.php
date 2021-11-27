@@ -1,9 +1,13 @@
+@php
+    /* @var App\Models\Post $post */
+@endphp
+
 @extends('layouts.app')
 
 @section('content')
     @include('partial.rocket')
     <div class="md:w-10/12 mx-auto pt-20 ">
-        @include('partial.public-heading')
+        @include('partial.public-heading', ['title' => __('Just Random Sharing Blog for tech')])
 
         <div class="flex flex-wrap -m-4 dark:text-white w-full mx-auto pb-32">
             @foreach($posts as $post)

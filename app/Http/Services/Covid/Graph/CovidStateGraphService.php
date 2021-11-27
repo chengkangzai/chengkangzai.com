@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Services\CovidState\Graph;
+namespace App\Http\Services\Covid\Graph;
 
 use Cache;
 use Carbon\Carbon;

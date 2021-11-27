@@ -3,7 +3,7 @@
 namespace App\Http\Livewire\CovidDashboard;
 
 
-use App\Http\Services\CasesStateService;
+use App\Http\Services\Covid\CasesStateService;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
