@@ -36,8 +36,7 @@ class CalendarService
         foreach ($schedules as $schedule) {
 
             $isEventCreated = $events->filter(function ($event) use ($schedule) {
-                    return $event->getSubject() === $schedule->MODID
-                        && Carbon::parse($event->getStart()->getDateTime()) == Carbon::parse($schedule->TIME_FROM_ISO)
+                    return Carbon::parse($event->getStart()->getDateTime()) == Carbon::parse($schedule->TIME_FROM_ISO)
                         && Carbon::parse($event->getEnd()->getDateTime()) == Carbon::parse($schedule->TIME_TO_ISO);
                 })->count() > 0;
 
