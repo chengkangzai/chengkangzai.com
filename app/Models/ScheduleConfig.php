@@ -10,7 +10,7 @@ class ScheduleConfig extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['intake_code', 'grouping', 'except', 'user_id'];
+    protected $fillable = ['intake_code', 'grouping', 'except', 'emails', 'user_id'];
 
     public function user(): BelongsTo
     {
