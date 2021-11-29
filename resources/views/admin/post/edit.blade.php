@@ -5,7 +5,6 @@
 @extends('layouts.app')
 
 @section('content')
-    @include('layouts.sidebar')
     <div class="bg-gray-100 dark:bg-gray-800 relative h-screen overflow-hidden relative w-full">
         <div class="flex items-start justify-between">
             <div class="flex flex-col w-full">

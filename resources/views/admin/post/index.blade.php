@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-    @include('layouts.sidebar')
     <div class="table w-full p-2 overflow-auto">
         {{--https://tailwindcomponents.com/component/breadcrumb-components--}}
         <div

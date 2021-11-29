@@ -5,7 +5,6 @@
 @extends('layouts.app')
 
 @section('content')
-    @include('layouts.sidebar')
     <div class="table w-full p-2 overflow-auto">
         <div
             class="py-3 px-5 mb-2 bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 rounded-md text-sm border border-gray-200 dark:border-gray-600">
