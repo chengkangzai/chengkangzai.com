@@ -29,8 +29,7 @@
     @stack('style')
 </head>
 <body>
-<div class="h-screen bg-white dark:bg-black overscroll-none	">
-
+<div class="min-h-screen flex flex-col overscroll-none">
     <header
         class="w-full text-gray-700 bg-white dark:text-gray-200 dark:bg-gray-800 from-blue-400 bg-gradient-to-r to-purple-600">
         <div x-data="{ open: false }"
@@ -70,19 +69,19 @@
                 @endif
                 <div @click.away="open = false" class="relative" x-data="{ open: false }">
                     <button @click="open = !open" aria-label="Drop Down trigger"
-                            class="hover:text-black flex flex-row text-white items-center w-full px-4 py-2 mt-2 text-bold text-md text-left bg-transparent rounded-lg dark:bg-transparent dark:focus:text-white dark:hover:text-white dark:focus:bg-gray-600 dark:hover:bg-gray-600 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
+                            class="hover:text-black flex flex-row text-white items-center w-full px-2 py-2 font-bold text-md text-left bg-transparent rounded-lg dark:bg-transparent dark:focus:text-white dark:hover:text-white dark:focus:bg-gray-600 dark:hover:bg-gray-600 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
                         <span>
+                        {{__('Select Language')}}
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline"
                              fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                   d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                        {{__('Select Language')}}
-                        </span>
                         <svg viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}"
                              class="inline w-4 h-4 mt-1 ml-1 fill-current transition-transform duration-200 transform md:-mt-1">
                             <path fill-rule="evenodd" clip-rule="evenodd"
                                   d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"></path>
                         </svg>
+                        </span>
                     </button>
                     <div x-show="open"
                          x-transition:enter="transition ease-out duration-100"
@@ -101,42 +100,60 @@
                                href="{{route('public.setLocale','ms')}}">Bahasa Malaysia</a>
                         </div>
                     </div>
-                    @auth
+                </div>
+                @auth
+                    <div class="mt-2 sm:ml-2 space-x-2 relative">
                         @if(request()->is("admin/*"))
                             <a href="{{url('/')}}"
-                               class="leading-none border border-teal-600 rounded border py-2 px-2 ml-4 my-auto font-medium md:text-white ">
+                               class="px-2 py-2 leading-none bg-transparent my-auto text-white font-semibold border border-gray-100 rounded hover:bg-gray-100 hover:text-gray-700">
                                 {{__('Main Page')}}</a>
                         @else
                             <a href="{{route('admin.home')}}"
-                               class="leading-none border border-teal-600 rounded border py-2 px-2 ml-4 my-auto font-medium md:text-white ">
+                               class="px-2 py-2 leading-none bg-transparent my-auto text-white font-semibold border border-gray-100 rounded hover:bg-gray-100 hover:text-gray-700">
                                 {{__('Home')}}</a>
                         @endif
                         <a href="{{route('logout')}}"
                            onclick="event.preventDefault();document.getElementById('logout-form').submit();"
-                           class="px-2 py-2 ml-2 leading-none bg-white my-auto text-gray-500 font-semibold border border-gray-100 rounded hover:border-transparent hover:bg-gray-100">
+                           class="px-2 py-2 leading-none bg-transparent my-auto text-white font-semibold border border-gray-100 rounded hover:bg-gray-100 hover:text-gray-700">
                             {{ __('Logout') }}
                         </a>
 
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="hidden">
                             @csrf
                         </form>
-                    @endauth
+                    </div>
+                @endauth
 
-                    @guest
-                        <a href="{{route('login')}}"
-                           class="leading-none border border-teal-600 rounded border py-2 px-2 ml-2 my-auto font-medium md:text-white ">
-                            {{__('Login')}}</a>
-                    @endguest
-                </div>
+                @guest
+                    <a href="{{route('login')}}"
+                       class="leading-none border border-teal-600 rounded border py-2 px-2 ml-2 my-auto font-medium md:text-white ">
+                        {{__('Login')}}</a>
+                @endguest
             </nav>
         </div>
     </header>
-    <main
-        class="bg-white dark:bg-black w-full px-3 md:px-0 @if(request()->is('admin/*')) flex @else min-h-screen  @endif">
-        @yield('content')
-    </main>
+
+    <div class="flex-1 flex flex-col sm:flex-row">
+        <main class="flex-1 bg-white dark:bg-black w-full px-3 md:px-0 ">
+            @yield('content')
+        </main>
+        @if(request()->is('admin/*'))
+            <nav class="order-first sm:w-64">@include('layouts.sidebar')</nav>
+        @endif
+    </div>
+
     @yield('footer')
 </div>
+
+{{--<div class="h-screen bg-white dark:bg-black ">--}}
+
+<
+{{--    <main--}}
+{{--        class="bg-white dark:bg-black w-full px-3 md:px-0 @if(request()->is('admin/*')) flex @else min-h-screen  @endif">--}}
+{{--
+{{--    </main>--}}
+
+{{--</div>--}}
 </body>
 @stack('script')
 @livewireScripts

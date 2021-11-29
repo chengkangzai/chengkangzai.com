@@ -1,5 +1,5 @@
-<div class="w-2/12 min-h-screen bg-gray-50 dark:bg-gray-800 ">
-    <div class="flex items-center justify-center mt-10">
+<div class="min-h-screen bg-gray-50 dark:bg-gray-800 sm:block hidden">
+    <div class="flex items-center justify-center pt-10">
         <a class="text-gray-600 dark:text-gray-100 text-2xl" href="{{route('admin.home')}}">{{config('app.name')}}</a>
     </div>
 
