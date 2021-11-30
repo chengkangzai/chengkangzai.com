@@ -144,16 +144,6 @@
 
     @yield('footer')
 </div>
-
-{{--<div class="h-screen bg-white dark:bg-black ">--}}
-
-<
-{{--    <main--}}
-{{--        class="bg-white dark:bg-black w-full px-3 md:px-0 @if(request()->is('admin/*')) flex @else min-h-screen  @endif">--}}
-{{--
-{{--    </main>--}}
-
-{{--</div>--}}
 </body>
 @stack('script')
 @livewireScripts
