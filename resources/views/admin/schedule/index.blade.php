@@ -1,5 +1,10 @@
 @extends('layouts.app')
 
+@push('cdn')
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.js"></script>
+@endpush
+
 @section('content')
     <div class="table w-full p-2 overflow-auto">
         <div
@@ -111,6 +116,11 @@
                     </tr>
                 </table>
             </div>
+
+            @if($isDoneSetup)
+                <h2 class="text-center text-3xl font-bold dark:text-gray-300">Your Schedule</h2>
+                <div id='calendar' class="w-3/5 mx-auto dark:bg-gray-800 dark:text-gray-100 mt-4"></div>
+            @endif
         @endif
     </div>
 @endsection
@@ -144,4 +154,29 @@
 
         }
     </script>
+
+    @if($isDoneSetup)
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var calendarEl = document.getElementById('calendar');
+                var calendar = new FullCalendar.Calendar(calendarEl, {
+                    headerToolbar: {center: 'dayGridMonth,timeGridWeek'}, // buttons for switching between views
+                    initialView: 'timeGridWeek',
+                    aspectRatio: 2,
+                });
+
+                @foreach($events as $event)
+                calendar.addEvent({
+                    title: '{{$event->MODID}}',
+                    start: '{{$event->TIME_FROM_ISO}}',
+                    end: '{{$event->TIME_TO_ISO}}',
+
+                });
+                @endforeach
+
+
+                calendar.render();
+            });
+        </script>
+    @endif
 @endpush

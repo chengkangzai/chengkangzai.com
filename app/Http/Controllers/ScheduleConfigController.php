@@ -20,8 +20,8 @@ class ScheduleConfigController extends Controller
     {
         $isDoneSetup = Auth::user()->scheduleConfig()->exists();
         $config = $isDoneSetup ? Auth::user()->scheduleConfig : null;
-
-        return view('admin.schedule.index', compact('isDoneSetup', 'config'));
+        $events = $isDoneSetup ? app(APUScheduleService::class)->getSchedule($config->intake_code, $config->grouping)->get() : collect();
+        return view('admin.schedule.index', compact('isDoneSetup', 'config', 'events'));
     }
 
     public function store(Request $request): RedirectResponse

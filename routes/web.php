@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CommentController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ImageController;
 use App\Http\Controllers\LocaleController;
 use App\Http\Controllers\MSOauthController;
@@ -56,7 +57,7 @@ Route::group(['as' => 'public.'], function () {
  */
 Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'web'], 'as' => 'admin.'], function () {
     Route::post('image/store', [ImageController::class, 'store'])->name('image.store');
-    Route::view('home', 'admin.home')->name('home');
+    Route::get('home', [DashboardController::class, 'index'])->name('home');
     Route::post('user/changePassword/{user}', [UserController::class, 'changePassword'])->name('user.changePassword');
     Route::resource('user', UserController::class)->only(['edit']);
 
