@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="bg-gray-100 dark:bg-gray-800 relative h-screen overflow-hidden relative w-full">
+    <div class="bg-gray-100 dark:bg-gray-800 relative h-screen relative w-full">
         <div class="flex items-start justify-between">
             <div class="flex flex-col w-full">
                 <div class="overflow-auto h-screen">
@@ -19,7 +19,7 @@
                                 <li>{{__('Show')}}</li>
                             </ul>
                         </div>
-                        <table class="table w-2/3 border mx-auto mb-4">
+                        <table class="table w-full sm:w-2/3 border mx-auto mb-4">
                             <thead>
                             <tr class="bg-gray-100 dark:bg-gray-800 text-center border-b text-base text-gray-600 dark:text-gray-400">
                                 <td class="border p-2">{{__('ID')}}</td>
