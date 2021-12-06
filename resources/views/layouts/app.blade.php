@@ -172,7 +172,7 @@
     </header>
 
     <div class="flex-1 flex flex-col sm:flex-row">
-        <main class="flex-1 bg-white dark:bg-black w-full px-3 md:px-0 ">
+        <main class="flex-1 bg-white dark:bg-gray-800 w-full px-3 md:px-0 ">
             @yield('content')
         </main>
         @if(request()->is('admin/*'))
