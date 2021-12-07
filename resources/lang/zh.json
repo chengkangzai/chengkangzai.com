@@ -308,5 +308,11 @@
     "First time? Register here": "第一次？在这里注册",
     "Register": "登记",
     "Already have an account? Login here": "已经有一个帐户？这里登录",
-    "Setting": "环境"
+    "Setting": "环境",
+    "Total Users": "用户总数",
+    "Total Posts": "帖子总数",
+    "Total Works": "总工程",
+    "Total Comments": "总评论",
+    "Total Tags": "标签总数",
+    "Your Name": "你的名字"
 }
