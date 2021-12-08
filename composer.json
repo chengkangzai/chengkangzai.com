@@ -28,7 +28,8 @@
         "spatie/laravel-sitemap": "^6.0",
         "spatie/laravel-tags": "^4.0",
         "spatie/laravel-translatable": "^5.0",
-        "tanmuhittin/laravel-google-translate": "^2.0"
+        "tanmuhittin/laravel-google-translate": "^2.0",
+        "chengkangzai/laravel-apu-schedule": "dev-main"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.5",

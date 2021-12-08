@@ -35,7 +35,7 @@
                                 <select name="intake_code" onchange="renderGrouping(this)"
                                         class="appearance-none block w-full bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-200 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white dark:focus:bg-gray-700 focus:border-gray-500 font-normal text-base">
                                     <option value="" hidden="" disabled="">{{__('Select your Intake Code')}}</option>
-                                    @foreach(app(\App\Http\Services\APUScheduleService::class)->getIntakes() as $intakeCode)
+                                    @foreach(\Chengkangzai\ApuSchedule\ApuSchedule::getAllIntakes() as $intakeCode)
                                         <option value="{{$intakeCode}}">{{$intakeCode}}</option>
                                     @endforeach
                                 </select>

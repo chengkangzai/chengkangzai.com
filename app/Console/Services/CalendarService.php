@@ -4,11 +4,11 @@
 namespace App\Console\Services;
 
 
-use App\Http\Services\APUScheduleService;
 use App\Http\Services\MicrosoftGraphService;
 use App\Http\Services\TimeZoneService;
 use App\Models\User;
 use Carbon\Carbon;
+use Chengkangzai\ApuSchedule\ApuSchedule;
 use DateTimeImmutable;
 use DateTimeInterface;
 use DateTimeZone;
@@ -18,19 +18,17 @@ use Microsoft\Graph\Model;
 class CalendarService
 {
     private MicrosoftGraphService $graphService;
-    private APUScheduleService $APUSchedule;
 
     public function __construct()
     {
         $this->graphService = new MicrosoftGraphService();
-        $this->APUSchedule = new APUScheduleService();
     }
 
     public function addEvent($config, User $user)
     {
         $attendeeAddresses = explode(';', $user->email);
         $attendees = $this->getAttendees($attendeeAddresses);
-        $schedules = $this->APUSchedule->getSchedule($config->intake_code, $config->grouping)->get();
+        $schedules = ApuSchedule::getSchedule($config->intake_code, $config->grouping);
 
         $events = $this->getEvent($user);
         foreach ($schedules as $schedule) {
@@ -51,12 +49,12 @@ class CalendarService
     {
         $attendees = [];
         foreach ($attendeeAddresses as $attendeeAddress) {
-            array_push($attendees, [
+            $attendees[] = [
                 'emailAddress' => [
                     'address' => $attendeeAddress
                 ],
                 'type' => 'required'
-            ]);
+            ];
         }
         return $attendees;
     }
@@ -95,7 +93,6 @@ class CalendarService
 
     public function getEvent(User $user)
     {
-
         $graph = $this->graphService->getGraph($user);
 
         $timezone = new DateTimeZone(TimeZoneService::$timeZoneMap["Singapore Standard Time"]);

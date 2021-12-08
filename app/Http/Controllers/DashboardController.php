@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 
-use App\Http\Services\APUScheduleService;
+use Chengkangzai\ApuSchedule\ApuSchedule;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
@@ -15,7 +15,7 @@ class DashboardController extends Controller
     {
         $config = Auth::user()->scheduleConfig()->first();
         $isDoneSetup = $config->exists();
-        $events = $isDoneSetup ? app(APUScheduleService::class)->getSchedule($config->intake_code, $config->grouping)->get() : collect();
+        $events = $isDoneSetup ? ApuSchedule::getSchedule($config->intake_code, $config->grouping) : collect();
         return view('admin.home', compact('isDoneSetup', 'events'));
     }
 }

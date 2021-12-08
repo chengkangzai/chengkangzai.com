@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Console\Services\CalendarService;
-use App\Http\Services\APUScheduleService;
 use App\Models\ScheduleConfig;
 use Auth;
+use Chengkangzai\ApuSchedule\ApuSchedule;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
@@ -20,7 +20,7 @@ class ScheduleConfigController extends Controller
     {
         $isDoneSetup = Auth::user()->scheduleConfig()->exists();
         $config = $isDoneSetup ? Auth::user()->scheduleConfig : null;
-        $events = $isDoneSetup ? app(APUScheduleService::class)->getSchedule($config->intake_code, $config->grouping)->get() : collect();
+        $events = $isDoneSetup ? ApuSchedule::getSchedule($config->intake_code, $config->grouping) : collect();
         return view('admin.schedule.index', compact('isDoneSetup', 'config', 'events'));
     }
 
@@ -32,7 +32,7 @@ class ScheduleConfigController extends Controller
 
     public function edit(ScheduleConfig $scheduleConfig): Factory|View|Application
     {
-        $groupings = app(APUScheduleService::class)->getGroupings($scheduleConfig->intake_group);
+        $groupings = ApuSchedule::getGroupings();
         return view('admin.schedule.edit', compact('scheduleConfig', 'groupings'));
     }
 
@@ -55,7 +55,7 @@ class ScheduleConfigController extends Controller
     public function getGrouping(Request $request): JsonResponse|string
     {
         if ($request->has('intake_code')) {
-            $grouping = app(APUScheduleService::class)->getGroupings($request->get('intake_code'));
+            $grouping = ApuSchedule::getGroupings($request->get('intake_code'));
 
             return response()->json($grouping);
         }
