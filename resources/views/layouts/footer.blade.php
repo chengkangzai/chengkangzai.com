@@ -8,11 +8,6 @@
                 <a href="{{route('public.pandemic.index')}}"
                    class="text-blue-600 block dark:text-blue-400 underline">{{__('Covid Dashboard')}}</a>
             </div>
-            <div>
-                <p class="text-yellow-600 dark:text-yellow-400 text-xl font-black">{{__('Easter Egg')}}</p>
-                <a class="text-blue-600 dark:text-blue-400 underline"
-                   href="{{route('public.status.index').'#statusSection'}}">{{__('Status')}}</a>
-            </div>
         </div>
         <p class="text-blue-600 dark:text-blue-400 px-6">{{__('All rights reserved')}} © <br> {{__('Built with')}}
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-500 inline" viewBox="0 0 20 20"
@@ -60,11 +55,6 @@
                    class="text-blue-600 block dark:text-blue-400 underline">{{__('Blog')}}</a>
                 <a href="{{route('public.pandemic.index')}}"
                    class="text-blue-600 block dark:text-blue-400 underline">{{__('Covid Dashboard')}}</a>
-            </div>
-            <div>
-                <p class="text-yellow-600 dark:text-yellow-400 text-xl font-black">{{__('Easter Egg')}}</p>
-                <a class="text-blue-600 dark:text-blue-400 underline"
-                   href="{{route('public.status.index').'#statusSection'}}">{{__('Status')}}</a>
             </div>
         </div>
         <hr>
