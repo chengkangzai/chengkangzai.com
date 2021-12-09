@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c7311125563a4a3cabbdeb44d692e2ec",
+    "content-hash": "c6799b44d9142dd37d51847596512f2e",
     "packages": [
         {
             "name": "artesaos/seotools",
@@ -448,7 +448,7 @@
         },
         {
             "name": "chengkangzai/laravel-apu-schedule",
-            "version": "dev-main",
+            "version": "0.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/chengkangzai/laravel-apu-schedule.git",
@@ -474,7 +474,6 @@
                 "phpunit/phpunit": "^9.5",
                 "spatie/laravel-ray": "^1.26"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -511,7 +510,7 @@
             ],
             "support": {
                 "issues": "https://github.com/chengkangzai/laravel-apu-schedule/issues",
-                "source": "https://github.com/chengkangzai/laravel-apu-schedule/tree/main"
+                "source": "https://github.com/chengkangzai/laravel-apu-schedule/tree/0.0.1"
             },
             "funding": [
                 {
@@ -12619,9 +12618,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "chengkangzai/laravel-apu-schedule": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
