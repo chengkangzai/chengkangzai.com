@@ -84,8 +84,11 @@ class CalendarService
             ],
             'body' => [
                 'content' =>
-                    "Hi, $user->name, you have a class of $schedule->MODULE_NAME with lecturer $schedule->NAME (mailto:$schedule->SAMACCOUNTNAME@staffemail.apu.edu.my)" .
-                    " at $schedule->ROOM from $schedule->TIME_FROM to $schedule->TIME_TO",
+                    "Hi, $user->name, you have a class of $schedule->MODULE_NAME with lecturer $schedule->NAME ($schedule->SAMACCOUNTNAME@staffemail.apu.edu.my)" .
+                    " at $schedule->ROOM from $schedule->TIME_FROM to $schedule->TIME_TO \n" .
+                    "Sync Schedule will run every Saturday at 01:00 AM.\n" .
+                    "To unsubscribe, please click on the link below: \n" .
+                    route('public.unsubscribe', ['email' => $user->email]),
                 'contentType' => 'text'
             ]
         ];
