@@ -12,6 +12,7 @@ use Chengkangzai\ApuSchedule\ApuSchedule;
 use DateTimeImmutable;
 use DateTimeInterface;
 use DateTimeZone;
+use Illuminate\Support\Facades\URL;
 use JetBrains\PhpStorm\ArrayShape;
 use Microsoft\Graph\Model;
 
@@ -91,7 +92,7 @@ class CalendarService
                     " at $schedule->ROOM from $schedule->TIME_FROM to $schedule->TIME_TO \n" .
 //                    "Sync Schedule will run every Saturday at 01:00 AM.\n" .
                     "To unsubscribe, please click on the link below: \n" .
-                    route('public.unsubscribe', ['email' => $user->email]),
+                    URL::signedRoute('public.unsubscribe', ['email' => $user->email]),
                 'contentType' => 'text'
             ]
         ];
