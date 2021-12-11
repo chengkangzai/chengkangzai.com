@@ -32,13 +32,16 @@ class CalendarService
 
         $events = $this->getEvent($user);
         foreach ($schedules as $schedule) {
-
-            $isEventCreated = $events->filter(function ($event) use ($schedule) {
-                    return Carbon::parse($event->getStart()->getDateTime()) == Carbon::parse($schedule->TIME_FROM_ISO)
-                        && Carbon::parse($event->getEnd()->getDateTime()) == Carbon::parse($schedule->TIME_TO_ISO);
-                })->count() > 0;
-
-            if (!$isEventCreated) {
+            $isEventCreatedBefore = false;
+            foreach ($events as $event) {
+                if ($event->getSubject() == $schedule->MODID
+                    || ($event->getStart()->getDateTime() == Carbon::parse($schedule->TIME_FROM_ISO)->toISOString()
+                        && $event->getEnd()->getDateTime() == Carbon::parse($schedule->TIME_TO_ISO)->toISOString())) {
+                    $isEventCreatedBefore = true;
+                    break;
+                }
+            }
+            if (!$isEventCreatedBefore) {
                 $newEvent = $this->formatNewEvent($schedule, $attendees, $user);
                 $this->syncCalendar($newEvent, $user);
             }
@@ -86,7 +89,7 @@ class CalendarService
                 'content' =>
                     "Hi, $user->name, you have a class of $schedule->MODULE_NAME with lecturer $schedule->NAME ($schedule->SAMACCOUNTNAME@staffemail.apu.edu.my)" .
                     " at $schedule->ROOM from $schedule->TIME_FROM to $schedule->TIME_TO \n" .
-                    "Sync Schedule will run every Saturday at 01:00 AM.\n" .
+//                    "Sync Schedule will run every Saturday at 01:00 AM.\n" .
                     "To unsubscribe, please click on the link below: \n" .
                     route('public.unsubscribe', ['email' => $user->email]),
                 'contentType' => 'text'
@@ -94,7 +97,7 @@ class CalendarService
         ];
     }
 
-    public function getEvent(User $user)
+    private function getEvent(User $user): array
     {
         $graph = $this->graphService->getGraph($user);
 
@@ -118,14 +121,12 @@ class CalendarService
         // Append query parameters to the '/me/calendarView' url
         $getEventsUrl = '/me/calendarView?' . http_build_query($queryParams);
 
-        $events = $graph->createRequest('GET', $getEventsUrl)
+        return $graph->createRequest('GET', $getEventsUrl)
             // Add the user's timezone to the Prefer header
             ->addHeaders(array(
                 'Prefer' => 'outlook.timezone="' . TimeZoneService::$timeZoneMap["Singapore Standard Time"] . '"'
             ))
             ->setReturnType(Model\Event::class)
             ->execute();
-
-        return collect($events);
     }
 }
