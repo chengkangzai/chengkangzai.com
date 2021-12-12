@@ -27,7 +27,7 @@ class ScheduleConfigController extends Controller
     public function store(Request $request): RedirectResponse
     {
         $request->user()->scheduleConfig()->create($request->all());
-        return redirect()->route('admin.scheduleConfig.index')->with('success', 'Schedule config has been setup');
+        return redirect()->route('admin.scheduleConfig.index')->with('success', __('Schedule config has been setup'));
     }
 
     public function edit(ScheduleConfig $scheduleConfig): Factory|View|Application
@@ -39,17 +39,17 @@ class ScheduleConfigController extends Controller
     public function update(Request $request, ScheduleConfig $scheduleConfig): RedirectResponse
     {
         $scheduleConfig->update($request->all());
-        return redirect()->route('admin.scheduleConfig.index')->with('success', 'Schedule config has been updated');
+        return redirect()->route('admin.scheduleConfig.index')->with('success', __('Schedule config has been updated'));
     }
 
     public function syncNow(): RedirectResponse
     {
         $config = Auth::user()->scheduleConfig;
         if (!auth()->user()->msOauth()->exists()) {
-            return redirect()->route('admin.scheduleConfig.index')->withErrors('Please link your microsoft account first');
+            return redirect()->route('admin.scheduleConfig.index')->withErrors(__('Please link your microsoft account first'));
         }
         AddAPUScheduleToCalenderJob::dispatch(auth()->user(), $config);
-        return redirect()->route('admin.scheduleConfig.index')->with('success', 'Schedule has been queued for sync, it will take a few minutes');
+        return redirect()->route('admin.scheduleConfig.index')->with('success', __('Schedule has been queued for sync, it will take a few minutes'));
     }
 
     public function getGrouping(Request $request): JsonResponse|string

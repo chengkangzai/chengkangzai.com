@@ -33,7 +33,7 @@ class UserController extends Controller
     {
         User::create($request->all())->syncRoles($request->role);
 
-        return redirect()->route('admin.users.index');
+        return redirect()->route('admin.users.index')->with('success', __('User created successfully.'));
     }
 
     public function show(User $user): Factory|View|Application
@@ -53,13 +53,13 @@ class UserController extends Controller
     {
         $user->update($request->all());
         $user->syncRoles($request->get('role'));
-        return redirect()->route('admin.users.index');
+        return redirect()->route('admin.users.index')->with('success', __('User updated successfully'));
     }
 
     public function destroy(User $user): RedirectResponse
     {
         $user->delete();
-        return redirect()->route('admin.users.index');
+        return redirect()->route('admin.users.index')->with('success', __('User deleted successfully'));
     }
 
     public function editPassword(): View|Factory|Application
@@ -74,12 +74,12 @@ class UserController extends Controller
             'password' => Hash::make($request->get('new_password'))
         ]);
 
-        return redirect()->route('admin.home');
+        return redirect()->route('admin.home')->with('success', __('Password changed successfully'));
     }
 
     public function sendForgetPassword(User $user): RedirectResponse
     {
         Password::sendResetLink(['email' => $user->email]);
-        return redirect()->route('admin.users.index')->with('success', 'Reset Email sent successfully');
+        return redirect()->route('admin.users.index')->with('success', __('Reset Email sent successfully'));
     }
 }

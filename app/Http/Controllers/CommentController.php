@@ -20,6 +20,6 @@ class CommentController extends Controller
     public function destroy(Comment $comment): RedirectResponse
     {
         $comment->delete();
-        return back();
+        return redirect()->route('admin.comment.index')->with('success', __('Comment deleted successfully'));
     }
 }

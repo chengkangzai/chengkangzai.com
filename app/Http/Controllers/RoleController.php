@@ -29,7 +29,7 @@ class RoleController extends Controller
     {
         $role = Role::create(['name' => $request->name]);
         $role->givePermissionTo($request->get('permissions'));
-        return redirect()->route('admin.roles.index')->with('success', 'Role created successfully');
+        return redirect()->route('admin.roles.index')->with('success', __('Role created successfully'));
     }
 
     public function show(Role $role)
@@ -49,18 +49,18 @@ class RoleController extends Controller
     {
         $role->update(['name' => $request->name]);
         $role->syncPermissions($request->get('permissions'));
-        return redirect()->route('admin.roles.index')->with('success', 'Role updated successfully');
+        return redirect()->route('admin.roles.index')->with('success', __('Role updated successfully'));
     }
 
     public function destroy(Role $role): RedirectResponse
     {
         if ($role->name == 'Super Admin') {
-            return redirect()->route('admin.roles.index')->withErrors('Admin role can not be deleted');
+            return redirect()->route('admin.roles.index')->withErrors(__('Admin role can not be deleted'));
         }
         if ($role->users()->get()->isNotEmpty()) {
-            return redirect()->route('admin.roles.index')->withErrors('Role has users assigned to it. Please remove users from this role and try again');
+            return redirect()->route('admin.roles.index')->withErrors(__('Role has users assigned to it. Please remove users from this role and try again'));
         }
         $role->delete();
-        return redirect()->route('admin.roles.index')->with('success', 'Role deleted successfully');
+        return redirect()->route('admin.roles.index')->with('success', __('Role deleted successfully'));
     }
 }
