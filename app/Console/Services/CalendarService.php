@@ -35,9 +35,13 @@ class CalendarService
         foreach ($schedules as $schedule) {
             $isEventCreatedBefore = false;
             foreach ($events as $event) {
-                if ($event->getSubject() == $schedule->MODID
-                    || ($event->getStart()->getDateTime() == Carbon::parse($schedule->TIME_FROM_ISO)->toISOString()
-                        && $event->getEnd()->getDateTime() == Carbon::parse($schedule->TIME_TO_ISO)->toISOString())) {
+                $eventStart = Carbon::parse($event->getStart()->getDateTime())->format(DateTimeInterface::ISO8601);
+                $eventEnd = Carbon::parse($event->getEnd()->getDateTime())->format(DateTimeInterface::ISO8601);
+
+                $scheduleStart = Carbon::parse($schedule->TIME_FROM_ISO)->format(DateTimeInterface::ISO8601);
+                $scheduleEnd = Carbon::parse($schedule->TIME_TO_ISO)->format(DateTimeInterface::ISO8601);
+
+                if ($eventStart == $scheduleStart && $eventEnd == $scheduleEnd) {
                     $isEventCreatedBefore = true;
                     break;
                 }
@@ -116,7 +120,7 @@ class CalendarService
             // Sort them by start time
             '$orderby' => 'start/dateTime',
             // Limit results to 25
-            '$top' => 25
+            '$top' => 50
         );
 
         // Append query parameters to the '/me/calendarView' url
