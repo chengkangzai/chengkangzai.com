@@ -45,7 +45,7 @@ class WorksController extends Controller
                 }
                 return $work;
             });
-            return redirect()->route('admin.works.index')->with('success', __('Work updated successfully'));
+            return redirect()->route('admin.works.index')->with('success', __('Work added successfully'));
         } catch (Throwable|Exception $e) {
             Storage::disk('s3')->delete($path);
             return redirect()->route('admin.works.index')->withErrors(__('Whoops! Something went wrong. Please try again later.'));
