@@ -11,7 +11,7 @@
         <div class="flex flex-wrap -m-4 dark:text-white w-full mx-auto mb-6">
             <div class="mx-auto text-center pb-8 ">
                 <h1 class="text-4xl font-bold py-4"> {{$post->title}} </h1>
-                <span class=" mr-3 inline-flex items-center leading-none text-sm py-1 ">
+                <span class="mr-3 inline-flex items-center leading-none text-sm py-1 ">
                       <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                            stroke="currentColor">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -19,7 +19,7 @@
                         </svg>
                       {{$post->updated_at->diffForHumans()}}
                     </span>
-                <span class=" mr-3 inline-flex items-center leading-none text-sm py-1">
+                <span class="mr-3 inline-flex items-center leading-none text-sm py-1">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                                  stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -53,16 +53,14 @@
                 <form action="{{route('public.posts.comments.store', $post)}}" method="post">
                     @csrf
                     <div class="w-full space-x-4 mx-auto flex mb-3">
-                        <input id="name" type="text" placeholder="{{__('Name (required)')}} " name="name" required
+                        <input id="name" type="text" placeholder="{{__('Name (required)')}} " name="name" required aria-label="Name"
                                class="w-1/2 text-center border border-gray-400 text-gray-800 placeholder-gray-400 rounded focus:shadow-outline py-2"/>
-                        <input id="email" type="email" placeholder="{{__('Email (required)')}} " name="email" required
+                        <input id="email" type="email" placeholder="{{__('Email (required)')}} " name="email" required aria-label="Email"
                                class="w-1/2 text-center border border-gray-400 text-gray-800 placeholder-gray-400 rounded focus:shadow-outline py-2"/>
                     </div>
-                    <textarea required
+                    <textarea required aria-label="Your Comment" name="comment"
                               class="w-full shadow-inner p-4 border border-gray-400 mb-4 rounded-lg focus:shadow-outline text-2xl dark:text-black"
-                              placeholder="{{__('Drop your Comment here')}}" cols="6" rows="6" id="comment_content"
-                              name="comment"
-                              spellcheck="false"></textarea>
+                              placeholder="{{__('Drop your Comment here')}}" cols="6" rows="6" id="comment_content"></textarea>
                     <button
                         class="font-bold py-2 px-4 w-full bg-purple-600 text-lg text-white shadow-md rounded-lg ">
                         {{__('Comment')}}

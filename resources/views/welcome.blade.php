@@ -321,7 +321,7 @@
                             <p class="mx-auto font-semibold text-lg text-white dark:text-black ">1</p>
                         </div>
                         <div
-                            class=" order-1 bg-blue-700 rounded-lg shadow-xl w-5/12 px-6 py-4 transform hover:scale-110 transition duration-300">
+                            class="order-1 bg-blue-700 rounded-lg shadow-xl w-5/12 px-6 py-4 transform hover:scale-110 transition duration-300">
                             <h3 class="mb-3 font-bold text-white text-xl">
                                 {{__('Persuade Study in')}}
                                 <a class="underline" rel="noreferrer" target="_blank" href="https://www.apu.edu.my/">
