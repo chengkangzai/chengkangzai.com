@@ -20,7 +20,7 @@
 
         @if(!$isDoneSetup)
             <div class="bg-gray-50 dark:bg-gray-700 w-full rounded border-2">
-                <h2 class="text-xl text-gray-700 dark:text-gray-200 py-2 px-4">
+                <h2 class="sm:text-xl text-gray-700 dark:text-gray-200 py-2 px-4">
                     {{__('Hi, Looks like you are first time to use the system, please submit your detail')}}
                 </h2>
             </div>
@@ -67,7 +67,7 @@
             </form>
         @else
             <div class="bg-gray-50 dark:bg-gray-700 w-full rounded border-2">
-                <h2 class="text-xl text-gray-700 dark:text-gray-200 py-2 px-4">
+                <h2 class="sm:text-xl text-gray-700 dark:text-gray-200 py-2 px-4">
                     {{__('Hello :name, you are already setup your schedule and the schedule will be sync to your calendar whenever its updated',['name'=>auth()->user()->name ?? ''])}}
                 </h2>
                 <div class="block my-2">
@@ -118,8 +118,10 @@
             </div>
 
             @if($isDoneSetup)
-                <h2 class="text-center text-3xl font-bold dark:text-gray-300">Your Schedule</h2>
-                <div id='calendar' class="w-3/5 mx-auto dark:bg-gray-800 dark:text-gray-100 mt-4"></div>
+                <div>
+                    <h2 class="text-center text-3xl font-bold dark:text-gray-300">Your Schedule</h2>
+                    <div id='calendar' class="w-full text-base md:w-3/5 mx-auto dark:bg-gray-800 dark:text-gray-100 mt-4"></div>
+                </div>
             @endif
         @endif
     </div>
