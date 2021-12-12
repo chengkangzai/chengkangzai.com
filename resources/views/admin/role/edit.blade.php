@@ -17,8 +17,8 @@
                                 </li>
                                 <li><span class="mx-2">/</span></li>
                                 <li>
-                                    <a href="{{route('admin.users.index')}}" class="underline font-semibold">
-                                        {{__('User')}}
+                                    <a href="{{route('admin.roles.index')}}" class="underline font-semibold">
+                                        {{__('Role')}}
                                     </a>
                                 </li>
                                 <li><span class="mx-2">/</span></li>
@@ -26,32 +26,26 @@
                             </ul>
                         </div>
                         @include('partial.error-card')
-                        <form action="{{route('admin.users.update',$user)}}"
-                              method="POST" id="createUserForm" class="space-y-3 dark:text-white mb-2 px-5">
+                        <form action="{{route('admin.roles.update',$role)}}"
+                              method="POST" id="createRoleForm" class="space-y-3 dark:text-white mb-2 px-5">
                             @method('PUT')
                             @csrf
                             <div class="space-y-2">
                                 <label for="name" class="block font-medium tracking-tight">{{__('Name')}}</label>
                                 <input id="name" type="text" placeholder="{{__('Name')}}" name="name"
-                                       value="{{old('name',$user->name)}}"
+                                       value="{{old('name',$role->name)}}"
                                        class="w-full border border-gray-400 text-gray-800 placeholder-gray-400 rounded focus:border-transparent focus:outline-none focus:shadow-outline px-3 py-2"/>
                             </div>
 
                             <div class="space-y-2">
-                                <label for="email" class="block font-medium tracking-tight">{{__('Email')}}</label>
-                                <input id="email" type="email" placeholder="{{__('Email')}}" name="email"
-                                       value="{{old('email',$user->email)}}"
-                                       class="w-full border border-gray-400 text-gray-800 placeholder-gray-400 rounded focus:border-transparent focus:outline-none focus:shadow-outline px-3 py-2"/>
-                            </div>
-
-                            <div class="space-y-2">
-                                <label for="role" class="block font-medium tracking-tight">{{__('Role')}}</label>
-                                <select id="role" name="role"
+                                <label for="permissions"
+                                       class="block font-medium tracking-tight">{{__('Permission')}}</label>
+                                <select id="permissions" name="permissions[]" multiple
                                         class="w-full border border-gray-400 text-gray-800 placeholder-gray-400 rounded focus:border-transparent focus:outline-none focus:shadow-outline px-3 py-2">
-                                    <option value="" disabled hidden>{{__('Select Role')}}</option>
-                                    @foreach($roles as $role)
-                                        <option value="{{$role->id}}"
-                                                @if($user->roles->first()->id == $role->id) selected @endif>{{$role->name}}</option>
+                                    @foreach($permissions as $permission)
+                                        <option value="{{$permission->id}}"
+                                                @if(in_array($permission->id,$role->permissions->pluck('id')->toArray())) selected @endif>{{$permission->name}}
+                                        </option>
                                     @endforeach
                                 </select>
                             </div>
@@ -67,4 +61,13 @@
     </div>
 
 @endsection
+
+
+@push('script')
+    <script src="https://cdn.jsdelivr.net/npm/tom-select@1.1/dist/js/tom-select.complete.min.js"></script>
+    <script>
+        new TomSelect('#permissions');
+    </script>
+
+@endpush
 
