@@ -32,7 +32,7 @@ class ScheduleConfigController extends Controller
 
     public function edit(ScheduleConfig $scheduleConfig): Factory|View|Application
     {
-        $groupings = ApuSchedule::getGroupings();
+        $groupings = ApuSchedule::getGroupings($scheduleConfig->intake_code);
         return view('admin.schedule.edit', compact('scheduleConfig', 'groupings'));
     }
 
