@@ -29,8 +29,10 @@
                     <td class="p-2 border-r hidden sm:table-cell">{{$comment->name}}</td>
                     <td class="p-2 border-r hidden sm:table-cell">{{$comment->email}}</td>
                     <td class="p-2 border-r">{{$comment->comment}}</td>
-                    <td class="p-2 border-r hidden sm:table-cell"><a href="{{route('public.posts.show',$comment->post)}}"
-                                                class="underline">{{$comment->post->title}}</a></td>
+                    <td class="p-2 border-r hidden sm:table-cell">
+                        <a href="{{route('public.posts.show',$comment->post)}}"
+                           class="underline">{{$comment->post->title}}</a>
+                    </td>
 
                     <td class="p-2 border-r">
                         <form action="{{route('admin.comment.destroy',$comment)}}" class="inline" method="POST">

@@ -35,7 +35,7 @@
                     <td class="p-2 border-r">{{$work->name}}</td>
                     <td class="p-2 border-r space-y-2">
                         <a href="{{route('admin.tags.edit',$work)}}"
-                           class="block bg-blue-500 hover:bg-blue-700 px-2 py-1 text-white hover:shadow-lg font-bold rounded">{{__('Edit')}}</a>
+                           class="inline mx-auto w-min bg-blue-500 hover:bg-blue-700 p-2 text-white hover:shadow-lg font-bold rounded">{{__('Edit')}}</a>
                         <form action="{{route('admin.tags.destroy',$work)}}" class="inline-flex p-0 m-0"
                               method="POST">
                             @csrf

@@ -47,10 +47,10 @@
                     </td>
                     <td class="p-2 border-r space-y-2">
                         <a href="{{route('admin.posts.show',$post)}}"
-                           class="block bg-green-500 hover:bg-green-700 px-2 py-1 text-white hover:shadow-lg font-bold rounded">
+                           class="block bg-green-500 hover:bg-green-700 px-2 py-1 sm:p-2 sm:inline text-white hover:shadow-lg font-bold rounded">
                             {{__('Show')}}</a>
                         <a href="{{route('admin.posts.edit',$post)}}"
-                           class="block bg-blue-500 hover:bg-blue-700 px-2 py-1 text-white hover:shadow-lg font-bold rounded">
+                           class="block bg-blue-500 hover:bg-blue-700 px-2 py-1 sm:p-2 sm:inline text-white hover:shadow-lg font-bold rounded">
                             {{__('Edit')}}</a>
                         <form action="{{route('admin.posts.destroy',$post)}}" class="inline-flex p-0 m-0"
                               method="POST">
