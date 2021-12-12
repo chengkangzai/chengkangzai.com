@@ -2,7 +2,7 @@
 
 namespace App\Console\Commands;
 
-use App\Console\Services\CalendarService;
+use App\Jobs\AddAPUScheduleToCalenderJob;
 use App\Models\ScheduleConfig;
 use Illuminate\Console\Command;
 
@@ -20,8 +20,7 @@ class SyncScheduleToCalendarCommand extends Command
      *
      * @var string
      */
-    protected $description = 'run sync command to sync';
-    private CalendarService $calenderService;
+    protected $description = 'run sync command to sync apu schedule to calendar';
 
     /**
      * Create a new command instance.
@@ -30,7 +29,6 @@ class SyncScheduleToCalendarCommand extends Command
      */
     public function __construct()
     {
-        $this->calenderService = new CalendarService();
         parent::__construct();
     }
 
@@ -39,21 +37,21 @@ class SyncScheduleToCalendarCommand extends Command
      *
      * @return int
      */
-    public function handle()
+    public function handle(): int
     {
         $this->info('Starting sync schedule to calendar');
-        $configs = ScheduleConfig::all();
+        $configs = ScheduleConfig::with('user')->get();
 
         $this->output->progressStart($configs->count());
 
         foreach ($configs as $config) {
-            $this->calenderService->addEvent($config, $config->user()->get()->first());
+            AddAPUScheduleToCalenderJob::dispatch($config->user, $config);
             $this->output->progressAdvance();
         }
 
         $this->output->progressFinish();
-        $this->info('Sync schedule to calendar successfully');
+        $this->info('dispatch Sync schedule to job successfully');
 
-        return 0;
+        return self::SUCCESS;
     }
 }

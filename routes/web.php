@@ -14,6 +14,7 @@ use App\Http\Controllers\ScheduleConfigController;
 use App\Http\Controllers\TagController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\WorksController;
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -44,10 +45,10 @@ Route::group(['as' => 'public.'], function () {
     });
     Route::resource('posts.comments', PublicPostCommentController::class)->only(['store']);
 
-    Route::get('unsubscribe/{user}', function () {
-        auth()->user()->scheduleConfig()->delete();
+    Route::get('unsubscribe/{email}', function ($email) {
+        User::where('email', $email)->firstOrFail()->scheduleConfig()->firstOrFail()->deleteOrFail();
         echo "You have been successfully unsubscribe";
-    })->name('unsubscribe');
+    })->name('unsubscribe')->middleware('signed');
 });
 
 /**
