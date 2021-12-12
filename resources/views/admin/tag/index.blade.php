@@ -19,6 +19,7 @@
         </div>
         <div class="w-full sm:w-2/3 mx-auto mb-2">
             @include('partial.error-card')
+            @include('partial.success-card')
         </div>
         <table class="w-full sm:w-2/3 md:1/2 mx-auto border ">
             <thead>

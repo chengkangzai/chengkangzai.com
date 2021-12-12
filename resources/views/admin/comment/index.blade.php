@@ -10,7 +10,7 @@
                 <li>{{__('Comments')}}</li>
             </ul>
         </div>
-
+        @include('partial.success-card')
         <table class="w-full border mt-8">
             <thead>
             <tr class="bg-gray-100 dark:bg-gray-800 text-center border-b text-base text-gray-600 dark:text-gray-400">

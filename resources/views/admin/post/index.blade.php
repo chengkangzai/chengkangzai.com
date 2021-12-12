@@ -18,6 +18,8 @@
                 {{__('Create New Post')}}</a>
         </div>
         @include('partial.undo-card')
+        @include('partial.error-card')
+        @include('partial.success-card')
         <table class="border w-full">
             <thead>
             <tr class="bg-gray-100 dark:bg-gray-800 text-center border-b text-base text-gray-600 dark:text-gray-400">
