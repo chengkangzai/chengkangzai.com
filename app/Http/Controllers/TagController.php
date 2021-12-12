@@ -3,12 +3,13 @@
 namespace App\Http\Controllers;
 
 
+use App\Http\Requests\StoreTagRequest;
+use App\Http\Requests\UpdateTagRequest;
 use App\Http\Services\TagService;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
-use Illuminate\Http\Request;
 use Spatie\Tags\Tag;
 
 class TagController extends Controller
@@ -24,13 +25,10 @@ class TagController extends Controller
         return view('admin.tag.create');
     }
 
-    public function store(Request $request): RedirectResponse
+    public function store(StoreTagRequest $request): RedirectResponse
     {
-        $req = $request->validate([
-            'name' => ['required', 'string']
-        ]);
-        Tag::findOrCreate($req);
-        return redirect()->route('admin.tags.index');
+        Tag::findOrCreate($request->validated());
+        return redirect()->route('admin.tags.index')->with('success', __('Tag created successfully'));
     }
 
     public function edit(Tag $tag): Factory|View|Application
@@ -38,22 +36,19 @@ class TagController extends Controller
         return view('admin.tag.edit', compact('tag'));
     }
 
-    public function update(Request $request, Tag $tag): RedirectResponse
+    public function update(UpdateTagRequest $request, Tag $tag): RedirectResponse
     {
-        $req = $request->validate([
-            'name' => ['required', 'string']
-        ]);
-        $tag->update($req->name);
-        return redirect()->route('admin.tags.index');
+        $tag->update($request->validated());
+        return redirect()->route('admin.tags.index')->with('success', __('Tag updated successfully'));
     }
 
     public function destroy(Tag $tag): RedirectResponse
     {
         if (app(TagService::class)->isTagSafeToDelete($tag) == false) {
-            return redirect()->route('admin.tags.index')->withErrors('The Tag is been used, cant be deleted');
+            return redirect()->route('admin.tags.index')->withErrors(__('The Tag is been used, cant be deleted'));
         }
 
         $tag->delete();
-        return redirect()->route('admin.tags.index');
+        return redirect()->route('admin.tags.index')->with('success', __('Tag deleted successfully'));
     }
 }
