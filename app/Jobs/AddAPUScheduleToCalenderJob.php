@@ -1,37 +1,59 @@
 <?php
 
-
-namespace App\Console\Services;
-
+namespace App\Jobs;
 
 use App\Http\Services\MicrosoftGraphService;
 use App\Http\Services\TimeZoneService;
+use App\Models\ScheduleConfig;
 use App\Models\User;
 use Carbon\Carbon;
 use Chengkangzai\ApuSchedule\ApuSchedule;
 use DateTimeImmutable;
 use DateTimeInterface;
 use DateTimeZone;
+use Illuminate\Bus\Queueable;
+use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Foundation\Bus\Dispatchable;
+use Illuminate\Queue\InteractsWithQueue;
+use Illuminate\Queue\SerializesModels;
 use Illuminate\Support\Facades\URL;
 use JetBrains\PhpStorm\ArrayShape;
+use Microsoft\Graph\Graph as MicrosoftGraph;
 use Microsoft\Graph\Model;
 
-class CalendarService
+class AddAPUScheduleToCalenderJob implements ShouldQueue
 {
-    private MicrosoftGraphService $graphService;
+    use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
-    public function __construct()
+    private MicrosoftGraph $graph;
+    private User $user;
+    private ScheduleConfig $config;
+
+    /**
+     * Create a new job instance.
+     *
+     * @return void
+     */
+    public function __construct(User $user, ScheduleConfig $config)
     {
-        $this->graphService = new MicrosoftGraphService();
+        $graphService = new MicrosoftGraphService();
+        $this->graph = $graphService->getGraph($user);
+        $this->user = $user;
+        $this->config = $config;
     }
 
-    public function addEvent($config, User $user)
+    /**
+     * Execute the job.
+     *
+     * @return void
+     */
+    public function handle()
     {
-        $attendeeAddresses = explode(';', $user->email);
+        $attendeeAddresses = explode(';', $this->user->email);
         $attendees = $this->getAttendees($attendeeAddresses);
-        $schedules = ApuSchedule::getSchedule($config->intake_code, $config->grouping);
+        $schedules = ApuSchedule::getSchedule($this->config->intake_code, $this->config->grouping);
 
-        $events = $this->getEvent($user);
+        $events = $this->getEvent();
         foreach ($schedules as $schedule) {
             $isEventCreatedBefore = false;
             foreach ($events as $event) {
@@ -47,8 +69,8 @@ class CalendarService
                 }
             }
             if (!$isEventCreatedBefore) {
-                $newEvent = $this->formatNewEvent($schedule, $attendees, $user);
-                $this->syncCalendar($newEvent, $user);
+                $newEvent = $this->formatNewEvent($schedule, $attendees);
+                $this->syncCalendar($newEvent);
             }
         }
     }
@@ -67,17 +89,16 @@ class CalendarService
         return $attendees;
     }
 
-    private function syncCalendar(array $newEvent, User $user)
+    private function syncCalendar(array $newEvent)
     {
-        $graph = $this->graphService->getGraph($user);
-        $graph->createRequest('POST', '/me/events')
+        $this->graph->createRequest('POST', '/me/events')
             ->attachBody($newEvent)
             ->setReturnType(Model\Event::class)
             ->execute();
     }
 
     #[ArrayShape(['subject' => "", 'attendees' => "array", 'start' => "array", 'end' => "array", 'body' => "string[]"])]
-    private function formatNewEvent($schedule, array $attendees, User $user): array
+    private function formatNewEvent($schedule, array $attendees): array
     {
         return [
             'subject' => $schedule->MODID,
@@ -92,20 +113,18 @@ class CalendarService
             ],
             'body' => [
                 'content' =>
-                    "Hi, $user->name, you have a class of $schedule->MODULE_NAME with lecturer $schedule->NAME ($schedule->SAMACCOUNTNAME@staffemail.apu.edu.my)" .
+                    "Hi," . $this->user->name . ", you have a class of $schedule->MODULE_NAME with lecturer $schedule->NAME ($schedule->SAMACCOUNTNAME@staffemail.apu.edu.my)" .
                     " at $schedule->ROOM from $schedule->TIME_FROM to $schedule->TIME_TO \n" .
 //                    "Sync Schedule will run every Saturday at 01:00 AM.\n" .
                     "To unsubscribe, please click on the link below: \n" .
-                    URL::signedRoute('public.unsubscribe', ['email' => $user->email]),
+                    URL::signedRoute('public.unsubscribe', ['email' => $this->user->email]),
                 'contentType' => 'text'
             ]
         ];
     }
 
-    private function getEvent(User $user): array
+    private function getEvent(): array
     {
-        $graph = $this->graphService->getGraph($user);
-
         $timezone = new DateTimeZone(TimeZoneService::$timeZoneMap["Singapore Standard Time"]);
 
         // Get start and end of week
@@ -126,7 +145,7 @@ class CalendarService
         // Append query parameters to the '/me/calendarView' url
         $getEventsUrl = '/me/calendarView?' . http_build_query($queryParams);
 
-        return $graph->createRequest('GET', $getEventsUrl)
+        return $this->graph->createRequest('GET', $getEventsUrl)
             // Add the user's timezone to the Prefer header
             ->addHeaders(array(
                 'Prefer' => 'outlook.timezone="' . TimeZoneService::$timeZoneMap["Singapore Standard Time"] . '"'

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Console\Services\CalendarService;
+use App\Jobs\AddAPUScheduleToCalenderJob;
 use App\Models\ScheduleConfig;
 use Auth;
 use Chengkangzai\ApuSchedule\ApuSchedule;
@@ -48,8 +48,8 @@ class ScheduleConfigController extends Controller
         if (!auth()->user()->msOauth()->exists()) {
             return redirect()->route('admin.scheduleConfig.index')->withErrors('Please link your microsoft account first');
         }
-        app(CalendarService::class)->addEvent($config, auth()->user());
-        return redirect()->route('admin.scheduleConfig.index')->with('success', 'Schedule has been synced');
+        AddAPUScheduleToCalenderJob::dispatch(auth()->user(), $config);
+        return redirect()->route('admin.scheduleConfig.index')->with('success', 'Schedule has been queued for sync, it will take a few minutes');
     }
 
     public function getGrouping(Request $request): JsonResponse|string
