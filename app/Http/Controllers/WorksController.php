@@ -12,38 +12,20 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\DB;
 use Spatie\Tags\Tag;
 use Storage;
-use Throwable;
 
 class WorksController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return Application|Factory|View
-     */
-    public function index()
+    public function index(): Factory|View|Application
     {
         $works = Works::with('tags')->paginate(10);
         return view('admin.work.index', compact('works'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return Application|Factory|View
-     */
-    public function create()
+    public function create(): Factory|View|Application
     {
         return view('admin.work.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param StoreWorksRequest $request
-     * @return RedirectResponse
-     * @throws Throwable
-     */
     public function store(StoreWorksRequest $request): RedirectResponse
     {
         $path = $request->file('picture')->store(Works::S3_PATH, 's3');
@@ -64,13 +46,7 @@ class WorksController extends Controller
         return redirect()->route('admin.works.index');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param Works $work
-     * @return Application|Factory|View
-     */
-    public function show(Works $work)
+    public function show(Works $work): Factory|View|Application
     {
         $s3 = Storage::disk('s3');
         $client = $s3->getDriver()->getAdapter();
@@ -79,26 +55,12 @@ class WorksController extends Controller
         return view('admin.work.show', compact('work', 'imgLink'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param Works $work
-     * @return Application|Factory|View
-     */
-    public function edit(Works $work)
+    public function edit(Works $work): Factory|View|Application
     {
         return view('admin.work.edit', compact('work'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param UpdateWorksRequest $request
-     * @param Works $work
-     * @return RedirectResponse
-     * @throws Throwable
-     */
-    public function update(UpdateWorksRequest $request, Works $work)
+    public function update(UpdateWorksRequest $request, Works $work): RedirectResponse
     {
         DB::transaction(function () use ($request, $work) {
             if ($request->hasFile('picture')) {
@@ -126,12 +88,6 @@ class WorksController extends Controller
         return redirect()->route('admin.works.index');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param Works $work
-     * @return RedirectResponse
-     */
     public function destroy(Works $work): RedirectResponse
     {
         $work->delete();

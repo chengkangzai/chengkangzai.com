@@ -11,25 +11,13 @@ use Illuminate\Http\RedirectResponse;
 
 class CommentController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return Application|Factory|View
-     */
-    public function index()
+    public function index(): Factory|View|Application
     {
         $comments = Comment::with('post')->paginate(10);
         return view('admin.comment.index', compact('comments'));
     }
 
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param Comment $comment
-     * @return RedirectResponse
-     */
-    public function destroy(Comment $comment)
+    public function destroy(Comment $comment): RedirectResponse
     {
         $comment->delete();
         return back();

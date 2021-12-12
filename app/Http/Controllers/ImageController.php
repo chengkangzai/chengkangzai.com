@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Storage;
 
@@ -9,7 +10,7 @@ class ImageController extends Controller
 {
     const PUBLIC_PATH = 'chengkangzai.com/images/';
 
-    public function store(Request $request)
+    public function store(Request $request): JsonResponse
     {
         $fileName = $request->file('upload')->getClientOriginalName();
 

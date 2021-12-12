@@ -13,34 +13,18 @@ use Spatie\Tags\Tag;
 
 class TagController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return Application|Factory|View
-     */
-    public function index()
+    public function index(): Factory|View|Application
     {
         $tags = Tag::paginate(10);
         return view('admin.tag.index', compact('tags'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return Application|Factory|View
-     */
-    public function create()
+    public function create(): Factory|View|Application
     {
         return view('admin.tag.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param Request $request
-     * @return RedirectResponse
-     */
-    public function store(Request $request)
+    public function store(Request $request): RedirectResponse
     {
         $req = $request->validate([
             'name' => ['required', 'string']
@@ -49,24 +33,12 @@ class TagController extends Controller
         return redirect()->route('admin.tags.index');
     }
 
-
-    /**
-     * @param Tag $tag
-     * @return Application|Factory|View
-     */
-    public function edit(Tag $tag)
+    public function edit(Tag $tag): Factory|View|Application
     {
         return view('admin.tag.edit', compact('tag'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param Request $request
-     * @param Tag $tag
-     * @return RedirectResponse
-     */
-    public function update(Request $request, Tag $tag)
+    public function update(Request $request, Tag $tag): RedirectResponse
     {
         $req = $request->validate([
             'name' => ['required', 'string']
@@ -75,11 +47,7 @@ class TagController extends Controller
         return redirect()->route('admin.tags.index');
     }
 
-    /**
-     * @param Tag $tag
-     * @return RedirectResponse
-     */
-    public function destroy(Tag $tag)
+    public function destroy(Tag $tag): RedirectResponse
     {
         if (app(TagService::class)->isTagSafeToDelete($tag) == false) {
             return redirect()->route('admin.tags.index')->withErrors('The Tag is been used, cant be deleted');
