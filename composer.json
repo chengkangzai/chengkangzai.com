@@ -11,7 +11,7 @@
         "php": "^8.0",
         "artesaos/seotools": "^0.20.1",
         "barryvdh/laravel-translation-manager": "^0.5.10",
-        "chengkangzai/laravel-apu-schedule": "^0.0.1",
+        "chengkangzai/laravel-apu-schedule": "^0.0.3",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
