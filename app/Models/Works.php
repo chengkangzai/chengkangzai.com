@@ -9,12 +9,6 @@ use Illuminate\Database\Eloquent\Builder;
 use Spatie\Tags\HasTags;
 use Spatie\Translatable\HasTranslations;
 
-/**
- * @method static paginate(int $int)
- * @method static create(array $array)
- * @method static latest()
- * @method static active()
- */
 class Works extends Model
 {
     use HasFactory, SoftDeletes, HasTags, HasTranslations;

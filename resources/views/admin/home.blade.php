@@ -6,6 +6,8 @@
 @endpush
 
 @section('content')
+    @include('partial.error-card')
+    @include('partial.success-card')
     @canany(['post_access','work_access','comment_access','tag_access','sss'])
         <div class="grid grid-cols-2 md:grid-cols-5 gap-4 p-2 dark:bg-gray-800 w-full pt-4">
             <a class="block h-auto md:h-52 shadow-md rounded-md bg-white" href="#">

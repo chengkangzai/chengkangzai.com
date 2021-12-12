@@ -9,11 +9,6 @@ use Illuminate\Http\RedirectResponse;
 
 class PublicPostCommentController extends Controller
 {
-    /**
-     * @param StoreCommentRequest $request
-     * @param Post $post
-     * @return RedirectResponse
-     */
     function store(StoreCommentRequest $request, Post $post): RedirectResponse
     {
         $comment = $post->comments()->create([

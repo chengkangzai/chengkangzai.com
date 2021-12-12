@@ -6,15 +6,15 @@ use App\Http\Services\GetTopGithubCommitRankService;
 use App\Models\Works;
 use Artesaos\SEOTools\Facades\SEOTools;
 use Carbon\Carbon;
-use Exception;
+use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
+use Illuminate\Support\Facades\Cache;
 use Storage;
 
 class PublicIndexController extends Controller
 {
-    /**
-     * @throws Exception
-     */
-    public function index()
+    public function index(): Factory|View|Application
     {
         $age = Carbon::parse("1999-05-03")->age;
         SEOTools::setTitle(__('Ching Cheng Kang') . " - " . __('Profile'));
@@ -22,7 +22,7 @@ class PublicIndexController extends Controller
 
         $rank = app(GetTopGithubCommitRankService::class)->getTopGithubCommitRank();
 
-        $works = cache()->remember('public-Works', 60 * 60 * 24, function () {
+        $works = Cache::remember('public-Works', 60 * 60 * 24, function () {
             return Works::active()->take(6)->get()->filter(function ($work) {
                 $s3 = Storage::disk('s3');
                 $client = $s3->getDriver()->getAdapter();

@@ -8,38 +8,26 @@ use Exception;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
+use Illuminate\Support\Facades\Cache;
 use Str;
 
 class PublicPostController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return Application|Factory|View
-     * @throws Exception
-     */
-    public function index()
+    public function index(): Factory|View|Application
     {
         SEOTools::setTitle(__('Blog'));
-        $posts = cache()->remember('public-Posts', 60 * 60 * 24, function () {
+        $posts = Cache::remember('public-Posts', 60 * 60 * 24, function () {
             return Post::latest()->published()->with('tags')->paginate(10);
         });
         return view('public.post.index', compact('posts'));
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param Post $post
-     * @return Factory|Application|View
-     * @throws Exception
-     */
-    public function show(Post $post)
+    public function show(Post $post): Factory|View|Application
     {
         abort_if($post->status !== Post::STATUS['PUBLISH'], 404);
         SEOTools::setTitle(Str::words($post->title, 60));
         SEOTools::setDescription(Str::words(strip_tags($post->content), 40));
-        cache()->remember('public-Posts-' . $post->slug, 60 * 60 * 24, function () use ($post) {
+        Cache::remember('public-Posts-' . $post->slug, 60 * 60 * 24, function () use ($post) {
             $post->load('comments');
             return $post;
         });

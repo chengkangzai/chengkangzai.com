@@ -16,50 +16,45 @@
                                 <li><a href="{{route('admin.home')}}" class="underline font-semibold">{{__('Home')}}</a>
                                 </li>
                                 <li><span class="mx-2">/</span></li>
-                                <li>{{__('Edit User')}}</li>
+                                <li>
+                                    <a href="{{route('admin.users.index')}}" class="underline font-semibold">
+                                        {{__('User')}}
+                                    </a>
+                                </li>
+                                <li><span class="mx-2">/</span></li>
+                                <li>{{__('Update')}}</li>
                             </ul>
                         </div>
                         @include('partial.error-card')
-                        <form action="{{route('admin.user.changePassword',auth()->user())}}"
-                              method="POST" id="createPostForm"
-                              class="space-y-3 dark:text-white mb-2 px-5 w-full sm:w-2/3 mx-auto">
+                        <form action="{{route('admin.users.update',$user)}}"
+                              method="POST" id="createUserForm" class="space-y-3 dark:text-white mb-2 px-5">
+                            @method('PUT')
                             @csrf
-
                             <div class="space-y-2">
                                 <label for="name" class="block font-medium tracking-tight">{{__('Name')}}</label>
                                 <input id="name" type="text" placeholder="{{__('Name')}}" name="name"
-                                       value="{{auth()->user()->name}}"
+                                       value="{{old('name',$user->name)}}"
                                        class="w-full border border-gray-400 text-gray-800 placeholder-gray-400 rounded focus:border-transparent focus:outline-none focus:shadow-outline px-3 py-2"/>
                             </div>
 
                             <div class="space-y-2">
-                                <label for="old_password" class="block font-medium tracking-tight">
-                                    {{__('Current Password')}}
-                                </label>
-                                <input id="old_password" type="password" placeholder="{{__('Current Password')}}"
-                                       name="old_password"
-                                       class="w-full border border-gray-400 text-gray-800 placeholder-gray-400 rounded focus:border-transparent focus:outline-none focus:shadow-outline px-3 py-2"/>
-                            </div>
-
-                            <hr class="border border-t-4">
-
-                            <div class="space-y-2">
-                                <label for="new_password"
-                                       class="block font-medium tracking-tight">{{__('Password')}}</label>
-                                <input id="new_password" type="password" placeholder="{{__('Password')}}"
-                                       name="new_password"
+                                <label for="email" class="block font-medium tracking-tight">{{__('Email')}}</label>
+                                <input id="email" type="email" placeholder="{{__('Email')}}" name="email"
+                                       value="{{old('email',$user->email)}}"
                                        class="w-full border border-gray-400 text-gray-800 placeholder-gray-400 rounded focus:border-transparent focus:outline-none focus:shadow-outline px-3 py-2"/>
                             </div>
 
                             <div class="space-y-2">
-                                <label for="new_password_confirmation" class="block font-medium tracking-tight">
-                                    {{__('Confirm Password')}}
-                                </label>
-                                <input id="new_password_confirmation" type="password" name="new_password_confirmation"
-                                       placeholder="{{__('Confirm Password')}}"
-                                       class="w-full border border-gray-400 text-gray-800 placeholder-gray-400 rounded focus:border-transparent focus:outline-none focus:shadow-outline px-3 py-2"/>
+                                <label for="role" class="block font-medium tracking-tight">{{__('Role')}}</label>
+                                <select id="role" name="role"
+                                        class="w-full border border-gray-400 text-gray-800 placeholder-gray-400 rounded focus:border-transparent focus:outline-none focus:shadow-outline px-3 py-2">
+                                    <option value="" disabled hidden>{{__('Select Role')}}</option>
+                                    @foreach($roles as $role)
+                                        <option value="{{$role->id}}"
+                                                @if($user->roles->first()->id == $role->id) selected @endif>{{$role->name}}</option>
+                                    @endforeach
+                                </select>
                             </div>
-
                             <div class="flex justify-end pt-2">
                                 <input type="submit" value="{{__('Submit')}}"
                                        class="inline-flex items-center text-white px-5 py-2 rounded-lg overflow-hidden focus:outline-none bg-indigo-500 hover:bg-indigo-600 font-semibold tracking-tight">

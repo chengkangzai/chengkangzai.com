@@ -750,12 +750,6 @@ namespace App\Models{
 /**
  * App\Models\Post
  *
- * @method static inRandomOrder()
- * @method static paginate()
- * @method static create(array $validated)
- * @method static withCount(string $string)
- * @method static latest()
- * @property mixed status
  * @property int $id
  * @property string $title
  * @property string $content
@@ -866,10 +860,6 @@ namespace App\Models{
 /**
  * App\Models\Works
  *
- * @method static paginate(int $int)
- * @method static create(array $array)
- * @method static latest()
- * @method static active()
  * @property int $id
  * @property string $name
  * @property array $description
@@ -883,6 +873,7 @@ namespace App\Models{
  * @property-read array $translations
  * @property \Illuminate\Database\Eloquent\Collection|\Spatie\Tags\Tag[] $tags
  * @property-read int|null $tags_count
+ * @method static \Illuminate\Database\Eloquent\Builder|Works active()
  * @method static \Database\Factories\WorksFactory factory(...$parameters)
  * @method static \Illuminate\Database\Eloquent\Builder|Works newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Works newQuery()

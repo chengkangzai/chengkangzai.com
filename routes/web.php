@@ -5,11 +5,13 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ImageController;
 use App\Http\Controllers\LocaleController;
 use App\Http\Controllers\MSOauthController;
+use App\Http\Controllers\PermissionController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\PublicIndexController;
 use App\Http\Controllers\PublicPandemicController;
 use App\Http\Controllers\PublicPostCommentController;
 use App\Http\Controllers\PublicPostController;
+use App\Http\Controllers\RoleController;
 use App\Http\Controllers\ScheduleConfigController;
 use App\Http\Controllers\TagController;
 use App\Http\Controllers\UserController;
@@ -57,8 +59,8 @@ Route::group(['as' => 'public.'], function () {
 Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'web'], 'as' => 'admin.'], function () {
     Route::post('image/store', [ImageController::class, 'store'])->name('image.store');
     Route::get('home', [DashboardController::class, 'index'])->name('home');
+    Route::get('user/changePassword/{user}', [UserController::class, 'editPassword'])->name('user.editPassword');
     Route::post('user/changePassword/{user}', [UserController::class, 'changePassword'])->name('user.changePassword');
-    Route::resource('user', UserController::class)->only(['edit']);
 
     Route::middleware('superAdmin')->group(function () {
         Route::get('posts/{postId}/restore', [PostController::class, 'restore'])->name('posts.restore');
@@ -67,6 +69,12 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'web'], 'as' => 'adm
         Route::resource('works', WorksController::class);
         Route::resource('tags', TagController::class)->except(['show']);
         Route::resource('comment', CommentController::class)->only('index', 'destroy');
+
+        Route::get('users/{userId}/restore', [UserController::class, 'restore'])->name('users.restore');
+        Route::post('users/{user}/resetPassword', [UserController::class, 'sendForgetPassword'])->name('users.sendForgetPassword');
+        Route::resource('users', UserController::class);
+        Route::resource('permissions', PermissionController::class)->only(['index', 'show']);
+        Route::resource('roles', RoleController::class);
     });
 
     Route::group(['prefix' => 'schedule', 'as' => 'schedule.'], function () {
@@ -78,8 +86,3 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'web'], 'as' => 'adm
     Route::resource('scheduleConfig', ScheduleConfigController::class);
 });
 
-//TODO
-// User, Permission and Role Management
-// Make admin page responsive
-// Force user to verify email
-// Fix navigation bar squeeze

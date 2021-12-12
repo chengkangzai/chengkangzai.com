@@ -119,7 +119,7 @@
 
             @if($isDoneSetup)
                 <div>
-                    <h2 class="text-center text-3xl font-bold dark:text-gray-300">Your Schedule</h2>
+                    <h2 class="text-center text-3xl font-bold dark:text-gray-300">{{__('Your Schedule')}}</h2>
                     <div id='calendar' class="w-full text-base md:w-3/5 mx-auto dark:bg-gray-800 dark:text-gray-100 mt-4"></div>
                 </div>
             @endif
@@ -165,6 +165,7 @@
                     headerToolbar: {center: 'dayGridMonth,timeGridWeek'}, // buttons for switching between views
                     initialView: 'timeGridWeek',
                     aspectRatio: 2,
+
                 });
 
                 @foreach($events as $event)
