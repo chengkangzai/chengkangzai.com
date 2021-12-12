@@ -7,11 +7,11 @@
 
 @section('content')
     @canany(['post_access','work_access','comment_access','tag_access','sss'])
-        <div class="grid grid-cols-2 sm:grid-cols-5 gap-4 p-2 dark:bg-gray-800 w-full pt-4">
-            <a class="block h-auto sm:h-52 shadow-md rounded-md bg-white" href="#">
-                <div class=" p-3 sm:p-5">
-                    <h5 class="text-xl sm:text-3xl font-bold block text-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 sm:h-12 sm:w-12 block mx-auto"
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-4 p-2 dark:bg-gray-800 w-full pt-4">
+            <a class="block h-auto md:h-52 shadow-md rounded-md bg-white" href="#">
+                <div class="p-3 md:p-5">
+                    <h5 class="text-xl md:text-3xl font-bold block text-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 md:h-12 md:w-12 block mx-auto"
                              fill="none"
                              viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -21,16 +21,16 @@
                     </h5>
 
 
-                    <p class="text-2xl sm:my-4 sm:text-5xl w-full block text-center">
+                    <p class="text-2xl md:my-4 md:text-5xl w-full block text-center">
                         {{\App\Models\User::count()}}
                     </p>
                 </div>
             </a>
 
-            <a class="block h-auto sm:h-52 shadow-md rounded-md bg-white" href="{{route('admin.posts.index')}}">
-                <div class=" p-3 sm:p-5">
-                    <h5 class="text-xl sm:text-3xl font-bold block text-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 sm:h-12 sm:w-12 block mx-auto"
+            <a class="block h-auto md:h-52 shadow-md rounded-md bg-white" href="{{route('admin.posts.index')}}">
+                <div class="p-3 md:p-5">
+                    <h5 class="text-xl md:text-3xl font-bold block text-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 md:h-12 md:w-12 block mx-auto"
                              fill="none"
                              viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -40,16 +40,16 @@
                     </h5>
 
 
-                    <p class="text-2xl sm:my-4 sm:text-5xl w-full block text-center">
+                    <p class="text-2xl md:my-4 md:text-5xl w-full block text-center">
                         {{\App\Models\Post::count()}}
                     </p>
                 </div>
             </a>
 
-            <a class="block h-auto sm:h-52 shadow-md rounded-md bg-white" href="{{route('admin.works.index')}}">
-                <div class=" p-3 sm:p-5">
-                    <h5 class="text-xl sm:text-3xl font-bold block text-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 sm:h-12 sm:w-12 block mx-auto"
+            <a class="block h-auto md:h-52 shadow-md rounded-md bg-white" href="{{route('admin.works.index')}}">
+                <div class="p-3 md:p-5">
+                    <h5 class="text-xl md:text-3xl font-bold block text-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 md:h-12 md:w-12 block mx-auto"
                              fill="none"
                              viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -59,16 +59,16 @@
                     </h5>
 
 
-                    <p class="text-2xl sm:my-4 sm:text-5xl w-full block text-center">
+                    <p class="text-2xl md:my-4 md:text-5xl w-full block text-center">
                         {{\App\Models\Works::count()}}
                     </p>
                 </div>
             </a>
 
-            <a class="block h-auto sm:h-52 shadow-md rounded-md bg-white" href="{{route('admin.comment.index')}}">
-                <div class=" p-3 sm:p-5">
-                    <h5 class="text-xl sm:text-3xl font-bold block text-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 sm:h-12 sm:w-12 block mx-auto"
+            <a class="block h-auto md:h-52 shadow-md rounded-md bg-white" href="{{route('admin.comment.index')}}">
+                <div class="p-3 md:p-5">
+                    <h5 class="text-xl md:text-3xl font-bold block text-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 md:h-12 md:w-12 block mx-auto"
                              fill="none"
                              viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -78,16 +78,16 @@
                     </h5>
 
 
-                    <p class="text-2xl sm:my-4 sm:text-5xl w-full block text-center">
+                    <p class="text-2xl md:my-4 md:text-5xl w-full block text-center">
                         {{\App\Models\Comment::count()}}
                     </p>
                 </div>
             </a>
 
-            <a class="block h-auto sm:h-52 shadow-md rounded-md bg-white" href="{{route('admin.tags.index')}}">
-                <div class=" p-3 sm:p-5">
-                    <h5 class="text-xl sm:text-3xl font-bold block text-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 sm:h-12 sm:w-12 block mx-auto"
+            <a class="block h-auto md:h-52 shadow-md rounded-md bg-white" href="{{route('admin.tags.index')}}">
+                <div class="p-3 md:p-5">
+                    <h5 class="text-xl md:text-3xl font-bold block text-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 md:h-12 md:w-12 block mx-auto"
                              fill="none"
                              viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -97,7 +97,7 @@
                     </h5>
 
 
-                    <p class="text-2xl sm:my-4 sm:text-5xl w-full block text-center">
+                    <p class="text-2xl md:my-4 md:text-5xl w-full block text-center">
                         {{\Spatie\Tags\Tag::count()}}
                     </p>
                 </div>
@@ -105,8 +105,8 @@
         </div>
     @endcanany
     @if($isDoneSetup)
-        <div class="hidden sm:block">
-            <div id='calendar' class="sm:w-3/5 sm:mx-auto dark:bg-gray-800 dark:text-gray-100"></div>
+        <div class="hidden md:block">
+            <div id='calendar' class="md:w-3/5 md:mx-auto dark:bg-gray-800 dark:text-gray-100"></div>
         </div>
     @endif
 @endsection

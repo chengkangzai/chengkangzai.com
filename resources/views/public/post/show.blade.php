@@ -11,7 +11,7 @@
         <div class="flex flex-wrap -m-4 dark:text-white w-full mx-auto mb-6">
             <div class="mx-auto text-center pb-8 ">
                 <h1 class="text-4xl font-bold py-4"> {{$post->title}} </h1>
-                <span class=" mr-3 inline-flex items-center leading-none text-sm py-1 ">
+                <span class="mr-3 inline-flex items-center leading-none text-sm py-1 ">
                       <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                            stroke="currentColor">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -19,7 +19,7 @@
                         </svg>
                       {{$post->updated_at->diffForHumans()}}
                     </span>
-                <span class=" mr-3 inline-flex items-center leading-none text-sm py-1">
+                <span class="mr-3 inline-flex items-center leading-none text-sm py-1">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                                  stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
