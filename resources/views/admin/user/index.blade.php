@@ -23,6 +23,8 @@
             <tr class="bg-gray-100 dark:bg-gray-800 text-center border-b text-base text-gray-600 dark:text-gray-400">
                 <td class="p-2 border-r"> {{__('ID')}}</td>
                 <td class="p-2 border-r"> {{__('Name')}}</td>
+                <td class="p-2 border-r"> {{__('Email')}}</td>
+                <td class="p-2 border-r"> {{__('Role')}}</td>
                 <td class="p-2 border-r"> {{__('Action')}}</td>
             </tr>
             </thead>
@@ -31,6 +33,8 @@
                 <tr class="bg-gray-100 dark:bg-gray-800 text-center border-b text-base text-gray-600 dark:text-gray-400">
                     <td class="p-2 border-r">{{$user->id}}</td>
                     <td class="p-2 border-r">{{$user->name}}</td>
+                    <td class="p-2 border-r">{{$user->email}}</td>
+                    <td class="p-2 border-r">{{$user->roles->first()->name ?? ''}}</td>
                     <td class="p-2 border-r space-y-2">
                         <a href="{{route('admin.users.show',$user)}}"
                            class="block sm:inline sm:p-2 mx-auto w-min bg-green-500 hover:bg-green-700 px-2 py-1 text-white hover:shadow-lg font-bold rounded">
