@@ -1,5 +1,5 @@
 <div class="block w-full h-full bg-white space-y-4 py-4">
-    <h2 class="text-2xl px-5 font-bold"> {{__('Update')}}</h2>
+    <h2 class="text-2xl px-5 font-bold"> {{__('Update')}} {{$name}}</h2>
     @include('partial.error-card')
     <form class="space-y-3 dark:text-white px-5" wire:submit.prevent="store">
         @csrf
