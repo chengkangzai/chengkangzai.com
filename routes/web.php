@@ -13,9 +13,9 @@ use App\Http\Controllers\PublicPostCommentController;
 use App\Http\Controllers\PublicPostController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\ScheduleConfigController;
-use App\Http\Controllers\TagController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\WorksController;
+use App\Http\Livewire\Admin\TagCRUD;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
@@ -67,7 +67,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'web'], 'as' => 'adm
         Route::resource('posts', PostController::class);
 
         Route::resource('works', WorksController::class);
-        Route::resource('tags', TagController::class)->except(['show']);
+        Route::get('tags', TagCRUD::class)->name('tags.index');
         Route::resource('comment', CommentController::class)->only('index', 'destroy');
 
         Route::get('users/{userId}/restore', [UserController::class, 'restore'])->name('users.restore');

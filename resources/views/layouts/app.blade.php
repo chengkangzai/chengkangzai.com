@@ -185,4 +185,5 @@
 </body>
 @stack('script')
 @livewireScripts
+@livewire('livewire-ui-modal')
 </html>
