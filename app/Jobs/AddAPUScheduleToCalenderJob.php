@@ -51,7 +51,7 @@ class AddAPUScheduleToCalenderJob implements ShouldQueue
     {
         $attendeeAddresses = explode(';', $this->user->email);
         $attendees = $this->getAttendees($attendeeAddresses);
-        $schedules = ApuSchedule::getSchedule($this->config->intake_code, $this->config->grouping);
+        $schedules = ApuSchedule::getSchedule($this->config->intake_code, $this->config->grouping, $this->config->except);
 
         $events = $this->getEvent();
         foreach ($schedules as $schedule) {

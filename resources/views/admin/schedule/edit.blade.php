@@ -2,6 +2,10 @@
     /* @var App\Models\ScheduleConfig $scheduleConfig */
 @endphp
 
+@push('cdn')
+    <link href="https://cdn.jsdelivr.net/npm/tom-select@1.1/dist/css/tom-select.css" rel="stylesheet">
+@endpush
+
 @extends('layouts.app')
 
 @section('content')
@@ -11,7 +15,8 @@
             <ul class="flex">
                 <li><a href="{{route('admin.home')}}" class="underline font-semibold">{{__('Home')}}</a></li>
                 <li><span class="mx-2">/</span></li>
-                <li><a href="{{route('admin.scheduleConfig.index')}}" class="underline font-semibold">{{__('Schedule')}}</a></li>
+                <li><a href="{{route('admin.scheduleConfig.index')}}"
+                       class="underline font-semibold">{{__('Schedule')}}</a></li>
                 <li><span class="mx-2">/</span></li>
                 <li>{{__('Edit')}}</li>
             </ul>
@@ -27,7 +32,7 @@
                         <label
                             class="block uppercase tracking-wide text-gray-700 dark:text-gray-200 text-xs font-bold mb-2">
                             {{__('Select your Intake Code')}}
-                            <select name="intake_code" onchange="renderGrouping(this)"
+                            <select name="intake_code" id="intake_code"
                                     class="appearance-none block w-full bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-200 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white dark:focus:bg-gray-700 focus:border-gray-500 font-normal text-base">
                                 <option value="" hidden="" disabled="">{{__('Select your Intake Code')}}</option>
                                 @foreach(\Chengkangzai\ApuSchedule\ApuSchedule::getIntakes() as $intakeCode)
@@ -46,14 +51,30 @@
                             <select name="grouping"
                                     class="appearance-none block w-full bg-white dark:bg-gray-700 text-gray-700 border border-gray-200 dark:text-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white dark:focus:bg-gray-700  focus:border-gray-500 font-normal text-base">
                                 @foreach($groupings as $grouping)
-                                    <option value="{{$grouping}}" {{$grouping == $scheduleConfig->grouping ? 'selected':''}}>
+                                    <option
+                                        value="{{$grouping}}" {{$grouping == $scheduleConfig->grouping ? 'selected':''}}>
                                         {{$grouping}}</option>
                                 @endforeach
                             </select>
                         </label>
                     </div>
 
-                    {{--TODO : add ignored module...--}}
+                    <div class="w-full px-3">
+                        <label
+                            class="block uppercase tracking-wide text-gray-700 dark:text-gray-200 text-xs font-bold mb-2">
+                            {{__('Ignore these module')}}
+                            <select name="except[]" multiple id="ignore_modules"
+                                    class="w-full border border-gray-200 text-gray-800 placeholder-gray-400 rounded focus:border-transparent focus:outline-none focus:shadow-outline px-2 pt-2 pb-1">
+                                @foreach($modules as $module)
+                                    <option
+                                        value="{{$module}}"
+                                        {{in_array($module, $scheduleConfig->except ?? []) ? 'selected':''}}
+                                    >
+                                        {{$module}}</option>
+                                @endforeach
+                            </select>
+                        </label>
+                    </div>
 
                     <div class="w-full px-3">
                         <button type="submit"
@@ -92,8 +113,11 @@
                         option.innerText = grouping;
                         select.appendChild(option);
                     });
-                });
-
+                })
         }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/tom-select@1.1/dist/js/tom-select.complete.min.js"></script>
+    <script>
+        new TomSelect('#ignore_modules');
     </script>
 @endpush

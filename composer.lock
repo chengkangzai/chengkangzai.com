@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "47c59531c2da6aa51df52cc659e6f53c",
+    "content-hash": "ccbc349244644fe13339cc4507dfcb17",
     "packages": [
         {
             "name": "artesaos/seotools",
@@ -448,16 +448,16 @@
         },
         {
             "name": "chengkangzai/laravel-apu-schedule",
-            "version": "0.0.3",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/chengkangzai/laravel-apu-schedule.git",
-                "reference": "5cfbb79370f0d82af0b22d62e77cbf9ddb054bf3"
+                "reference": "069ae6fee67d2a39b6216f0da313e904d952f5cc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/chengkangzai/laravel-apu-schedule/zipball/5cfbb79370f0d82af0b22d62e77cbf9ddb054bf3",
-                "reference": "5cfbb79370f0d82af0b22d62e77cbf9ddb054bf3",
+                "url": "https://api.github.com/repos/chengkangzai/laravel-apu-schedule/zipball/069ae6fee67d2a39b6216f0da313e904d952f5cc",
+                "reference": "069ae6fee67d2a39b6216f0da313e904d952f5cc",
                 "shasum": ""
             },
             "require": {
@@ -510,7 +510,7 @@
             ],
             "support": {
                 "issues": "https://github.com/chengkangzai/laravel-apu-schedule/issues",
-                "source": "https://github.com/chengkangzai/laravel-apu-schedule/tree/0.0.3"
+                "source": "https://github.com/chengkangzai/laravel-apu-schedule/tree/1.0.0"
             },
             "funding": [
                 {
@@ -518,7 +518,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-12-12T14:39:45+00:00"
+            "time": "2021-12-22T17:59:35+00:00"
         },
         {
             "name": "dasprid/enum",
@@ -2008,16 +2008,16 @@
         },
         {
             "name": "laravel/fortify",
-            "version": "v1.8.5",
+            "version": "v1.8.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/fortify.git",
-                "reference": "f2059ba020557cb19c73fdd3083d7218d25fa62c"
+                "reference": "fb2b7884bb28fb04fafbea7440933ef5877714df"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/fortify/zipball/f2059ba020557cb19c73fdd3083d7218d25fa62c",
-                "reference": "f2059ba020557cb19c73fdd3083d7218d25fa62c",
+                "url": "https://api.github.com/repos/laravel/fortify/zipball/fb2b7884bb28fb04fafbea7440933ef5877714df",
+                "reference": "fb2b7884bb28fb04fafbea7440933ef5877714df",
                 "shasum": ""
             },
             "require": {
@@ -2067,20 +2067,20 @@
                 "issues": "https://github.com/laravel/fortify/issues",
                 "source": "https://github.com/laravel/fortify"
             },
-            "time": "2021-12-07T15:58:41+00:00"
+            "time": "2021-12-22T10:03:31+00:00"
         },
         {
             "name": "laravel/framework",
-            "version": "v8.76.2",
+            "version": "v8.77.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "c67acfdc968f487b6235435080eef62a7e2ed055"
+                "reference": "994dbac5c6da856c77c81a411cff5b7d31519ca8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/c67acfdc968f487b6235435080eef62a7e2ed055",
-                "reference": "c67acfdc968f487b6235435080eef62a7e2ed055",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/994dbac5c6da856c77c81a411cff5b7d31519ca8",
+                "reference": "994dbac5c6da856c77c81a411cff5b7d31519ca8",
                 "shasum": ""
             },
             "require": {
@@ -2098,7 +2098,7 @@
                 "opis/closure": "^3.6",
                 "php": "^7.3|^8.0",
                 "psr/container": "^1.0",
-                "psr/log": "^1.0 || ^2.0",
+                "psr/log": "^1.0|^2.0",
                 "psr/simple-cache": "^1.0",
                 "ramsey/uuid": "^4.2.2",
                 "swiftmailer/swiftmailer": "^6.3",
@@ -2239,7 +2239,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2021-12-15T14:02:14+00:00"
+            "time": "2021-12-21T20:22:29+00:00"
         },
         {
             "name": "laravel/serializable-closure",
@@ -2872,16 +2872,16 @@
         },
         {
             "name": "league/oauth2-client",
-            "version": "2.6.0",
+            "version": "2.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/oauth2-client.git",
-                "reference": "badb01e62383430706433191b82506b6df24ad98"
+                "reference": "2334c249907190c132364f5dae0287ab8666aa19"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/oauth2-client/zipball/badb01e62383430706433191b82506b6df24ad98",
-                "reference": "badb01e62383430706433191b82506b6df24ad98",
+                "url": "https://api.github.com/repos/thephpleague/oauth2-client/zipball/2334c249907190c132364f5dae0287ab8666aa19",
+                "reference": "2334c249907190c132364f5dae0287ab8666aa19",
                 "shasum": ""
             },
             "require": {
@@ -2890,9 +2890,9 @@
                 "php": "^5.6 || ^7.0 || ^8.0"
             },
             "require-dev": {
-                "mockery/mockery": "^1.3",
-                "php-parallel-lint/php-parallel-lint": "^1.2",
-                "phpunit/phpunit": "^5.7 || ^6.0 || ^9.3",
+                "mockery/mockery": "^1.3.5",
+                "php-parallel-lint/php-parallel-lint": "^1.3.1",
+                "phpunit/phpunit": "^5.7 || ^6.0 || ^9.5",
                 "squizlabs/php_codesniffer": "^2.3 || ^3.0"
             },
             "type": "library",
@@ -2936,9 +2936,9 @@
             ],
             "support": {
                 "issues": "https://github.com/thephpleague/oauth2-client/issues",
-                "source": "https://github.com/thephpleague/oauth2-client/tree/2.6.0"
+                "source": "https://github.com/thephpleague/oauth2-client/tree/2.6.1"
             },
-            "time": "2020-10-28T02:03:40+00:00"
+            "time": "2021-12-22T16:42:49+00:00"
         },
         {
             "name": "livewire/livewire",

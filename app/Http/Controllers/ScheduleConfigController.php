@@ -18,10 +18,9 @@ class ScheduleConfigController extends Controller
 {
     public function index(): Factory|View|Application
     {
-        $isDoneSetup = Auth::user()->scheduleConfig()->exists();
-        $config = $isDoneSetup ? Auth::user()->scheduleConfig : null;
-        $events = $isDoneSetup ? ApuSchedule::getSchedule($config->intake_code, $config->grouping) : collect();
-        return view('admin.schedule.index', compact('isDoneSetup', 'config', 'events'));
+        $config = Auth::user()->scheduleConfig()->first();
+        $events = $config ? ApuSchedule::getSchedule($config->intake_code, $config->grouping, $config->except) : collect();
+        return view('admin.schedule.index', compact('config', 'events'));
     }
 
     public function store(Request $request): RedirectResponse
@@ -33,7 +32,8 @@ class ScheduleConfigController extends Controller
     public function edit(ScheduleConfig $scheduleConfig): Factory|View|Application
     {
         $groupings = ApuSchedule::getGroupings($scheduleConfig->intake_code);
-        return view('admin.schedule.edit', compact('scheduleConfig', 'groupings'));
+        $modules = ApuSchedule::getMODID($scheduleConfig->intake_code, $scheduleConfig->grouping);
+        return view('admin.schedule.edit', compact('scheduleConfig', 'groupings', 'modules'));
     }
 
     public function update(Request $request, ScheduleConfig $scheduleConfig): RedirectResponse
