@@ -16,7 +16,7 @@ class ScheduleConfig extends Model
     {
         return $this->belongsTo(User::class);
     }
-    
+
     public function setExceptAttribute($value)
     {
         $this->attributes['except'] = implode(',', $value);
