@@ -39,7 +39,7 @@
 
 <div class="sharethis-sticky-share-buttons"></div>
 
-<header class="text-gray-600 body-font bg-gray-100 dark:bg-gray-900">
+<header class="text-gray-600 body-font bg-gray-100 dark:bg-gray-900 fixed top-0 z-50 w-full">
     <div x-data="{ open: false }" class="container mx-auto flex flex-wrap py-2 flex-col md:flex-row items-center">
         <div class="flex title-font font-medium items-center text-gray-900 md:mb-0">
             <a href="{{route('public.index')}}">
@@ -112,7 +112,7 @@
         </nav>
     </div>
 </header>
-<main class="container w-full mx-auto text-center bg-white dark:bg-black">
+<main class="container w-full mx-auto text-center bg-white dark:bg-black mt-16">
     @yield('content')
 </main>
 

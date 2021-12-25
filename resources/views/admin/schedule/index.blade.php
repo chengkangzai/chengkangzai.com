@@ -120,7 +120,7 @@
             @if($config)
                 <div>
                     <h2 class="text-center text-3xl font-bold dark:text-gray-300">{{__('Your Schedule')}}</h2>
-                    <div id='calendar' class="w-full text-base md:w-3/5 mx-auto dark:bg-gray-800 dark:text-gray-100 mt-4"></div>
+                    <div id='calendar' class="w-full text-base md:w-1/2 mx-auto dark:bg-gray-800 dark:text-gray-100 mt-4"></div>
                 </div>
             @endif
         @endif
