@@ -18,7 +18,7 @@
         @include('partial.success-card')
         @include('partial.error-card')
 
-        @if(!$isDoneSetup)
+        @if(!$config)
             <div class="bg-gray-50 dark:bg-gray-700 w-full rounded border-2">
                 <h2 class="sm:text-xl text-gray-700 dark:text-gray-200 py-2 px-4">
                     {{__('Hi, Looks like you are first time to use the system, please submit your detail')}}
@@ -117,7 +117,7 @@
                 </table>
             </div>
 
-            @if($isDoneSetup)
+            @if($config)
                 <div>
                     <h2 class="text-center text-3xl font-bold dark:text-gray-300">{{__('Your Schedule')}}</h2>
                     <div id='calendar' class="w-full text-base md:w-3/5 mx-auto dark:bg-gray-800 dark:text-gray-100 mt-4"></div>
@@ -157,7 +157,7 @@
         }
     </script>
 
-    @if($isDoneSetup)
+    @if($config)
         <script>
             document.addEventListener('DOMContentLoaded', function () {
                 var calendarEl = document.getElementById('calendar');

@@ -1,6 +1,3 @@
-@push('cdn')
-    <link href="https://cdn.jsdelivr.net/npm/tom-select@1.1/dist/css/tom-select.css" rel="stylesheet">
-@endpush
 
 @extends('layouts.app')
 
