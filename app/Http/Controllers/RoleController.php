@@ -15,7 +15,7 @@ class RoleController extends Controller
 {
     public function index(): Factory|View|Application
     {
-        $roles = Role::paginate();
+        $roles = Role::paginate(10);
         return view('admin.role.index', compact('roles'));
     }
 
