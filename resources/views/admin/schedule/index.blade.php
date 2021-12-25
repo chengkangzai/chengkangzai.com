@@ -83,18 +83,24 @@
                 <table class="w-full border">
                     <tr>
                         <td class="text-gray-700 dark:text-gray-200 text-sm font-semibold px-4 py-2">
-                            {{__('Intake Code')}} :
+                            {{__('Intake Code')}} : {{$config->intake_code}}
                         </td>
                         <td class="text-gray-700 dark:text-gray-200 text-sm font-semibold px-4 py-2">
-                            {{$config->intake_code}}
+                            {{__('Grouping')}} : {{$config->grouping}}
                         </td>
                     </tr>
                     <tr>
                         <td class="text-gray-700 dark:text-gray-200 text-sm font-semibold px-4 py-2">
-                            {{__('Grouping')}} :
+                            {{__('Ignored Module')}} :
                         </td>
                         <td class="text-gray-700 dark:text-gray-200 text-sm font-semibold px-4 py-2">
-                            {{$config->grouping}}
+                            @foreach($config->except as $ignoredModule)
+                                @if ($loop->last)
+                                    {{$ignoredModule}}
+                                @else
+                                    {{$ignoredModule}},
+                                @endif
+                            @endforeach
                         </td>
                     </tr>
                     <tr>
