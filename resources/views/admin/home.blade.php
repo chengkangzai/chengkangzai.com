@@ -106,7 +106,7 @@
             </a>
         </div>
     @endcanany
-    @if($isDoneSetup)
+    @if($config)
         <div class="hidden md:block">
             <div id='calendar' class="md:w-3/5 md:mx-auto dark:bg-gray-800 dark:text-gray-100"></div>
         </div>
@@ -114,7 +114,7 @@
 @endsection
 
 @push('script')
-    @if($isDoneSetup)
+    @if($config)
         <script>
             document.addEventListener('DOMContentLoaded', function () {
                 var calendarEl = document.getElementById('calendar');
