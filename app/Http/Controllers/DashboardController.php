@@ -14,8 +14,7 @@ class DashboardController extends Controller
     public function index(): Factory|View|Application
     {
         $config = Auth::user()->scheduleConfig()->first();
-        $isDoneSetup = $config?->exists();
-        $events = $isDoneSetup ? ApuSchedule::getSchedule($config->intake_code, $config->grouping) : collect();
-        return view('admin.home', compact('isDoneSetup', 'events'));
+        $events = $config ? ApuSchedule::getSchedule($config->intake_code, $config->grouping, $config->except) : collect();
+        return view('admin.home', compact('config', 'events'));
     }
 }
