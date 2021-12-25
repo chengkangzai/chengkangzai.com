@@ -31,10 +31,10 @@
 <body>
 <div class="min-h-screen flex flex-col overscroll-none">
     <header
-        class="w-full text-gray-700 bg-white dark:text-gray-200 dark:bg-gray-800 from-blue-400 bg-gradient-to-r to-purple-600">
+        class="fixed top-0 w-full text-gray-700 bg-white dark:text-gray-200 dark:bg-gray-800 from-blue-400 bg-gradient-to-r to-purple-600 z-50">
         <div x-data="{ open: false }"
              class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
-            <div class="p-4 flex flex-row items-center justify-between">
+            <div class="py-3 flex flex-row items-center justify-between">
                 <a href="{{route('public.index')}}"
                    class="text-lg font-semibold text-white tracking-widest uppercase rounded-lg focus:outline-none focus:shadow-outline">
                     {{config('app.name')}}</a>
@@ -184,7 +184,7 @@
 
     <div class="flex-1 flex flex-col md:flex-row">
         <main
-            class="flex-1 bg-white @if(!request()->is('admin*')) dark:bg-black @else dark:bg-gray-800 @endif w-full px-3 md:px-0 ">
+            class="flex-1 bg-white @if(!request()->is('admin*')) dark:bg-black @else dark:bg-gray-800 @endif w-full px-3 md:px-0 pt-12">
             @yield('content')
         </main>
         @if(request()->is('admin/*'))
