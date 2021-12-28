@@ -20,7 +20,7 @@
         }
 
         gtag('js', new Date());
-        gtag('config', 'G-G0TL352WKG');
+        gtag('config', 'G-G0TL352WKG', {cookie_flags: 'SameSite=None;Secure'});
     </script>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     @laravelPWA
