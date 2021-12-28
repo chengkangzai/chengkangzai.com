@@ -57,10 +57,15 @@
                     <p class="w-full mt-2 mb-8 text-sm text-left dark:text-gray-400 text-dark-600">
                         ⚡️ {{__('Fun fact: I convert Coffee to Code')}} ☕️
                     </p>
-                    <div class="flex flex-col justify-center lg:flex-row">
+                    <div class="flex flex-col justify-center lg:flex-row space-y-2 lg:space-x-2">
                         <a role="button" href="{{asset('resume.pdf')}}"
-                           class="flex items-center px-6 py-2 mt-auto font-semibold text-white dark:text-black transition duration-300 ease-in-out transform bg-black dark:bg-white rounded-lg hover:bg-gray-800 dark:hover:bg-gray-200 hover:to-black dark:hover:to-white focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2">
+                           class="flex items-center px-6 py-2 mt-auto font-semibold text-white dark:text-black transition duration-300 ease-in-out transform bg-black dark:bg-white rounded-lg hover:bg-gray-800 dark:hover:bg-gray-200 hover:to-black dark:hover:to-white focus:shadow-outline focus:outline-none focus:ring-2 ring-black ring-offset-current ring-offset-2">
                             {{__('SEE MY RESUME')}}
+                        </a>
+
+                        <a role="button" href="{{route('public.pandemic.index')}}"
+                           class="flex items-center px-6 py-2 mt-auto font-semibold text-white dark:text-black transition duration-300 ease-in-out transform bg-black dark:bg-white rounded-lg hover:bg-gray-800 dark:hover:bg-gray-200 hover:to-black dark:hover:to-white focus:shadow-outline focus:outline-none focus:ring-2 ring-black ring-offset-current ring-offset-2">
+                            {{__('Covid-19 Dashboard')}}
                         </a>
                     </div>
                     <div

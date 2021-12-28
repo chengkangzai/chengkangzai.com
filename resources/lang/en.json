@@ -163,7 +163,7 @@
     "Hi, I am": "Hi, I am",
     "Laravel Developer": "Laravel Developer",
     "Fun fact: I convert Coffee to Code": "Fun fact: I convert Coffee to Code",
-    "SEE MY RESUME": "SEE MY RESUME",
+    "SEE MY RESUME": "See My Resume",
     "About me": "About me",
     "Click me to translate": "Click me to translate",
     "What I believe in": "What i believe in",
@@ -356,5 +356,7 @@
     "Roles": "Roles",
     "Your Schedule": "Your Schedule",
     "Work added successfully": "Work added successfully",
-    "Work updated successfully": "Work updated successfully"
+    "Work updated successfully": "Work updated successfully",
+    "Ignored Module": "Ignored Module",
+    "Ignore these module": "Ignore these module"
 }
