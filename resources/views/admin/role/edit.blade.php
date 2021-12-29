@@ -39,7 +39,7 @@
 
                             <div class="space-y-2">
                                 <label for="permissions"
-                                       class="block font-medium tracking-tight">{{__('Permission')}}</label>
+                                       class="block font-medium tracking-tight">{{__('Permissions')}}</label>
                                 <select id="permissions" name="permissions[]" multiple
                                         class="w-full border border-gray-400 text-gray-800 placeholder-gray-400 rounded focus:border-transparent focus:outline-none focus:shadow-outline px-3 py-2">
                                     @foreach($permissions as $permission)
