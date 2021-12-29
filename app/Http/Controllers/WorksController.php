@@ -5,72 +5,54 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreWorksRequest;
 use App\Http\Requests\UpdateWorksRequest;
 use App\Models\Works;
+use Exception;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\DB;
-use Spatie\Tags\Tag;
 use Storage;
 use Throwable;
 
 class WorksController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return Application|Factory|View
-     */
-    public function index()
+    public function index(): Factory|View|Application
     {
         $works = Works::with('tags')->paginate(10);
         return view('admin.work.index', compact('works'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return Application|Factory|View
-     */
-    public function create()
+    public function create(): Factory|View|Application
     {
         return view('admin.work.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param StoreWorksRequest $request
-     * @return RedirectResponse
-     * @throws Throwable
-     */
     public function store(StoreWorksRequest $request): RedirectResponse
     {
         $path = $request->file('picture')->store(Works::S3_PATH, 's3');
-        DB::transaction(function () use ($request, $path) {
-            $work = Works::create([
-                'name' => $request->name,
-                'description' => $request->description,
-                'picture_name' => basename($path),
-                'url' => $request->url,
-                'github_url' => $request->github_url,
-                'status' => $request->status,
-            ]);
-            if ($request->get('tags')) {
-                $work->attachTags($request->get('tags'));
-            }
-            return $work;
-        });
-        return redirect()->route('admin.works.index');
+        try {
+            DB::transaction(function () use ($request, $path) {
+                $work = Works::create([
+                    'name' => $request->get('name'),
+                    'description' => $request->get('description'),
+                    'picture_name' => basename($path),
+                    'url' => $request->get('url'),
+                    'github_url' => $request->get('github_url'),
+                    'status' => $request->get('status'),
+                ]);
+                if ($request->get('tags')) {
+                    $work->attachTags($request->get('tags'));
+                }
+                return $work;
+            });
+            return redirect()->route('admin.works.index')->with('success', __('Work added successfully'));
+        } catch (Throwable|Exception $e) {
+            Storage::disk('s3')->delete($path);
+            return redirect()->route('admin.works.index')->withErrors(__('Whoops! Something went wrong. Please try again later.'));
+        }
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param Works $work
-     * @return Application|Factory|View
-     */
-    public function show(Works $work)
+    public function show(Works $work): Factory|View|Application
     {
         $s3 = Storage::disk('s3');
         $client = $s3->getDriver()->getAdapter();
@@ -79,59 +61,42 @@ class WorksController extends Controller
         return view('admin.work.show', compact('work', 'imgLink'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param Works $work
-     * @return Application|Factory|View
-     */
-    public function edit(Works $work)
+    public function edit(Works $work): Factory|View|Application
     {
         return view('admin.work.edit', compact('work'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param UpdateWorksRequest $request
-     * @param Works $work
-     * @return RedirectResponse
-     * @throws Throwable
-     */
-    public function update(UpdateWorksRequest $request, Works $work)
+    public function update(UpdateWorksRequest $request, Works $work): RedirectResponse
     {
-        DB::transaction(function () use ($request, $work) {
-            if ($request->hasFile('picture')) {
-                Storage::disk('s3')->delete(Works::S3_PATH . $work->picture_name);
-                $path = $request->file('picture')->store(Works::S3_PATH, 's3');
-            }
+        try {
+            DB::transaction(function () use ($request, $work) {
+                if ($request->hasFile('picture')) {
+                    Storage::disk('s3')->delete(Works::S3_PATH . $work->picture_name);
+                    $path = $request->file('picture')->store(Works::S3_PATH, 's3');
+                }
 
-            $work->update([
-                'name' => $request->name,
-                'description' => $request->description,
-                'picture_name' => !$request->hasFile('picture') ? $work->picture_name : basename($path),
-                'url' => $request->url,
-                'github_url' => $request->github_url,
-                'status' => $request->status,
-            ]);
-            if ($request->get('tags')) {
-                $work->syncTags($request->get('tags'));
-            }
-            if ($request->missing('tags')) {
-                $work->detachTags(Tag::all());
-            }
-            return $work;
-        });
-        $work->update($request->validated());
-        return redirect()->route('admin.works.index');
+                $work->update([
+                    'name' => $request->get('name'),
+                    'description' => $request->get('description'),
+                    'picture_name' => !$request->hasFile('picture') ? $work->picture_name : basename($path),
+                    'url' => $request->get('url'),
+                    'github_url' => $request->get('github_url'),
+                    'status' => $request->get('status'),
+                ]);
+                if ($request->get('tags')) {
+                    $work->syncTags($request->get('tags'));
+                }
+                if ($request->missing('tags')) {
+                    $work->tags()->detach();
+                }
+                return $work;
+            });
+            return redirect()->route('admin.works.index')->with('success', __('Work updated successfully'));
+        } catch (Throwable $e) {
+            return redirect()->route('admin.works.index')->withErrors(__('Whoops! Something went wrong. Please try again later.'));
+        }
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param Works $work
-     * @return RedirectResponse
-     */
     public function destroy(Works $work): RedirectResponse
     {
         $work->delete();

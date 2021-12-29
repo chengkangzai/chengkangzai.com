@@ -1,12 +1,21 @@
 @extends('layouts.covid_app')
 
 @section('content')
-<div class="mx-2">
-    @livewire('covid-state.head')
-    @livewire('covid-state.dashboard')
-    @livewire('covid-state.health-care')
-    @livewire('covid-state.graph')
-</div>
+    @include('partial.rocket')
+    <div class="mx-2">
+        <livewire:covid-state.head
+            :state="$state"
+        />
+        <livewire:covid-state.dashboard
+            :state="$state"
+        />
+        <livewire:covid-state.health-care
+            :state="$state"
+        />
+        <livewire:covid-state.graph
+            :state="$state"
+        />
+    </div>
 
 @endsection
 

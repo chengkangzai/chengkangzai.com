@@ -57,10 +57,15 @@
                     <p class="w-full mt-2 mb-8 text-sm text-left dark:text-gray-400 text-dark-600">
                         ⚡️ {{__('Fun fact: I convert Coffee to Code')}} ☕️
                     </p>
-                    <div class="flex flex-col justify-center lg:flex-row">
+                    <div class="flex flex-col justify-center lg:flex-row space-y-2 lg:space-x-2">
                         <a role="button" href="{{asset('resume.pdf')}}"
-                           class="flex items-center px-6 py-2 mt-auto font-semibold text-white dark:text-black transition duration-300 ease-in-out transform bg-black dark:bg-white rounded-lg hover:bg-gray-800 dark:hover:bg-gray-200 hover:to-black dark:hover:to-white focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2">
+                           class="flex items-center px-6 py-2 mt-auto font-semibold text-white dark:text-black transition duration-300 ease-in-out transform bg-black dark:bg-white rounded-lg hover:bg-gray-800 dark:hover:bg-gray-200 hover:to-black dark:hover:to-white focus:shadow-outline focus:outline-none focus:ring-2 ring-black ring-offset-current ring-offset-2">
                             {{__('SEE MY RESUME')}}
+                        </a>
+
+                        <a role="button" href="{{route('public.pandemic.index')}}"
+                           class="flex items-center px-6 py-2 mt-auto font-semibold text-white dark:text-black transition duration-300 ease-in-out transform bg-black dark:bg-white rounded-lg hover:bg-gray-800 dark:hover:bg-gray-200 hover:to-black dark:hover:to-white focus:shadow-outline focus:outline-none focus:ring-2 ring-black ring-offset-current ring-offset-2">
+                            {{__('Covid-19 Dashboard')}}
                         </a>
                     </div>
                     <div
@@ -76,7 +81,7 @@
                 </div>
                 <div class="w-full lg:w-5/6 lg:max-w-lg sm:w-1/2">
                     <img class="object-cover object-center rounded-lg lg:w-4/5 mx-auto" alt="hero"
-                         src="{{asset('src/bighead.jpeg')}}">
+                         src="{{asset('src/bighead.jpeg')}}" width="409" height="341">
                 </div>
             </div>
 
@@ -88,7 +93,7 @@
             <div class="flex flex-wrap w-full mx-auto pb-8">
 
                 <div
-                    class="md:w-1/3 w-full bg-white dark:bg-black flex items-center justify-center px-5 py-8 transform hover:scale-110 transition duration-300 ">
+                    class="md:w-1/3 w-full flex items-center justify-center px-5 py-8 transform hover:scale-110 transition duration-300">
                     <div x-data="{ cn: true }"
                          class="w-full mx-auto rounded-lg bg-gray-50 dark:bg-gray-800 shadow-lg px-5 pt-5 my5 pb-10 text-gray-800">
                         <div class="w-full mb-10">
@@ -149,7 +154,7 @@
                 </div>
 
                 <div
-                    class="md:w-1/3 w-full bg-white dark:bg-black flex items-center justify-center px-5 py-8 transform hover:scale-110 transition duration-300 ">
+                    class="md:w-1/3 w-full flex items-center justify-center px-5 py-8 transform hover:scale-110 transition duration-300">
                     <div
                         class="w-full mx-auto rounded-lg bg-gray-50 dark:bg-gray-800 shadow-lg text-gray-800 py-11">
                         <div class="w-full mb-10 text-center">
@@ -158,7 +163,7 @@
                                 {{__("I'm :age-year-old Malaysian that passionate about making software that simplify people's life.",['age'=>\Carbon\Carbon::parse("1999-05-03")->age])}}
                             </p>
                             <br>
-                            @if($rank>=1)
+                            @if($rank >= 1)
                                 <a class="text-white text-gray-600 dark:text-gray-200 px-5 underline"
                                    href="https://commits.top/malaysia.html" aria-label="Linkt to Commits.top"
                                    rel="noreferrer">
@@ -176,7 +181,7 @@
                 </div>
 
                 <div
-                    class="md:w-1/3 w-full bg-white dark:bg-black flex items-center justify-center px-5 py-8 transform hover:scale-110 transition duration-300 ">
+                    class="md:w-1/3 w-full flex items-center justify-center px-5 py-8 transform hover:scale-110 transition duration-300">
                     <div
                         class="w-full mx-auto rounded-lg bg-gray-50 dark:bg-gray-800 shadow-lg text-gray-800 py-8">
                         <div class="w-full mb-10 ">
@@ -240,7 +245,7 @@
             </div>
 
             @forelse($works as $work)
-                <div class="md:w-1/3 sm:w-full bg-white dark:bg-black flex items-center justify-center px-5 py-8">
+                <div class="md:w-1/3 sm:w-full flex items-center justify-center px-5 py-8">
                     <div
                         class="w-full mx-auto rounded-lg bg-gray-50 dark:bg-gray-800 shadow-lg text-gray-800 px-5 transform hover:scale-110 transition duration-300">
                         <div class="w-full mb-10 mt-5">
@@ -321,7 +326,7 @@
                             <p class="mx-auto font-semibold text-lg text-white dark:text-black ">1</p>
                         </div>
                         <div
-                            class=" order-1 bg-blue-700 rounded-lg shadow-xl w-5/12 px-6 py-4 transform hover:scale-110 transition duration-300">
+                            class="order-1 bg-blue-700 rounded-lg shadow-xl w-5/12 px-6 py-4 transform hover:scale-110 transition duration-300">
                             <h3 class="mb-3 font-bold text-white text-xl">
                                 {{__('Persuade Study in')}}
                                 <a class="underline" rel="noreferrer" target="_blank" href="https://www.apu.edu.my/">
@@ -482,7 +487,7 @@
                                 </a>
                             </h3>
                             <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
-                                {{__('To be explore')}}
+                                {{__('As a intern, I was responsible for the development of the in house Custom Content Management(CMS) System and various Hotel Website of the company with the use of .NET and .NET Core technology.')}}
                             </p>
                         </div>
 
@@ -498,7 +503,7 @@
     <script>
         const string = [
             '{{__('Laravel Developer')}}',
-            @if($rank>=1)'{{__('No x in most active GitHub users in Malaysia',['rank'=>$rank])}}', @endif
+            @if($rank >= 1)'{{__('No x in most active GitHub users in Malaysia',['rank'=>$rank])}}', @endif
                 '{{__('Fullstack Developer')}}',
             '{{__('Web Developer')}}',
             '{{__('Angular Developer')}}',

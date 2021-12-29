@@ -108,11 +108,11 @@
 
                                 <td class="px-6 py-4 whitespace-nowrap text-left border-r border-l">
                                     @if(count(explode(',',$cluster->state))  == 1 )
-                                        {{$cluster->state}}
+                                        {{__($cluster->state)}}
                                     @else
                                         <ul class="list-disc list-inside">
                                             @foreach(explode(',',$cluster->state) as $state)
-                                                <li>{{$state}}</li>
+                                                <li>{{__($state)}}</li>
                                             @endforeach
                                         </ul>
                                     @endif
@@ -141,7 +141,7 @@
                                     {{$cluster->cases_total}}
                                 </td>
                                 <td class="py-4 whitespace-nowrap border-r">
-                                    {{round(($cluster->cases_total/$cluster->tests)*100,2).'%'}}
+                                    {{number_format(($cluster->cases_total/$cluster->tests)*100,2).'%'}}
                                     <small class="text-xs">
                                         ({{$cluster->cases_total}}/{{$cluster->tests}})
                                     </small>

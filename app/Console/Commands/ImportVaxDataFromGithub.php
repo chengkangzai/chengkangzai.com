@@ -2,11 +2,11 @@
 
 namespace App\Console\Commands;
 
-use App\Http\Services\ImportCovidFromGithubService;
-use App\Http\Services\ImportVaccineFromGithubService;
+use App\Console\Services\ImportCovidFromGithubService;
+use App\Console\Services\ImportVaccineFromGithubService;
 use App\Http\Services\WebHookService;
 use Carbon\Carbon;
-use DB;
+use Illuminate\Support\Facades\DB;
 use Exception;
 use Illuminate\Console\Command;
 use Illuminate\Contracts\Foundation\Application;
@@ -65,11 +65,7 @@ class ImportVaxDataFromGithub extends Command
             if (app()->environment('production')) {
                 app(WebHookService::class)->notifyInSpam(Carbon::now() . ' : Vaccine Data Successfully Inserted', WebHookService::COLOR['GREEN']);
             }
-        } catch (Exception $exception) {
-            if (app()->environment('production')) {
-                app(WebHookService::class)->notifyInGeneral(Carbon::now() . ' : DAMN STH went WRONG during importing Vaccine : \n\n' . $exception->getMessage(), WebHookService::COLOR['RED']);
-            }
-        } catch (Throwable $exception) {
+        } catch (Throwable|Exception $exception) {
             if (app()->environment('production')) {
                 app(WebHookService::class)->notifyInGeneral(Carbon::now() . ' : DAMN STH went WRONG during importing Vaccine : \n\n' . $exception->getMessage(), WebHookService::COLOR['RED']);
             }

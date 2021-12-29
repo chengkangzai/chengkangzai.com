@@ -2,11 +2,11 @@
 
 namespace App\Console\Commands;
 
-use App\Http\Services\ImportCovidFromGithubService;
+use App\Console\Services\ImportCovidFromGithubService;
 use App\Http\Services\WebHookService;
 use Artisan;
 use Carbon\Carbon;
-use DB;
+use Illuminate\Support\Facades\DB;
 use Exception;
 use Illuminate\Console\Command;
 use Illuminate\Contracts\Foundation\Application;
@@ -56,6 +56,7 @@ class ImportCOVIDDataFromGithub extends Command
                 $this->line('Truncating DB...');
                 $this->truncateDB();
             }
+            $this->importMalaysiaPopulation();
             $this->importCasesMalaysia();
             $this->importCasesState();
             $this->importDeathMalaysia();
@@ -66,17 +67,12 @@ class ImportCOVIDDataFromGithub extends Command
             $this->importHospitals();
             $this->importICU();
             $this->importPKRC();
-            $this->importMalaysiaPopulation();
 
             Artisan::call('cache:clear');
             if (app()->environment('production')) {
                 app(WebHookService::class)->notifyInSpam(Carbon::now() . ' : Covid Data Successfully Inserted', WebHookService::COLOR['GREEN']);
             }
-        } catch (Exception $exception) {
-            if (app()->environment('production')) {
-                app(WebHookService::class)->notifyInGeneral(Carbon::now() . ' : DAMN STH went WRONG during importing covid data: \n\n' . $exception->getMessage(), WebHookService::COLOR['RED']);
-            }
-        } catch (Throwable $exception) {
+        } catch (Throwable|Exception $exception) {
             if (app()->environment('production')) {
                 app(WebHookService::class)->notifyInGeneral(Carbon::now() . ' : DAMN STH went WRONG during importing covid data: \n\n' . $exception->getMessage(), WebHookService::COLOR['RED']);
             }

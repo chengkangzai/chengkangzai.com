@@ -5,7 +5,7 @@
 </div>
 
 @push('script')
-    <script>
+    <script defer>
         let deathCareArea = document.getElementById("death-case-per-day").getContext("2d");
         let deathCareOptions = {
             plugins: {
@@ -29,11 +29,16 @@
                         backgroundColor: 'rgb(255, 99, 132)',
                         borderColor: 'rgb(255, 99, 132)',
                         data: {!! $deathCase !!},
-                    },{
+                    }, {
                         label: '{{__('Brought in Death (BID) ')}}',
                         backgroundColor: 'rgb(99,120,255)',
                         borderColor: 'rgb(99,120,255)',
                         data: {!! $bidCase !!},
+                    }, {
+                        label: '{{__('Died of disease (DOD) ')}}',
+                        backgroundColor: 'rgb(201,119,60)',
+                        borderColor: 'rgb(201,119,60)',
+                        data: {!! $dodCase !!},
                     }]
                 },
                 options: deathCareOptions
@@ -44,6 +49,7 @@
             const date = test.detail.date;
             const deathCase = test.detail.deathCase;
             const bidCase = test.detail.bidCase;
+            const dodCase = test.detail.dodCase;
             deathCareChart.destroy();
             deathCareChart = new Chart(
                 deathCareArea,
@@ -61,6 +67,11 @@
                             backgroundColor: 'rgb(99,120,255)',
                             borderColor: 'rgb(99,120,255)',
                             data: bidCase,
+                        }, {
+                            label: '{{__('Died of disease (DOD) ')}}',
+                            backgroundColor: 'rgb(201,119,60)',
+                            borderColor: 'rgb(201,119,60)',
+                            data: dodCase,
                         }]
                     },
                     options: deathCareOptions

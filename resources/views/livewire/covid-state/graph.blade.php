@@ -1,4 +1,4 @@
-<div xmlns:wire="http://www.w3.org/1999/xhtml" wire:loading.class="animate-pulse">
+<div xmlns:wire="http://www.w3.org/1999/xhtml" wire:loading.class="animate-pulse" wire:init="load">
     <div class="mb-2">
         <section class="my-2 rounded-2xl dark:bg-white dark:text-black py-8 bg-gray-50 shadow " id="graph-state">
             <a href="#graph-state">
@@ -24,7 +24,7 @@
                         {{__('Filter By')}} :
                         <select class="bg-white ring ring-gray-200 mx-2 px-4 py-1 rounded" wire:model="filter">
                             <option disabled>-----</option>
-                            @foreach(\App\Http\Services\CovidState\Graph\CovidStateGraphService::FILTER as $filter)
+                            @foreach(\App\Http\Services\Covid\Graph\CovidStateGraphService::FILTER as $filter)
                                 <option value="{{$filter}}">
                                     {{__($filter)}}
                                 </option>
@@ -50,6 +50,7 @@
                     :date="$date"
                     :deathCase="$deathCase"
                     :bidCase="$bidCase"
+                    :dodCase="$dodCase"
                 />
             </div>
 
@@ -66,7 +67,7 @@
             </div>
 
             <div class="bg-gray-50 rounded-xl shadow p-4">
-                <livewire:covid-state.graph.active-case-precentage
+                <livewire:covid-state.graph.active-case-percentage
                     :date="$date"
                     :activeCase="$activeCase"
                     :cumRecoveredCase="$cumRecoveredCase"

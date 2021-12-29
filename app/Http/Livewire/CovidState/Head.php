@@ -11,6 +11,8 @@ class Head extends Component
 {
     public string $state = 'Johor';
 
+    public mixed $popFilter = 'ABOVE_18';
+
     protected $listeners = ['CovidStateUpdate'];
 
     public function render(): Factory|View|Application
@@ -26,5 +28,10 @@ class Head extends Component
     public function CovidStateUpdate(string $state)
     {
         $this->state = $state;
+    }
+
+    public function updatedPopFilter()
+    {
+        $this->emit("vaxPopulationUpdate", $this->popFilter);
     }
 }

@@ -7,7 +7,7 @@
 </div>
 
 @push('script')
-    <script>
+    <script defer>
         const caseDistributionArea = document.getElementById("active-case-percentage").getContext("2d");
         let caseDistributionChart = new Chart(
             caseDistributionArea,
@@ -27,9 +27,9 @@
                             {{$cumDeathCase->last()}}
                         ],
                         backgroundColor: [
-                            'rgb(255, 99, 132)',
-                            'rgb(54, 162, 235)',
-                            'rgb(255, 205, 86)'
+                            '#3B82F6',
+                            '#F59E0B',
+                            '#6B7280'
                         ],
                     }]
                 },
@@ -60,9 +60,9 @@
                                 cumDeathCase,
                             ],
                             backgroundColor: [
-                                'rgb(255, 99, 132)',
-                                'rgb(54, 162, 235)',
-                                'rgb(255, 205, 86)'
+                                '#3B82F6',
+                                '#F59E0B',
+                                '#6B7280'
                             ],
                         }]
                     },

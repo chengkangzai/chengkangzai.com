@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-    @include('layouts.sidebar')
     <div class="bg-gray-100 dark:bg-gray-800 relative h-screen overflow-hidden relative w-full">
         <div class="flex items-start justify-between">
             <div class="flex flex-col w-full">
@@ -19,7 +18,7 @@
                                 <li>{{__('Show')}}</li>
                             </ul>
                         </div>
-                        <table class="table w-1/2 border mx-auto mb-4">
+                        <table class="table w-full sm:w-1/2 border mx-auto mb-4">
                             <thead>
                             <tr class="bg-gray-100 dark:bg-gray-800 text-center border-b text-base text-gray-600 dark:text-gray-400">
                                 <td class="border p-2">{{__('ID')}}</td>
@@ -30,7 +29,11 @@
                                 <td>{{$post->title}} </td>
                             </tr>
                             <tr class="bg-gray-100 dark:bg-gray-800 text-center border-b text-base text-gray-600 dark:text-gray-400">
-                                <td class="border p-2">{{__('Tag')}}</td>
+                                <td class="border p-2">{{__('Status')}}</td>
+                                <td>{{$post->status}} </td>
+                            </tr>
+                            <tr class="bg-gray-100 dark:bg-gray-800 text-center border-b text-base text-gray-600 dark:text-gray-400">
+                                <td class="border p-2">{{__('Tags')}}</td>
                                 <td>
                                     <ul class="list-inside list-disc">
                                         @foreach($post->tags as $tag)
@@ -39,9 +42,17 @@
                                     </ul>
                                 </td>
                             </tr>
+                            <tr class="bg-gray-100 dark:bg-gray-800 text-center border-b text-base text-gray-600 dark:text-gray-400">
+                                <td class="border p-2">{{__('Created At')}}</td>
+                                <td>{{$post->created_at}} </td>
+                            </tr>
+                            <tr class="bg-gray-100 dark:bg-gray-800 text-center border-b text-base text-gray-600 dark:text-gray-400">
+                                <td class="border p-2">{{__('Updated At')}}</td>
+                                <td>{{$post->updated_at}} </td>
+                            </tr>
                             </thead>
                         </table>
-                        <div class="pb-8 w-4/5  mx-auto border-black">
+                        <div class="pb-8 w-full sm:w-4/5 mx-auto border-black">
                             <div class="dark:text-white dark:bg-dark" id="editor">
                                 {!!  $post->content!!}
                             </div>

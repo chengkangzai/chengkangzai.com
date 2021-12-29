@@ -1,4 +1,4 @@
-<section class="mt-2 mb-2" id="health-care" xmlns:wire="http://www.w3.org/1999/xhtml"
+<section class="mt-2 mb-2" id="health-care" xmlns:wire="http://www.w3.org/1999/xhtml" wire:init="load"
          wire:loading.class="animate-pulse">
     <section class="my-2 rounded-2xl dark:bg-white dark:text-black py-12 bg-gray-50 shadow">
         <a href="#health-care">
@@ -21,11 +21,11 @@
 
     <div class="sm:grid sm:grid-cols-4 sm:grid-rows-3 sm:gap-2 space-y-2 sm:space-y-0">
         <div
-            class="dark:bg-white bg-gray-50 rounded-xl shadow py-8 sm:row-span-2 sm:py-40 px-4 self-center place-self-stretch">
+            class="dark:bg-white bg-gray-50 rounded-xl shadow p-4 sm:py-8 sm:row-span-2 sm:py-40 px-4 self-center place-self-stretch">
             {{--TODO : Change the wording of "ICU,PKRC, Hospital to dynamically" --}}
             <h2 class="text-2xl pb-2">{{__('Inflow and Out Flow of Hospital and ICU')}}</h2>
-            <hr class="mx-4 py-2">
-            <p class="text-5xl font-bold">
+            <hr class="mx-4 sm:py-2">
+            <p class="text-4xl sm:text-5xl font-bold">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 inline text-red-500" fill="none"
                      viewBox="0 0 24 24"
                      stroke="currentColor">
@@ -34,7 +34,7 @@
                 </svg>
                 {{number_format($hospital->admitted_total)}}
             </p>
-            <p class="text-5xl font-bold">
+            <p class="text-4xl sm:text-5xl font-bold">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 inline text-green-500" fill="none"
                      viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -44,7 +44,7 @@
             </p>
         </div>
 
-        <div class="dark:bg-white bg-gray-50 py-8 rounded-xl shadow ">
+        <div class="dark:bg-white bg-gray-50 p-4 sm:py-8 rounded-xl shadow ">
             <h2 class="text-2xl">{{__('Total Patient of ICU')}}</h2>
             <p class="text-red-500 font-bold text-4xl xl:text-5xl">{{number_format($ICU->totalPatient)}}</p>
             <p>{{__('Covid : ')}} {{number_format($ICU->icu_covid)}}</p>
@@ -52,7 +52,7 @@
             <p>{{__('PUI : ')}} {{number_format($ICU->icu_noncovid) }} </p>
         </div>
 
-        <div class="dark:bg-white bg-gray-50 py-8 rounded-xl shadow ">
+        <div class="dark:bg-white bg-gray-50 p-4 sm:py-8 rounded-xl shadow ">
             <h2 class="text-2xl">{{__('Usage of ICU')}}</h2>
             <p class="text-red-500 font-bold text-4xl xl:text-5xl">
                 {{number_format($ICU->overall_utilization).'%'}}
@@ -61,7 +61,7 @@
             <p>{{__('Total Beds : ')}} {{number_format($ICU->bed_icu_total)}}</p>
         </div>
 
-        <div class="dark:bg-white bg-gray-50 py-8 rounded-xl shadow ">
+        <div class="dark:bg-white bg-gray-50 p-4 sm:py-8 rounded-xl shadow ">
             <h2 class="text-2xl">{{__('Covid Usage of ICU')}}</h2>
             <p class="text-red-500 font-bold text-4xl xl:text-5xl">
                 {{number_format($ICU->covid_utilization).'%'}}
@@ -72,7 +72,7 @@
         {{--END OF ICU --}}
 
         {{--START OF Hospital--}}
-        <div class="dark:bg-white bg-gray-50 py-8 rounded-xl shadow ">
+        <div class="dark:bg-white bg-gray-50 p-4 sm:py-8 rounded-xl shadow ">
             <h2 class="text-2xl">{{__('Total Patient of Hospital')}}</h2>
             <p class="text-red-500 font-bold text-4xl xl:text-5xl">{{number_format($hospital->totalPatient)}}</p>
             <p>{{__('Covid : ')}} {{number_format($hospital->hosp_covid)}}</p>
@@ -80,7 +80,7 @@
             <p>{{__('PUI : ')}} {{number_format($hospital->hosp_noncovid) }} </p>
         </div>
 
-        <div class="dark:bg-white bg-gray-50 py-8 rounded-xl shadow ">
+        <div class="dark:bg-white bg-gray-50 p-4 sm:py-8 rounded-xl shadow ">
             <h2 class="text-2xl">{{__('Usage of Hospital')}}</h2>
             <p class="text-red-500 font-bold text-4xl xl:text-5xl">
                 {{number_format($hospital->overallUtilisation).'%'}}
@@ -89,7 +89,7 @@
             <p>{{__('Total Beds : ')}} {{number_format($hospital->beds)}}</p>
         </div>
 
-        <div class="dark:bg-white bg-gray-50 py-8 rounded-xl shadow ">
+        <div class="dark:bg-white bg-gray-50 p-4 sm:py-8 rounded-xl shadow ">
             <h2 class="text-2xl">{{__('Covid Usage of Hospital')}}</h2>
             <p class="text-red-500 font-bold text-4xl xl:text-5xl">
                 {{number_format($hospital->covidUtilisation).'%'}}
@@ -101,8 +101,8 @@
         {{--END OF Hospital --}}
 
         {{--START OF PKRC--}}
-        <div class="dark:bg-white bg-gray-50 py-8 rounded-xl shadow px-4">
-            <h2 class="text-2xl pb-6">{{__('Inflow and Out Flow of PKRC')}}</h2>
+        <div class="dark:bg-white bg-gray-50 p-4 sm:py-8 rounded-xl shadow px-4">
+            <h2 class="text-2xl pb-2">{{__('Inflow and Out Flow of PKRC')}}</h2>
             <hr class="mx-4">
             <p class="text-4xl font-bold">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 inline text-red-500" fill="none"
@@ -131,7 +131,7 @@
             </p>
         </div>
 
-        <div class="dark:bg-white bg-gray-50 py-8 rounded-xl shadow ">
+        <div class="dark:bg-white bg-gray-50 p-4 sm:py-8 rounded-xl shadow ">
             <h2 class="text-2xl">{{__('Total Patient of PKRC')}}</h2>
             <p class="text-red-500 font-bold text-4xl xl:text-5xl">
                 @if(isset($PKRC->totalPatient))
@@ -163,7 +163,7 @@
             </p>
         </div>
 
-        <div class="dark:bg-white bg-gray-50 py-8 rounded-xl shadow ">
+        <div class="dark:bg-white bg-gray-50 p-4 sm:py-8 rounded-xl shadow ">
             <h2 class="text-2xl">{{__('Usage of PKRC')}}</h2>
             <p class="text-red-500 font-bold text-4xl xl:text-5xl">
                 @if(isset($PKRC->overallUtilisation))
@@ -184,7 +184,7 @@
         {{--END OF PKRC--}}
 
         {{--START OF Ventilator--}}
-        <div class="dark:bg-white bg-gray-50 py-8 rounded-xl shadow ">
+        <div class="dark:bg-white bg-gray-50 p-4 sm:py-8 rounded-xl shadow ">
             <h2 class="text-2xl">{{__('Usage of Ventilator')}}</h2>
             <p class="text-red-500 font-bold text-4xl xl:text-5xl">
                 {{number_format($ICU->ventilationUtilisation).'%'}}
