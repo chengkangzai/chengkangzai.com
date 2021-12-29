@@ -19,7 +19,7 @@ class UserController extends Controller
 {
     public function index(): Factory|View|Application
     {
-        $users = User::paginate(10);
+        $users = User::simplePaginate(10);
         return view('admin.user.index', compact('users'));
     }
 
