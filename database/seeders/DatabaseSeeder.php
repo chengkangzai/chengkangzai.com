@@ -2,8 +2,21 @@
 
 namespace Database\Seeders;
 
-use App\Console\Commands\ImportCOVIDDataFromGithub;
-use Artisan;
+use Database\Seeders\Covid\CovidCasesMalaysiaTableSeeder;
+use Database\Seeders\Covid\CovidCasesStatesTableSeeder;
+use Database\Seeders\Covid\CovidClustersTableSeeder;
+use Database\Seeders\Covid\CovidDeathsMalaysiaTableSeeder;
+use Database\Seeders\Covid\CovidDeathsStatesTableSeeder;
+use Database\Seeders\Covid\CovidHospitalsTableSeeder;
+use Database\Seeders\Covid\CovidIcusTableSeeder;
+use Database\Seeders\Covid\CovidPKRCTableSeeder;
+use Database\Seeders\Covid\CovidPopulationsTableSeeder;
+use Database\Seeders\Covid\CovidTestMalaysiaTableSeeder;
+use Database\Seeders\Covid\CovidTestStatesTableSeeder;
+use Database\Seeders\Vax\VaxVaxMalaysiasTableSeeder;
+use Database\Seeders\Vax\VaxVaxRegMalaysiasTableSeeder;
+use Database\Seeders\Vax\VaxVaxRegStatesTableSeeder;
+use Database\Seeders\Vax\VaxVaxStatesTableSeeder;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -25,7 +38,26 @@ class DatabaseSeeder extends Seeder
             WorksSeeder::class,
         ]);
 
-        exec('php artisan import:covid');
-        exec('php artisan import:vaccine');
+        $this->call([
+            CovidCasesMalaysiaTableSeeder::class,
+            CovidCasesStatesTableSeeder::class,
+            CovidDeathsMalaysiaTableSeeder::class,
+            CovidDeathsStatesTableSeeder::class,
+            CovidTestMalaysiaTableSeeder::class,
+            CovidTestStatesTableSeeder::class,
+            CovidClustersTableSeeder::class,
+            CovidHospitalsTableSeeder::class,
+            CovidIcusTableSeeder::class,
+            CovidPKRCTableSeeder::class,
+            CovidPopulationsTableSeeder::class,
+        ]);
+
+        $this->call([
+            VaxVaxMalaysiasTableSeeder::class,
+            VaxVaxRegMalaysiasTableSeeder::class,
+            VaxVaxRegStatesTableSeeder::class,
+            VaxVaxStatesTableSeeder::class,
+        ]);
+
     }
 }

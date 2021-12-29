@@ -358,5 +358,14 @@
     "Work added successfully": "工作添加成功",
     "Work updated successfully": "工作更新成功",
     "Ignored Module": "忽略模块",
-    "Ignore these module": "忽略这些模块"
+    "Ignore these module": "忽略这些模块",
+    "New user registered": "新用户注册",
+    "A new user has registered.": "一个新用户已注册。",
+    "Name: ": "名称：",
+    "Email: ": "电子邮件：",
+    "Role: ": "用户组：",
+    "Date: ": "日期：",
+    "View user": "查看用户",
+    "Created At": "创建于",
+    "Updated At": "更新于"
 }

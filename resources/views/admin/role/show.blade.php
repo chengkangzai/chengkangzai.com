@@ -31,7 +31,7 @@
                                 <td>{{$role->name}} </td>
                             </tr>
                             <tr class="bg-gray-100 dark:bg-gray-800 text-center border-b text-base text-gray-600 dark:text-gray-400">
-                                <td class="border p-2">{{__('Permission')}}</td>
+                                <td class="border p-2">{{__('Permissions')}}</td>
                                 <td>
                                     @forelse($role->permissions as $permission)
                                         <span class="font-semibold list-inside">

@@ -358,5 +358,14 @@
     "Work added successfully": "Kerja berjaya ditambahkan",
     "Work updated successfully": "Kerja berjaya dikemas kini",
     "Ignored Module": "Modul diabaikan",
-    "Ignore these module": "Abaikan modul ini"
+    "Ignore these module": "Abaikan modul ini",
+    "New user registered": "Pengguna baru didaftarkan",
+    "A new user has registered.": "Seorang pengguna baru telah mendaftar.",
+    "Name: ": "nama:",
+    "Email: ": "e-mel:",
+    "Role: ": "Peranan:",
+    "Date: ": "Tarikh:",
+    "View user": "Lihat pengguna",
+    "Created At": "Dicipta Pada",
+    "Updated At": "Dikemas kini pada"
 }

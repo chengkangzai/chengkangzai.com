@@ -29,7 +29,11 @@
                                 <td>{{$post->title}} </td>
                             </tr>
                             <tr class="bg-gray-100 dark:bg-gray-800 text-center border-b text-base text-gray-600 dark:text-gray-400">
-                                <td class="border p-2">{{__('Tag')}}</td>
+                                <td class="border p-2">{{__('Status')}}</td>
+                                <td>{{$post->status}} </td>
+                            </tr>
+                            <tr class="bg-gray-100 dark:bg-gray-800 text-center border-b text-base text-gray-600 dark:text-gray-400">
+                                <td class="border p-2">{{__('Tags')}}</td>
                                 <td>
                                     <ul class="list-inside list-disc">
                                         @foreach($post->tags as $tag)
@@ -37,6 +41,14 @@
                                         @endforeach
                                     </ul>
                                 </td>
+                            </tr>
+                            <tr class="bg-gray-100 dark:bg-gray-800 text-center border-b text-base text-gray-600 dark:text-gray-400">
+                                <td class="border p-2">{{__('Created At')}}</td>
+                                <td>{{$post->created_at}} </td>
+                            </tr>
+                            <tr class="bg-gray-100 dark:bg-gray-800 text-center border-b text-base text-gray-600 dark:text-gray-400">
+                                <td class="border p-2">{{__('Updated At')}}</td>
+                                <td>{{$post->updated_at}} </td>
                             </tr>
                             </thead>
                         </table>

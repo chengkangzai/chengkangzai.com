@@ -12,13 +12,14 @@ class PermissionController extends Controller
 
     public function index(): Factory|View|Application
     {
-        $permissions = Permission::paginate(10);
+        //  use simplePaginate instead of paginate to get the pagination working for phpUnit tests
+        $permissions = Permission::simplePaginate(10);
         return view('admin.permission.index', compact('permissions'));
     }
 
     public function show(Permission $permission): Factory|View|Application
     {
-        $permission->load('role', 'users');
+        $permission->load('roles', 'users');
         return view('admin.permission.show', compact('permission'));
     }
 }

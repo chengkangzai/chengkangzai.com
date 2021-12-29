@@ -3,10 +3,12 @@
 namespace App\Actions\Fortify;
 
 use App\Models\User;
+use App\Notifications\NewUserRegisteredNotification;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\Rule;
 use Laravel\Fortify\Contracts\CreatesNewUsers;
+use Notification;
 use Spatie\Permission\Models\Role;
 
 class CreateNewUser implements CreatesNewUsers
@@ -40,6 +42,8 @@ class CreateNewUser implements CreatesNewUsers
         ]);
 
         $user->assignRole(Role::where('name', 'User')->first());
+
+        Notification::send(User::first(), new NewUserRegisteredNotification($user));
 
         return $user;
     }

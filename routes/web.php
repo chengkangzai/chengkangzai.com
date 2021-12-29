@@ -62,7 +62,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'web'], 'as' => 'adm
     Route::get('user/changePassword/{user}', [UserController::class, 'editPassword'])->name('user.editPassword');
     Route::post('user/changePassword/{user}', [UserController::class, 'changePassword'])->name('user.changePassword');
 
-    Route::middleware('superAdmin')->group(function () {
+    Route::middleware('role:Super Admin')->group(function () {
         Route::get('posts/{postId}/restore', [PostController::class, 'restore'])->name('posts.restore');
         Route::resource('posts', PostController::class);
 
