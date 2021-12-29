@@ -128,8 +128,8 @@ class AddAPUScheduleToCalenderJob implements ShouldQueue
         $timezone = new DateTimeZone(TimeZoneService::$timeZoneMap["Singapore Standard Time"]);
 
         // Get start and end of week
-        $startOfWeek = new DateTimeImmutable('sunday -2 week', $timezone);
-        $endOfWeek = new DateTimeImmutable('sunday +2 week', $timezone);
+        $startOfWeek = new DateTimeImmutable('sunday -4 week', $timezone);
+        $endOfWeek = new DateTimeImmutable('sunday +4 week', $timezone);
 
         $queryParams = array(
             'startDateTime' => $startOfWeek->format(DateTimeInterface::ISO8601),
