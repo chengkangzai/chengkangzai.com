@@ -35,7 +35,8 @@
                                 <td>
                                     @forelse($permission->roles as $role)
                                         <span class="font-semibold list-inside">
-                                            <a href="{{route('admin.role.show',$role->id)}}" class="list-item">{{$role->name}}</a>
+                                            <a href="{{route('admin.roles.show',$role->id)}}"
+                                               class="list-item">{{$role->name}}</a>
                                         </span>
                                     @empty
                                         <span class="font-semibold">{{__('No role')}}</span>
