@@ -358,5 +358,14 @@
     "Work added successfully": "Work added successfully",
     "Work updated successfully": "Work updated successfully",
     "Ignored Module": "Ignored Module",
-    "Ignore these module": "Ignore these module"
+    "Ignore these module": "Ignore these module",
+    "New user registered": "New user registered",
+    "A new user has registered.": "A new user has registered.",
+    "Name: ": "Name:",
+    "Email: ": "Email:",
+    "Role: ": "Role:",
+    "Date: ": "Date:",
+    "View user": "View user",
+    "Created At": "Created At",
+    "Updated At": "Updated at"
 }
