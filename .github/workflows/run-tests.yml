@@ -25,9 +25,16 @@ jobs:
         run: |
           composer install --no-scripts
 
-      - name: Prepare Laravel Application
+      - name: Setup .env file
         run: |
           cp .env.ci .env
+          echo AWS_ACCESS_KEY_ID=${{secrets.AWS_ACCESS_KEY_ID}}
+          echo AWS_SECRET_ACCESS_KEY=${{secrets.AWS_SECRET_ACCESS_KEY}}
+          echo AWS_DEFAULT_REGION=${{secrets.AWS_DEFAULT_REGION}}
+          echo AWS_BUCKET=${{secrets.AWS_BUCKET}}
+
+      - name: Prepare Laravel Application
+        run: |
           php artisan key:generate
           php artisan --version
 
