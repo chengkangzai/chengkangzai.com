@@ -2,10 +2,11 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Support\Facades\Storage;
 use Spatie\Tags\HasTags;
 use Spatie\Translatable\HasTranslations;
 
@@ -30,4 +31,12 @@ class Works extends Model
     {
         return $query->where('status', '1');
     }
+
+    public function getImgLinkAttribute(): string
+    {
+        $s3 = Storage::disk('s3');
+        $client = $s3->getDriver()->getAdapter();
+        return $s3->getAwsTemporaryUrl($client, Works::S3_PATH . '/' . $this->picture_name, now()->addHours(24), []);
+    }
+
 }

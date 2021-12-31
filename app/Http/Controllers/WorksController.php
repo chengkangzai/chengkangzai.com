@@ -54,11 +54,7 @@ class WorksController extends Controller
 
     public function show(Works $work): Factory|View|Application
     {
-        $s3 = Storage::disk('s3');
-        $client = $s3->getDriver()->getAdapter();
-        $imgLink = $s3->getAwsTemporaryUrl($client, Works::S3_PATH . '/' . $work->picture_name, now()->addHours(24), []);
-
-        return view('admin.work.show', compact('work', 'imgLink'));
+        return view('admin.work.show', compact('work'));
     }
 
     public function edit(Works $work): Factory|View|Application
