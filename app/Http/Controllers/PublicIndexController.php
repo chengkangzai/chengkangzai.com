@@ -10,7 +10,6 @@ use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\Cache;
-use Storage;
 
 class PublicIndexController extends Controller
 {
@@ -23,12 +22,7 @@ class PublicIndexController extends Controller
         $rank = app(GetTopGithubCommitRankService::class)->getTopGithubCommitRank();
 
         $works = Cache::remember('public-Works', 60 * 60 * 24, function () {
-            return Works::active()->take(6)->get()->filter(function ($work) {
-                $s3 = Storage::disk('s3');
-                $client = $s3->getDriver()->getAdapter();
-                $imgLink = $s3->getAwsTemporaryUrl($client, Works::S3_PATH . '/' . $work->picture_name, now()->addHours(24), []);
-                return $work->imgLink = $imgLink;
-            });
+            return Works::active()->take(6)->get();
         });
         return view('welcome', compact('works', 'rank'));
     }
