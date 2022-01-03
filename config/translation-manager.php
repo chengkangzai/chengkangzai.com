@@ -34,7 +34,7 @@ return [
      *        'validation',
      *    )
      */
-    'exclude_groups' => [],
+    'exclude_groups' => ['pagination', 'reminders', 'validation', 'auth', 'passwords', 'vendor/backup', 'vendor/lang'],
 
     /**
      * Exclude specific languages from Laravel Translation Manager.
