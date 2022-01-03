@@ -2,10 +2,13 @@
 
 A personal website that serve as a personal profile, blog and a Covid Dashboard for Malaysia.
 
+[![Actions Status](https://github.com/chengkangzai/chengkangzai.com/workflows/CI/badge.svg)](https://github.com/chengkangzai/chengkangzai.com/actions)
+
 ## Getting Started
 
-### Requirement 
-- [Composer](https://getcomposer.org/doc/00-intro.md) 
+### Requirement
+
+- [Composer](https://getcomposer.org/doc/00-intro.md)
 - [PHP8](https://www.php.net/downloads.php#v8.0.11)
 - [Node 14](https://nodejs.org/en/download/)
 - [Docker](https://www.docker.com/get-started)
