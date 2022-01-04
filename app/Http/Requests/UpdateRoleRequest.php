@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use JetBrains\PhpStorm\ArrayShape;
 
 class UpdateRoleRequest extends FormRequest
 {
@@ -11,6 +12,7 @@ class UpdateRoleRequest extends FormRequest
         return true;
     }
 
+    #[ArrayShape(['name' => "string", 'permissions' => "string", 'permissions.*' => "string"])]
     public function rules(): array
     {
         return [
