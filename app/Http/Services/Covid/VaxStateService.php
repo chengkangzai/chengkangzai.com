@@ -11,7 +11,6 @@ use Illuminate\Support\Collection;
 
 class VaxStateService
 {
-
     private int $cacheSecond;
 
     public function __construct()

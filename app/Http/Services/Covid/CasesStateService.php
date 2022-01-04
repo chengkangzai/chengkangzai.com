@@ -13,7 +13,6 @@ use Illuminate\Support\Collection;
 
 class CasesStateService
 {
-
     private int $cacheSecond;
 
     public function __construct()

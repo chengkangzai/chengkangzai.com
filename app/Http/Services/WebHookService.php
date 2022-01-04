@@ -17,11 +17,10 @@ class WebHookService
         'YElLOW' => '16776960'
     ];
 
-
     public function notifySomeoneCommentedInPost(Post $post, Comment $comment)
     {
         Http::asJson()
-            ->post(env('DISCORD_WEBHOOK_POST'),
+            ->post(config('DISCORD_WEBHOOK_POST'),
                 [
                     "username" => "Comment Broadcasts BOT",
                     "embeds" => [
@@ -36,7 +35,7 @@ class WebHookService
     public function notifyInGeneral(string $title, string $color = self::COLOR['ORANGE'])
     {
         Http::asJson()
-            ->post(env('DISCORD_WEBHOOK_GENERAL'),
+            ->post(config('DISCORD_WEBHOOK_GENERAL'),
                 [
                     "username" => "Comment Broadcasts BOT",
                     "embeds" => [
@@ -52,7 +51,7 @@ class WebHookService
     public function notifyInSpam(string $title, string $color = self::COLOR['ORANGE'])
     {
         Http::asJson()
-            ->post(env('DISCORD_WEBHOOK_POST'),
+            ->post(config('DISCORD_WEBHOOK_POST'),
                 [
                     "username" => "Comment Broadcasts BOT",
                     "embeds" => [

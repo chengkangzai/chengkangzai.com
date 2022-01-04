@@ -14,7 +14,6 @@ use Carbon\Carbon;
 
 class CasesMalaysiaService
 {
-
     private int $cacheSecond;
 
     public function __construct()

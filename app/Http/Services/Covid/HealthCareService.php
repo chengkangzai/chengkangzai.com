@@ -7,10 +7,8 @@ use App\Models\Covid\ICU;
 use App\Models\Covid\PKRC;
 use Carbon\Carbon;
 
-
 class HealthCareService
 {
-
     private int $cacheSecond;
 
     public function __construct()
