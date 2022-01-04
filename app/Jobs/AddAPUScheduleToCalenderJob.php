@@ -29,11 +29,6 @@ class AddAPUScheduleToCalenderJob implements ShouldQueue
     private User $user;
     private ScheduleConfig $config;
 
-    /**
-     * Create a new job instance.
-     *
-     * @return void
-     */
     public function __construct(User $user, ScheduleConfig $config)
     {
         $graphService = new MicrosoftGraphService();
@@ -42,11 +37,6 @@ class AddAPUScheduleToCalenderJob implements ShouldQueue
         $this->config = $config;
     }
 
-    /**
-     * Execute the job.
-     *
-     * @return void
-     */
     public function handle()
     {
         $attendeeAddresses = explode(';', $this->user->email);
