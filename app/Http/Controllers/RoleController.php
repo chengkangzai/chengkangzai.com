@@ -32,7 +32,7 @@ class RoleController extends Controller
         return redirect()->route('admin.roles.index')->with('success', __('Role created successfully'));
     }
 
-    public function show(Role $role)
+    public function show(Role $role): Factory|View|Application
     {
         $role->load('permissions');
         return view('admin.role.show', compact('role'));
