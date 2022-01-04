@@ -4,21 +4,13 @@ namespace Database\Factories;
 
 use App\Models\Works;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use JetBrains\PhpStorm\ArrayShape;
 
 class WorksFactory extends Factory
 {
-    /**
-     * The name of the factory's corresponding model.
-     *
-     * @var string
-     */
     protected $model = Works::class;
 
-    /**
-     * Define the model's default state.
-     *
-     * @return array
-     */
+    #[ArrayShape(['name' => "string", 'description' => "array", 'picture_name' => "string", 'url' => "string", 'github_url' => "string", 'status' => "bool"])]
     public function definition(): array
     {
         return [
