@@ -3,7 +3,6 @@
 namespace App\Console\Commands;
 
 use App\Console\Services\ImportCovidFromGithubService;
-use App\Http\Services\WebHookService;
 use App\Models\Covid\CasesMalaysia;
 use App\Models\Covid\CasesState;
 use App\Models\Covid\Cluster;
@@ -15,12 +14,15 @@ use App\Models\Covid\PKRC;
 use App\Models\Covid\Population;
 use App\Models\Covid\TestMalaysia;
 use App\Models\Covid\TestState;
-use Carbon\Carbon;
+use App\Notifications\ImportTaskFailedNotification;
+use App\Notifications\ImportTaskSuccessNotification;
+use App\Notifications\Notifiable\SuperAdminNotifiable;
 use Exception;
 use Illuminate\Console\Command;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
+use Notification;
 use Throwable;
 
 class ImportCOVIDDataFromGithub extends Command
@@ -30,6 +32,7 @@ class ImportCOVIDDataFromGithub extends Command
     protected $description = 'Import Covid Cases From Github';
 
     private ImportCovidFromGithubService $covidService;
+    private array $modelArray;
 
     public function __construct(ImportCovidFromGithubService $service)
     {
@@ -40,6 +43,7 @@ class ImportCOVIDDataFromGithub extends Command
     public function handle()
     {
         try {
+            $time = microtime(true);
             if ($this->option('force')) {
                 $this->line('Truncating DB...');
                 $this->truncateDB();
@@ -57,12 +61,16 @@ class ImportCOVIDDataFromGithub extends Command
             $this->importPKRC();
 
             Cache::clear();
+
+            $runtime = microtime(true) - $time;
+            $this->info("Importing covid data from Github took $runtime seconds");
             if (app()->environment('production')) {
-                app(WebHookService::class)->notifyInSpam(Carbon::now() . ' : Covid Data Successfully Inserted', WebHookService::COLOR['GREEN']);
+                Notification::send(new SuperAdminNotifiable(), new ImportTaskSuccessNotification(ImportCovidFromGithubService::class, $this->modelArray, $runtime));
             }
         } catch (Throwable|Exception $exception) {
             if (app()->environment('production')) {
-                app(WebHookService::class)->notifyInGeneral(Carbon::now() . ' : DAMN STH went WRONG during importing covid data: \n\n' . $exception->getMessage(), WebHookService::COLOR['RED']);
+                $runtime = microtime(true) - $time;
+                Notification::send(new SuperAdminNotifiable(), new ImportTaskFailedNotification($exception, $runtime));
             }
         }
     }
@@ -168,7 +176,7 @@ class ImportCOVIDDataFromGithub extends Command
             DB::table($tableName)->insert($chunk->toArray());
             $this->output->progressAdvance();
         }
-
+        $this->modelArray[] = $modelName;
         $this->output->progressFinish();
     }
 
