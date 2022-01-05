@@ -3,9 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreCommentRequest;
-use App\Http\Services\WebHookService;
+use App\Models\Comment;
 use App\Models\Post;
+use App\Notifications\NewCommentInPostNotification;
+use App\Notifications\Notifiable\SuperAdminNotifiable;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Facades\Notification;
 
 class PublicPostCommentController extends Controller
 {
@@ -15,10 +18,10 @@ class PublicPostCommentController extends Controller
             'name' => $request->name,
             'email' => $request->email,
             'comment' => $request->comment,
-            'status' => Post::STATUS['PUBLISH']
+            'status' => Comment::STATUS['PUBLISH']
         ]);
 
-        app(WebHookService::class)->notifySomeoneCommentedInPost($post, $comment);
+        Notification::send(new SuperAdminNotifiable(), new NewCommentInPostNotification($comment, $post));
 
         return back();
     }
