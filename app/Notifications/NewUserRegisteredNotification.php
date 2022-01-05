@@ -11,7 +11,7 @@ use Illuminate\Queue\SerializesModels;
 
 class NewUserRegisteredNotification extends Notification implements ShouldQueue
 {
-    use Queueable,SerializesModels;
+    use Queueable, SerializesModels;
 
     private User $user;
 
