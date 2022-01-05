@@ -3,16 +3,18 @@
 namespace App\Console\Commands;
 
 use App\Console\Services\ImportVaccineFromGithubService;
-use App\Http\Services\WebHookService;
 use App\Models\Covid\VaxMalaysia;
 use App\Models\Covid\VaxRegMalaysia;
 use App\Models\Covid\VaxState;
-use Carbon\Carbon;
+use App\Notifications\ImportTaskFailedNotification;
+use App\Notifications\ImportTaskSuccessNotification;
+use App\Notifications\Notifiable\SuperAdminNotifiable;
 use Exception;
 use Illuminate\Console\Command;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
+use Notification;
 use Throwable;
 
 class ImportVaxDataFromGithub extends Command
@@ -22,6 +24,7 @@ class ImportVaxDataFromGithub extends Command
     protected $description = 'Import Vaccination Data From Github';
 
     private ImportVaccineFromGithubService $vaxService;
+    private array $modelArray;
 
     public function __construct()
     {
@@ -32,6 +35,7 @@ class ImportVaxDataFromGithub extends Command
     public function handle()
     {
         try {
+            $time = microtime(true);
             if ($this->option('force')) {
                 $this->line('Truncating DB...');
                 $this->truncateDB();
@@ -42,16 +46,18 @@ class ImportVaxDataFromGithub extends Command
             $this->importVaxRegMalaysia();
 
             Cache::clear();
+            $runTime = microtime(true) - $time;
+            $this->line('Importing vaccine data from Github completed in ' . $runTime . ' seconds');
             if (app()->environment('production')) {
-                app(WebHookService::class)->notifyInSpam(Carbon::now() . ' : Vaccine Data Successfully Inserted', WebHookService::COLOR['GREEN']);
+                Notification::send(new SuperAdminNotifiable(), new ImportTaskSuccessNotification(ImportVaxDataFromGithub::class, $this->modelArray, $runTime));
             }
         } catch (Throwable|Exception $exception) {
             if (app()->environment('production')) {
-                app(WebHookService::class)->notifyInGeneral(Carbon::now() . ' : DAMN STH went WRONG during importing Vaccine : \n\n' . $exception->getMessage(), WebHookService::COLOR['RED']);
+                $runTime = microtime(true) - $time;
+                Notification::send(new SuperAdminNotifiable(), new ImportTaskFailedNotification($exception, $runTime));
             }
         }
     }
-
 
     public function truncateDB()
     {
@@ -106,6 +112,7 @@ class ImportVaxDataFromGithub extends Command
             $this->output->progressAdvance();
         }
 
+        $this->modelArray[] = $modelName;
         $this->output->progressFinish();
     }
 }

@@ -6,11 +6,14 @@ use App\Http\Services\MicrosoftGraphService;
 use App\Http\Services\TimeZoneService;
 use App\Models\ScheduleConfig;
 use App\Models\User;
+use App\Notifications\CalendarSyncSuccessNotification;
 use Carbon\Carbon;
 use Chengkangzai\ApuSchedule\ApuSchedule;
 use DateTimeImmutable;
 use DateTimeInterface;
 use DateTimeZone;
+use Exception;
+use GuzzleHttp\Exception\GuzzleException;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
@@ -18,8 +21,11 @@ use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Support\Facades\URL;
 use JetBrains\PhpStorm\ArrayShape;
+use Log;
+use Microsoft\Graph\Exception\GraphException;
 use Microsoft\Graph\Graph as MicrosoftGraph;
 use Microsoft\Graph\Model;
+use Notification;
 
 class AddAPUScheduleToCalenderJob implements ShouldQueue
 {
@@ -43,25 +49,33 @@ class AddAPUScheduleToCalenderJob implements ShouldQueue
         $attendees = $this->getAttendees($attendeeAddresses);
         $schedules = ApuSchedule::getSchedule($this->config->intake_code, $this->config->grouping, $this->config->except);
 
-        $events = $this->getEvent();
-        foreach ($schedules as $schedule) {
-            $isEventCreatedBefore = false;
-            foreach ($events as $event) {
-                $eventStart = Carbon::parse($event->getStart()->getDateTime())->format(DateTimeInterface::ISO8601);
-                $eventEnd = Carbon::parse($event->getEnd()->getDateTime())->format(DateTimeInterface::ISO8601);
+        try {
+            $events = $this->getEvent();
+            $syncedSchedule = collect();
+            foreach ($schedules as $schedule) {
+                $isEventCreatedBefore = false;
+                foreach ($events as $event) {
+                    $eventStart = Carbon::parse($event->getStart()->getDateTime())->format(DateTimeInterface::ISO8601);
+                    $eventEnd = Carbon::parse($event->getEnd()->getDateTime())->format(DateTimeInterface::ISO8601);
 
-                $scheduleStart = Carbon::parse($schedule->TIME_FROM_ISO)->format(DateTimeInterface::ISO8601);
-                $scheduleEnd = Carbon::parse($schedule->TIME_TO_ISO)->format(DateTimeInterface::ISO8601);
+                    $scheduleStart = Carbon::parse($schedule->TIME_FROM_ISO)->format(DateTimeInterface::ISO8601);
+                    $scheduleEnd = Carbon::parse($schedule->TIME_TO_ISO)->format(DateTimeInterface::ISO8601);
 
-                if ($eventStart == $scheduleStart && $eventEnd == $scheduleEnd) {
-                    $isEventCreatedBefore = true;
-                    break;
+                    if ($eventStart == $scheduleStart && $eventEnd == $scheduleEnd) {
+                        $isEventCreatedBefore = true;
+                        break;
+                    }
+                }
+                if (!$isEventCreatedBefore) {
+                    $newEvent = $this->formatNewEvent($schedule, $attendees);
+                    $this->syncCalendar($newEvent);
+                    $syncedSchedule->add($schedule);
                 }
             }
-            if (!$isEventCreatedBefore) {
-                $newEvent = $this->formatNewEvent($schedule, $attendees);
-                $this->syncCalendar($newEvent);
-            }
+
+            Notification::send($this->user, new CalendarSyncSuccessNotification($this->config, $syncedSchedule));
+        } catch (GuzzleException|GraphException|Exception $e) {
+            Log::error($e->getMessage());
         }
     }
 
@@ -79,6 +93,10 @@ class AddAPUScheduleToCalenderJob implements ShouldQueue
         return $attendees;
     }
 
+    /**
+     * @throws GraphException
+     * @throws GuzzleException
+     */
     private function syncCalendar(array $newEvent)
     {
         $this->graph->createRequest('POST', '/me/events')
@@ -113,6 +131,11 @@ class AddAPUScheduleToCalenderJob implements ShouldQueue
         ];
     }
 
+    /**
+     * @throws GraphException
+     * @throws GuzzleException
+     * @throws Exception
+     */
     private function getEvent(): array
     {
         $timezone = new DateTimeZone(TimeZoneService::$timeZoneMap["Singapore Standard Time"]);

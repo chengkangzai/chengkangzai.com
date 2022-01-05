@@ -233,4 +233,13 @@ return [
 
     ],
 
+
+    /*
+     * My Own Configurations
+     */
+    'webhook' => [
+        'discord' => [
+            'spam' => env('DISCORD_WEBHOOK_POST')
+        ]
+    ]
 ];
