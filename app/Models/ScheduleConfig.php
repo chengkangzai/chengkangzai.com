@@ -22,8 +22,8 @@ class ScheduleConfig extends Model
         $this->attributes['except'] = implode(',', $value);
     }
 
-    public function getExceptAttribute($value)
+    public function getExceptAttribute($value): array
     {
-        return explode(',', $value);
+        return $value = explode(',', $value) ?: [];
     }
 }
