@@ -11,6 +11,16 @@
                 {{__('Login')}}
             </h1>
             @include('partial.error-card')
+            @if (session('status'))
+                <div class="mb-2 w-full mx-auto">
+                    <div
+                        class="block text-sm text-left text-black font-bold bg-green-200 border border-green-400 h-auto flex items-center p-4 rounded-lg"
+                        role="alert">
+                        {{ session('status') }}
+                    </div>
+                </div>
+            @endif
+
             <div class="py-2 text-left">
                 <input type="email" name="email"
                        class="bg-gray-200 border-2 border-gray-100 focus:outline-none bg-gray-100 block w-full py-2 px-4 rounded-lg focus:border-gray-700"
