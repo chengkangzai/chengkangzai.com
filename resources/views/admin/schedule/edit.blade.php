@@ -77,6 +77,15 @@
                     </div>
 
                     <div class="w-full px-3">
+                        <label
+                            class="block uppercase tracking-wide text-gray-700 dark:text-gray-200 text-xs font-bold mb-2">
+                            <input type="checkbox" value="{{$scheduleConfig->is_subscribed ? '1':'0' }}"
+                                   name="is_subscribed" {{$scheduleConfig->is_subscribed ? 'checked':''}}>
+                            {{__('Sync my schedule weekly')}}
+                        </label>
+                    </div>
+
+                    <div class="w-full px-3">
                         <button type="submit"
                                 class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
                             {{__('Save Configuration')}}
@@ -115,6 +124,12 @@
                     });
                 })
         }
+
+        document
+            .querySelector('input[name=is_subscribed]')
+            .addEventListener('change', function () {
+                this.value = +this.checked;
+            });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/tom-select@1.1/dist/js/tom-select.complete.min.js"></script>
     <script>

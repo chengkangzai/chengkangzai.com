@@ -48,7 +48,7 @@ Route::group(['as' => 'public.'], function () {
     Route::resource('posts.comments', PublicPostCommentController::class)->only(['store']);
 
     Route::get('unsubscribe/{email}', function ($email) {
-        User::where('email', $email)->firstOrFail()->scheduleConfig()->firstOrFail()->deleteOrFail();
+        User::where('email', $email)->firstOrFail()->scheduleConfig()->firstOrFail()->updateOrFail(['is_subscribed' => false]);
         echo "You have been successfully unsubscribe";
     })->name('unsubscribe')->middleware('signed');
 });

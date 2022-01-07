@@ -39,10 +39,13 @@ class ImportTaskSuccessNotification extends Notification implements ShouldQueue
      */
     public function toWebhook($notifiable): WebhookMessage
     {
+        $totalRecord = 0;
         foreach ($this->model as $model) {
+            $count = $model::count();
+            $totalRecord += $count;
             $fields[] = [
                 'name' => (new \ReflectionClass($model))->getShortName() . ' Count',
-                'value' => number_format($model::count()),
+                'value' => number_format($count),
                 'inline' => true,
             ];
         }
@@ -56,7 +59,7 @@ class ImportTaskSuccessNotification extends Notification implements ShouldQueue
                         'title' => (new \ReflectionClass($this->message))->getShortName() . ' run successfully',
                         'type' => 'rich',
                         'description' => 'Total time: ' . $this->second . ' seconds, ' .
-                            number_format(array_sum(array_column($fields, 'value'))) . ' records imported.',
+                            number_format($count) . ' records imported.',
                         'fields' => $fields,
                         'color' => hexdec(self::COLOR_SUCCESS),
                         'timestamp' => $this->timestamp ?? now(),

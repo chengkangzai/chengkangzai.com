@@ -20,12 +20,12 @@ class SyncScheduleToCalendarCommand extends Command
     public function handle(): int
     {
         $this->info('Starting sync schedule to calendar');
-        $configs = ScheduleConfig::with('user')->get();
+        $configs = ScheduleConfig::with('user')->whereHas('user.msOauth')->subscribed()->get();
 
         $this->output->progressStart($configs->count());
 
         foreach ($configs as $config) {
-            AddAPUScheduleToCalenderJob::dispatch($config->user, $config);
+            AddAPUScheduleToCalenderJob::dispatch($config->user, $config, AddAPUScheduleToCalenderJob::CAUSED_BY['Console']);
             $this->output->progressAdvance();
         }
 
