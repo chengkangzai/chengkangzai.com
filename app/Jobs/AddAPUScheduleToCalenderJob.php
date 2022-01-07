@@ -31,16 +31,23 @@ class AddAPUScheduleToCalenderJob implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
+    const CAUSED_BY = [
+        'Console' => 'Console',
+        'Web' => 'Web',
+    ];
+
     private MicrosoftGraph $graph;
     private User $user;
     private ScheduleConfig $config;
+    private ?string $causeBy;
 
-    public function __construct(User $user, ScheduleConfig $config)
+    public function __construct(User $user, ScheduleConfig $config, string|null $causeBy)
     {
         $graphService = new MicrosoftGraphService();
         $this->graph = $graphService->getGraph($user);
         $this->user = $user;
         $this->config = $config;
+        $this->causeBy = $causeBy;
     }
 
     public function handle()
@@ -123,9 +130,11 @@ class AddAPUScheduleToCalenderJob implements ShouldQueue
                 'content' =>
                     "Hi," . $this->user->name . ", you have a class of $schedule->MODULE_NAME with lecturer $schedule->NAME ($schedule->SAMACCOUNTNAME@staffemail.apu.edu.my)" .
                     " at $schedule->ROOM from $schedule->TIME_FROM to $schedule->TIME_TO \n" .
-//                    "Sync Schedule will run every Saturday at 01:00 AM.\n" .
-                    "To unsubscribe, please click on the link below: \n" .
-                    URL::signedRoute('public.unsubscribe', ['email' => $this->user->email]),
+                    ($this->causeBy == self::CAUSED_BY['Console'] ?
+                        "Sync Schedule will run every Saturday at 06:00 AM (GMT+8 Malaysia Timezone).\n" .
+                        "To unsubscribe, please click on the link below: \n" .
+                        URL::signedRoute('public.unsubscribe', ['email' => $this->user->email]) : ''
+                    ),
                 'contentType' => 'text'
             ]
         ];
