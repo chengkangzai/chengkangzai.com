@@ -20,7 +20,7 @@ class SyncScheduleToCalendarCommand extends Command
     public function handle(): int
     {
         $this->info('Starting sync schedule to calendar');
-        $configs = ScheduleConfig::with('user')->get();
+        $configs = ScheduleConfig::with('user')->subscribed()->get();
 
         $this->output->progressStart($configs->count());
 
