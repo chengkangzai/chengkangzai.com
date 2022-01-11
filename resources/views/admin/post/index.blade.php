@@ -14,7 +14,7 @@
 
         <div class="flex justify-end">
             <a href="{{route('admin.posts.create')}}"
-               class="rounded-lg focus:outline-none bg-green-500 p-2 mb-2 text-white hover:shadow-lg hover:bg-green-700 dark:hover:shadow font-bold float-right">
+               class="rounded-lg focus:outline-none bg-violet-500 p-2 mb-2 text-white hover:shadow-lg hover:bg-violet-700 dark:hover:shadow font-bold float-right">
                 {{__('Create New Post')}}</a>
         </div>
         @include('partial.undo-card')
@@ -49,7 +49,7 @@
                     </td>
                     <td class="p-2 border-r space-y-2">
                         <a href="{{route('admin.posts.show',$post)}}"
-                           class="block bg-green-500 hover:bg-green-700 px-2 py-1 sm:p-2 sm:inline text-white hover:shadow-lg font-bold rounded">
+                           class="block bg-violet-500 hover:bg-violet-700 px-2 py-1 sm:p-2 sm:inline text-white hover:shadow-lg font-bold rounded">
                             {{__('Show')}}</a>
                         <a href="{{route('admin.posts.edit',$post)}}"
                            class="block bg-blue-500 hover:bg-blue-700 px-2 py-1 sm:p-2 sm:inline text-white hover:shadow-lg font-bold rounded">

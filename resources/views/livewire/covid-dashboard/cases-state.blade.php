@@ -88,7 +88,7 @@
                             <td class="px-6 py-4 whitespace-nowrap">
                                 {{number_format($tests[$state])}}
                                 <small
-                                    class="text-xs @if($positiveRate[$state] > 10) text-red-700 @elseif($positiveRate[$state] > 5) text-yellow-700 @endif">
+                                    class="text-xs @if($positiveRate[$state] > 10) text-red-700 @elseif($positiveRate[$state] > 5) text-violet-700 @endif">
                                     {{ '('.number_format($positiveRate[$state],2).'%)'}}
                                 </small>
                             </td>

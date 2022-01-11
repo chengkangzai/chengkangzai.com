@@ -108,7 +108,7 @@
                             {{__('Linked to Microsoft ?')}} :
                         </td>
                         @if(auth()->user()->msOauth()->exists())
-                            <td class="text-green-700 dark:text-green-200 text-sm font-semibold px-4 py-2">
+                            <td class="text-violet-700 dark:text-violet-200 text-sm font-semibold px-4 py-2">
                                 {{__('YES')}}
                             </td>
                         @else

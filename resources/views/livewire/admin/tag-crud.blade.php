@@ -10,7 +10,7 @@
 
     <div class="flex justify-end">
         <button wire:click="$emit('openModal', 'admin.tag.create-modal')"
-                class="rounded-lg focus:outline-none bg-green-500 p-2 mb-2 text-white hover:shadow-lg hover:bg-green-700 dark:hover:shadow font-bold float-right">
+                class="rounded-lg focus:outline-none bg-violet-500 p-2 mb-2 text-white hover:shadow-lg hover:bg-violet-700 dark:hover:shadow font-bold float-right">
             {{__('Create New Tag')}}</button>
     </div>
     <div class="w-full sm:w-2/3 mx-auto mb-2">

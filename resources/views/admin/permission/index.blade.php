@@ -26,7 +26,7 @@
                     <td class="border-r">{{$permission->name}}</td>
                     <td class="border-r py-2">
                         <a href="{{route('admin.permissions.show',$permission)}}"
-                           class="block sm:inline sm:p-2 mx-auto w-min bg-green-500 hover:bg-green-700 px-2 py-1 text-white hover:shadow-lg font-bold rounded">
+                           class="block sm:inline sm:p-2 mx-auto w-min bg-violet-500 hover:bg-violet-700 px-2 py-1 text-white hover:shadow-lg font-bold rounded">
                             {{__('Show')}}
                         </a>
                     </td>

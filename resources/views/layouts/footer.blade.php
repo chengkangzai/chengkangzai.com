@@ -2,7 +2,7 @@
     <div class="hidden sm:flex items-center justify-between md:flex py-6 text-center ">
         <div class="text-left space-y-4 sm:px-8">
             <div>
-                <p class="text-yellow-600 dark:text-yellow-400 text-xl font-black">{{__('Navigation')}}</p>
+                <p class="text-violet-600 dark:text-violet-400 text-xl font-black">{{__('Navigation')}}</p>
                 <a href="{{route('public.posts.index')}}"
                    class="text-blue-600 block dark:text-blue-400 underline">{{__('Blog')}}</a>
                 <a href="{{route('public.pandemic.index')}}"
@@ -50,7 +50,7 @@
     <div class="block sm:hidden items-center text-center">
         <div class="text-center space-y-4 my-2">
             <div>
-                <p class="text-yellow-600 dark:text-yellow-400 text-xl font-black">{{__('Navigation')}}</p>
+                <p class="text-violet-600 dark:text-violet-400 text-xl font-black">{{__('Navigation')}}</p>
                 <a href="{{route('public.posts.index')}}"
                    class="text-blue-600 block dark:text-blue-400 underline">{{__('Blog')}}</a>
                 <a href="{{route('public.pandemic.index')}}"

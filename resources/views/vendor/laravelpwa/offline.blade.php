@@ -98,10 +98,10 @@
                         </defs>
                     </svg>
                 </div>
-                <p class="text-sm md:text-base text-purple-400 p-2 mb-4">You aren't connected to a working internet
+                <p class="text-sm md:text-base text-violet-400 p-2 mb-4">You aren't connected to a working internet
                     connection</p>
                 <a href="/"
-                   class="bg-transparent hover:bg-purple-400 dark:hover:hover:bg-purple-700 text-purple-400 dark:text-purple-800 hover:text-white rounded shadow hover:shadow-lg py-2 px-4 border border-purple-400 hover:border-transparent">
+                   class="bg-transparent hover:bg-violet-400 dark:hover:hover:bg-violet-700 text-violet-400 dark:text-violet-800 hover:text-white rounded shadow hover:shadow-lg py-2 px-4 border border-violet-400 hover:border-transparent">
                     Retry</a>
             </div>
         </div>
