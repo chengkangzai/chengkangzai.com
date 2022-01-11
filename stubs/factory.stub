@@ -3,10 +3,14 @@
 namespace {{ factoryNamespace }};
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
+use {{ namespacedModel }};
 
-class {{ factory }}Factory extends Factory
+class {{ model }}Factory extends Factory
 {
-    public function definition(): array
+    protected $model = {{ model }}::class;
+
+    public function definition()
     {
         return [
             //

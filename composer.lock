@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b7fc96bd1596fb0f79aaeeaab91f65a5",
+    "content-hash": "ae2f53e3581e8fe0a98a32909eedb842",
     "packages": [
         {
             "name": "artesaos/seotools",
@@ -8853,6 +8853,77 @@
                 "source": "https://github.com/barryvdh/ReflectionDocBlock/tree/v2.0.6"
             },
             "time": "2018-12-13T10:34:14+00:00"
+        },
+        {
+            "name": "chengkangzai/laravel-stubs",
+            "version": "2.3.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/chengkangzai/laravel-stubs.git",
+                "reference": "2d85d01c58af496470e4f7dd52ca4dfd95587e97"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/chengkangzai/laravel-stubs/zipball/2d85d01c58af496470e4f7dd52ca4dfd95587e97",
+                "reference": "2d85d01c58af496470e4f7dd52ca4dfd95587e97",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "^8.71",
+                "php": "^7.4|^8.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.4",
+                "orchestra/testbench": "^6.23",
+                "phpunit/phpunit": "^9.4"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "ChengKangZai\\Stubs\\StubsServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "ChengKangZai\\Stubs\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Ching Cheng Kang",
+                    "email": "hi@chengkangzai.com",
+                    "homepage": "https://chengkangzai.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Opinionated Laravel stubs",
+            "homepage": "https://github.com/chengkangzai/laravel-stubs",
+            "keywords": [
+                "chengkangzai",
+                "laravel-stubs"
+            ],
+            "support": {
+                "source": "https://github.com/chengkangzai/laravel-stubs/tree/2.3.5"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/chengkangzai",
+                    "type": "github"
+                }
+            ],
+            "time": "2022-01-11T07:02:45+00:00"
         },
         {
             "name": "composer/ca-bundle",

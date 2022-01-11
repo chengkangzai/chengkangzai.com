@@ -2,45 +2,35 @@
 
 namespace {{ namespace }};
 
-use {{ rootNamespace }}Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class {{ class }} extends Controller
+class {{ class }}
 {
-
     public function index()
     {
-        //
     }
-
 
     public function create()
     {
-        //
     }
 
     public function store(Request $request)
     {
-        //
     }
 
-    public function show($id)
+    public function show(int $id)
     {
-        //
     }
 
-    public function edit($id)
+    public function edit(int $id)
     {
-        //
     }
 
-    public function update(Request $request, $id)
+    public function update(Request $request, int $id)
     {
-        //
     }
 
-    public function destroy($id)
+    public function destroy(int $id)
     {
-        //
     }
 }
