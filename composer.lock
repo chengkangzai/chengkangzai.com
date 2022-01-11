@@ -8860,16 +8860,16 @@
         },
         {
             "name": "chengkangzai/laravel-stubs",
-            "version": "2.3.5",
+            "version": "2.3.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/chengkangzai/laravel-stubs.git",
-                "reference": "2d85d01c58af496470e4f7dd52ca4dfd95587e97"
+                "reference": "28dc39c4c87fc5c8d34fc0d8eb09e8f5c543a096"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/chengkangzai/laravel-stubs/zipball/2d85d01c58af496470e4f7dd52ca4dfd95587e97",
-                "reference": "2d85d01c58af496470e4f7dd52ca4dfd95587e97",
+                "url": "https://api.github.com/repos/chengkangzai/laravel-stubs/zipball/28dc39c4c87fc5c8d34fc0d8eb09e8f5c543a096",
+                "reference": "28dc39c4c87fc5c8d34fc0d8eb09e8f5c543a096",
                 "shasum": ""
             },
             "require": {
@@ -8919,7 +8919,7 @@
                 "laravel-stubs"
             ],
             "support": {
-                "source": "https://github.com/chengkangzai/laravel-stubs/tree/2.3.5"
+                "source": "https://github.com/chengkangzai/laravel-stubs/tree/2.3.6"
             },
             "funding": [
                 {
@@ -8927,7 +8927,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-01-11T07:02:45+00:00"
+            "time": "2022-01-11T12:07:20+00:00"
         },
         {
             "name": "composer/ca-bundle",
