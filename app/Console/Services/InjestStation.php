@@ -15,8 +15,10 @@ class InjestStation
         $this->console = $command;
     }
 
-    public function inject(Collection $records, string $tableName, string $modelName): void
+    public function inject(Collection $records, string $modelName): void
     {
+        $tableName = (new $modelName)->getTable();
+
         $model = (new \ReflectionClass($modelName))->getShortName();
         if ($records->isEmpty()) {
             $this->console->info("[$model] : Not inject as the hash value is the same");
@@ -38,6 +40,20 @@ class InjestStation
 
         foreach ($chunks as $chunk) {
             DB::table($tableName)->insert($chunk->toArray());
+            $this->console->getOutput()->progressAdvance();
+        }
+
+        $this->console->getOutput()->progressFinish();
+    }
+
+    public function truncate(array $models)
+    {
+        $this->console->info("Truncating...");
+        $this->console->getOutput()->progressStart(count($models));
+
+        foreach ($models as $model) {
+            $tableName = (new $model)->getTable();
+            DB::table($tableName)->truncate();
             $this->console->getOutput()->progressAdvance();
         }
 

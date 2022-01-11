@@ -1,34 +1,49 @@
 <?php
 
-
 namespace App\Console\Services;
 
-
+use App\Models\Covid\CasesMalaysia;
 use App\Models\Covid\CasesState;
+use App\Models\Covid\Cluster;
+use App\Models\Covid\DeathsMalaysia;
 use App\Models\Covid\DeathsState;
+use App\Models\Covid\Hospital;
+use App\Models\Covid\ICU;
+use App\Models\Covid\PKRC;
 use App\Models\Covid\Population;
+use App\Models\Covid\TestMalaysia;
+use App\Models\Covid\TestState;
+use App\Models\Covid\VaxMalaysia;
+use App\Models\Covid\VaxRegMalaysia;
+use App\Models\Covid\VaxRegState;
+use App\Models\Covid\VaxState;
 use GuzzleHttp\Client;
 use GuzzleHttp\Promise\Utils;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Cache;
 use JetBrains\PhpStorm\ArrayShape;
 
-class ImportCovidFromGithubService
+class ImportPandemicService
 {
-    const baseUrl = 'https://raw.githubusercontent.com/MoH-Malaysia/covid19-public/main';
+    const MOHBaseUrl = 'https://raw.githubusercontent.com/MoH-Malaysia/covid19-public/main';
+    const CITFBaseUrl = 'https://raw.githubusercontent.com/CITF-Malaysia/citf-public/main';
 
     const url = [
-        'CASES_MALAYSIA' => self::baseUrl . '/epidemic/cases_malaysia.csv',
-        'CASES_STATE' => self::baseUrl . '/epidemic/cases_state.csv',
-        'DEATH_MALAYSIA' => self::baseUrl . '/epidemic/deaths_malaysia.csv',
-        'DEATH_STATE' => self::baseUrl . '/epidemic/deaths_state.csv',
-        'TEST_MALAYSIA' => self::baseUrl . '/epidemic/tests_malaysia.csv',
-        'TEST_STATE' => self::baseUrl . '/epidemic/tests_state.csv',
-        'CLUSTER' => self::baseUrl . '/epidemic/clusters.csv',
-        'HOSPITAL' => self::baseUrl . '/epidemic/hospital.csv',
-        'ICU' => self::baseUrl . '/epidemic/icu.csv',
-        'PKRC' => self::baseUrl . '/epidemic/pkrc.csv',
-        'POPULATION' => self::baseUrl . '/static/population.csv',
+        'CASES_MALAYSIA' => self::MOHBaseUrl . '/epidemic/cases_malaysia.csv',
+        'CASES_STATE' => self::MOHBaseUrl . '/epidemic/cases_state.csv',
+        'DEATH_MALAYSIA' => self::MOHBaseUrl . '/epidemic/deaths_malaysia.csv',
+        'DEATH_STATE' => self::MOHBaseUrl . '/epidemic/deaths_state.csv',
+        'TEST_MALAYSIA' => self::MOHBaseUrl . '/epidemic/tests_malaysia.csv',
+        'TEST_STATE' => self::MOHBaseUrl . '/epidemic/tests_state.csv',
+        'CLUSTER' => self::MOHBaseUrl . '/epidemic/clusters.csv',
+        'HOSPITAL' => self::MOHBaseUrl . '/epidemic/hospital.csv',
+        'ICU' => self::MOHBaseUrl . '/epidemic/icu.csv',
+        'PKRC' => self::MOHBaseUrl . '/epidemic/pkrc.csv',
+        'POPULATION' => self::MOHBaseUrl . '/static/population.csv',
+        'VAX_MALAYSIA' => self::CITFBaseUrl . '/vaccination/vax_malaysia.csv',
+        'VAX_STATE' => self::CITFBaseUrl . '/vaccination/vax_state.csv',
+        'VAX_REG_MALAYSIA' => self::CITFBaseUrl . '/registration/vaxreg_malaysia.csv',
+        'VAX_REG_STATE' => self::CITFBaseUrl . '/registration/vaxreg_state.csv',
     ];
 
     private array $recordHolder;
@@ -41,19 +56,53 @@ class ImportCovidFromGithubService
         foreach (array_keys(self::url) as $url) {
             $promises[$url] = $client->getAsync(self::url[$url]);
         }
+
         $responses = Utils::settle($promises)->wait();
         foreach ($responses as $key => $response) {
             $this->recordHolder[$key] = collect(explode(PHP_EOL, $response['value']->getBody()))->splice(1, -1);
         }
     }
 
-    public function getCasesMalaysia(): Collection
+    public static function clearCache()
+    {
+        $cacheKey = array_keys(self::url);
+        foreach ($cacheKey as $key) {
+            Cache::forget($key);
+        }
+    }
+
+    /**
+     * @throws \Exception
+     */
+    public function factory(string $model): Collection
+    {
+        return match ($model) {
+            CasesMalaysia::class => $this->getCasesMalaysia(),
+            CasesState::class => $this->getCasesState(),
+            DeathsState::class => $this->getDeathState(),
+            DeathsMalaysia::class => $this->getDeathMalaysia(),
+            TestMalaysia::class => $this->getTestMalaysia(),
+            TestState::class => $this->getTestState(),
+            Cluster::class => $this->getCluster(),
+            Hospital::class => $this->getHospitals(),
+            ICU::class => $this->getICU(),
+            PKRC::class => $this->getPKRC(),
+            Population::class => $this->getMalaysiaPopulation(),
+            VaxMalaysia::class => $this->getVaxMalaysia(),
+            VaxState::class => $this->getVaxState(),
+            VaxRegMalaysia::class => $this->getVaxRegMalaysia(),
+            VaxRegState::class => $this->getVaxRegState(),
+            default => throw new \Exception('Model not found'),
+        };
+
+    }
+
+    private function getCasesMalaysia(): Collection
     {
         $record = $this->getRecord('CASES_MALAYSIA');
         if ($record['exists']) {
             return collect([]);
         }
-
         global $cumCasesMalaysia;
         global $cumRecoveredMalaysia;
         return $record['content']
@@ -93,7 +142,30 @@ class ImportCovidFromGithubService
 
     }
 
-    public function getCasesState(): Collection
+    #[ArrayShape(['content' => "\Illuminate\Support\Collection", 'exists' => "bool"])]
+    private function getRecord(string $key): array
+    {
+        $csv = $this->recordHolder[$key];
+        $hash = sha1($csv);
+        $exists = true;
+        if (!(Cache::has($key) && Cache::get($key) == $hash)) {
+            Cache::put($key, $hash, now()->addDay());
+            $exists = false;
+        }
+
+        return [
+            'content' => $csv,
+            'exists' => $exists
+        ];
+    }
+
+    private static function takeIndex(array $array, int $index, $mode = 'number'): mixed
+    {
+        $defaultReturn = $mode == 'string' ? '' : 0;
+        return (!isset($array[$index]) || $array[$index] == '') ? $defaultReturn : $array[$index];
+    }
+
+    private function getCasesState(): Collection
     {
         $record = $this->getRecord('CASES_STATE');
         if ($record['exists']) {
@@ -142,7 +214,54 @@ class ImportCovidFromGithubService
         return $collection;
     }
 
-    public function getDeathMalaysia(): Collection
+    private function getDeathState(): Collection
+    {
+        $record = $this->getRecord('DEATH_STATE');
+        if ($record['exists']) {
+            return collect([]);
+        }
+        $data = $record['content']
+            ->map(function ($record) {
+                $item = explode(',', $record);
+                $i = 0;
+
+                $collect = new DeathsState();
+                $collect->date = self::takeIndex($item, $i++);
+                $collect->state = self::takeIndex($item, $i++);
+                $collect->deaths_new = self::takeIndex($item, $i++);
+                $collect->deaths_bid = self::takeIndex($item, $i++);
+                $collect->deaths_bid_dod = self::takeIndex($item, $i++);
+                $collect->deaths_pvax = self::takeIndex($item, $i++);
+                $collect->deaths_fvax = self::takeIndex($item, $i++);
+                $collect->deaths_tat = self::takeIndex($item, $i++);
+                return $collect;
+            });
+
+        return $this->calcCumulativeDeathState($data);
+    }
+
+    private function calcCumulativeDeathState(Collection $collection): Collection
+    {
+        foreach (DeathsState::STATE as $state) {
+            $cum = 0;
+            $cumBid = 0;
+            $cumBidDod = 0;
+            $cases = $collection->filter(fn($death) => $death->state == $state);
+            foreach ($cases as $case) {
+                $cum = $cum + $case->deaths_new;
+                $case->deaths_commutative = $cum;
+
+                $cumBid = $cumBid + $case->deaths_bid;
+                $case->deaths_bid_cumulative = $cumBid;
+
+                $cumBidDod = $cumBidDod + $case->deaths_bid_dod;
+                $case->deaths_bid_dod_cumulative = $cumBidDod;
+            }
+        }
+        return $collection;
+    }
+
+    private function getDeathMalaysia(): Collection
     {
         $record = $this->getRecord('DEATH_MALAYSIA');
         if ($record['exists']) {
@@ -175,54 +294,7 @@ class ImportCovidFromGithubService
             });
     }
 
-    public function getDeathState(): Collection
-    {
-        $record = $this->getRecord('DEATH_STATE');
-        if ($record['exists']) {
-            return collect([]);
-        }
-        $data = $record['content']
-            ->map(function ($record) {
-                $item = explode(',', $record);
-                $i = 0;
-
-                $collect = new DeathsState();
-                $collect->date = self::takeIndex($item, $i++);
-                $collect->state = self::takeIndex($item, $i++);
-                $collect->deaths_new = self::takeIndex($item, $i++);
-                $collect->deaths_bid = self::takeIndex($item, $i++);
-                $collect->deaths_bid_dod = self::takeIndex($item, $i++);
-                $collect->deaths_pvax = self::takeIndex($item, $i++);
-                $collect->deaths_fvax = self::takeIndex($item, $i++);
-                $collect->deaths_tat = self::takeIndex($item, $i++);
-                return $collect;
-            });
-
-        return $this->calcCumulativeDeathState($data);
-    }
-
-    public function calcCumulativeDeathState(Collection $collection): Collection
-    {
-        foreach (DeathsState::STATE as $state) {
-            $cum = 0;
-            $cumBid = 0;
-            $cumBidDod = 0;
-            $cases = $collection->filter(fn($death) => $death->state == $state);
-            foreach ($cases as $case) {
-                $cum = $cum + $case->deaths_new;
-                $case->deaths_commutative = $cum;
-
-                $cumBid = $cumBid + $case->deaths_bid;
-                $case->deaths_bid_cumulative = $cumBid;
-
-                $cumBidDod = $cumBidDod + $case->deaths_bid_dod;
-                $case->deaths_bid_dod_cumulative = $cumBidDod;
-            }
-        }
-        return $collection;
-    }
-
-    public function getTestMalaysia(): Collection
+    private function getTestMalaysia(): Collection
     {
         $record = $this->getRecord('TEST_MALAYSIA');
         if ($record['exists']) {
@@ -243,7 +315,7 @@ class ImportCovidFromGithubService
             });
     }
 
-    public function getTestState(): Collection
+    private function getTestState(): Collection
     {
         $record = $this->getRecord('TEST_STATE');
         if ($record['exists']) {
@@ -265,7 +337,7 @@ class ImportCovidFromGithubService
             });
     }
 
-    public function getCluster(): Collection
+    private function getCluster(): Collection
     {
         $record = $this->getRecord('CLUSTER');
         if ($record['exists']) {
@@ -299,7 +371,7 @@ class ImportCovidFromGithubService
             });
     }
 
-    public function getHospitals(): Collection
+    private function getHospitals(): Collection
     {
         $record = $this->getRecord('HOSPITAL');
         if ($record['exists']) {
@@ -330,7 +402,7 @@ class ImportCovidFromGithubService
             });
     }
 
-    public function getICU(): Collection
+    private function getICU(): Collection
     {
         $record = $this->getRecord('ICU');
         if ($record['exists']) {
@@ -363,7 +435,7 @@ class ImportCovidFromGithubService
             });
     }
 
-    public function getPKRC(): Collection
+    private function getPKRC(): Collection
     {
         $record = $this->getRecord('PKRC');
         if ($record['exists']) {
@@ -392,7 +464,7 @@ class ImportCovidFromGithubService
             });
     }
 
-    public function getMalaysiaPopulation(): Collection
+    private function getMalaysiaPopulation(): Collection
     {
         $record = $this->getRecord('POPULATION');
         if ($record['exists']) {
@@ -415,35 +487,118 @@ class ImportCovidFromGithubService
             });
     }
 
-    private static function takeIndex(array $array, int $index, $mode = 'number'): mixed
+    private function getVaxMalaysia(): Collection
     {
-        $defaultReturn = $mode == 'string' ? '' : 0;
-        return (!isset($array[$index]) || $array[$index] == '') ? $defaultReturn : $array[$index];
+        $record = $this->getRecord('VAX_MALAYSIA');
+        if ($record['exists']) {
+            return collect([]);
+        }
+        return $record['content']
+            ->map(function ($record) {
+                $vax = str_getcsv($record);
+                $i = 0;
+                return [
+                    'date' => $this->takeIndex($vax, $i++),
+                    'daily_partial' => $this->takeIndex($vax, $i++),
+                    'daily_full' => $this->takeIndex($vax, $i++),
+                    'daily' => $this->takeIndex($vax, $i++),
+                    'daily_partial_child' => $this->takeIndex($vax, $i++),
+                    'daily_full_child' => $this->takeIndex($vax, $i++),
+                    'daily_booster' => $this->takeIndex($vax, $i++),
+                    'cumul_partial' => $this->takeIndex($vax, $i++),
+                    'cumul_full' => $this->takeIndex($vax, $i++),
+                    'cumul' => $this->takeIndex($vax, $i++),
+                    'cumul_partial_child' => $this->takeIndex($vax, $i++),
+                    'cumul_full_child' => $this->takeIndex($vax, $i++),
+                    'cumul_booster' => $this->takeIndex($vax, $i++),
+                    'pfizer1' => $this->takeIndex($vax, $i++),
+                    'pfizer2' => $this->takeIndex($vax, $i++),
+                    'sinovac1' => $this->takeIndex($vax, $i++),
+                    'sinovac2' => $this->takeIndex($vax, $i++),
+                    'astra1' => $this->takeIndex($vax, $i++),
+                    'astra2' => $this->takeIndex($vax, $i++),
+                    'cansino' => $this->takeIndex($vax, $i++),
+                    'pending' => $this->takeIndex($vax, $i++),
+                    'created_at' => now(),
+                    'updated_at' => now(),
+                ];
+            });
     }
 
-
-    #[ArrayShape(['content' => "\Illuminate\Support\Collection", 'exists' => "bool"])]
-    private function getRecord(string $mode): array
+    private function getVaxState(): Collection
     {
-        $csv = $this->recordHolder[$mode];
-        $hash = sha1($csv);
-        $exists = true;
-        if (!(Cache::has($mode) && Cache::get($mode) == $hash)) {
-            Cache::put($mode, $hash, now()->addDay());
-            $exists = false;
+        $record = $this->getRecord('VAX_STATE');
+        if ($record['exists']) {
+            return collect([]);
         }
+        return $record['content']
+            ->map(function ($record) {
+                $vax = str_getcsv($record);
+                $i = 0;
+                return [
+                    'date' => $this->takeIndex($vax, $i++),
+                    'state' => $this->takeIndex($vax, $i++),
+                    'daily_partial' => $this->takeIndex($vax, $i++),
+                    'daily_full' => $this->takeIndex($vax, $i++),
+                    'daily' => $this->takeIndex($vax, $i++),
+                    'daily_partial_child' => $this->takeIndex($vax, $i++),
+                    'daily_full_child' => $this->takeIndex($vax, $i++),
+                    'daily_booster' => $this->takeIndex($vax, $i++),
+                    'cumul_partial' => $this->takeIndex($vax, $i++),
+                    'cumul_full' => $this->takeIndex($vax, $i++),
+                    'cumul' => $this->takeIndex($vax, $i++),
+                    'cumul_partial_child' => $this->takeIndex($vax, $i++),
+                    'cumul_full_child' => $this->takeIndex($vax, $i++),
+                    'cumul_booster' => $this->takeIndex($vax, $i++),
+                    'pfizer1' => $this->takeIndex($vax, $i++),
+                    'pfizer2' => $this->takeIndex($vax, $i++),
+                    'sinovac1' => $this->takeIndex($vax, $i++),
+                    'sinovac2' => $this->takeIndex($vax, $i++),
+                    'astra1' => $this->takeIndex($vax, $i++),
+                    'astra2' => $this->takeIndex($vax, $i++),
+                    'cansino' => $this->takeIndex($vax, $i++),
+                    'pending' => $this->takeIndex($vax, $i++),
+                    'created_at' => now(),
+                    'updated_at' => now(),
+                ];
+            });
+    }
 
+    private function getVaxRegMalaysia(): Collection
+    {
+        $record = $this->getRecord('VAX_REG_MALAYSIA');
+        if ($record['exists']) {
+            return collect([]);
+        }
+        return $record['content']->map(fn($record) => $this->formatVaxReg(str_getcsv($record)));
+    }
+
+    private function formatVaxReg(array $array): array
+    {
+        $i = 0;
         return [
-            'content' => collect(explode(PHP_EOL, $csv))->slice(1, -1),
-            'exists' => $exists
+            'date' => $this->takeIndex($array, $i++),
+            'state' => $this->takeIndex($array, $i++),
+            'total' => $this->takeIndex($array, $i++),
+            'phase2' => $this->takeIndex($array, $i++),
+            'mysj' => $this->takeIndex($array, $i++),
+            'call' => $this->takeIndex($array, $i++),
+            'web' => $this->takeIndex($array, $i++),
+            'children' => $this->takeIndex($array, $i++),
+            'elderly' => $this->takeIndex($array, $i++),
+            'comorb' => $this->takeIndex($array, $i++),
+            'oku' => $this->takeIndex($array, $i++),
+            'created_at' => now(),
+            'updated_at' => now(),
         ];
     }
 
-    public function clearCache()
+    private function getVaxRegState(): Collection
     {
-        $cacheKey = array_keys(self::url);
-        foreach ($cacheKey as $key) {
-            Cache::forget($key);
+        $record = $this->getRecord('VAX_REG_STATE');
+        if ($record['exists']) {
+            return collect([]);
         }
+        return $record['content']->map(fn($record) => $this->formatVaxReg(str_getcsv($record)));
     }
 }
