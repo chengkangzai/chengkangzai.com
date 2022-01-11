@@ -26,13 +26,13 @@ class InjestStation
         }
 
         if (DB::table($tableName)->count() == $records->count()) {
-            $this->console->info("[$modelName] : Not inject as the data is the same.");
+            $this->console->info("[$model] : Not inject as the data is the same.");
             return;
         }
 
         DB::table($tableName)->truncate();
 
-        $this->console->info("[$modelName] : Injecting...");
+        $this->console->info("[$model] : Injecting...");
 
         $chunks = $records->chunk(500);
 
