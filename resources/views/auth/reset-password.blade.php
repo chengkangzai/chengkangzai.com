@@ -34,6 +34,12 @@
                            class="form-input mt-1 block w-full rounded-md focus:border-indigo-600">
                 </label>
 
+                <label class="block mt-3">
+                    <span class="text-gray-700 text-sm">{{ __('Confirm Password') }}</span>
+                    <input type="password" name="password_confirmation"
+                           class="form-input mt-1 block w-full rounded-md focus:border-indigo-600">
+                </label>
+
                 <div class="mt-6">
                     <input type="submit" value="{{ __('Reset Password') }}" role="button"
                            class="py-2 px-4 text-center bg-indigo-600 rounded-md w-full text-white text-sm hover:bg-indigo-500"/>
