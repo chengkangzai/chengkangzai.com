@@ -4,8 +4,11 @@
 namespace App\Console\Services;
 
 
-use Http;
+use GuzzleHttp\Client;
+use GuzzleHttp\Promise\Utils;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\Cache;
+use JetBrains\PhpStorm\ArrayShape;
 
 class ImportVaccineFromGithubService
 {
@@ -18,10 +21,29 @@ class ImportVaccineFromGithubService
         'VAX_REG_STATE' => self::baseUrl . '/registration/vaxreg_state.csv',
     ];
 
+    private array $recordHolder;
+
+    public function __construct()
+    {
+        $client = new Client();
+        $promises = [];
+
+        foreach (array_keys(self::url) as $url) {
+            $promises[$url] = $client->getAsync(self::url[$url]);
+        }
+        $responses = Utils::settle($promises)->wait();
+        foreach ($responses as $key => $response) {
+            $this->recordHolder[$key] = collect(explode(PHP_EOL, $response['value']->getBody()))->splice(1, -1);
+        }
+    }
+
     public function getVaxMalaysia(): Collection
     {
-        return collect(explode(PHP_EOL, Http::get(self::url['VAX_MALAYSIA'])))
-            ->slice(1, -1)
+        $record = $this->getRecord('VAX_MALAYSIA');
+        if ($record['exists']) {
+            return collect([]);
+        }
+        return $record['content']
             ->map(function ($record) {
                 $vax = str_getcsv($record);
                 $i = 0;
@@ -55,8 +77,11 @@ class ImportVaccineFromGithubService
 
     public function getVaxState(): Collection
     {
-        return collect(explode(PHP_EOL, Http::get(self::url['VAX_STATE'])))
-            ->slice(1, -1)
+        $record = $this->getRecord('VAX_STATE');
+        if ($record['exists']) {
+            return collect([]);
+        }
+        return $record['content']
             ->map(function ($record) {
                 $vax = str_getcsv($record);
                 $i = 0;
@@ -91,15 +116,21 @@ class ImportVaccineFromGithubService
 
     public function getVaxRegMalaysia(): Collection
     {
-        return collect(explode(PHP_EOL, Http::get(self::url['VAX_REG_MALAYSIA'])))
-            ->slice(1, -1)
+        $record = $this->getRecord('VAX_REG_MALAYSIA');
+        if ($record['exists']) {
+            return collect([]);
+        }
+        return $record['content']
             ->map(fn($record) => $this->formatVaxReg(str_getcsv($record)));
     }
 
     public function getVaxRegState(): Collection
     {
-        return collect(explode(PHP_EOL, Http::get(self::url['VAX_REG_STATE'])))
-            ->slice(1, -1)
+        $record = $this->getRecord('VAX_REG_STATE');
+        if ($record['exists']) {
+            return collect([]);
+        }
+        return $record['content']
             ->map(fn($record) => $this->formatVaxReg(str_getcsv($record)));
     }
 
@@ -133,4 +164,28 @@ class ImportVaccineFromGithubService
         ];
     }
 
+    #[ArrayShape(['content' => "\Illuminate\Support\Collection", 'exists' => "bool"])]
+    private function getRecord(string $mode): array
+    {
+        $csv = $this->recordHolder[$mode];
+        $hash = sha1($csv);
+        $exists = true;
+        if (!(Cache::has($mode) && Cache::get($mode) == $hash)) {
+            Cache::put($mode, $hash, now()->addDay());
+            $exists = false;
+        }
+
+        return [
+            'content' => collect(explode(PHP_EOL, $csv))->slice(1, -1),
+            'exists' => $exists
+        ];
+    }
+
+    public function clearCache()
+    {
+        $cacheKey = array_keys(self::url);
+        foreach ($cacheKey as $key) {
+            Cache::forget($key);
+        }
+    }
 }

@@ -7,7 +7,8 @@ namespace App\Console\Services;
 use App\Models\Covid\CasesState;
 use App\Models\Covid\DeathsState;
 use App\Models\Covid\Population;
-use Http;
+use GuzzleHttp\Client;
+use GuzzleHttp\Promise\Utils;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Cache;
 use JetBrains\PhpStorm\ArrayShape;
@@ -30,6 +31,21 @@ class ImportCovidFromGithubService
         'POPULATION' => self::baseUrl . '/static/population.csv',
     ];
 
+    private array $recordHolder;
+
+    public function __construct()
+    {
+        $client = new Client();
+        $promises = [];
+
+        foreach (array_keys(self::url) as $url) {
+            $promises[$url] = $client->getAsync(self::url[$url]);
+        }
+        $responses = Utils::settle($promises)->wait();
+        foreach ($responses as $key => $response) {
+            $this->recordHolder[$key] = collect(explode(PHP_EOL, $response['value']->getBody()))->splice(1, -1);
+        }
+    }
 
     public function getCasesMalaysia(): Collection
     {
@@ -409,7 +425,7 @@ class ImportCovidFromGithubService
     #[ArrayShape(['content' => "\Illuminate\Support\Collection", 'exists' => "bool"])]
     private function getRecord(string $mode): array
     {
-        $csv = Http::get(self::url[$mode])->body();
+        $csv = $this->recordHolder[$mode];
         $hash = sha1($csv);
         $exists = true;
         if (!(Cache::has($mode) && Cache::get($mode) == $hash)) {
