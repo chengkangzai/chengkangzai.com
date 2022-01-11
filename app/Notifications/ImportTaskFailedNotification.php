@@ -2,7 +2,6 @@
 
 namespace App\Notifications;
 
-use Exception;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
@@ -12,13 +11,11 @@ class ImportTaskFailedNotification extends Notification implements ShouldQueue
 {
     use Queueable;
 
-    private Exception $exception;
-    private int $seconds;
+    private string $message;
 
-    public function __construct(Exception $exception, int $seconds)
+    public function __construct(string $message)
     {
-        $this->exception = $exception;
-        $this->seconds = $seconds;
+        $this->message = $message;
     }
 
 
@@ -33,9 +30,8 @@ class ImportTaskFailedNotification extends Notification implements ShouldQueue
             ->subject('Import failed')
             ->error()
             ->line('The import task failed with the following exception:')
-            ->line('Time used to import: ' . $this->seconds . ' seconds')
-            ->line('Timestamp: ' . now()->toDateTimeString())
-            ->line('Error: ' . $notifiable->error);
+            ->line($this->message)
+            ->line('Timestamp: ' . now()->toDateTimeString());
     }
 
     public function toArray($notifiable): array
