@@ -9,6 +9,8 @@ use App\Models\Covid\DeathsState;
 use App\Models\Covid\Population;
 use Http;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\Cache;
+use JetBrains\PhpStorm\ArrayShape;
 
 class ImportCovidFromGithubService
 {
@@ -31,10 +33,14 @@ class ImportCovidFromGithubService
 
     public function getCasesMalaysia(): Collection
     {
+        $record = $this->getRecord('CASES_MALAYSIA');
+        if ($record['exists']) {
+            return collect([]);
+        }
+
         global $cumCasesMalaysia;
         global $cumRecoveredMalaysia;
-        return collect(explode(PHP_EOL, Http::get(self::url['CASES_MALAYSIA'])))
-            ->slice(1, -1)
+        return $record['content']
             ->map(function ($record) use (&$cumCasesMalaysia, &$cumRecoveredMalaysia) {
                 $item = str_getcsv(str_replace("\"", "", $record));
                 $new_cases = self::takeIndex($item, 1);
@@ -73,32 +79,34 @@ class ImportCovidFromGithubService
 
     public function getCasesState(): Collection
     {
-        return $this->calcCumulativeCasesState(
-            collect(explode(PHP_EOL, Http::get(self::url['CASES_STATE'])))
-                ->slice(1, -1)
-                ->map(function ($record) {
-                    $item = explode(',', $record);
-                    $case = new CasesState();
-                    $i = 0;
-                    $case->date = self::takeIndex($item, $i++);
-                    $case->state = self::takeIndex($item, $i++);
-                    $case->cases_new = self::takeIndex($item, $i++);
-                    $case->cases_import = self::takeIndex($item, $i++);
-                    $case->cases_recovered = self::takeIndex($item, $i++);
-                    $case->cases_active = self::takeIndex($item, $i++);
-                    $case->cases_cluster = self::takeIndex($item, $i++);
-                    $case->cases_pvax = self::takeIndex($item, $i++);
-                    $case->cases_fvax = self::takeIndex($item, $i++);
-                    $case->cases_child = self::takeIndex($item, $i++);
-                    $case->cases_adolescent = self::takeIndex($item, $i++);
-                    $case->cases_adult = self::takeIndex($item, $i++);
-                    $case->cases_elderly = self::takeIndex($item, $i++);
+        $record = $this->getRecord('CASES_STATE');
+        if ($record['exists']) {
+            return collect([]);
+        }
+        $data = $record['content']
+            ->map(function ($record) {
+                $item = explode(',', $record);
+                $case = new CasesState();
+                $i = 0;
+                $case->date = self::takeIndex($item, $i++);
+                $case->state = self::takeIndex($item, $i++);
+                $case->cases_new = self::takeIndex($item, $i++);
+                $case->cases_import = self::takeIndex($item, $i++);
+                $case->cases_recovered = self::takeIndex($item, $i++);
+                $case->cases_active = self::takeIndex($item, $i++);
+                $case->cases_cluster = self::takeIndex($item, $i++);
+                $case->cases_pvax = self::takeIndex($item, $i++);
+                $case->cases_fvax = self::takeIndex($item, $i++);
+                $case->cases_child = self::takeIndex($item, $i++);
+                $case->cases_adolescent = self::takeIndex($item, $i++);
+                $case->cases_adult = self::takeIndex($item, $i++);
+                $case->cases_elderly = self::takeIndex($item, $i++);
 
-                    $case->cases_cumulative = 0;
-                    $case->cases_recovered_cumulative = 0;
-                    return $case;
-                })
-        );
+                $case->cases_cumulative = 0;
+                $case->cases_recovered_cumulative = 0;
+                return $case;
+            });
+        return $this->calcCumulativeCasesState($data);
     }
 
     private function calcCumulativeCasesState(Collection $collection): Collection
@@ -120,11 +128,14 @@ class ImportCovidFromGithubService
 
     public function getDeathMalaysia(): Collection
     {
+        $record = $this->getRecord('DEATH_MALAYSIA');
+        if ($record['exists']) {
+            return collect([]);
+        }
         global $cumDeathMalaysia;
         global $cumBidMalaysia;
         global $cumBidDodMalaysia;
-        return collect(explode(PHP_EOL, Http::get(self::url['DEATH_MALAYSIA'])))
-            ->slice(1, -1)
+        return $record['content']
             ->map(function ($record) use ($cumBidDodMalaysia, &$cumDeathMalaysia, &$cumBidMalaysia) {
                 $item = explode(',', $record);
                 $cumDeathMalaysia = $cumDeathMalaysia + self::takeIndex($item, 1);
@@ -150,25 +161,28 @@ class ImportCovidFromGithubService
 
     public function getDeathState(): Collection
     {
-        return $this->calcCumulativeDeathState(
-            collect(explode(PHP_EOL, Http::get(self::url['DEATH_STATE'])))
-                ->slice(1, -1)
-                ->map(function ($record) {
-                    $item = explode(',', $record);
-                    $i = 0;
+        $record = $this->getRecord('DEATH_STATE');
+        if ($record['exists']) {
+            return collect([]);
+        }
+        $data = $record['content']
+            ->map(function ($record) {
+                $item = explode(',', $record);
+                $i = 0;
 
-                    $collect = new DeathsState();
-                    $collect->date = self::takeIndex($item, $i++);
-                    $collect->state = self::takeIndex($item, $i++);
-                    $collect->deaths_new = self::takeIndex($item, $i++);
-                    $collect->deaths_bid = self::takeIndex($item, $i++);
-                    $collect->deaths_bid_dod = self::takeIndex($item, $i++);
-                    $collect->deaths_pvax = self::takeIndex($item, $i++);
-                    $collect->deaths_fvax = self::takeIndex($item, $i++);
-                    $collect->deaths_tat = self::takeIndex($item, $i++);
-                    return $collect;
-                })
-        );
+                $collect = new DeathsState();
+                $collect->date = self::takeIndex($item, $i++);
+                $collect->state = self::takeIndex($item, $i++);
+                $collect->deaths_new = self::takeIndex($item, $i++);
+                $collect->deaths_bid = self::takeIndex($item, $i++);
+                $collect->deaths_bid_dod = self::takeIndex($item, $i++);
+                $collect->deaths_pvax = self::takeIndex($item, $i++);
+                $collect->deaths_fvax = self::takeIndex($item, $i++);
+                $collect->deaths_tat = self::takeIndex($item, $i++);
+                return $collect;
+            });
+
+        return $this->calcCumulativeDeathState($data);
     }
 
     public function calcCumulativeDeathState(Collection $collection): Collection
@@ -194,8 +208,12 @@ class ImportCovidFromGithubService
 
     public function getTestMalaysia(): Collection
     {
-        return collect(explode(PHP_EOL, Http::get(self::url['TEST_MALAYSIA'])))
-            ->slice(1, -1)
+        $record = $this->getRecord('TEST_MALAYSIA');
+        if ($record['exists']) {
+            return collect([]);
+        }
+
+        return $record['content']
             ->map(function ($record) {
                 $item = explode(',', $record);
                 $i = 0;
@@ -211,8 +229,12 @@ class ImportCovidFromGithubService
 
     public function getTestState(): Collection
     {
-        return collect(explode(PHP_EOL, Http::get(self::url['TEST_STATE'])))
-            ->slice(1, -1)
+        $record = $this->getRecord('TEST_STATE');
+        if ($record['exists']) {
+            return collect([]);
+        }
+
+        return $record['content']
             ->map(function ($record) {
                 $item = explode(',', $record);
                 $i = 0;
@@ -229,8 +251,11 @@ class ImportCovidFromGithubService
 
     public function getCluster(): Collection
     {
-        return collect(explode(PHP_EOL, Http::get(self::url['CLUSTER'])))
-            ->slice(1, -1)
+        $record = $this->getRecord('CLUSTER');
+        if ($record['exists']) {
+            return collect([]);
+        }
+        return $record['content']
             ->map(function ($record) {
                 $item = str_getcsv($record);
                 $i = 0;
@@ -260,8 +285,11 @@ class ImportCovidFromGithubService
 
     public function getHospitals(): Collection
     {
-        return collect(explode(PHP_EOL, Http::get(self::url['HOSPITAL'])))
-            ->slice(1, -1)
+        $record = $this->getRecord('HOSPITAL');
+        if ($record['exists']) {
+            return collect([]);
+        }
+        return $record['content']
             ->map(function ($record) {
                 $item = explode(',', $record);
                 $i = 0;
@@ -288,8 +316,11 @@ class ImportCovidFromGithubService
 
     public function getICU(): Collection
     {
-        return collect(explode(PHP_EOL, Http::get(self::url['ICU'])))
-            ->slice(1, -1)
+        $record = $this->getRecord('ICU');
+        if ($record['exists']) {
+            return collect([]);
+        }
+        return $record['content']
             ->map(function ($record) {
                 $item = explode(',', $record);
                 $i = 0;
@@ -318,8 +349,11 @@ class ImportCovidFromGithubService
 
     public function getPKRC(): Collection
     {
-        return collect(explode(PHP_EOL, Http::get(self::url['PKRC'])))
-            ->slice(1, -1)
+        $record = $this->getRecord('PKRC');
+        if ($record['exists']) {
+            return collect([]);
+        }
+        return $record['content']
             ->map(function ($record) {
                 $item = explode(',', $record);
                 $i = 0;
@@ -344,8 +378,11 @@ class ImportCovidFromGithubService
 
     public function getMalaysiaPopulation(): Collection
     {
-        return collect(explode(PHP_EOL, Http::get(self::url['POPULATION'])))
-            ->slice(1, -1)
+        $record = $this->getRecord('POPULATION');
+        if ($record['exists']) {
+            return collect([]);
+        }
+        return $record['content']
             ->map(function ($record) {
                 $item = explode(',', $record);
                 $i = 0;
@@ -366,5 +403,31 @@ class ImportCovidFromGithubService
     {
         $defaultReturn = $mode == 'string' ? '' : 0;
         return (!isset($array[$index]) || $array[$index] == '') ? $defaultReturn : $array[$index];
+    }
+
+
+    #[ArrayShape(['content' => "\Illuminate\Support\Collection", 'exists' => "bool"])]
+    private function getRecord(string $mode): array
+    {
+        $csv = Http::get(self::url[$mode])->body();
+        $hash = sha1($csv);
+        $exists = true;
+        if (!(Cache::has($mode) && Cache::get($mode) == $hash)) {
+            Cache::put($mode, $hash, now()->addDay());
+            $exists = false;
+        }
+
+        return [
+            'content' => collect(explode(PHP_EOL, $csv))->slice(1, -1),
+            'exists' => $exists
+        ];
+    }
+
+    public function clearCache()
+    {
+        $cacheKey = array_keys(self::url);
+        foreach ($cacheKey as $key) {
+            Cache::forget($key);
+        }
     }
 }

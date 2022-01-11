@@ -20,14 +20,13 @@ use App\Notifications\Notifiable\SuperAdminNotifiable;
 use Exception;
 use Illuminate\Console\Command;
 use Illuminate\Support\Collection;
-use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
 use Notification;
 use Throwable;
 
 class ImportCOVIDDataFromGithub extends Command
 {
-    protected $signature = 'import:covid {--force}';
+    protected $signature = 'import:covid {--force : Truncate all tables before importing}';
 
     protected $description = 'Import Covid Cases From Github';
 
@@ -47,6 +46,8 @@ class ImportCOVIDDataFromGithub extends Command
             if ($this->option('force')) {
                 $this->line('Truncating DB...');
                 $this->truncateDB();
+                $this->line('Forgetting Cache...');
+                $this->covidService->clearCache();
             }
             $this->importMalaysiaPopulation();
             $this->importCasesMalaysia();
@@ -59,8 +60,6 @@ class ImportCOVIDDataFromGithub extends Command
             $this->importHospitals();
             $this->importICU();
             $this->importPKRC();
-
-            Cache::clear();
 
             $runtime = microtime(true) - $time;
             $this->info("Importing covid data from Github took $runtime seconds");
@@ -159,14 +158,20 @@ class ImportCOVIDDataFromGithub extends Command
 
     private function inject(Collection $records, string $tableName, string $modelName): void
     {
+        $model = (new \ReflectionClass($modelName))->getShortName();
+        if ($records->isEmpty()) {
+            $this->info("[$model] : Not inject as the hash value is the same");
+            return;
+        }
+
         if (DB::table($tableName)->count() == $records->count()) {
-            $this->info("[$modelName] : Not inject as the data is the same.");
+            $this->info("[$model] : Not inject as the data is the same.");
             return;
         }
 
         DB::table($tableName)->truncate();
 
-        $this->info("[$modelName] : Injecting...");
+        $this->info("[$model] : Injecting...");
 
         $chunks = $records->chunk(500);
 
