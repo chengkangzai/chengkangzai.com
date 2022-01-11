@@ -26,7 +26,7 @@
             </div>
             <form action="{{route('admin.scheduleConfig.store')}}" method="POST">
                 @csrf
-                <div class="bg-gray-50 dark:bg-gray-700 w-1/2 mx-auto rounded border-2 mt-4">
+                <div class="bg-gray-50 dark:bg-gray-700 w-full md:w-1/2 mx-auto rounded border-2 mt-4">
                     <div class="flex flex-wrap -mx-3 mb-6 p-4">
                         <div class="w-full px-3">
                             <label
