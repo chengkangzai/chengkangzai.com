@@ -56,7 +56,6 @@ class ScheduleConfigController extends Controller
     {
         if ($request->has('intake_code')) {
             $grouping = ApuSchedule::getGroupings($request->get('intake_code'));
-
             return response()->json($grouping);
         }
         return response()->json(['error' => 'No intake provided']);
