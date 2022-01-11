@@ -3,6 +3,7 @@
 namespace App\Console\Commands;
 
 use App\Console\Services\ImportVaccineFromGithubService;
+use App\Console\Services\InjestStation;
 use App\Models\Covid\VaxMalaysia;
 use App\Models\Covid\VaxRegMalaysia;
 use App\Models\Covid\VaxState;
@@ -12,7 +13,6 @@ use App\Notifications\Notifiable\SuperAdminNotifiable;
 use Exception;
 use Illuminate\Console\Command;
 use Illuminate\Support\Collection;
-use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
 use Notification;
 use Throwable;
@@ -25,29 +25,34 @@ class ImportVaxDataFromGithub extends Command
 
     private ImportVaccineFromGithubService $vaxService;
     private array $modelArray;
+    private InjestStation $injestStation;
 
     public function __construct()
     {
         parent::__construct();
-        $this->vaxService = app(ImportVaccineFromGithubService::class);
     }
 
     public function handle()
     {
         try {
             $time = microtime(true);
+            $this->info('Initiating ...');
+            $this->vaxService = new ImportVaccineFromGithubService();
+            $this->injestStation = new InjestStation($this);
+
             if ($this->option('force')) {
                 $this->line('Truncating DB...');
                 $this->truncateDB();
+                $this->line('Forgetting Cache...');
+                $this->vaxService->clearCache();
             }
             $this->importVaxMalaysia();
             $this->importVaxState();
             $this->importVaxRegState();
             $this->importVaxRegMalaysia();
 
-            Cache::clear();
             $runTime = microtime(true) - $time;
-            $this->line('Importing vaccine data from Github completed in ' . $runTime . ' seconds');
+            $this->info('Importing vaccine data from Github completed in ' . $runTime . ' seconds');
             if (app()->environment('production')) {
                 Notification::send(new SuperAdminNotifiable(), new ImportTaskSuccessNotification(ImportVaxDataFromGithub::class, $this->modelArray, $runTime));
             }
@@ -94,25 +99,7 @@ class ImportVaxDataFromGithub extends Command
 
     private function inject(Collection $records, string $tableName, string $modelName): void
     {
-        if (DB::table($tableName)->count() == $records->count()) {
-            $this->info("[$modelName] : Not inject as the data is the same.");
-            return;
-        }
-
-        DB::table($tableName)->truncate();
-
-        $this->info("[$modelName] : Injecting...");
-
-        $chunks = $records->chunk(500);
-
-        $this->output->progressStart($chunks->count());
-
-        foreach ($chunks as $chunk) {
-            DB::table($tableName)->insert($chunk->toArray());
-            $this->output->progressAdvance();
-        }
-
+        $this->injestStation->inject($records, $tableName, $modelName);
         $this->modelArray[] = $modelName;
-        $this->output->progressFinish();
     }
 }

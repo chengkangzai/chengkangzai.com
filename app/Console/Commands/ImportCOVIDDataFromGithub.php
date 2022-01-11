@@ -3,6 +3,7 @@
 namespace App\Console\Commands;
 
 use App\Console\Services\ImportCovidFromGithubService;
+use App\Console\Services\InjestStation;
 use App\Models\Covid\CasesMalaysia;
 use App\Models\Covid\CasesState;
 use App\Models\Covid\Cluster;
@@ -32,23 +33,28 @@ class ImportCOVIDDataFromGithub extends Command
 
     private ImportCovidFromGithubService $covidService;
     private array $modelArray;
+    private InjestStation $injestStation;
 
-    public function __construct(ImportCovidFromGithubService $service)
+    public function __construct()
     {
         parent::__construct();
-        $this->covidService = $service;
     }
 
     public function handle()
     {
         try {
             $time = microtime(true);
+            $this->info('Initiating ...');
+            $this->covidService = new ImportCovidFromGithubService();
+            $this->injestStation = new InjestStation($this);
+
             if ($this->option('force')) {
                 $this->line('Truncating DB...');
                 $this->truncateDB();
                 $this->line('Forgetting Cache...');
                 $this->covidService->clearCache();
             }
+
             $this->importMalaysiaPopulation();
             $this->importCasesMalaysia();
             $this->importCasesState();
@@ -158,31 +164,8 @@ class ImportCOVIDDataFromGithub extends Command
 
     private function inject(Collection $records, string $tableName, string $modelName): void
     {
-        $model = (new \ReflectionClass($modelName))->getShortName();
-        if ($records->isEmpty()) {
-            $this->info("[$model] : Not inject as the hash value is the same");
-            return;
-        }
-
-        if (DB::table($tableName)->count() == $records->count()) {
-            $this->info("[$model] : Not inject as the data is the same.");
-            return;
-        }
-
-        DB::table($tableName)->truncate();
-
-        $this->info("[$model] : Injecting...");
-
-        $chunks = $records->chunk(500);
-
-        $this->output->progressStart($chunks->count());
-
-        foreach ($chunks as $chunk) {
-            DB::table($tableName)->insert($chunk->toArray());
-            $this->output->progressAdvance();
-        }
+        $this->injestStation->inject($records, $tableName, $modelName);
         $this->modelArray[] = $modelName;
-        $this->output->progressFinish();
     }
 
 }
