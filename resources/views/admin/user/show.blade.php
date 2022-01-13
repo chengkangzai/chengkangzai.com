@@ -24,7 +24,7 @@
                         </a>
                     </li>
                     <li><span class="mx-2">/</span></li>
-                    <li>{{__('Update')}}</li>
+                    <li>{{__('Detail')}}</li>
                 </ul>
             </div>
             <div class="mt-6">
@@ -45,7 +45,10 @@
                             <td class="py-4 px-6 border-b text-gray-700 text-lg">{{__('Role')}}</td>
                             <td class="py-4 px-6 border-b text-gray-500">
                                 @foreach($user->roles as $role)
-                                    {{$role->name}}
+                                    <a href="{{route('admin.roles.show', $role)}}"
+                                       class="inline-block bg-gray-100 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
+                                        {{$role->name}}
+                                    </a>
                                 @endforeach
                             </td>
                         </tr>
