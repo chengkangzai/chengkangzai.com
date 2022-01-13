@@ -9,6 +9,16 @@
 @endsection
 
 @section('content')
+    <div
+        class="py-3 px-5 mb-2 rounded-md text-base border border-gray-500 bg-white">
+        <ul class="flex">
+            <li><a href="{{route('admin.home')}}" class="underline hover:text-gray-500">{{__('Home')}}</a>
+            </li>
+            <li><span class="mx-2">/</span></li>
+            <li>{{__('Users')}}</li>
+        </ul>
+    </div>
+
     <div class="flex flex-row-reverse overflow-hidden w-full">
         <x-button class="text-base my-1" :href="route('admin.users.create')">
             {{ __('Create User') }}
