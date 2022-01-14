@@ -63,6 +63,7 @@
                         <tr>
                             <td class="py-4 px-6 border-b text-gray-700 text-lg">{{__('Updated at')}}</td>
                             <td class="py-4 px-6 border-b text-gray-500">{{$post->updated_at}}</td>
+                        </tr>
                         </thead>
                     </table>
                 </div>

@@ -22,7 +22,7 @@
                     </li>
                     <li><span class="mx-2">/</span></li>
                     <li>
-                        <a href="{{route('admin.posts.index')}}" class="underline font-semibold hover:text-gray-500">
+                        <a href="{{route('admin.posts.index')}}" class="underline hover:text-gray-500">
                             {{__('Posts')}}
                         </a>
                     </li>
