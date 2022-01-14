@@ -62,8 +62,8 @@
                         <tr class="hover:bg-gray-200">
                             <td class="py-4 px-6 border-b text-gray-700 text-lg">{{__('Description')}}</td>
                             <td class="py-4 px-6 border-b text-gray-500">
-                                <span>EN : {{$work->translations['description']['en']}}</span>
-                                <span>ZH : {{$work->translations['description']['zh']}}</span>
+                                <span class="inline-block">EN : {{$work->translations['description']['en']}}</span>
+                                <span class="inline-block">ZH : {{$work->translations['description']['zh']}}</span>
                             </td>
                         </tr>
 
