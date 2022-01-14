@@ -1,13 +1,12 @@
 @extends('layouts.admin')
 
-@section('cdn')
+@push('cdn')
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.css">
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.js"></script>
-@endsection
-
+@endpush
 
 @section('header')
-    <h3 class="text-gray-700 text-3xl font-medium">Dashboard</h3>
+    <h3 class="text-gray-700 text-3xl font-medium">{{__('Dashboard')}}</h3>
 @endsection
 
 @section('content')
@@ -17,7 +16,7 @@
     <div class="container mx-auto px-6 py-8">
         <div class="mt-4">
             <div class="flex flex-wrap -mx-6">
-                <x-dashboard-item-card title="Total Users" :count="\App\Models\User::count()">
+                <x-dashboard-item-card title="{{__('Total Users')}}" :count="\App\Models\User::count()">
                     <x-slot name="icon">
                         <svg class="h-8 w-8 text-white" viewBox="0 0 28 30" fill="none"
                              xmlns="http://www.w3.org/2000/svg">
@@ -54,7 +53,8 @@
                     </x-slot>
                 </x-dashboard-item-card>
 
-                <x-dashboard-item-card title="Total Works" :count="\App\Models\Works::count()" bgColor="bg-pink-600">
+                <x-dashboard-item-card title="{{__('Total Works')}}" :count="\App\Models\Works::count()"
+                                       bgColor="bg-pink-600">
                     <x-slot name="icon">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white"
                              fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -66,4 +66,42 @@
             </div>
         </div>
     </div>
+
+    @if($config)
+        <div>
+            <h2 class="text-center text-3xl font-bold">{{__('Your Schedule')}}</h2>
+            <div id='calendar'
+                 class="w-full text-base md:w-1/2 mx-auto mt-4 bg-white p-4 rounded rounded-md"></div>
+        </div>
+    @endif
 @endsection
+
+
+
+@push('script')
+    @if($config)
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var calendarEl = document.getElementById('calendar');
+                var calendar = new FullCalendar.Calendar(calendarEl, {
+                    headerToolbar: {center: 'dayGridMonth,timeGridWeek'}, // buttons for switching between views
+                    initialView: 'timeGridWeek',
+                    aspectRatio: 2,
+
+                });
+
+                @foreach($events as $event)
+                calendar.addEvent({
+                    title: '{{$event->MODID}}',
+                    start: '{{$event->TIME_FROM_ISO}}',
+                    end: '{{$event->TIME_TO_ISO}}',
+
+                });
+                @endforeach
+
+
+                calendar.render();
+            });
+        </script>
+    @endif
+@endpush
