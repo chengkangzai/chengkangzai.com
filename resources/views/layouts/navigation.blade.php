@@ -58,13 +58,24 @@
 
         <x-nav-link href="{{ route('admin.comment.index') }}" :active="request()->is('admin/comment*')">
             <x-slot name="icon">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 inline" fill="none" viewBox="0 0 24 24"
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
                      stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                           d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path>
                 </svg>
             </x-slot>
             {{ __('Comments') }}
+        </x-nav-link>
+
+        <x-nav-link href="{{ route('admin.tags.index') }}" :active="request()->is('admin/tags*')">
+            <x-slot name="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                     stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path>
+                </svg>
+            </x-slot>
+            {{ __('Tags') }}
         </x-nav-link>
 
         <x-divider class="mx-auto w-11/12"/>

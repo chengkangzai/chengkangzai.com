@@ -25,7 +25,7 @@ class TagCRUD extends Component
     {
         $tags = Tag::orderByDesc('order_column')->paginate(10);
         return view('livewire.admin.tag-crud', compact('tags'))
-            ->extends('layouts.app')
+            ->extends('layouts.admin')
             ->section('content');
     }
 
