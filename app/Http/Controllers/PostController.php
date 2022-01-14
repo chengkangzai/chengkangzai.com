@@ -9,6 +9,7 @@ use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\DB;
+use Spatie\Tags\Tag;
 use Str;
 use Throwable;
 
@@ -16,16 +17,17 @@ class PostController extends Controller
 {
     public function index(): Factory|View|Application
     {
-        $posts = Post::withCount('comments')->with('tags')->paginate(5);
+        $posts = Post::withCount(['comments', 'tags'])->with('tags')->paginate(5);
         return view('admin.post.index', compact('posts'));
     }
 
-     public function create(): Factory|View|Application
-     {
-        return view('admin.post.create');
+    public function create(): Factory|View|Application
+    {
+        $tags = Tag::all();
+        return view('admin.post.create', compact('tags'));
     }
 
-     public function store(StorePostRequest $request): RedirectResponse
+    public function store(StorePostRequest $request): RedirectResponse
     {
         try {
             DB::transaction(function () use ($request) {
@@ -52,7 +54,8 @@ class PostController extends Controller
 
     public function edit(Post $post): Factory|View|Application
     {
-        return view('admin.post.edit', compact('post'));
+        $tags = Tag::all();
+        return view('admin.post.edit', compact('post', 'tags'));
     }
 
     public function update(StorePostRequest $request, Post $post): string
