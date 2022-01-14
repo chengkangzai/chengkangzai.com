@@ -53,20 +53,6 @@
                                         class="inline-block py-1 px-3 text-center rounded-md text-white text-sm bg-red-600 hover:bg-red-500">
                                     {{__('Remove')}}
                                 </button>
-
-                                {{--                                <x-button--}}
-                                {{--                                    wire:click="$emit('openModal', 'admin.tag.edit-modal', {{ json_encode(["tag" => $tag->id]) }})">--}}
-                                {{--                                    {{ __('Edit') }}--}}
-                                {{--                                </x-button>--}}
-                                {{--                                <x-button wire:click="$emit('deleteTag', {{ $tag->id }})"--}}
-                                {{--                                          class="bg-red-600 py-1 px-3 text-white cursor-pointer mt-0 hover:bg-red-500">--}}
-                                {{--                                    {{ __('Delete') }}--}}
-                                {{--                                </x-button>--}}
-                                {{--                                <button--}}
-                                {{--                                    wire:click="$emit('openModal', 'admin.tag.edit-modal', {{ json_encode(["tag" => $tag->id]) }})"--}}
-                                {{--                                    class="inline bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded focus:outline-lg focus:shadow-outline">--}}
-                                {{--                                    {{__('Edit')}}--}}
-                                {{--                                </button>--}}
                             </td>
                         </tr>
                     @endforeach

@@ -32,7 +32,7 @@
             </div>
             @include('partial.error-card')
             <div class="p-6 bg-white rounded-md shadow-md">
-                <h2 class="text-lg text-gray-700 font-semibold capitalize">{{__('Crate')}} </h2>
+                <h2 class="text-lg text-gray-700 font-semibold capitalize">{{__('Create')}} </h2>
 
                 <form action="{{route('admin.posts.store')}}" method="POST">
                     @csrf
