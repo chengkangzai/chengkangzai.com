@@ -1,16 +1,19 @@
 <div class="w-full p-2">
+    @section('header')
+        {{__('Tags')}}
+    @endsection
     <div class="py-3 px-5 mb-2 rounded-md text-base border border-gray-500 bg-white">
         <ul class="flex">
             <li><a href="{{route('admin.home')}}" class="underline hover:text-gray-500">{{__('Home')}}</a>
             </li>
             <li><span class="mx-2">/</span></li>
-            <li>{{__('Works')}}</li>
+            <li>{{__('Tags')}}</li>
         </ul>
     </div>
 
     <div class="flex flex-row-reverse overflow-hidden w-full">
         <x-button class="text-base my-1" wire:click="$emit('openModal', 'admin.tag.create-modal')">
-            {{ __('Create Work') }}
+            {{ __('Create Tag') }}
         </x-button>
     </div>
 
