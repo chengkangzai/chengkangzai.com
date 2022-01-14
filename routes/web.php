@@ -85,4 +85,3 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'web'], 'as' => 'adm
     });
     Route::resource('scheduleConfig', ScheduleConfigController::class);
 });
-

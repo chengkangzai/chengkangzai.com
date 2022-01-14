@@ -19,7 +19,7 @@ class UserController extends Controller
 {
     public function index(): Factory|View|Application
     {
-        $users = User::simplePaginate(10);
+        $users = User::with('roles')->simplePaginate(10);
         return view('admin.user.index', compact('users'));
     }
 
@@ -58,6 +58,7 @@ class UserController extends Controller
 
     public function destroy(User $user): RedirectResponse
     {
+        $user->scheduleConfig()->delete();
         $user->delete();
         return redirect()->route('admin.users.index')->with('success', __('User deleted successfully'));
     }

@@ -16,7 +16,7 @@ class AuthTest extends TestCase
 
         $response->assertOk();
         $response->assertSee('Login');
-        $response->assertSee('Email Address');
+        $response->assertSee('Email');
         $response->assertSee('Password');
     }
 
@@ -117,7 +117,7 @@ class AuthTest extends TestCase
 
         $response->assertOk();
         $response->assertSee('Reset Password');
-        $response->assertSee('Email Address');
+        $response->assertSee('Email');
         $response->assertSee('Send Password Reset Link');
 
     }

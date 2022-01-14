@@ -6,6 +6,7 @@ use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 use JetBrains\PhpStorm\ArrayShape;
+use Spatie\Permission\Models\Role;
 
 class UserFactory extends Factory
 {
@@ -30,6 +31,14 @@ class UserFactory extends Factory
             return [
                 'email_verified_at' => null,
             ];
+        });
+    }
+
+    public function user(): Factory
+    {
+        return $this->afterCreating(function (User $user) {
+            $role = Role::find(2);
+            $user->assignRole($role);
         });
     }
 }

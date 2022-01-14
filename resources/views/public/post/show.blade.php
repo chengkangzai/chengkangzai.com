@@ -60,9 +60,10 @@
                     </div>
                     <textarea required aria-label="Your Comment" name="comment"
                               class="w-full shadow-inner p-4 border border-gray-400 mb-4 rounded-lg focus:shadow-outline text-2xl dark:text-black"
-                              placeholder="{{__('Drop your Comment here')}}" cols="6" rows="6" id="comment_content"></textarea>
+                              placeholder="{{__('Drop your Comment here')}}" cols="6" rows="6"
+                              id="comment_content"></textarea>
                     <button
-                        class="font-bold py-2 px-4 w-full bg-purple-600 text-lg text-white shadow-md rounded-lg ">
+                        class="font-bold py-2 px-4 w-full bg-violet-600 text-lg text-white shadow-md rounded-lg ">
                         {{__('Comment')}}
                     </button>
                 </form>
@@ -75,7 +76,7 @@
                                 <img alt="avatar" width="48" height="48"
                                      class="rounded-full w-10 h-10 mr-4 shadow-lg mb-4 bg-white"
                                      src="https://cdn1.iconfinder.com/data/icons/technology-devices-2/100/Profile-512.png">
-                                <h3 class="text-purple-600 dark:text-purple-300 font-semibold text-lg text-center md:text-left ">{{$comment->name}}</h3>
+                                <h3 class="text-violet-600 dark:text-violet-300 font-semibold text-lg text-center md:text-left ">{{$comment->name}}</h3>
                             </div>
                             <p class="text-gray-600 dark:text-gray-200 text-lg text-center md:text-left w-9/12 ">
                                 {{$comment->comment}}

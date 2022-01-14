@@ -34,7 +34,7 @@ class RoleController extends Controller
 
     public function show(Role $role): Factory|View|Application
     {
-        $role->load('permissions');
+        $role->load(['permissions', 'users']);
         return view('admin.role.show', compact('role'));
     }
 

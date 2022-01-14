@@ -1,64 +1,77 @@
-@extends('layouts.app')
+@php
+    /* @var App\Models\Post $post */
+    /* @var \Illuminate\Support\Collection $roles */
+@endphp
+
+@extends('layouts.admin')
+
+@section('header')
+    {{ __('Posts') }}
+@endsection
 
 @section('content')
-    <div class="bg-gray-100 dark:bg-gray-800 relative h-screen overflow-hidden relative w-full">
-        <div class="flex items-start justify-between">
-            <div class="flex flex-col w-full">
-                <div class="overflow-auto h-screen">
+    <div class="mt-8">
+        <div class="w-full h-auto p-2">
+            <div
+                class="py-3 px-5 mb-2 rounded-md text-base border border-gray-500 bg-white">
+                <ul class="flex">
+                    <li><a href="{{route('admin.home')}}" class="underline hover:text-gray-500">{{__('Home')}}</a>
+                    </li>
+                    <li><span class="mx-2">/</span></li>
+                    <li>
+                        <a href="{{route('admin.posts.index')}}" class="underline font-semibold hover:text-gray-500">
+                            {{__('Posts')}}
+                        </a>
+                    </li>
+                    <li><span class="mx-2">/</span></li>
+                    <li>{{__('Detail')}}</li>
+                </ul>
+            </div>
+            <div class="mt-6">
+                <div class="bg-white shadow rounded-md overflow-hidden my-6">
+                    <table class="text-left w-full border-collapse">
+                        <thead class="border-b">
+                        <tr class="hover:bg-gray-200">
+                            <td class="py-4 px-6 border-b text-gray-700 text-lg">{{__('Title')}}</td>
+                            <td class="py-4 px-6 border-b text-gray-500">{{$post->title}} </td>
+                        </tr>
+                        <tr class="hover:bg-gray-200">
+                            <td class="py-4 px-6 border-b text-gray-700 text-lg">{{__('Status')}}</td>
+                            <td class="py-4 px-6 border-b text-gray-500">
+                                @if($post->status == \App\Models\Post::STATUS['PUBLISH'])
+                                    {{__('Published')}}
+                                @else
+                                    {{__('Draft')}}
+                                @endif
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-gray-200">
+                            <td class="py-4 px-6 border-b text-gray-700 text-lg">{{__('Tags')}}</td>
+                            <td class="py-4 px-6 border-b text-gray-500">
+                                @foreach($post->tags as $tag)
+                                    <a href="{{route('admin.tags.index', $tag)}}"
+                                       class="inline-block bg-gray-100 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
+                                        {{$tag->name}}
+                                    </a>
+                                @endforeach
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-gray-200">
+                            <td class="py-4 px-6 border-b text-gray-700 text-lg">{{__('Created at')}}</td>
+                            <td class="py-4 px-6 border-b text-gray-500">{{$post->created_at}}</td>
+                        </tr>
+                        <tr>
+                            <td class="py-4 px-6 border-b text-gray-700 text-lg">{{__('Updated at')}}</td>
+                            <td class="py-4 px-6 border-b text-gray-500">{{$post->updated_at}}</td>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
 
-                    <div class="w-full h-auto p-2">
-                        <div
-                            class="py-3 px-5 mb-2 bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 rounded-md text-sm border border-gray-200 dark:border-gray-600">
-                            <ul class="flex">
-                                <li><a href="{{route('admin.home')}}" class="underline font-semibold">{{__('Home')}}</a></li>
-                                <li><span class="mx-2">/</span></li>
-                                <li><a href="{{route('admin.posts.index')}}" class="underline font-semibold">{{__('Post')}}</a>
-                                </li>
-                                <li><span class="mx-2">/</span></li>
-                                <li>{{__('Show')}}</li>
-                            </ul>
-                        </div>
-                        <table class="table w-full sm:w-1/2 border mx-auto mb-4">
-                            <thead>
-                            <tr class="bg-gray-100 dark:bg-gray-800 text-center border-b text-base text-gray-600 dark:text-gray-400">
-                                <td class="border p-2">{{__('ID')}}</td>
-                                <td>{{$post->id}} </td>
-                            </tr>
-                            <tr class="bg-gray-100 dark:bg-gray-800 text-center border-b text-base text-gray-600 dark:text-gray-400">
-                                <td class="border p-2">{{__('Title')}}</td>
-                                <td>{{$post->title}} </td>
-                            </tr>
-                            <tr class="bg-gray-100 dark:bg-gray-800 text-center border-b text-base text-gray-600 dark:text-gray-400">
-                                <td class="border p-2">{{__('Status')}}</td>
-                                <td>{{$post->status}} </td>
-                            </tr>
-                            <tr class="bg-gray-100 dark:bg-gray-800 text-center border-b text-base text-gray-600 dark:text-gray-400">
-                                <td class="border p-2">{{__('Tags')}}</td>
-                                <td>
-                                    <ul class="list-inside list-disc">
-                                        @foreach($post->tags as $tag)
-                                            <li> {{$tag->name}} </li>
-                                        @endforeach
-                                    </ul>
-                                </td>
-                            </tr>
-                            <tr class="bg-gray-100 dark:bg-gray-800 text-center border-b text-base text-gray-600 dark:text-gray-400">
-                                <td class="border p-2">{{__('Created At')}}</td>
-                                <td>{{$post->created_at}} </td>
-                            </tr>
-                            <tr class="bg-gray-100 dark:bg-gray-800 text-center border-b text-base text-gray-600 dark:text-gray-400">
-                                <td class="border p-2">{{__('Updated At')}}</td>
-                                <td>{{$post->updated_at}} </td>
-                            </tr>
-                            </thead>
-                        </table>
-                        <div class="pb-8 w-full sm:w-4/5 mx-auto border-black">
-                            <div class="dark:text-white dark:bg-dark" id="editor">
-                                {!!  $post->content!!}
-                            </div>
-                        </div>
-
-                    </div>
+            <div class="p-6 bg-white rounded-md shadow-md">
+                <div id="editor">
+                    {!! $post->content !!}
                 </div>
             </div>
         </div>

@@ -1,93 +1,122 @@
-@extends('layouts.app')
+@php
+    /* @var App\Models\Works $work */
+    /* @var \Illuminate\Support\Collection $works */
+@endphp
+
+@extends('layouts.admin')
+
+@section('header')
+    {{ __('Work') }}
+@endsection
 
 @section('content')
-    <div class="w-full p-2">
-        {{--https://tailwindcomponents.com/component/breadcrumb-components--}}
-        <div
-            class="py-3 px-5 mb-2 bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 rounded-md text-sm border border-gray-200 dark:border-gray-600">
-            <ul class="flex">
-                <li><a href="{{route('admin.home')}}" class="underline font-semibold">{{__('Home')}}</a></li>
-                <li><span class="mx-2">/</span></li>
-                <li>{{__('Works')}}</li>
-            </ul>
-        </div>
+    <div class="py-3 px-5 mb-2 rounded-md text-base border border-gray-500 bg-white">
+        <ul class="flex">
+            <li><a href="{{route('admin.home')}}" class="underline hover:text-gray-500">{{__('Home')}}</a>
+            </li>
+            <li><span class="mx-2">/</span></li>
+            <li>{{__('Works')}}</li>
+        </ul>
+    </div>
 
-        <div class="flex justify-end">
-            <a href="{{route('admin.works.create')}}"
-               class="rounded-lg focus:outline-none bg-green-500 p-2 mb-2 text-white hover:shadow-lg hover:bg-green-700 dark:hover:shadow font-bold float-right">
-                {{__('Create New Work')}}
-            </a>
-        </div>
+    <div class="flex flex-row-reverse overflow-hidden w-full">
+        <x-button class="text-base my-1" :href="route('admin.works.create')">
+            {{ __('Create Work') }}
+        </x-button>
+    </div>
 
-        <table class="w-full border ">
-            <thead>
-            <tr class="bg-gray-100 dark:bg-gray-800 text-center border-b text-base text-gray-600 dark:text-gray-400">
-                <td class="p-2 border-r"> {{__('ID')}}</td>
-                <td class="p-2 border-r"> {{__('Name')}}</td>
-                <td class="p-2 border-r hidden sm:table-cell"> {{__('Description')}}</td>
-                <td class="p-2 border-r hidden sm:table-cell"> {{__('Status')}}</td>
-                <td class="p-2 border-r hidden sm:table-cell"> {{__('Tag')}}</td>
-                <td class="p-2 border-r"> {{__('Action')}}</td>
-            </tr>
-            </thead>
-            <tbody>
-            @forelse($works as $work)
-                <tr class="bg-gray-100 dark:bg-gray-800 text-center border-b text-base text-gray-600 dark:text-gray-400">
-                    <td class="p-2 border-r">{{$work->id}}</td>
-                    <td class="p-2 border-r">{{$work->name}}</td>
-                    <td class="p-2 border-r hidden sm:table-cell">
-                        @foreach($work->translations as $des)
-                            <table class="mx-auto w-4/5 my-4 border">
-                                <tr class="border p-2">
-                                    <td class="border p-2">EN</td>
-                                    <td>{{$des['en']}}</td>
-                                </tr>
-                                <tr class="border p-2">
-                                    <td class="border p-2">ZH</td>
-                                    <td>
-                                        @if(isset($des['zh']))
-                                            {{$des['zh']}}
-                                        @else
-                                            NONE
-                                        @endif
-                                    </td>
-                                </tr>
-                            </table>
-                        @endforeach
-                    </td>
-                    <td class="p-2 border-r hidden sm:table-cell">
-                        {{$work->status ? __('Active') : __('Deactivate')}}
-                    </td>
-                    <td class="p-2 border-r hidden sm:table-cell">
-                        <ul>
-                            @forelse($work->tags as $tag)
-                                <li>{{$tag->name ?? ''}}</li>
-                            @empty
-                                {{'-'}}
-                            @endforelse
-                        </ul>
-                    </td>
-                    <td class="p-2 border-r space-y-2">
-                        <a href="{{route('admin.works.show',$work)}}"
-                           class="block mx-auto w-min bg-green-500 hover:bg-green-700 px-2 py-1 text-white hover:shadow-lg font-bold rounded">{{__('Show')}}</a>
-                        <a href="{{route('admin.works.edit',$work)}}"
-                           class="block mx-auto w-min bg-blue-500 hover:bg-blue-700 px-2 py-1 text-white hover:shadow-lg font-bold rounded">{{__('Edit')}}</a>
-                        <form action="{{route('admin.works.destroy',$work)}}" class="inline-flex p-0 m-0" method="POST"
-                              onsubmit="return confirm('Are you sure ? This action cannot be undo')">
-                            @csrf
-                            @method('DELETE')
-                            <input class="bg-red-500 hover:bg-red-700 px-2 py-1 text-white hover:shadow-lg font-bold rounded"
-                                   type="submit" value="{{__('Remove')}}"/>
-                        </form>
-                    </td>
-                </tr>
-            @empty
-                <tr>
-                    <td colspan="6" class="text-center dark:text-white"> {{__('No Data')}}</td>
-                </tr>
-            @endforelse
-            </tbody>
-        </table>
-        {{$works->links()}}
+    <div class="flex flex-col mt-8">
+        <div class="-my-2 py-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
+            <div
+                class="align-middle inline-block min-w-full shadow overflow-hidden sm:rounded-lg border-b border-gray-200">
+                <table class="min-w-full">
+                    <thead>
+                    <tr>
+                        <th class="px-6 py-3 border-b border-gray-200 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+                            {{ __('Title') }}
+                        </th>
+                        <th class="px-6 py-3 border-b border-gray-200 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+                            {{ __('Description') }}
+                        </th>
+                        <th class="px-6 py-3 border-b border-gray-200 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+                            {{ __('Status') }}
+                        </th>
+                        <th class="px-6 py-3 border-b border-gray-200 bg-gray-50"></th>
+                    </tr>
+                    </thead>
+
+                    <tbody class="bg-white">
+                    @foreach($works as $work)
+                        <tr>
+                            <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+                                <div class="flex items-center">
+                                    <div class="flex-shrink-0 h-10 w-10">
+                                        <img
+                                            src="{{$work->img_link}}"
+                                            alt="avatar" class="h-10 w-10 rounded-full object-cover">
+                                    </div>
+
+                                    <div class="ml-4">
+                                        <div class="text-sm leading-5 font-medium text-gray-900">{{ $work->name }}</div>
+                                        <div
+                                            class="text-sm leading-5 text-gray-500">{{ $work->tags_count }} {{__('Tags')}}</div>
+                                    </div>
+                                </div>
+                            </td>
+
+                            <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+                                @foreach($work->translations as $des)
+                                    <span
+                                        class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800 truncate">
+                                         EN : {{Str::limit($des['en'] , 50)}}
+                                    </span>
+                                    <span
+                                        class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800 truncate">
+                                         ZH : {{Str::limit($des['zh'] , 50)}}
+                                    </span>
+                                @endforeach
+                            </td>
+
+                            <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+                                @if($work->status === \App\Models\Works::STATUS['ACTIVE'])
+                                    <span
+                                        class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                                        {{ __('Activated') }}
+                                    </span>
+                                @else
+                                    <span
+                                        class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800">
+                                        {{ __('Deactivate') }}
+                                    </span>
+                                @endif
+                            </td>
+
+
+                            <td class="px-6 py-4 whitespace-no-wrap text-right border-b border-gray-200 text-sm leading-5 font-medium">
+                                <x-button :href="route('admin.works.show', $work)" bg="bg-green-600"
+                                          hoverBg="hover:bg-green-500">
+                                    {{ __('View') }}
+                                </x-button>
+                                <x-button :href="route('admin.works.edit',$work)">
+                                    {{ __('Edit') }}
+                                </x-button>
+                                <form action="{{route('admin.works.destroy',$work)}}" class="inline-block p-0 m-0"
+                                      method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <x-input type="submit"
+                                             class="bg-red-600 py-1 px-3 text-white cursor-pointer mt-0 hover:bg-red-500"
+                                             value="{{__('Remove')}}"/>
+                                </form>
+                            </td>
+                        </tr>
+                    @endforeach
+                    </tbody>
+                </table>
+                <div class="flex flex-col items-center px-5 py-5 bg-white border-t xs:flex-row xs:justify-between">
+                    {{ $works->links() }}
+                </div>
+            </div>
+        </div>
     </div>
 @endsection

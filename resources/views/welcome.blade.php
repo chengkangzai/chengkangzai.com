@@ -89,9 +89,8 @@
 
         <section id="about-me">
             <a href="#about-me"
-               class="mb-2 text-2xl font-black text-black block text-center w-full dark:text-white lg:text-3xl md:text-2xl">{{__('About me')}}</a>
+               class="my-8 md:mb-2 text-3xl font-black text-black block text-center w-full dark:text-white lg:text-3xl md:text-2xl">{{__('About me')}}</a>
             <div class="flex flex-wrap w-full mx-auto pb-8">
-
                 <div
                     class="md:w-1/3 w-full flex items-center justify-center px-5 py-8 transform hover:scale-110 transition duration-300">
                     <div x-data="{ cn: true }"
