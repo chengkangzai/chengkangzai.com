@@ -42,7 +42,7 @@ class ImportTaskSuccessNotification extends Notification implements ShouldQueue
         $totalRecord = 0;
         foreach ($this->model as $model) {
             $count = $model::count();
-            $totalRecord += $count;
+            $totalRecord = $totalRecord + $count;
             $fields[] = [
                 'name' => (new \ReflectionClass($model))->getShortName() . ' Count',
                 'value' => number_format($count),
@@ -59,7 +59,7 @@ class ImportTaskSuccessNotification extends Notification implements ShouldQueue
                         'title' => (new \ReflectionClass($this->message))->getShortName() . ' run successfully',
                         'type' => 'rich',
                         'description' => 'Total time: ' . $this->second . ' seconds, ' .
-                            number_format($count) . ' records imported.',
+                            number_format($totalRecord) . ' records imported.',
                         'fields' => $fields,
                         'color' => hexdec(self::COLOR_SUCCESS),
                         'timestamp' => $this->timestamp ?? now(),
