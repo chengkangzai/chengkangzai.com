@@ -29,6 +29,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Auth::loginUsingId(2);
 /**
  * Public Page
  */
@@ -86,3 +88,6 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'web'], 'as' => 'adm
     Route::resource('scheduleConfig', ScheduleConfigController::class);
 });
 
+//TODO:
+// Check whether header is showing correctly
+// Dont for get about the locale

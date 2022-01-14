@@ -45,6 +45,7 @@
             {{ __('Schedule') }}
         </x-nav-link>
 
+        @role('Super Admin')
         <x-divider class="mx-auto w-11/12"/>
 
         <x-nav-link href="{{ route('admin.posts.index') }}" :active="request()->is('admin/posts*')">
@@ -125,8 +126,7 @@
             </x-slot>
             {{ __('Permissions') }}
         </x-nav-link>
-
-        <x-divider class="mx-auto w-11/12"/>
+        @endrole
 
         {{--        <x-nav-link href="{{ route('about') }}" :active="request()->routeIs('about')">--}}
         {{--            <x-slot name="icon">--}}
