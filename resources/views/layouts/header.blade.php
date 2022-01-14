@@ -31,12 +31,12 @@
             </x-slot>
         </x-dropdown>
 
-        <span class="px-4"> | </span>
+        <span class="sm:px-4"> | </span>
 
         <x-dropdown class="ml-6">
             <x-slot name="trigger">
                 <button @click="dropdownOpen = ! dropdownOpen" class="relative block overflow-hidden">
-                    <span>{{__('Select Language')}}</span>
+                    <span class="hidden sm:inline">{{__('Select Language')}}</span>
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline" fill="none" viewBox="0 0 24 24"
                          stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
