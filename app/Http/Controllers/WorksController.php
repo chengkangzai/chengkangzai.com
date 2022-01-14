@@ -11,6 +11,7 @@ use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\DB;
+use Spatie\Tags\Tag;
 use Storage;
 use Throwable;
 
@@ -18,13 +19,14 @@ class WorksController extends Controller
 {
     public function index(): Factory|View|Application
     {
-        $works = Works::with('tags')->paginate(10);
+        $works = Works::withCount('tags')->paginate(10);
         return view('admin.work.index', compact('works'));
     }
 
     public function create(): Factory|View|Application
     {
-        return view('admin.work.create');
+        $tags = Tag::all();
+        return view('admin.work.create', compact('tags'));
     }
 
     public function store(StoreWorksRequest $request): RedirectResponse
@@ -59,7 +61,8 @@ class WorksController extends Controller
 
     public function edit(Works $work): Factory|View|Application
     {
-        return view('admin.work.edit', compact('work'));
+        $tags = Tag::all();
+        return view('admin.work.edit', compact('work', 'tags'));
     }
 
     public function update(UpdateWorksRequest $request, Works $work): RedirectResponse
