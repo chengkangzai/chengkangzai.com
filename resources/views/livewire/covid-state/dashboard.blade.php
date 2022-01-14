@@ -46,7 +46,7 @@
 
         <div class="dark:bg-white bg-gray-50 p-4 sm:py-8 rounded-xl shadow ">
             <h2 class="text-2xl">{{trans('covid.Tested',['day'=>$test->date_diffWord])}}</h2>
-            <p class="text-violet-500 font-bold text-4xl xl:text-5xl">{{number_format($test->totalTest)}}</p>
+            <p class="text-yellow-500 font-bold text-4xl xl:text-5xl">{{number_format($test->totalTest)}}</p>
             <span>
                 {{__('Positive Rate')}}:
                 <span class="font-bold">{{number_format($positiveRate,2)}}%</span>
@@ -72,13 +72,13 @@
 
         <div class="dark:bg-white bg-gray-50 p-4 sm:py-8 rounded-xl shadow ">
             <h2 class="text-2xl">{{trans('covid.Active_Cluster',['day'=>$timestamp['test_dateDiffWord']  ?? ''])}}</h2>
-            <p class="text-violet-500 font-bold text-4xl xl:text-5xl">{{number_format($activeClusterCount)}}</p>
+            <p class="text-yellow-500 font-bold text-4xl xl:text-5xl">{{number_format($activeClusterCount)}}</p>
         </div>
 
         {{--End of Third Row--}}
         <div class="dark:bg-white bg-gray-50 py-6 rounded-xl shadow ">
             <h2 class="text-2xl">{{trans('covid.New_Dose_1_Jabbed',['day'=>$vax->date_diffWord])}}</h2>
-            <p class="text-violet-500  font-bold text-4xl xl:text-5xl">
+            <p class="text-green-500  font-bold text-4xl xl:text-5xl">
                 {{number_format($vax->daily_partial)}}</p>
             <span>{{__('Cumulative :')}}  {{number_format($vax->cumul_partial)}}</span>
             <span>{{'('.number_format($vax->firstDoseCumulPercent,2).'%)'}}
@@ -88,7 +88,7 @@
                 <div class="overflow-hidden h-2 text-xs flex rounded bg-violet-50">
                     <div
                         style="width: {{round($vax->firstDoseCumulPercent,2)}}%"
-                        class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-violet-300 rounded-r-full">
+                        class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-green-300 rounded-r-full">
                     </div>
                 </div>
             </div>
@@ -96,7 +96,7 @@
 
         <div class="dark:bg-white bg-gray-50 py-6 rounded-xl shadow ">
             <h2 class="text-2xl">{{trans('covid.New_Dose_2_Jabbed',['day'=>$vax->date_diffWord])}}</h2>
-            <p class="text-violet-500  font-bold text-4xl xl:text-5xl">
+            <p class="text-green-500  font-bold text-4xl xl:text-5xl">
                 {{number_format($vax->daily_full)}}</p>
             <span>{{__('Cumulative :')}} {{number_format($vax->cumul_full)}}</span>
             <span>{{'('.number_format($vax->secondDoseCumulPercent,2).'%)'}}
@@ -106,7 +106,7 @@
                 <div class="overflow-hidden h-2 text-xs flex rounded bg-violet-50">
                     <div
                         style="width: {{round($vax->secondDoseCumulPercent,2)}}%"
-                        class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-violet-500 rounded-r-full">
+                        class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-green-500 rounded-r-full">
                     </div>
                 </div>
             </div>
@@ -114,7 +114,7 @@
 
         <div class="dark:bg-white bg-gray-50 p-4 sm:py-8 rounded-xl shadow ">
             <h2 class="text-2xl">{{trans('covid.Percentage_of_Vaccine_Register',['day'=>$vaxReg->date_diffWord])}}</h2>
-            <p class="text-violet-500  font-bold text-4xl xl:text-5xl">
+            <p class="text-green-500  font-bold text-4xl xl:text-5xl">
                 {{number_format($vaxReg->registeredPrecent).'%'}}
             </p>
             <span>{{__('Registered :')}} {{number_format($vaxReg->total)}}</span>

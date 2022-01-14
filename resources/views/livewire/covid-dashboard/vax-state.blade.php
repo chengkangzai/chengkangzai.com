@@ -28,10 +28,10 @@
                                     <tr>
                                         <td class="w-1/4">
                                             <div class="relative">
-                                                <div class="overflow-hidden h-2 text-xs flex rounded bg-violet-50">
+                                                <div class="overflow-hidden h-2 text-xs flex rounded bg-green-50">
                                                     <div
                                                         style="width: 100%"
-                                                        class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-violet-300 rounded-full">
+                                                        class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-green-300 rounded-full">
                                                     </div>
                                                 </div>
                                             </div>
@@ -42,10 +42,10 @@
 
                                         <td class="w-1/4">
                                             <div class="relative">
-                                                <div class="overflow-hidden h-2 text-xs flex rounded bg-violet-50">
+                                                <div class="overflow-hidden h-2 text-xs flex rounded bg-green-50">
                                                     <div
                                                         style="width: 100%"
-                                                        class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-violet-500 rounded-full">
+                                                        class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-green-500 rounded-full">
                                                     </div>
                                                 </div>
                                             </div>
@@ -140,14 +140,14 @@
                         <tr>
                             <td colspan="6">
                                 <div class="relative">
-                                    <div class="overflow-hidden h-2 text-xs flex rounded bg-violet-50">
+                                    <div class="overflow-hidden h-2 text-xs flex rounded bg-green-50">
                                         <div
                                             style="width: {{number_format(($cumul_fullPrecent[$state]),2)}}%"
-                                            class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-violet-500 rounded-r-full">
+                                            class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-green-500 rounded-r-full">
                                         </div>
                                         <div
                                             style="width: {{number_format((($cumul_partialPrecent[$state])-($cumul_fullPrecent[$state])),2)}}%"
-                                            class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-violet-300 rounded-r-full">
+                                            class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-green-300 rounded-r-full">
                                         </div>
                                     </div>
                                 </div>
