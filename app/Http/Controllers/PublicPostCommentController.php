@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App;
 use App\Http\Requests\StoreCommentRequest;
 use App\Models\Comment;
 use App\Models\Post;
@@ -21,7 +22,9 @@ class PublicPostCommentController extends Controller
             'status' => Comment::STATUS['PUBLISH']
         ]);
 
-        Notification::send(new SuperAdminNotifiable(), new NewCommentInPostNotification($comment, $post));
+        if (App::isProduction()) {
+            Notification::send(new SuperAdminNotifiable(), new NewCommentInPostNotification($comment, $post));
+        }
 
         return back();
     }
