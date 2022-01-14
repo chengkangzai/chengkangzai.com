@@ -1,51 +1,54 @@
-@extends('layouts.app')
+@php
+    /* @var \Spatie\Permission\Models\Permission $permission */
+    /* @var \Illuminate\Support\Collection $permissions */
+@endphp
+
+@extends('layouts.admin')
+
+@section('header')
+    {{ __('Permissions') }}
+@endsection
 
 @section('content')
-    <div class="bg-gray-100 dark:bg-gray-800 relative h-screen overflow-hidden relative w-full">
-        <div class="flex items-start justify-between">
-            <div class="flex flex-col w-full">
-                <div class="overflow-auto h-screen">
-
-                    <div class="w-full h-auto p-2">
-                        <div
-                            class="py-3 px-5 mb-2 bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 rounded-md text-sm border border-gray-200 dark:border-gray-600">
-                            <ul class="flex">
-                                <li><a href="{{route('admin.home')}}" class="underline font-semibold">{{__('Home')}}</a>
-                                </li>
-                                <li><span class="mx-2">/</span></li>
-                                <li><a href="{{route('admin.permissions.index')}}"
-                                       class="underline font-semibold">{{__('Permission')}}</a>
-                                </li>
-                                <li><span class="mx-2">/</span></li>
-                                <li>{{__('Show')}}</li>
-                            </ul>
-                        </div>
-                        <table class="table w-full sm:w-1/2 border mx-auto mb-4">
-                            <thead>
-                            <tr class="bg-gray-100 dark:bg-gray-800 text-center border-b text-base text-gray-600 dark:text-gray-400">
-                                <td class="border p-2">{{__('ID')}}</td>
-                                <td>{{$permission->id}} </td>
-                            </tr>
-                            <tr class="bg-gray-100 dark:bg-gray-800 text-center border-b text-base text-gray-600 dark:text-gray-400">
-                                <td class="border p-2">{{__('Name')}}</td>
-                                <td>{{$permission->name}} </td>
-                            </tr>
-                            <tr class="bg-gray-100 dark:bg-gray-800 text-center border-b text-base text-gray-600 dark:text-gray-400">
-                                <td class="border p-2">{{__('Role')}}</td>
-                                <td>
-                                    @forelse($permission->roles as $role)
-                                        <span class="font-semibold list-inside">
-                                            <a href="{{route('admin.roles.show',$role->id)}}"
-                                               class="list-item">{{$role->name}}</a>
-                                        </span>
-                                    @empty
-                                        <span class="font-semibold">{{__('No role')}}</span>
-                                    @endforelse
-                                </td>
-                            </tr>
-                            </thead>
-                        </table>
-                    </div>
+    <div class="mt-8">
+        <div class="w-full h-auto p-2">
+            <div
+                class="py-3 px-5 mb-2 rounded-md text-base border border-gray-500 bg-white">
+                <ul class="flex">
+                    <li><a href="{{route('admin.home')}}" class="underline hover:text-gray-500">{{__('Home')}}</a>
+                    </li>
+                    <li><span class="mx-2">/</span></li>
+                    <li>
+                        <a href="{{route('admin.permissions.index')}}"
+                           class="underline font-semibold hover:text-gray-500">
+                            {{__('Permissions')}}
+                        </a>
+                    </li>
+                    <li><span class="mx-2">/</span></li>
+                    <li>{{__('Detail')}}</li>
+                </ul>
+            </div>
+            <div class="mt-6">
+                <div class="bg-white shadow rounded-md overflow-hidden my-6">
+                    <table class="text-left w-full border-collapse">
+                        <thead class="border-b">
+                        <tr class="hover:bg-gray-200">
+                            <td class="py-4 px-6 border-b text-gray-700 text-lg">{{__('Name')}}</td>
+                            <td class="py-4 px-6 border-b text-gray-500">{{$permission->name}} </td>
+                        </tr>
+                        <tr class="hover:bg-gray-200">
+                            <td class="py-4 px-6 border-b text-gray-700 text-lg">{{__('Roles')}}</td>
+                            <td class="py-4 px-6 border-b text-gray-500 space-y-1 space-x-1">
+                                @foreach($permission->roles as $role)
+                                    <a href="{{route('admin.roles.show', $role)}}"
+                                       class="inline-block bg-gray-100 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mt-1">
+                                        {{$role->name}}
+                                    </a>
+                                @endforeach
+                            </td>
+                        </tr>
+                        </thead>
+                    </table>
                 </div>
             </div>
         </div>
