@@ -18,7 +18,7 @@
 
             <x-slot name="content">
                 <x-dropdown-link href="{{ route('admin.user.editPassword',auth()->user() ?? 0 ) }}">
-                    {{ __('My profile') }}
+                    {{ __('My Profile') }}
                 </x-dropdown-link>
 
                 <form method="POST" action="{{ route('logout') }}">

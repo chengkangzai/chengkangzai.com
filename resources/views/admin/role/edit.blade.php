@@ -9,7 +9,7 @@
 @extends('layouts.admin')
 
 @section('header')
-    {{ __('Edit Role') }}
+    {{ __('Roles') }}
 @endsection
 
 @section('content')
