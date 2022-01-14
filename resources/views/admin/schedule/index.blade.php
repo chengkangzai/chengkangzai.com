@@ -139,7 +139,7 @@
             <div>
                 <h2 class="text-center text-3xl font-bold">{{__('Your Schedule')}}</h2>
                 <div id='calendar'
-                     class="w-full text-base md:w-1/2 mx-auto mt-4 bg-white border border-gray-500 bg-white p-4 rounded rounded-md"></div>
+                     class="w-full text-base md:w-1/2 mx-auto mt-4 border border-gray-500 bg-white p-4 rounded rounded-md"></div>
             </div>
         @endif
     @endif
