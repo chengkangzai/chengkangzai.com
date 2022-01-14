@@ -6,7 +6,7 @@
 @extends('layouts.admin')
 
 @section('header')
-    {{ __('Work') }}
+    {{ __('Comments') }}
 @endsection
 
 @section('content')
