@@ -15,8 +15,9 @@
     @include('partial.success-card')
     <div class="container mx-auto px-6 py-8">
         <div class="mt-4">
-            <div class="flex flex-wrap -mx-6">
-                <x-dashboard-item-card title="{{__('Total Users')}}" :count="\App\Models\User::count()">
+            <div class="flex flex-wrap -mx-6 gap-2 sm:gap-0 ">
+                <x-dashboard-item-card title="{{__('Total Users')}}" :count="\App\Models\User::count()"
+                                       link="{{route('admin.users.index')}}">
                     <x-slot name="icon">
                         <svg class="h-8 w-8 text-white" viewBox="0 0 28 30" fill="none"
                              xmlns="http://www.w3.org/2000/svg">
@@ -43,7 +44,7 @@
                 </x-dashboard-item-card>
 
                 <x-dashboard-item-card title="{{__('Total Posts')}}" :count="\App\Models\Post::count()"
-                                       bgColor="bg-orange-600">
+                                       link="{{route('admin.posts.index')}}" bgColor="bg-orange-600">
                     <x-slot name="icon">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white"
                              fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -54,7 +55,7 @@
                 </x-dashboard-item-card>
 
                 <x-dashboard-item-card title="{{__('Total Works')}}" :count="\App\Models\Works::count()"
-                                       bgColor="bg-pink-600">
+                                       link="{{route('admin.works.index')}}" bgColor="bg-pink-600">
                     <x-slot name="icon">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white"
                              fill="none" viewBox="0 0 24 24" stroke="currentColor">
