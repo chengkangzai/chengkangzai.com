@@ -58,7 +58,7 @@
                             <td class="px-6 py-4 whitespace-nowrap">
                                 {{number_format($ICU)}} / {{number_format($bed_ICU[$state] ?? 0)}}
                                 <small
-                                    class="text-xs @if($icu_covid_util[$state] > 100) text-red-900 font-bold @elseif($icu_covid_util[$state] > 70) text-red-700 @elseif($icu_covid_util[$state] > 50) text-violet-700 @endif">
+                                    class="text-xs @if($icu_covid_util[$state] > 100) text-red-900 font-bold @elseif($icu_covid_util[$state] > 70) text-red-700 @elseif($icu_covid_util[$state] > 50) text-yellow-700 @endif">
                                     {{'('.number_format($icu_covid_util[$state],2).'%)'}}
                                 </small>
 
@@ -68,7 +68,7 @@
                                     {{number_format($hospitals[$state] ?? 0)}}
                                     / {{number_format($bed_covid[$state] ?? 0)}}
                                     <small
-                                        class="text-xs @if($hospital_covid_util[$state] > 100) text-red-900 font-bold @elseif($hospital_covid_util[$state] > 70) text-red-700 @elseif($hospital_covid_util[$state] > 50) text-violet-700 @endif">
+                                        class="text-xs @if($hospital_covid_util[$state] > 100) text-red-900 font-bold @elseif($hospital_covid_util[$state] > 70) text-red-700 @elseif($hospital_covid_util[$state] > 50) text-yellow-700 @endif">
                                         {{'('.number_format($hospital_covid_util[$state],2).'%)'}}
                                     </small>
                                 @else
@@ -80,7 +80,7 @@
                                     {{number_format($PKRC[$state] ?? 0) ?? "N/A"}}
                                     / {{number_format($bed_PKRC[$state] ?? 0) ?? "N/A"}}
                                     <small
-                                        class="text-xs @if($pkrc_covid_util[$state] > 100) text-red-900 font-bold @elseif($pkrc_covid_util[$state] > 70) text-red-700 @elseif($pkrc_covid_util[$state] > 50) text-violet-700 @endif">
+                                        class="text-xs @if($pkrc_covid_util[$state] > 100) text-red-900 font-bold @elseif($pkrc_covid_util[$state] > 70) text-red-700 @elseif($pkrc_covid_util[$state] > 50) text-yellow-700 @endif">
                                         {{'('.number_format($pkrc_covid_util[$state],2).'%)'}}
                                     </small>
                                 @else
@@ -90,7 +90,7 @@
                             <td class="px-6 py-4 whitespace-nowrap">
                                 {{$totalOccupancyByState[$state]}} / {{$totalCovidBedByState[$state]}}
                                 <small
-                                    class="text-xs @if($totalUtilizationByState[$state] > 100) text-red-900 font-bold @elseif($totalUtilizationByState[$state] > 70) text-red-700 @elseif($totalUtilizationByState[$state] > 50) text-violet-700 @endif">
+                                    class="text-xs @if($totalUtilizationByState[$state] > 100) text-red-900 font-bold @elseif($totalUtilizationByState[$state] > 70) text-red-700 @elseif($totalUtilizationByState[$state] > 50) text-yellow-700 @endif">
                                     {{'('.number_format($totalUtilizationByState[$state],2).'%)'}}
                                 </small>
                             </td>
