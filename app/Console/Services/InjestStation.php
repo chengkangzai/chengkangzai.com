@@ -15,12 +15,12 @@ class InjestStation
         $this->console = $command;
     }
 
-    public function inject(Collection $records, string $modelName): void
+    public function inject(?Collection $records, string $modelName): void
     {
         $tableName = (new $modelName)->getTable();
 
         $model = (new \ReflectionClass($modelName))->getShortName();
-        if ($records->isEmpty()) {
+        if (!$records) {
             $this->console->info("[$model] : Not inject as the hash value is the same");
             return;
         }

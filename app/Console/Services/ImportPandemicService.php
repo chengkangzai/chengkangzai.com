@@ -74,20 +74,20 @@ class ImportPandemicService
     /**
      * @throws \Exception
      */
-    public function factory(string $model): Collection
+    public function factory(string $model): ?Collection
     {
         return match ($model) {
             CasesMalaysia::class => $this->getCasesMalaysia(),
             CasesState::class => $this->getCasesState(),
-            DeathsState::class => $this->getDeathState(),
-            DeathsMalaysia::class => $this->getDeathMalaysia(),
+            DeathsState::class => $this->getDeathsState(),
+            DeathsMalaysia::class => $this->getDeathsMalaysia(),
             TestMalaysia::class => $this->getTestMalaysia(),
             TestState::class => $this->getTestState(),
             Cluster::class => $this->getCluster(),
-            Hospital::class => $this->getHospitals(),
+            Hospital::class => $this->getHospital(),
             ICU::class => $this->getICU(),
             PKRC::class => $this->getPKRC(),
-            Population::class => $this->getMalaysiaPopulation(),
+            Population::class => $this->getPopulation(),
             VaxMalaysia::class => $this->getVaxMalaysia(),
             VaxState::class => $this->getVaxState(),
             VaxRegMalaysia::class => $this->getVaxRegMalaysia(),
@@ -97,15 +97,15 @@ class ImportPandemicService
 
     }
 
-    private function getCasesMalaysia(): Collection
+    private function getCasesMalaysia(): ?Collection
     {
-        $record = $this->getRecord('CASES_MALAYSIA');
-        if ($record['exists']) {
-            return collect([]);
+        [$content, $exists] = $this->getRecord('CASES_MALAYSIA');
+        if ($exists) {
+            return null;
         }
         global $cumCasesMalaysia;
         global $cumRecoveredMalaysia;
-        return $record['content']
+        return $content
             ->map(function ($record) use (&$cumCasesMalaysia, &$cumRecoveredMalaysia) {
                 $item = str_getcsv(str_replace("\"", "", $record));
                 $new_cases = self::takeIndex($item, 1);
@@ -145,18 +145,15 @@ class ImportPandemicService
     #[ArrayShape(['content' => "\Illuminate\Support\Collection", 'exists' => "bool"])]
     private function getRecord(string $key): array
     {
-        $csv = $this->recordHolder[$key];
-        $hash = sha1($csv);
+        $content = $this->recordHolder[$key];
+        $hash = sha1($content);
         $exists = true;
         if (!(Cache::has($key) && Cache::get($key) == $hash)) {
             Cache::put($key, $hash, now()->addDay());
             $exists = false;
         }
 
-        return [
-            'content' => $csv,
-            'exists' => $exists
-        ];
+        return [$content, $exists];
     }
 
     private static function takeIndex(array $array, int $index, $mode = 'number'): mixed
@@ -165,13 +162,13 @@ class ImportPandemicService
         return (!isset($array[$index]) || $array[$index] == '') ? $defaultReturn : $array[$index];
     }
 
-    private function getCasesState(): Collection
+    private function getCasesState(): ?Collection
     {
-        $record = $this->getRecord('CASES_STATE');
-        if ($record['exists']) {
-            return collect([]);
+        [$content, $exists] = $this->getRecord('CASES_STATE');
+        if ($exists) {
+            return null;
         }
-        $data = $record['content']
+        $data = $content
             ->map(function ($record) {
                 $item = explode(',', $record);
                 $case = new CasesState();
@@ -197,7 +194,7 @@ class ImportPandemicService
         return $this->calcCumulativeCasesState($data);
     }
 
-    private function calcCumulativeCasesState(Collection $collection): Collection
+    private function calcCumulativeCasesState(Collection $collection): ?Collection
     {
         foreach (CasesState::STATE as $state) {
             $cumCase = 0;
@@ -214,13 +211,13 @@ class ImportPandemicService
         return $collection;
     }
 
-    private function getDeathState(): Collection
+    private function getDeathsState(): ?Collection
     {
-        $record = $this->getRecord('DEATH_STATE');
-        if ($record['exists']) {
-            return collect([]);
+        [$content, $exists] = $this->getRecord('DEATH_STATE');
+        if ($exists) {
+            return null;
         }
-        $data = $record['content']
+        $data = $content
             ->map(function ($record) {
                 $item = explode(',', $record);
                 $i = 0;
@@ -240,7 +237,7 @@ class ImportPandemicService
         return $this->calcCumulativeDeathState($data);
     }
 
-    private function calcCumulativeDeathState(Collection $collection): Collection
+    private function calcCumulativeDeathState(Collection $collection): ?Collection
     {
         foreach (DeathsState::STATE as $state) {
             $cum = 0;
@@ -261,16 +258,16 @@ class ImportPandemicService
         return $collection;
     }
 
-    private function getDeathMalaysia(): Collection
+    private function getDeathsMalaysia(): ?Collection
     {
-        $record = $this->getRecord('DEATH_MALAYSIA');
-        if ($record['exists']) {
-            return collect([]);
+        [$content, $exists] = $this->getRecord('DEATH_MALAYSIA');
+        if ($exists) {
+            return null;
         }
         global $cumDeathMalaysia;
         global $cumBidMalaysia;
         global $cumBidDodMalaysia;
-        return $record['content']
+        return $content
             ->map(function ($record) use ($cumBidDodMalaysia, &$cumDeathMalaysia, &$cumBidMalaysia) {
                 $item = explode(',', $record);
                 $cumDeathMalaysia = $cumDeathMalaysia + self::takeIndex($item, 1);
@@ -294,14 +291,14 @@ class ImportPandemicService
             });
     }
 
-    private function getTestMalaysia(): Collection
+    private function getTestMalaysia(): ?Collection
     {
-        $record = $this->getRecord('TEST_MALAYSIA');
-        if ($record['exists']) {
-            return collect([]);
+        [$content, $exists] = $this->getRecord('TEST_MALAYSIA');
+        if ($exists) {
+            return null;
         }
 
-        return $record['content']
+        return $content
             ->map(function ($record) {
                 $item = explode(',', $record);
                 $i = 0;
@@ -315,14 +312,14 @@ class ImportPandemicService
             });
     }
 
-    private function getTestState(): Collection
+    private function getTestState(): ?Collection
     {
-        $record = $this->getRecord('TEST_STATE');
-        if ($record['exists']) {
-            return collect([]);
+        [$content, $exists] = $this->getRecord('TEST_STATE');
+        if ($exists) {
+            return null;
         }
 
-        return $record['content']
+        return $content
             ->map(function ($record) {
                 $item = explode(',', $record);
                 $i = 0;
@@ -337,13 +334,13 @@ class ImportPandemicService
             });
     }
 
-    private function getCluster(): Collection
+    private function getCluster(): ?Collection
     {
-        $record = $this->getRecord('CLUSTER');
-        if ($record['exists']) {
-            return collect([]);
+        [$content, $exists] = $this->getRecord('CLUSTER');
+        if ($exists) {
+            return null;
         }
-        return $record['content']
+        return $content
             ->map(function ($record) {
                 $item = str_getcsv($record);
                 $i = 0;
@@ -371,13 +368,13 @@ class ImportPandemicService
             });
     }
 
-    private function getHospitals(): Collection
+    private function getHospital(): ?Collection
     {
-        $record = $this->getRecord('HOSPITAL');
-        if ($record['exists']) {
-            return collect([]);
+        [$content, $exists] = $this->getRecord('HOSPITAL');
+        if ($exists) {
+            return null;
         }
-        return $record['content']
+        return $content
             ->map(function ($record) {
                 $item = explode(',', $record);
                 $i = 0;
@@ -402,13 +399,13 @@ class ImportPandemicService
             });
     }
 
-    private function getICU(): Collection
+    private function getICU(): ?Collection
     {
-        $record = $this->getRecord('ICU');
-        if ($record['exists']) {
-            return collect([]);
+        [$content, $exists] = $this->getRecord('ICU');
+        if ($exists) {
+            return null;
         }
-        return $record['content']
+        return $content
             ->map(function ($record) {
                 $item = explode(',', $record);
                 $i = 0;
@@ -435,13 +432,13 @@ class ImportPandemicService
             });
     }
 
-    private function getPKRC(): Collection
+    private function getPKRC(): ?Collection
     {
-        $record = $this->getRecord('PKRC');
-        if ($record['exists']) {
-            return collect([]);
+        [$content, $exists] = $this->getRecord('PKRC');
+        if ($exists) {
+            return null;
         }
-        return $record['content']
+        return $content
             ->map(function ($record) {
                 $item = explode(',', $record);
                 $i = 0;
@@ -464,13 +461,13 @@ class ImportPandemicService
             });
     }
 
-    private function getMalaysiaPopulation(): Collection
+    private function getPopulation(): ?Collection
     {
-        $record = $this->getRecord('POPULATION');
-        if ($record['exists']) {
-            return collect([]);
+        [$content, $exists] = $this->getRecord('POPULATION');
+        if ($exists) {
+            return null;
         }
-        return $record['content']
+        return $content
             ->map(function ($record) {
                 $item = explode(',', $record);
                 $i = 0;
@@ -487,13 +484,13 @@ class ImportPandemicService
             });
     }
 
-    private function getVaxMalaysia(): Collection
+    private function getVaxMalaysia(): ?Collection
     {
-        $record = $this->getRecord('VAX_MALAYSIA');
-        if ($record['exists']) {
-            return collect([]);
+        [$content, $exists] = $this->getRecord('VAX_MALAYSIA');
+        if ($exists) {
+            return null;
         }
-        return $record['content']
+        return $content
             ->map(function ($record) {
                 $vax = str_getcsv($record);
                 $i = 0;
@@ -525,13 +522,13 @@ class ImportPandemicService
             });
     }
 
-    private function getVaxState(): Collection
+    private function getVaxState(): ?Collection
     {
-        $record = $this->getRecord('VAX_STATE');
-        if ($record['exists']) {
-            return collect([]);
+        [$content, $exists] = $this->getRecord('VAX_STATE');
+        if ($exists) {
+            return null;
         }
-        return $record['content']
+        return $content
             ->map(function ($record) {
                 $vax = str_getcsv($record);
                 $i = 0;
@@ -564,15 +561,6 @@ class ImportPandemicService
             });
     }
 
-    private function getVaxRegMalaysia(): Collection
-    {
-        $record = $this->getRecord('VAX_REG_MALAYSIA');
-        if ($record['exists']) {
-            return collect([]);
-        }
-        return $record['content']->map(fn($record) => $this->formatVaxReg(str_getcsv($record)));
-    }
-
     private function formatVaxReg(array $array): array
     {
         $i = 0;
@@ -593,12 +581,21 @@ class ImportPandemicService
         ];
     }
 
-    private function getVaxRegState(): Collection
+    private function getVaxRegMalaysia(): ?Collection
     {
-        $record = $this->getRecord('VAX_REG_STATE');
-        if ($record['exists']) {
-            return collect([]);
+        [$content, $exists] = $this->getRecord('VAX_REG_MALAYSIA');
+        if ($exists) {
+            return null;
         }
-        return $record['content']->map(fn($record) => $this->formatVaxReg(str_getcsv($record)));
+        return $content->map(fn($record) => $this->formatVaxReg(str_getcsv($record)));
+    }
+
+    private function getVaxRegState(): ?Collection
+    {
+        [$content, $exists] = $this->getRecord('VAX_REG_STATE');
+        if ($exists) {
+            return null;
+        }
+        return $content->map(fn($record) => $this->formatVaxReg(str_getcsv($record)));
     }
 }
