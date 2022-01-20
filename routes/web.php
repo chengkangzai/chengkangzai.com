@@ -11,11 +11,12 @@ use App\Http\Controllers\PublicIndexController;
 use App\Http\Controllers\PublicPandemicController;
 use App\Http\Controllers\PublicPostCommentController;
 use App\Http\Controllers\PublicPostController;
-use App\Http\Controllers\RoleController;
 use App\Http\Controllers\ScheduleConfigController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\WorksController;
+use App\Http\Livewire\Admin\RoleCrud;
 use App\Http\Livewire\Admin\TagCRUD;
+use App\Http\Livewire\Admin\UserCrud;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
@@ -62,7 +63,6 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'web'], 'as' => 'adm
     Route::get('user/changePassword/{user}', [UserController::class, 'editPassword'])->name('user.editPassword');
     Route::post('user/changePassword/{user}', [UserController::class, 'changePassword'])->name('user.changePassword');
 
-    Route::get('test', \App\Http\Livewire\Admin\RoleCrud::class);
     Route::middleware('role:Super Admin')->group(function () {
         Route::get('posts/{postId}/restore', [PostController::class, 'restore'])->name('posts.restore');
         Route::resource('posts', PostController::class);
@@ -73,9 +73,9 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'web'], 'as' => 'adm
 
         Route::get('users/{userId}/restore', [UserController::class, 'restore'])->name('users.restore');
         Route::post('users/{user}/resetPassword', [UserController::class, 'sendForgetPassword'])->name('users.sendForgetPassword');
-        Route::resource('users', UserController::class);
+        Route::get('users', UserCrud::class)->name('users.index');
         Route::resource('permissions', PermissionController::class)->only(['index', 'show']);
-        Route::resource('roles', RoleController::class);
+        Route::get('roles', RoleCrud::class)->name('roles.index');
     });
 
     Route::group(['prefix' => 'schedule', 'as' => 'schedule.'], function () {
