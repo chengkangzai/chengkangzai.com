@@ -28,24 +28,28 @@ class RoleCrud extends Component
 
     public function remove(Role $role)
     {
+        if ($role->name == 'Super Admin') {
+            $this->addError('', __('Admin role can not be deleted'));
+            return;
+        }
         if ($role->users()->count() > 0) {
-            $this->addError('', 'Role cannot be deleted because it has users assigned to it.');
+            $this->addError('', __('Role has users assigned to it. Please remove users from this role and try again'));
             return;
         }
         $role->delete();
-        Session::flash('success', 'Tag deleted successfully');
+        Session::flash('success', __('Role deleted successfully'));
         $this->resetPage();
     }
 
     public function roleAdded()
     {
-        Session::flash('success', 'Tag created successfully');
+        Session::flash('success', __('Role created successfully'));
         $this->resetPage();
     }
 
     public function roleUpdated()
     {
-        Session::flash('success', 'Tag updated successfully');
+        Session::flash('success', __('Role updated successfully'));
         $this->resetPage();
     }
 
