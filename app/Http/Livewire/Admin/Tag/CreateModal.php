@@ -29,9 +29,6 @@ class CreateModal extends ModalComponent
             'name' => $this->name
         ]);
 
-
-        //emit event
-        $this->emit('tagAdded');
-        $this->closeModal();
+        $this->closeModalWithEvents(['tagAdded']);
     }
 }
