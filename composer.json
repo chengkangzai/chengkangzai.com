@@ -13,6 +13,7 @@
         "barryvdh/laravel-translation-manager": "^0.5.10",
         "chengkangzai/laravel-apu-schedule": "^1.0.0",
         "fideloper/proxy": "^4.4",
+        "filament/forms": "^2.0",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel-notification-channels/webhook": "^2.2",
