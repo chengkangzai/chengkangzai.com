@@ -12,21 +12,34 @@ use Illuminate\Contracts\View\View;
 use LivewireUI\Modal\ModalComponent;
 use Spatie\Permission\Models\Role;
 
-class CreateModal extends ModalComponent implements HasForms
+class EditModal extends ModalComponent implements HasForms
 {
     use InteractsWithForms;
 
-    public function mount()
+    public $role;
+
+    public function mount($role)
     {
-        $this->fill([
-            'name' => '',
+        $this->role = Role::findOrFail($role);
+
+        $this->form->fill([
+            'name' => $this->role->name,
+            'permissions' => $this->role->permissions->pluck('id')->toArray(),
         ]);
-        $this->form->fill();
     }
 
     public function render(): Factory|View|Application
     {
-        return view('livewire.admin.role.create-modal');
+        return view('livewire.admin.role.edit-modal');
+    }
+
+    public function store()
+    {
+        $formData = $this->form->validate();
+
+        $this->role->syncPermissions($formData['permissions']);
+
+        $this->closeModalWithEvents(['roleUpdated']);
     }
 
     protected function getFormSchema(): array
@@ -43,17 +56,5 @@ class CreateModal extends ModalComponent implements HasForms
     protected function getFormModel(): Role
     {
         return new Role();
-    }
-
-    public function store()
-    {
-        $formData = $this->form->validate();
-        $role = Role::create([
-            'name' => $formData['name'],
-        ]);
-
-        $role->syncPermissions($formData['permissions']);
-
-        $this->closeModalWithEvents(['roleAdded']);
     }
 }

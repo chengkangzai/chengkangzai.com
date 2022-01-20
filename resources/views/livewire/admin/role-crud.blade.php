@@ -16,6 +16,8 @@
     </div>
 
     <div class="flex flex-col mt-8">
+        @include('partial.error-card')
+        @include('partial.success-card')
         <div class="-my-2 py-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
             <div
                 class="align-middle inline-block min-w-full shadow overflow-hidden sm:rounded-lg border-b border-gray-200">
@@ -42,26 +44,26 @@
 
                                     <div class="ml-4">
                                         <div class="text-sm leading-5 font-medium text-gray-900">{{ $role->name }}</div>
+                                        <div class="text-sm leading-5 font-medium text-gray-400">
+                                            {{ $role->users_count }} {{__('User')}}</div>
                                     </div>
                                 </div>
                             </td>
 
                             <td class="px-6 py-4 whitespace-no-wrap text-right border-b border-gray-200 text-sm leading-5 font-medium">
-                                <x-button :href="route('admin.roles.show', $role)" bg="bg-green-600"
-                                          hoverBg="hover:bg-green-500">
-                                    {{ __('View') }}
+                                <button
+                                    wire:click="$emit('openModal', 'admin.role.show-modal', {{ json_encode(["role" => $role->id]) }})"
+                                    class="inline-block py-1 px-3 text-center rounded-md text-white text-sm bg-green-600 hover:bg-green-500">
+                                    {{__('View')}}
+                                </button>
+                                <button
+                                    wire:click="$emit('openModal', 'admin.role.edit-modal', {{ json_encode(["role" => $role->id]) }})"
+                                    class="inline-block py-1 px-3 text-center rounded-md text-white text-sm bg-blue-600 hover:bg-blue-500">
+                                    {{__('Edit')}}
+                                </button>
+                                <x-button wire:click="remove({{$role}})" bg="bg-red-600" hoverBg="hover:bg-red-500">
+                                    {{ __('Delete') }}
                                 </x-button>
-                                <x-button :href="route('admin.roles.edit',$role)">
-                                    {{ __('Edit') }}
-                                </x-button>
-                                <form action="{{route('admin.roles.destroy',$role)}}" class="inline-block p-0 m-0"
-                                      method="POST">
-                                    @csrf
-                                    @method('DELETE')
-                                    <x-input type="submit"
-                                             class="bg-red-600 py-1 px-3 text-white cursor-pointer mt-0 hover:bg-red-500"
-                                             value="{{__('Remove')}}"/>
-                                </form>
                             </td>
                         </tr>
                     @endforeach

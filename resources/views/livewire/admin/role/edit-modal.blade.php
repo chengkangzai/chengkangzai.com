@@ -1,5 +1,5 @@
 <div class="block w-full h-full bg-white space-y-4 mb-10 mt-5">
-    <h2 class="text-2xl px-5 font-bold"> {{__('Create Role')}}</h2>
+    <h2 class="text-2xl px-5 font-bold"> {{__('Edit Role')}}</h2>
     <form class="space-y-3 dark:text-white px-5" wire:submit.prevent="store">
         {{$this->form}}
         <div class="flex justify-end pt-2">
