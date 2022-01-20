@@ -72,7 +72,6 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'web'], 'as' => 'adm
         Route::resource('comment', CommentController::class)->only('index', 'destroy');
 
         Route::get('users/{userId}/restore', [UserController::class, 'restore'])->name('users.restore');
-        Route::post('users/{user}/resetPassword', [UserController::class, 'sendForgetPassword'])->name('users.sendForgetPassword');
         Route::get('users', UserCrud::class)->name('users.index');
         Route::get('permissions', PermissionCrud::class)->name('permissions.index');
         Route::get('roles', RoleCrud::class)->name('roles.index');
