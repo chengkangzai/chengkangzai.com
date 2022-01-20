@@ -21,10 +21,10 @@
                 <td class="py-4 px-6 border-b text-gray-700 text-lg">{{__('Users')}}</td>
                 <td class="py-4 px-6 border-b text-gray-500 space-y-1 space-x-1">
                     @foreach($role->users as $user)
-                        <a href="{{route('admin.users.show', $user)}}"
-                           class="inline-block bg-gray-100 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mt-1">
+                        <span
+                            class="inline-block bg-gray-100 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mt-1">
                             {{$user->name}}
-                        </a>
+                        </span>
                     @endforeach
                 </td>
             </tr>
