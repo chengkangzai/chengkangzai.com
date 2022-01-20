@@ -1,4 +1,4 @@
-<div class="block w-full h-full bg-white space-y-4 mb-10 mt-5">
+<div class="block w-full h-full bg-white space-y-4">
     <div class="bg-white shadow rounded-md overflow-hidden">
         <table class="text-left w-full border-collapse">
             <thead class="border-b">
