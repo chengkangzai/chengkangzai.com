@@ -58,6 +58,5 @@ class DatabaseSeeder extends Seeder
             VaxVaxRegStatesTableSeeder::class,
             VaxVaxStatesTableSeeder::class,
         ]);
-
     }
 }
