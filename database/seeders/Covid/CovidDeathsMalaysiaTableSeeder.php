@@ -21,6 +21,7 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
         \DB::table('deaths_malaysia')->insert(array (
             0 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-03-17',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 0,
@@ -34,9 +35,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 2,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             1 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-03-18',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 0,
@@ -50,9 +53,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             2 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-03-19',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 0,
@@ -66,9 +71,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             3 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-03-20',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 0,
@@ -82,9 +89,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 1,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             4 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-03-21',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 0,
@@ -98,9 +107,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 4,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             5 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-03-22',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 1,
@@ -114,9 +125,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 4,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             6 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-03-23',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 1,
@@ -130,9 +143,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 5,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             7 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-03-24',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 1,
@@ -146,9 +161,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 2,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             8 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-03-25',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 1,
@@ -162,9 +179,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 3,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             9 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-03-26',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 1,
@@ -178,9 +197,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 5,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             10 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-03-27',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 2,
@@ -194,9 +215,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 2,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             11 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-03-28',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 2,
@@ -210,9 +233,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 6,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             12 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-03-29',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 2,
@@ -226,9 +251,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 5,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             13 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-03-30',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 2,
@@ -242,9 +269,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 4,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             14 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-03-31',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 2,
@@ -258,9 +287,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 5,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             15 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-04-01',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 2,
@@ -274,9 +305,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 2,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             16 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-04-02',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 2,
@@ -290,9 +323,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 2,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             17 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-04-03',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 2,
@@ -306,9 +341,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 5,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             18 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-04-04',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 2,
@@ -322,9 +359,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 3,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             19 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-04-05',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 2,
@@ -338,9 +377,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 2,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             20 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-04-06',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 3,
@@ -354,9 +395,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 2,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             21 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-04-07',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 3,
@@ -370,9 +413,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 1,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             22 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-04-08',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 3,
@@ -386,9 +431,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 1,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             23 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-04-09',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 3,
@@ -402,9 +449,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 2,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             24 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-04-10',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 3,
@@ -418,9 +467,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 3,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             25 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-04-11',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 3,
@@ -434,9 +485,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 3,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             26 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-04-12',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 3,
@@ -450,9 +503,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 5,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             27 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-04-13',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 3,
@@ -466,9 +521,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 1,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             28 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-04-14',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 3,
@@ -482,9 +539,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 3,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             29 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-04-15',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 3,
@@ -498,9 +557,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 2,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             30 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-04-16',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 3,
@@ -514,9 +575,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 2,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             31 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-04-17',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 3,
@@ -530,9 +593,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 1,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             32 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-04-18',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 3,
@@ -546,9 +611,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             33 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-04-19',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 3,
@@ -562,9 +629,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 1,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             34 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-04-20',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 3,
@@ -578,9 +647,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 1,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             35 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-04-21',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 3,
@@ -594,9 +665,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 2,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             36 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-04-22',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 3,
@@ -610,9 +683,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 2,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             37 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-04-23',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 3,
@@ -626,9 +701,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 1,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             38 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-04-24',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 3,
@@ -642,9 +719,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 1,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             39 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-04-25',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 3,
@@ -658,9 +737,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 2,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             40 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-04-26',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 3,
@@ -674,9 +755,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             41 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-04-27',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 3,
@@ -690,9 +773,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 1,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             42 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-04-28',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 3,
@@ -706,9 +791,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 1,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             43 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-04-29',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 3,
@@ -722,9 +809,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 1,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             44 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-04-30',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 3,
@@ -738,9 +827,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 2,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             45 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-05-01',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 3,
@@ -754,9 +845,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             46 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-05-02',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 3,
@@ -770,9 +863,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 1,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             47 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-05-03',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 3,
@@ -786,9 +881,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 1,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             48 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-05-04',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 3,
@@ -802,9 +899,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             49 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-05-05',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 3,
@@ -818,9 +917,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 2,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             50 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-05-06',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 3,
@@ -834,9 +935,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             51 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-05-07',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 3,
@@ -850,9 +953,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 1,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             52 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-05-08',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 3,
@@ -866,9 +971,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             53 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-05-09',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 3,
@@ -882,9 +989,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 1,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             54 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-05-10',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 3,
@@ -898,9 +1007,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 1,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             55 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-05-11',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 3,
@@ -914,9 +1025,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             56 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-05-12',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 3,
@@ -930,9 +1043,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 1,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             57 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-05-13',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 4,
@@ -946,9 +1061,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 2,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             58 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-05-14',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 4,
@@ -962,9 +1079,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             59 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-05-15',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 4,
@@ -978,9 +1097,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             60 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-05-16',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 4,
@@ -994,9 +1115,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             61 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-05-17',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 4,
@@ -1010,9 +1133,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             62 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-05-18',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 4,
@@ -1026,9 +1151,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 1,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             63 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-05-19',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 4,
@@ -1042,9 +1169,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             64 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-05-20',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 4,
@@ -1058,9 +1187,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             65 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-05-21',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 4,
@@ -1074,9 +1205,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 1,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             66 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-05-22',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 4,
@@ -1090,9 +1223,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             67 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-05-23',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 4,
@@ -1106,9 +1241,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             68 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-05-24',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 4,
@@ -1122,9 +1259,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             69 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-05-25',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 4,
@@ -1138,9 +1277,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             70 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-05-26',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 4,
@@ -1154,9 +1295,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             71 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-05-27',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 4,
@@ -1170,9 +1313,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             72 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-05-28',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 4,
@@ -1186,9 +1331,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             73 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-05-29',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 4,
@@ -1202,9 +1349,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             74 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-05-30',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 4,
@@ -1218,9 +1367,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             75 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-05-31',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 4,
@@ -1234,9 +1385,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             76 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-06-01',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 4,
@@ -1250,9 +1403,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             77 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-06-02',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 4,
@@ -1266,9 +1421,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             78 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-06-03',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 4,
@@ -1282,9 +1439,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             79 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-06-04',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 4,
@@ -1298,9 +1457,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 1,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             80 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-06-05',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 4,
@@ -1314,9 +1475,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 1,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             81 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-06-06',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 4,
@@ -1330,9 +1493,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             82 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-06-07',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 4,
@@ -1346,9 +1511,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             83 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-06-08',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 4,
@@ -1362,9 +1529,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             84 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-06-09',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 4,
@@ -1378,9 +1547,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             85 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-06-10',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 4,
@@ -1394,9 +1565,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 1,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             86 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-06-11',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 5,
@@ -1410,9 +1583,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 1,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             87 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-06-12',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 6,
@@ -1426,9 +1601,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 2,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             88 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-06-13',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 6,
@@ -1442,9 +1619,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             89 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-06-14',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 6,
@@ -1458,9 +1637,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             90 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-06-15',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 6,
@@ -1474,9 +1655,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             91 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-06-16',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 6,
@@ -1490,9 +1673,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             92 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-06-17',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 6,
@@ -1506,9 +1691,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             93 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-06-18',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 6,
@@ -1522,9 +1709,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             94 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-06-19',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 6,
@@ -1538,9 +1727,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             95 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-06-20',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 6,
@@ -1554,9 +1745,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             96 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-06-21',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 6,
@@ -1570,9 +1763,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             97 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-06-22',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 6,
@@ -1586,9 +1781,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             98 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-06-23',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 6,
@@ -1602,9 +1799,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             99 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-06-24',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 6,
@@ -1618,9 +1817,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             100 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-06-25',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 6,
@@ -1634,9 +1835,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             101 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-06-26',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 6,
@@ -1650,9 +1853,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             102 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-06-27',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 6,
@@ -1666,9 +1871,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             103 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-06-28',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 6,
@@ -1682,9 +1889,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             104 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-06-29',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 6,
@@ -1698,9 +1907,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             105 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-06-30',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 6,
@@ -1714,9 +1925,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             106 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-07-01',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 6,
@@ -1730,9 +1943,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             107 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-07-02',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 6,
@@ -1746,9 +1961,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             108 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-07-03',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 6,
@@ -1762,9 +1979,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             109 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-07-04',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 6,
@@ -1778,9 +1997,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             110 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-07-05',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 6,
@@ -1794,9 +2015,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             111 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-07-06',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 6,
@@ -1810,9 +2033,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             112 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-07-07',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 6,
@@ -1826,9 +2051,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             113 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-07-08',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 6,
@@ -1842,9 +2069,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             114 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-07-09',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 6,
@@ -1858,9 +2087,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             115 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-07-10',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 6,
@@ -1874,9 +2105,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 1,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             116 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-07-11',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 6,
@@ -1890,9 +2123,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             117 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-07-12',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 6,
@@ -1906,9 +2141,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             118 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-07-13',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 6,
@@ -1922,9 +2159,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             119 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-07-14',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 6,
@@ -1938,9 +2177,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             120 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-07-15',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 6,
@@ -1954,9 +2195,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             121 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-07-16',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 6,
@@ -1970,9 +2213,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             122 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-07-17',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 7,
@@ -1986,9 +2231,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 1,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             123 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-07-18',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 7,
@@ -2002,9 +2249,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             124 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-07-19',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 7,
@@ -2018,9 +2267,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             125 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-07-20',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 7,
@@ -2034,9 +2285,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             126 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-07-21',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 7,
@@ -2050,9 +2303,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             127 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-07-22',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 7,
@@ -2066,9 +2321,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             128 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-07-23',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 7,
@@ -2082,9 +2339,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             129 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-07-24',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 7,
@@ -2098,9 +2357,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             130 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-07-25',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 7,
@@ -2114,9 +2375,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             131 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-07-26',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 7,
@@ -2130,9 +2393,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 1,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             132 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-07-27',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 7,
@@ -2146,9 +2411,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             133 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-07-28',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 7,
@@ -2162,9 +2429,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             134 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-07-29',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 8,
@@ -2178,9 +2447,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 1,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             135 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-07-30',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 8,
@@ -2194,9 +2465,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             136 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-07-31',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 8,
@@ -2210,9 +2483,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             137 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-08-01',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 8,
@@ -2226,9 +2501,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             138 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-08-02',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 8,
@@ -2242,9 +2519,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             139 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-08-03',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 8,
@@ -2258,9 +2537,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             140 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-08-04',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 8,
@@ -2274,9 +2555,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             141 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-08-05',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 8,
@@ -2290,9 +2573,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             142 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-08-06',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 8,
@@ -2306,9 +2591,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             143 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-08-07',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 8,
@@ -2322,9 +2609,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             144 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-08-08',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 8,
@@ -2338,9 +2627,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             145 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-08-09',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 8,
@@ -2354,9 +2645,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             146 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-08-10',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 8,
@@ -2370,9 +2663,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 1,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             147 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-08-11',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 8,
@@ -2386,9 +2681,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             148 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-08-12',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 8,
@@ -2402,9 +2699,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             149 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-08-13',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 8,
@@ -2418,9 +2717,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             150 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-08-14',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 8,
@@ -2434,9 +2735,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             151 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-08-15',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 8,
@@ -2450,9 +2753,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             152 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-08-16',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 8,
@@ -2466,9 +2771,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             153 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-08-17',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 8,
@@ -2482,9 +2789,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             154 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-08-18',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 8,
@@ -2498,9 +2807,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             155 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-08-19',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 8,
@@ -2514,9 +2825,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             156 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-08-20',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 8,
@@ -2530,9 +2843,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             157 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-08-21',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 8,
@@ -2546,9 +2861,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             158 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-08-22',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 8,
@@ -2562,9 +2879,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             159 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-08-23',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 8,
@@ -2578,9 +2897,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             160 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-08-24',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 8,
@@ -2594,9 +2915,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             161 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-08-25',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 8,
@@ -2610,9 +2933,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             162 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-08-26',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 8,
@@ -2626,9 +2951,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             163 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-08-27',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 8,
@@ -2642,9 +2969,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             164 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-08-28',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 8,
@@ -2658,9 +2987,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             165 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-08-29',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 8,
@@ -2674,9 +3005,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 1,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             166 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-08-30',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 8,
@@ -2690,9 +3023,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 1,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             167 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-08-31',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 8,
@@ -2706,9 +3041,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             168 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-09-01',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 8,
@@ -2722,9 +3059,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 1,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             169 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-09-02',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 8,
@@ -2738,9 +3077,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             170 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-09-03',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 8,
@@ -2754,9 +3095,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             171 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-09-04',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 8,
@@ -2770,9 +3113,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             172 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-09-05',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 8,
@@ -2786,9 +3131,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             173 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-09-06',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 8,
@@ -2802,9 +3149,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             174 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-09-07',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 8,
@@ -2818,9 +3167,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             175 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-09-08',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 8,
@@ -2834,9 +3185,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             176 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-09-09',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 8,
@@ -2850,9 +3203,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             177 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-09-10',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 8,
@@ -2866,9 +3221,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             178 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-09-11',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 8,
@@ -2882,9 +3239,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             179 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-09-12',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 8,
@@ -2898,9 +3257,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             180 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-09-13',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 8,
@@ -2914,9 +3275,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             181 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-09-14',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 9,
@@ -2930,9 +3293,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 1,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             182 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-09-15',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 9,
@@ -2946,9 +3311,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             183 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-09-16',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 9,
@@ -2962,9 +3329,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             184 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-09-17',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 9,
@@ -2978,9 +3347,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             185 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-09-18',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 9,
@@ -2994,9 +3365,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 1,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             186 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-09-19',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 9,
@@ -3010,9 +3383,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 1,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             187 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-09-20',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 9,
@@ -3026,9 +3401,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             188 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-09-21',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 9,
@@ -3042,9 +3419,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             189 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-09-22',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 9,
@@ -3058,9 +3437,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 1,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             190 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-09-23',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 9,
@@ -3074,9 +3455,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 2,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             191 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-09-24',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 9,
@@ -3090,9 +3473,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             192 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-09-25',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 9,
@@ -3106,9 +3491,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             193 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-09-26',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 10,
@@ -3122,9 +3509,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 1,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             194 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-09-27',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 10,
@@ -3138,9 +3527,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 1,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             195 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-09-28',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 10,
@@ -3154,9 +3545,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 1,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             196 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-09-29',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 10,
@@ -3170,9 +3563,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             197 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-09-30',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 10,
@@ -3186,9 +3581,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             198 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-10-01',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 10,
@@ -3202,9 +3599,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             199 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-10-02',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 10,
@@ -3218,9 +3617,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 3,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             200 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-10-03',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 10,
@@ -3234,9 +3635,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 1,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             201 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-10-04',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 10,
@@ -3250,9 +3653,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 2,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             202 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-10-05',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 11,
@@ -3266,9 +3671,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 3,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             203 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-10-06',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 12,
@@ -3282,9 +3689,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 1,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             204 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-10-07',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 13,
@@ -3298,9 +3707,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 3,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             205 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-10-08',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 14,
@@ -3314,9 +3725,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 5,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             206 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-10-09',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 15,
@@ -3330,9 +3743,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 4,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             207 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-10-10',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 16,
@@ -3346,9 +3761,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 3,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             208 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-10-11',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 17,
@@ -3362,9 +3779,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 3,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             209 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-10-12',
                 'deaths_bid' => 3,
                 'deaths_bid_cumulative' => 20,
@@ -3378,9 +3797,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 3,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             210 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-10-13',
                 'deaths_bid' => 3,
                 'deaths_bid_cumulative' => 23,
@@ -3394,9 +3815,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 4,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             211 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-10-14',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 24,
@@ -3410,9 +3833,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 4,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             212 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-10-15',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 25,
@@ -3426,9 +3851,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 3,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             213 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-10-16',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 26,
@@ -3442,9 +3869,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 6,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             214 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-10-17',
                 'deaths_bid' => 3,
                 'deaths_bid_cumulative' => 29,
@@ -3458,9 +3887,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 6,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             215 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-10-18',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 29,
@@ -3474,9 +3905,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 2,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             216 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-10-19',
                 'deaths_bid' => 3,
                 'deaths_bid_cumulative' => 32,
@@ -3490,9 +3923,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 7,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             217 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-10-20',
                 'deaths_bid' => 3,
                 'deaths_bid_cumulative' => 35,
@@ -3506,9 +3941,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 4,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             218 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-10-21',
                 'deaths_bid' => 4,
                 'deaths_bid_cumulative' => 39,
@@ -3522,9 +3959,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 7,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             219 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-10-22',
                 'deaths_bid' => 4,
                 'deaths_bid_cumulative' => 43,
@@ -3538,9 +3977,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 11,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             220 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-10-23',
                 'deaths_bid' => 5,
                 'deaths_bid_cumulative' => 48,
@@ -3554,9 +3995,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 9,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             221 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-10-24',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 48,
@@ -3570,9 +4013,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 3,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             222 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-10-25',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 48,
@@ -3586,9 +4031,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 6,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             223 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-10-26',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 49,
@@ -3602,9 +4049,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 2,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             224 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-10-27',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 50,
@@ -3618,9 +4067,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 2,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             225 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-10-28',
                 'deaths_bid' => 4,
                 'deaths_bid_cumulative' => 54,
@@ -3634,9 +4085,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 10,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             226 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-10-29',
                 'deaths_bid' => 3,
                 'deaths_bid_cumulative' => 57,
@@ -3650,9 +4103,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 4,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             227 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-10-30',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 58,
@@ -3666,9 +4121,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 3,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             228 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-10-31',
                 'deaths_bid' => 3,
                 'deaths_bid_cumulative' => 61,
@@ -3682,9 +4139,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 5,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             229 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-11-01',
                 'deaths_bid' => 3,
                 'deaths_bid_cumulative' => 64,
@@ -3698,9 +4157,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 4,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             230 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-11-02',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 65,
@@ -3714,9 +4175,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 5,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             231 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-11-03',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 65,
@@ -3730,9 +4193,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 8,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             232 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-11-04',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 65,
@@ -3746,9 +4211,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 7,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             233 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-11-05',
                 'deaths_bid' => 4,
                 'deaths_bid_cumulative' => 69,
@@ -3762,9 +4229,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 6,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             234 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-11-06',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 70,
@@ -3778,9 +4247,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 4,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             235 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-11-07',
                 'deaths_bid' => 2,
                 'deaths_bid_cumulative' => 72,
@@ -3794,9 +4265,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 2,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             236 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-11-08',
                 'deaths_bid' => 2,
                 'deaths_bid_cumulative' => 74,
@@ -3810,9 +4283,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 1,
                 'deaths_unvax' => 4,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             237 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-11-09',
                 'deaths_bid' => 5,
                 'deaths_bid_cumulative' => 79,
@@ -3826,9 +4301,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 1,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             238 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-11-10',
                 'deaths_bid' => 5,
                 'deaths_bid_cumulative' => 84,
@@ -3842,9 +4319,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 5,
                 'deaths_unvax' => 2,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             239 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-11-11',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 85,
@@ -3858,9 +4337,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 2,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             240 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-11-12',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 86,
@@ -3874,9 +4355,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             241 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-11-13',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 87,
@@ -3890,9 +4373,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 3,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             242 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-11-14',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 88,
@@ -3906,9 +4391,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 9,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             243 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-11-15',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 89,
@@ -3922,9 +4409,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 1,
                 'deaths_unvax' => 3,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             244 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-11-16',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 89,
@@ -3938,9 +4427,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 3,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             245 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-11-17',
                 'deaths_bid' => 3,
                 'deaths_bid_cumulative' => 92,
@@ -3954,9 +4445,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 3,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             246 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-11-18',
                 'deaths_bid' => 2,
                 'deaths_bid_cumulative' => 94,
@@ -3970,9 +4463,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 5,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             247 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-11-19',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 95,
@@ -3986,9 +4481,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 1,
                 'deaths_unvax' => 4,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             248 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-11-20',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 96,
@@ -4002,9 +4499,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 3,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             249 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-11-21',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 97,
@@ -4018,9 +4517,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 4,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             250 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-11-22',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 98,
@@ -4034,9 +4535,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 1,
                 'deaths_unvax' => 4,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             251 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-11-23',
                 'deaths_bid' => 2,
                 'deaths_bid_cumulative' => 100,
@@ -4050,9 +4553,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 4,
                 'deaths_unvax' => 4,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             252 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-11-24',
                 'deaths_bid' => 2,
                 'deaths_bid_cumulative' => 102,
@@ -4066,9 +4571,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 8,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             253 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-11-25',
                 'deaths_bid' => 3,
                 'deaths_bid_cumulative' => 105,
@@ -4082,9 +4589,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 4,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             254 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-11-26',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 106,
@@ -4098,9 +4607,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 3,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             255 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-11-27',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 107,
@@ -4114,9 +4625,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 4,
                 'deaths_unvax' => 2,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             256 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-11-28',
                 'deaths_bid' => 3,
                 'deaths_bid_cumulative' => 110,
@@ -4130,9 +4643,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 4,
                 'deaths_unvax' => 5,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             257 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-11-29',
                 'deaths_bid' => 2,
                 'deaths_bid_cumulative' => 112,
@@ -4146,9 +4661,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 6,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             258 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-11-30',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 112,
@@ -4162,9 +4679,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 6,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             259 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-12-01',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 112,
@@ -4178,9 +4697,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             260 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-12-02',
                 'deaths_bid' => 2,
                 'deaths_bid_cumulative' => 114,
@@ -4194,9 +4715,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 4,
                 'deaths_unvax' => 6,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             261 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-12-03',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 115,
@@ -4210,9 +4733,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 1,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             262 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-12-04',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 115,
@@ -4226,9 +4751,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 1,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             263 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-12-05',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 116,
@@ -4242,9 +4769,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 1,
                 'deaths_unvax' => 4,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             264 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-12-06',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 116,
@@ -4258,9 +4787,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 2,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             265 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-12-07',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 116,
@@ -4274,9 +4805,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 10,
                 'deaths_unvax' => 4,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             266 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-12-08',
                 'deaths_bid' => 2,
                 'deaths_bid_cumulative' => 118,
@@ -4290,9 +4823,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 6,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             267 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-12-09',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 118,
@@ -4306,9 +4841,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 1,
                 'deaths_unvax' => 3,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             268 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-12-10',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 119,
@@ -4322,9 +4859,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 8,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             269 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-12-11',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 120,
@@ -4338,9 +4877,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 1,
                 'deaths_unvax' => 6,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             270 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-12-12',
                 'deaths_bid' => 2,
                 'deaths_bid_cumulative' => 122,
@@ -4354,9 +4895,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 7,
                 'deaths_unvax' => 6,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             271 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-12-13',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 122,
@@ -4370,9 +4913,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 1,
                 'deaths_unvax' => 2,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             272 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-12-14',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 123,
@@ -4386,9 +4931,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 8,
                 'deaths_unvax' => 1,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             273 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-12-15',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 123,
@@ -4402,9 +4949,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 4,
                 'deaths_unvax' => 5,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             274 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-12-16',
                 'deaths_bid' => 2,
                 'deaths_bid_cumulative' => 125,
@@ -4418,9 +4967,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 1,
                 'deaths_unvax' => 3,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             275 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-12-17',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 126,
@@ -4434,9 +4985,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 1,
                 'deaths_unvax' => 4,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             276 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-12-18',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 126,
@@ -4450,9 +5003,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 2,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             277 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-12-19',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 126,
@@ -4466,9 +5021,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 1,
                 'deaths_unvax' => 4,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             278 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-12-20',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 127,
@@ -4482,9 +5039,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 4,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             279 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-12-21',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 127,
@@ -4498,9 +5057,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 11,
                 'deaths_unvax' => 2,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             280 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-12-22',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 128,
@@ -4514,9 +5075,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 14,
                 'deaths_unvax' => 5,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             281 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-12-23',
                 'deaths_bid' => 2,
                 'deaths_bid_cumulative' => 130,
@@ -4530,9 +5093,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 3,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             282 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-12-24',
                 'deaths_bid' => 2,
                 'deaths_bid_cumulative' => 132,
@@ -4546,9 +5111,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 26,
                 'deaths_unvax' => 10,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             283 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-12-25',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 133,
@@ -4562,9 +5129,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 4,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             284 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-12-26',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 134,
@@ -4578,9 +5147,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 8,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             285 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-12-27',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 135,
@@ -4594,9 +5165,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 6,
                 'deaths_unvax' => 1,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             286 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-12-28',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 135,
@@ -4610,9 +5183,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 6,
                 'deaths_unvax' => 9,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             287 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-12-29',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 135,
@@ -4626,9 +5201,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 1,
                 'deaths_unvax' => 3,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             288 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-12-30',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 136,
@@ -4642,9 +5219,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 9,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             289 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2020-12-31',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 136,
@@ -4658,9 +5237,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 5,
                 'deaths_unvax' => 7,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             290 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-01-01',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 136,
@@ -4674,9 +5255,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 12,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             291 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-01-02',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 137,
@@ -4690,9 +5273,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 9,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             292 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-01-03',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 138,
@@ -4706,9 +5291,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 4,
                 'deaths_unvax' => 8,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             293 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-01-04',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 138,
@@ -4722,9 +5309,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 10,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             294 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-01-05',
                 'deaths_bid' => 3,
                 'deaths_bid_cumulative' => 141,
@@ -4738,9 +5327,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 4,
                 'deaths_unvax' => 10,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             295 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-01-06',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 142,
@@ -4754,9 +5345,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 6,
                 'deaths_unvax' => 17,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             296 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-01-07',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 143,
@@ -4770,9 +5363,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 6,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             297 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-01-08',
                 'deaths_bid' => 3,
                 'deaths_bid_cumulative' => 146,
@@ -4786,9 +5381,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 12,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             298 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-01-09',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 146,
@@ -4802,9 +5399,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 8,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             299 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-01-10',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 147,
@@ -4818,9 +5417,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 6,
                 'deaths_unvax' => 12,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             300 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-01-11',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 148,
@@ -4834,9 +5435,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 3,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             301 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-01-12',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 148,
@@ -4850,9 +5453,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 10,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             302 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-01-13',
                 'deaths_bid' => 2,
                 'deaths_bid_cumulative' => 150,
@@ -4866,9 +5471,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 5,
                 'deaths_unvax' => 9,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             303 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-01-14',
                 'deaths_bid' => 2,
                 'deaths_bid_cumulative' => 152,
@@ -4882,9 +5489,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 5,
                 'deaths_unvax' => 13,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             304 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-01-15',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 152,
@@ -4898,9 +5507,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 14,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             305 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-01-16',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 153,
@@ -4914,9 +5525,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 15,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             306 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-01-17',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 154,
@@ -4930,9 +5543,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 1,
                 'deaths_unvax' => 11,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             307 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-01-18',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 154,
@@ -4946,9 +5561,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 16,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             308 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-01-19',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 155,
@@ -4962,9 +5579,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 10,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             309 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-01-20',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 156,
@@ -4978,9 +5597,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 4,
                 'deaths_unvax' => 20,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             310 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-01-21',
                 'deaths_bid' => 2,
                 'deaths_bid_cumulative' => 158,
@@ -4994,9 +5615,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 15,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             311 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-01-22',
                 'deaths_bid' => 4,
                 'deaths_bid_cumulative' => 162,
@@ -5010,9 +5633,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 16,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             312 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-01-23',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 162,
@@ -5026,9 +5651,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 1,
                 'deaths_unvax' => 15,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             313 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-01-24',
                 'deaths_bid' => 2,
                 'deaths_bid_cumulative' => 164,
@@ -5042,9 +5669,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 11,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             314 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-01-25',
                 'deaths_bid' => 3,
                 'deaths_bid_cumulative' => 167,
@@ -5058,9 +5687,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 16,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             315 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-01-26',
                 'deaths_bid' => 2,
                 'deaths_bid_cumulative' => 169,
@@ -5074,9 +5705,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 4,
                 'deaths_unvax' => 20,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             316 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-01-27',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 169,
@@ -5090,9 +5723,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 16,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             317 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-01-28',
                 'deaths_bid' => 2,
                 'deaths_bid_cumulative' => 171,
@@ -5106,9 +5741,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 13,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             318 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-01-29',
                 'deaths_bid' => 5,
                 'deaths_bid_cumulative' => 176,
@@ -5122,9 +5759,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 4,
                 'deaths_unvax' => 19,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             319 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-01-30',
                 'deaths_bid' => 3,
                 'deaths_bid_cumulative' => 179,
@@ -5138,9 +5777,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 13,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             320 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-01-31',
                 'deaths_bid' => 2,
                 'deaths_bid_cumulative' => 181,
@@ -5154,9 +5795,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 5,
                 'deaths_unvax' => 18,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             321 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-02-01',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 181,
@@ -5170,9 +5813,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 1,
                 'deaths_unvax' => 15,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             322 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-02-02',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 181,
@@ -5186,9 +5831,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 14,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             323 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-02-03',
                 'deaths_bid' => 4,
                 'deaths_bid_cumulative' => 185,
@@ -5202,9 +5849,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 20,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             324 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-02-04',
                 'deaths_bid' => 3,
                 'deaths_bid_cumulative' => 188,
@@ -5218,9 +5867,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 22,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             325 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-02-05',
                 'deaths_bid' => 2,
                 'deaths_bid_cumulative' => 190,
@@ -5234,9 +5885,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 8,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             326 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-02-06',
                 'deaths_bid' => 3,
                 'deaths_bid_cumulative' => 193,
@@ -5250,9 +5903,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 16,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             327 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-02-07',
                 'deaths_bid' => 3,
                 'deaths_bid_cumulative' => 196,
@@ -5266,9 +5921,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 1,
                 'deaths_unvax' => 12,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             328 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-02-08',
                 'deaths_bid' => 6,
                 'deaths_bid_cumulative' => 202,
@@ -5282,9 +5939,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 23,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             329 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-02-09',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 202,
@@ -5298,9 +5957,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 1,
                 'deaths_unvax' => 13,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             330 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-02-10',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 202,
@@ -5314,9 +5975,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 11,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             331 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-02-11',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 202,
@@ -5330,9 +5993,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 13,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             332 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-02-12',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 203,
@@ -5346,9 +6011,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 1,
                 'deaths_unvax' => 6,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             333 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-02-13',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 204,
@@ -5362,9 +6029,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 15,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             334 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-02-14',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 204,
@@ -5378,9 +6047,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 1,
                 'deaths_unvax' => 9,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             335 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-02-15',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 204,
@@ -5394,9 +6065,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 5,
                 'deaths_unvax' => 14,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             336 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-02-16',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 205,
@@ -5410,9 +6083,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 1,
                 'deaths_unvax' => 13,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             337 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-02-17',
                 'deaths_bid' => 2,
                 'deaths_bid_cumulative' => 207,
@@ -5426,9 +6101,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 7,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             338 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-02-18',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 207,
@@ -5442,9 +6119,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 14,
                 'deaths_unvax' => 7,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             339 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-02-19',
                 'deaths_bid' => 7,
                 'deaths_bid_cumulative' => 214,
@@ -5458,9 +6137,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 10,
                 'deaths_unvax' => 9,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             340 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-02-20',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 215,
@@ -5474,9 +6155,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 1,
                 'deaths_unvax' => 8,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             341 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-02-21',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 216,
@@ -5490,9 +6173,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 5,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             342 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-02-22',
                 'deaths_bid' => 2,
                 'deaths_bid_cumulative' => 218,
@@ -5506,9 +6191,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 10,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             343 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-02-23',
                 'deaths_bid' => 6,
                 'deaths_bid_cumulative' => 224,
@@ -5522,9 +6209,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 4,
                 'deaths_unvax' => 10,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             344 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-02-24',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 225,
@@ -5538,9 +6227,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 7,
                 'deaths_unvax' => 5,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             345 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-02-25',
                 'deaths_bid' => 2,
                 'deaths_bid_cumulative' => 227,
@@ -5554,9 +6245,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 32,
                 'deaths_unvax' => 6,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             346 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-02-26',
                 'deaths_bid' => 5,
                 'deaths_bid_cumulative' => 232,
@@ -5570,9 +6263,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 28,
                 'deaths_unvax' => 3,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             347 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-02-27',
                 'deaths_bid' => 2,
                 'deaths_bid_cumulative' => 234,
@@ -5586,9 +6281,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 4,
                 'deaths_unvax' => 10,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             348 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-02-28',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 234,
@@ -5602,9 +6299,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 5,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             349 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-03-01',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 234,
@@ -5618,9 +6317,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 11,
                 'deaths_unvax' => 4,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             350 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-03-02',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 235,
@@ -5634,9 +6335,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 9,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             351 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-03-03',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 235,
@@ -5650,9 +6353,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 4,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             352 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-03-04',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 235,
@@ -5666,9 +6371,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 3,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             353 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-03-05',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 236,
@@ -5682,9 +6389,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 21,
                 'deaths_unvax' => 8,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             354 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-03-06',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 236,
@@ -5698,9 +6407,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 1,
                 'deaths_unvax' => 4,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             355 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-03-07',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 236,
@@ -5714,9 +6425,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 11,
                 'deaths_unvax' => 5,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             356 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-03-08',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 237,
@@ -5730,9 +6443,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 6,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             357 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-03-09',
                 'deaths_bid' => 2,
                 'deaths_bid_cumulative' => 239,
@@ -5746,9 +6461,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 4,
                 'deaths_unvax' => 8,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             358 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-03-10',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 239,
@@ -5762,9 +6479,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 1,
                 'deaths_unvax' => 7,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             359 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-03-11',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 240,
@@ -5778,9 +6497,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 4,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             360 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-03-12',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 241,
@@ -5794,9 +6515,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 3,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             361 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-03-13',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 241,
@@ -5810,9 +6533,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 3,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             362 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-03-14',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 241,
@@ -5826,9 +6551,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 4,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             363 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-03-15',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 241,
@@ -5842,9 +6569,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 4,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             364 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-03-16',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 241,
@@ -5858,9 +6587,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 1,
                 'deaths_unvax' => 3,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             365 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-03-17',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 241,
@@ -5874,9 +6605,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 2,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             366 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-03-18',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 241,
@@ -5890,9 +6623,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 1,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             367 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-03-19',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 241,
@@ -5906,9 +6641,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 7,
                 'deaths_unvax' => 1,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             368 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-03-20',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 241,
@@ -5922,9 +6659,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 15,
                 'deaths_unvax' => 5,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             369 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-03-21',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 241,
@@ -5938,9 +6677,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 15,
                 'deaths_unvax' => 5,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             370 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-03-22',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 242,
@@ -5954,9 +6695,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 1,
                 'deaths_unvax' => 2,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             371 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-03-23',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 242,
@@ -5970,9 +6713,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 1,
                 'deaths_unvax' => 2,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             372 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-03-24',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 242,
@@ -5986,9 +6731,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 4,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             373 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-03-25',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 242,
@@ -6002,9 +6749,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 0,
                 'deaths_unvax' => 2,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             374 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-03-26',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 242,
@@ -6018,9 +6767,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 5,
                 'deaths_unvax' => 1,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             375 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-03-27',
                 'deaths_bid' => 2,
                 'deaths_bid_cumulative' => 244,
@@ -6034,9 +6785,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 5,
                 'deaths_unvax' => 8,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             376 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-03-28',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 244,
@@ -6050,9 +6803,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 1,
                 'deaths_tat' => 1,
                 'deaths_unvax' => 3,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             377 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-03-29',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 244,
@@ -6066,9 +6821,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 4,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             378 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-03-30',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 244,
@@ -6082,9 +6839,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 6,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             379 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-03-31',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 245,
@@ -6098,9 +6857,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 9,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             380 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-04-01',
                 'deaths_bid' => 2,
                 'deaths_bid_cumulative' => 247,
@@ -6114,9 +6875,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 1,
                 'deaths_unvax' => 3,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             381 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-04-02',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 248,
@@ -6130,9 +6893,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 2,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             382 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-04-03',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 249,
@@ -6146,9 +6911,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 5,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             383 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-04-04',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 249,
@@ -6162,9 +6929,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 1,
                 'deaths_unvax' => 6,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             384 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-04-05',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 249,
@@ -6178,9 +6947,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 4,
                 'deaths_unvax' => 4,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             385 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-04-06',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 249,
@@ -6194,9 +6965,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 3,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             386 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-04-07',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 249,
@@ -6210,9 +6983,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 1,
                 'deaths_unvax' => 2,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             387 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-04-08',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 249,
@@ -6226,9 +7001,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 6,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             388 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-04-09',
                 'deaths_bid' => 2,
                 'deaths_bid_cumulative' => 251,
@@ -6242,9 +7019,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 13,
                 'deaths_unvax' => 7,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             389 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-04-10',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 251,
@@ -6258,9 +7037,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 3,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             390 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-04-11',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 252,
@@ -6274,9 +7055,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 36,
                 'deaths_unvax' => 6,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             391 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-04-12',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 253,
@@ -6290,9 +7073,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 1,
                 'deaths_unvax' => 11,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             392 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-04-13',
                 'deaths_bid' => 5,
                 'deaths_bid_cumulative' => 258,
@@ -6306,9 +7091,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 5,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             393 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-04-14',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 258,
@@ -6322,9 +7109,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 1,
                 'deaths_unvax' => 5,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             394 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-04-15',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 259,
@@ -6338,9 +7127,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 1,
                 'deaths_unvax' => 4,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             395 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-04-16',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 259,
@@ -6354,9 +7145,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 49,
                 'deaths_unvax' => 6,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             396 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-04-17',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 259,
@@ -6370,9 +7163,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 4,
                 'deaths_unvax' => 11,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             397 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-04-18',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 259,
@@ -6386,9 +7181,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 8,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             398 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-04-19',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 259,
@@ -6402,9 +7199,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 1,
                 'deaths_unvax' => 10,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             399 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-04-20',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 259,
@@ -6418,9 +7217,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 1,
                 'deaths_unvax' => 10,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             400 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-04-21',
                 'deaths_bid' => 3,
                 'deaths_bid_cumulative' => 262,
@@ -6434,9 +7235,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 9,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             401 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-04-22',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 262,
@@ -6450,9 +7253,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 6,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             402 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-04-23',
                 'deaths_bid' => 3,
                 'deaths_bid_cumulative' => 265,
@@ -6466,9 +7271,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 15,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             403 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-04-24',
                 'deaths_bid' => 2,
                 'deaths_bid_cumulative' => 267,
@@ -6482,9 +7289,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 8,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             404 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-04-25',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 267,
@@ -6498,9 +7307,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 21,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             405 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-04-26',
                 'deaths_bid' => 2,
                 'deaths_bid_cumulative' => 269,
@@ -6514,9 +7325,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 1,
                 'deaths_unvax' => 14,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             406 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-04-27',
                 'deaths_bid' => 2,
                 'deaths_bid_cumulative' => 271,
@@ -6530,9 +7343,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 11,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             407 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-04-28',
                 'deaths_bid' => 3,
                 'deaths_bid_cumulative' => 274,
@@ -6546,9 +7361,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 14,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             408 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-04-29',
                 'deaths_bid' => 3,
                 'deaths_bid_cumulative' => 277,
@@ -6562,9 +7379,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 22,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             409 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-04-30',
                 'deaths_bid' => 3,
                 'deaths_bid_cumulative' => 280,
@@ -6578,9 +7397,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 1,
                 'deaths_unvax' => 21,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             410 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-05-01',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 280,
@@ -6594,9 +7415,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 16,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             411 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-05-02',
                 'deaths_bid' => 2,
                 'deaths_bid_cumulative' => 282,
@@ -6610,9 +7433,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 1,
                 'deaths_unvax' => 20,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             412 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-05-03',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 282,
@@ -6626,9 +7451,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 2,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 21,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             413 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-05-04',
                 'deaths_bid' => 2,
                 'deaths_bid_cumulative' => 284,
@@ -6642,9 +7469,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 14,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             414 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-05-05',
                 'deaths_bid' => 2,
                 'deaths_bid_cumulative' => 286,
@@ -6658,9 +7487,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 1,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 30,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             415 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-05-06',
                 'deaths_bid' => 4,
                 'deaths_bid_cumulative' => 290,
@@ -6674,9 +7505,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 1,
                 'deaths_tat' => 1,
                 'deaths_unvax' => 27,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             416 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-05-07',
                 'deaths_bid' => 3,
                 'deaths_bid_cumulative' => 293,
@@ -6690,9 +7523,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 1,
                 'deaths_unvax' => 31,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             417 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-05-08',
                 'deaths_bid' => 4,
                 'deaths_bid_cumulative' => 297,
@@ -6706,9 +7541,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 2,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 27,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             418 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-05-09',
                 'deaths_bid' => 4,
                 'deaths_bid_cumulative' => 301,
@@ -6722,9 +7559,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 21,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             419 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-05-10',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 301,
@@ -6738,9 +7577,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 1,
                 'deaths_tat' => 1,
                 'deaths_unvax' => 34,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             420 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-05-11',
                 'deaths_bid' => 2,
                 'deaths_bid_cumulative' => 303,
@@ -6754,9 +7595,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 44,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             421 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-05-12',
                 'deaths_bid' => 3,
                 'deaths_bid_cumulative' => 306,
@@ -6770,9 +7613,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 1,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 49,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             422 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-05-13',
                 'deaths_bid' => 3,
                 'deaths_bid_cumulative' => 309,
@@ -6786,9 +7631,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 2,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 36,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             423 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-05-14',
                 'deaths_bid' => 2,
                 'deaths_bid_cumulative' => 311,
@@ -6802,9 +7649,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 1,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 44,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             424 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-05-15',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 311,
@@ -6818,9 +7667,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 2,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 46,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             425 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-05-16',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 312,
@@ -6834,9 +7685,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 4,
                 'deaths_tat' => 1,
                 'deaths_unvax' => 40,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             426 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-05-17',
                 'deaths_bid' => 3,
                 'deaths_bid_cumulative' => 315,
@@ -6850,9 +7703,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 3,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 48,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             427 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-05-18',
                 'deaths_bid' => 8,
                 'deaths_bid_cumulative' => 323,
@@ -6866,9 +7721,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 4,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 54,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             428 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-05-19',
                 'deaths_bid' => 5,
                 'deaths_bid_cumulative' => 328,
@@ -6882,9 +7739,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 3,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 50,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             429 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-05-20',
                 'deaths_bid' => 7,
                 'deaths_bid_cumulative' => 335,
@@ -6898,9 +7757,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 2,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 44,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             430 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-05-21',
                 'deaths_bid' => 3,
                 'deaths_bid_cumulative' => 338,
@@ -6914,9 +7775,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 1,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 60,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             431 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-05-22',
                 'deaths_bid' => 10,
                 'deaths_bid_cumulative' => 348,
@@ -6930,9 +7793,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 4,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 81,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             432 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-05-23',
                 'deaths_bid' => 6,
                 'deaths_bid_cumulative' => 354,
@@ -6946,9 +7811,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 4,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 65,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             433 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-05-24',
                 'deaths_bid' => 5,
                 'deaths_bid_cumulative' => 359,
@@ -6962,9 +7829,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 3,
                 'deaths_tat' => 1,
                 'deaths_unvax' => 63,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             434 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-05-25',
                 'deaths_bid' => 4,
                 'deaths_bid_cumulative' => 363,
@@ -6978,9 +7847,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 3,
                 'deaths_tat' => 1,
                 'deaths_unvax' => 71,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             435 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-05-26',
                 'deaths_bid' => 8,
                 'deaths_bid_cumulative' => 371,
@@ -6994,9 +7865,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 7,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 84,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             436 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-05-27',
                 'deaths_bid' => 3,
                 'deaths_bid_cumulative' => 374,
@@ -7010,9 +7883,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 6,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 57,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             437 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-05-28',
                 'deaths_bid' => 3,
                 'deaths_bid_cumulative' => 377,
@@ -7026,9 +7901,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 3,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 102,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             438 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-05-29',
                 'deaths_bid' => 9,
                 'deaths_bid_cumulative' => 386,
@@ -7042,9 +7919,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 1,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 74,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             439 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-05-30',
                 'deaths_bid' => 8,
                 'deaths_bid_cumulative' => 394,
@@ -7058,9 +7937,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 6,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 103,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             440 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-05-31',
                 'deaths_bid' => 8,
                 'deaths_bid_cumulative' => 402,
@@ -7074,9 +7955,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 7,
                 'deaths_tat' => 1,
                 'deaths_unvax' => 90,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             441 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-06-01',
                 'deaths_bid' => 5,
                 'deaths_bid_cumulative' => 407,
@@ -7090,9 +7973,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 8,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 86,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             442 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-06-02',
                 'deaths_bid' => 10,
                 'deaths_bid_cumulative' => 417,
@@ -7106,9 +7991,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 2,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 85,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             443 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-06-03',
                 'deaths_bid' => 9,
                 'deaths_bid_cumulative' => 426,
@@ -7122,9 +8009,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 3,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 107,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             444 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-06-04',
                 'deaths_bid' => 7,
                 'deaths_bid_cumulative' => 433,
@@ -7138,9 +8027,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 3,
                 'deaths_tat' => 1,
                 'deaths_unvax' => 80,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             445 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-06-05',
                 'deaths_bid' => 9,
                 'deaths_bid_cumulative' => 442,
@@ -7154,9 +8045,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 7,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 83,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             446 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-06-06',
                 'deaths_bid' => 6,
                 'deaths_bid_cumulative' => 448,
@@ -7170,9 +8063,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 4,
                 'deaths_tat' => 1,
                 'deaths_unvax' => 75,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             447 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-06-07',
                 'deaths_bid' => 6,
                 'deaths_bid_cumulative' => 454,
@@ -7186,9 +8081,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 2,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 81,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             448 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-06-08',
                 'deaths_bid' => 5,
                 'deaths_bid_cumulative' => 459,
@@ -7202,9 +8099,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 2,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 71,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             449 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-06-09',
                 'deaths_bid' => 11,
                 'deaths_bid_cumulative' => 470,
@@ -7218,9 +8117,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 5,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 88,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             450 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-06-10',
                 'deaths_bid' => 6,
                 'deaths_bid_cumulative' => 476,
@@ -7234,9 +8135,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 7,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 61,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             451 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-06-11',
                 'deaths_bid' => 16,
                 'deaths_bid_cumulative' => 492,
@@ -7250,9 +8153,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 5,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 61,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             452 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-06-12',
                 'deaths_bid' => 5,
                 'deaths_bid_cumulative' => 497,
@@ -7266,9 +8171,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 4,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 79,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             453 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-06-13',
                 'deaths_bid' => 6,
                 'deaths_bid_cumulative' => 503,
@@ -7282,9 +8189,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 5,
                 'deaths_tat' => 1,
                 'deaths_unvax' => 67,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             454 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-06-14',
                 'deaths_bid' => 3,
                 'deaths_bid_cumulative' => 506,
@@ -7298,9 +8207,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 5,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 86,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             455 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-06-15',
                 'deaths_bid' => 9,
                 'deaths_bid_cumulative' => 515,
@@ -7314,9 +8225,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 5,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 74,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             456 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-06-16',
                 'deaths_bid' => 9,
                 'deaths_bid_cumulative' => 524,
@@ -7330,9 +8243,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 5,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 76,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             457 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-06-17',
                 'deaths_bid' => 2,
                 'deaths_bid_cumulative' => 526,
@@ -7346,9 +8261,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 5,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 76,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             458 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-06-18',
                 'deaths_bid' => 6,
                 'deaths_bid_cumulative' => 532,
@@ -7362,9 +8279,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 8,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 73,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             459 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-06-19',
                 'deaths_bid' => 11,
                 'deaths_bid_cumulative' => 543,
@@ -7378,9 +8297,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 4,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 63,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             460 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-06-20',
                 'deaths_bid' => 7,
                 'deaths_bid_cumulative' => 550,
@@ -7394,9 +8315,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 11,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 64,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             461 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-06-21',
                 'deaths_bid' => 5,
                 'deaths_bid_cumulative' => 555,
@@ -7410,9 +8333,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 9,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 72,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             462 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-06-22',
                 'deaths_bid' => 11,
                 'deaths_bid_cumulative' => 566,
@@ -7426,9 +8351,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 10,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 78,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             463 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-06-23',
                 'deaths_bid' => 10,
                 'deaths_bid_cumulative' => 576,
@@ -7442,9 +8369,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 12,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 72,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             464 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-06-24',
                 'deaths_bid' => 11,
                 'deaths_bid_cumulative' => 587,
@@ -7458,9 +8387,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 11,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 70,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             465 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-06-25',
                 'deaths_bid' => 17,
                 'deaths_bid_cumulative' => 604,
@@ -7474,9 +8405,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 12,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 66,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             466 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-06-26',
                 'deaths_bid' => 10,
                 'deaths_bid_cumulative' => 614,
@@ -7490,9 +8423,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 13,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 75,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             467 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-06-27',
                 'deaths_bid' => 9,
                 'deaths_bid_cumulative' => 623,
@@ -7506,9 +8441,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 15,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 56,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             468 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-06-28',
                 'deaths_bid' => 4,
                 'deaths_bid_cumulative' => 627,
@@ -7522,9 +8459,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 10,
                 'deaths_tat' => 1,
                 'deaths_unvax' => 80,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             469 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-06-29',
                 'deaths_bid' => 14,
                 'deaths_bid_cumulative' => 641,
@@ -7538,9 +8477,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 16,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 74,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             470 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-06-30',
                 'deaths_bid' => 7,
                 'deaths_bid_cumulative' => 648,
@@ -7554,9 +8495,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 22,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 88,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             471 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-07-01',
                 'deaths_bid' => 9,
                 'deaths_bid_cumulative' => 657,
@@ -7570,9 +8513,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 12,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 85,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             472 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-07-02',
                 'deaths_bid' => 13,
                 'deaths_bid_cumulative' => 670,
@@ -7586,9 +8531,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 11,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 94,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             473 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-07-03',
                 'deaths_bid' => 14,
                 'deaths_bid_cumulative' => 684,
@@ -7602,9 +8549,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 25,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 92,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             474 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-07-04',
                 'deaths_bid' => 7,
                 'deaths_bid_cumulative' => 691,
@@ -7618,9 +8567,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 19,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 94,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             475 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-07-05',
                 'deaths_bid' => 13,
                 'deaths_bid_cumulative' => 704,
@@ -7634,9 +8585,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 22,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 78,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             476 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-07-06',
                 'deaths_bid' => 12,
                 'deaths_bid_cumulative' => 716,
@@ -7650,9 +8603,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 29,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 84,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             477 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-07-07',
                 'deaths_bid' => 10,
                 'deaths_bid_cumulative' => 726,
@@ -7666,9 +8621,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 32,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 123,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             478 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-07-08',
                 'deaths_bid' => 20,
                 'deaths_bid_cumulative' => 746,
@@ -7682,9 +8639,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 38,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 118,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             479 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-07-09',
                 'deaths_bid' => 8,
                 'deaths_bid_cumulative' => 754,
@@ -7698,9 +8657,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 55,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 122,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             480 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-07-10',
                 'deaths_bid' => 8,
                 'deaths_bid_cumulative' => 762,
@@ -7714,9 +8675,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 35,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 111,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             481 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-07-11',
                 'deaths_bid' => 10,
                 'deaths_bid_cumulative' => 772,
@@ -7730,9 +8693,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 47,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 136,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             482 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-07-12',
                 'deaths_bid' => 14,
                 'deaths_bid_cumulative' => 786,
@@ -7746,9 +8711,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 45,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 128,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             483 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-07-13',
                 'deaths_bid' => 16,
                 'deaths_bid_cumulative' => 802,
@@ -7762,9 +8729,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 47,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 145,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             484 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-07-14',
                 'deaths_bid' => 13,
                 'deaths_bid_cumulative' => 815,
@@ -7778,9 +8747,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 50,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 126,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             485 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-07-15',
                 'deaths_bid' => 15,
                 'deaths_bid_cumulative' => 830,
@@ -7794,9 +8765,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 54,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 153,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             486 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-07-16',
                 'deaths_bid' => 24,
                 'deaths_bid_cumulative' => 854,
@@ -7810,9 +8783,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 58,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 153,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             487 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-07-17',
                 'deaths_bid' => 18,
                 'deaths_bid_cumulative' => 872,
@@ -7826,9 +8801,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 68,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 193,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             488 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-07-18',
                 'deaths_bid' => 24,
                 'deaths_bid_cumulative' => 896,
@@ -7842,9 +8819,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 63,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 169,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             489 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-07-19',
                 'deaths_bid' => 13,
                 'deaths_bid_cumulative' => 909,
@@ -7858,9 +8837,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 65,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 156,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             490 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-07-20',
                 'deaths_bid' => 10,
                 'deaths_bid_cumulative' => 919,
@@ -7874,9 +8855,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 79,
                 'deaths_tat' => 1,
                 'deaths_unvax' => 196,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             491 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-07-21',
                 'deaths_bid' => 33,
                 'deaths_bid_cumulative' => 952,
@@ -7890,9 +8873,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 88,
                 'deaths_tat' => 4,
                 'deaths_unvax' => 174,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             492 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-07-22',
                 'deaths_bid' => 22,
                 'deaths_bid_cumulative' => 974,
@@ -7906,9 +8891,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 92,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 166,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             493 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-07-23',
                 'deaths_bid' => 8,
                 'deaths_bid_cumulative' => 982,
@@ -7922,9 +8909,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 100,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 178,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             494 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-07-24',
                 'deaths_bid' => 32,
                 'deaths_bid_cumulative' => 1014,
@@ -7938,9 +8927,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 94,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 191,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             495 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-07-25',
                 'deaths_bid' => 8,
                 'deaths_bid_cumulative' => 1022,
@@ -7954,9 +8945,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 92,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 204,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             496 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-07-26',
                 'deaths_bid' => 14,
                 'deaths_bid_cumulative' => 1036,
@@ -7970,9 +8963,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 80,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 179,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             497 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-07-27',
                 'deaths_bid' => 31,
                 'deaths_bid_cumulative' => 1067,
@@ -7986,9 +8981,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 63,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 201,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             498 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-07-28',
                 'deaths_bid' => 14,
                 'deaths_bid_cumulative' => 1081,
@@ -8002,9 +8999,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 99,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 208,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             499 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-07-29',
                 'deaths_bid' => 28,
                 'deaths_bid_cumulative' => 1109,
@@ -8018,11 +9017,13 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 78,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 193,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
         ));
         \DB::table('deaths_malaysia')->insert(array (
             0 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-07-30',
                 'deaths_bid' => 9,
                 'deaths_bid_cumulative' => 1118,
@@ -8036,9 +9037,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 102,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 217,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             1 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-07-31',
                 'deaths_bid' => 12,
                 'deaths_bid_cumulative' => 1130,
@@ -8052,9 +9055,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 103,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 194,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             2 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-08-01',
                 'deaths_bid' => 20,
                 'deaths_bid_cumulative' => 1150,
@@ -8068,9 +9073,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 101,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 211,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             3 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-08-02',
                 'deaths_bid' => 21,
                 'deaths_bid_cumulative' => 1171,
@@ -8084,9 +9091,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 136,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 224,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             4 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-08-03',
                 'deaths_bid' => 34,
                 'deaths_bid_cumulative' => 1205,
@@ -8100,9 +9109,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 112,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 206,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             5 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-08-04',
                 'deaths_bid' => 21,
                 'deaths_bid_cumulative' => 1226,
@@ -8116,9 +9127,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 90,
                 'deaths_tat' => 4,
                 'deaths_unvax' => 197,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             6 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-08-05',
                 'deaths_bid' => 22,
                 'deaths_bid_cumulative' => 1248,
@@ -8132,9 +9145,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 90,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 205,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             7 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-08-06',
                 'deaths_bid' => 24,
                 'deaths_bid_cumulative' => 1272,
@@ -8148,9 +9163,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 115,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 220,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             8 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-08-07',
                 'deaths_bid' => 34,
                 'deaths_bid_cumulative' => 1306,
@@ -8164,9 +9181,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 104,
                 'deaths_tat' => 4,
                 'deaths_unvax' => 213,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             9 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-08-08',
                 'deaths_bid' => 85,
                 'deaths_bid_cumulative' => 1391,
@@ -8180,9 +9199,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 88,
                 'deaths_tat' => 8,
                 'deaths_unvax' => 213,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             10 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-08-09',
                 'deaths_bid' => 16,
                 'deaths_bid_cumulative' => 1407,
@@ -8196,9 +9217,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 89,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 204,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             11 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-08-10',
                 'deaths_bid' => 34,
                 'deaths_bid_cumulative' => 1441,
@@ -8212,9 +9235,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 122,
                 'deaths_tat' => 4,
                 'deaths_unvax' => 250,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             12 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-08-11',
                 'deaths_bid' => 16,
                 'deaths_bid_cumulative' => 1457,
@@ -8228,9 +9253,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 88,
                 'deaths_tat' => 4,
                 'deaths_unvax' => 181,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             13 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-08-12',
                 'deaths_bid' => 93,
                 'deaths_bid_cumulative' => 1550,
@@ -8244,9 +9271,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 103,
                 'deaths_tat' => 5,
                 'deaths_unvax' => 164,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             14 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-08-13',
                 'deaths_bid' => 96,
                 'deaths_bid_cumulative' => 1646,
@@ -8260,9 +9289,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 82,
                 'deaths_tat' => 6,
                 'deaths_unvax' => 159,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             15 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-08-14',
                 'deaths_bid' => 68,
                 'deaths_bid_cumulative' => 1714,
@@ -8276,9 +9307,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 84,
                 'deaths_tat' => 5,
                 'deaths_unvax' => 165,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             16 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-08-15',
                 'deaths_bid' => 101,
                 'deaths_bid_cumulative' => 1815,
@@ -8292,9 +9325,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 104,
                 'deaths_tat' => 4,
                 'deaths_unvax' => 166,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             17 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-08-16',
                 'deaths_bid' => 77,
                 'deaths_bid_cumulative' => 1892,
@@ -8308,9 +9343,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 89,
                 'deaths_tat' => 5,
                 'deaths_unvax' => 177,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             18 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-08-17',
                 'deaths_bid' => 44,
                 'deaths_bid_cumulative' => 1936,
@@ -8324,9 +9361,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 67,
                 'deaths_tat' => 4,
                 'deaths_unvax' => 166,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             19 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-08-18',
                 'deaths_bid' => 35,
                 'deaths_bid_cumulative' => 1971,
@@ -8340,9 +9379,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 83,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 167,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             20 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-08-19',
                 'deaths_bid' => 35,
                 'deaths_bid_cumulative' => 2006,
@@ -8356,9 +9397,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 71,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 160,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             21 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-08-20',
                 'deaths_bid' => 60,
                 'deaths_bid_cumulative' => 2066,
@@ -8372,9 +9415,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 69,
                 'deaths_tat' => 4,
                 'deaths_unvax' => 142,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             22 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-08-21',
                 'deaths_bid' => 35,
                 'deaths_bid_cumulative' => 2101,
@@ -8388,9 +9433,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 64,
                 'deaths_tat' => 4,
                 'deaths_unvax' => 155,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             23 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-08-22',
                 'deaths_bid' => 43,
                 'deaths_bid_cumulative' => 2144,
@@ -8404,9 +9451,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 73,
                 'deaths_tat' => 4,
                 'deaths_unvax' => 189,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             24 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-08-23',
                 'deaths_bid' => 21,
                 'deaths_bid_cumulative' => 2165,
@@ -8420,9 +9469,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 71,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 175,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             25 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-08-24',
                 'deaths_bid' => 40,
                 'deaths_bid_cumulative' => 2205,
@@ -8436,9 +9487,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 52,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 112,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             26 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-08-25',
                 'deaths_bid' => 69,
                 'deaths_bid_cumulative' => 2274,
@@ -8452,9 +9505,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 51,
                 'deaths_tat' => 5,
                 'deaths_unvax' => 159,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             27 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-08-26',
                 'deaths_bid' => 100,
                 'deaths_bid_cumulative' => 2374,
@@ -8468,9 +9523,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 81,
                 'deaths_tat' => 6,
                 'deaths_unvax' => 160,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             28 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-08-27',
                 'deaths_bid' => 99,
                 'deaths_bid_cumulative' => 2473,
@@ -8484,9 +9541,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 70,
                 'deaths_tat' => 8,
                 'deaths_unvax' => 142,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             29 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-08-28',
                 'deaths_bid' => 31,
                 'deaths_bid_cumulative' => 2504,
@@ -8500,9 +9559,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 58,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 146,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             30 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-08-29',
                 'deaths_bid' => 51,
                 'deaths_bid_cumulative' => 2555,
@@ -8516,9 +9577,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 56,
                 'deaths_tat' => 4,
                 'deaths_unvax' => 153,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             31 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-08-30',
                 'deaths_bid' => 53,
                 'deaths_bid_cumulative' => 2608,
@@ -8532,9 +9595,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 53,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 191,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             32 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-08-31',
                 'deaths_bid' => 98,
                 'deaths_bid_cumulative' => 2706,
@@ -8548,9 +9613,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 51,
                 'deaths_tat' => 6,
                 'deaths_unvax' => 162,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             33 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-09-01',
                 'deaths_bid' => 65,
                 'deaths_bid_cumulative' => 2771,
@@ -8564,9 +9631,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 55,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 164,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             34 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-09-02',
                 'deaths_bid' => 80,
                 'deaths_bid_cumulative' => 2851,
@@ -8580,9 +9649,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 61,
                 'deaths_tat' => 4,
                 'deaths_unvax' => 138,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             35 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-09-03',
                 'deaths_bid' => 93,
                 'deaths_bid_cumulative' => 2944,
@@ -8596,9 +9667,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 49,
                 'deaths_tat' => 6,
                 'deaths_unvax' => 135,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             36 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-09-04',
                 'deaths_bid' => 104,
                 'deaths_bid_cumulative' => 3048,
@@ -8612,9 +9685,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 57,
                 'deaths_tat' => 5,
                 'deaths_unvax' => 143,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             37 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-09-05',
                 'deaths_bid' => 107,
                 'deaths_bid_cumulative' => 3155,
@@ -8628,9 +9703,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 65,
                 'deaths_tat' => 7,
                 'deaths_unvax' => 132,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             38 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-09-06',
                 'deaths_bid' => 81,
                 'deaths_bid_cumulative' => 3236,
@@ -8644,9 +9721,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 41,
                 'deaths_tat' => 4,
                 'deaths_unvax' => 156,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             39 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-09-07',
                 'deaths_bid' => 93,
                 'deaths_bid_cumulative' => 3329,
@@ -8660,9 +9739,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 49,
                 'deaths_tat' => 4,
                 'deaths_unvax' => 152,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             40 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-09-08',
                 'deaths_bid' => 102,
                 'deaths_bid_cumulative' => 3431,
@@ -8676,9 +9757,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 49,
                 'deaths_tat' => 8,
                 'deaths_unvax' => 148,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             41 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-09-09',
                 'deaths_bid' => 55,
                 'deaths_bid_cumulative' => 3486,
@@ -8692,9 +9775,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 57,
                 'deaths_tat' => 7,
                 'deaths_unvax' => 111,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             42 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-09-10',
                 'deaths_bid' => 102,
                 'deaths_bid_cumulative' => 3588,
@@ -8708,9 +9793,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 42,
                 'deaths_tat' => 9,
                 'deaths_unvax' => 131,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             43 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-09-11',
                 'deaths_bid' => 88,
                 'deaths_bid_cumulative' => 3676,
@@ -8724,9 +9811,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 50,
                 'deaths_tat' => 25,
                 'deaths_unvax' => 124,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             44 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-09-12',
                 'deaths_bid' => 106,
                 'deaths_bid_cumulative' => 3782,
@@ -8740,9 +9829,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 42,
                 'deaths_tat' => 5,
                 'deaths_unvax' => 135,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             45 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-09-13',
                 'deaths_bid' => 176,
                 'deaths_bid_cumulative' => 3958,
@@ -8756,9 +9847,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 34,
                 'deaths_tat' => 6,
                 'deaths_unvax' => 115,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             46 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-09-14',
                 'deaths_bid' => 108,
                 'deaths_bid_cumulative' => 4066,
@@ -8772,9 +9865,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 48,
                 'deaths_tat' => 23,
                 'deaths_unvax' => 99,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             47 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-09-15',
                 'deaths_bid' => 92,
                 'deaths_bid_cumulative' => 4158,
@@ -8788,9 +9883,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 44,
                 'deaths_tat' => 7,
                 'deaths_unvax' => 123,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             48 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-09-16',
                 'deaths_bid' => 105,
                 'deaths_bid_cumulative' => 4263,
@@ -8804,9 +9901,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 39,
                 'deaths_tat' => 6,
                 'deaths_unvax' => 91,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             49 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-09-17',
                 'deaths_bid' => 64,
                 'deaths_bid_cumulative' => 4327,
@@ -8820,9 +9919,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 43,
                 'deaths_tat' => 7,
                 'deaths_unvax' => 87,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             50 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-09-18',
                 'deaths_bid' => 70,
                 'deaths_bid_cumulative' => 4397,
@@ -8836,9 +9937,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 33,
                 'deaths_tat' => 4,
                 'deaths_unvax' => 97,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             51 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-09-19',
                 'deaths_bid' => 75,
                 'deaths_bid_cumulative' => 4472,
@@ -8852,9 +9955,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 29,
                 'deaths_tat' => 6,
                 'deaths_unvax' => 88,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             52 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-09-20',
                 'deaths_bid' => 92,
                 'deaths_bid_cumulative' => 4564,
@@ -8868,9 +9973,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 51,
                 'deaths_tat' => 12,
                 'deaths_unvax' => 62,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             53 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-09-21',
                 'deaths_bid' => 84,
                 'deaths_bid_cumulative' => 4648,
@@ -8884,9 +9991,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 29,
                 'deaths_tat' => 27,
                 'deaths_unvax' => 87,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             54 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-09-22',
                 'deaths_bid' => 161,
                 'deaths_bid_cumulative' => 4809,
@@ -8900,9 +10009,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 35,
                 'deaths_tat' => 9,
                 'deaths_unvax' => 76,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             55 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-09-23',
                 'deaths_bid' => 29,
                 'deaths_bid_cumulative' => 4838,
@@ -8916,9 +10027,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 25,
                 'deaths_tat' => 4,
                 'deaths_unvax' => 92,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             56 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-09-24',
                 'deaths_bid' => 49,
                 'deaths_bid_cumulative' => 4887,
@@ -8932,9 +10045,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 25,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 74,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             57 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-09-25',
                 'deaths_bid' => 36,
                 'deaths_bid_cumulative' => 4923,
@@ -8948,9 +10063,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 27,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 86,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             58 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-09-26',
                 'deaths_bid' => 99,
                 'deaths_bid_cumulative' => 5022,
@@ -8964,9 +10081,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 28,
                 'deaths_tat' => 5,
                 'deaths_unvax' => 68,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             59 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-09-27',
                 'deaths_bid' => 75,
                 'deaths_bid_cumulative' => 5097,
@@ -8980,9 +10099,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 19,
                 'deaths_tat' => 11,
                 'deaths_unvax' => 67,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             60 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-09-28',
                 'deaths_bid' => 71,
                 'deaths_bid_cumulative' => 5168,
@@ -8996,9 +10117,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 20,
                 'deaths_tat' => 4,
                 'deaths_unvax' => 50,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             61 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-09-29',
                 'deaths_bid' => 64,
                 'deaths_bid_cumulative' => 5232,
@@ -9012,9 +10135,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 15,
                 'deaths_tat' => 4,
                 'deaths_unvax' => 57,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             62 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-09-30',
                 'deaths_bid' => 47,
                 'deaths_bid_cumulative' => 5279,
@@ -9028,9 +10153,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 18,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 73,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             63 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-10-01',
                 'deaths_bid' => 28,
                 'deaths_bid_cumulative' => 5307,
@@ -9044,9 +10171,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 14,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 52,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             64 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-10-02',
                 'deaths_bid' => 33,
                 'deaths_bid_cumulative' => 5340,
@@ -9060,9 +10189,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 11,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 69,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             65 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-10-03',
                 'deaths_bid' => 27,
                 'deaths_bid_cumulative' => 5367,
@@ -9076,9 +10207,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 12,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 46,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             66 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-10-04',
                 'deaths_bid' => 15,
                 'deaths_bid_cumulative' => 5382,
@@ -9092,9 +10225,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 9,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 45,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             67 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-10-05',
                 'deaths_bid' => 16,
                 'deaths_bid_cumulative' => 5398,
@@ -9108,9 +10243,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 12,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 41,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             68 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-10-06',
                 'deaths_bid' => 26,
                 'deaths_bid_cumulative' => 5424,
@@ -9124,9 +10261,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 9,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 51,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             69 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-10-07',
                 'deaths_bid' => 26,
                 'deaths_bid_cumulative' => 5450,
@@ -9140,9 +10279,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 13,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 49,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             70 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-10-08',
                 'deaths_bid' => 23,
                 'deaths_bid_cumulative' => 5473,
@@ -9156,9 +10297,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 9,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 38,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             71 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-10-09',
                 'deaths_bid' => 27,
                 'deaths_bid_cumulative' => 5500,
@@ -9172,9 +10315,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 3,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 40,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             72 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-10-10',
                 'deaths_bid' => 14,
                 'deaths_bid_cumulative' => 5514,
@@ -9188,9 +10333,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 3,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 39,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             73 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-10-11',
                 'deaths_bid' => 16,
                 'deaths_bid_cumulative' => 5530,
@@ -9204,9 +10351,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 8,
                 'deaths_tat' => 4,
                 'deaths_unvax' => 31,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             74 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-10-12',
                 'deaths_bid' => 26,
                 'deaths_bid_cumulative' => 5556,
@@ -9220,9 +10369,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 8,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 46,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             75 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-10-13',
                 'deaths_bid' => 12,
                 'deaths_bid_cumulative' => 5568,
@@ -9236,9 +10387,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 8,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 38,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             76 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-10-14',
                 'deaths_bid' => 22,
                 'deaths_bid_cumulative' => 5590,
@@ -9252,9 +10405,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 10,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 32,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             77 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-10-15',
                 'deaths_bid' => 19,
                 'deaths_bid_cumulative' => 5609,
@@ -9268,9 +10423,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 4,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 31,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             78 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-10-16',
                 'deaths_bid' => 26,
                 'deaths_bid_cumulative' => 5635,
@@ -9284,9 +10441,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 5,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 28,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             79 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-10-17',
                 'deaths_bid' => 11,
                 'deaths_bid_cumulative' => 5646,
@@ -9300,9 +10459,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 8,
                 'deaths_tat' => 4,
                 'deaths_unvax' => 34,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             80 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-10-18',
                 'deaths_bid' => 9,
                 'deaths_bid_cumulative' => 5655,
@@ -9316,9 +10477,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 5,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 32,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             81 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-10-19',
                 'deaths_bid' => 11,
                 'deaths_bid_cumulative' => 5666,
@@ -9332,9 +10495,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 3,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 42,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             82 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-10-20',
                 'deaths_bid' => 14,
                 'deaths_bid_cumulative' => 5680,
@@ -9348,9 +10513,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 7,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 27,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             83 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-10-21',
                 'deaths_bid' => 21,
                 'deaths_bid_cumulative' => 5701,
@@ -9364,9 +10531,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 3,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 27,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             84 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-10-22',
                 'deaths_bid' => 17,
                 'deaths_bid_cumulative' => 5718,
@@ -9380,9 +10549,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 4,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 28,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             85 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-10-23',
                 'deaths_bid' => 10,
                 'deaths_bid_cumulative' => 5728,
@@ -9396,9 +10567,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 8,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 26,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             86 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-10-24',
                 'deaths_bid' => 12,
                 'deaths_bid_cumulative' => 5740,
@@ -9412,9 +10585,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 6,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 26,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             87 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-10-25',
                 'deaths_bid' => 11,
                 'deaths_bid_cumulative' => 5751,
@@ -9428,9 +10603,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 5,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 30,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             88 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-10-26',
                 'deaths_bid' => 20,
                 'deaths_bid_cumulative' => 5771,
@@ -9444,9 +10621,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 1,
                 'deaths_tat' => 4,
                 'deaths_unvax' => 20,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             89 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-10-27',
                 'deaths_bid' => 32,
                 'deaths_bid_cumulative' => 5803,
@@ -9460,9 +10639,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 3,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 29,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             90 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-10-28',
                 'deaths_bid' => 24,
                 'deaths_bid_cumulative' => 5827,
@@ -9476,9 +10657,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 22,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             91 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-10-29',
                 'deaths_bid' => 8,
                 'deaths_bid_cumulative' => 5835,
@@ -9492,9 +10675,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 3,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 28,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             92 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-10-30',
                 'deaths_bid' => 4,
                 'deaths_bid_cumulative' => 5839,
@@ -9508,9 +10693,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 3,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 22,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             93 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-10-31',
                 'deaths_bid' => 7,
                 'deaths_bid_cumulative' => 5846,
@@ -9524,9 +10711,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 19,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             94 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-11-01',
                 'deaths_bid' => 18,
                 'deaths_bid_cumulative' => 5864,
@@ -9540,9 +10729,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 4,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 14,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             95 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-11-02',
                 'deaths_bid' => 15,
                 'deaths_bid_cumulative' => 5879,
@@ -9556,9 +10747,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 3,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 21,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             96 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-11-03',
                 'deaths_bid' => 8,
                 'deaths_bid_cumulative' => 5887,
@@ -9572,9 +10765,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 1,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 19,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             97 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-11-04',
                 'deaths_bid' => 16,
                 'deaths_bid_cumulative' => 5903,
@@ -9588,9 +10783,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 5,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 15,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             98 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-11-05',
                 'deaths_bid' => 4,
                 'deaths_bid_cumulative' => 5907,
@@ -9604,9 +10801,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 5,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 20,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             99 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-11-06',
                 'deaths_bid' => 12,
                 'deaths_bid_cumulative' => 5919,
@@ -9620,9 +10819,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 1,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 21,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             100 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-11-07',
                 'deaths_bid' => 5,
                 'deaths_bid_cumulative' => 5924,
@@ -9636,9 +10837,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 1,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 24,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             101 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-11-08',
                 'deaths_bid' => 8,
                 'deaths_bid_cumulative' => 5932,
@@ -9652,9 +10855,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 3,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 26,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             102 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-11-09',
                 'deaths_bid' => 19,
                 'deaths_bid_cumulative' => 5951,
@@ -9668,9 +10873,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 2,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 22,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             103 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-11-10',
                 'deaths_bid' => 10,
                 'deaths_bid_cumulative' => 5961,
@@ -9684,9 +10891,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 20,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             104 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-11-11',
                 'deaths_bid' => 14,
                 'deaths_bid_cumulative' => 5975,
@@ -9700,9 +10909,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 1,
                 'deaths_tat' => 4,
                 'deaths_unvax' => 20,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             105 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-11-12',
                 'deaths_bid' => 8,
                 'deaths_bid_cumulative' => 5983,
@@ -9716,9 +10927,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 3,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 17,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             106 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-11-13',
                 'deaths_bid' => 11,
                 'deaths_bid_cumulative' => 5994,
@@ -9732,9 +10945,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 1,
                 'deaths_tat' => 4,
                 'deaths_unvax' => 15,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             107 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-11-14',
                 'deaths_bid' => 12,
                 'deaths_bid_cumulative' => 6006,
@@ -9748,9 +10963,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 3,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 14,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             108 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-11-15',
                 'deaths_bid' => 11,
                 'deaths_bid_cumulative' => 6017,
@@ -9764,9 +10981,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 2,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 16,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             109 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-11-16',
                 'deaths_bid' => 7,
                 'deaths_bid_cumulative' => 6024,
@@ -9780,9 +10999,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 3,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 11,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             110 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-11-17',
                 'deaths_bid' => 12,
                 'deaths_bid_cumulative' => 6036,
@@ -9796,9 +11017,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 2,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 21,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             111 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-11-18',
                 'deaths_bid' => 9,
                 'deaths_bid_cumulative' => 6045,
@@ -9812,9 +11035,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 2,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 13,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             112 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-11-19',
                 'deaths_bid' => 7,
                 'deaths_bid_cumulative' => 6052,
@@ -9828,9 +11053,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 2,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 24,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             113 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-11-20',
                 'deaths_bid' => 6,
                 'deaths_bid_cumulative' => 6058,
@@ -9844,9 +11071,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 1,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 17,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             114 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-11-21',
                 'deaths_bid' => 6,
                 'deaths_bid_cumulative' => 6064,
@@ -9860,9 +11089,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 1,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 17,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             115 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-11-22',
                 'deaths_bid' => 13,
                 'deaths_bid_cumulative' => 6077,
@@ -9876,9 +11107,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 17,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             116 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-11-23',
                 'deaths_bid' => 10,
                 'deaths_bid_cumulative' => 6087,
@@ -9892,9 +11125,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 3,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 18,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             117 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-11-24',
                 'deaths_bid' => 9,
                 'deaths_bid_cumulative' => 6096,
@@ -9908,9 +11143,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 13,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             118 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-11-25',
                 'deaths_bid' => 10,
                 'deaths_bid_cumulative' => 6106,
@@ -9924,9 +11161,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 1,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 21,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             119 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-11-26',
                 'deaths_bid' => 10,
                 'deaths_bid_cumulative' => 6116,
@@ -9940,9 +11179,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 2,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 12,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             120 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-11-27',
                 'deaths_bid' => 8,
                 'deaths_bid_cumulative' => 6124,
@@ -9956,9 +11197,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 2,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 19,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             121 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-11-28',
                 'deaths_bid' => 6,
                 'deaths_bid_cumulative' => 6130,
@@ -9972,9 +11215,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 2,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 12,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             122 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-11-29',
                 'deaths_bid' => 15,
                 'deaths_bid_cumulative' => 6145,
@@ -9988,9 +11233,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 16,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             123 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-11-30',
                 'deaths_bid' => 8,
                 'deaths_bid_cumulative' => 6153,
@@ -10004,9 +11251,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 10,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             124 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-12-01',
                 'deaths_bid' => 12,
                 'deaths_bid_cumulative' => 6165,
@@ -10020,9 +11269,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 2,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 10,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             125 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-12-02',
                 'deaths_bid' => 12,
                 'deaths_bid_cumulative' => 6177,
@@ -10036,9 +11287,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 2,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 12,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             126 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-12-03',
                 'deaths_bid' => 4,
                 'deaths_bid_cumulative' => 6181,
@@ -10052,9 +11305,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 3,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 16,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             127 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-12-04',
                 'deaths_bid' => 8,
                 'deaths_bid_cumulative' => 6189,
@@ -10068,9 +11323,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 2,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 16,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             128 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-12-05',
                 'deaths_bid' => 10,
                 'deaths_bid_cumulative' => 6199,
@@ -10084,9 +11341,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 15,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             129 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-12-06',
                 'deaths_bid' => 8,
                 'deaths_bid_cumulative' => 6207,
@@ -10100,9 +11359,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 13,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             130 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-12-07',
                 'deaths_bid' => 9,
                 'deaths_bid_cumulative' => 6216,
@@ -10116,9 +11377,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 13,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             131 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-12-08',
                 'deaths_bid' => 4,
                 'deaths_bid_cumulative' => 6220,
@@ -10132,9 +11395,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 1,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 14,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             132 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-12-09',
                 'deaths_bid' => 6,
                 'deaths_bid_cumulative' => 6226,
@@ -10148,9 +11413,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 9,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             133 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-12-10',
                 'deaths_bid' => 10,
                 'deaths_bid_cumulative' => 6236,
@@ -10164,9 +11431,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 1,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 13,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             134 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-12-11',
                 'deaths_bid' => 7,
                 'deaths_bid_cumulative' => 6243,
@@ -10180,9 +11449,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 1,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 8,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             135 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-12-12',
                 'deaths_bid' => 3,
                 'deaths_bid_cumulative' => 6246,
@@ -10196,9 +11467,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 9,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             136 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-12-13',
                 'deaths_bid' => 8,
                 'deaths_bid_cumulative' => 6254,
@@ -10212,9 +11485,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 15,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             137 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-12-14',
                 'deaths_bid' => 12,
                 'deaths_bid_cumulative' => 6266,
@@ -10228,9 +11503,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 1,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 12,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             138 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-12-15',
                 'deaths_bid' => 4,
                 'deaths_bid_cumulative' => 6270,
@@ -10244,9 +11521,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 2,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 9,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             139 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-12-16',
                 'deaths_bid' => 4,
                 'deaths_bid_cumulative' => 6274,
@@ -10260,9 +11539,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 13,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             140 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-12-17',
                 'deaths_bid' => 1,
                 'deaths_bid_cumulative' => 6275,
@@ -10276,9 +11557,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 1,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 11,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             141 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-12-18',
                 'deaths_bid' => 7,
                 'deaths_bid_cumulative' => 6282,
@@ -10292,9 +11575,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 1,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 14,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             142 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-12-19',
                 'deaths_bid' => 4,
                 'deaths_bid_cumulative' => 6286,
@@ -10308,9 +11593,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 1,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 12,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             143 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-12-20',
                 'deaths_bid' => 8,
                 'deaths_bid_cumulative' => 6294,
@@ -10324,9 +11611,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 2,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 15,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             144 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-12-21',
                 'deaths_bid' => 5,
                 'deaths_bid_cumulative' => 6299,
@@ -10340,9 +11629,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 1,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 7,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             145 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-12-22',
                 'deaths_bid' => 7,
                 'deaths_bid_cumulative' => 6306,
@@ -10356,9 +11647,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 7,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             146 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-12-23',
                 'deaths_bid' => 10,
                 'deaths_bid_cumulative' => 6316,
@@ -10372,9 +11665,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 11,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             147 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-12-24',
                 'deaths_bid' => 5,
                 'deaths_bid_cumulative' => 6321,
@@ -10388,9 +11683,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 1,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 8,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             148 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-12-25',
                 'deaths_bid' => 4,
                 'deaths_bid_cumulative' => 6325,
@@ -10404,9 +11701,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 3,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 3,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             149 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-12-26',
                 'deaths_bid' => 3,
                 'deaths_bid_cumulative' => 6328,
@@ -10420,9 +11719,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 6,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             150 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-12-27',
                 'deaths_bid' => 6,
                 'deaths_bid_cumulative' => 6334,
@@ -10436,9 +11737,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 4,
                 'deaths_unvax' => 11,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             151 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-12-28',
                 'deaths_bid' => 4,
                 'deaths_bid_cumulative' => 6338,
@@ -10452,9 +11755,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 14,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             152 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-12-29',
                 'deaths_bid' => 2,
                 'deaths_bid_cumulative' => 6340,
@@ -10468,9 +11773,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 1,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 15,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             153 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-12-30',
                 'deaths_bid' => 11,
                 'deaths_bid_cumulative' => 6351,
@@ -10484,9 +11791,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 3,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 13,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             154 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2021-12-31',
                 'deaths_bid' => 4,
                 'deaths_bid_cumulative' => 6355,
@@ -10500,9 +11809,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 1,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 9,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             155 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2022-01-01',
                 'deaths_bid' => 3,
                 'deaths_bid_cumulative' => 6358,
@@ -10516,9 +11827,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 12,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             156 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2022-01-02',
                 'deaths_bid' => 4,
                 'deaths_bid_cumulative' => 6362,
@@ -10532,9 +11845,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 5,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             157 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2022-01-03',
                 'deaths_bid' => 4,
                 'deaths_bid_cumulative' => 6366,
@@ -10548,9 +11863,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 5,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             158 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2022-01-04',
                 'deaths_bid' => 9,
                 'deaths_bid_cumulative' => 6375,
@@ -10564,9 +11881,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 8,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             159 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2022-01-05',
                 'deaths_bid' => 3,
                 'deaths_bid_cumulative' => 6378,
@@ -10580,9 +11899,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 1,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 10,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             160 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2022-01-06',
                 'deaths_bid' => 4,
                 'deaths_bid_cumulative' => 6382,
@@ -10596,9 +11917,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 7,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             161 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2022-01-07',
                 'deaths_bid' => 2,
                 'deaths_bid_cumulative' => 6384,
@@ -10612,9 +11935,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 6,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             162 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2022-01-08',
                 'deaths_bid' => 2,
                 'deaths_bid_cumulative' => 6386,
@@ -10628,9 +11953,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 1,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 3,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             163 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2022-01-09',
                 'deaths_bid' => 4,
                 'deaths_bid_cumulative' => 6390,
@@ -10644,9 +11971,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 1,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 6,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             164 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2022-01-10',
                 'deaths_bid' => 2,
                 'deaths_bid_cumulative' => 6392,
@@ -10660,9 +11989,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 4,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             165 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2022-01-11',
                 'deaths_bid' => 9,
                 'deaths_bid_cumulative' => 6401,
@@ -10676,9 +12007,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 4,
                 'deaths_unvax' => 5,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             166 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2022-01-12',
                 'deaths_bid' => 6,
                 'deaths_bid_cumulative' => 6407,
@@ -10692,9 +12025,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 5,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             167 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2022-01-13',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 6407,
@@ -10708,9 +12043,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 1,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 11,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             168 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2022-01-14',
                 'deaths_bid' => 2,
                 'deaths_bid_cumulative' => 6409,
@@ -10724,9 +12061,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 1,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 2,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             169 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2022-01-15',
                 'deaths_bid' => 6,
                 'deaths_bid_cumulative' => 6415,
@@ -10740,9 +12079,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 2,
                 'deaths_tat' => 3,
                 'deaths_unvax' => 7,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             170 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2022-01-16',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 6415,
@@ -10756,9 +12097,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 1,
                 'deaths_unvax' => 8,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             171 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2022-01-17',
                 'deaths_bid' => 2,
                 'deaths_bid_cumulative' => 6417,
@@ -10772,9 +12115,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 4,
                 'deaths_unvax' => 4,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             172 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2022-01-18',
                 'deaths_bid' => 0,
                 'deaths_bid_cumulative' => 6417,
@@ -10788,9 +12133,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 2,
                 'deaths_unvax' => 2,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             173 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2022-01-19',
                 'deaths_bid' => 3,
                 'deaths_bid_cumulative' => 6420,
@@ -10804,9 +12151,11 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 4,
                 'deaths_unvax' => 1,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
             174 => 
             array (
+                'created_at' => '2022-01-21 14:43:59',
                 'date' => '2022-01-20',
                 'deaths_bid' => 5,
                 'deaths_bid_cumulative' => 6425,
@@ -10820,6 +12169,7 @@ class CovidDeathsMalaysiaTableSeeder extends Seeder
                 'deaths_pvax' => 0,
                 'deaths_tat' => 4,
                 'deaths_unvax' => 0,
+                'updated_at' => '2022-01-21 14:43:59',
             ),
         ));
         

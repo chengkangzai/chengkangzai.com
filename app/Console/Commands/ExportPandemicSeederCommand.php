@@ -16,9 +16,9 @@ class ExportPandemicSeederCommand extends Command
 
         $this->info('Exporting Covid Database Seeder...');
         //TODO : split it to multiple commands
-        Artisan::call('iseed cases_malaysia,cases_states,clusters,deaths_malaysia,deaths_states,hospitals,icus,PKRC,populations,test_malaysia,test_states --classnameprefix=Covid --chunksize=500 --exclude=id,created_at,updated_at');
+        Artisan::call('iseed cases_malaysia,cases_states,clusters,deaths_malaysia,deaths_states,hospitals,icus,PKRC,populations,test_malaysia,test_states --classnameprefix=Covid --chunksize=500 --exclude=id');
         $this->info('Exporting Vax Database Seeder...');
-        Artisan::call('iseed vax_malaysias,vax_reg_malaysias,vax_reg_states,vax_states --classnameprefix=Vax --chunksize=500 --exclude=id,created_at,updated_at');
+        Artisan::call('iseed vax_malaysias,vax_reg_malaysias,vax_reg_states,vax_states --classnameprefix=Vax --chunksize=500 --exclude=id');
 
         $this->info('Export to Seeder Completed!');
         $this->info('Scanning for Seeder Files...');

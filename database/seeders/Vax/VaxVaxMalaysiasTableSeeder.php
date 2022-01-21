@@ -26,6 +26,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 66,
                 'cumul_booster' => 0,
                 'cumul_full' => 3,
@@ -51,6 +52,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 0,
                 'sinovac2' => 2,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             1 => 
             array (
@@ -59,6 +61,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 1217,
                 'cumul_booster' => 0,
                 'cumul_full' => 5,
@@ -84,6 +87,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 0,
                 'sinovac2' => 2,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             2 => 
             array (
@@ -92,6 +96,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 5287,
                 'cumul_booster' => 0,
                 'cumul_full' => 8,
@@ -117,6 +122,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 0,
                 'sinovac2' => 2,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             3 => 
             array (
@@ -125,6 +131,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 12003,
                 'cumul_booster' => 0,
                 'cumul_full' => 14,
@@ -150,6 +157,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 0,
                 'sinovac2' => 5,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             4 => 
             array (
@@ -158,6 +166,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 18723,
                 'cumul_booster' => 0,
                 'cumul_full' => 19,
@@ -183,6 +192,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 0,
                 'sinovac2' => 4,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             5 => 
             array (
@@ -191,6 +201,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 34115,
                 'cumul_booster' => 0,
                 'cumul_full' => 25,
@@ -216,6 +227,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 0,
                 'sinovac2' => 2,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             6 => 
             array (
@@ -224,6 +236,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 55802,
                 'cumul_booster' => 0,
                 'cumul_full' => 30,
@@ -249,6 +262,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 0,
                 'sinovac2' => 2,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             7 => 
             array (
@@ -257,6 +271,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 78499,
                 'cumul_booster' => 0,
                 'cumul_full' => 36,
@@ -282,6 +297,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 2,
                 'sinovac2' => 2,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             8 => 
             array (
@@ -290,6 +306,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 98056,
                 'cumul_booster' => 0,
                 'cumul_full' => 51,
@@ -315,6 +332,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 3,
                 'sinovac2' => 3,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             9 => 
             array (
@@ -323,6 +341,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 112427,
                 'cumul_booster' => 0,
                 'cumul_full' => 57,
@@ -348,6 +367,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 1,
                 'sinovac2' => 3,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             10 => 
             array (
@@ -356,6 +376,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 128265,
                 'cumul_booster' => 0,
                 'cumul_full' => 60,
@@ -381,6 +402,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 200,
                 'sinovac2' => 2,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             11 => 
             array (
@@ -389,6 +411,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 140853,
                 'cumul_booster' => 0,
                 'cumul_full' => 66,
@@ -414,6 +437,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 3,
                 'sinovac2' => 2,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             12 => 
             array (
@@ -422,6 +446,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 168071,
                 'cumul_booster' => 0,
                 'cumul_full' => 80,
@@ -447,6 +472,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 10,
                 'sinovac2' => 6,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             13 => 
             array (
@@ -455,6 +481,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 198198,
                 'cumul_booster' => 0,
                 'cumul_full' => 142,
@@ -480,6 +507,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 31,
                 'sinovac2' => 52,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             14 => 
             array (
@@ -488,6 +516,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 226982,
                 'cumul_booster' => 0,
                 'cumul_full' => 153,
@@ -513,6 +542,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 0,
                 'sinovac2' => 4,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             15 => 
             array (
@@ -521,6 +551,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 4,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 253501,
                 'cumul_booster' => 0,
                 'cumul_full' => 161,
@@ -546,6 +577,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 1,
                 'sinovac2' => 3,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             16 => 
             array (
@@ -554,6 +586,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 279627,
                 'cumul_booster' => 0,
                 'cumul_full' => 170,
@@ -579,6 +612,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 0,
                 'sinovac2' => 5,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             17 => 
             array (
@@ -587,6 +621,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 296688,
                 'cumul_booster' => 0,
                 'cumul_full' => 172,
@@ -612,6 +647,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 0,
                 'sinovac2' => 2,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             18 => 
             array (
@@ -620,6 +656,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 306999,
                 'cumul_booster' => 0,
                 'cumul_full' => 176,
@@ -645,6 +682,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 2,
                 'sinovac2' => 2,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             19 => 
             array (
@@ -653,6 +691,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 327394,
                 'cumul_booster' => 0,
                 'cumul_full' => 179,
@@ -678,6 +717,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 0,
                 'sinovac2' => 2,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             20 => 
             array (
@@ -686,6 +726,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 352875,
                 'cumul_booster' => 0,
                 'cumul_full' => 185,
@@ -711,6 +752,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 1,
                 'sinovac2' => 2,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             21 => 
             array (
@@ -719,6 +761,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 373731,
                 'cumul_booster' => 0,
                 'cumul_full' => 248,
@@ -744,6 +787,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 2,
                 'sinovac2' => 2,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             22 => 
             array (
@@ -752,6 +796,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 391843,
                 'cumul_booster' => 0,
                 'cumul_full' => 1046,
@@ -777,6 +822,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 12,
                 'sinovac2' => 2,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             23 => 
             array (
@@ -785,6 +831,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 406419,
                 'cumul_booster' => 0,
                 'cumul_full' => 4880,
@@ -810,6 +857,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 0,
                 'sinovac2' => 2,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             24 => 
             array (
@@ -818,6 +866,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 420226,
                 'cumul_booster' => 0,
                 'cumul_full' => 10984,
@@ -843,6 +892,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 0,
                 'sinovac2' => 2,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             25 => 
             array (
@@ -851,6 +901,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 435787,
                 'cumul_booster' => 0,
                 'cumul_full' => 16833,
@@ -876,6 +927,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 0,
                 'sinovac2' => 2,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             26 => 
             array (
@@ -884,6 +936,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 460086,
                 'cumul_booster' => 0,
                 'cumul_full' => 31412,
@@ -909,6 +962,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 0,
                 'sinovac2' => 4,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             27 => 
             array (
@@ -917,6 +971,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 489267,
                 'cumul_booster' => 0,
                 'cumul_full' => 52287,
@@ -942,6 +997,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 1,
                 'sinovac2' => 2,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             28 => 
             array (
@@ -950,6 +1006,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 518383,
                 'cumul_booster' => 0,
                 'cumul_full' => 75113,
@@ -975,6 +1032,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 0,
                 'sinovac2' => 2,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             29 => 
             array (
@@ -983,6 +1041,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 544186,
                 'cumul_booster' => 0,
                 'cumul_full' => 94482,
@@ -1008,6 +1067,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 81,
                 'sinovac2' => 2,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             30 => 
             array (
@@ -1016,6 +1076,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 560936,
                 'cumul_booster' => 0,
                 'cumul_full' => 107294,
@@ -1041,6 +1102,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 170,
                 'sinovac2' => 2,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             31 => 
             array (
@@ -1049,6 +1111,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 577083,
                 'cumul_booster' => 0,
                 'cumul_full' => 121734,
@@ -1074,6 +1137,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 473,
                 'sinovac2' => 8,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             32 => 
             array (
@@ -1082,6 +1146,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 593697,
                 'cumul_booster' => 0,
                 'cumul_full' => 134664,
@@ -1107,6 +1172,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 273,
                 'sinovac2' => 3,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             33 => 
             array (
@@ -1115,6 +1181,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 628942,
                 'cumul_booster' => 0,
                 'cumul_full' => 162043,
@@ -1140,6 +1207,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 1552,
                 'sinovac2' => 4,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             34 => 
             array (
@@ -1148,6 +1216,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 669877,
                 'cumul_booster' => 0,
                 'cumul_full' => 191451,
@@ -1173,6 +1242,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 2156,
                 'sinovac2' => 2,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             35 => 
             array (
@@ -1181,6 +1251,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 707353,
                 'cumul_booster' => 0,
                 'cumul_full' => 218975,
@@ -1206,6 +1277,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 3345,
                 'sinovac2' => 2,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             36 => 
             array (
@@ -1214,6 +1286,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 749822,
                 'cumul_booster' => 0,
                 'cumul_full' => 245537,
@@ -1239,6 +1312,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 4695,
                 'sinovac2' => 3,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             37 => 
             array (
@@ -1247,6 +1321,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 780308,
                 'cumul_booster' => 0,
                 'cumul_full' => 268441,
@@ -1272,6 +1347,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 3651,
                 'sinovac2' => 4,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             38 => 
             array (
@@ -1280,6 +1356,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 797734,
                 'cumul_booster' => 0,
                 'cumul_full' => 283187,
@@ -1305,6 +1382,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 1141,
                 'sinovac2' => 2,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             39 => 
             array (
@@ -1313,6 +1391,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 812925,
                 'cumul_booster' => 0,
                 'cumul_full' => 292347,
@@ -1338,6 +1417,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 2809,
                 'sinovac2' => 4,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             40 => 
             array (
@@ -1346,6 +1426,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 841635,
                 'cumul_booster' => 0,
                 'cumul_full' => 311857,
@@ -1371,6 +1452,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 4977,
                 'sinovac2' => 5,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             41 => 
             array (
@@ -1379,6 +1461,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 874352,
                 'cumul_booster' => 0,
                 'cumul_full' => 333563,
@@ -1404,6 +1487,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 4432,
                 'sinovac2' => 6,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             42 => 
             array (
@@ -1412,6 +1496,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 905374,
                 'cumul_booster' => 0,
                 'cumul_full' => 351885,
@@ -1437,6 +1522,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 6240,
                 'sinovac2' => 4,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             43 => 
             array (
@@ -1445,6 +1531,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 932278,
                 'cumul_booster' => 0,
                 'cumul_full' => 366696,
@@ -1470,6 +1557,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 6208,
                 'sinovac2' => 23,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             44 => 
             array (
@@ -1478,6 +1566,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 953899,
                 'cumul_booster' => 0,
                 'cumul_full' => 381089,
@@ -1503,6 +1592,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 2862,
                 'sinovac2' => 22,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             45 => 
             array (
@@ -1511,6 +1601,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 969638,
                 'cumul_booster' => 0,
                 'cumul_full' => 391157,
@@ -1536,6 +1627,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 1815,
                 'sinovac2' => 44,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             46 => 
             array (
@@ -1544,6 +1636,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 992834,
                 'cumul_booster' => 0,
                 'cumul_full' => 401875,
@@ -1569,6 +1662,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 2257,
                 'sinovac2' => 9,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             47 => 
             array (
@@ -1577,6 +1671,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 1032157,
                 'cumul_booster' => 0,
                 'cumul_full' => 415835,
@@ -1602,6 +1697,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 2788,
                 'sinovac2' => 2,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             48 => 
             array (
@@ -1610,6 +1706,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 1056674,
                 'cumul_booster' => 0,
                 'cumul_full' => 423535,
@@ -1635,6 +1732,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 4690,
                 'sinovac2' => 3,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             49 => 
             array (
@@ -1643,6 +1741,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 1085366,
                 'cumul_booster' => 0,
                 'cumul_full' => 431284,
@@ -1668,6 +1767,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 3418,
                 'sinovac2' => 4,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             50 => 
             array (
@@ -1676,6 +1776,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 1112635,
                 'cumul_booster' => 0,
                 'cumul_full' => 440452,
@@ -1701,6 +1802,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 4178,
                 'sinovac2' => 81,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             51 => 
             array (
@@ -1709,6 +1811,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 1132187,
                 'cumul_booster' => 0,
                 'cumul_full' => 444374,
@@ -1734,6 +1837,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 3072,
                 'sinovac2' => 292,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             52 => 
             array (
@@ -1742,6 +1846,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 1141872,
                 'cumul_booster' => 0,
                 'cumul_full' => 445487,
@@ -1767,6 +1872,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 1547,
                 'sinovac2' => 458,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             53 => 
             array (
@@ -1775,6 +1881,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 1151731,
                 'cumul_booster' => 0,
                 'cumul_full' => 449253,
@@ -1800,6 +1907,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 743,
                 'sinovac2' => 221,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             54 => 
             array (
@@ -1808,6 +1916,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 1184888,
                 'cumul_booster' => 0,
                 'cumul_full' => 457743,
@@ -1833,6 +1942,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 1686,
                 'sinovac2' => 1374,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             55 => 
             array (
@@ -1841,6 +1951,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 1218268,
                 'cumul_booster' => 0,
                 'cumul_full' => 469035,
@@ -1866,6 +1977,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 3465,
                 'sinovac2' => 2039,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             56 => 
             array (
@@ -1874,6 +1986,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 1245967,
                 'cumul_booster' => 0,
                 'cumul_full' => 480910,
@@ -1899,6 +2012,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 1097,
                 'sinovac2' => 3921,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             57 => 
             array (
@@ -1907,6 +2021,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 1275550,
                 'cumul_booster' => 0,
                 'cumul_full' => 496098,
@@ -1932,6 +2047,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 1066,
                 'sinovac2' => 4430,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             58 => 
             array (
@@ -1940,6 +2056,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 1294461,
                 'cumul_booster' => 0,
                 'cumul_full' => 502790,
@@ -1965,6 +2082,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 1305,
                 'sinovac2' => 2574,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             59 => 
             array (
@@ -1973,6 +2091,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 1305945,
                 'cumul_booster' => 0,
                 'cumul_full' => 506282,
@@ -1998,6 +2117,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 335,
                 'sinovac2' => 1448,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             60 => 
             array (
@@ -2006,6 +2126,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 1320790,
                 'cumul_booster' => 0,
                 'cumul_full' => 512016,
@@ -2031,6 +2152,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 76,
                 'sinovac2' => 2491,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             61 => 
             array (
@@ -2039,6 +2161,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 1351102,
                 'cumul_booster' => 0,
                 'cumul_full' => 520959,
@@ -2064,6 +2187,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 843,
                 'sinovac2' => 4357,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             62 => 
             array (
@@ -2072,6 +2196,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 1385808,
                 'cumul_booster' => 0,
                 'cumul_full' => 532838,
@@ -2097,6 +2222,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 880,
                 'sinovac2' => 5058,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             63 => 
             array (
@@ -2105,6 +2231,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 1425509,
                 'cumul_booster' => 0,
                 'cumul_full' => 546075,
@@ -2130,6 +2257,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 1417,
                 'sinovac2' => 6990,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             64 => 
             array (
@@ -2138,6 +2266,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 1438044,
                 'cumul_booster' => 0,
                 'cumul_full' => 552141,
@@ -2163,6 +2292,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 260,
                 'sinovac2' => 2769,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             65 => 
             array (
@@ -2171,6 +2301,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 1464755,
                 'cumul_booster' => 0,
                 'cumul_full' => 561060,
@@ -2196,6 +2327,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 627,
                 'sinovac2' => 3108,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             66 => 
             array (
@@ -2204,6 +2336,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 1470255,
                 'cumul_booster' => 0,
                 'cumul_full' => 563630,
@@ -2229,6 +2362,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 561,
                 'sinovac2' => 22,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             67 => 
             array (
@@ -2237,6 +2371,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 1486037,
                 'cumul_booster' => 0,
                 'cumul_full' => 571754,
@@ -2262,6 +2397,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 1023,
                 'sinovac2' => 769,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             68 => 
             array (
@@ -2270,6 +2406,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 1537319,
                 'cumul_booster' => 0,
                 'cumul_full' => 598501,
@@ -2295,6 +2432,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 907,
                 'sinovac2' => 4612,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             69 => 
             array (
@@ -2303,6 +2441,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 1587164,
                 'cumul_booster' => 0,
                 'cumul_full' => 618204,
@@ -2328,6 +2467,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 2482,
                 'sinovac2' => 4999,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             70 => 
             array (
@@ -2336,6 +2476,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 1642185,
                 'cumul_booster' => 0,
                 'cumul_full' => 641113,
@@ -2361,6 +2502,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 5335,
                 'sinovac2' => 3174,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             71 => 
             array (
@@ -2369,6 +2511,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 1698051,
                 'cumul_booster' => 0,
                 'cumul_full' => 659902,
@@ -2394,6 +2537,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 7214,
                 'sinovac2' => 4980,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             72 => 
             array (
@@ -2402,6 +2546,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 1745899,
                 'cumul_booster' => 0,
                 'cumul_full' => 675393,
@@ -2427,6 +2572,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 11365,
                 'sinovac2' => 4215,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             73 => 
             array (
@@ -2435,6 +2581,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 1773045,
                 'cumul_booster' => 0,
                 'cumul_full' => 683838,
@@ -2460,6 +2607,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 2715,
                 'sinovac2' => 1326,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             74 => 
             array (
@@ -2468,6 +2616,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 2,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 1805560,
                 'cumul_booster' => 0,
                 'cumul_full' => 690445,
@@ -2493,6 +2642,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 4973,
                 'sinovac2' => 771,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             75 => 
             array (
@@ -2501,6 +2651,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 1867161,
                 'cumul_booster' => 0,
                 'cumul_full' => 715317,
@@ -2526,6 +2677,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 7062,
                 'sinovac2' => 2977,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             76 => 
             array (
@@ -2534,6 +2686,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 1916151,
                 'cumul_booster' => 0,
                 'cumul_full' => 733779,
@@ -2559,6 +2712,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 5126,
                 'sinovac2' => 2089,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             77 => 
             array (
@@ -2567,6 +2721,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 1934319,
                 'cumul_booster' => 0,
                 'cumul_full' => 741609,
@@ -2592,6 +2747,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 1477,
                 'sinovac2' => 262,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             78 => 
             array (
@@ -2600,6 +2756,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 1934441,
                 'cumul_booster' => 0,
                 'cumul_full' => 741619,
@@ -2625,6 +2782,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 111,
                 'sinovac2' => 6,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             79 => 
             array (
@@ -2633,6 +2791,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 1934510,
                 'cumul_booster' => 0,
                 'cumul_full' => 741628,
@@ -2658,6 +2817,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 60,
                 'sinovac2' => 9,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             80 => 
             array (
@@ -2666,6 +2826,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 1945446,
                 'cumul_booster' => 0,
                 'cumul_full' => 742232,
@@ -2691,6 +2852,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 152,
                 'sinovac2' => 6,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             81 => 
             array (
@@ -2699,6 +2861,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 1955773,
                 'cumul_booster' => 0,
                 'cumul_full' => 742566,
@@ -2724,6 +2887,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 8,
                 'sinovac2' => 131,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             82 => 
             array (
@@ -2732,6 +2896,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 2016474,
                 'cumul_booster' => 0,
                 'cumul_full' => 770780,
@@ -2757,6 +2922,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 2080,
                 'sinovac2' => 1344,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             83 => 
             array (
@@ -2765,6 +2931,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 2094709,
                 'cumul_booster' => 0,
                 'cumul_full' => 803181,
@@ -2790,6 +2957,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 4650,
                 'sinovac2' => 2412,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             84 => 
             array (
@@ -2798,6 +2966,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 2179089,
                 'cumul_booster' => 0,
                 'cumul_full' => 837332,
@@ -2823,6 +2992,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 9314,
                 'sinovac2' => 1816,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             85 => 
             array (
@@ -2831,6 +3001,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 2260384,
                 'cumul_booster' => 0,
                 'cumul_full' => 859338,
@@ -2856,6 +3027,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 15263,
                 'sinovac2' => 1183,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             86 => 
             array (
@@ -2864,6 +3036,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 2321532,
                 'cumul_booster' => 0,
                 'cumul_full' => 878245,
@@ -2889,6 +3062,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 12069,
                 'sinovac2' => 664,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             87 => 
             array (
@@ -2897,6 +3071,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 2368245,
                 'cumul_booster' => 0,
                 'cumul_full' => 881613,
@@ -2922,6 +3097,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 19721,
                 'sinovac2' => 836,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             88 => 
             array (
@@ -2930,6 +3106,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 2414709,
                 'cumul_booster' => 0,
                 'cumul_full' => 890038,
@@ -2955,6 +3132,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 15199,
                 'sinovac2' => 1270,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             89 => 
             array (
@@ -2963,6 +3141,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 2510607,
                 'cumul_booster' => 0,
                 'cumul_full' => 916188,
@@ -2988,6 +3167,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 31019,
                 'sinovac2' => 1338,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             90 => 
             array (
@@ -2996,6 +3176,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 2611297,
                 'cumul_booster' => 0,
                 'cumul_full' => 946984,
@@ -3021,6 +3202,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 32671,
                 'sinovac2' => 3057,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             91 => 
             array (
@@ -3029,6 +3211,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 2633719,
                 'cumul_booster' => 0,
                 'cumul_full' => 948894,
@@ -3054,6 +3237,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 4134,
                 'sinovac2' => 277,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             92 => 
             array (
@@ -3062,6 +3246,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 2742304,
                 'cumul_booster' => 0,
                 'cumul_full' => 998565,
@@ -3087,6 +3272,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 26510,
                 'sinovac2' => 7959,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             93 => 
             array (
@@ -3095,6 +3281,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 2816860,
                 'cumul_booster' => 0,
                 'cumul_full' => 1026161,
@@ -3120,6 +3307,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 18730,
                 'sinovac2' => 9070,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             94 => 
             array (
@@ -3128,6 +3316,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 2883077,
                 'cumul_booster' => 0,
                 'cumul_full' => 1041241,
@@ -3153,6 +3342,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 19801,
                 'sinovac2' => 2741,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             95 => 
             array (
@@ -3161,6 +3351,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 2945934,
                 'cumul_booster' => 0,
                 'cumul_full' => 1065682,
@@ -3186,6 +3377,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 15353,
                 'sinovac2' => 7264,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             96 => 
             array (
@@ -3194,6 +3386,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 3042333,
                 'cumul_booster' => 0,
                 'cumul_full' => 1094405,
@@ -3219,6 +3412,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 29594,
                 'sinovac2' => 4236,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             97 => 
             array (
@@ -3227,6 +3421,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 3142301,
                 'cumul_booster' => 0,
                 'cumul_full' => 1118874,
@@ -3252,6 +3447,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 30702,
                 'sinovac2' => 3213,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             98 => 
             array (
@@ -3260,6 +3456,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 3249286,
                 'cumul_booster' => 0,
                 'cumul_full' => 1128777,
@@ -3285,6 +3482,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 46276,
                 'sinovac2' => 1887,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             99 => 
             array (
@@ -3293,6 +3491,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 3368638,
                 'cumul_booster' => 0,
                 'cumul_full' => 1136659,
@@ -3318,6 +3517,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 57745,
                 'sinovac2' => 4617,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             100 => 
             array (
@@ -3326,6 +3526,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 3460121,
                 'cumul_booster' => 0,
                 'cumul_full' => 1141646,
@@ -3351,6 +3552,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 43079,
                 'sinovac2' => 2243,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             101 => 
             array (
@@ -3359,6 +3561,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 3533766,
                 'cumul_booster' => 0,
                 'cumul_full' => 1143048,
@@ -3384,6 +3587,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 22740,
                 'sinovac2' => 65,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             102 => 
             array (
@@ -3392,6 +3596,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 3616590,
                 'cumul_booster' => 0,
                 'cumul_full' => 1144667,
@@ -3417,6 +3622,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 28486,
                 'sinovac2' => 96,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             103 => 
             array (
@@ -3425,6 +3631,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 3682546,
                 'cumul_booster' => 0,
                 'cumul_full' => 1149773,
@@ -3450,6 +3657,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 31284,
                 'sinovac2' => 1529,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             104 => 
             array (
@@ -3458,6 +3666,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 3837541,
                 'cumul_booster' => 0,
                 'cumul_full' => 1196206,
@@ -3483,6 +3692,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 36636,
                 'sinovac2' => 5017,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             105 => 
             array (
@@ -3491,6 +3701,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 3994715,
                 'cumul_booster' => 0,
                 'cumul_full' => 1237017,
@@ -3516,6 +3727,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 38992,
                 'sinovac2' => 9156,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             106 => 
             array (
@@ -3524,6 +3736,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 1,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 4156039,
                 'cumul_booster' => 0,
                 'cumul_full' => 1284520,
@@ -3549,6 +3762,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 40023,
                 'sinovac2' => 14615,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             107 => 
             array (
@@ -3557,6 +3771,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 4282730,
                 'cumul_booster' => 0,
                 'cumul_full' => 1314817,
@@ -3582,6 +3797,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 40674,
                 'sinovac2' => 11605,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             108 => 
             array (
@@ -3590,6 +3806,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 4420396,
                 'cumul_booster' => 0,
                 'cumul_full' => 1349019,
@@ -3615,6 +3832,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 42634,
                 'sinovac2' => 19638,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             109 => 
             array (
@@ -3623,6 +3841,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 4552434,
                 'cumul_booster' => 0,
                 'cumul_full' => 1376039,
@@ -3648,6 +3867,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 40093,
                 'sinovac2' => 14461,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             110 => 
             array (
@@ -3656,6 +3876,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 4756430,
                 'cumul_booster' => 0,
                 'cumul_full' => 1431996,
@@ -3681,6 +3902,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 68071,
                 'sinovac2' => 30654,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             111 => 
             array (
@@ -3689,6 +3911,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 4979829,
                 'cumul_booster' => 0,
                 'cumul_full' => 1488260,
@@ -3714,6 +3937,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 82522,
                 'sinovac2' => 32115,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             112 => 
             array (
@@ -3722,6 +3946,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 5194460,
                 'cumul_booster' => 0,
                 'cumul_full' => 1496556,
@@ -3747,6 +3972,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 111397,
                 'sinovac2' => 4884,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             113 => 
             array (
@@ -3755,6 +3981,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 5424038,
                 'cumul_booster' => 0,
                 'cumul_full' => 1541004,
@@ -3780,6 +4007,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 99515,
                 'sinovac2' => 25682,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             114 => 
             array (
@@ -3788,6 +4016,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 5609906,
                 'cumul_booster' => 0,
                 'cumul_full' => 1573782,
@@ -3813,6 +4042,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 86772,
                 'sinovac2' => 18190,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             115 => 
             array (
@@ -3821,6 +4051,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 5782147,
                 'cumul_booster' => 0,
                 'cumul_full' => 1610129,
@@ -3846,6 +4077,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 64118,
                 'sinovac2' => 19827,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             116 => 
             array (
@@ -3854,6 +4086,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 5928892,
                 'cumul_booster' => 0,
                 'cumul_full' => 1634379,
@@ -3879,6 +4112,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 66010,
                 'sinovac2' => 15296,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             117 => 
             array (
@@ -3887,6 +4121,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 6174291,
                 'cumul_booster' => 0,
                 'cumul_full' => 1689167,
@@ -3912,6 +4147,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 116763,
                 'sinovac2' => 29522,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             118 => 
             array (
@@ -3920,6 +4156,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 6434554,
                 'cumul_booster' => 0,
                 'cumul_full' => 1750234,
@@ -3945,6 +4182,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 127101,
                 'sinovac2' => 30315,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             119 => 
             array (
@@ -3953,6 +4191,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 6700097,
                 'cumul_booster' => 0,
                 'cumul_full' => 1830418,
@@ -3978,6 +4217,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 123395,
                 'sinovac2' => 44848,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             120 => 
             array (
@@ -3986,6 +4226,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 6977927,
                 'cumul_booster' => 0,
                 'cumul_full' => 1925264,
@@ -4011,6 +4252,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 127053,
                 'sinovac2' => 57022,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             121 => 
             array (
@@ -4019,6 +4261,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 7201068,
                 'cumul_booster' => 0,
                 'cumul_full' => 1993578,
@@ -4044,6 +4287,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 104105,
                 'sinovac2' => 41845,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             122 => 
             array (
@@ -4052,6 +4296,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 1,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 7399605,
                 'cumul_booster' => 0,
                 'cumul_full' => 2049979,
@@ -4077,6 +4322,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 89438,
                 'sinovac2' => 21973,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             123 => 
             array (
@@ -4085,6 +4331,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 7577594,
                 'cumul_booster' => 0,
                 'cumul_full' => 2116217,
@@ -4110,6 +4357,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 72652,
                 'sinovac2' => 27821,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             124 => 
             array (
@@ -4118,6 +4366,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 7787792,
                 'cumul_booster' => 0,
                 'cumul_full' => 2159884,
@@ -4143,6 +4392,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 103863,
                 'sinovac2' => 32013,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             125 => 
             array (
@@ -4151,6 +4401,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 8032227,
                 'cumul_booster' => 0,
                 'cumul_full' => 2245419,
@@ -4176,6 +4427,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 106654,
                 'sinovac2' => 36150,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             126 => 
             array (
@@ -4184,6 +4436,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 8303027,
                 'cumul_booster' => 0,
                 'cumul_full' => 2342259,
@@ -4209,6 +4462,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 124665,
                 'sinovac2' => 38314,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             127 => 
             array (
@@ -4217,6 +4471,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 1,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 8573333,
                 'cumul_booster' => 0,
                 'cumul_full' => 2428869,
@@ -4242,6 +4497,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 134924,
                 'sinovac2' => 38965,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             128 => 
             array (
@@ -4250,6 +4506,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 8814245,
                 'cumul_booster' => 0,
                 'cumul_full' => 2499598,
@@ -4275,6 +4532,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 119870,
                 'sinovac2' => 40580,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             129 => 
             array (
@@ -4283,6 +4541,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 9038436,
                 'cumul_booster' => 0,
                 'cumul_full' => 2579021,
@@ -4308,6 +4567,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 100157,
                 'sinovac2' => 40510,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             130 => 
             array (
@@ -4316,6 +4576,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 9254334,
                 'cumul_booster' => 0,
                 'cumul_full' => 2659880,
@@ -4341,6 +4602,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 88874,
                 'sinovac2' => 38140,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             131 => 
             array (
@@ -4349,6 +4611,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 9582383,
                 'cumul_booster' => 0,
                 'cumul_full' => 2781363,
@@ -4374,6 +4637,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 150209,
                 'sinovac2' => 66627,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             132 => 
             array (
@@ -4382,6 +4646,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 9938755,
                 'cumul_booster' => 0,
                 'cumul_full' => 2920678,
@@ -4407,6 +4672,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 156913,
                 'sinovac2' => 81645,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             133 => 
             array (
@@ -4415,6 +4681,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 10334153,
                 'cumul_booster' => 0,
                 'cumul_full' => 3097278,
@@ -4440,6 +4707,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 157375,
                 'sinovac2' => 108957,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             134 => 
             array (
@@ -4448,6 +4716,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 10724780,
                 'cumul_booster' => 0,
                 'cumul_full' => 3257905,
@@ -4473,6 +4742,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 167783,
                 'sinovac2' => 98341,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             135 => 
             array (
@@ -4481,6 +4751,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 11075261,
                 'cumul_booster' => 0,
                 'cumul_full' => 3387742,
@@ -4506,6 +4777,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 155243,
                 'sinovac2' => 85352,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             136 => 
             array (
@@ -4514,6 +4786,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 11411739,
                 'cumul_booster' => 0,
                 'cumul_full' => 3504499,
@@ -4539,6 +4812,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 149663,
                 'sinovac2' => 63585,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             137 => 
             array (
@@ -4547,6 +4821,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 11709876,
                 'cumul_booster' => 0,
                 'cumul_full' => 3607925,
@@ -4572,6 +4847,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 125619,
                 'sinovac2' => 62438,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             138 => 
             array (
@@ -4580,6 +4856,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 12144238,
                 'cumul_booster' => 0,
                 'cumul_full' => 3770442,
@@ -4605,6 +4882,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 176247,
                 'sinovac2' => 113016,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             139 => 
             array (
@@ -4613,6 +4891,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 12584126,
                 'cumul_booster' => 0,
                 'cumul_full' => 3941870,
@@ -4638,6 +4917,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 179479,
                 'sinovac2' => 121319,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             140 => 
             array (
@@ -4646,6 +4926,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 13043398,
                 'cumul_booster' => 0,
                 'cumul_full' => 4105928,
@@ -4671,6 +4952,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 192091,
                 'sinovac2' => 120663,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             141 => 
             array (
@@ -4679,6 +4961,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 13522424,
                 'cumul_booster' => 0,
                 'cumul_full' => 4267247,
@@ -4704,6 +4987,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 192624,
                 'sinovac2' => 124980,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             142 => 
             array (
@@ -4712,6 +4996,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 13940424,
                 'cumul_booster' => 0,
                 'cumul_full' => 4401479,
@@ -4737,6 +5022,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 165155,
                 'sinovac2' => 102050,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             143 => 
             array (
@@ -4745,6 +5031,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 14337323,
                 'cumul_booster' => 0,
                 'cumul_full' => 4533703,
@@ -4770,6 +5057,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 148687,
                 'sinovac2' => 87395,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             144 => 
             array (
@@ -4778,6 +5066,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 14693951,
                 'cumul_booster' => 0,
                 'cumul_full' => 4637837,
@@ -4803,6 +5092,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 134406,
                 'sinovac2' => 69579,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             145 => 
             array (
@@ -4811,6 +5101,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 15137200,
                 'cumul_booster' => 0,
                 'cumul_full' => 4792418,
@@ -4836,6 +5127,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 137437,
                 'sinovac2' => 105129,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             146 => 
             array (
@@ -4844,6 +5136,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 1,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 15449093,
                 'cumul_booster' => 0,
                 'cumul_full' => 4895897,
@@ -4869,6 +5162,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 117991,
                 'sinovac2' => 81566,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             147 => 
             array (
@@ -4877,6 +5171,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 15908586,
                 'cumul_booster' => 0,
                 'cumul_full' => 5066413,
@@ -4902,6 +5197,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 144445,
                 'sinovac2' => 127709,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             148 => 
             array (
@@ -4910,6 +5206,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 16428707,
                 'cumul_booster' => 0,
                 'cumul_full' => 5243272,
@@ -4935,6 +5232,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 152161,
                 'sinovac2' => 132772,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             149 => 
             array (
@@ -4943,6 +5241,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 16907862,
                 'cumul_booster' => 0,
                 'cumul_full' => 5407869,
@@ -4968,6 +5267,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 146012,
                 'sinovac2' => 122053,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             150 => 
             array (
@@ -4976,6 +5276,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 17341367,
                 'cumul_booster' => 0,
                 'cumul_full' => 5545502,
@@ -5001,6 +5302,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 129608,
                 'sinovac2' => 101485,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             151 => 
             array (
@@ -5009,6 +5311,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 17758788,
                 'cumul_booster' => 0,
                 'cumul_full' => 5670564,
@@ -5034,6 +5337,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 136049,
                 'sinovac2' => 87713,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             152 => 
             array (
@@ -5042,6 +5346,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 18297062,
                 'cumul_booster' => 0,
                 'cumul_full' => 5866233,
@@ -5067,6 +5372,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 132646,
                 'sinovac2' => 147050,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             153 => 
             array (
@@ -5075,6 +5381,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 18869395,
                 'cumul_booster' => 0,
                 'cumul_full' => 6072156,
@@ -5100,6 +5407,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 133759,
                 'sinovac2' => 154200,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             154 => 
             array (
@@ -5108,6 +5416,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 3,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 19451929,
                 'cumul_booster' => 0,
                 'cumul_full' => 6279397,
@@ -5133,6 +5442,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 157057,
                 'sinovac2' => 154609,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             155 => 
             array (
@@ -5141,6 +5451,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 4,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 20033529,
                 'cumul_booster' => 0,
                 'cumul_full' => 6498033,
@@ -5166,6 +5477,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 136167,
                 'sinovac2' => 163396,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             156 => 
             array (
@@ -5174,6 +5486,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 20569477,
                 'cumul_booster' => 0,
                 'cumul_full' => 6701088,
@@ -5199,6 +5512,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 148860,
                 'sinovac2' => 147161,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             157 => 
             array (
@@ -5207,6 +5521,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 2,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 21113553,
                 'cumul_booster' => 0,
                 'cumul_full' => 6908707,
@@ -5232,6 +5547,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 150883,
                 'sinovac2' => 145294,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             158 => 
             array (
@@ -5240,6 +5556,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 2,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 21609579,
                 'cumul_booster' => 0,
                 'cumul_full' => 7094305,
@@ -5265,6 +5582,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 141320,
                 'sinovac2' => 123914,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             159 => 
             array (
@@ -5273,6 +5591,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 22098695,
                 'cumul_booster' => 0,
                 'cumul_full' => 7346507,
@@ -5298,6 +5617,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 75586,
                 'sinovac2' => 167647,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             160 => 
             array (
@@ -5306,6 +5626,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 1,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 22603694,
                 'cumul_booster' => 0,
                 'cumul_full' => 7597511,
@@ -5331,6 +5652,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 70041,
                 'sinovac2' => 169744,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             161 => 
             array (
@@ -5339,6 +5661,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 1,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 23120035,
                 'cumul_booster' => 0,
                 'cumul_full' => 7870982,
@@ -5364,6 +5687,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 58796,
                 'sinovac2' => 180989,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             162 => 
             array (
@@ -5372,6 +5696,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 3,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 23658991,
                 'cumul_booster' => 0,
                 'cumul_full' => 8173943,
@@ -5397,6 +5722,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 66615,
                 'sinovac2' => 190011,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             163 => 
             array (
@@ -5405,6 +5731,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 1,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 24130307,
                 'cumul_booster' => 0,
                 'cumul_full' => 8439882,
@@ -5430,6 +5757,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 65001,
                 'sinovac2' => 157787,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             164 => 
             array (
@@ -5438,6 +5766,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 1,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 24582585,
                 'cumul_booster' => 0,
                 'cumul_full' => 8687155,
@@ -5463,6 +5792,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 72364,
                 'sinovac2' => 143601,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             165 => 
             array (
@@ -5471,6 +5801,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 1,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 24994557,
                 'cumul_booster' => 0,
                 'cumul_full' => 8926844,
@@ -5496,6 +5827,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 68309,
                 'sinovac2' => 131777,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             166 => 
             array (
@@ -5504,6 +5836,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 4,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 25482726,
                 'cumul_booster' => 0,
                 'cumul_full' => 9211567,
@@ -5529,6 +5862,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 66721,
                 'sinovac2' => 136300,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             167 => 
             array (
@@ -5537,6 +5871,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 2,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 25861536,
                 'cumul_booster' => 0,
                 'cumul_full' => 9413322,
@@ -5562,6 +5897,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 65424,
                 'sinovac2' => 113336,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             168 => 
             array (
@@ -5570,6 +5906,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 5,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 26381333,
                 'cumul_booster' => 0,
                 'cumul_full' => 9688039,
@@ -5595,6 +5932,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 99822,
                 'sinovac2' => 136239,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             169 => 
             array (
@@ -5603,6 +5941,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 3,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 26933867,
                 'cumul_booster' => 0,
                 'cumul_full' => 10022040,
@@ -5628,6 +5967,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 95806,
                 'sinovac2' => 146186,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             170 => 
             array (
@@ -5636,6 +5976,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 2,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 27431139,
                 'cumul_booster' => 0,
                 'cumul_full' => 10333351,
@@ -5661,6 +6002,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 105055,
                 'sinovac2' => 142129,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             171 => 
             array (
@@ -5669,6 +6011,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 27902400,
                 'cumul_booster' => 0,
                 'cumul_full' => 10623071,
@@ -5694,6 +6037,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 114908,
                 'sinovac2' => 124847,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             172 => 
             array (
@@ -5702,6 +6046,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 1,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 28342798,
                 'cumul_booster' => 0,
                 'cumul_full' => 10904838,
@@ -5727,6 +6072,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 103925,
                 'sinovac2' => 129908,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             173 => 
             array (
@@ -5735,6 +6081,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 28869307,
                 'cumul_booster' => 0,
                 'cumul_full' => 11240106,
@@ -5760,6 +6107,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 131622,
                 'sinovac2' => 129308,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             174 => 
             array (
@@ -5768,6 +6116,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 4,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 29418875,
                 'cumul_booster' => 0,
                 'cumul_full' => 11590330,
@@ -5793,6 +6142,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 143572,
                 'sinovac2' => 128277,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             175 => 
             array (
@@ -5801,6 +6151,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 6,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 29991205,
                 'cumul_booster' => 0,
                 'cumul_full' => 11955164,
@@ -5826,6 +6177,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 155128,
                 'sinovac2' => 153550,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             176 => 
             array (
@@ -5834,6 +6186,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 5,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 30540491,
                 'cumul_booster' => 0,
                 'cumul_full' => 12307201,
@@ -5859,6 +6212,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 141276,
                 'sinovac2' => 135788,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             177 => 
             array (
@@ -5867,6 +6221,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 1,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 31055443,
                 'cumul_booster' => 0,
                 'cumul_full' => 12648782,
@@ -5892,6 +6247,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 98127,
                 'sinovac2' => 148682,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             178 => 
             array (
@@ -5900,6 +6256,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 10,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 31556892,
                 'cumul_booster' => 0,
                 'cumul_full' => 12974683,
@@ -5925,6 +6282,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 89054,
                 'sinovac2' => 147708,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             179 => 
             array (
@@ -5933,6 +6291,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 2,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 32022588,
                 'cumul_booster' => 0,
                 'cumul_full' => 13289228,
@@ -5958,6 +6317,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 66575,
                 'sinovac2' => 140853,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             180 => 
             array (
@@ -5966,6 +6326,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 1,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 32441800,
                 'cumul_booster' => 0,
                 'cumul_full' => 13545772,
@@ -5991,6 +6352,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 49272,
                 'sinovac2' => 74276,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             181 => 
             array (
@@ -5999,6 +6361,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 1,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 32888715,
                 'cumul_booster' => 0,
                 'cumul_full' => 13822441,
@@ -6024,6 +6387,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 53035,
                 'sinovac2' => 70243,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             182 => 
             array (
@@ -6032,6 +6396,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 0,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 33340763,
                 'cumul_booster' => 0,
                 'cumul_full' => 14097799,
@@ -6057,6 +6422,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 55189,
                 'sinovac2' => 62944,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             183 => 
             array (
@@ -6065,6 +6431,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 1967,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 33780671,
                 'cumul_booster' => 0,
                 'cumul_full' => 14364908,
@@ -6090,6 +6457,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 49720,
                 'sinovac2' => 72257,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             184 => 
             array (
@@ -6098,6 +6466,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 1385,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 34158494,
                 'cumul_booster' => 0,
                 'cumul_full' => 14583133,
@@ -6123,6 +6492,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 47211,
                 'sinovac2' => 66989,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             185 => 
             array (
@@ -6131,6 +6501,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 6979,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 34532455,
                 'cumul_booster' => 0,
                 'cumul_full' => 14793607,
@@ -6156,6 +6527,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 46566,
                 'sinovac2' => 76791,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             186 => 
             array (
@@ -6164,6 +6536,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 7728,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 34865452,
                 'cumul_booster' => 0,
                 'cumul_full' => 14971638,
@@ -6189,6 +6562,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 34942,
                 'sinovac2' => 73815,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             187 => 
             array (
@@ -6197,6 +6571,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 4267,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 35257699,
                 'cumul_booster' => 0,
                 'cumul_full' => 15167579,
@@ -6222,6 +6597,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 32732,
                 'sinovac2' => 70010,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             188 => 
             array (
@@ -6230,6 +6606,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 2567,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 35545320,
                 'cumul_booster' => 0,
                 'cumul_full' => 15325863,
@@ -6255,6 +6632,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 16681,
                 'sinovac2' => 64109,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             189 => 
             array (
@@ -6263,6 +6641,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 2747,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 35976546,
                 'cumul_booster' => 2,
                 'cumul_full' => 15555157,
@@ -6288,6 +6667,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 32042,
                 'sinovac2' => 98052,
                 'sinovac3' => 1,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             190 => 
             array (
@@ -6296,6 +6676,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 3642,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 36381356,
                 'cumul_booster' => 11,
                 'cumul_full' => 15762796,
@@ -6321,6 +6702,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 23347,
                 'sinovac2' => 95638,
                 'sinovac3' => 8,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             191 => 
             array (
@@ -6329,6 +6711,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 5879,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 36740796,
                 'cumul_booster' => 11,
                 'cumul_full' => 15965069,
@@ -6354,6 +6737,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 25518,
                 'sinovac2' => 111075,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             192 => 
             array (
@@ -6362,6 +6746,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 7518,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 37077127,
                 'cumul_booster' => 17,
                 'cumul_full' => 16153225,
@@ -6387,6 +6772,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 24140,
                 'sinovac2' => 115215,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             193 => 
             array (
@@ -6395,6 +6781,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 7093,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 37394010,
                 'cumul_booster' => 19,
                 'cumul_full' => 16324282,
@@ -6420,6 +6807,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 21341,
                 'sinovac2' => 102250,
                 'sinovac3' => 2,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             194 => 
             array (
@@ -6428,6 +6816,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 2992,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 37737448,
                 'cumul_booster' => 21,
                 'cumul_full' => 16524341,
@@ -6453,6 +6842,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 19157,
                 'sinovac2' => 128289,
                 'sinovac3' => 2,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             195 => 
             array (
@@ -6461,6 +6851,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 2513,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 38089524,
                 'cumul_booster' => 24,
                 'cumul_full' => 16731824,
@@ -6486,6 +6877,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 19869,
                 'sinovac2' => 141693,
                 'sinovac3' => 3,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             196 => 
             array (
@@ -6494,6 +6886,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 2228,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 38441728,
                 'cumul_booster' => 29,
                 'cumul_full' => 16945051,
@@ -6519,6 +6912,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 24226,
                 'sinovac2' => 151303,
                 'sinovac3' => 5,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             197 => 
             array (
@@ -6527,6 +6921,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 4097,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 38795188,
                 'cumul_booster' => 31,
                 'cumul_full' => 17153033,
@@ -6552,6 +6947,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 23650,
                 'sinovac2' => 139366,
                 'sinovac3' => 2,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             198 => 
             array (
@@ -6560,6 +6956,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 6351,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 39113056,
                 'cumul_booster' => 34,
                 'cumul_full' => 17350965,
@@ -6585,6 +6982,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 19528,
                 'sinovac2' => 100457,
                 'sinovac3' => 2,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             199 => 
             array (
@@ -6593,6 +6991,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 7585,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 39399428,
                 'cumul_booster' => 78,
                 'cumul_full' => 17540730,
@@ -6618,6 +7017,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 18678,
                 'sinovac2' => 87395,
                 'sinovac3' => 2,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             200 => 
             array (
@@ -6626,6 +7026,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 6000,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 39650843,
                 'cumul_booster' => 189,
                 'cumul_full' => 17707595,
@@ -6651,6 +7052,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 13969,
                 'sinovac2' => 66943,
                 'sinovac3' => 61,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             201 => 
             array (
@@ -6659,6 +7061,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 4102,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 39902640,
                 'cumul_booster' => 191,
                 'cumul_full' => 17880868,
@@ -6684,6 +7087,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 16056,
                 'sinovac2' => 50515,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             202 => 
             array (
@@ -6692,6 +7096,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 5705,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 40170533,
                 'cumul_booster' => 194,
                 'cumul_full' => 18070444,
@@ -6717,6 +7122,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 17282,
                 'sinovac2' => 56615,
                 'sinovac3' => 3,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             203 => 
             array (
@@ -6725,6 +7131,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 3711,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 40444555,
                 'cumul_booster' => 198,
                 'cumul_full' => 18269800,
@@ -6750,6 +7157,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 13076,
                 'sinovac2' => 58045,
                 'sinovac3' => 3,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             204 => 
             array (
@@ -6758,6 +7166,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 3088,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 40665294,
                 'cumul_booster' => 198,
                 'cumul_full' => 18424169,
@@ -6783,6 +7192,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 10412,
                 'sinovac2' => 45306,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             205 => 
             array (
@@ -6791,6 +7201,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 3489,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 40928697,
                 'cumul_booster' => 205,
                 'cumul_full' => 18606398,
@@ -6816,6 +7227,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 10806,
                 'sinovac2' => 51947,
                 'sinovac3' => 6,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             206 => 
             array (
@@ -6824,6 +7236,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 4561,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 41183932,
                 'cumul_booster' => 205,
                 'cumul_full' => 18782589,
@@ -6849,6 +7262,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 10028,
                 'sinovac2' => 48611,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             207 => 
             array (
@@ -6857,6 +7271,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 3112,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 41422912,
                 'cumul_booster' => 205,
                 'cumul_full' => 18954969,
@@ -6882,6 +7297,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 8386,
                 'sinovac2' => 38382,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             208 => 
             array (
@@ -6890,6 +7306,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 2589,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 41735573,
                 'cumul_booster' => 205,
                 'cumul_full' => 19166130,
@@ -6915,6 +7332,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 9959,
                 'sinovac2' => 36324,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             209 => 
             array (
@@ -6923,6 +7341,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 3737,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 42011517,
                 'cumul_booster' => 206,
                 'cumul_full' => 19314494,
@@ -6948,6 +7367,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 7735,
                 'sinovac2' => 20292,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             210 => 
             array (
@@ -6956,6 +7376,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 5131,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 42352990,
                 'cumul_booster' => 209,
                 'cumul_full' => 19529101,
@@ -6981,6 +7402,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 8039,
                 'sinovac2' => 34151,
                 'sinovac3' => 3,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             211 => 
             array (
@@ -6989,6 +7411,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 2172,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 42700982,
                 'cumul_booster' => 211,
                 'cumul_full' => 19737888,
@@ -7014,6 +7437,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 7712,
                 'sinovac2' => 26361,
                 'sinovac3' => 2,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             212 => 
             array (
@@ -7022,6 +7446,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 1226,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 42993354,
                 'cumul_booster' => 213,
                 'cumul_full' => 19906698,
@@ -7047,6 +7472,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 7342,
                 'sinovac2' => 27574,
                 'sinovac3' => 1,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             213 => 
             array (
@@ -7055,6 +7481,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 2341,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 43271781,
                 'cumul_booster' => 213,
                 'cumul_full' => 20064960,
@@ -7080,6 +7507,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 5264,
                 'sinovac2' => 26826,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             214 => 
             array (
@@ -7088,6 +7516,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 1840,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 43555397,
                 'cumul_booster' => 220,
                 'cumul_full' => 20227424,
@@ -7113,6 +7542,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 5617,
                 'sinovac2' => 24190,
                 'sinovac3' => 1,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             215 => 
             array (
@@ -7121,6 +7551,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 1069,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 43893584,
                 'cumul_booster' => 225,
                 'cumul_full' => 20389419,
@@ -7146,6 +7577,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 5701,
                 'sinovac2' => 22115,
                 'sinovac3' => 3,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             216 => 
             array (
@@ -7154,6 +7586,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 2599,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 44238046,
                 'cumul_booster' => 233,
                 'cumul_full' => 20559946,
@@ -7179,6 +7612,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 4972,
                 'sinovac2' => 22544,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             217 => 
             array (
@@ -7187,6 +7621,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 1386,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 44593927,
                 'cumul_booster' => 238,
                 'cumul_full' => 20718575,
@@ -7212,6 +7647,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 4814,
                 'sinovac2' => 24081,
                 'sinovac3' => 5,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             218 => 
             array (
@@ -7220,6 +7656,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 3854,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 44937740,
                 'cumul_booster' => 251,
                 'cumul_full' => 20890814,
@@ -7245,6 +7682,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 5263,
                 'sinovac2' => 25766,
                 'sinovac3' => 1,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             219 => 
             array (
@@ -7253,6 +7691,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 1607,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 45187039,
                 'cumul_booster' => 273,
                 'cumul_full' => 21034271,
@@ -7278,6 +7717,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 3264,
                 'sinovac2' => 19780,
                 'sinovac3' => 4,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             220 => 
             array (
@@ -7286,6 +7726,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 1772,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 45411062,
                 'cumul_booster' => 277,
                 'cumul_full' => 21165439,
@@ -7311,6 +7752,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 3267,
                 'sinovac2' => 19527,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             221 => 
             array (
@@ -7319,6 +7761,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 772,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 45629492,
                 'cumul_booster' => 282,
                 'cumul_full' => 21284338,
@@ -7344,6 +7787,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 2964,
                 'sinovac2' => 13894,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             222 => 
             array (
@@ -7352,6 +7796,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 1536,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 45866413,
                 'cumul_booster' => 403,
                 'cumul_full' => 21390993,
@@ -7377,6 +7822,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 3732,
                 'sinovac2' => 14741,
                 'sinovac3' => 1,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             223 => 
             array (
@@ -7385,6 +7831,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 2179,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 46101390,
                 'cumul_booster' => 509,
                 'cumul_full' => 21499813,
@@ -7410,6 +7857,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 3568,
                 'sinovac2' => 17349,
                 'sinovac3' => 3,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             224 => 
             array (
@@ -7418,6 +7866,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 2504,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 46321129,
                 'cumul_booster' => 546,
                 'cumul_full' => 21603829,
@@ -7443,6 +7892,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 3158,
                 'sinovac2' => 13406,
                 'sinovac3' => 1,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             225 => 
             array (
@@ -7451,6 +7901,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 2100,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 46526488,
                 'cumul_booster' => 613,
                 'cumul_full' => 21698982,
@@ -7476,6 +7927,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 3843,
                 'sinovac2' => 10895,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             226 => 
             array (
@@ -7484,6 +7936,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 1771,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 46711263,
                 'cumul_booster' => 1222,
                 'cumul_full' => 21807152,
@@ -7509,6 +7962,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 3865,
                 'sinovac2' => 12333,
                 'sinovac3' => 5,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             227 => 
             array (
@@ -7517,6 +7971,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 1466,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 46863166,
                 'cumul_booster' => 1244,
                 'cumul_full' => 21917920,
@@ -7542,6 +7997,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 2728,
                 'sinovac2' => 13353,
                 'sinovac3' => 18,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             228 => 
             array (
@@ -7550,6 +8006,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 836,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 47000474,
                 'cumul_booster' => 1246,
                 'cumul_full' => 22022132,
@@ -7575,6 +8032,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 2177,
                 'sinovac2' => 10215,
                 'sinovac3' => 1,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             229 => 
             array (
@@ -7583,6 +8041,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 1858,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 47197048,
                 'cumul_booster' => 1287,
                 'cumul_full' => 22164461,
@@ -7608,6 +8067,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 3022,
                 'sinovac2' => 11930,
                 'sinovac3' => 3,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             230 => 
             array (
@@ -7616,6 +8076,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 1809,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 47414727,
                 'cumul_booster' => 1479,
                 'cumul_full' => 22324536,
@@ -7641,6 +8102,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 3140,
                 'sinovac2' => 10634,
                 'sinovac3' => 138,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             231 => 
             array (
@@ -7649,6 +8111,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 1516,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 47632727,
                 'cumul_booster' => 3694,
                 'cumul_full' => 22487056,
@@ -7674,6 +8137,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 2732,
                 'sinovac2' => 10442,
                 'sinovac3' => 16,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             232 => 
             array (
@@ -7682,6 +8146,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 7,
                 'cansino' => 2111,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 47849550,
                 'cumul_booster' => 7005,
                 'cumul_full' => 22658225,
@@ -7707,6 +8172,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 2935,
                 'sinovac2' => 9435,
                 'sinovac3' => 13,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             233 => 
             array (
@@ -7715,6 +8181,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 13,
                 'cansino' => 1904,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 48035469,
                 'cumul_booster' => 17402,
                 'cumul_full' => 22796593,
@@ -7740,6 +8207,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 3044,
                 'sinovac2' => 8644,
                 'sinovac3' => 29,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             234 => 
             array (
@@ -7748,6 +8216,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 707,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 48173668,
                 'cumul_booster' => 21014,
                 'cumul_full' => 22914762,
@@ -7773,6 +8242,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 2064,
                 'sinovac2' => 5282,
                 'sinovac3' => 25,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             235 => 
             array (
@@ -7781,6 +8251,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 1253,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 48316338,
                 'cumul_booster' => 23738,
                 'cumul_full' => 23037702,
@@ -7806,6 +8277,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 1555,
                 'sinovac2' => 4902,
                 'sinovac3' => 1,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             236 => 
             array (
@@ -7814,6 +8286,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 1263,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 48533389,
                 'cumul_booster' => 32975,
                 'cumul_full' => 23212565,
@@ -7839,6 +8312,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 3022,
                 'sinovac2' => 5714,
                 'sinovac3' => 30,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             237 => 
             array (
@@ -7847,6 +8321,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 988,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 48673443,
                 'cumul_booster' => 34378,
                 'cumul_full' => 23336022,
@@ -7872,6 +8347,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 1796,
                 'sinovac2' => 2363,
                 'sinovac3' => 0,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             238 => 
             array (
@@ -7880,6 +8356,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 1,
                 'cansino' => 1301,
                 'cansino3' => 1,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 48942480,
                 'cumul_booster' => 51702,
                 'cumul_full' => 23556771,
@@ -7905,6 +8382,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 2287,
                 'sinovac2' => 4847,
                 'sinovac3' => 19,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             239 => 
             array (
@@ -7913,6 +8391,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 1,
                 'cansino' => 1648,
                 'cansino3' => 1,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 49190073,
                 'cumul_booster' => 72275,
                 'cumul_full' => 23751259,
@@ -7938,6 +8417,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 2851,
                 'sinovac2' => 5520,
                 'sinovac3' => 10,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             240 => 
             array (
@@ -7946,6 +8426,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 1,
                 'cansino' => 2052,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 49357071,
                 'cumul_booster' => 91190,
                 'cumul_full' => 23871349,
@@ -7971,6 +8452,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 2712,
                 'sinovac2' => 4185,
                 'sinovac3' => 50,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             241 => 
             array (
@@ -7979,6 +8461,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 2,
                 'cansino' => 592,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 49478353,
                 'cumul_booster' => 99750,
                 'cumul_full' => 23972114,
@@ -8004,6 +8487,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 1705,
                 'sinovac2' => 3969,
                 'sinovac3' => 7,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             242 => 
             array (
@@ -8012,6 +8496,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 1,
                 'cansino' => 905,
                 'cansino3' => 7,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 49610715,
                 'cumul_booster' => 108528,
                 'cumul_full' => 24084281,
@@ -8037,6 +8522,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 2042,
                 'sinovac2' => 2710,
                 'sinovac3' => 1,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             243 => 
             array (
@@ -8045,6 +8531,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 5,
                 'cansino' => 1339,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 49803971,
                 'cumul_booster' => 130984,
                 'cumul_full' => 24231091,
@@ -8070,6 +8557,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 2148,
                 'sinovac2' => 4326,
                 'sinovac3' => 13,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             244 => 
             array (
@@ -8078,6 +8566,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 5,
                 'cansino' => 1132,
                 'cansino3' => 3,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 49993946,
                 'cumul_booster' => 153978,
                 'cumul_full' => 24372935,
@@ -8103,6 +8592,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 2197,
                 'sinovac2' => 6126,
                 'sinovac3' => 29,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             245 => 
             array (
@@ -8111,6 +8601,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 14,
                 'cansino' => 1323,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 50170677,
                 'cumul_booster' => 182466,
                 'cumul_full' => 24501484,
@@ -8136,6 +8627,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 1967,
                 'sinovac2' => 5911,
                 'sinovac3' => 37,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             246 => 
             array (
@@ -8144,6 +8636,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 5,
                 'cansino' => 1315,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 50364529,
                 'cumul_booster' => 235598,
                 'cumul_full' => 24622354,
@@ -8169,6 +8662,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 1951,
                 'sinovac2' => 5767,
                 'sinovac3' => 114,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             247 => 
             array (
@@ -8177,6 +8671,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 1,
                 'cansino' => 711,
                 'cansino3' => 1,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 50510411,
                 'cumul_booster' => 281383,
                 'cumul_full' => 24706853,
@@ -8202,6 +8697,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 1993,
                 'sinovac2' => 4300,
                 'sinovac3' => 74,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             248 => 
             array (
@@ -8210,6 +8706,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 552,
                 'cansino3' => 1,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 50590732,
                 'cumul_booster' => 302593,
                 'cumul_full' => 24758783,
@@ -8235,6 +8732,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 1842,
                 'sinovac2' => 3179,
                 'sinovac3' => 63,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             249 => 
             array (
@@ -8243,6 +8741,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 1,
                 'cansino' => 407,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 50658280,
                 'cumul_booster' => 319552,
                 'cumul_full' => 24802829,
@@ -8268,6 +8767,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 1570,
                 'sinovac2' => 2219,
                 'sinovac3' => 43,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             250 => 
             array (
@@ -8276,6 +8776,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 547,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 50771093,
                 'cumul_booster' => 364245,
                 'cumul_full' => 24861238,
@@ -8301,6 +8802,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 1655,
                 'sinovac2' => 3436,
                 'sinovac3' => 150,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             251 => 
             array (
@@ -8309,6 +8811,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 785,
                 'cansino3' => 1,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 50897749,
                 'cumul_booster' => 422101,
                 'cumul_full' => 24920371,
@@ -8334,6 +8837,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 1277,
                 'sinovac2' => 3600,
                 'sinovac3' => 258,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             252 => 
             array (
@@ -8342,6 +8846,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 1,
                 'cansino' => 474,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 51017185,
                 'cumul_booster' => 487722,
                 'cumul_full' => 24965522,
@@ -8367,6 +8872,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 1359,
                 'sinovac2' => 3138,
                 'sinovac3' => 457,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             253 => 
             array (
@@ -8375,6 +8881,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 242,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 51061423,
                 'cumul_booster' => 509169,
                 'cumul_full' => 24985196,
@@ -8400,6 +8907,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 750,
                 'sinovac2' => 1776,
                 'sinovac3' => 212,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             254 => 
             array (
@@ -8408,6 +8916,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 175,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 51147766,
                 'cumul_booster' => 557639,
                 'cumul_full' => 25017182,
@@ -8433,6 +8942,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 1251,
                 'sinovac2' => 3399,
                 'sinovac3' => 445,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             255 => 
             array (
@@ -8441,6 +8951,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 1,
                 'cansino' => 229,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 51192692,
                 'cumul_booster' => 583498,
                 'cumul_full' => 25031238,
@@ -8466,6 +8977,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 1420,
                 'sinovac2' => 1986,
                 'sinovac3' => 476,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             256 => 
             array (
@@ -8474,6 +8986,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 202,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 51233973,
                 'cumul_booster' => 606220,
                 'cumul_full' => 25046064,
@@ -8499,6 +9012,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 1175,
                 'sinovac2' => 1581,
                 'sinovac3' => 420,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             257 => 
             array (
@@ -8507,6 +9021,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 1,
                 'cansino' => 308,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 51346830,
                 'cumul_booster' => 666559,
                 'cumul_full' => 25091908,
@@ -8532,6 +9047,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 1205,
                 'sinovac2' => 3332,
                 'sinovac3' => 583,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             258 => 
             array (
@@ -8540,6 +9056,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 448,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 51466384,
                 'cumul_booster' => 745868,
                 'cumul_full' => 25123808,
@@ -8565,6 +9082,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 1383,
                 'sinovac2' => 2396,
                 'sinovac3' => 584,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             259 => 
             array (
@@ -8573,6 +9091,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 430,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 51602365,
                 'cumul_booster' => 833574,
                 'cumul_full' => 25163864,
@@ -8598,6 +9117,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 1396,
                 'sinovac2' => 2771,
                 'sinovac3' => 728,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             260 => 
             array (
@@ -8606,6 +9126,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 2,
                 'cansino' => 625,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 51751601,
                 'cumul_booster' => 928509,
                 'cumul_full' => 25209162,
@@ -8631,6 +9152,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 1337,
                 'sinovac2' => 3255,
                 'sinovac3' => 874,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             261 => 
             array (
@@ -8639,6 +9161,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 304,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 51870602,
                 'cumul_booster' => 1004692,
                 'cumul_full' => 25244235,
@@ -8664,6 +9187,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 1236,
                 'sinovac2' => 2851,
                 'sinovac3' => 1057,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             262 => 
             array (
@@ -8672,6 +9196,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 0,
                 'cansino' => 392,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 51930110,
                 'cumul_booster' => 1043814,
                 'cumul_full' => 25260908,
@@ -8697,6 +9222,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 1141,
                 'sinovac2' => 1807,
                 'sinovac3' => 974,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             263 => 
             array (
@@ -8705,6 +9231,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 13,
                 'cansino' => 425,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 51976819,
                 'cumul_booster' => 1075354,
                 'cumul_full' => 25272494,
@@ -8730,6 +9257,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 861,
                 'sinovac2' => 1752,
                 'sinovac3' => 516,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             264 => 
             array (
@@ -8738,6 +9266,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 11,
                 'cansino' => 504,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 52083265,
                 'cumul_booster' => 1147818,
                 'cumul_full' => 25300209,
@@ -8763,6 +9292,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 1001,
                 'sinovac2' => 2481,
                 'sinovac3' => 1506,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             265 => 
             array (
@@ -8771,6 +9301,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 36,
                 'cansino' => 501,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 52208315,
                 'cumul_booster' => 1239017,
                 'cumul_full' => 25327108,
@@ -8796,6 +9327,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 1005,
                 'sinovac2' => 2646,
                 'sinovac3' => 1386,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             266 => 
             array (
@@ -8804,6 +9336,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 19,
                 'cansino' => 252,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 52330776,
                 'cumul_booster' => 1333460,
                 'cumul_full' => 25348645,
@@ -8829,6 +9362,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 1094,
                 'sinovac2' => 2346,
                 'sinovac3' => 1560,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             267 => 
             array (
@@ -8837,6 +9371,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 32,
                 'cansino' => 374,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 52459180,
                 'cumul_booster' => 1432663,
                 'cumul_full' => 25370453,
@@ -8862,6 +9397,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 1065,
                 'sinovac2' => 2529,
                 'sinovac3' => 1711,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             268 => 
             array (
@@ -8870,6 +9406,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 12,
                 'cansino' => 483,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 52568240,
                 'cumul_booster' => 1516860,
                 'cumul_full' => 25388431,
@@ -8895,6 +9432,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 1127,
                 'sinovac2' => 2374,
                 'sinovac3' => 1962,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             269 => 
             array (
@@ -8903,6 +9441,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 10,
                 'cansino' => 175,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 52616606,
                 'cumul_booster' => 1555365,
                 'cumul_full' => 25395106,
@@ -8928,6 +9467,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 772,
                 'sinovac2' => 1825,
                 'sinovac3' => 1747,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             270 => 
             array (
@@ -8936,6 +9476,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 13,
                 'cansino' => 39,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 52655772,
                 'cumul_booster' => 1586491,
                 'cumul_full' => 25400376,
@@ -8961,6 +9502,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 610,
                 'sinovac2' => 1357,
                 'sinovac3' => 1470,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             271 => 
             array (
@@ -8969,6 +9511,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 38,
                 'cansino' => 19,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 52768659,
                 'cumul_booster' => 1681597,
                 'cumul_full' => 25412869,
@@ -8994,6 +9537,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 991,
                 'sinovac2' => 2029,
                 'sinovac3' => 2481,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             272 => 
             array (
@@ -9002,6 +9546,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 22,
                 'cansino' => 42,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 52908567,
                 'cumul_booster' => 1804846,
                 'cumul_full' => 25423999,
@@ -9027,6 +9572,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 812,
                 'sinovac2' => 1696,
                 'sinovac3' => 3117,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             273 => 
             array (
@@ -9035,6 +9581,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 17,
                 'cansino' => 40,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 53051686,
                 'cumul_booster' => 1933433,
                 'cumul_full' => 25433095,
@@ -9060,6 +9607,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 855,
                 'sinovac2' => 1726,
                 'sinovac3' => 4510,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             274 => 
             array (
@@ -9068,6 +9616,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 120,
                 'cansino' => 66,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 53195425,
                 'cumul_booster' => 2064738,
                 'cumul_full' => 25439480,
@@ -9093,6 +9642,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 720,
                 'sinovac2' => 1248,
                 'sinovac3' => 4530,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             275 => 
             array (
@@ -9101,6 +9651,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 171,
                 'cansino' => 24,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 53312065,
                 'cumul_booster' => 2169229,
                 'cumul_full' => 25446534,
@@ -9126,6 +9677,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 831,
                 'sinovac2' => 1602,
                 'sinovac3' => 5268,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             276 => 
             array (
@@ -9134,6 +9686,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 129,
                 'cansino' => 18,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 53368841,
                 'cumul_booster' => 2217787,
                 'cumul_full' => 25452156,
@@ -9159,6 +9712,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 563,
                 'sinovac2' => 1625,
                 'sinovac3' => 6186,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             277 => 
             array (
@@ -9167,6 +9721,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 190,
                 'cansino' => 229,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 53412655,
                 'cumul_booster' => 2255624,
                 'cumul_full' => 25455986,
@@ -9192,6 +9747,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 349,
                 'sinovac2' => 957,
                 'sinovac3' => 3516,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             278 => 
             array (
@@ -9200,6 +9756,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 400,
                 'cansino' => 147,
                 'cansino3' => 1,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 53524745,
                 'cumul_booster' => 2355831,
                 'cumul_full' => 25463203,
@@ -9225,6 +9782,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 661,
                 'sinovac2' => 1467,
                 'sinovac3' => 6641,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             279 => 
             array (
@@ -9233,6 +9791,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 305,
                 'cansino' => 571,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 53663927,
                 'cumul_booster' => 2481034,
                 'cumul_full' => 25472369,
@@ -9258,6 +9817,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 708,
                 'sinovac2' => 1553,
                 'sinovac3' => 7351,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             280 => 
             array (
@@ -9266,6 +9826,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 512,
                 'cansino' => 839,
                 'cansino3' => 1,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 53810875,
                 'cumul_booster' => 2614499,
                 'cumul_full' => 25481006,
@@ -9291,6 +9852,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 795,
                 'sinovac2' => 1410,
                 'sinovac3' => 12353,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             281 => 
             array (
@@ -9299,6 +9861,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 277,
                 'cansino' => 246,
                 'cansino3' => 2,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 53965579,
                 'cumul_booster' => 2754230,
                 'cumul_full' => 25490460,
@@ -9324,6 +9887,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 821,
                 'sinovac2' => 1462,
                 'sinovac3' => 15155,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             282 => 
             array (
@@ -9332,6 +9896,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 176,
                 'cansino' => 184,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 54095095,
                 'cumul_booster' => 2871962,
                 'cumul_full' => 25497740,
@@ -9357,6 +9922,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 852,
                 'sinovac2' => 1291,
                 'sinovac3' => 16615,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             283 => 
             array (
@@ -9365,6 +9931,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 864,
                 'cansino' => 443,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 54167176,
                 'cumul_booster' => 2935938,
                 'cumul_full' => 25502573,
@@ -9390,6 +9957,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 516,
                 'sinovac2' => 1146,
                 'sinovac3' => 14294,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             284 => 
             array (
@@ -9398,6 +9966,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 802,
                 'cansino' => 422,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 54224516,
                 'cumul_booster' => 2988110,
                 'cumul_full' => 25505995,
@@ -9423,6 +9992,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 418,
                 'sinovac2' => 736,
                 'sinovac3' => 9388,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             285 => 
             array (
@@ -9431,6 +10001,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 745,
                 'cansino' => 562,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 54326937,
                 'cumul_booster' => 3078627,
                 'cumul_full' => 25512986,
@@ -9456,6 +10027,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 729,
                 'sinovac2' => 1247,
                 'sinovac3' => 18775,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             286 => 
             array (
@@ -9464,6 +10036,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 864,
                 'cansino' => 356,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 54456282,
                 'cumul_booster' => 3195903,
                 'cumul_full' => 25520280,
@@ -9489,6 +10062,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 768,
                 'sinovac2' => 1161,
                 'sinovac3' => 22019,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             287 => 
             array (
@@ -9497,6 +10071,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 1285,
                 'cansino' => 308,
                 'cansino3' => 12,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 54586707,
                 'cumul_booster' => 3314492,
                 'cumul_full' => 25527223,
@@ -9522,6 +10097,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 812,
                 'sinovac2' => 1308,
                 'sinovac3' => 23131,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             288 => 
             array (
@@ -9530,6 +10106,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 1013,
                 'cansino' => 470,
                 'cansino3' => 4,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 54732731,
                 'cumul_booster' => 3447200,
                 'cumul_full' => 25535595,
@@ -9555,6 +10132,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 694,
                 'sinovac2' => 1273,
                 'sinovac3' => 26188,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             289 => 
             array (
@@ -9563,6 +10141,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 1566,
                 'cansino' => 335,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 54861068,
                 'cumul_booster' => 3564148,
                 'cumul_full' => 25543080,
@@ -9588,6 +10167,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 590,
                 'sinovac2' => 1400,
                 'sinovac3' => 23128,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             290 => 
             array (
@@ -9596,6 +10176,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 539,
                 'cansino' => 110,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 54934936,
                 'cumul_booster' => 3633704,
                 'cumul_full' => 25545967,
@@ -9621,6 +10202,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 408,
                 'sinovac2' => 755,
                 'sinovac3' => 17525,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             291 => 
             array (
@@ -9629,6 +10211,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 676,
                 'cansino' => 153,
                 'cansino3' => 6,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 55004551,
                 'cumul_booster' => 3699316,
                 'cumul_full' => 25548498,
@@ -9654,6 +10237,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 299,
                 'sinovac2' => 636,
                 'sinovac3' => 14247,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             292 => 
             array (
@@ -9662,6 +10246,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 1602,
                 'cansino' => 209,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 55138314,
                 'cumul_booster' => 3823441,
                 'cumul_full' => 25554048,
@@ -9687,6 +10272,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 600,
                 'sinovac2' => 966,
                 'sinovac3' => 20620,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             293 => 
             array (
@@ -9695,6 +10281,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 1740,
                 'cansino' => 279,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 55304759,
                 'cumul_booster' => 3980132,
                 'cumul_full' => 25559665,
@@ -9720,6 +10307,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 625,
                 'sinovac2' => 890,
                 'sinovac3' => 22111,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             294 => 
             array (
@@ -9728,6 +10316,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 1458,
                 'cansino' => 376,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 55479307,
                 'cumul_booster' => 4144627,
                 'cumul_full' => 25565481,
@@ -9753,6 +10342,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 646,
                 'sinovac2' => 1024,
                 'sinovac3' => 23496,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             295 => 
             array (
@@ -9761,6 +10351,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 1757,
                 'cansino' => 260,
                 'cansino3' => 3,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 55656575,
                 'cumul_booster' => 4310854,
                 'cumul_full' => 25572084,
@@ -9786,6 +10377,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 572,
                 'sinovac2' => 838,
                 'sinovac3' => 21376,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             296 => 
             array (
@@ -9794,6 +10386,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 1470,
                 'cansino' => 202,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 55821709,
                 'cumul_booster' => 4467772,
                 'cumul_full' => 25577218,
@@ -9819,6 +10412,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 569,
                 'sinovac2' => 960,
                 'sinovac3' => 21991,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             297 => 
             array (
@@ -9827,6 +10421,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 1368,
                 'cansino' => 204,
                 'cansino3' => 4,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 55895468,
                 'cumul_booster' => 4538033,
                 'cumul_full' => 25579555,
@@ -9852,6 +10447,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 424,
                 'sinovac2' => 696,
                 'sinovac3' => 12511,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             298 => 
             array (
@@ -9860,6 +10456,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 2542,
                 'cansino' => 294,
                 'cansino3' => 1,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 55976437,
                 'cumul_booster' => 4615448,
                 'cumul_full' => 25581783,
@@ -9885,6 +10482,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 224,
                 'sinovac2' => 298,
                 'sinovac3' => 11940,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             299 => 
             array (
@@ -9893,6 +10491,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 1684,
                 'cansino' => 214,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 56125881,
                 'cumul_booster' => 4756779,
                 'cumul_full' => 25586514,
@@ -9918,6 +10517,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 533,
                 'sinovac2' => 777,
                 'sinovac3' => 21058,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             300 => 
             array (
@@ -9926,6 +10526,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 2135,
                 'cansino' => 175,
                 'cansino3' => 1,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 56297640,
                 'cumul_booster' => 4920508,
                 'cumul_full' => 25591248,
@@ -9951,6 +10552,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 449,
                 'sinovac2' => 708,
                 'sinovac3' => 19382,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             301 => 
             array (
@@ -9959,6 +10561,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 3254,
                 'cansino' => 284,
                 'cansino3' => 26,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 56479110,
                 'cumul_booster' => 5093693,
                 'cumul_full' => 25596241,
@@ -9984,6 +10587,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 518,
                 'sinovac2' => 712,
                 'sinovac3' => 20645,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             302 => 
             array (
@@ -9992,6 +10596,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 3400,
                 'cansino' => 191,
                 'cansino3' => 13,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 56660879,
                 'cumul_booster' => 5266242,
                 'cumul_full' => 25601844,
@@ -10017,6 +10622,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 405,
                 'sinovac2' => 826,
                 'sinovac3' => 18862,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             303 => 
             array (
@@ -10025,6 +10631,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 2556,
                 'cansino' => 105,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 56805048,
                 'cumul_booster' => 5404019,
                 'cumul_full' => 25605978,
@@ -10050,6 +10657,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 423,
                 'sinovac2' => 893,
                 'sinovac3' => 16286,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             304 => 
             array (
@@ -10058,6 +10666,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 1158,
                 'cansino' => 93,
                 'cansino3' => 1,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 56831300,
                 'cumul_booster' => 5428319,
                 'cumul_full' => 25607404,
@@ -10083,6 +10692,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 126,
                 'sinovac2' => 295,
                 'sinovac3' => 2912,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             305 => 
             array (
@@ -10091,6 +10701,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 2175,
                 'cansino' => 59,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 56896955,
                 'cumul_booster' => 5491554,
                 'cumul_full' => 25608951,
@@ -10116,6 +10727,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 188,
                 'sinovac2' => 440,
                 'sinovac3' => 8052,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             306 => 
             array (
@@ -10124,6 +10736,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 3023,
                 'cansino' => 197,
                 'cansino3' => 23,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 57029567,
                 'cumul_booster' => 5615393,
                 'cumul_full' => 25614386,
@@ -10149,6 +10762,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 475,
                 'sinovac2' => 690,
                 'sinovac3' => 17346,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             307 => 
             array (
@@ -10157,6 +10771,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 9619,
                 'cansino' => 204,
                 'cansino3' => 10,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 57186781,
                 'cumul_booster' => 5764067,
                 'cumul_full' => 25619449,
@@ -10182,6 +10797,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 527,
                 'sinovac2' => 725,
                 'sinovac3' => 18869,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             308 => 
             array (
@@ -10190,6 +10806,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 14254,
                 'cansino' => 222,
                 'cansino3' => 18,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 57376505,
                 'cumul_booster' => 5945113,
                 'cumul_full' => 25624690,
@@ -10215,6 +10832,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 392,
                 'sinovac2' => 753,
                 'sinovac3' => 18368,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             309 => 
             array (
@@ -10223,6 +10841,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 17557,
                 'cansino' => 171,
                 'cansino3' => 3,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 57585476,
                 'cumul_booster' => 6145586,
                 'cumul_full' => 25629710,
@@ -10248,6 +10867,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 439,
                 'sinovac2' => 663,
                 'sinovac3' => 18396,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             310 => 
             array (
@@ -10256,6 +10876,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 16528,
                 'cansino' => 285,
                 'cansino3' => 2,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 57769973,
                 'cumul_booster' => 6322676,
                 'cumul_full' => 25634359,
@@ -10281,6 +10902,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 423,
                 'sinovac2' => 655,
                 'sinovac3' => 15266,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             311 => 
             array (
@@ -10289,6 +10911,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 10688,
                 'cansino' => 68,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 57811707,
                 'cumul_booster' => 6363033,
                 'cumul_full' => 25635216,
@@ -10314,6 +10937,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 102,
                 'sinovac2' => 190,
                 'sinovac3' => 2582,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             312 => 
             array (
@@ -10322,6 +10946,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 12169,
                 'cansino' => 121,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 57907052,
                 'cumul_booster' => 6455637,
                 'cumul_full' => 25636691,
@@ -10347,6 +10972,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 177,
                 'sinovac2' => 308,
                 'sinovac3' => 7631,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             313 => 
             array (
@@ -10355,6 +10981,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 20357,
                 'cansino' => 166,
                 'cansino3' => 1,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 58118741,
                 'cumul_booster' => 6660423,
                 'cumul_full' => 25640779,
@@ -10380,6 +11007,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 352,
                 'sinovac2' => 571,
                 'sinovac3' => 11727,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             314 => 
             array (
@@ -10388,6 +11016,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 20050,
                 'cansino' => 256,
                 'cansino3' => 44,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 58363404,
                 'cumul_booster' => 6898012,
                 'cumul_full' => 25644954,
@@ -10413,6 +11042,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 385,
                 'sinovac2' => 601,
                 'sinovac3' => 11435,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             315 => 
             array (
@@ -10421,6 +11051,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 24390,
                 'cansino' => 268,
                 'cansino3' => 16,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 58611947,
                 'cumul_booster' => 7139511,
                 'cumul_full' => 25649197,
@@ -10446,6 +11077,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 364,
                 'sinovac2' => 634,
                 'sinovac3' => 11767,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             316 => 
             array (
@@ -10454,6 +11086,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 27137,
                 'cansino' => 253,
                 'cansino3' => 16,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 58868247,
                 'cumul_booster' => 7388078,
                 'cumul_full' => 25653976,
@@ -10479,6 +11112,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 377,
                 'sinovac2' => 644,
                 'sinovac3' => 11502,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             317 => 
             array (
@@ -10487,6 +11121,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 27937,
                 'cansino' => 170,
                 'cansino3' => 0,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 59088270,
                 'cumul_booster' => 7601845,
                 'cumul_full' => 25657553,
@@ -10512,6 +11147,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 381,
                 'sinovac2' => 599,
                 'sinovac3' => 12103,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             318 => 
             array (
@@ -10520,6 +11156,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 23361,
                 'cansino' => 105,
                 'cansino3' => 1,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 59214861,
                 'cumul_booster' => 7725931,
                 'cumul_full' => 25658807,
@@ -10545,6 +11182,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 321,
                 'sinovac2' => 461,
                 'sinovac3' => 8832,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             319 => 
             array (
@@ -10553,6 +11191,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 23505,
                 'cansino' => 253,
                 'cansino3' => 1,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 59326580,
                 'cumul_booster' => 7835136,
                 'cumul_full' => 25660409,
@@ -10578,6 +11217,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 209,
                 'sinovac2' => 200,
                 'sinovac3' => 7201,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             320 => 
             array (
@@ -10586,6 +11226,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 43627,
                 'cansino' => 216,
                 'cansino3' => 14,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 59552804,
                 'cumul_booster' => 8055781,
                 'cumul_full' => 25663833,
@@ -10611,6 +11252,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 396,
                 'sinovac2' => 467,
                 'sinovac3' => 12741,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             321 => 
             array (
@@ -10619,6 +11261,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 46298,
                 'cansino' => 77,
                 'cansino3' => 5,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 59809427,
                 'cumul_booster' => 8306945,
                 'cumul_full' => 25667105,
@@ -10644,6 +11287,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 334,
                 'sinovac2' => 442,
                 'sinovac3' => 11417,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             322 => 
             array (
@@ -10652,6 +11296,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 47331,
                 'cansino' => 139,
                 'cansino3' => 83,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 60068005,
                 'cumul_booster' => 8560163,
                 'cumul_full' => 25670424,
@@ -10677,6 +11322,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 333,
                 'sinovac2' => 455,
                 'sinovac3' => 12009,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             323 => 
             array (
@@ -10685,6 +11331,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 48379,
                 'cansino' => 116,
                 'cansino3' => 51,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 60337736,
                 'cumul_booster' => 8824151,
                 'cumul_full' => 25673972,
@@ -10710,6 +11357,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 277,
                 'sinovac2' => 407,
                 'sinovac3' => 11600,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             324 => 
             array (
@@ -10718,6 +11366,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 50090,
                 'cansino' => 90,
                 'cansino3' => 358,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 60576085,
                 'cumul_booster' => 9058451,
                 'cumul_full' => 25676253,
@@ -10743,6 +11392,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 233,
                 'sinovac2' => 395,
                 'sinovac3' => 12297,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             325 => 
             array (
@@ -10751,6 +11401,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 57982,
                 'cansino' => 222,
                 'cansino3' => 2,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 60744994,
                 'cumul_booster' => 9225427,
                 'cumul_full' => 25677167,
@@ -10776,6 +11427,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 200,
                 'sinovac2' => 186,
                 'sinovac3' => 7962,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             326 => 
             array (
@@ -10784,6 +11436,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 57569,
                 'cansino' => 46,
                 'cansino3' => 3,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 60893058,
                 'cumul_booster' => 9371751,
                 'cumul_full' => 25678041,
@@ -10809,6 +11462,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 134,
                 'sinovac2' => 185,
                 'sinovac3' => 6695,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
             327 => 
             array (
@@ -10817,6 +11471,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'astra3' => 62458,
                 'cansino' => 126,
                 'cansino3' => 26,
+                'created_at' => '2022-01-21 14:44:01',
                 'cumul' => 61135763,
                 'cumul_booster' => 9609454,
                 'cumul_full' => 25681131,
@@ -10842,6 +11497,7 @@ class VaxVaxMalaysiasTableSeeder extends Seeder
                 'sinovac1' => 270,
                 'sinovac2' => 348,
                 'sinovac3' => 9850,
+                'updated_at' => '2022-01-21 14:44:01',
             ),
         ));
         

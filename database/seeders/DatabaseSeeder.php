@@ -59,5 +59,20 @@ class DatabaseSeeder extends Seeder
             VaxVaxStatesTableSeeder::class,
         ]);
 
+        $this->call(CovidCasesMalaysiaTableSeeder::class);
+        $this->call(CovidCasesStatesTableSeeder::class);
+        $this->call(CovidClustersTableSeeder::class);
+        $this->call(CovidDeathsMalaysiaTableSeeder::class);
+        $this->call(CovidDeathsStatesTableSeeder::class);
+        $this->call(CovidHospitalsTableSeeder::class);
+        $this->call(CovidIcusTableSeeder::class);
+        $this->call(CovidPKRCTableSeeder::class);
+        $this->call(CovidPopulationsTableSeeder::class);
+        $this->call(CovidTestMalaysiaTableSeeder::class);
+        $this->call(CovidTestStatesTableSeeder::class);
+        $this->call(VaxVaxMalaysiasTableSeeder::class);
+        $this->call(VaxVaxRegMalaysiasTableSeeder::class);
+        $this->call(VaxVaxRegStatesTableSeeder::class);
+        $this->call(VaxVaxStatesTableSeeder::class);
     }
 }
