@@ -120,12 +120,22 @@ class ImportPandemicService
                     'cases_recovered' => self::takeIndex($item, $i++),
                     'cases_active' => self::takeIndex($item, $i++),
                     'cases_cluster' => self::takeIndex($item, $i++),
+                    'cases_unvax' => self::takeIndex($item, $i++),
                     'cases_pvax' => self::takeIndex($item, $i++),
                     'cases_fvax' => self::takeIndex($item, $i++),
+                    'cases_boost' => self::takeIndex($item, $i++),
                     'cases_child' => self::takeIndex($item, $i++),
                     'cases_adolescent' => self::takeIndex($item, $i++),
                     'cases_adult' => self::takeIndex($item, $i++),
                     'cases_elderly' => self::takeIndex($item, $i++),
+                    'cases_0_4' => self::takeIndex($item, $i++),
+                    'cases_5_11' => self::takeIndex($item, $i++),
+                    'cases_12_17' => self::takeIndex($item, $i++),
+                    'cases_18_29' => self::takeIndex($item, $i++),
+                    'cases_30_59' => self::takeIndex($item, $i++),
+                    'cases_60_69' => self::takeIndex($item, $i++),
+                    'cases_70_79' => self::takeIndex($item, $i++),
+                    'cases_80' => self::takeIndex($item, $i++),
                     'cluster_import' => self::takeIndex($item, $i++),
                     'cluster_religious' => self::takeIndex($item, $i++),
                     'cluster_community' => self::takeIndex($item, $i++),
@@ -180,12 +190,23 @@ class ImportPandemicService
                 $case->cases_recovered = self::takeIndex($item, $i++);
                 $case->cases_active = self::takeIndex($item, $i++);
                 $case->cases_cluster = self::takeIndex($item, $i++);
+
+                $case->cases_unvax = self::takeIndex($item, $i++);
                 $case->cases_pvax = self::takeIndex($item, $i++);
                 $case->cases_fvax = self::takeIndex($item, $i++);
                 $case->cases_child = self::takeIndex($item, $i++);
                 $case->cases_adolescent = self::takeIndex($item, $i++);
                 $case->cases_adult = self::takeIndex($item, $i++);
                 $case->cases_elderly = self::takeIndex($item, $i++);
+
+                $case->cases_0_4 = self::takeIndex($item, $i++);
+                $case->cases_5_11 = self::takeIndex($item, $i++);
+                $case->cases_12_17 = self::takeIndex($item, $i++);
+                $case->cases_18_29 = self::takeIndex($item, $i++);
+                $case->cases_30_59 = self::takeIndex($item, $i++);
+                $case->cases_60_69 = self::takeIndex($item, $i++);
+                $case->cases_70_79 = self::takeIndex($item, $i++);
+                $case->cases_80 = self::takeIndex($item, $i++);
 
                 $case->cases_cumulative = 0;
                 $case->cases_recovered_cumulative = 0;
@@ -227,9 +248,12 @@ class ImportPandemicService
                 $collect->state = self::takeIndex($item, $i++);
                 $collect->deaths_new = self::takeIndex($item, $i++);
                 $collect->deaths_bid = self::takeIndex($item, $i++);
+                $collect->deaths_new_dod = self::takeIndex($item, $i++);
                 $collect->deaths_bid_dod = self::takeIndex($item, $i++);
+                $collect->deaths_unvax = self::takeIndex($item, $i++);
                 $collect->deaths_pvax = self::takeIndex($item, $i++);
                 $collect->deaths_fvax = self::takeIndex($item, $i++);
+                $collect->deaths_boost = self::takeIndex($item, $i++);
                 $collect->deaths_tat = self::takeIndex($item, $i++);
                 return $collect;
             });
@@ -278,9 +302,12 @@ class ImportPandemicService
                     'date' => self::takeIndex($item, $i++),
                     'deaths_new' => self::takeIndex($item, $i++),
                     'deaths_bid' => self::takeIndex($item, $i++),
+                    'deaths_new_dod' => self::takeIndex($item, $i++),
                     'deaths_bid_dod' => self::takeIndex($item, $i++),
+                    'deaths_unvax' => self::takeIndex($item, $i++),
                     'deaths_pvax' => self::takeIndex($item, $i++),
                     'deaths_fvax' => self::takeIndex($item, $i++),
+                    'deaths_boost' => self::takeIndex($item, $i++),
                     'deaths_tat' => self::takeIndex($item, $i++),
                     'deaths_new_cumulative' => $cumDeathMalaysia,
                     'deaths_bid_cumulative' => $cumBidMalaysia,
@@ -362,6 +389,8 @@ class ImportPandemicService
                     'icu' => self::takeIndex($item, $i++),
                     'deaths' => self::takeIndex($item, $i++),
                     'recovered' => self::takeIndex($item, $i++),
+                    'summary_bm' => self::takeIndex($item, $i++),
+                    'summary_en' => self::takeIndex($item, $i++),
                     'created_at' => now(),
                     'updated_at' => now(),
                 ];
@@ -510,12 +539,21 @@ class ImportPandemicService
                     'cumul_booster' => $this->takeIndex($vax, $i++),
                     'pfizer1' => $this->takeIndex($vax, $i++),
                     'pfizer2' => $this->takeIndex($vax, $i++),
+                    'pfizer3' => $this->takeIndex($vax, $i++),
                     'sinovac1' => $this->takeIndex($vax, $i++),
                     'sinovac2' => $this->takeIndex($vax, $i++),
+                    'sinovac3' => $this->takeIndex($vax, $i++),
                     'astra1' => $this->takeIndex($vax, $i++),
                     'astra2' => $this->takeIndex($vax, $i++),
+                    'astra3' => $this->takeIndex($vax, $i++),
+                    'sinopharm1' => $this->takeIndex($vax, $i++),
+                    'sinopharm2' => $this->takeIndex($vax, $i++),
+                    'sinopharm3' => $this->takeIndex($vax, $i++),
                     'cansino' => $this->takeIndex($vax, $i++),
-                    'pending' => $this->takeIndex($vax, $i++),
+                    'cansino3' => $this->takeIndex($vax, $i++),
+                    'pending1' => $this->takeIndex($vax, $i++),
+                    'pending2' => $this->takeIndex($vax, $i++),
+                    'pending3' => $this->takeIndex($vax, $i++),
                     'created_at' => now(),
                     'updated_at' => now(),
                 ];
@@ -549,12 +587,21 @@ class ImportPandemicService
                     'cumul_booster' => $this->takeIndex($vax, $i++),
                     'pfizer1' => $this->takeIndex($vax, $i++),
                     'pfizer2' => $this->takeIndex($vax, $i++),
+                    'pfizer3' => $this->takeIndex($vax, $i++),
                     'sinovac1' => $this->takeIndex($vax, $i++),
                     'sinovac2' => $this->takeIndex($vax, $i++),
+                    'sinovac3' => $this->takeIndex($vax, $i++),
                     'astra1' => $this->takeIndex($vax, $i++),
                     'astra2' => $this->takeIndex($vax, $i++),
-                    'cansino' => $this->takeIndex($vax, $i++),
-                    'pending' => $this->takeIndex($vax, $i++),
+                    'astra3' => $this->takeIndex($vax, $i++),
+                    'sinopharm1'=> $this->takeIndex($vax, $i++),
+                    'sinopharm2'=> $this->takeIndex($vax, $i++),
+                    'sinopharm3'=> $this->takeIndex($vax, $i++),
+                    'cansino'=> $this->takeIndex($vax, $i++),
+                    'cansino3' => $this->takeIndex($vax, $i++),
+                    'pending1' => $this->takeIndex($vax, $i++),
+                    'pending2' => $this->takeIndex($vax, $i++),
+                    'pending3' => $this->takeIndex($vax, $i++),
                     'created_at' => now(),
                     'updated_at' => now(),
                 ];
