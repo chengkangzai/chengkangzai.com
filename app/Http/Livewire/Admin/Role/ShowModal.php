@@ -10,7 +10,6 @@ use Spatie\Permission\Models\Role;
 
 class ShowModal extends ModalComponent
 {
-
     public $role;
 
     public function mount($role)

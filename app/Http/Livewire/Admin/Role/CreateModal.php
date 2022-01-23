@@ -32,11 +32,15 @@ class CreateModal extends ModalComponent implements HasForms
     protected function getFormSchema(): array
     {
         return [
-            TextInput::make('name')->required()->hint('The title of the role.')->autofocus(),
+            TextInput::make('name')
+                ->required()
+                ->autofocus()
+                ->label(__('Name')),
             BelongsToManyMultiSelect::make('permissions')
                 ->relationship('permissions', 'name')
                 ->preload()
                 ->required()
+                ->label(__('Permissions'))
         ];
     }
 
