@@ -15,6 +15,7 @@ class WorkCrud extends Component
 
     public function render(): Factory|View|Application
     {
+        //TODO add, edit with spatie media library
         return view('livewire.admin.work-crud', [
             'works' => Works::with('media')->withCount('tags')->paginate(10)
         ])
