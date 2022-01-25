@@ -81,7 +81,6 @@ class CreateModal extends Component implements HasForms
                         ->fileAttachmentsDisk('s3')
                         ->fileAttachmentsDirectory('chengkangzai.com/posts')
                         ->label(__('Content'))
-                        ->placeholder(__('The content of the post.'))
                 ])
 
         ];

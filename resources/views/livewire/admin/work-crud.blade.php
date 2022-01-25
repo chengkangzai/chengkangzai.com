@@ -1,15 +1,7 @@
-@php
-    /* @var App\Models\Works $work */
-    /* @var \Illuminate\Support\Collection $works */
-@endphp
-
-@extends('layouts.admin')
-
-@section('header')
-    {{ __('Work') }}
-@endsection
-
-@section('content')
+<div>
+    @php
+        /* @var App\Models\Works $work */
+    @endphp
     <div class="py-3 px-5 mb-2 rounded-md text-base border border-gray-500 bg-white">
         <ul class="flex">
             <li><a href="{{route('admin.home')}}" class="underline hover:text-gray-500">{{__('Home')}}</a>
@@ -20,7 +12,7 @@
     </div>
 
     <div class="flex flex-row-reverse overflow-hidden w-full">
-        <x-button class="text-base my-1" :href="route('admin.works.create')">
+        <x-button class="text-base my-1" wire:click="$emit('openModal', 'admin.work.create-modal')">
             {{ __('Create Work') }}
         </x-button>
     </div>
@@ -52,7 +44,7 @@
                                 <div class="flex items-center">
                                     <div class="flex-shrink-0 h-10 w-10">
                                         <img
-                                            src="{{$work->img_link}}"
+                                            src="{{$work->getMedia('photos')->first()->getUrl('thumb')}}"
                                             alt="avatar" class="h-10 w-10 rounded-full object-cover">
                                     </div>
 
@@ -119,4 +111,4 @@
             </div>
         </div>
     </div>
-@endsection
+</div>
