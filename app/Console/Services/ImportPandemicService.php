@@ -229,7 +229,7 @@ class ImportPandemicService
                 $case->cases_recovered_cumulative = $cumRecovered;
             }
         }
-        return $collection;
+        return $collection->map(fn(DeathsState $item) => $item->toArray());
     }
 
     private function getDeathsState(): ?Collection
@@ -279,7 +279,7 @@ class ImportPandemicService
                 $case->deaths_bid_dod_cumulative = $cumBidDod;
             }
         }
-        return $collection;
+        return $collection->map(fn(DeathsState $item) => $item->toArray());
     }
 
     private function getDeathsMalaysia(): ?Collection
@@ -594,10 +594,10 @@ class ImportPandemicService
                     'astra1' => $this->takeIndex($vax, $i++),
                     'astra2' => $this->takeIndex($vax, $i++),
                     'astra3' => $this->takeIndex($vax, $i++),
-                    'sinopharm1'=> $this->takeIndex($vax, $i++),
-                    'sinopharm2'=> $this->takeIndex($vax, $i++),
-                    'sinopharm3'=> $this->takeIndex($vax, $i++),
-                    'cansino'=> $this->takeIndex($vax, $i++),
+                    'sinopharm1' => $this->takeIndex($vax, $i++),
+                    'sinopharm2' => $this->takeIndex($vax, $i++),
+                    'sinopharm3' => $this->takeIndex($vax, $i++),
+                    'cansino' => $this->takeIndex($vax, $i++),
                     'cansino3' => $this->takeIndex($vax, $i++),
                     'pending1' => $this->takeIndex($vax, $i++),
                     'pending2' => $this->takeIndex($vax, $i++),
