@@ -71,6 +71,26 @@ class ImportPandemicService
         }
     }
 
+    #[ArrayShape(['content' => "\Illuminate\Support\Collection", 'exists' => "bool"])]
+    private function getRecord(string $key): array
+    {
+        $content = $this->recordHolder[$key];
+        $hash = sha1($content);
+        $exists = true;
+        if (!(Cache::has($key) && Cache::get($key) == $hash)) {
+            Cache::put($key, $hash, now()->addDay());
+            $exists = false;
+        }
+
+        return [$content, $exists];
+    }
+
+    private static function takeIndex(array $array, int $index, $mode = 'number'): mixed
+    {
+        $defaultReturn = $mode == 'string' ? '' : 0;
+        return (!isset($array[$index]) || $array[$index] == '') ? $defaultReturn : $array[$index];
+    }
+
     /**
      * @throws \Exception
      */
@@ -150,26 +170,6 @@ class ImportPandemicService
                 ];
             });
 
-    }
-
-    #[ArrayShape(['content' => "\Illuminate\Support\Collection", 'exists' => "bool"])]
-    private function getRecord(string $key): array
-    {
-        $content = $this->recordHolder[$key];
-        $hash = sha1($content);
-        $exists = true;
-        if (!(Cache::has($key) && Cache::get($key) == $hash)) {
-            Cache::put($key, $hash, now()->addDay());
-            $exists = false;
-        }
-
-        return [$content, $exists];
-    }
-
-    private static function takeIndex(array $array, int $index, $mode = 'number'): mixed
-    {
-        $defaultReturn = $mode == 'string' ? '' : 0;
-        return (!isset($array[$index]) || $array[$index] == '') ? $defaultReturn : $array[$index];
     }
 
     private function getCasesState(): ?Collection
