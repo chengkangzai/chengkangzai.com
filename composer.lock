@@ -388,25 +388,25 @@
         },
         {
             "name": "blade-ui-kit/blade-heroicons",
-            "version": "1.2.1",
+            "version": "1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/blade-ui-kit/blade-heroicons.git",
-                "reference": "8c614b98ec27177509cb37023d04f6eb8d1d8d97"
+                "reference": "ede0c0862362673b35879ed64ae6120dad4c63f9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/blade-ui-kit/blade-heroicons/zipball/8c614b98ec27177509cb37023d04f6eb8d1d8d97",
-                "reference": "8c614b98ec27177509cb37023d04f6eb8d1d8d97",
+                "url": "https://api.github.com/repos/blade-ui-kit/blade-heroicons/zipball/ede0c0862362673b35879ed64ae6120dad4c63f9",
+                "reference": "ede0c0862362673b35879ed64ae6120dad4c63f9",
                 "shasum": ""
             },
             "require": {
                 "blade-ui-kit/blade-icons": "^1.1",
-                "illuminate/support": "^8.0",
+                "illuminate/support": "^8.0|^9.0",
                 "php": "^7.4|^8.0"
             },
             "require-dev": {
-                "orchestra/testbench": "^6.0",
+                "orchestra/testbench": "^6.0|^7.0",
                 "phpunit/phpunit": "^9.0"
             },
             "type": "library",
@@ -441,7 +441,7 @@
             ],
             "support": {
                 "issues": "https://github.com/blade-ui-kit/blade-heroicons/issues",
-                "source": "https://github.com/blade-ui-kit/blade-heroicons/tree/1.2.1"
+                "source": "https://github.com/blade-ui-kit/blade-heroicons/tree/1.3.0"
             },
             "funding": [
                 {
@@ -453,34 +453,34 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-12-05T17:15:57+00:00"
+            "time": "2022-01-20T13:19:23+00:00"
         },
         {
             "name": "blade-ui-kit/blade-icons",
-            "version": "1.1.2",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/blade-ui-kit/blade-icons.git",
-                "reference": "548869bc820a25f803530c82028482aefe08115f"
+                "reference": "5cfafd041b86bf513f0c2652a131f7861bdfe90c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/blade-ui-kit/blade-icons/zipball/548869bc820a25f803530c82028482aefe08115f",
-                "reference": "548869bc820a25f803530c82028482aefe08115f",
+                "url": "https://api.github.com/repos/blade-ui-kit/blade-icons/zipball/5cfafd041b86bf513f0c2652a131f7861bdfe90c",
+                "reference": "5cfafd041b86bf513f0c2652a131f7861bdfe90c",
                 "shasum": ""
             },
             "require": {
-                "illuminate/contracts": "^8.0",
-                "illuminate/filesystem": "^8.0",
-                "illuminate/support": "^8.0",
-                "illuminate/view": "^8.0",
+                "illuminate/contracts": "^8.0|^9.0",
+                "illuminate/filesystem": "^8.0|^9.0",
+                "illuminate/support": "^8.0|^9.0",
+                "illuminate/view": "^8.0|^9.0",
                 "php": "^7.4|^8.0",
-                "symfony/console": "^5.3",
-                "symfony/finder": "^5.3"
+                "symfony/console": "^5.3|^6.0",
+                "symfony/finder": "^5.3|^6.0"
             },
             "require-dev": {
                 "mockery/mockery": "^1.3",
-                "orchestra/testbench": "^6.0",
+                "orchestra/testbench": "^6.0|^7.0",
                 "phpunit/phpunit": "^9.0"
             },
             "bin": [
@@ -534,7 +534,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-08-11T10:09:06+00:00"
+            "time": "2022-01-20T12:30:16+00:00"
         },
         {
             "name": "brick/math",
@@ -1199,16 +1199,16 @@
         },
         {
             "name": "filament/forms",
-            "version": "v2.9.7",
+            "version": "v2.9.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel-filament/forms.git",
-                "reference": "8a959c8a282d52f0a71236be86329b9ea7e21e47"
+                "reference": "68f9b678bb738df9517fef48679d6725cc68b365"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel-filament/forms/zipball/8a959c8a282d52f0a71236be86329b9ea7e21e47",
-                "reference": "8a959c8a282d52f0a71236be86329b9ea7e21e47",
+                "url": "https://api.github.com/repos/laravel-filament/forms/zipball/68f9b678bb738df9517fef48679d6725cc68b365",
+                "reference": "68f9b678bb738df9517fef48679d6725cc68b365",
                 "shasum": ""
             },
             "require": {
@@ -1251,11 +1251,11 @@
                 "issues": "https://github.com/laravel-filament/filament/issues",
                 "source": "https://github.com/laravel-filament/filament"
             },
-            "time": "2022-01-18T18:38:00+00:00"
+            "time": "2022-01-27T10:30:17+00:00"
         },
         {
             "name": "filament/spatie-laravel-media-library-plugin",
-            "version": "v2.9.8",
+            "version": "v2.9.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel-filament/spatie-laravel-media-library-plugin.git",
@@ -1744,16 +1744,16 @@
         },
         {
             "name": "google/protobuf",
-            "version": "v3.19.3",
+            "version": "v3.19.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/protocolbuffers/protobuf-php.git",
-                "reference": "c6d35bfdf41f8cb9dcf71ebc3631f8b9d80aa040"
+                "reference": "6f0a54186f133aff98f49d0f36a32d4a4f7d4cbd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/protocolbuffers/protobuf-php/zipball/c6d35bfdf41f8cb9dcf71ebc3631f8b9d80aa040",
-                "reference": "c6d35bfdf41f8cb9dcf71ebc3631f8b9d80aa040",
+                "url": "https://api.github.com/repos/protocolbuffers/protobuf-php/zipball/6f0a54186f133aff98f49d0f36a32d4a4f7d4cbd",
+                "reference": "6f0a54186f133aff98f49d0f36a32d4a4f7d4cbd",
                 "shasum": ""
             },
             "require": {
@@ -1783,9 +1783,9 @@
             ],
             "support": {
                 "issues": "https://github.com/protocolbuffers/protobuf-php/issues",
-                "source": "https://github.com/protocolbuffers/protobuf-php/tree/v3.19.3"
+                "source": "https://github.com/protocolbuffers/protobuf-php/tree/v3.19.4"
             },
-            "time": "2022-01-11T17:40:06+00:00"
+            "time": "2022-01-28T17:23:32+00:00"
         },
         {
             "name": "graham-campbell/result-type",
