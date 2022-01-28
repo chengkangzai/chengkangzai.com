@@ -229,7 +229,7 @@ class ImportPandemicService
                 $case->cases_recovered_cumulative = $cumRecovered;
             }
         }
-        return $collection->map(fn(DeathsState $item) => $item->toArray());
+        return $collection->map(fn(CasesState $item) => $item->toArray());
     }
 
     private function getDeathsState(): ?Collection
