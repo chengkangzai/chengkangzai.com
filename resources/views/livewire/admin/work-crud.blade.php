@@ -39,12 +39,13 @@
 
                     <tbody class="bg-white">
                     @foreach($works as $work)
+{{--                        @dd($work->getMedia('thumb')->first()->getUrl())--}}
                         <tr>
                             <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
                                 <div class="flex items-center">
                                     <div class="flex-shrink-0 h-10 w-10">
                                         <img
-                                            src="{{$work->getMedia('photos')->first()->getUrl('thumb')}}"
+                                            src="{{$work->getMedia('thumb')->first()->getUrl() ?? 'https://via.placeholder.com/150'}}"
                                             alt="avatar" class="h-10 w-10 rounded-full object-cover">
                                     </div>
 

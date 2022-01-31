@@ -49,7 +49,9 @@ class CreateModal extends ModalComponent implements HasForms
 
         $work->attachTags($formData['tags']);
 
+        $this->closeModalWithEvents(['WorkCreated']);
 
+        $this->form->model($work)->saveRelationships();
     }
 
     protected function getFormSchema(): array
@@ -90,7 +92,13 @@ class CreateModal extends ModalComponent implements HasForms
                         ])
                         ->image()
                         ->required()
-                        ->label(__('Image')),
+                        ->image()
+                        ->label(__('Image'))
+                        ->disk('s3')
+                        ->collection('thumb')
+                        ->visible(true)
+                        ->visibility('public')
+                        ->maxFiles(1),
                     Textarea::make('description_zh')
                         ->required()
                         ->columnSpan([

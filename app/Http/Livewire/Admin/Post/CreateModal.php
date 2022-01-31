@@ -51,6 +51,7 @@ class CreateModal extends Component implements HasForms
 
     protected function getFormSchema(): array
     {
+        //TODO: Add Slug https://www.youtube.com/watch?v=GNsk5z7-PEs
         return [
             Grid::make()
                 ->schema([
