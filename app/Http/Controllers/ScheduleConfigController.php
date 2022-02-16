@@ -48,7 +48,7 @@ class ScheduleConfigController extends Controller
         if (!auth()->user()->msOauth()->exists()) {
             return redirect()->route('admin.scheduleConfig.index')->withErrors(__('Please link your microsoft account first'));
         }
-        AddAPUScheduleToCalenderJob::dispatch(auth()->user(), $config);
+        AddAPUScheduleToCalenderJob::dispatch(auth()->user(), $config, AddAPUScheduleToCalenderJob::CAUSED_BY['Web']);
         return redirect()->route('admin.scheduleConfig.index')->with('success', __('Schedule has been queued for sync, it will take a few minutes'));
     }
 
