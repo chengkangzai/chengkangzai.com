@@ -2,7 +2,6 @@
 
 namespace App\Http;
 
-use App\Http\Middleware\IsSuperAdminMiddleware;
 use App\Http\Middleware\Locale;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
