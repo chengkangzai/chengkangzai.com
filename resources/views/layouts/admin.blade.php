@@ -24,7 +24,6 @@
         gtag('js', new Date());
         gtag('config', 'G-G0TL352WKG', {cookie_flags: 'SameSite=None;Secure'});
     </script>
-    <script src="//unpkg.com/alpinejs" defer></script>
     <script src="{{ asset('js/app.js') }}" defer></script>
     @stack('cdn')
     @stack('style')

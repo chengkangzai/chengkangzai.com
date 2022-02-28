@@ -83,12 +83,12 @@
                             <label class="text-gray-700">{{__('Status')}}
                                 <select id="status" name="status"
                                         class="w-full border border-gray-400 text-gray-800 placeholder-gray-400 rounded px-3 py-2">
-                                    @foreach(\App\Models\Works::STATUS as $key => $status)
-                                        <option value="{{$status}}"
-                                            {{$work->status == $status ? 'selected' : ''}}>
-                                            {{$key}}
-                                        </option>
-                                    @endforeach
+                                    {{--                                    @foreach(\App\Models\Works::STATUS as $key => $status)--}}
+                                    {{--                                        <option value="{{$status}}"--}}
+                                    {{--                                            {{$work->status == $status ? 'selected' : ''}}>--}}
+                                    {{--                                            {{$key}}--}}
+                                    {{--                                        </option>--}}
+                                    {{--                                    @endforeach--}}
                                 </select>
                             </label>
                         </div>

@@ -17,7 +17,6 @@ class TagCRUD extends Component
 
     protected $listeners = [
         'tagAdded',
-        'tagDeleted',
         'tagUpdated',
     ];
 

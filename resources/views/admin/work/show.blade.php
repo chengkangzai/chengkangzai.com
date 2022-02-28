@@ -34,7 +34,7 @@
                         <tr class="hover:bg-gray-200">
                             <td class="py-4 px-6 border-b text-gray-700 text-lg">{{__('Name')}}</td>
                             <td class="py-4 px-6 border-b text-gray-500">{{$work->name}}
-                                @if($work->status == \App\Models\Works::STATUS['ACTIVE'])
+                                @if($work->status)
                                     <span
                                         class="inline-flex bg-green-100 rounded-full px-3 py-1 text-sm font-semibold text-green-700 mr-2">
                                     {{__('Active')}}
