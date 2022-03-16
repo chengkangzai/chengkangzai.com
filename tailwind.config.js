@@ -1,4 +1,4 @@
-const defaultTheme = require('tailwindcss/defaultTheme');
+const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
     content: [
@@ -7,7 +7,6 @@ module.exports = {
         './resources/views/**/*.blade.php',
         './resources/**/*.js',
     ],
-
     theme: {
         extend: {
             fontFamily: {
@@ -15,6 +14,5 @@ module.exports = {
             },
         },
     },
-
     plugins: [require('@tailwindcss/forms')],
-};
+}
