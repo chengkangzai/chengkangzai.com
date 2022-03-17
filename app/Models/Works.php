@@ -34,9 +34,6 @@ class Works extends Model
 
     public function getImgLinkAttribute(): string
     {
-        $s3 = Storage::disk('s3');
-        $client = $s3->getDriver()->getAdapter();
-        return $s3->getAwsTemporaryUrl($client, Works::S3_PATH . '/' . $this->picture_name, now()->addHours(24), []);
+        return Storage::disk('s3')->temporaryUrl(self::S3_PATH . '/' . $this->picture_name, now()->addMinutes(5));
     }
-
 }
