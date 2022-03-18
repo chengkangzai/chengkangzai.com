@@ -330,16 +330,16 @@
         },
         {
             "name": "barryvdh/laravel-translation-manager",
-            "version": "v0.6.2",
+            "version": "v0.6.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/barryvdh/laravel-translation-manager.git",
-                "reference": "c86849aadfc277a6cf2c5bc05f52824624782f08"
+                "reference": "b21c18afdb1315ab616005b6d33104802a405ebc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/barryvdh/laravel-translation-manager/zipball/c86849aadfc277a6cf2c5bc05f52824624782f08",
-                "reference": "c86849aadfc277a6cf2c5bc05f52824624782f08",
+                "url": "https://api.github.com/repos/barryvdh/laravel-translation-manager/zipball/b21c18afdb1315ab616005b6d33104802a405ebc",
+                "reference": "b21c18afdb1315ab616005b6d33104802a405ebc",
                 "shasum": ""
             },
             "require": {
@@ -388,9 +388,9 @@
             ],
             "support": {
                 "issues": "https://github.com/barryvdh/laravel-translation-manager/issues",
-                "source": "https://github.com/barryvdh/laravel-translation-manager/tree/v0.6.2"
+                "source": "https://github.com/barryvdh/laravel-translation-manager/tree/v0.6.3"
             },
-            "time": "2022-03-04T15:39:33+00:00"
+            "time": "2022-03-17T20:07:34+00:00"
         },
         {
             "name": "brick/math",
