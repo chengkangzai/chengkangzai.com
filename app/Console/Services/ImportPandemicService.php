@@ -50,6 +50,11 @@ class ImportPandemicService
 
     public function __construct()
     {
+        $this->setupData();
+    }
+
+    private function setupData(): void
+    {
         $client = new Client();
         $promises = [];
 
@@ -59,7 +64,7 @@ class ImportPandemicService
 
         $responses = Utils::settle($promises)->wait();
         foreach ($responses as $key => $response) {
-            $this->recordHolder[$key] = collect(explode(PHP_EOL, $response['value']->getBody()))->splice(1, -1);
+            $this->recordHolder[$key] = $this->formatToArray($response['value']);
         }
     }
 
@@ -89,6 +94,11 @@ class ImportPandemicService
     {
         $defaultReturn = $mode == 'string' ? '' : 0;
         return (!isset($array[$index]) || $array[$index] == '') ? $defaultReturn : $array[$index];
+    }
+
+    private function formatToArray($value): Collection
+    {
+        return collect(explode(PHP_EOL, $value->getBody()))->splice(1, -1);
     }
 
     /**
@@ -529,7 +539,7 @@ class ImportPandemicService
                     'daily_full' => $this->takeIndex($vax, $i++),
                     'daily_booster' => $this->takeIndex($vax, $i++),
                     'daily' => $this->takeIndex($vax, $i++),
-                    'daily_partial_adol'=> $this->takeIndex($vax, $i++),
+                    'daily_partial_adol' => $this->takeIndex($vax, $i++),
                     'daily_full_adol' => $this->takeIndex($vax, $i++),
                     'daily_partial_child' => $this->takeIndex($vax, $i++),
                     'daily_full_child' => $this->takeIndex($vax, $i++),
@@ -537,7 +547,7 @@ class ImportPandemicService
                     'cumul_full' => $this->takeIndex($vax, $i++),
                     'cumul_booster' => $this->takeIndex($vax, $i++),
                     'cumul' => $this->takeIndex($vax, $i++),
-                    'cumul_partial_adol'=> $this->takeIndex($vax, $i++),
+                    'cumul_partial_adol' => $this->takeIndex($vax, $i++),
                     'cumul_full_adol' => $this->takeIndex($vax, $i++),
                     'cumul_partial_child' => $this->takeIndex($vax, $i++),
                     'cumul_full_child' => $this->takeIndex($vax, $i++),
@@ -589,8 +599,8 @@ class ImportPandemicService
                     'cumul_full' => $this->takeIndex($vax, $i++),
                     'cumul_booster' => $this->takeIndex($vax, $i++), // change in index
                     'cumul' => $this->takeIndex($vax, $i++),
-                    'cumul_partial_adol'=> $this->takeIndex($vax, $i++),
-                    'cumul_full_adol'=> $this->takeIndex($vax, $i++),
+                    'cumul_partial_adol' => $this->takeIndex($vax, $i++),
+                    'cumul_full_adol' => $this->takeIndex($vax, $i++),
                     'cumul_partial_child' => $this->takeIndex($vax, $i++),
                     'cumul_full_child' => $this->takeIndex($vax, $i++),
                     'pfizer1' => $this->takeIndex($vax, $i++),
