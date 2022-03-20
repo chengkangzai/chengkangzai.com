@@ -23,9 +23,9 @@ class VaxTakenWeekly extends Component
 
     public function render(): Factory|View|Application
     {
-//        if ($this->readyToLoad) {
-        $this->initVariable();
-//        }
+        if ($this->readyToLoad) {
+            $this->initVariable();
+        }
         return view('livewire.covid-vaccination.vax-taken-weekly');
     }
 

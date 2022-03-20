@@ -92,7 +92,6 @@ class HighLowVaxTakenWeekly extends Component
                 $max3->push(['name' => 'cansino3', 'value' => $vax->max('cansino3')]);
                 $max3pair = $max3->sortByDesc('value')->first();
 
-
                 return [
                     'min1' => [
                         'name' => $min1pair['name'],
@@ -133,6 +132,4 @@ class HighLowVaxTakenWeekly extends Component
     {
         $this->readyToLoad = true;
     }
-
-
 }

@@ -46,8 +46,6 @@ class FullVaxByMonth extends Component
                         return $state->sum('cumul_full');
                     });
             });
-
-
     }
 
     public function load()
