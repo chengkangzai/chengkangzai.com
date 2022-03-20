@@ -44,6 +44,7 @@ Route::group(['as' => 'public.'], function () {
         Route::get('/', [PublicPandemicController::class, 'index'])->name('index');
         Route::view('clusters', 'public.covid.cluster')->name('clusters');
         Route::get('state', [PublicPandemicController::class, 'state'])->name('state');
+        Route::get('vaccination', [PublicPandemicController::class, 'vaccination'])->name('vaccination');
     });
     Route::resource('posts.comments', PublicPostCommentController::class)->only(['store']);
 
