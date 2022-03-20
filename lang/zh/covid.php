@@ -5,7 +5,7 @@ return array(
     'Deaths' => ':Day死亡',
     'New_recovered_Case' => ':Day新康复案例',
     'New_Dose_1_Jabbed' => ':Day新增第一剂接种',
-    'New Dose_2_Jabbed' => ':Day新增第二剂接种',
+    'New_Dose_2_Jabbed' => ':Day新增第二剂接种',
     'Tested' => ':Day的测试人数',
     'Cumulative_Case' => '截止:Day的累积案例',
     'Active_Case' => '截止:Day的活跃案例',

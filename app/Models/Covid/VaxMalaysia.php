@@ -12,6 +12,8 @@ class VaxMalaysia extends Model
 
     protected $dates = ['date', 'create_at', 'updated_at'];
 
+    public const CREATED_AT = 'date';
+
     protected $fillable = [
         'id',
         'date',
