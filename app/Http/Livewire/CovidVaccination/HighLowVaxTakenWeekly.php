@@ -125,7 +125,6 @@ class HighLowVaxTakenWeekly extends Component
                     ],
                 ];
             });
-
     }
 
     public function load()
