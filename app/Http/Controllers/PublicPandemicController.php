@@ -23,9 +23,4 @@ class PublicPandemicController extends Controller
         $state = request()->has('state') ? request()->state : 'Johor';
         return view('public.covid.state', compact('state'));
     }
-
-    public function vaccination(): Factory|View|Application
-    {
-        return view('public.covid.vaccination');
-    }
 }
