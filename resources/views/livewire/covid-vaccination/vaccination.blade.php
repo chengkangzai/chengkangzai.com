@@ -30,7 +30,9 @@
         <livewire:covid-vaccination.vax-taken-weekly/>
 
     </div>
-    @include('layouts.footer')
+    @section('footer')
+        @include('layouts.footer')
+    @endsection
 </div>
 
 
