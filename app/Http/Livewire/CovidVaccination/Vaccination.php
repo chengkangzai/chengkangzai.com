@@ -13,8 +13,13 @@ use Symfony\Component\HttpFoundation\StreamedResponse;
 
 class Vaccination extends Component
 {
-
     public bool $isLoading = false;
+    public bool $prologEnabled;
+
+    public function mount()
+    {
+        $this->prologEnabled = Carbon::createFromDate(2022, 3, 25)->isPast();
+    }
 
     public function render(): Factory|View|Application
     {
