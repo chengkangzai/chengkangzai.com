@@ -37,11 +37,14 @@ class FullVaxByMonth extends Component
                 $vaxState->monthYear = $vaxState->date->format('M Y');
                 return $vaxState;
             })
-            ->sortByDesc('date')
-            ->groupBy('monthYear')
-            ->map(function ($vax) {
+            ->sortByDesc
+            ->date
+            ->groupBy
+            ->monthYear
+            ->map(function (Collection $vax) {
                 return $vax
-                    ->groupBy('state')
+                    ->groupBy
+                    ->state
                     ->map(function ($state) {
                         return $state->sum('cumul_full');
                     });
