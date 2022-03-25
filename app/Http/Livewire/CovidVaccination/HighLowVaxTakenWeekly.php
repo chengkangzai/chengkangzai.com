@@ -94,6 +94,7 @@ class HighLowVaxTakenWeekly extends Component
 
     private function calcPair(array $vaccineTypes, Collection $vax, bool $isMax): array
     {
+        // TODO return with date as well to we dont need to declare a variable
         return collect()
             ->when(!$isMax, function ($collection) use ($vax, $vaccineTypes) {
                 collect($vaccineTypes)
