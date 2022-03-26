@@ -13,12 +13,11 @@ use Symfony\Component\HttpFoundation\StreamedResponse;
 
 class Vaccination extends Component
 {
-    public bool $isLoading = false;
     public bool $prologEnabled;
 
     public function mount()
     {
-        $this->prologEnabled = Carbon::createFromDate(2022, 3, 27)->isPast();
+        $this->prologEnabled = Carbon::createFromDate(2000, 3, 27)->isPast();
     }
 
     public function render(): Factory|View|Application
@@ -28,21 +27,20 @@ class Vaccination extends Component
 
     public function exportPL(): StreamedResponse
     {
-        $this->isLoading = true;
-
         $content = collect();
         $content->push("%License : Any form of copy or plagiarising of this file academically is strictly prohibited and consider as abuse.\n");
         $content->push("%Credit & Author : Ching Cheng Kang\n");
-        $content->push("%Downloaded Date : " . Carbon::now()->toDateTimeString() . "\n");
+        $content->push("%Downloaded Date : " . now()->toDateTimeString() . "\n");
         $content->push("%All right reserved\n\n");
-
         $content->push("%Vaccination Report\n");
         $content->push("%Facts \n");
 
-        $vaccinations = VaxRegState::latestOne()->get();
-        foreach ($vaccinations as $vaccination) {
-            $content->push("vaxreg(" . str($vaccination->state)->replace('W.P. ', '')->snake() . ",$vaccination->total).\n");
-        }
+        VaxRegState::latestOne()
+            ->get()
+            ->each(function ($vaccination) use ($content) {
+                $state = str($vaccination->state)->replace('W.P. ', '')->snake();
+                $content->push("vaxreg($state,$vaccination->total).\n");
+            });
 
         $content->push("\n");
         $content->push("printAll:-\n");
@@ -52,9 +50,6 @@ class Vaccination extends Component
         $filePath = 'chengkangzai.com/vaccination.pl';
         Storage::disk('s3')->put($filePath, $content->implode(""));
 
-        $this->isLoading = false;
         return Storage::disk('s3')->download($filePath);
-
-
     }
 }
