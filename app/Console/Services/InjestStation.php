@@ -9,7 +9,6 @@ use Illuminate\Support\Facades\DB;
 class InjestStation
 {
     private Command $console;
-
     public function __construct(Command $command)
     {
         $this->console = $command;
@@ -17,33 +16,31 @@ class InjestStation
 
     public function inject(?Collection $records, string $modelName): void
     {
-        $tableName = (new $modelName)->getTable();
-
-        $model = (new \ReflectionClass($modelName))->getShortName();
         if (!$records) {
-            $this->console->info("[$model] : Not inject as the hash value is the same");
+            $this->console->info("[$modelName] : Not inject as the hash value is the same");
+            return;
+        }
+        if (DB::table((new $modelName)->getTable())->count() == $records->count()) {
+            $this->console->info("[$modelName] : Not inject as the data is the same.");
             return;
         }
 
-        if (DB::table($tableName)->count() == $records->count()) {
-            $this->console->info("[$model] : Not inject as the data is the same.");
-            return;
-        }
+        // get the table mapped to the model and truncate all data
+        DB::table((new $modelName)->getTable())->truncate();
 
-        DB::table($tableName)->truncate();
-
-        $this->console->info("[$model] : Injecting...");
-
-        $chunks = $records->chunk(500);
-
-        $this->console->getOutput()->progressStart($chunks->count());
-
-        foreach ($chunks as $chunk) {
-            DB::table($tableName)->insert($chunk->toArray());
-            $this->console->getOutput()->progressAdvance();
-        }
-
-        $this->console->getOutput()->progressFinish();
+        $records
+            ->chunk(500)  // 500 item per sub collection database brevity
+            ->tap(function ($chunks) use ($modelName) {
+                $this->console->info("[$modelName] : Injecting...");
+                $this->console->getOutput()->progressStart($chunks->count());
+            })
+            ->each(function ($chunk) use ($modelName) { // for each sub collection
+                DB::table((new $modelName)->getTable())->insert($chunk->toArray());
+                $this->console->getOutput()->progressAdvance();
+            })
+            ->tap(function () {
+                $this->console->getOutput()->progressFinish();
+            });
     }
 
     public function truncate(array $models)

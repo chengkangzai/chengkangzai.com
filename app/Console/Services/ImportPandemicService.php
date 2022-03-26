@@ -17,10 +17,11 @@ use App\Models\Covid\VaxMalaysia;
 use App\Models\Covid\VaxRegMalaysia;
 use App\Models\Covid\VaxRegState;
 use App\Models\Covid\VaxState;
-use GuzzleHttp\Client;
-use GuzzleHttp\Promise\Utils;
+use Illuminate\Http\Client\Pool;
+use Illuminate\Http\Client\Response;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Http;
 use JetBrains\PhpStorm\ArrayShape;
 
 class ImportPandemicService
@@ -55,25 +56,17 @@ class ImportPandemicService
 
     private function setupData(): void
     {
-        $client = new Client();
-        $promises = [];
-
-        foreach (array_keys(self::url) as $url) {
-            $promises[$url] = $client->getAsync(self::url[$url]);
-        }
-
-        $responses = Utils::settle($promises)->wait();
-        foreach ($responses as $key => $response) {
-            $this->recordHolder[$key] = $this->formatToArray($response['value']);
-        }
+        collect(Http::pool(function (Pool $pool) {
+            return collect(self::url)
+                ->map(fn($url, $key) => $pool->as($key)->get($url))
+                ->toArray();
+        }))
+            ->each(fn(Response $res, $key) => $this->recordHolder[$key] = $this->formatToArray($res));
     }
 
     public static function clearCache()
     {
-        $cacheKey = array_keys(self::url);
-        foreach ($cacheKey as $key) {
-            Cache::forget($key);
-        }
+        collect(self::url)->each(fn($_, $key) => Cache::forget($key));
     }
 
     #[ArrayShape(['content' => "\Illuminate\Support\Collection", 'exists' => "bool"])]
@@ -96,9 +89,9 @@ class ImportPandemicService
         return (!isset($array[$index]) || $array[$index] == '') ? $defaultReturn : $array[$index];
     }
 
-    private function formatToArray($value): Collection
+    private function formatToArray(Response $value): Collection
     {
-        return collect(explode(PHP_EOL, $value->getBody()))->splice(1, -1);
+        return collect(explode(PHP_EOL, $value->body()))->splice(1, -1);
     }
 
     /**
