@@ -13,12 +13,11 @@ use Symfony\Component\HttpFoundation\StreamedResponse;
 
 class Vaccination extends Component
 {
-    public bool $isLoading = false;
     public bool $prologEnabled;
 
     public function mount()
     {
-        $this->prologEnabled = Carbon::createFromDate(2022, 3, 27)->isPast();
+        $this->prologEnabled = Carbon::createFromDate(2000, 3, 27)->isPast();
     }
 
     public function render(): Factory|View|Application
@@ -28,8 +27,6 @@ class Vaccination extends Component
 
     public function exportPL(): StreamedResponse
     {
-        $this->isLoading = true;
-
         $content = collect();
         $content->push("%License : Any form of copy or plagiarising of this file academically is strictly prohibited and consider as abuse.\n");
         $content->push("%Credit & Author : Ching Cheng Kang\n");
@@ -52,9 +49,6 @@ class Vaccination extends Component
         $filePath = 'chengkangzai.com/vaccination.pl';
         Storage::disk('s3')->put($filePath, $content->implode(""));
 
-        $this->isLoading = false;
         return Storage::disk('s3')->download($filePath);
-
-
     }
 }
