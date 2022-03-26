@@ -18,7 +18,7 @@ class Vaccination extends Component
 
     public function mount()
     {
-        $this->prologEnabled = Carbon::createFromDate(2022, 3, 25)->isPast();
+        $this->prologEnabled = Carbon::createFromDate(2022, 3, 27)->isPast();
     }
 
     public function render(): Factory|View|Application
