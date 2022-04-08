@@ -62,7 +62,7 @@ class PKRC extends Model
 
     #[Pure] public function getOverallUtilisationAttribute(): float|int
     {
-        return ($this->getTotalPatientAttribute() / ($this->beds ?? 1)) * 100;
+        return ($this->getTotalPatientAttribute() / $this->beds ?? 1) * 100;
     }
 
     public function scopeStateWithTake(Builder $query, string $state, int $take): Builder

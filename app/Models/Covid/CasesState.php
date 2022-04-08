@@ -63,7 +63,7 @@ class CasesState extends Model
 
     protected function getActiveCaseAttribute()
     {
-        return $this->cases_cumulative - $this->cases_recovered_cumulative;
+        return (int)$this->cases_cumulative - $this->cases_recovered_cumulative;
     }
 
     public function scopeStateWithTake(Builder $query, string $state, int $take): Builder
