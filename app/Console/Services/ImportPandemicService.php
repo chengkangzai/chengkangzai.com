@@ -210,25 +210,22 @@ class ImportPandemicService
                 $case->cases_60_69 = self::takeIndex($item, $i++);
                 $case->cases_70_79 = self::takeIndex($item, $i++);
                 $case->cases_80 = self::takeIndex($item, $i++);
-
-                $case->cases_cumulative = 0;
-                $case->cases_recovered_cumulative = 0;
                 return $case;
             });
         return $this->calcCumulativeCasesState($data);
     }
 
-    private function calcCumulativeCasesState(Collection $collection): ?Collection
+    private function calcCumulativeCasesState(Collection $collection): Collection
     {
         foreach (CasesState::STATE as $state) {
             $cumCase = 0;
             $cumRecovered = 0;
             $cases = $collection->filter(fn($case) => $case->state == $state);
             foreach ($cases as $case) {
-                $cumCase = $cumCase + $case->cases_new;
+                $cumCase += $case->cases_new;
                 $case->cases_cumulative = $cumCase;
 
-                $cumRecovered = $cumRecovered + $case->cases_recovered;
+                $cumRecovered += $case->cases_recovered;
                 $case->cases_recovered_cumulative = $cumRecovered;
             }
         }
@@ -264,7 +261,7 @@ class ImportPandemicService
         return $this->calcCumulativeDeathState($data);
     }
 
-    private function calcCumulativeDeathState(Collection $collection): ?Collection
+    private function calcCumulativeDeathState(Collection $collection): Collection
     {
         foreach (DeathsState::STATE as $state) {
             $cum = 0;
@@ -272,13 +269,13 @@ class ImportPandemicService
             $cumBidDod = 0;
             $cases = $collection->filter(fn($death) => $death->state == $state);
             foreach ($cases as $case) {
-                $cum = $cum + $case->deaths_new;
+                $cum += $case->deaths_new;
                 $case->deaths_commutative = $cum;
 
-                $cumBid = $cumBid + $case->deaths_bid;
+                $cumBid += $case->deaths_bid;
                 $case->deaths_bid_cumulative = $cumBid;
 
-                $cumBidDod = $cumBidDod + $case->deaths_bid_dod;
+                $cumBidDod += $case->deaths_bid_dod;
                 $case->deaths_bid_dod_cumulative = $cumBidDod;
             }
         }
