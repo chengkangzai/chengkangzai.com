@@ -1,7 +1,7 @@
 {
-    "name": "laravel/laravel",
+    "name": "chengkangzai/chengkangzai.com",
     "type": "project",
-    "description": "The Laravel Framework.",
+    "description": "A personal website that serve as a personal profile, blog and a Covid Dashboard for Malaysia.",
     "keywords": [
         "framework",
         "laravel"
@@ -35,13 +35,13 @@
         "barryvdh/laravel-debugbar": "^3.5",
         "barryvdh/laravel-ide-helper": "^2.10",
         "chengkangzai/laravel-stubs": "^2.3",
-        "spatie/laravel-ignition": "^1.0",
         "fakerphp/faker": "^1.9.1",
         "laravel/sail": "^1.0.1",
         "mockery/mockery": "^1.4.2",
         "nunomaduro/collision": "^6.1",
         "orangehill/iseed": "^3.0",
-        "phpunit/phpunit": "^9.3.3"
+        "phpunit/phpunit": "^9.3.3",
+        "spatie/laravel-ignition": "^1.0"
     },
     "autoload": {
         "psr-4": {
@@ -89,7 +89,8 @@
         "preferred-install": "dist",
         "sort-packages": true,
         "allow-plugins": {
-            "composer/package-versions-deprecated": true
+            "composer/package-versions-deprecated": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true
         }
     },
     "minimum-stability": "dev",
