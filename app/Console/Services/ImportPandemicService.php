@@ -17,6 +17,7 @@ use App\Models\Covid\VaxMalaysia;
 use App\Models\Covid\VaxRegMalaysia;
 use App\Models\Covid\VaxRegState;
 use App\Models\Covid\VaxState;
+use GuzzleHttp\Exception\ConnectException;
 use Illuminate\Http\Client\Pool;
 use Illuminate\Http\Client\Response;
 use Illuminate\Support\Collection;
@@ -58,7 +59,11 @@ class ImportPandemicService
     {
         collect(Http::pool(function (Pool $pool) {
             return collect(self::url)
-                ->map(fn($url, $key) => $pool->as($key)->get($url))
+                ->map(function ($url, $key) use ($pool) {
+                    $pool->as($key)
+                        ->retry(5, 100, fn($ex, Response $res) => $ex instanceof ConnectException || $res->failed())
+                        ->get($url);
+                })
                 ->toArray();
         }))
             ->each(fn(Response $res, $key) => $this->recordHolder[$key] = $this->formatToArray($res));
