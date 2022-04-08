@@ -25,7 +25,7 @@ class Works extends Model
         'name', 'description', 'picture_name', 'url', 'github_url', 'status'
     ];
 
-    public $translatable = ['description'];
+    private array $translatable = ['description'];
 
     public function scopeActive(Builder $query): Builder
     {

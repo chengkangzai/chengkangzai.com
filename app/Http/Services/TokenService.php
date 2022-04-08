@@ -14,7 +14,7 @@ class TokenService
             'refreshToken' => $accessToken->getRefreshToken(),
             'tokenExpires' => $accessToken->getExpires(),
             'userName' => $msUser->getDisplayName(),
-            'userEmail' => null !== $msUser->getMail() ? $msUser->getMail() : $msUser->getUserPrincipalName(),
+            'userEmail' => $msUser->getMail() !== null ? $msUser->getMail() : $msUser->getUserPrincipalName(),
             'userTimeZone' => $msUser->getMailboxSettings()->getTimeZone()
         ]);
     }

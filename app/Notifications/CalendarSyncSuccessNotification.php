@@ -33,7 +33,7 @@ class CalendarSyncSuccessNotification extends Notification implements ShouldQueu
         $mail = (new MailMessage)
             ->success()
             ->subject('Calendar Sync Success')
-            ->greeting('Hello! ' . $notifiable->name ?? '')
+            ->greeting('Hello! ' . $notifiable->name)
             ->line('The calendar sync was successful.')
             ->line('Intake: ' . $this->config->intake_code)
             ->line('Grouping: ' . $this->config->grouping);

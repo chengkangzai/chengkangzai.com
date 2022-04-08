@@ -18,7 +18,7 @@ class ScheduleConfigController extends Controller
 {
     public function index(): Factory|View|Application
     {
-        $config = Auth::user()->scheduleConfig()->first();
+        $config = Auth::user()->scheduleConfig;
         $events = $config ? ApuSchedule::getSchedule($config->intake_code, $config->grouping, $config->except) : collect();
         return view('admin.schedule.index', compact('config', 'events'));
     }
