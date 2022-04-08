@@ -89,8 +89,7 @@
         "preferred-install": "dist",
         "sort-packages": true,
         "allow-plugins": {
-            "composer/package-versions-deprecated": true,
-            "dealerdirect/phpcodesniffer-composer-installer": true
+            "composer/package-versions-deprecated": true
         }
     },
     "minimum-stability": "dev",
