@@ -173,8 +173,6 @@ class ImportPandemicService
                     'cluster_workplace' => self::takeIndex($item, $i++),
                     'cases_cumulative' => $cumCasesMalaysia,
                     'cases_recovered_cumulative' => $cumRecoveredMalaysia,
-                    'created_at' => now(),
-                    'updated_at' => now(),
                 ];
             });
 
@@ -317,8 +315,6 @@ class ImportPandemicService
                     'deaths_new_cumulative' => $cumDeathMalaysia,
                     'deaths_bid_cumulative' => $cumBidMalaysia,
                     'deaths_bid_dod_cumulative' => $cumBidDodMalaysia,
-                    'created_at' => now(),
-                    'updated_at' => now(),
                 ];
             });
     }
@@ -338,8 +334,6 @@ class ImportPandemicService
                     'date' => self::takeIndex($item, $i++),
                     'rtk_ag' => self::takeIndex($item, $i++),
                     'pcr' => self::takeIndex($item, $i++),
-                    'created_at' => now(),
-                    'updated_at' => now(),
                 ];
             });
     }
@@ -360,8 +354,6 @@ class ImportPandemicService
                     'state' => self::takeIndex($item, $i++),
                     'rtk_ag' => self::takeIndex($item, $i++),
                     'pcr' => self::takeIndex($item, $i++),
-                    'created_at' => now(),
-                    'updated_at' => now(),
                 ];
             });
     }
@@ -396,8 +388,6 @@ class ImportPandemicService
                     'recovered' => self::takeIndex($item, $i++),
                     'summary_bm' => self::takeIndex($item, $i++),
                     'summary_en' => self::takeIndex($item, $i++),
-                    'created_at' => now(),
-                    'updated_at' => now(),
                 ];
             });
     }
@@ -427,8 +417,6 @@ class ImportPandemicService
                     'hosp_covid' => self::takeIndex($item, $i++),
                     'hosp_pui' => self::takeIndex($item, $i++),
                     'hosp_noncovid' => self::takeIndex($item, $i++),
-                    'created_at' => now(),
-                    'updated_at' => now(),
                 ];
             });
     }
@@ -460,8 +448,6 @@ class ImportPandemicService
                     'vent_noncovid' => self::takeIndex($item, $i++),
                     'vent_used' => self::takeIndex($item, $i++),
                     'vent_port_used' => self::takeIndex($item, $i++),
-                    'created_at' => now(),
-                    'updated_at' => now(),
                 ];
             });
     }
@@ -489,8 +475,6 @@ class ImportPandemicService
                     'pkrc_covid' => self::takeIndex($item, $i++),
                     'pkrc_pui' => self::takeIndex($item, $i++),
                     'pkrc_noncovid' => self::takeIndex($item, $i++),
-                    'created_at' => now(),
-                    'updated_at' => now(),
                 ];
             });
     }
@@ -512,8 +496,6 @@ class ImportPandemicService
                     'pop_18' => self::takeIndex($item, $i++),
                     'pop_60' => self::takeIndex($item, $i++),
                     'pop_12' => self::takeIndex($item, $i++),
-                    'created_at' => now(),
-                    'updated_at' => now(),
                 ];
             });
     }
@@ -563,8 +545,6 @@ class ImportPandemicService
                     'pending1' => $this->takeIndex($vax, $i++),
                     'pending2' => $this->takeIndex($vax, $i++),
                     'pending3' => $this->takeIndex($vax, $i++),
-                    'created_at' => now(),
-                    'updated_at' => now(),
                 ];
             });
     }
@@ -615,8 +595,6 @@ class ImportPandemicService
                     'pending1' => $this->takeIndex($vax, $i++),
                     'pending2' => $this->takeIndex($vax, $i++),
                     'pending3' => $this->takeIndex($vax, $i++),
-                    'created_at' => now(),
-                    'updated_at' => now(),
                 ];
             });
     }
@@ -635,9 +613,7 @@ class ImportPandemicService
             'children' => $this->takeIndex($array, $i++),
             'elderly' => $this->takeIndex($array, $i++),
             'comorb' => $this->takeIndex($array, $i++),
-            'oku' => $this->takeIndex($array, $i++),
-            'created_at' => now(),
-            'updated_at' => now(),
+            'oku' => $this->takeIndex($array, $i++)
         ];
     }
 
