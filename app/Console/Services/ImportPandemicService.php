@@ -17,6 +17,7 @@ use App\Models\Covid\VaxMalaysia;
 use App\Models\Covid\VaxRegMalaysia;
 use App\Models\Covid\VaxRegState;
 use App\Models\Covid\VaxState;
+use GuzzleHttp\Exception\ConnectException;
 use Illuminate\Http\Client\Pool;
 use Illuminate\Http\Client\Response;
 use Illuminate\Support\Collection;
@@ -58,7 +59,11 @@ class ImportPandemicService
     {
         collect(Http::pool(function (Pool $pool) {
             return collect(self::url)
-                ->map(fn($url, $key) => $pool->as($key)->get($url))
+                ->map(function ($url, $key) use ($pool) {
+                    $pool->as($key)
+                        ->retry(5, 100, fn($ex, Response $res) => $ex instanceof ConnectException || $res->failed())
+                        ->get($url);
+                })
                 ->toArray();
         }))
             ->each(fn(Response $res, $key) => $this->recordHolder[$key] = $this->formatToArray($res));
@@ -168,8 +173,6 @@ class ImportPandemicService
                     'cluster_workplace' => self::takeIndex($item, $i++),
                     'cases_cumulative' => $cumCasesMalaysia,
                     'cases_recovered_cumulative' => $cumRecoveredMalaysia,
-                    'created_at' => now(),
-                    'updated_at' => now(),
                 ];
             });
 
@@ -210,25 +213,22 @@ class ImportPandemicService
                 $case->cases_60_69 = self::takeIndex($item, $i++);
                 $case->cases_70_79 = self::takeIndex($item, $i++);
                 $case->cases_80 = self::takeIndex($item, $i++);
-
-                $case->cases_cumulative = 0;
-                $case->cases_recovered_cumulative = 0;
                 return $case;
             });
         return $this->calcCumulativeCasesState($data);
     }
 
-    private function calcCumulativeCasesState(Collection $collection): ?Collection
+    private function calcCumulativeCasesState(Collection $collection): Collection
     {
         foreach (CasesState::STATE as $state) {
             $cumCase = 0;
             $cumRecovered = 0;
             $cases = $collection->filter(fn($case) => $case->state == $state);
             foreach ($cases as $case) {
-                $cumCase = $cumCase + $case->cases_new;
+                $cumCase += $case->cases_new;
                 $case->cases_cumulative = $cumCase;
 
-                $cumRecovered = $cumRecovered + $case->cases_recovered;
+                $cumRecovered += $case->cases_recovered;
                 $case->cases_recovered_cumulative = $cumRecovered;
             }
         }
@@ -264,7 +264,7 @@ class ImportPandemicService
         return $this->calcCumulativeDeathState($data);
     }
 
-    private function calcCumulativeDeathState(Collection $collection): ?Collection
+    private function calcCumulativeDeathState(Collection $collection): Collection
     {
         foreach (DeathsState::STATE as $state) {
             $cum = 0;
@@ -272,13 +272,13 @@ class ImportPandemicService
             $cumBidDod = 0;
             $cases = $collection->filter(fn($death) => $death->state == $state);
             foreach ($cases as $case) {
-                $cum = $cum + $case->deaths_new;
+                $cum += $case->deaths_new;
                 $case->deaths_commutative = $cum;
 
-                $cumBid = $cumBid + $case->deaths_bid;
+                $cumBid += $case->deaths_bid;
                 $case->deaths_bid_cumulative = $cumBid;
 
-                $cumBidDod = $cumBidDod + $case->deaths_bid_dod;
+                $cumBidDod += $case->deaths_bid_dod;
                 $case->deaths_bid_dod_cumulative = $cumBidDod;
             }
         }
@@ -315,8 +315,6 @@ class ImportPandemicService
                     'deaths_new_cumulative' => $cumDeathMalaysia,
                     'deaths_bid_cumulative' => $cumBidMalaysia,
                     'deaths_bid_dod_cumulative' => $cumBidDodMalaysia,
-                    'created_at' => now(),
-                    'updated_at' => now(),
                 ];
             });
     }
@@ -336,8 +334,6 @@ class ImportPandemicService
                     'date' => self::takeIndex($item, $i++),
                     'rtk_ag' => self::takeIndex($item, $i++),
                     'pcr' => self::takeIndex($item, $i++),
-                    'created_at' => now(),
-                    'updated_at' => now(),
                 ];
             });
     }
@@ -358,8 +354,6 @@ class ImportPandemicService
                     'state' => self::takeIndex($item, $i++),
                     'rtk_ag' => self::takeIndex($item, $i++),
                     'pcr' => self::takeIndex($item, $i++),
-                    'created_at' => now(),
-                    'updated_at' => now(),
                 ];
             });
     }
@@ -394,8 +388,6 @@ class ImportPandemicService
                     'recovered' => self::takeIndex($item, $i++),
                     'summary_bm' => self::takeIndex($item, $i++),
                     'summary_en' => self::takeIndex($item, $i++),
-                    'created_at' => now(),
-                    'updated_at' => now(),
                 ];
             });
     }
@@ -425,8 +417,6 @@ class ImportPandemicService
                     'hosp_covid' => self::takeIndex($item, $i++),
                     'hosp_pui' => self::takeIndex($item, $i++),
                     'hosp_noncovid' => self::takeIndex($item, $i++),
-                    'created_at' => now(),
-                    'updated_at' => now(),
                 ];
             });
     }
@@ -458,8 +448,6 @@ class ImportPandemicService
                     'vent_noncovid' => self::takeIndex($item, $i++),
                     'vent_used' => self::takeIndex($item, $i++),
                     'vent_port_used' => self::takeIndex($item, $i++),
-                    'created_at' => now(),
-                    'updated_at' => now(),
                 ];
             });
     }
@@ -487,8 +475,6 @@ class ImportPandemicService
                     'pkrc_covid' => self::takeIndex($item, $i++),
                     'pkrc_pui' => self::takeIndex($item, $i++),
                     'pkrc_noncovid' => self::takeIndex($item, $i++),
-                    'created_at' => now(),
-                    'updated_at' => now(),
                 ];
             });
     }
@@ -510,8 +496,6 @@ class ImportPandemicService
                     'pop_18' => self::takeIndex($item, $i++),
                     'pop_60' => self::takeIndex($item, $i++),
                     'pop_12' => self::takeIndex($item, $i++),
-                    'created_at' => now(),
-                    'updated_at' => now(),
                 ];
             });
     }
@@ -561,8 +545,6 @@ class ImportPandemicService
                     'pending1' => $this->takeIndex($vax, $i++),
                     'pending2' => $this->takeIndex($vax, $i++),
                     'pending3' => $this->takeIndex($vax, $i++),
-                    'created_at' => now(),
-                    'updated_at' => now(),
                 ];
             });
     }
@@ -613,8 +595,6 @@ class ImportPandemicService
                     'pending1' => $this->takeIndex($vax, $i++),
                     'pending2' => $this->takeIndex($vax, $i++),
                     'pending3' => $this->takeIndex($vax, $i++),
-                    'created_at' => now(),
-                    'updated_at' => now(),
                 ];
             });
     }
@@ -633,9 +613,7 @@ class ImportPandemicService
             'children' => $this->takeIndex($array, $i++),
             'elderly' => $this->takeIndex($array, $i++),
             'comorb' => $this->takeIndex($array, $i++),
-            'oku' => $this->takeIndex($array, $i++),
-            'created_at' => now(),
-            'updated_at' => now(),
+            'oku' => $this->takeIndex($array, $i++)
         ];
     }
 

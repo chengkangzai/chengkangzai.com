@@ -66,7 +66,7 @@ class ICU extends Model
 
     #[Pure] public function getOverallUtilisationAttribute(): float|int
     {
-        return ($this->getTotalPatientAttribute() / ($this->bed_icu_total ?? 1)) * 100;
+        return ($this->getTotalPatientAttribute() / $this->bed_icu_total ?? 1) * 100;
     }
 
     public function getTotalVentilatorsAttribute(): float|int

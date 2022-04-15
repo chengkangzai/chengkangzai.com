@@ -22,7 +22,7 @@ class ImportTaskSuccessNotification extends Notification implements ShouldQueue
 
     use Queueable;
 
-    public function __construct(string $message, array $model, int $second)
+    public function __construct(string $message, array $model, float $second)
     {
         $this->message = $message;
         $this->model = $model;
