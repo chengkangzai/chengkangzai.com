@@ -19,8 +19,14 @@ return new class extends Migration {
             })
             ->each(function ($tableName) {
                 Schema::table($tableName, function (Blueprint $table) {
-                    $table->timestamp('create_at')->useCurrent();
-                    $table->timestamp('update_at')->useCurrent()->useCurrentOnUpdate();
+                    $table->dropColumn('created_at');
+                    $table->dropColumn('updated_at');
+                });
+            })
+            ->each(function ($tableName) {
+                Schema::table($tableName, function (Blueprint $table) {
+                    $table->timestamp('created_at')->useCurrent();
+                    $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();
                 });
             });
 
