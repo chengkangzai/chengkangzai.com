@@ -3,12 +3,13 @@
 namespace App\Console\Services;
 
 use Illuminate\Console\Command;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Collection;
-use Illuminate\Support\Facades\DB;
 
 class InjestStation
 {
     private Command $console;
+
     public function __construct(Command $command)
     {
         $this->console = $command;
@@ -16,17 +17,18 @@ class InjestStation
 
     public function inject(?Collection $records, string $modelName): void
     {
+        /** @var Model $modelName */
         if (!$records) {
             $this->console->info("[$modelName] : Not inject as the hash value is the same");
             return;
         }
-        if (DB::table((new $modelName)->getTable())->count() == $records->count()) {
+        if ($modelName::count() == $records->count()) {
             $this->console->info("[$modelName] : Not inject as the data is the same.");
             return;
         }
 
         // get the table mapped to the model and truncate all data
-        DB::table((new $modelName)->getTable())->truncate();
+        $modelName::truncate();
 
         $records
             ->chunk(500)  // 500 item per sub collection database brevity
@@ -35,7 +37,7 @@ class InjestStation
                 $this->console->getOutput()->progressStart($chunks->count());
             })
             ->each(function ($chunk) use ($modelName) { // for each sub collection
-                DB::table((new $modelName)->getTable())->insert($chunk->toArray());
+                $modelName::insert($chunk->toArray());
                 $this->console->getOutput()->progressAdvance();
             })
             ->tap(function () {
@@ -48,9 +50,9 @@ class InjestStation
         $this->console->info("Truncating...");
         $this->console->getOutput()->progressStart(count($models));
 
+        /** @var Model $model */
         foreach ($models as $model) {
-            $tableName = (new $model)->getTable();
-            DB::table($tableName)->truncate();
+            $model::truncate();
             $this->console->getOutput()->progressAdvance();
         }
 
