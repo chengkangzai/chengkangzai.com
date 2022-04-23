@@ -19,8 +19,8 @@ return new class extends Migration {
             })
             ->each(function ($tableName) {
                 Schema::table($tableName, function (Blueprint $table) {
-                    $table->dropColumn('create_at');
-                    $table->dropColumn('update_at');
+                    $table->dropColumn('created_at');
+                    $table->dropColumn('updated_at');
                 });
             })
             ->each(function ($tableName) {
