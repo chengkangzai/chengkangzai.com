@@ -14,12 +14,12 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
      */
     public function run()
     {
-
+        
 
         \DB::table('cases_malaysia')->delete();
-
+        
         \DB::table('cases_malaysia')->insert(array (
-            0 =>
+            0 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -51,11 +51,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-01-25',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            1 =>
+            1 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -87,11 +87,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-01-26',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            2 =>
+            2 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -123,11 +123,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-01-27',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            3 =>
+            3 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -159,11 +159,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-01-28',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            4 =>
+            4 => 
             array (
                 'cases_0_4' => 1,
                 'cases_12_17' => 0,
@@ -195,11 +195,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-01-29',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            5 =>
+            5 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -231,11 +231,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-01-30',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            6 =>
+            6 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -267,11 +267,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-01-31',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            7 =>
+            7 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -303,11 +303,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-02-01',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            8 =>
+            8 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -339,11 +339,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-02-02',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            9 =>
+            9 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -375,11 +375,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-02-03',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            10 =>
+            10 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -411,11 +411,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-02-04',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            11 =>
+            11 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -447,11 +447,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-02-05',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            12 =>
+            12 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -483,11 +483,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-02-06',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            13 =>
+            13 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -519,11 +519,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-02-07',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            14 =>
+            14 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -555,11 +555,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-02-08',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            15 =>
+            15 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -591,11 +591,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-02-09',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            16 =>
+            16 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -627,11 +627,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-02-10',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            17 =>
+            17 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -663,11 +663,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-02-11',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            18 =>
+            18 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -699,11 +699,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-02-12',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            19 =>
+            19 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -735,11 +735,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-02-13',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            20 =>
+            20 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -771,11 +771,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-02-14',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            21 =>
+            21 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -807,11 +807,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 1,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-02-15',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            22 =>
+            22 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -843,11 +843,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-02-16',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            23 =>
+            23 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -879,11 +879,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-02-17',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            24 =>
+            24 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -915,11 +915,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-02-18',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            25 =>
+            25 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -951,11 +951,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-02-19',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            26 =>
+            26 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -987,11 +987,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-02-20',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            27 =>
+            27 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -1023,11 +1023,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-02-21',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            28 =>
+            28 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -1059,11 +1059,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-02-22',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            29 =>
+            29 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -1095,11 +1095,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-02-23',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            30 =>
+            30 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -1131,11 +1131,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-02-24',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            31 =>
+            31 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -1167,11 +1167,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-02-25',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            32 =>
+            32 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -1203,11 +1203,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-02-26',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            33 =>
+            33 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -1239,11 +1239,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-02-27',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            34 =>
+            34 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -1275,11 +1275,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-02-28',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            35 =>
+            35 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -1311,11 +1311,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-02-29',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            36 =>
+            36 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -1347,11 +1347,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-03-01',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            37 =>
+            37 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -1383,11 +1383,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-03-02',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            38 =>
+            38 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -1419,11 +1419,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-03-03',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            39 =>
+            39 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -1455,11 +1455,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-03-04',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            40 =>
+            40 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -1491,11 +1491,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-03-05',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            41 =>
+            41 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 1,
@@ -1527,11 +1527,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-03-06',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            42 =>
+            42 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -1563,11 +1563,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-03-07',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            43 =>
+            43 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -1599,11 +1599,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-03-08',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            44 =>
+            44 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -1635,11 +1635,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-03-09',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            45 =>
+            45 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -1671,11 +1671,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 1,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-03-10',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            46 =>
+            46 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 1,
@@ -1707,11 +1707,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 1,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-03-11',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            47 =>
+            47 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -1743,11 +1743,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 1,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-03-12',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            48 =>
+            48 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -1779,11 +1779,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 4,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-03-13',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            49 =>
+            49 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -1815,11 +1815,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 2,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-03-14',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            50 =>
+            50 => 
             array (
                 'cases_0_4' => 1,
                 'cases_12_17' => 3,
@@ -1851,11 +1851,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 9,
                 'cluster_religious' => 1,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-03-15',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            51 =>
+            51 => 
             array (
                 'cases_0_4' => 1,
                 'cases_12_17' => 3,
@@ -1887,11 +1887,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 9,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-03-16',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            52 =>
+            52 => 
             array (
                 'cases_0_4' => 4,
                 'cases_12_17' => 3,
@@ -1923,11 +1923,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 2,
                 'cluster_religious' => 1,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-03-17',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            53 =>
+            53 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 8,
@@ -1959,11 +1959,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 7,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-03-18',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            54 =>
+            54 => 
             array (
                 'cases_0_4' => 6,
                 'cases_12_17' => 7,
@@ -1995,11 +1995,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 3,
                 'cluster_religious' => 1,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-03-19',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            55 =>
+            55 => 
             array (
                 'cases_0_4' => 1,
                 'cases_12_17' => 7,
@@ -2031,11 +2031,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 4,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-03-20',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            56 =>
+            56 => 
             array (
                 'cases_0_4' => 6,
                 'cases_12_17' => 4,
@@ -2067,11 +2067,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 4,
                 'cluster_religious' => 3,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-03-21',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            57 =>
+            57 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 6,
@@ -2103,11 +2103,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 3,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-03-22',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            58 =>
+            58 => 
             array (
                 'cases_0_4' => 1,
                 'cases_12_17' => 4,
@@ -2139,11 +2139,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 8,
                 'cluster_religious' => 1,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-03-23',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            59 =>
+            59 => 
             array (
                 'cases_0_4' => 1,
                 'cases_12_17' => 8,
@@ -2175,11 +2175,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 4,
                 'cluster_religious' => 1,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-03-24',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            60 =>
+            60 => 
             array (
                 'cases_0_4' => 3,
                 'cases_12_17' => 6,
@@ -2211,11 +2211,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 9,
                 'cluster_religious' => 3,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-03-25',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            61 =>
+            61 => 
             array (
                 'cases_0_4' => 6,
                 'cases_12_17' => 18,
@@ -2247,11 +2247,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 3,
                 'cluster_religious' => 7,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-03-26',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            62 =>
+            62 => 
             array (
                 'cases_0_4' => 2,
                 'cases_12_17' => 3,
@@ -2283,11 +2283,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 7,
                 'cluster_religious' => 3,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-03-27',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            63 =>
+            63 => 
             array (
                 'cases_0_4' => 4,
                 'cases_12_17' => 8,
@@ -2319,11 +2319,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 10,
                 'cluster_religious' => 3,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-03-28',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            64 =>
+            64 => 
             array (
                 'cases_0_4' => 3,
                 'cases_12_17' => 6,
@@ -2355,11 +2355,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 7,
                 'cluster_religious' => 2,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-03-29',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            65 =>
+            65 => 
             array (
                 'cases_0_4' => 4,
                 'cases_12_17' => 7,
@@ -2391,11 +2391,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 7,
                 'cluster_religious' => 1,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-03-30',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            66 =>
+            66 => 
             array (
                 'cases_0_4' => 2,
                 'cases_12_17' => 7,
@@ -2427,11 +2427,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 7,
                 'cluster_religious' => 2,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-03-31',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            67 =>
+            67 => 
             array (
                 'cases_0_4' => 1,
                 'cases_12_17' => 9,
@@ -2463,11 +2463,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 3,
                 'cluster_religious' => 3,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-04-01',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            68 =>
+            68 => 
             array (
                 'cases_0_4' => 2,
                 'cases_12_17' => 13,
@@ -2499,11 +2499,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 7,
                 'cluster_religious' => 1,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-04-02',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            69 =>
+            69 => 
             array (
                 'cases_0_4' => 2,
                 'cases_12_17' => 19,
@@ -2535,11 +2535,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 6,
                 'cluster_religious' => 6,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-04-03',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            70 =>
+            70 => 
             array (
                 'cases_0_4' => 1,
                 'cases_12_17' => 8,
@@ -2571,11 +2571,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 1,
                 'cluster_religious' => 1,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-04-04',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            71 =>
+            71 => 
             array (
                 'cases_0_4' => 6,
                 'cases_12_17' => 19,
@@ -2607,11 +2607,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 3,
                 'cluster_religious' => 6,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-04-05',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            72 =>
+            72 => 
             array (
                 'cases_0_4' => 4,
                 'cases_12_17' => 6,
@@ -2643,11 +2643,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 6,
                 'cluster_religious' => 1,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-04-06',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            73 =>
+            73 => 
             array (
                 'cases_0_4' => 4,
                 'cases_12_17' => 14,
@@ -2679,11 +2679,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 6,
                 'cluster_religious' => 3,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-04-07',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            74 =>
+            74 => 
             array (
                 'cases_0_4' => 3,
                 'cases_12_17' => 20,
@@ -2715,11 +2715,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 7,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-04-08',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            75 =>
+            75 => 
             array (
                 'cases_0_4' => 3,
                 'cases_12_17' => 5,
@@ -2751,11 +2751,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 1,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-04-09',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            76 =>
+            76 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 11,
@@ -2787,11 +2787,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 3,
                 'cluster_religious' => 4,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-04-10',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            77 =>
+            77 => 
             array (
                 'cases_0_4' => 4,
                 'cases_12_17' => 9,
@@ -2823,11 +2823,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 5,
                 'cluster_religious' => 1,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-04-11',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            78 =>
+            78 => 
             array (
                 'cases_0_4' => 4,
                 'cases_12_17' => 9,
@@ -2859,11 +2859,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 3,
                 'cluster_religious' => 1,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-04-12',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            79 =>
+            79 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 11,
@@ -2895,11 +2895,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 1,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-04-13',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            80 =>
+            80 => 
             array (
                 'cases_0_4' => 1,
                 'cases_12_17' => 10,
@@ -2931,11 +2931,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 8,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-04-14',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            81 =>
+            81 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 3,
@@ -2967,11 +2967,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 5,
                 'cluster_religious' => 1,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-04-15',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            82 =>
+            82 => 
             array (
                 'cases_0_4' => 4,
                 'cases_12_17' => 15,
@@ -3003,11 +3003,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 1,
                 'cluster_religious' => 1,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-04-16',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            83 =>
+            83 => 
             array (
                 'cases_0_4' => 1,
                 'cases_12_17' => 7,
@@ -3039,11 +3039,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 1,
                 'cluster_religious' => 2,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-04-17',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            84 =>
+            84 => 
             array (
                 'cases_0_4' => 4,
                 'cases_12_17' => 5,
@@ -3075,11 +3075,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 4,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-04-18',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            85 =>
+            85 => 
             array (
                 'cases_0_4' => 1,
                 'cases_12_17' => 7,
@@ -3111,11 +3111,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 1,
                 'cluster_religious' => 1,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-04-19',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            86 =>
+            86 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 3,
@@ -3147,11 +3147,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 3,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-04-20',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            87 =>
+            87 => 
             array (
                 'cases_0_4' => 1,
                 'cases_12_17' => 9,
@@ -3183,11 +3183,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-04-21',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            88 =>
+            88 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 4,
@@ -3219,11 +3219,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 2,
                 'cluster_religious' => 1,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-04-22',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            89 =>
+            89 => 
             array (
                 'cases_0_4' => 2,
                 'cases_12_17' => 4,
@@ -3255,11 +3255,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 1,
                 'cluster_religious' => 1,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-04-23',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            90 =>
+            90 => 
             array (
                 'cases_0_4' => 3,
                 'cases_12_17' => 6,
@@ -3291,11 +3291,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 1,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-04-24',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            91 =>
+            91 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 3,
@@ -3327,11 +3327,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 1,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-04-25',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            92 =>
+            92 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 2,
@@ -3363,11 +3363,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 1,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-04-26',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            93 =>
+            93 => 
             array (
                 'cases_0_4' => 2,
                 'cases_12_17' => 0,
@@ -3399,11 +3399,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-04-27',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            94 =>
+            94 => 
             array (
                 'cases_0_4' => 1,
                 'cases_12_17' => 1,
@@ -3435,11 +3435,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 1,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-04-28',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            95 =>
+            95 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 6,
@@ -3471,11 +3471,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-04-29',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            96 =>
+            96 => 
             array (
                 'cases_0_4' => 1,
                 'cases_12_17' => 4,
@@ -3507,11 +3507,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 2,
                 'cluster_religious' => 1,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-04-30',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            97 =>
+            97 => 
             array (
                 'cases_0_4' => 1,
                 'cases_12_17' => 3,
@@ -3543,11 +3543,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-05-01',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            98 =>
+            98 => 
             array (
                 'cases_0_4' => 3,
                 'cases_12_17' => 4,
@@ -3579,11 +3579,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 2,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-05-02',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            99 =>
+            99 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 18,
@@ -3615,11 +3615,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 2,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-05-03',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            100 =>
+            100 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 4,
@@ -3651,11 +3651,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-05-04',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            101 =>
+            101 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -3687,11 +3687,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 1,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-05-05',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            102 =>
+            102 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 4,
@@ -3723,11 +3723,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 1,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-05-06',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            103 =>
+            103 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 2,
@@ -3759,11 +3759,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 1,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-05-07',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            104 =>
+            104 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 1,
@@ -3795,11 +3795,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 1,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-05-08',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            105 =>
+            105 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -3831,11 +3831,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 1,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-05-09',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            106 =>
+            106 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 5,
@@ -3867,11 +3867,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 1,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-05-10',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            107 =>
+            107 => 
             array (
                 'cases_0_4' => 4,
                 'cases_12_17' => 4,
@@ -3903,11 +3903,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 1,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-05-11',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            108 =>
+            108 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -3939,11 +3939,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-05-12',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            109 =>
+            109 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -3975,11 +3975,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 1,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-05-13',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            110 =>
+            110 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 2,
@@ -4011,11 +4011,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-05-14',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            111 =>
+            111 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 1,
@@ -4047,11 +4047,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 3,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-05-15',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            112 =>
+            112 => 
             array (
                 'cases_0_4' => 1,
                 'cases_12_17' => 1,
@@ -4083,11 +4083,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 1,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-05-16',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            113 =>
+            113 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 1,
@@ -4119,11 +4119,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-05-17',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            114 =>
+            114 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -4155,11 +4155,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 2,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-05-18',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            115 =>
+            115 => 
             array (
                 'cases_0_4' => 1,
                 'cases_12_17' => 1,
@@ -4191,11 +4191,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 1,
                 'cluster_religious' => 2,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-05-19',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            116 =>
+            116 => 
             array (
                 'cases_0_4' => 1,
                 'cases_12_17' => 1,
@@ -4227,11 +4227,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-05-20',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            117 =>
+            117 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 2,
@@ -4263,11 +4263,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-05-21',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            118 =>
+            118 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 8,
@@ -4299,11 +4299,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-05-22',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            119 =>
+            119 => 
             array (
                 'cases_0_4' => 1,
                 'cases_12_17' => 0,
@@ -4335,11 +4335,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 2,
                 'cluster_religious' => 1,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-05-23',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            120 =>
+            120 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 3,
@@ -4371,11 +4371,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-05-24',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            121 =>
+            121 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 2,
@@ -4407,11 +4407,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 1,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-05-25',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            122 =>
+            122 => 
             array (
                 'cases_0_4' => 1,
                 'cases_12_17' => 1,
@@ -4443,11 +4443,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-05-26',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            123 =>
+            123 => 
             array (
                 'cases_0_4' => 1,
                 'cases_12_17' => 0,
@@ -4479,11 +4479,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-05-27',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            124 =>
+            124 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 1,
@@ -4515,11 +4515,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-05-28',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            125 =>
+            125 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 3,
@@ -4551,11 +4551,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-05-29',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            126 =>
+            126 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 2,
@@ -4587,11 +4587,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 1,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-05-30',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            127 =>
+            127 => 
             array (
                 'cases_0_4' => 1,
                 'cases_12_17' => 2,
@@ -4623,11 +4623,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-05-31',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            128 =>
+            128 => 
             array (
                 'cases_0_4' => 1,
                 'cases_12_17' => 1,
@@ -4659,11 +4659,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-06-01',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            129 =>
+            129 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -4695,11 +4695,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-06-02',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            130 =>
+            130 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 29,
@@ -4731,11 +4731,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-06-03',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            131 =>
+            131 => 
             array (
                 'cases_0_4' => 1,
                 'cases_12_17' => 3,
@@ -4767,11 +4767,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 1,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-06-04',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            132 =>
+            132 => 
             array (
                 'cases_0_4' => 3,
                 'cases_12_17' => 2,
@@ -4803,11 +4803,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 1,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-06-05',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            133 =>
+            133 => 
             array (
                 'cases_0_4' => 1,
                 'cases_12_17' => 3,
@@ -4839,11 +4839,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 1,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-06-06',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            134 =>
+            134 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 2,
@@ -4875,11 +4875,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 1,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-06-07',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            135 =>
+            135 => 
             array (
                 'cases_0_4' => 1,
                 'cases_12_17' => 0,
@@ -4911,11 +4911,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-06-08',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            136 =>
+            136 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -4947,11 +4947,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-06-09',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            137 =>
+            137 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -4983,11 +4983,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-06-10',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            138 =>
+            138 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 1,
@@ -5019,11 +5019,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-06-11',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            139 =>
+            139 => 
             array (
                 'cases_0_4' => 1,
                 'cases_12_17' => 1,
@@ -5055,11 +5055,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 1,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-06-12',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            140 =>
+            140 => 
             array (
                 'cases_0_4' => 6,
                 'cases_12_17' => 8,
@@ -5091,11 +5091,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 2,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-06-13',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            141 =>
+            141 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -5127,11 +5127,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 1,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-06-14',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            142 =>
+            142 => 
             array (
                 'cases_0_4' => 3,
                 'cases_12_17' => 3,
@@ -5163,11 +5163,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 1,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-06-15',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            143 =>
+            143 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 1,
@@ -5199,11 +5199,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-06-16',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            144 =>
+            144 => 
             array (
                 'cases_0_4' => 2,
                 'cases_12_17' => 1,
@@ -5235,11 +5235,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-06-17',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            145 =>
+            145 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -5271,11 +5271,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 1,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-06-18',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            146 =>
+            146 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 1,
@@ -5307,11 +5307,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-06-19',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            147 =>
+            147 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 6,
@@ -5343,11 +5343,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-06-20',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            148 =>
+            148 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -5379,11 +5379,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-06-21',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            149 =>
+            149 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -5415,11 +5415,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-06-22',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            150 =>
+            150 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -5451,11 +5451,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 1,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-06-23',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            151 =>
+            151 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 1,
@@ -5487,11 +5487,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-06-24',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            152 =>
+            152 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -5523,11 +5523,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-06-25',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            153 =>
+            153 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 1,
@@ -5559,11 +5559,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-06-26',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            154 =>
+            154 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 2,
@@ -5595,11 +5595,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-06-27',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            155 =>
+            155 => 
             array (
                 'cases_0_4' => 1,
                 'cases_12_17' => 0,
@@ -5631,11 +5631,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-06-28',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            156 =>
+            156 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -5667,11 +5667,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-06-29',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            157 =>
+            157 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -5703,11 +5703,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-06-30',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            158 =>
+            158 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -5739,11 +5739,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-07-01',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            159 =>
+            159 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -5775,11 +5775,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-07-02',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            160 =>
+            160 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -5811,11 +5811,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-07-03',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            161 =>
+            161 => 
             array (
                 'cases_0_4' => 1,
                 'cases_12_17' => 0,
@@ -5847,11 +5847,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-07-04',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            162 =>
+            162 => 
             array (
                 'cases_0_4' => 1,
                 'cases_12_17' => 0,
@@ -5883,11 +5883,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-07-05',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            163 =>
+            163 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -5919,11 +5919,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-07-06',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            164 =>
+            164 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -5955,11 +5955,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-07-07',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            165 =>
+            165 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -5991,11 +5991,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-07-08',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            166 =>
+            166 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 1,
@@ -6027,11 +6027,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-07-09',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            167 =>
+            167 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 3,
@@ -6063,11 +6063,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-07-10',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            168 =>
+            168 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -6099,11 +6099,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 1,
                 'cluster_religious' => 1,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-07-11',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            169 =>
+            169 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -6135,11 +6135,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-07-12',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            170 =>
+            170 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -6171,11 +6171,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 1,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-07-13',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            171 =>
+            171 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -6207,11 +6207,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-07-14',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            172 =>
+            172 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -6243,11 +6243,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-07-15',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            173 =>
+            173 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -6279,11 +6279,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-07-16',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            174 =>
+            174 => 
             array (
                 'cases_0_4' => 1,
                 'cases_12_17' => 0,
@@ -6315,11 +6315,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-07-17',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            175 =>
+            175 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -6351,11 +6351,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 1,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-07-18',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            176 =>
+            176 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -6387,11 +6387,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 2,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-07-19',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            177 =>
+            177 => 
             array (
                 'cases_0_4' => 1,
                 'cases_12_17' => 0,
@@ -6423,11 +6423,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 3,
                 'cluster_religious' => 6,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-07-20',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            178 =>
+            178 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 1,
@@ -6459,11 +6459,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 1,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-07-21',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            179 =>
+            179 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -6495,11 +6495,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 2,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-07-22',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            180 =>
+            180 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -6531,11 +6531,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-07-23',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            181 =>
+            181 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -6567,11 +6567,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 1,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-07-24',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            182 =>
+            182 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -6603,11 +6603,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 1,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-07-25',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            183 =>
+            183 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -6639,11 +6639,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-07-26',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            184 =>
+            184 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -6675,11 +6675,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-07-27',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            185 =>
+            185 => 
             array (
                 'cases_0_4' => 1,
                 'cases_12_17' => 1,
@@ -6711,11 +6711,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 2,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-07-28',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            186 =>
+            186 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 1,
@@ -6747,11 +6747,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-07-29',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            187 =>
+            187 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -6783,11 +6783,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 2,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-07-30',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            188 =>
+            188 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -6819,11 +6819,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-07-31',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            189 =>
+            189 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -6855,11 +6855,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 1,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-08-01',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            190 =>
+            190 => 
             array (
                 'cases_0_4' => 2,
                 'cases_12_17' => 1,
@@ -6891,11 +6891,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-08-02',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            191 =>
+            191 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -6927,11 +6927,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-08-03',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            192 =>
+            192 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -6963,11 +6963,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-08-04',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            193 =>
+            193 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 1,
@@ -6999,11 +6999,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 1,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-08-05',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            194 =>
+            194 => 
             array (
                 'cases_0_4' => 1,
                 'cases_12_17' => 0,
@@ -7035,11 +7035,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-08-06',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            195 =>
+            195 => 
             array (
                 'cases_0_4' => 2,
                 'cases_12_17' => 2,
@@ -7071,11 +7071,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-08-07',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            196 =>
+            196 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -7107,11 +7107,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-08-08',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            197 =>
+            197 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -7143,11 +7143,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 1,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-08-09',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            198 =>
+            198 => 
             array (
                 'cases_0_4' => 1,
                 'cases_12_17' => 0,
@@ -7179,11 +7179,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-08-10',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            199 =>
+            199 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -7215,11 +7215,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 1,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-08-11',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            200 =>
+            200 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -7251,11 +7251,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-08-12',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            201 =>
+            201 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 2,
@@ -7287,11 +7287,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-08-13',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            202 =>
+            202 => 
             array (
                 'cases_0_4' => 1,
                 'cases_12_17' => 0,
@@ -7323,11 +7323,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-08-14',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            203 =>
+            203 => 
             array (
                 'cases_0_4' => 2,
                 'cases_12_17' => 1,
@@ -7359,11 +7359,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 1,
                 'cluster_religious' => 1,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-08-15',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            204 =>
+            204 => 
             array (
                 'cases_0_4' => 2,
                 'cases_12_17' => 1,
@@ -7395,11 +7395,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-08-16',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            205 =>
+            205 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 2,
@@ -7431,11 +7431,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-08-17',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            206 =>
+            206 => 
             array (
                 'cases_0_4' => 2,
                 'cases_12_17' => 1,
@@ -7467,11 +7467,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 1,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-08-18',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            207 =>
+            207 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 1,
@@ -7503,11 +7503,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 1,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-08-19',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            208 =>
+            208 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -7539,11 +7539,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-08-20',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            209 =>
+            209 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -7575,11 +7575,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-08-21',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            210 =>
+            210 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 1,
@@ -7611,11 +7611,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-08-22',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            211 =>
+            211 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -7647,11 +7647,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-08-23',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            212 =>
+            212 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -7683,11 +7683,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-08-24',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            213 =>
+            213 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 4,
@@ -7719,11 +7719,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 1,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-08-25',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            214 =>
+            214 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -7755,11 +7755,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 1,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-08-26',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            215 =>
+            215 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -7791,11 +7791,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 1,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-08-27',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            216 =>
+            216 => 
             array (
                 'cases_0_4' => 1,
                 'cases_12_17' => 0,
@@ -7827,11 +7827,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 1,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-08-28',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            217 =>
+            217 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -7863,11 +7863,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 3,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-08-29',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            218 =>
+            218 => 
             array (
                 'cases_0_4' => 3,
                 'cases_12_17' => 0,
@@ -7899,11 +7899,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-08-30',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            219 =>
+            219 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -7935,11 +7935,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-08-31',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            220 =>
+            220 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 1,
@@ -7971,11 +7971,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-09-01',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            221 =>
+            221 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -8007,11 +8007,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-09-02',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            222 =>
+            222 => 
             array (
                 'cases_0_4' => 2,
                 'cases_12_17' => 2,
@@ -8043,11 +8043,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-09-03',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            223 =>
+            223 => 
             array (
                 'cases_0_4' => 1,
                 'cases_12_17' => 0,
@@ -8079,11 +8079,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-09-04',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            224 =>
+            224 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -8115,11 +8115,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 1,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-09-05',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            225 =>
+            225 => 
             array (
                 'cases_0_4' => 1,
                 'cases_12_17' => 0,
@@ -8151,11 +8151,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 1,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-09-06',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            226 =>
+            226 => 
             array (
                 'cases_0_4' => 1,
                 'cases_12_17' => 3,
@@ -8187,11 +8187,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-09-07',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            227 =>
+            227 => 
             array (
                 'cases_0_4' => 4,
                 'cases_12_17' => 3,
@@ -8223,11 +8223,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-09-08',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            228 =>
+            228 => 
             array (
                 'cases_0_4' => 3,
                 'cases_12_17' => 3,
@@ -8259,11 +8259,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 1,
                 'cluster_religious' => 1,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-09-09',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            229 =>
+            229 => 
             array (
                 'cases_0_4' => 1,
                 'cases_12_17' => 1,
@@ -8295,11 +8295,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-09-10',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            230 =>
+            230 => 
             array (
                 'cases_0_4' => 1,
                 'cases_12_17' => 0,
@@ -8331,11 +8331,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-09-11',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            231 =>
+            231 => 
             array (
                 'cases_0_4' => 2,
                 'cases_12_17' => 1,
@@ -8367,11 +8367,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-09-12',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            232 =>
+            232 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 0,
@@ -8403,11 +8403,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 4,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-09-13',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            233 =>
+            233 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 2,
@@ -8439,11 +8439,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 3,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-09-14',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            234 =>
+            234 => 
             array (
                 'cases_0_4' => 2,
                 'cases_12_17' => 3,
@@ -8475,11 +8475,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-09-15',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            235 =>
+            235 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 4,
@@ -8511,11 +8511,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-09-16',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            236 =>
+            236 => 
             array (
                 'cases_0_4' => 1,
                 'cases_12_17' => 0,
@@ -8547,11 +8547,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 2,
                 'cluster_religious' => 1,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-09-17',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            237 =>
+            237 => 
             array (
                 'cases_0_4' => 4,
                 'cases_12_17' => 3,
@@ -8583,11 +8583,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-09-18',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            238 =>
+            238 => 
             array (
                 'cases_0_4' => 1,
                 'cases_12_17' => 1,
@@ -8619,11 +8619,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 2,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-09-19',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            239 =>
+            239 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 2,
@@ -8655,11 +8655,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-09-20',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            240 =>
+            240 => 
             array (
                 'cases_0_4' => 4,
                 'cases_12_17' => 7,
@@ -8691,11 +8691,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 2,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-09-21',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            241 =>
+            241 => 
             array (
                 'cases_0_4' => 1,
                 'cases_12_17' => 5,
@@ -8727,11 +8727,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-09-22',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            242 =>
+            242 => 
             array (
                 'cases_0_4' => 2,
                 'cases_12_17' => 3,
@@ -8763,11 +8763,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 1,
                 'cluster_religious' => 1,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-09-23',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            243 =>
+            243 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 7,
@@ -8799,11 +8799,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 1,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-09-24',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            244 =>
+            244 => 
             array (
                 'cases_0_4' => 0,
                 'cases_12_17' => 18,
@@ -8835,11 +8835,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 3,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-09-25',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            245 =>
+            245 => 
             array (
                 'cases_0_4' => 2,
                 'cases_12_17' => 1,
@@ -8871,11 +8871,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 2,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-09-26',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            246 =>
+            246 => 
             array (
                 'cases_0_4' => 5,
                 'cases_12_17' => 28,
@@ -8907,11 +8907,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 1,
                 'cluster_religious' => 2,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-09-27',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            247 =>
+            247 => 
             array (
                 'cases_0_4' => 3,
                 'cases_12_17' => 9,
@@ -8943,11 +8943,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 5,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-09-28',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            248 =>
+            248 => 
             array (
                 'cases_0_4' => 3,
                 'cases_12_17' => 5,
@@ -8979,11 +8979,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-09-29',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            249 =>
+            249 => 
             array (
                 'cases_0_4' => 5,
                 'cases_12_17' => 0,
@@ -9015,11 +9015,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 4,
                 'cluster_religious' => 1,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-09-30',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            250 =>
+            250 => 
             array (
                 'cases_0_4' => 23,
                 'cases_12_17' => 16,
@@ -9051,11 +9051,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 1,
                 'cluster_religious' => 1,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-10-01',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            251 =>
+            251 => 
             array (
                 'cases_0_4' => 3,
                 'cases_12_17' => 0,
@@ -9087,11 +9087,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 0,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-10-02',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            252 =>
+            252 => 
             array (
                 'cases_0_4' => 6,
                 'cases_12_17' => 2,
@@ -9123,11 +9123,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 8,
                 'cluster_religious' => 1,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-10-03',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            253 =>
+            253 => 
             array (
                 'cases_0_4' => 3,
                 'cases_12_17' => 3,
@@ -9159,11 +9159,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 2,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-10-04',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            254 =>
+            254 => 
             array (
                 'cases_0_4' => 4,
                 'cases_12_17' => 11,
@@ -9195,11 +9195,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 2,
                 'cluster_religious' => 1,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-10-05',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            255 =>
+            255 => 
             array (
                 'cases_0_4' => 14,
                 'cases_12_17' => 8,
@@ -9231,11 +9231,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 6,
                 'cluster_religious' => 2,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-10-06',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            256 =>
+            256 => 
             array (
                 'cases_0_4' => 7,
                 'cases_12_17' => 7,
@@ -9267,11 +9267,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 11,
                 'cluster_religious' => 4,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-10-07',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            257 =>
+            257 => 
             array (
                 'cases_0_4' => 11,
                 'cases_12_17' => 16,
@@ -9303,11 +9303,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 9,
                 'cluster_religious' => 2,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-10-08',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            258 =>
+            258 => 
             array (
                 'cases_0_4' => 15,
                 'cases_12_17' => 10,
@@ -9339,11 +9339,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 6,
                 'cluster_religious' => 1,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-10-09',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            259 =>
+            259 => 
             array (
                 'cases_0_4' => 11,
                 'cases_12_17' => 12,
@@ -9375,11 +9375,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 7,
                 'cluster_religious' => 1,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-10-10',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            260 =>
+            260 => 
             array (
                 'cases_0_4' => 20,
                 'cases_12_17' => 36,
@@ -9411,11 +9411,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 7,
                 'cluster_religious' => 9,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-10-11',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            261 =>
+            261 => 
             array (
                 'cases_0_4' => 13,
                 'cases_12_17' => 20,
@@ -9447,11 +9447,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 7,
                 'cluster_religious' => 3,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-10-12',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            262 =>
+            262 => 
             array (
                 'cases_0_4' => 10,
                 'cases_12_17' => 32,
@@ -9483,11 +9483,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 12,
                 'cluster_religious' => 13,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-10-13',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            263 =>
+            263 => 
             array (
                 'cases_0_4' => 27,
                 'cases_12_17' => 31,
@@ -9519,11 +9519,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 9,
                 'cluster_religious' => 1,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-10-14',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            264 =>
+            264 => 
             array (
                 'cases_0_4' => 15,
                 'cases_12_17' => 31,
@@ -9555,11 +9555,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 14,
                 'cluster_religious' => 4,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-10-15',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            265 =>
+            265 => 
             array (
                 'cases_0_4' => 31,
                 'cases_12_17' => 54,
@@ -9591,11 +9591,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 14,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-10-16',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            266 =>
+            266 => 
             array (
                 'cases_0_4' => 73,
                 'cases_12_17' => 39,
@@ -9627,11 +9627,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 7,
                 'cluster_religious' => 3,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-10-17',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            267 =>
+            267 => 
             array (
                 'cases_0_4' => 30,
                 'cases_12_17' => 67,
@@ -9663,11 +9663,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 13,
                 'cluster_religious' => 4,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-10-18',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            268 =>
+            268 => 
             array (
                 'cases_0_4' => 37,
                 'cases_12_17' => 50,
@@ -9699,11 +9699,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 12,
                 'cluster_religious' => 7,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-10-19',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            269 =>
+            269 => 
             array (
                 'cases_0_4' => 28,
                 'cases_12_17' => 49,
@@ -9735,11 +9735,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 3,
                 'cluster_religious' => 7,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-10-20',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            270 =>
+            270 => 
             array (
                 'cases_0_4' => 46,
                 'cases_12_17' => 54,
@@ -9771,11 +9771,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 13,
                 'cluster_religious' => 5,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-10-21',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            271 =>
+            271 => 
             array (
                 'cases_0_4' => 39,
                 'cases_12_17' => 87,
@@ -9807,11 +9807,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 9,
                 'cluster_religious' => 4,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-10-22',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            272 =>
+            272 => 
             array (
                 'cases_0_4' => 23,
                 'cases_12_17' => 49,
@@ -9843,11 +9843,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 4,
                 'cluster_religious' => 2,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-10-23',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            273 =>
+            273 => 
             array (
                 'cases_0_4' => 37,
                 'cases_12_17' => 92,
@@ -9879,11 +9879,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 13,
                 'cluster_religious' => 3,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-10-24',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            274 =>
+            274 => 
             array (
                 'cases_0_4' => 23,
                 'cases_12_17' => 49,
@@ -9915,11 +9915,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 10,
                 'cluster_religious' => 3,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-10-25',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            275 =>
+            275 => 
             array (
                 'cases_0_4' => 39,
                 'cases_12_17' => 47,
@@ -9951,11 +9951,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 12,
                 'cluster_religious' => 4,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-10-26',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            276 =>
+            276 => 
             array (
                 'cases_0_4' => 22,
                 'cases_12_17' => 54,
@@ -9987,11 +9987,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 12,
                 'cluster_religious' => 3,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-10-27',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            277 =>
+            277 => 
             array (
                 'cases_0_4' => 25,
                 'cases_12_17' => 65,
@@ -10023,11 +10023,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 15,
                 'cluster_religious' => 7,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-10-28',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            278 =>
+            278 => 
             array (
                 'cases_0_4' => 24,
                 'cases_12_17' => 40,
@@ -10059,11 +10059,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 6,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-10-29',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            279 =>
+            279 => 
             array (
                 'cases_0_4' => 17,
                 'cases_12_17' => 52,
@@ -10095,11 +10095,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 12,
                 'cluster_religious' => 2,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-10-30',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            280 =>
+            280 => 
             array (
                 'cases_0_4' => 19,
                 'cases_12_17' => 65,
@@ -10131,11 +10131,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 13,
                 'cluster_religious' => 3,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-10-31',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            281 =>
+            281 => 
             array (
                 'cases_0_4' => 42,
                 'cases_12_17' => 76,
@@ -10167,11 +10167,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 12,
                 'cluster_religious' => 3,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-11-01',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            282 =>
+            282 => 
             array (
                 'cases_0_4' => 35,
                 'cases_12_17' => 73,
@@ -10203,11 +10203,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 10,
                 'cluster_religious' => 2,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-11-02',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            283 =>
+            283 => 
             array (
                 'cases_0_4' => 45,
                 'cases_12_17' => 68,
@@ -10239,11 +10239,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 7,
                 'cluster_religious' => 6,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-11-03',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            284 =>
+            284 => 
             array (
                 'cases_0_4' => 53,
                 'cases_12_17' => 62,
@@ -10275,11 +10275,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 18,
                 'cluster_religious' => 4,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-11-04',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            285 =>
+            285 => 
             array (
                 'cases_0_4' => 24,
                 'cases_12_17' => 60,
@@ -10311,11 +10311,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 14,
                 'cluster_religious' => 1,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-11-05',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            286 =>
+            286 => 
             array (
                 'cases_0_4' => 62,
                 'cases_12_17' => 112,
@@ -10347,11 +10347,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 12,
                 'cluster_religious' => 5,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-11-06',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            287 =>
+            287 => 
             array (
                 'cases_0_4' => 38,
                 'cases_12_17' => 106,
@@ -10383,11 +10383,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 7,
                 'cluster_religious' => 3,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-11-07',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            288 =>
+            288 => 
             array (
                 'cases_0_4' => 40,
                 'cases_12_17' => 54,
@@ -10419,11 +10419,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 11,
                 'cluster_religious' => 1,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-11-08',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            289 =>
+            289 => 
             array (
                 'cases_0_4' => 44,
                 'cases_12_17' => 99,
@@ -10455,11 +10455,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 13,
                 'cluster_religious' => 5,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-11-09',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            290 =>
+            290 => 
             array (
                 'cases_0_4' => 38,
                 'cases_12_17' => 41,
@@ -10491,11 +10491,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 13,
                 'cluster_religious' => 2,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-11-10',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            291 =>
+            291 => 
             array (
                 'cases_0_4' => 20,
                 'cases_12_17' => 27,
@@ -10527,11 +10527,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 8,
                 'cluster_religious' => 5,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-11-11',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            292 =>
+            292 => 
             array (
                 'cases_0_4' => 34,
                 'cases_12_17' => 54,
@@ -10563,11 +10563,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 9,
                 'cluster_religious' => 1,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-11-12',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            293 =>
+            293 => 
             array (
                 'cases_0_4' => 24,
                 'cases_12_17' => 86,
@@ -10599,11 +10599,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 10,
                 'cluster_religious' => 9,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-11-13',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            294 =>
+            294 => 
             array (
                 'cases_0_4' => 22,
                 'cases_12_17' => 48,
@@ -10635,11 +10635,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 9,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-11-14',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            295 =>
+            295 => 
             array (
                 'cases_0_4' => 33,
                 'cases_12_17' => 60,
@@ -10671,11 +10671,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 7,
                 'cluster_religious' => 1,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-11-15',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            296 =>
+            296 => 
             array (
                 'cases_0_4' => 26,
                 'cases_12_17' => 31,
@@ -10707,11 +10707,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 7,
                 'cluster_religious' => 6,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-11-16',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            297 =>
+            297 => 
             array (
                 'cases_0_4' => 26,
                 'cases_12_17' => 34,
@@ -10743,11 +10743,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 11,
                 'cluster_religious' => 3,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-11-17',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            298 =>
+            298 => 
             array (
                 'cases_0_4' => 16,
                 'cases_12_17' => 36,
@@ -10779,11 +10779,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 8,
                 'cluster_religious' => 1,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-11-18',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            299 =>
+            299 => 
             array (
                 'cases_0_4' => 28,
                 'cases_12_17' => 59,
@@ -10815,11 +10815,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 9,
                 'cluster_religious' => 4,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-11-19',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            300 =>
+            300 => 
             array (
                 'cases_0_4' => 29,
                 'cases_12_17' => 51,
@@ -10851,11 +10851,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 10,
                 'cluster_religious' => 4,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-11-20',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            301 =>
+            301 => 
             array (
                 'cases_0_4' => 28,
                 'cases_12_17' => 35,
@@ -10887,11 +10887,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 8,
                 'cluster_religious' => 7,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-11-21',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            302 =>
+            302 => 
             array (
                 'cases_0_4' => 18,
                 'cases_12_17' => 26,
@@ -10923,11 +10923,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 9,
                 'cluster_religious' => 4,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-11-22',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            303 =>
+            303 => 
             array (
                 'cases_0_4' => 21,
                 'cases_12_17' => 35,
@@ -10959,11 +10959,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 15,
                 'cluster_religious' => 4,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-11-23',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            304 =>
+            304 => 
             array (
                 'cases_0_4' => 18,
                 'cases_12_17' => 25,
@@ -10995,11 +10995,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 10,
                 'cluster_religious' => 5,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-11-24',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            305 =>
+            305 => 
             array (
                 'cases_0_4' => 23,
                 'cases_12_17' => 41,
@@ -11031,11 +11031,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 8,
                 'cluster_religious' => 8,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-11-25',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            306 =>
+            306 => 
             array (
                 'cases_0_4' => 23,
                 'cases_12_17' => 36,
@@ -11067,11 +11067,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 10,
                 'cluster_religious' => 3,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-11-26',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            307 =>
+            307 => 
             array (
                 'cases_0_4' => 30,
                 'cases_12_17' => 51,
@@ -11103,11 +11103,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 15,
                 'cluster_religious' => 4,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-11-27',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            308 =>
+            308 => 
             array (
                 'cases_0_4' => 34,
                 'cases_12_17' => 59,
@@ -11139,11 +11139,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 11,
                 'cluster_religious' => 2,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-11-28',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            309 =>
+            309 => 
             array (
                 'cases_0_4' => 22,
                 'cases_12_17' => 33,
@@ -11175,11 +11175,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 16,
                 'cluster_religious' => 6,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-11-29',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            310 =>
+            310 => 
             array (
                 'cases_0_4' => 27,
                 'cases_12_17' => 40,
@@ -11211,11 +11211,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 13,
                 'cluster_religious' => 7,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-11-30',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            311 =>
+            311 => 
             array (
                 'cases_0_4' => 17,
                 'cases_12_17' => 31,
@@ -11247,11 +11247,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 9,
                 'cluster_religious' => 4,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-12-01',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            312 =>
+            312 => 
             array (
                 'cases_0_4' => 26,
                 'cases_12_17' => 42,
@@ -11283,11 +11283,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 12,
                 'cluster_religious' => 2,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-12-02',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            313 =>
+            313 => 
             array (
                 'cases_0_4' => 30,
                 'cases_12_17' => 43,
@@ -11319,11 +11319,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 12,
                 'cluster_religious' => 2,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-12-03',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            314 =>
+            314 => 
             array (
                 'cases_0_4' => 35,
                 'cases_12_17' => 56,
@@ -11355,11 +11355,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 15,
                 'cluster_religious' => 6,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-12-04',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            315 =>
+            315 => 
             array (
                 'cases_0_4' => 29,
                 'cases_12_17' => 73,
@@ -11391,11 +11391,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 13,
                 'cluster_religious' => 4,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-12-05',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            316 =>
+            316 => 
             array (
                 'cases_0_4' => 24,
                 'cases_12_17' => 39,
@@ -11427,11 +11427,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 16,
                 'cluster_religious' => 1,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-12-06',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            317 =>
+            317 => 
             array (
                 'cases_0_4' => 32,
                 'cases_12_17' => 50,
@@ -11463,11 +11463,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 20,
                 'cluster_religious' => 6,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-12-07',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            318 =>
+            318 => 
             array (
                 'cases_0_4' => 33,
                 'cases_12_17' => 35,
@@ -11499,11 +11499,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 14,
                 'cluster_religious' => 3,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-12-08',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            319 =>
+            319 => 
             array (
                 'cases_0_4' => 28,
                 'cases_12_17' => 35,
@@ -11535,11 +11535,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 19,
                 'cluster_religious' => 2,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-12-09',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            320 =>
+            320 => 
             array (
                 'cases_0_4' => 37,
                 'cases_12_17' => 45,
@@ -11571,11 +11571,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 14,
                 'cluster_religious' => 5,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-12-10',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            321 =>
+            321 => 
             array (
                 'cases_0_4' => 25,
                 'cases_12_17' => 68,
@@ -11607,11 +11607,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 10,
                 'cluster_religious' => 4,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-12-11',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            322 =>
+            322 => 
             array (
                 'cases_0_4' => 19,
                 'cases_12_17' => 72,
@@ -11643,11 +11643,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 11,
                 'cluster_religious' => 6,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-12-12',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            323 =>
+            323 => 
             array (
                 'cases_0_4' => 29,
                 'cases_12_17' => 53,
@@ -11679,11 +11679,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 15,
                 'cluster_religious' => 6,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-12-13',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            324 =>
+            324 => 
             array (
                 'cases_0_4' => 30,
                 'cases_12_17' => 46,
@@ -11715,11 +11715,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 11,
                 'cluster_religious' => 1,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-12-14',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            325 =>
+            325 => 
             array (
                 'cases_0_4' => 50,
                 'cases_12_17' => 36,
@@ -11751,11 +11751,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 15,
                 'cluster_religious' => 0,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-12-15',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            326 =>
+            326 => 
             array (
                 'cases_0_4' => 27,
                 'cases_12_17' => 38,
@@ -11787,11 +11787,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 10,
                 'cluster_religious' => 7,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-12-16',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            327 =>
+            327 => 
             array (
                 'cases_0_4' => 32,
                 'cases_12_17' => 46,
@@ -11823,11 +11823,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 13,
                 'cluster_religious' => 4,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-12-17',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            328 =>
+            328 => 
             array (
                 'cases_0_4' => 29,
                 'cases_12_17' => 39,
@@ -11859,11 +11859,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 16,
                 'cluster_religious' => 6,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-12-18',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            329 =>
+            329 => 
             array (
                 'cases_0_4' => 32,
                 'cases_12_17' => 29,
@@ -11895,11 +11895,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 10,
                 'cluster_religious' => 4,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-12-19',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            330 =>
+            330 => 
             array (
                 'cases_0_4' => 28,
                 'cases_12_17' => 53,
@@ -11931,11 +11931,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 13,
                 'cluster_religious' => 2,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-12-20',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            331 =>
+            331 => 
             array (
                 'cases_0_4' => 27,
                 'cases_12_17' => 34,
@@ -11967,11 +11967,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 11,
                 'cluster_religious' => 1,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-12-21',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            332 =>
+            332 => 
             array (
                 'cases_0_4' => 65,
                 'cases_12_17' => 70,
@@ -12003,11 +12003,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 9,
                 'cluster_religious' => 6,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-12-22',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            333 =>
+            333 => 
             array (
                 'cases_0_4' => 19,
                 'cases_12_17' => 41,
@@ -12039,11 +12039,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 11,
                 'cluster_religious' => 2,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-12-23',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            334 =>
+            334 => 
             array (
                 'cases_0_4' => 36,
                 'cases_12_17' => 39,
@@ -12075,11 +12075,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 23,
                 'cluster_religious' => 3,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-12-24',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            335 =>
+            335 => 
             array (
                 'cases_0_4' => 38,
                 'cases_12_17' => 45,
@@ -12111,11 +12111,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 11,
                 'cluster_religious' => 3,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-12-25',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            336 =>
+            336 => 
             array (
                 'cases_0_4' => 40,
                 'cases_12_17' => 65,
@@ -12147,11 +12147,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 23,
                 'cluster_religious' => 2,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-12-26',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            337 =>
+            337 => 
             array (
                 'cases_0_4' => 46,
                 'cases_12_17' => 46,
@@ -12183,11 +12183,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 25,
                 'cluster_religious' => 6,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-12-27',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            338 =>
+            338 => 
             array (
                 'cases_0_4' => 41,
                 'cases_12_17' => 58,
@@ -12219,11 +12219,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 23,
                 'cluster_religious' => 4,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-12-28',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            339 =>
+            339 => 
             array (
                 'cases_0_4' => 51,
                 'cases_12_17' => 37,
@@ -12255,11 +12255,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 26,
                 'cluster_religious' => 4,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-12-29',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            340 =>
+            340 => 
             array (
                 'cases_0_4' => 48,
                 'cases_12_17' => 60,
@@ -12291,11 +12291,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 33,
                 'cluster_religious' => 9,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-12-30',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            341 =>
+            341 => 
             array (
                 'cases_0_4' => 56,
                 'cases_12_17' => 63,
@@ -12327,11 +12327,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 18,
                 'cluster_religious' => 5,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2020-12-31',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            342 =>
+            342 => 
             array (
                 'cases_0_4' => 59,
                 'cases_12_17' => 78,
@@ -12363,11 +12363,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 36,
                 'cluster_religious' => 7,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-01-01',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            343 =>
+            343 => 
             array (
                 'cases_0_4' => 40,
                 'cases_12_17' => 60,
@@ -12399,11 +12399,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 19,
                 'cluster_religious' => 5,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-01-02',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            344 =>
+            344 => 
             array (
                 'cases_0_4' => 63,
                 'cases_12_17' => 71,
@@ -12435,11 +12435,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 26,
                 'cluster_religious' => 9,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-01-03',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            345 =>
+            345 => 
             array (
                 'cases_0_4' => 71,
                 'cases_12_17' => 72,
@@ -12471,11 +12471,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 23,
                 'cluster_religious' => 9,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-01-04',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            346 =>
+            346 => 
             array (
                 'cases_0_4' => 76,
                 'cases_12_17' => 87,
@@ -12507,11 +12507,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 36,
                 'cluster_religious' => 9,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-01-05',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            347 =>
+            347 => 
             array (
                 'cases_0_4' => 60,
                 'cases_12_17' => 68,
@@ -12543,11 +12543,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 32,
                 'cluster_religious' => 12,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-01-06',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            348 =>
+            348 => 
             array (
                 'cases_0_4' => 94,
                 'cases_12_17' => 99,
@@ -12579,11 +12579,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 42,
                 'cluster_religious' => 15,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-01-07',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            349 =>
+            349 => 
             array (
                 'cases_0_4' => 69,
                 'cases_12_17' => 91,
@@ -12615,11 +12615,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 36,
                 'cluster_religious' => 11,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-01-08',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            350 =>
+            350 => 
             array (
                 'cases_0_4' => 78,
                 'cases_12_17' => 104,
@@ -12651,11 +12651,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 37,
                 'cluster_religious' => 12,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-01-09',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            351 =>
+            351 => 
             array (
                 'cases_0_4' => 69,
                 'cases_12_17' => 95,
@@ -12687,11 +12687,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 40,
                 'cluster_religious' => 15,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-01-10',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            352 =>
+            352 => 
             array (
                 'cases_0_4' => 89,
                 'cases_12_17' => 128,
@@ -12723,11 +12723,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 35,
                 'cluster_religious' => 13,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-01-11',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            353 =>
+            353 => 
             array (
                 'cases_0_4' => 97,
                 'cases_12_17' => 121,
@@ -12759,11 +12759,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 32,
                 'cluster_religious' => 12,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-01-12',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            354 =>
+            354 => 
             array (
                 'cases_0_4' => 90,
                 'cases_12_17' => 130,
@@ -12795,11 +12795,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 61,
                 'cluster_religious' => 17,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-01-13',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            355 =>
+            355 => 
             array (
                 'cases_0_4' => 109,
                 'cases_12_17' => 128,
@@ -12831,11 +12831,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 50,
                 'cluster_religious' => 14,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-01-14',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            356 =>
+            356 => 
             array (
                 'cases_0_4' => 97,
                 'cases_12_17' => 145,
@@ -12867,11 +12867,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 52,
                 'cluster_religious' => 14,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-01-15',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            357 =>
+            357 => 
             array (
                 'cases_0_4' => 141,
                 'cases_12_17' => 177,
@@ -12903,11 +12903,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 72,
                 'cluster_religious' => 15,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-01-16',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            358 =>
+            358 => 
             array (
                 'cases_0_4' => 113,
                 'cases_12_17' => 163,
@@ -12939,11 +12939,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 52,
                 'cluster_religious' => 16,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-01-17',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            359 =>
+            359 => 
             array (
                 'cases_0_4' => 98,
                 'cases_12_17' => 161,
@@ -12975,11 +12975,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 64,
                 'cluster_religious' => 23,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-01-18',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            360 =>
+            360 => 
             array (
                 'cases_0_4' => 109,
                 'cases_12_17' => 176,
@@ -13011,11 +13011,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 63,
                 'cluster_religious' => 26,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-01-19',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            361 =>
+            361 => 
             array (
                 'cases_0_4' => 120,
                 'cases_12_17' => 178,
@@ -13047,11 +13047,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 72,
                 'cluster_religious' => 21,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-01-20',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            362 =>
+            362 => 
             array (
                 'cases_0_4' => 101,
                 'cases_12_17' => 170,
@@ -13083,11 +13083,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 82,
                 'cluster_religious' => 38,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-01-21',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            363 =>
+            363 => 
             array (
                 'cases_0_4' => 157,
                 'cases_12_17' => 177,
@@ -13119,11 +13119,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 87,
                 'cluster_religious' => 22,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-01-22',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            364 =>
+            364 => 
             array (
                 'cases_0_4' => 142,
                 'cases_12_17' => 174,
@@ -13155,11 +13155,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 81,
                 'cluster_religious' => 27,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-01-23',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            365 =>
+            365 => 
             array (
                 'cases_0_4' => 108,
                 'cases_12_17' => 176,
@@ -13191,11 +13191,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 68,
                 'cluster_religious' => 17,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-01-24',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            366 =>
+            366 => 
             array (
                 'cases_0_4' => 114,
                 'cases_12_17' => 128,
@@ -13227,11 +13227,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 82,
                 'cluster_religious' => 22,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-01-25',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            367 =>
+            367 => 
             array (
                 'cases_0_4' => 119,
                 'cases_12_17' => 160,
@@ -13263,11 +13263,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 54,
                 'cluster_religious' => 22,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-01-26',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            368 =>
+            368 => 
             array (
                 'cases_0_4' => 114,
                 'cases_12_17' => 141,
@@ -13299,11 +13299,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 64,
                 'cluster_religious' => 17,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-01-27',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            369 =>
+            369 => 
             array (
                 'cases_0_4' => 168,
                 'cases_12_17' => 169,
@@ -13335,11 +13335,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 67,
                 'cluster_religious' => 27,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-01-28',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            370 =>
+            370 => 
             array (
                 'cases_0_4' => 119,
                 'cases_12_17' => 196,
@@ -13371,11 +13371,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 87,
                 'cluster_religious' => 32,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-01-29',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            371 =>
+            371 => 
             array (
                 'cases_0_4' => 145,
                 'cases_12_17' => 194,
@@ -13407,11 +13407,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 88,
                 'cluster_religious' => 26,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-01-30',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            372 =>
+            372 => 
             array (
                 'cases_0_4' => 170,
                 'cases_12_17' => 190,
@@ -13443,11 +13443,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 87,
                 'cluster_religious' => 30,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-01-31',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            373 =>
+            373 => 
             array (
                 'cases_0_4' => 110,
                 'cases_12_17' => 127,
@@ -13479,11 +13479,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 55,
                 'cluster_religious' => 30,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-02-01',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            374 =>
+            374 => 
             array (
                 'cases_0_4' => 109,
                 'cases_12_17' => 119,
@@ -13515,11 +13515,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 47,
                 'cluster_religious' => 15,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-02-02',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            375 =>
+            375 => 
             array (
                 'cases_0_4' => 106,
                 'cases_12_17' => 135,
@@ -13551,11 +13551,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 45,
                 'cluster_religious' => 22,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-02-03',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            376 =>
+            376 => 
             array (
                 'cases_0_4' => 109,
                 'cases_12_17' => 154,
@@ -13587,11 +13587,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 81,
                 'cluster_religious' => 26,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-02-04',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            377 =>
+            377 => 
             array (
                 'cases_0_4' => 108,
                 'cases_12_17' => 108,
@@ -13623,11 +13623,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 61,
                 'cluster_religious' => 34,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-02-05',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            378 =>
+            378 => 
             array (
                 'cases_0_4' => 104,
                 'cases_12_17' => 121,
@@ -13659,11 +13659,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 64,
                 'cluster_religious' => 18,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-02-06',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            379 =>
+            379 => 
             array (
                 'cases_0_4' => 76,
                 'cases_12_17' => 107,
@@ -13695,11 +13695,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 54,
                 'cluster_religious' => 24,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-02-07',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            380 =>
+            380 => 
             array (
                 'cases_0_4' => 80,
                 'cases_12_17' => 90,
@@ -13731,11 +13731,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 41,
                 'cluster_religious' => 13,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-02-08',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            381 =>
+            381 => 
             array (
                 'cases_0_4' => 86,
                 'cases_12_17' => 103,
@@ -13767,11 +13767,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 52,
                 'cluster_religious' => 15,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-02-09',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            382 =>
+            382 => 
             array (
                 'cases_0_4' => 84,
                 'cases_12_17' => 118,
@@ -13803,11 +13803,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 43,
                 'cluster_religious' => 27,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-02-10',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            383 =>
+            383 => 
             array (
                 'cases_0_4' => 81,
                 'cases_12_17' => 120,
@@ -13839,11 +13839,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 42,
                 'cluster_religious' => 19,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-02-11',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            384 =>
+            384 => 
             array (
                 'cases_0_4' => 63,
                 'cases_12_17' => 73,
@@ -13875,11 +13875,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 45,
                 'cluster_religious' => 12,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-02-12',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            385 =>
+            385 => 
             array (
                 'cases_0_4' => 75,
                 'cases_12_17' => 106,
@@ -13911,11 +13911,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 26,
                 'cluster_religious' => 14,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-02-13',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            386 =>
+            386 => 
             array (
                 'cases_0_4' => 73,
                 'cases_12_17' => 104,
@@ -13947,11 +13947,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 61,
                 'cluster_religious' => 19,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-02-14',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            387 =>
+            387 => 
             array (
                 'cases_0_4' => 75,
                 'cases_12_17' => 95,
@@ -13983,11 +13983,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 50,
                 'cluster_religious' => 22,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-02-15',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            388 =>
+            388 => 
             array (
                 'cases_0_4' => 80,
                 'cases_12_17' => 83,
@@ -14019,11 +14019,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 46,
                 'cluster_religious' => 20,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-02-16',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            389 =>
+            389 => 
             array (
                 'cases_0_4' => 63,
                 'cases_12_17' => 87,
@@ -14055,11 +14055,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 41,
                 'cluster_religious' => 25,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-02-17',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            390 =>
+            390 => 
             array (
                 'cases_0_4' => 57,
                 'cases_12_17' => 73,
@@ -14091,11 +14091,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 61,
                 'cluster_religious' => 31,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-02-18',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            391 =>
+            391 => 
             array (
                 'cases_0_4' => 70,
                 'cases_12_17' => 110,
@@ -14127,11 +14127,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 34,
                 'cluster_religious' => 12,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-02-19',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            392 =>
+            392 => 
             array (
                 'cases_0_4' => 74,
                 'cases_12_17' => 83,
@@ -14163,11 +14163,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 33,
                 'cluster_religious' => 8,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-02-20',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            393 =>
+            393 => 
             array (
                 'cases_0_4' => 65,
                 'cases_12_17' => 89,
@@ -14199,11 +14199,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 29,
                 'cluster_religious' => 14,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-02-21',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            394 =>
+            394 => 
             array (
                 'cases_0_4' => 80,
                 'cases_12_17' => 81,
@@ -14235,11 +14235,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 32,
                 'cluster_religious' => 10,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-02-22',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            395 =>
+            395 => 
             array (
                 'cases_0_4' => 60,
                 'cases_12_17' => 78,
@@ -14271,11 +14271,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 37,
                 'cluster_religious' => 8,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-02-23',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            396 =>
+            396 => 
             array (
                 'cases_0_4' => 56,
                 'cases_12_17' => 81,
@@ -14307,11 +14307,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 46,
                 'cluster_religious' => 30,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-02-24',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            397 =>
+            397 => 
             array (
                 'cases_0_4' => 64,
                 'cases_12_17' => 74,
@@ -14343,11 +14343,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 31,
                 'cluster_religious' => 27,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-02-25',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            398 =>
+            398 => 
             array (
                 'cases_0_4' => 55,
                 'cases_12_17' => 77,
@@ -14379,11 +14379,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 51,
                 'cluster_religious' => 29,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-02-26',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            399 =>
+            399 => 
             array (
                 'cases_0_4' => 50,
                 'cases_12_17' => 101,
@@ -14415,11 +14415,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 36,
                 'cluster_religious' => 16,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-02-27',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            400 =>
+            400 => 
             array (
                 'cases_0_4' => 61,
                 'cases_12_17' => 80,
@@ -14451,11 +14451,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 29,
                 'cluster_religious' => 8,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-02-28',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            401 =>
+            401 => 
             array (
                 'cases_0_4' => 49,
                 'cases_12_17' => 58,
@@ -14487,11 +14487,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 26,
                 'cluster_religious' => 10,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-03-01',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            402 =>
+            402 => 
             array (
                 'cases_0_4' => 49,
                 'cases_12_17' => 57,
@@ -14523,11 +14523,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 36,
                 'cluster_religious' => 13,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-03-02',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            403 =>
+            403 => 
             array (
                 'cases_0_4' => 45,
                 'cases_12_17' => 60,
@@ -14559,11 +14559,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 18,
                 'cluster_religious' => 5,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-03-03',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            404 =>
+            404 => 
             array (
                 'cases_0_4' => 63,
                 'cases_12_17' => 88,
@@ -14595,11 +14595,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 44,
                 'cluster_religious' => 11,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-03-04',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            405 =>
+            405 => 
             array (
                 'cases_0_4' => 69,
                 'cases_12_17' => 174,
@@ -14631,11 +14631,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 28,
                 'cluster_religious' => 7,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-03-05',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            406 =>
+            406 => 
             array (
                 'cases_0_4' => 63,
                 'cases_12_17' => 87,
@@ -14667,11 +14667,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 36,
                 'cluster_religious' => 15,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-03-06',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            407 =>
+            407 => 
             array (
                 'cases_0_4' => 50,
                 'cases_12_17' => 97,
@@ -14703,11 +14703,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 31,
                 'cluster_religious' => 10,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-03-07',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            408 =>
+            408 => 
             array (
                 'cases_0_4' => 55,
                 'cases_12_17' => 88,
@@ -14739,11 +14739,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 25,
                 'cluster_religious' => 13,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-03-08',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            409 =>
+            409 => 
             array (
                 'cases_0_4' => 40,
                 'cases_12_17' => 46,
@@ -14775,11 +14775,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 23,
                 'cluster_religious' => 9,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-03-09',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            410 =>
+            410 => 
             array (
                 'cases_0_4' => 41,
                 'cases_12_17' => 60,
@@ -14811,11 +14811,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 22,
                 'cluster_religious' => 5,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-03-10',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            411 =>
+            411 => 
             array (
                 'cases_0_4' => 43,
                 'cases_12_17' => 59,
@@ -14847,11 +14847,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 25,
                 'cluster_religious' => 9,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-03-11',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            412 =>
+            412 => 
             array (
                 'cases_0_4' => 58,
                 'cases_12_17' => 84,
@@ -14883,11 +14883,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 29,
                 'cluster_religious' => 11,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-03-12',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            413 =>
+            413 => 
             array (
                 'cases_0_4' => 49,
                 'cases_12_17' => 65,
@@ -14919,11 +14919,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 27,
                 'cluster_religious' => 15,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-03-13',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            414 =>
+            414 => 
             array (
                 'cases_0_4' => 57,
                 'cases_12_17' => 66,
@@ -14955,11 +14955,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 24,
                 'cluster_religious' => 12,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-03-14',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            415 =>
+            415 => 
             array (
                 'cases_0_4' => 44,
                 'cases_12_17' => 82,
@@ -14991,11 +14991,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 14,
                 'cluster_religious' => 9,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-03-15',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            416 =>
+            416 => 
             array (
                 'cases_0_4' => 58,
                 'cases_12_17' => 60,
@@ -15027,11 +15027,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 22,
                 'cluster_religious' => 6,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-03-16',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            417 =>
+            417 => 
             array (
                 'cases_0_4' => 39,
                 'cases_12_17' => 54,
@@ -15063,11 +15063,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 22,
                 'cluster_religious' => 8,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-03-17',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            418 =>
+            418 => 
             array (
                 'cases_0_4' => 45,
                 'cases_12_17' => 70,
@@ -15099,11 +15099,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 21,
                 'cluster_religious' => 6,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-03-18',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            419 =>
+            419 => 
             array (
                 'cases_0_4' => 63,
                 'cases_12_17' => 67,
@@ -15135,11 +15135,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 30,
                 'cluster_religious' => 8,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-03-19',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            420 =>
+            420 => 
             array (
                 'cases_0_4' => 51,
                 'cases_12_17' => 64,
@@ -15171,11 +15171,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 19,
                 'cluster_religious' => 9,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-03-20',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            421 =>
+            421 => 
             array (
                 'cases_0_4' => 42,
                 'cases_12_17' => 57,
@@ -15207,11 +15207,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 18,
                 'cluster_religious' => 9,
                 'cluster_workplace' => 14,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-03-21',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            422 =>
+            422 => 
             array (
                 'cases_0_4' => 34,
                 'cases_12_17' => 47,
@@ -15243,11 +15243,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 16,
                 'cluster_religious' => 8,
                 'cluster_workplace' => 10,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-03-22',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            423 =>
+            423 => 
             array (
                 'cases_0_4' => 29,
                 'cases_12_17' => 62,
@@ -15279,11 +15279,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 22,
                 'cluster_religious' => 8,
                 'cluster_workplace' => 8,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-03-23',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            424 =>
+            424 => 
             array (
                 'cases_0_4' => 47,
                 'cases_12_17' => 64,
@@ -15315,11 +15315,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 14,
                 'cluster_religious' => 5,
                 'cluster_workplace' => 7,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-03-24',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            425 =>
+            425 => 
             array (
                 'cases_0_4' => 66,
                 'cases_12_17' => 63,
@@ -15351,11 +15351,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 31,
                 'cluster_religious' => 3,
                 'cluster_workplace' => 16,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-03-25',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            426 =>
+            426 => 
             array (
                 'cases_0_4' => 55,
                 'cases_12_17' => 72,
@@ -15387,11 +15387,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 21,
                 'cluster_religious' => 9,
                 'cluster_workplace' => 31,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-03-26',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            427 =>
+            427 => 
             array (
                 'cases_0_4' => 48,
                 'cases_12_17' => 102,
@@ -15423,11 +15423,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 20,
                 'cluster_religious' => 8,
                 'cluster_workplace' => 32,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-03-27',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            428 =>
+            428 => 
             array (
                 'cases_0_4' => 50,
                 'cases_12_17' => 74,
@@ -15459,11 +15459,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 26,
                 'cluster_religious' => 15,
                 'cluster_workplace' => 22,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-03-28',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            429 =>
+            429 => 
             array (
                 'cases_0_4' => 27,
                 'cases_12_17' => 52,
@@ -15495,11 +15495,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 24,
                 'cluster_religious' => 6,
                 'cluster_workplace' => 21,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-03-29',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            430 =>
+            430 => 
             array (
                 'cases_0_4' => 34,
                 'cases_12_17' => 68,
@@ -15531,11 +15531,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 18,
                 'cluster_religious' => 4,
                 'cluster_workplace' => 28,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-03-30',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            431 =>
+            431 => 
             array (
                 'cases_0_4' => 45,
                 'cases_12_17' => 85,
@@ -15567,11 +15567,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 24,
                 'cluster_religious' => 5,
                 'cluster_workplace' => 62,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-03-31',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            432 =>
+            432 => 
             array (
                 'cases_0_4' => 37,
                 'cases_12_17' => 74,
@@ -15603,11 +15603,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 30,
                 'cluster_religious' => 4,
                 'cluster_workplace' => 25,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-04-01',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            433 =>
+            433 => 
             array (
                 'cases_0_4' => 44,
                 'cases_12_17' => 60,
@@ -15639,11 +15639,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 19,
                 'cluster_religious' => 14,
                 'cluster_workplace' => 23,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-04-02',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            434 =>
+            434 => 
             array (
                 'cases_0_4' => 49,
                 'cases_12_17' => 91,
@@ -15675,11 +15675,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 29,
                 'cluster_religious' => 6,
                 'cluster_workplace' => 19,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-04-03',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            435 =>
+            435 => 
             array (
                 'cases_0_4' => 58,
                 'cases_12_17' => 71,
@@ -15711,11 +15711,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 20,
                 'cluster_religious' => 7,
                 'cluster_workplace' => 18,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-04-04',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            436 =>
+            436 => 
             array (
                 'cases_0_4' => 44,
                 'cases_12_17' => 61,
@@ -15747,11 +15747,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 15,
                 'cluster_religious' => 9,
                 'cluster_workplace' => 26,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-04-05',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            437 =>
+            437 => 
             array (
                 'cases_0_4' => 37,
                 'cases_12_17' => 94,
@@ -15783,11 +15783,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 14,
                 'cluster_religious' => 5,
                 'cluster_workplace' => 35,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-04-06',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            438 =>
+            438 => 
             array (
                 'cases_0_4' => 48,
                 'cases_12_17' => 68,
@@ -15819,11 +15819,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 42,
                 'cluster_religious' => 8,
                 'cluster_workplace' => 8,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-04-07',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            439 =>
+            439 => 
             array (
                 'cases_0_4' => 40,
                 'cases_12_17' => 77,
@@ -15855,11 +15855,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 23,
                 'cluster_religious' => 9,
                 'cluster_workplace' => 13,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-04-08',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            440 =>
+            440 => 
             array (
                 'cases_0_4' => 69,
                 'cases_12_17' => 117,
@@ -15891,11 +15891,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 38,
                 'cluster_religious' => 12,
                 'cluster_workplace' => 32,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-04-09',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            441 =>
+            441 => 
             array (
                 'cases_0_4' => 57,
                 'cases_12_17' => 115,
@@ -15927,11 +15927,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 35,
                 'cluster_religious' => 13,
                 'cluster_workplace' => 8,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-04-10',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            442 =>
+            442 => 
             array (
                 'cases_0_4' => 53,
                 'cases_12_17' => 104,
@@ -15963,11 +15963,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 44,
                 'cluster_religious' => 8,
                 'cluster_workplace' => 25,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-04-11',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            443 =>
+            443 => 
             array (
                 'cases_0_4' => 44,
                 'cases_12_17' => 80,
@@ -15999,11 +15999,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 34,
                 'cluster_religious' => 10,
                 'cluster_workplace' => 3,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-04-12',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            444 =>
+            444 => 
             array (
                 'cases_0_4' => 66,
                 'cases_12_17' => 87,
@@ -16035,11 +16035,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 37,
                 'cluster_religious' => 13,
                 'cluster_workplace' => 47,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-04-13',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            445 =>
+            445 => 
             array (
                 'cases_0_4' => 71,
                 'cases_12_17' => 219,
@@ -16071,11 +16071,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 41,
                 'cluster_religious' => 9,
                 'cluster_workplace' => 59,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-04-14',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            446 =>
+            446 => 
             array (
                 'cases_0_4' => 60,
                 'cases_12_17' => 234,
@@ -16107,11 +16107,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 60,
                 'cluster_religious' => 20,
                 'cluster_workplace' => 118,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-04-15',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            447 =>
+            447 => 
             array (
                 'cases_0_4' => 71,
                 'cases_12_17' => 169,
@@ -16143,11 +16143,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 51,
                 'cluster_religious' => 15,
                 'cluster_workplace' => 446,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-04-16',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            448 =>
+            448 => 
             array (
                 'cases_0_4' => 79,
                 'cases_12_17' => 327,
@@ -16179,11 +16179,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 29,
                 'cluster_religious' => 16,
                 'cluster_workplace' => 185,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-04-17',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            449 =>
+            449 => 
             array (
                 'cases_0_4' => 80,
                 'cases_12_17' => 212,
@@ -16215,11 +16215,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 35,
                 'cluster_religious' => 18,
                 'cluster_workplace' => 183,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-04-18',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            450 =>
+            450 => 
             array (
                 'cases_0_4' => 81,
                 'cases_12_17' => 259,
@@ -16251,11 +16251,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 46,
                 'cluster_religious' => 19,
                 'cluster_workplace' => 175,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-04-19',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            451 =>
+            451 => 
             array (
                 'cases_0_4' => 100,
                 'cases_12_17' => 342,
@@ -16287,11 +16287,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 56,
                 'cluster_religious' => 17,
                 'cluster_workplace' => 235,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-04-20',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            452 =>
+            452 => 
             array (
                 'cases_0_4' => 84,
                 'cases_12_17' => 413,
@@ -16323,11 +16323,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 61,
                 'cluster_religious' => 17,
                 'cluster_workplace' => 325,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-04-21',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            453 =>
+            453 => 
             array (
                 'cases_0_4' => 104,
                 'cases_12_17' => 540,
@@ -16359,11 +16359,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 64,
                 'cluster_religious' => 17,
                 'cluster_workplace' => 501,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-04-22',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            454 =>
+            454 => 
             array (
                 'cases_0_4' => 96,
                 'cases_12_17' => 322,
@@ -16395,11 +16395,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 65,
                 'cluster_religious' => 8,
                 'cluster_workplace' => 283,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-04-23',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            455 =>
+            455 => 
             array (
                 'cases_0_4' => 102,
                 'cases_12_17' => 381,
@@ -16431,11 +16431,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 87,
                 'cluster_religious' => 14,
                 'cluster_workplace' => 242,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-04-24',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            456 =>
+            456 => 
             array (
                 'cases_0_4' => 89,
                 'cases_12_17' => 279,
@@ -16467,11 +16467,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 75,
                 'cluster_religious' => 13,
                 'cluster_workplace' => 166,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-04-25',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            457 =>
+            457 => 
             array (
                 'cases_0_4' => 97,
                 'cases_12_17' => 255,
@@ -16503,11 +16503,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 68,
                 'cluster_religious' => 15,
                 'cluster_workplace' => 105,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-04-26',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            458 =>
+            458 => 
             array (
                 'cases_0_4' => 88,
                 'cases_12_17' => 318,
@@ -16539,11 +16539,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 57,
                 'cluster_religious' => 27,
                 'cluster_workplace' => 161,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-04-27',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            459 =>
+            459 => 
             array (
                 'cases_0_4' => 97,
                 'cases_12_17' => 358,
@@ -16575,11 +16575,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 98,
                 'cluster_religious' => 28,
                 'cluster_workplace' => 213,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-04-28',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            460 =>
+            460 => 
             array (
                 'cases_0_4' => 105,
                 'cases_12_17' => 341,
@@ -16611,11 +16611,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 126,
                 'cluster_religious' => 25,
                 'cluster_workplace' => 151,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-04-29',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            461 =>
+            461 => 
             array (
                 'cases_0_4' => 127,
                 'cases_12_17' => 473,
@@ -16647,11 +16647,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 102,
                 'cluster_religious' => 37,
                 'cluster_workplace' => 271,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-04-30',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            462 =>
+            462 => 
             array (
                 'cases_0_4' => 95,
                 'cases_12_17' => 279,
@@ -16683,11 +16683,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 89,
                 'cluster_religious' => 22,
                 'cluster_workplace' => 260,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-05-01',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            463 =>
+            463 => 
             array (
                 'cases_0_4' => 150,
                 'cases_12_17' => 390,
@@ -16719,11 +16719,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 85,
                 'cluster_religious' => 23,
                 'cluster_workplace' => 306,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-05-02',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            464 =>
+            464 => 
             array (
                 'cases_0_4' => 86,
                 'cases_12_17' => 239,
@@ -16755,11 +16755,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 70,
                 'cluster_religious' => 18,
                 'cluster_workplace' => 142,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-05-03',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            465 =>
+            465 => 
             array (
                 'cases_0_4' => 121,
                 'cases_12_17' => 289,
@@ -16791,11 +16791,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 82,
                 'cluster_religious' => 27,
                 'cluster_workplace' => 230,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-05-04',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            466 =>
+            466 => 
             array (
                 'cases_0_4' => 130,
                 'cases_12_17' => 303,
@@ -16827,11 +16827,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 107,
                 'cluster_religious' => 32,
                 'cluster_workplace' => 126,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-05-05',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            467 =>
+            467 => 
             array (
                 'cases_0_4' => 124,
                 'cases_12_17' => 241,
@@ -16863,11 +16863,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 132,
                 'cluster_religious' => 23,
                 'cluster_workplace' => 195,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-05-06',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            468 =>
+            468 => 
             array (
                 'cases_0_4' => 173,
                 'cases_12_17' => 372,
@@ -16899,11 +16899,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 139,
                 'cluster_religious' => 35,
                 'cluster_workplace' => 168,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-05-07',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            469 =>
+            469 => 
             array (
                 'cases_0_4' => 153,
                 'cases_12_17' => 297,
@@ -16935,11 +16935,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 137,
                 'cluster_religious' => 35,
                 'cluster_workplace' => 67,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-05-08',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            470 =>
+            470 => 
             array (
                 'cases_0_4' => 139,
                 'cases_12_17' => 238,
@@ -16971,11 +16971,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 108,
                 'cluster_religious' => 28,
                 'cluster_workplace' => 83,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-05-09',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            471 =>
+            471 => 
             array (
                 'cases_0_4' => 159,
                 'cases_12_17' => 291,
@@ -17007,11 +17007,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 142,
                 'cluster_religious' => 40,
                 'cluster_workplace' => 84,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-05-10',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            472 =>
+            472 => 
             array (
                 'cases_0_4' => 186,
                 'cases_12_17' => 296,
@@ -17043,11 +17043,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 103,
                 'cluster_religious' => 28,
                 'cluster_workplace' => 207,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-05-11',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            473 =>
+            473 => 
             array (
                 'cases_0_4' => 164,
                 'cases_12_17' => 324,
@@ -17079,11 +17079,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 149,
                 'cluster_religious' => 33,
                 'cluster_workplace' => 137,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-05-12',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            474 =>
+            474 => 
             array (
                 'cases_0_4' => 181,
                 'cases_12_17' => 480,
@@ -17115,11 +17115,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 156,
                 'cluster_religious' => 57,
                 'cluster_workplace' => 255,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-05-13',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            475 =>
+            475 => 
             array (
                 'cases_0_4' => 179,
                 'cases_12_17' => 273,
@@ -17151,11 +17151,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 162,
                 'cluster_religious' => 37,
                 'cluster_workplace' => 52,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-05-14',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            476 =>
+            476 => 
             array (
                 'cases_0_4' => 165,
                 'cases_12_17' => 235,
@@ -17187,11 +17187,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 137,
                 'cluster_religious' => 39,
                 'cluster_workplace' => 57,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-05-15',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            477 =>
+            477 => 
             array (
                 'cases_0_4' => 160,
                 'cases_12_17' => 268,
@@ -17223,11 +17223,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 124,
                 'cluster_religious' => 30,
                 'cluster_workplace' => 49,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-05-16',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            478 =>
+            478 => 
             array (
                 'cases_0_4' => 179,
                 'cases_12_17' => 307,
@@ -17259,11 +17259,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 166,
                 'cluster_religious' => 55,
                 'cluster_workplace' => 74,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-05-17',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            479 =>
+            479 => 
             array (
                 'cases_0_4' => 211,
                 'cases_12_17' => 331,
@@ -17295,11 +17295,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 154,
                 'cluster_religious' => 54,
                 'cluster_workplace' => 74,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-05-18',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            480 =>
+            480 => 
             array (
                 'cases_0_4' => 248,
                 'cases_12_17' => 381,
@@ -17331,11 +17331,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 188,
                 'cluster_religious' => 60,
                 'cluster_workplace' => 107,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-05-19',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            481 =>
+            481 => 
             array (
                 'cases_0_4' => 255,
                 'cases_12_17' => 466,
@@ -17367,11 +17367,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 220,
                 'cluster_religious' => 64,
                 'cluster_workplace' => 158,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-05-20',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            482 =>
+            482 => 
             array (
                 'cases_0_4' => 260,
                 'cases_12_17' => 419,
@@ -17403,11 +17403,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 201,
                 'cluster_religious' => 49,
                 'cluster_workplace' => 75,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-05-21',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            483 =>
+            483 => 
             array (
                 'cases_0_4' => 313,
                 'cases_12_17' => 428,
@@ -17439,11 +17439,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 230,
                 'cluster_religious' => 80,
                 'cluster_workplace' => 38,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-05-22',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            484 =>
+            484 => 
             array (
                 'cases_0_4' => 319,
                 'cases_12_17' => 438,
@@ -17475,11 +17475,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 226,
                 'cluster_religious' => 84,
                 'cluster_workplace' => 50,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-05-23',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            485 =>
+            485 => 
             array (
                 'cases_0_4' => 295,
                 'cases_12_17' => 482,
@@ -17511,11 +17511,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 184,
                 'cluster_religious' => 51,
                 'cluster_workplace' => 45,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-05-24',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            486 =>
+            486 => 
             array (
                 'cases_0_4' => 388,
                 'cases_12_17' => 533,
@@ -17547,11 +17547,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 211,
                 'cluster_religious' => 73,
                 'cluster_workplace' => 43,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-05-25',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            487 =>
+            487 => 
             array (
                 'cases_0_4' => 367,
                 'cases_12_17' => 501,
@@ -17583,11 +17583,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 209,
                 'cluster_religious' => 63,
                 'cluster_workplace' => 63,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-05-26',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            488 =>
+            488 => 
             array (
                 'cases_0_4' => 407,
                 'cases_12_17' => 578,
@@ -17619,11 +17619,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 203,
                 'cluster_religious' => 74,
                 'cluster_workplace' => 43,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-05-27',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            489 =>
+            489 => 
             array (
                 'cases_0_4' => 428,
                 'cases_12_17' => 627,
@@ -17655,11 +17655,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 226,
                 'cluster_religious' => 77,
                 'cluster_workplace' => 57,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-05-28',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            490 =>
+            490 => 
             array (
                 'cases_0_4' => 477,
                 'cases_12_17' => 619,
@@ -17691,11 +17691,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 225,
                 'cluster_religious' => 57,
                 'cluster_workplace' => 30,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-05-29',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            491 =>
+            491 => 
             array (
                 'cases_0_4' => 383,
                 'cases_12_17' => 475,
@@ -17727,11 +17727,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 188,
                 'cluster_religious' => 56,
                 'cluster_workplace' => 399,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-05-30',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            492 =>
+            492 => 
             array (
                 'cases_0_4' => 366,
                 'cases_12_17' => 518,
@@ -17763,11 +17763,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 187,
                 'cluster_religious' => 48,
                 'cluster_workplace' => 33,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-05-31',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            493 =>
+            493 => 
             array (
                 'cases_0_4' => 374,
                 'cases_12_17' => 526,
@@ -17799,11 +17799,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 208,
                 'cluster_religious' => 68,
                 'cluster_workplace' => 33,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-06-01',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            494 =>
+            494 => 
             array (
                 'cases_0_4' => 421,
                 'cases_12_17' => 507,
@@ -17835,11 +17835,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 193,
                 'cluster_religious' => 60,
                 'cluster_workplace' => 24,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-06-02',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            495 =>
+            495 => 
             array (
                 'cases_0_4' => 384,
                 'cases_12_17' => 535,
@@ -17871,11 +17871,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 202,
                 'cluster_religious' => 56,
                 'cluster_workplace' => 22,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-06-03',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            496 =>
+            496 => 
             array (
                 'cases_0_4' => 392,
                 'cases_12_17' => 494,
@@ -17907,11 +17907,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 182,
                 'cluster_religious' => 73,
                 'cluster_workplace' => 70,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-06-04',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            497 =>
+            497 => 
             array (
                 'cases_0_4' => 348,
                 'cases_12_17' => 491,
@@ -17943,11 +17943,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 156,
                 'cluster_religious' => 70,
                 'cluster_workplace' => 8,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-06-05',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            498 =>
+            498 => 
             array (
                 'cases_0_4' => 341,
                 'cases_12_17' => 366,
@@ -17979,11 +17979,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 146,
                 'cluster_religious' => 49,
                 'cluster_workplace' => 35,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-06-06',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            499 =>
+            499 => 
             array (
                 'cases_0_4' => 252,
                 'cases_12_17' => 376,
@@ -18015,13 +18015,13 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 140,
                 'cluster_religious' => 52,
                 'cluster_workplace' => 34,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-06-07',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
         ));
         \DB::table('cases_malaysia')->insert(array (
-            0 =>
+            0 => 
             array (
                 'cases_0_4' => 266,
                 'cases_12_17' => 357,
@@ -18053,11 +18053,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 125,
                 'cluster_religious' => 56,
                 'cluster_workplace' => 31,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-06-08',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            1 =>
+            1 => 
             array (
                 'cases_0_4' => 296,
                 'cases_12_17' => 415,
@@ -18089,11 +18089,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 137,
                 'cluster_religious' => 55,
                 'cluster_workplace' => 28,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-06-09',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            2 =>
+            2 => 
             array (
                 'cases_0_4' => 292,
                 'cases_12_17' => 396,
@@ -18125,11 +18125,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 141,
                 'cluster_religious' => 38,
                 'cluster_workplace' => 48,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-06-10',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            3 =>
+            3 => 
             array (
                 'cases_0_4' => 283,
                 'cases_12_17' => 405,
@@ -18161,11 +18161,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 132,
                 'cluster_religious' => 50,
                 'cluster_workplace' => 22,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-06-11',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            4 =>
+            4 => 
             array (
                 'cases_0_4' => 285,
                 'cases_12_17' => 398,
@@ -18197,11 +18197,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 123,
                 'cluster_religious' => 46,
                 'cluster_workplace' => 12,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-06-12',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            5 =>
+            5 => 
             array (
                 'cases_0_4' => 257,
                 'cases_12_17' => 334,
@@ -18233,11 +18233,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 104,
                 'cluster_religious' => 37,
                 'cluster_workplace' => 33,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-06-13',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            6 =>
+            6 => 
             array (
                 'cases_0_4' => 237,
                 'cases_12_17' => 327,
@@ -18269,11 +18269,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 112,
                 'cluster_religious' => 62,
                 'cluster_workplace' => 15,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-06-14',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            7 =>
+            7 => 
             array (
                 'cases_0_4' => 262,
                 'cases_12_17' => 358,
@@ -18305,11 +18305,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 145,
                 'cluster_religious' => 94,
                 'cluster_workplace' => 4,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-06-15',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            8 =>
+            8 => 
             array (
                 'cases_0_4' => 275,
                 'cases_12_17' => 355,
@@ -18341,11 +18341,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 143,
                 'cluster_religious' => 72,
                 'cluster_workplace' => 4,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-06-16',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            9 =>
+            9 => 
             array (
                 'cases_0_4' => 280,
                 'cases_12_17' => 387,
@@ -18377,11 +18377,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 125,
                 'cluster_religious' => 38,
                 'cluster_workplace' => 7,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-06-17',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            10 =>
+            10 => 
             array (
                 'cases_0_4' => 286,
                 'cases_12_17' => 337,
@@ -18413,11 +18413,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 112,
                 'cluster_religious' => 63,
                 'cluster_workplace' => 1,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-06-18',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            11 =>
+            11 => 
             array (
                 'cases_0_4' => 238,
                 'cases_12_17' => 331,
@@ -18449,11 +18449,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 103,
                 'cluster_religious' => 43,
                 'cluster_workplace' => 23,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-06-19',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            12 =>
+            12 => 
             array (
                 'cases_0_4' => 245,
                 'cases_12_17' => 354,
@@ -18485,11 +18485,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 97,
                 'cluster_religious' => 48,
                 'cluster_workplace' => 4,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-06-20',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            13 =>
+            13 => 
             array (
                 'cases_0_4' => 219,
                 'cases_12_17' => 304,
@@ -18521,11 +18521,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 101,
                 'cluster_religious' => 37,
                 'cluster_workplace' => 1,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-06-21',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            14 =>
+            14 => 
             array (
                 'cases_0_4' => 259,
                 'cases_12_17' => 290,
@@ -18546,10 +18546,10 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_fvax' => 91,
                 'cases_import' => 2,
                 'cases_new' => 4743,
-                'cases_pvax' => 278,
+                'cases_pvax' => 277,
                 'cases_recovered' => 5557,
                 'cases_recovered_cumulative' => 639180,
-                'cases_unvax' => 4374,
+                'cases_unvax' => 4375,
                 'cluster_community' => 0,
                 'cluster_detentionCentre' => 36,
                 'cluster_education' => 219,
@@ -18557,11 +18557,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 107,
                 'cluster_religious' => 47,
                 'cluster_workplace' => 15,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-06-22',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            15 =>
+            15 => 
             array (
                 'cases_0_4' => 249,
                 'cases_12_17' => 307,
@@ -18593,11 +18593,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 123,
                 'cluster_religious' => 49,
                 'cluster_workplace' => 33,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-06-23',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            16 =>
+            16 => 
             array (
                 'cases_0_4' => 294,
                 'cases_12_17' => 379,
@@ -18629,11 +18629,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 122,
                 'cluster_religious' => 45,
                 'cluster_workplace' => 5,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-06-24',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            17 =>
+            17 => 
             array (
                 'cases_0_4' => 238,
                 'cases_12_17' => 329,
@@ -18665,11 +18665,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 103,
                 'cluster_religious' => 41,
                 'cluster_workplace' => 17,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-06-25',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            18 =>
+            18 => 
             array (
                 'cases_0_4' => 210,
                 'cases_12_17' => 326,
@@ -18701,11 +18701,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 120,
                 'cluster_religious' => 27,
                 'cluster_workplace' => 21,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-06-26',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            19 =>
+            19 => 
             array (
                 'cases_0_4' => 232,
                 'cases_12_17' => 316,
@@ -18737,11 +18737,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 101,
                 'cluster_religious' => 49,
                 'cluster_workplace' => 4,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-06-27',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            20 =>
+            20 => 
             array (
                 'cases_0_4' => 233,
                 'cases_12_17' => 348,
@@ -18762,10 +18762,10 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_fvax' => 111,
                 'cases_import' => 7,
                 'cases_new' => 5218,
-                'cases_pvax' => 342,
+                'cases_pvax' => 341,
                 'cases_recovered' => 4744,
                 'cases_recovered_cumulative' => 672452,
-                'cases_unvax' => 4765,
+                'cases_unvax' => 4766,
                 'cluster_community' => 0,
                 'cluster_detentionCentre' => 12,
                 'cluster_education' => 278,
@@ -18773,11 +18773,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 92,
                 'cluster_religious' => 32,
                 'cluster_workplace' => 18,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-06-28',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            21 =>
+            21 => 
             array (
                 'cases_0_4' => 296,
                 'cases_12_17' => 367,
@@ -18809,11 +18809,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 141,
                 'cluster_religious' => 44,
                 'cluster_workplace' => 5,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-06-29',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            22 =>
+            22 => 
             array (
                 'cases_0_4' => 322,
                 'cases_12_17' => 377,
@@ -18845,11 +18845,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 123,
                 'cluster_religious' => 65,
                 'cluster_workplace' => 9,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-06-30',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            23 =>
+            23 => 
             array (
                 'cases_0_4' => 348,
                 'cases_12_17' => 379,
@@ -18881,11 +18881,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 134,
                 'cluster_religious' => 45,
                 'cluster_workplace' => 23,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-07-01',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            24 =>
+            24 => 
             array (
                 'cases_0_4' => 321,
                 'cases_12_17' => 413,
@@ -18917,11 +18917,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 134,
                 'cluster_religious' => 47,
                 'cluster_workplace' => 2,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-07-02',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            25 =>
+            25 => 
             array (
                 'cases_0_4' => 326,
                 'cases_12_17' => 408,
@@ -18953,11 +18953,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 121,
                 'cluster_religious' => 42,
                 'cluster_workplace' => 3,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-07-03',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            26 =>
+            26 => 
             array (
                 'cases_0_4' => 345,
                 'cases_12_17' => 383,
@@ -18989,11 +18989,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 129,
                 'cluster_religious' => 62,
                 'cluster_workplace' => 10,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-07-04',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            27 =>
+            27 => 
             array (
                 'cases_0_4' => 322,
                 'cases_12_17' => 352,
@@ -19025,11 +19025,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 104,
                 'cluster_religious' => 38,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-07-05',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            28 =>
+            28 => 
             array (
                 'cases_0_4' => 403,
                 'cases_12_17' => 400,
@@ -19061,11 +19061,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 133,
                 'cluster_religious' => 43,
                 'cluster_workplace' => 45,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-07-06',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            29 =>
+            29 => 
             array (
                 'cases_0_4' => 314,
                 'cases_12_17' => 456,
@@ -19097,11 +19097,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 132,
                 'cluster_religious' => 38,
                 'cluster_workplace' => 92,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-07-07',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            30 =>
+            30 => 
             array (
                 'cases_0_4' => 367,
                 'cases_12_17' => 493,
@@ -19133,11 +19133,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 161,
                 'cluster_religious' => 65,
                 'cluster_workplace' => 23,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-07-08',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            31 =>
+            31 => 
             array (
                 'cases_0_4' => 420,
                 'cases_12_17' => 517,
@@ -19158,10 +19158,10 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_fvax' => 289,
                 'cases_import' => 7,
                 'cases_new' => 9180,
-                'cases_pvax' => 1017,
+                'cases_pvax' => 1016,
                 'cases_recovered' => 5713,
                 'cases_recovered_cumulative' => 731192,
-                'cases_unvax' => 7874,
+                'cases_unvax' => 7875,
                 'cluster_community' => 0,
                 'cluster_detentionCentre' => 41,
                 'cluster_education' => 339,
@@ -19169,11 +19169,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 156,
                 'cluster_religious' => 42,
                 'cluster_workplace' => 5,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-07-09',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            32 =>
+            32 => 
             array (
                 'cases_0_4' => 352,
                 'cases_12_17' => 485,
@@ -19205,11 +19205,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 164,
                 'cluster_religious' => 50,
                 'cluster_workplace' => 13,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-07-10',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            33 =>
+            33 => 
             array (
                 'cases_0_4' => 452,
                 'cases_12_17' => 556,
@@ -19241,11 +19241,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 172,
                 'cluster_religious' => 48,
                 'cluster_workplace' => 1,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-07-11',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            34 =>
+            34 => 
             array (
                 'cases_0_4' => 481,
                 'cases_12_17' => 580,
@@ -19277,11 +19277,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 135,
                 'cluster_religious' => 56,
                 'cluster_workplace' => 7,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-07-12',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            35 =>
+            35 => 
             array (
                 'cases_0_4' => 624,
                 'cases_12_17' => 708,
@@ -19313,11 +19313,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 178,
                 'cluster_religious' => 60,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-07-13',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            36 =>
+            36 => 
             array (
                 'cases_0_4' => 755,
                 'cases_12_17' => 699,
@@ -19349,11 +19349,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 178,
                 'cluster_religious' => 63,
                 'cluster_workplace' => 3,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-07-14',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            37 =>
+            37 => 
             array (
                 'cases_0_4' => 748,
                 'cases_12_17' => 907,
@@ -19385,11 +19385,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 187,
                 'cluster_religious' => 67,
                 'cluster_workplace' => 54,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-07-15',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            38 =>
+            38 => 
             array (
                 'cases_0_4' => 627,
                 'cases_12_17' => 715,
@@ -19421,11 +19421,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 187,
                 'cluster_religious' => 55,
                 'cluster_workplace' => 36,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-07-16',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            39 =>
+            39 => 
             array (
                 'cases_0_4' => 674,
                 'cases_12_17' => 818,
@@ -19457,11 +19457,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 195,
                 'cluster_religious' => 83,
                 'cluster_workplace' => 41,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-07-17',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            40 =>
+            40 => 
             array (
                 'cases_0_4' => 559,
                 'cases_12_17' => 639,
@@ -19493,11 +19493,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 157,
                 'cluster_religious' => 51,
                 'cluster_workplace' => 34,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-07-18',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            41 =>
+            41 => 
             array (
                 'cases_0_4' => 622,
                 'cases_12_17' => 700,
@@ -19529,11 +19529,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 172,
                 'cluster_religious' => 72,
                 'cluster_workplace' => 22,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-07-19',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            42 =>
+            42 => 
             array (
                 'cases_0_4' => 670,
                 'cases_12_17' => 802,
@@ -19565,11 +19565,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 193,
                 'cluster_religious' => 74,
                 'cluster_workplace' => 20,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-07-20',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            43 =>
+            43 => 
             array (
                 'cases_0_4' => 743,
                 'cases_12_17' => 875,
@@ -19601,11 +19601,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 224,
                 'cluster_religious' => 84,
                 'cluster_workplace' => 89,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-07-21',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            44 =>
+            44 => 
             array (
                 'cases_0_4' => 747,
                 'cases_12_17' => 864,
@@ -19637,11 +19637,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 216,
                 'cluster_religious' => 73,
                 'cluster_workplace' => 52,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-07-22',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            45 =>
+            45 => 
             array (
                 'cases_0_4' => 849,
                 'cases_12_17' => 1081,
@@ -19673,11 +19673,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 274,
                 'cluster_religious' => 86,
                 'cluster_workplace' => 17,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-07-23',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            46 =>
+            46 => 
             array (
                 'cases_0_4' => 807,
                 'cases_12_17' => 962,
@@ -19709,11 +19709,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 315,
                 'cluster_religious' => 88,
                 'cluster_workplace' => 36,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-07-24',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            47 =>
+            47 => 
             array (
                 'cases_0_4' => 860,
                 'cases_12_17' => 1045,
@@ -19745,11 +19745,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 255,
                 'cluster_religious' => 72,
                 'cluster_workplace' => 28,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-07-25',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            48 =>
+            48 => 
             array (
                 'cases_0_4' => 816,
                 'cases_12_17' => 932,
@@ -19781,11 +19781,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 232,
                 'cluster_religious' => 68,
                 'cluster_workplace' => 19,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-07-26',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            49 =>
+            49 => 
             array (
                 'cases_0_4' => 889,
                 'cases_12_17' => 1148,
@@ -19817,11 +19817,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 279,
                 'cluster_religious' => 73,
                 'cluster_workplace' => 30,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-07-27',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            50 =>
+            50 => 
             array (
                 'cases_0_4' => 955,
                 'cases_12_17' => 1182,
@@ -19853,11 +19853,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 271,
                 'cluster_religious' => 100,
                 'cluster_workplace' => 25,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-07-28',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            51 =>
+            51 => 
             array (
                 'cases_0_4' => 1025,
                 'cases_12_17' => 1140,
@@ -19889,11 +19889,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 261,
                 'cluster_religious' => 86,
                 'cluster_workplace' => 19,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-07-29',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            52 =>
+            52 => 
             array (
                 'cases_0_4' => 919,
                 'cases_12_17' => 1178,
@@ -19925,11 +19925,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 298,
                 'cluster_religious' => 98,
                 'cluster_workplace' => 9,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-07-30',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            53 =>
+            53 => 
             array (
                 'cases_0_4' => 1042,
                 'cases_12_17' => 1352,
@@ -19961,11 +19961,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 292,
                 'cluster_religious' => 113,
                 'cluster_workplace' => 8,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-07-31',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            54 =>
+            54 => 
             array (
                 'cases_0_4' => 981,
                 'cases_12_17' => 1274,
@@ -19997,11 +19997,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 296,
                 'cluster_religious' => 117,
                 'cluster_workplace' => 13,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-08-01',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            55 =>
+            55 => 
             array (
                 'cases_0_4' => 871,
                 'cases_12_17' => 1130,
@@ -20033,11 +20033,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 256,
                 'cluster_religious' => 93,
                 'cluster_workplace' => 45,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-08-02',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            56 =>
+            56 => 
             array (
                 'cases_0_4' => 986,
                 'cases_12_17' => 1239,
@@ -20069,11 +20069,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 299,
                 'cluster_religious' => 112,
                 'cluster_workplace' => 20,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-08-03',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            57 =>
+            57 => 
             array (
                 'cases_0_4' => 1142,
                 'cases_12_17' => 1380,
@@ -20094,10 +20094,10 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_fvax' => 1553,
                 'cases_import' => 23,
                 'cases_new' => 19819,
-                'cases_pvax' => 5583,
+                'cases_pvax' => 5582,
                 'cases_recovered' => 12704,
                 'cases_recovered_cumulative' => 962731,
-                'cases_unvax' => 12683,
+                'cases_unvax' => 12684,
                 'cluster_community' => 0,
                 'cluster_detentionCentre' => 36,
                 'cluster_education' => 748,
@@ -20105,11 +20105,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 296,
                 'cluster_religious' => 122,
                 'cluster_workplace' => 29,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-08-04',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            58 =>
+            58 => 
             array (
                 'cases_0_4' => 1070,
                 'cases_12_17' => 1388,
@@ -20141,11 +20141,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 344,
                 'cluster_religious' => 101,
                 'cluster_workplace' => 41,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-08-05',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            59 =>
+            59 => 
             array (
                 'cases_0_4' => 1095,
                 'cases_12_17' => 1331,
@@ -20177,11 +20177,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 333,
                 'cluster_religious' => 112,
                 'cluster_workplace' => 22,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-08-06',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            60 =>
+            60 => 
             array (
                 'cases_0_4' => 1025,
                 'cases_12_17' => 1383,
@@ -20213,11 +20213,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 384,
                 'cluster_religious' => 124,
                 'cluster_workplace' => 14,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-08-07',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            61 =>
+            61 => 
             array (
                 'cases_0_4' => 973,
                 'cases_12_17' => 1340,
@@ -20249,11 +20249,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 331,
                 'cluster_religious' => 121,
                 'cluster_workplace' => 12,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-08-08',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            62 =>
+            62 => 
             array (
                 'cases_0_4' => 912,
                 'cases_12_17' => 1209,
@@ -20285,11 +20285,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 276,
                 'cluster_religious' => 122,
                 'cluster_workplace' => 4,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-08-09',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            63 =>
+            63 => 
             array (
                 'cases_0_4' => 1094,
                 'cases_12_17' => 1456,
@@ -20321,11 +20321,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 369,
                 'cluster_religious' => 135,
                 'cluster_workplace' => 29,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-08-10',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            64 =>
+            64 => 
             array (
                 'cases_0_4' => 1113,
                 'cases_12_17' => 1454,
@@ -20357,11 +20357,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 363,
                 'cluster_religious' => 113,
                 'cluster_workplace' => 8,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-08-11',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            65 =>
+            65 => 
             array (
                 'cases_0_4' => 1207,
                 'cases_12_17' => 1507,
@@ -20393,11 +20393,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 392,
                 'cluster_religious' => 141,
                 'cluster_workplace' => 15,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-08-12',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            66 =>
+            66 => 
             array (
                 'cases_0_4' => 1020,
                 'cases_12_17' => 1433,
@@ -20429,11 +20429,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 397,
                 'cluster_religious' => 179,
                 'cluster_workplace' => 43,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-08-13',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            67 =>
+            67 => 
             array (
                 'cases_0_4' => 1101,
                 'cases_12_17' => 1467,
@@ -20454,10 +20454,10 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_fvax' => 2401,
                 'cases_import' => 8,
                 'cases_new' => 20670,
-                'cases_pvax' => 6839,
+                'cases_pvax' => 6837,
                 'cases_recovered' => 17655,
                 'cases_recovered_cumulative' => 1128180,
-                'cases_unvax' => 11430,
+                'cases_unvax' => 11432,
                 'cluster_community' => 0,
                 'cluster_detentionCentre' => 83,
                 'cluster_education' => 517,
@@ -20465,11 +20465,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 382,
                 'cluster_religious' => 149,
                 'cluster_workplace' => 19,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-08-14',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            68 =>
+            68 => 
             array (
                 'cases_0_4' => 1138,
                 'cases_12_17' => 1507,
@@ -20490,10 +20490,10 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_fvax' => 2494,
                 'cases_import' => 14,
                 'cases_new' => 20546,
-                'cases_pvax' => 6856,
+                'cases_pvax' => 6855,
                 'cases_recovered' => 16945,
                 'cases_recovered_cumulative' => 1145125,
-                'cases_unvax' => 11196,
+                'cases_unvax' => 11197,
                 'cluster_community' => 0,
                 'cluster_detentionCentre' => 48,
                 'cluster_education' => 555,
@@ -20501,11 +20501,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 334,
                 'cluster_religious' => 124,
                 'cluster_workplace' => 28,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-08-15',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            69 =>
+            69 => 
             array (
                 'cases_0_4' => 1035,
                 'cases_12_17' => 1372,
@@ -20537,11 +20537,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 347,
                 'cluster_religious' => 145,
                 'cluster_workplace' => 16,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-08-16',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            70 =>
+            70 => 
             array (
                 'cases_0_4' => 1113,
                 'cases_12_17' => 1424,
@@ -20573,11 +20573,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 373,
                 'cluster_religious' => 144,
                 'cluster_workplace' => 2,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-08-17',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            71 =>
+            71 => 
             array (
                 'cases_0_4' => 1214,
                 'cases_12_17' => 1624,
@@ -20609,11 +20609,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 404,
                 'cluster_religious' => 146,
                 'cluster_workplace' => 4,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-08-18',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            72 =>
+            72 => 
             array (
                 'cases_0_4' => 1254,
                 'cases_12_17' => 1665,
@@ -20645,11 +20645,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 457,
                 'cluster_religious' => 140,
                 'cluster_workplace' => 10,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-08-19',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            73 =>
+            73 => 
             array (
                 'cases_0_4' => 1290,
                 'cases_12_17' => 1820,
@@ -20667,13 +20667,13 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_cluster' => 3031,
                 'cases_cumulative' => 1513024,
                 'cases_elderly' => 1692,
-                'cases_fvax' => 4244,
+                'cases_fvax' => 4243,
                 'cases_import' => 23,
                 'cases_new' => 23564,
-                'cases_pvax' => 7214,
+                'cases_pvax' => 7213,
                 'cases_recovered' => 21448,
                 'cases_recovered_cumulative' => 1241890,
-                'cases_unvax' => 12106,
+                'cases_unvax' => 12108,
                 'cluster_community' => 0,
                 'cluster_detentionCentre' => 31,
                 'cluster_education' => 764,
@@ -20681,11 +20681,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 459,
                 'cluster_religious' => 159,
                 'cluster_workplace' => 33,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-08-20',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            74 =>
+            74 => 
             array (
                 'cases_0_4' => 1269,
                 'cases_12_17' => 1685,
@@ -20717,11 +20717,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 470,
                 'cluster_religious' => 166,
                 'cluster_workplace' => 12,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-08-21',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            75 =>
+            75 => 
             array (
                 'cases_0_4' => 1144,
                 'cases_12_17' => 1565,
@@ -20753,11 +20753,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 400,
                 'cluster_religious' => 163,
                 'cluster_workplace' => 4,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-08-22',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            76 =>
+            76 => 
             array (
                 'cases_0_4' => 1041,
                 'cases_12_17' => 1374,
@@ -20789,11 +20789,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 397,
                 'cluster_religious' => 167,
                 'cluster_workplace' => 5,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-08-23',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            77 =>
+            77 => 
             array (
                 'cases_0_4' => 1123,
                 'cases_12_17' => 1616,
@@ -20814,10 +20814,10 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_fvax' => 3945,
                 'cases_import' => 22,
                 'cases_new' => 20837,
-                'cases_pvax' => 6283,
+                'cases_pvax' => 6282,
                 'cases_recovered' => 18613,
                 'cases_recovered_cumulative' => 1316332,
-                'cases_unvax' => 10609,
+                'cases_unvax' => 10610,
                 'cluster_community' => 0,
                 'cluster_detentionCentre' => 29,
                 'cluster_education' => 457,
@@ -20825,11 +20825,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 421,
                 'cluster_religious' => 127,
                 'cluster_workplace' => 2,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-08-24',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            78 =>
+            78 => 
             array (
                 'cases_0_4' => 1263,
                 'cases_12_17' => 1767,
@@ -20861,11 +20861,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 475,
                 'cluster_religious' => 199,
                 'cluster_workplace' => 3,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-08-25',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            79 =>
+            79 => 
             array (
                 'cases_0_4' => 1346,
                 'cases_12_17' => 1722,
@@ -20886,10 +20886,10 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_fvax' => 4916,
                 'cases_import' => 8,
                 'cases_new' => 24599,
-                'cases_pvax' => 7313,
+                'cases_pvax' => 7312,
                 'cases_recovered' => 22657,
                 'cases_recovered_cumulative' => 1359787,
-                'cases_unvax' => 12370,
+                'cases_unvax' => 12371,
                 'cluster_community' => 0,
                 'cluster_detentionCentre' => 93,
                 'cluster_education' => 542,
@@ -20897,11 +20897,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 536,
                 'cluster_religious' => 191,
                 'cluster_workplace' => 35,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-08-26',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            80 =>
+            80 => 
             array (
                 'cases_0_4' => 1186,
                 'cases_12_17' => 1649,
@@ -20933,11 +20933,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 443,
                 'cluster_religious' => 147,
                 'cluster_workplace' => 3,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-08-27',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            81 =>
+            81 => 
             array (
                 'cases_0_4' => 1262,
                 'cases_12_17' => 1717,
@@ -20969,11 +20969,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 479,
                 'cluster_religious' => 179,
                 'cluster_workplace' => 7,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-08-28',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            82 =>
+            82 => 
             array (
                 'cases_0_4' => 1207,
                 'cases_12_17' => 1638,
@@ -21005,11 +21005,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 416,
                 'cluster_religious' => 153,
                 'cluster_workplace' => 4,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-08-29',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            83 =>
+            83 => 
             array (
                 'cases_0_4' => 1169,
                 'cases_12_17' => 1597,
@@ -21041,11 +21041,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 427,
                 'cluster_religious' => 175,
                 'cluster_workplace' => 72,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-08-30',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            84 =>
+            84 => 
             array (
                 'cases_0_4' => 1188,
                 'cases_12_17' => 1683,
@@ -21066,10 +21066,10 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_fvax' => 5572,
                 'cases_import' => 1,
                 'cases_new' => 20897,
-                'cases_pvax' => 5833,
+                'cases_pvax' => 5832,
                 'cases_recovered' => 18465,
                 'cases_recovered_cumulative' => 1461723,
-                'cases_unvax' => 9492,
+                'cases_unvax' => 9493,
                 'cluster_community' => 0,
                 'cluster_detentionCentre' => 38,
                 'cluster_education' => 260,
@@ -21077,11 +21077,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 501,
                 'cluster_religious' => 161,
                 'cluster_workplace' => 11,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-08-31',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            85 =>
+            85 => 
             array (
                 'cases_0_4' => 1084,
                 'cases_12_17' => 1491,
@@ -21113,11 +21113,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 451,
                 'cluster_religious' => 163,
                 'cluster_workplace' => 16,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-09-01',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            86 =>
+            86 => 
             array (
                 'cases_0_4' => 1176,
                 'cases_12_17' => 1796,
@@ -21149,11 +21149,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 506,
                 'cluster_religious' => 184,
                 'cluster_workplace' => 52,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-09-02',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            87 =>
+            87 => 
             array (
                 'cases_0_4' => 1146,
                 'cases_12_17' => 1549,
@@ -21174,10 +21174,10 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_fvax' => 6012,
                 'cases_import' => 14,
                 'cases_new' => 19378,
-                'cases_pvax' => 4766,
+                'cases_pvax' => 4764,
                 'cases_recovered' => 22399,
                 'cases_recovered_cumulative' => 1528668,
-                'cases_unvax' => 8600,
+                'cases_unvax' => 8602,
                 'cluster_community' => 0,
                 'cluster_detentionCentre' => 64,
                 'cluster_education' => 562,
@@ -21185,11 +21185,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 449,
                 'cluster_religious' => 198,
                 'cluster_workplace' => 12,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-09-03',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            88 =>
+            88 => 
             array (
                 'cases_0_4' => 1145,
                 'cases_12_17' => 1668,
@@ -21221,11 +21221,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 475,
                 'cluster_religious' => 210,
                 'cluster_workplace' => 100,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-09-04',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            89 =>
+            89 => 
             array (
                 'cases_0_4' => 1222,
                 'cases_12_17' => 1622,
@@ -21243,13 +21243,13 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_cluster' => 2347,
                 'cases_cumulative' => 1844835,
                 'cases_elderly' => 1869,
-                'cases_fvax' => 6872,
+                'cases_fvax' => 6871,
                 'cases_import' => 8,
                 'cases_new' => 20396,
                 'cases_pvax' => 4666,
                 'cases_recovered' => 20573,
                 'cases_recovered_cumulative' => 1570823,
-                'cases_unvax' => 8858,
+                'cases_unvax' => 8859,
                 'cluster_community' => 0,
                 'cluster_detentionCentre' => 98,
                 'cluster_education' => 447,
@@ -21257,11 +21257,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 508,
                 'cluster_religious' => 178,
                 'cluster_workplace' => 23,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-09-05',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            90 =>
+            90 => 
             array (
                 'cases_0_4' => 1099,
                 'cases_12_17' => 1451,
@@ -21293,11 +21293,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 427,
                 'cluster_religious' => 142,
                 'cluster_workplace' => 23,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-09-06',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            91 =>
+            91 => 
             array (
                 'cases_0_4' => 1090,
                 'cases_12_17' => 1559,
@@ -21315,13 +21315,13 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_cluster' => 2177,
                 'cases_cumulative' => 1880734,
                 'cases_elderly' => 1717,
-                'cases_fvax' => 6133,
+                'cases_fvax' => 6132,
                 'cases_import' => 18,
                 'cases_new' => 18547,
-                'cases_pvax' => 4270,
+                'cases_pvax' => 4269,
                 'cases_recovered' => 18902,
                 'cases_recovered_cumulative' => 1609926,
-                'cases_unvax' => 8144,
+                'cases_unvax' => 8146,
                 'cluster_community' => 0,
                 'cluster_detentionCentre' => 66,
                 'cluster_education' => 592,
@@ -21329,11 +21329,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 462,
                 'cluster_religious' => 163,
                 'cluster_workplace' => 19,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-09-07',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            92 =>
+            92 => 
             array (
                 'cases_0_4' => 1175,
                 'cases_12_17' => 1593,
@@ -21365,11 +21365,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 545,
                 'cluster_religious' => 180,
                 'cluster_workplace' => 58,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-09-08',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            93 =>
+            93 => 
             array (
                 'cases_0_4' => 1165,
                 'cases_12_17' => 1597,
@@ -21387,13 +21387,13 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_cluster' => 1577,
                 'cases_cumulative' => 1919774,
                 'cases_elderly' => 1704,
-                'cases_fvax' => 6927,
+                'cases_fvax' => 6926,
                 'cases_import' => 6,
                 'cases_new' => 19307,
-                'cases_pvax' => 4360,
+                'cases_pvax' => 4359,
                 'cases_recovered' => 24855,
                 'cases_recovered_cumulative' => 1657482,
-                'cases_unvax' => 8020,
+                'cases_unvax' => 8022,
                 'cluster_community' => 0,
                 'cluster_detentionCentre' => 0,
                 'cluster_education' => 332,
@@ -21401,11 +21401,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 459,
                 'cluster_religious' => 178,
                 'cluster_workplace' => 74,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-09-09',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            94 =>
+            94 => 
             array (
                 'cases_0_4' => 1362,
                 'cases_12_17' => 1814,
@@ -21437,11 +21437,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 581,
                 'cluster_religious' => 208,
                 'cluster_workplace' => 40,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-09-10',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            95 =>
+            95 => 
             array (
                 'cases_0_4' => 1171,
                 'cases_12_17' => 1650,
@@ -21473,11 +21473,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 463,
                 'cluster_religious' => 184,
                 'cluster_workplace' => 51,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-09-11',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            96 =>
+            96 => 
             array (
                 'cases_0_4' => 1153,
                 'cases_12_17' => 1686,
@@ -21498,10 +21498,10 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_fvax' => 7867,
                 'cases_import' => 5,
                 'cases_new' => 19198,
-                'cases_pvax' => 3853,
+                'cases_pvax' => 3852,
                 'cases_recovered' => 20980,
                 'cases_recovered_cumulative' => 1721709,
-                'cases_unvax' => 7478,
+                'cases_unvax' => 7479,
                 'cluster_community' => 0,
                 'cluster_detentionCentre' => 12,
                 'cluster_education' => 544,
@@ -21509,11 +21509,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 509,
                 'cluster_religious' => 174,
                 'cluster_workplace' => 9,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-09-12',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            97 =>
+            97 => 
             array (
                 'cases_0_4' => 992,
                 'cases_12_17' => 1391,
@@ -21545,11 +21545,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 425,
                 'cluster_religious' => 172,
                 'cluster_workplace' => 11,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-09-13',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            98 =>
+            98 => 
             array (
                 'cases_0_4' => 1022,
                 'cases_12_17' => 1318,
@@ -21567,13 +21567,13 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_cluster' => 1041,
                 'cases_cumulative' => 2011440,
                 'cases_elderly' => 1476,
-                'cases_fvax' => 6160,
+                'cases_fvax' => 6159,
                 'cases_import' => 17,
                 'cases_new' => 15669,
                 'cases_pvax' => 3515,
                 'cases_recovered' => 18053,
                 'cases_recovered_cumulative' => 1764575,
-                'cases_unvax' => 5994,
+                'cases_unvax' => 5995,
                 'cluster_community' => 0,
                 'cluster_detentionCentre' => 35,
                 'cluster_education' => 360,
@@ -21581,11 +21581,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 409,
                 'cluster_religious' => 161,
                 'cluster_workplace' => 5,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-09-14',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            99 =>
+            99 => 
             array (
                 'cases_0_4' => 1280,
                 'cases_12_17' => 1712,
@@ -21617,11 +21617,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 544,
                 'cluster_religious' => 192,
                 'cluster_workplace' => 39,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-09-15',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            100 =>
+            100 => 
             array (
                 'cases_0_4' => 1213,
                 'cases_12_17' => 1528,
@@ -21653,11 +21653,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 484,
                 'cluster_religious' => 176,
                 'cluster_workplace' => 45,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-09-16',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            101 =>
+            101 => 
             array (
                 'cases_0_4' => 1027,
                 'cases_12_17' => 1417,
@@ -21689,11 +21689,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 450,
                 'cluster_religious' => 181,
                 'cluster_workplace' => 13,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-09-17',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            102 =>
+            102 => 
             array (
                 'cases_0_4' => 954,
                 'cases_12_17' => 1321,
@@ -21725,11 +21725,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 462,
                 'cluster_religious' => 181,
                 'cluster_workplace' => 23,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-09-18',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            103 =>
+            103 => 
             array (
                 'cases_0_4' => 945,
                 'cases_12_17' => 1233,
@@ -21761,11 +21761,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 428,
                 'cluster_religious' => 141,
                 'cluster_workplace' => 3,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-09-19',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            104 =>
+            104 => 
             array (
                 'cases_0_4' => 882,
                 'cases_12_17' => 1244,
@@ -21797,11 +21797,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 424,
                 'cluster_religious' => 148,
                 'cluster_workplace' => 1,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-09-20',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            105 =>
+            105 => 
             array (
                 'cases_0_4' => 935,
                 'cases_12_17' => 1399,
@@ -21833,11 +21833,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 461,
                 'cluster_religious' => 182,
                 'cluster_workplace' => 15,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-09-21',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            106 =>
+            106 => 
             array (
                 'cases_0_4' => 994,
                 'cases_12_17' => 1264,
@@ -21869,11 +21869,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 405,
                 'cluster_religious' => 150,
                 'cluster_workplace' => 49,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-09-22',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            107 =>
+            107 => 
             array (
                 'cases_0_4' => 902,
                 'cases_12_17' => 1098,
@@ -21891,10 +21891,10 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_cluster' => 1111,
                 'cases_cumulative' => 2156678,
                 'cases_elderly' => 1371,
-                'cases_fvax' => 6392,
+                'cases_fvax' => 6391,
                 'cases_import' => 4,
                 'cases_new' => 13754,
-                'cases_pvax' => 2239,
+                'cases_pvax' => 2240,
                 'cases_recovered' => 16628,
                 'cases_recovered_cumulative' => 1933712,
                 'cases_unvax' => 5123,
@@ -21905,11 +21905,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 383,
                 'cluster_religious' => 136,
                 'cluster_workplace' => 7,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-09-23',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            108 =>
+            108 => 
             array (
                 'cases_0_4' => 918,
                 'cases_12_17' => 1278,
@@ -21941,11 +21941,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 427,
                 'cluster_religious' => 135,
                 'cluster_workplace' => 34,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-09-24',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            109 =>
+            109 => 
             array (
                 'cases_0_4' => 904,
                 'cases_12_17' => 1176,
@@ -21977,11 +21977,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 481,
                 'cluster_religious' => 164,
                 'cluster_workplace' => 23,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-09-25',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            110 =>
+            110 => 
             array (
                 'cases_0_4' => 907,
                 'cases_12_17' => 1140,
@@ -22013,11 +22013,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 404,
                 'cluster_religious' => 138,
                 'cluster_workplace' => 51,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-09-26',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            111 =>
+            111 => 
             array (
                 'cases_0_4' => 744,
                 'cases_12_17' => 947,
@@ -22049,11 +22049,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 348,
                 'cluster_religious' => 178,
                 'cluster_workplace' => 30,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-09-27',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            112 =>
+            112 => 
             array (
                 'cases_0_4' => 739,
                 'cases_12_17' => 995,
@@ -22085,11 +22085,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 355,
                 'cluster_religious' => 138,
                 'cluster_workplace' => 3,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-09-28',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            113 =>
+            113 => 
             array (
                 'cases_0_4' => 796,
                 'cases_12_17' => 959,
@@ -22121,11 +22121,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 420,
                 'cluster_religious' => 151,
                 'cluster_workplace' => 7,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-09-29',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            114 =>
+            114 => 
             array (
                 'cases_0_4' => 860,
                 'cases_12_17' => 1134,
@@ -22157,11 +22157,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 389,
                 'cluster_religious' => 125,
                 'cluster_workplace' => 11,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-09-30',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            115 =>
+            115 => 
             array (
                 'cases_0_4' => 832,
                 'cases_12_17' => 982,
@@ -22193,11 +22193,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 385,
                 'cluster_religious' => 124,
                 'cluster_workplace' => 8,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-10-01',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            116 =>
+            116 => 
             array (
                 'cases_0_4' => 716,
                 'cases_12_17' => 941,
@@ -22229,11 +22229,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 348,
                 'cluster_religious' => 124,
                 'cluster_workplace' => 1,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-10-02',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            117 =>
+            117 => 
             array (
                 'cases_0_4' => 659,
                 'cases_12_17' => 832,
@@ -22265,11 +22265,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 272,
                 'cluster_religious' => 124,
                 'cluster_workplace' => 1,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-10-03',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            118 =>
+            118 => 
             array (
                 'cases_0_4' => 517,
                 'cases_12_17' => 636,
@@ -22301,11 +22301,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 291,
                 'cluster_religious' => 94,
                 'cluster_workplace' => 8,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-10-04',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            119 =>
+            119 => 
             array (
                 'cases_0_4' => 544,
                 'cases_12_17' => 681,
@@ -22337,11 +22337,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 300,
                 'cluster_religious' => 114,
                 'cluster_workplace' => 10,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-10-05',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            120 =>
+            120 => 
             array (
                 'cases_0_4' => 661,
                 'cases_12_17' => 761,
@@ -22373,11 +22373,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 324,
                 'cluster_religious' => 110,
                 'cluster_workplace' => 6,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-10-06',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            121 =>
+            121 => 
             array (
                 'cases_0_4' => 666,
                 'cases_12_17' => 773,
@@ -22409,11 +22409,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 361,
                 'cluster_religious' => 163,
                 'cluster_workplace' => 41,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-10-07',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            122 =>
+            122 => 
             array (
                 'cases_0_4' => 630,
                 'cases_12_17' => 762,
@@ -22445,11 +22445,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 338,
                 'cluster_religious' => 114,
                 'cluster_workplace' => 16,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-10-08',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            123 =>
+            123 => 
             array (
                 'cases_0_4' => 638,
                 'cases_12_17' => 720,
@@ -22481,11 +22481,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 336,
                 'cluster_religious' => 142,
                 'cluster_workplace' => 42,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-10-09',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            124 =>
+            124 => 
             array (
                 'cases_0_4' => 551,
                 'cases_12_17' => 542,
@@ -22503,13 +22503,13 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_cluster' => 334,
                 'cases_cumulative' => 2339594,
                 'cases_elderly' => 929,
-                'cases_fvax' => 4473,
+                'cases_fvax' => 4472,
                 'cases_import' => 2,
                 'cases_new' => 7373,
                 'cases_pvax' => 773,
                 'cases_recovered' => 10959,
                 'cases_recovered_cumulative' => 2195669,
-                'cases_unvax' => 2126,
+                'cases_unvax' => 2127,
                 'cluster_community' => 0,
                 'cluster_detentionCentre' => 48,
                 'cluster_education' => 142,
@@ -22517,11 +22517,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 256,
                 'cluster_religious' => 118,
                 'cluster_workplace' => 15,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-10-10',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            125 =>
+            125 => 
             array (
                 'cases_0_4' => 467,
                 'cases_12_17' => 493,
@@ -22553,11 +22553,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 284,
                 'cluster_religious' => 105,
                 'cluster_workplace' => 7,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-10-11',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            126 =>
+            126 => 
             array (
                 'cases_0_4' => 507,
                 'cases_12_17' => 579,
@@ -22589,11 +22589,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 278,
                 'cluster_religious' => 107,
                 'cluster_workplace' => 64,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-10-12',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            127 =>
+            127 => 
             array (
                 'cases_0_4' => 555,
                 'cases_12_17' => 495,
@@ -22611,13 +22611,13 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_cluster' => 500,
                 'cases_cumulative' => 2361529,
                 'cases_elderly' => 1026,
-                'cases_fvax' => 4998,
+                'cases_fvax' => 4997,
                 'cases_import' => 29,
                 'cases_new' => 7950,
                 'cases_pvax' => 780,
                 'cases_recovered' => 10832,
                 'cases_recovered_cumulative' => 2227889,
-                'cases_unvax' => 2172,
+                'cases_unvax' => 2173,
                 'cluster_community' => 0,
                 'cluster_detentionCentre' => 78,
                 'cluster_education' => 95,
@@ -22625,11 +22625,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 289,
                 'cluster_religious' => 157,
                 'cluster_workplace' => 66,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-10-13',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            128 =>
+            128 => 
             array (
                 'cases_0_4' => 536,
                 'cases_12_17' => 545,
@@ -22661,11 +22661,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 274,
                 'cluster_religious' => 129,
                 'cluster_workplace' => 34,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-10-14',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            129 =>
+            129 => 
             array (
                 'cases_0_4' => 553,
                 'cases_12_17' => 423,
@@ -22697,11 +22697,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 286,
                 'cluster_religious' => 92,
                 'cluster_workplace' => 27,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-10-15',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            130 =>
+            130 => 
             array (
                 'cases_0_4' => 526,
                 'cases_12_17' => 468,
@@ -22733,11 +22733,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 241,
                 'cluster_religious' => 119,
                 'cluster_workplace' => 67,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-10-16',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            131 =>
+            131 => 
             array (
                 'cases_0_4' => 459,
                 'cases_12_17' => 365,
@@ -22769,11 +22769,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 200,
                 'cluster_religious' => 89,
                 'cluster_workplace' => 14,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-10-17',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            132 =>
+            132 => 
             array (
                 'cases_0_4' => 388,
                 'cases_12_17' => 317,
@@ -22805,11 +22805,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 194,
                 'cluster_religious' => 84,
                 'cluster_workplace' => 34,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-10-18',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            133 =>
+            133 => 
             array (
                 'cases_0_4' => 390,
                 'cases_12_17' => 305,
@@ -22841,11 +22841,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 210,
                 'cluster_religious' => 87,
                 'cluster_workplace' => 32,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-10-19',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            134 =>
+            134 => 
             array (
                 'cases_0_4' => 386,
                 'cases_12_17' => 271,
@@ -22877,11 +22877,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 218,
                 'cluster_religious' => 76,
                 'cluster_workplace' => 10,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-10-20',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            135 =>
+            135 => 
             array (
                 'cases_0_4' => 438,
                 'cases_12_17' => 339,
@@ -22913,11 +22913,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 205,
                 'cluster_religious' => 94,
                 'cluster_workplace' => 19,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-10-21',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            136 =>
+            136 => 
             array (
                 'cases_0_4' => 476,
                 'cases_12_17' => 303,
@@ -22949,11 +22949,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 238,
                 'cluster_religious' => 91,
                 'cluster_workplace' => 31,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-10-22',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            137 =>
+            137 => 
             array (
                 'cases_0_4' => 428,
                 'cases_12_17' => 286,
@@ -22974,10 +22974,10 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_fvax' => 3839,
                 'cases_import' => 7,
                 'cases_new' => 5828,
-                'cases_pvax' => 371,
+                'cases_pvax' => 370,
                 'cases_recovered' => 9178,
                 'cases_recovered_cumulative' => 2320391,
-                'cases_unvax' => 1610,
+                'cases_unvax' => 1611,
                 'cluster_community' => 0,
                 'cluster_detentionCentre' => 12,
                 'cluster_education' => 68,
@@ -22985,11 +22985,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 218,
                 'cluster_religious' => 71,
                 'cluster_workplace' => 8,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-10-23',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            138 =>
+            138 => 
             array (
                 'cases_0_4' => 446,
                 'cases_12_17' => 293,
@@ -22999,7 +22999,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 681,
                 'cases_70_79' => 545,
                 'cases_80' => 437,
-                'cases_active' => 75542,
+                'cases_active' => 75541,
                 'cases_adolescent' => 293,
                 'cases_adult' => 3543,
                 'cases_boost' => 16,
@@ -23021,11 +23021,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 217,
                 'cluster_religious' => 79,
                 'cluster_workplace' => 3,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-10-24',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            139 =>
+            139 => 
             array (
                 'cases_0_4' => 370,
                 'cases_12_17' => 227,
@@ -23035,7 +23035,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 574,
                 'cases_70_79' => 467,
                 'cases_80' => 407,
-                'cases_active' => 72840,
+                'cases_active' => 72839,
                 'cases_adolescent' => 227,
                 'cases_adult' => 2944,
                 'cases_boost' => 9,
@@ -23046,10 +23046,10 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_fvax' => 3188,
                 'cases_import' => 15,
                 'cases_new' => 4782,
-                'cases_pvax' => 258,
+                'cases_pvax' => 257,
                 'cases_recovered' => 7414,
                 'cases_recovered_cumulative' => 2334783,
-                'cases_unvax' => 1327,
+                'cases_unvax' => 1328,
                 'cluster_community' => 0,
                 'cluster_detentionCentre' => 5,
                 'cluster_education' => 12,
@@ -23057,11 +23057,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 195,
                 'cluster_religious' => 49,
                 'cluster_workplace' => 21,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-10-25',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            140 =>
+            140 => 
             array (
                 'cases_0_4' => 414,
                 'cases_12_17' => 263,
@@ -23071,7 +23071,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 677,
                 'cases_70_79' => 594,
                 'cases_80' => 457,
-                'cases_active' => 72904,
+                'cases_active' => 72903,
                 'cases_adolescent' => 263,
                 'cases_adult' => 3656,
                 'cases_boost' => 8,
@@ -23093,11 +23093,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 196,
                 'cluster_religious' => 88,
                 'cluster_workplace' => 25,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-10-26',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            141 =>
+            141 => 
             array (
                 'cases_0_4' => 459,
                 'cases_12_17' => 271,
@@ -23107,7 +23107,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 787,
                 'cases_70_79' => 575,
                 'cases_80' => 499,
-                'cases_active' => 71391,
+                'cases_active' => 71390,
                 'cases_adolescent' => 271,
                 'cases_adult' => 3940,
                 'cases_boost' => 18,
@@ -23129,11 +23129,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 222,
                 'cluster_religious' => 88,
                 'cluster_workplace' => 14,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-10-27',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            142 =>
+            142 => 
             array (
                 'cases_0_4' => 456,
                 'cases_12_17' => 289,
@@ -23143,7 +23143,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 768,
                 'cases_70_79' => 593,
                 'cases_80' => 480,
-                'cases_active' => 71076,
+                'cases_active' => 71075,
                 'cases_adolescent' => 289,
                 'cases_adult' => 4081,
                 'cases_boost' => 19,
@@ -23165,11 +23165,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 248,
                 'cluster_religious' => 100,
                 'cluster_workplace' => 35,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-10-28',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            143 =>
+            143 => 
             array (
                 'cases_0_4' => 425,
                 'cases_12_17' => 263,
@@ -23179,7 +23179,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 774,
                 'cases_70_79' => 589,
                 'cases_80' => 458,
-                'cases_active' => 69780,
+                'cases_active' => 69779,
                 'cases_adolescent' => 263,
                 'cases_adult' => 3905,
                 'cases_boost' => 27,
@@ -23201,11 +23201,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 223,
                 'cluster_religious' => 76,
                 'cluster_workplace' => 60,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-10-29',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            144 =>
+            144 => 
             array (
                 'cases_0_4' => 416,
                 'cases_12_17' => 266,
@@ -23215,7 +23215,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 749,
                 'cases_70_79' => 564,
                 'cases_80' => 449,
-                'cases_active' => 68861,
+                'cases_active' => 68860,
                 'cases_adolescent' => 266,
                 'cases_adult' => 3779,
                 'cases_boost' => 14,
@@ -23237,11 +23237,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 229,
                 'cluster_religious' => 66,
                 'cluster_workplace' => 50,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-10-30',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            145 =>
+            145 => 
             array (
                 'cases_0_4' => 364,
                 'cases_12_17' => 194,
@@ -23251,7 +23251,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 639,
                 'cases_70_79' => 527,
                 'cases_80' => 419,
-                'cases_active' => 67676,
+                'cases_active' => 67675,
                 'cases_adolescent' => 194,
                 'cases_adult' => 3241,
                 'cases_boost' => 23,
@@ -23273,11 +23273,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 194,
                 'cluster_religious' => 72,
                 'cluster_workplace' => 37,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-10-31',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            146 =>
+            146 => 
             array (
                 'cases_0_4' => 306,
                 'cases_12_17' => 151,
@@ -23287,7 +23287,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 607,
                 'cases_70_79' => 438,
                 'cases_80' => 384,
-                'cases_active' => 66946,
+                'cases_active' => 66945,
                 'cases_adolescent' => 151,
                 'cases_adult' => 2976,
                 'cases_boost' => 25,
@@ -23309,11 +23309,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 179,
                 'cluster_religious' => 83,
                 'cluster_workplace' => 28,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-11-01',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            147 =>
+            147 => 
             array (
                 'cases_0_4' => 351,
                 'cases_12_17' => 175,
@@ -23323,7 +23323,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 589,
                 'cases_70_79' => 523,
                 'cases_80' => 439,
-                'cases_active' => 66597,
+                'cases_active' => 66596,
                 'cases_adolescent' => 175,
                 'cases_adult' => 3291,
                 'cases_boost' => 36,
@@ -23345,11 +23345,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 204,
                 'cluster_religious' => 72,
                 'cluster_workplace' => 7,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-11-02',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            148 =>
+            148 => 
             array (
                 'cases_0_4' => 347,
                 'cases_12_17' => 199,
@@ -23359,7 +23359,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 656,
                 'cases_70_79' => 523,
                 'cases_80' => 426,
-                'cases_active' => 66886,
+                'cases_active' => 66885,
                 'cases_adolescent' => 199,
                 'cases_adult' => 3513,
                 'cases_boost' => 38,
@@ -23381,11 +23381,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 150,
                 'cluster_religious' => 67,
                 'cluster_workplace' => 8,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-11-03',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            149 =>
+            149 => 
             array (
                 'cases_0_4' => 389,
                 'cases_12_17' => 191,
@@ -23395,7 +23395,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 724,
                 'cases_70_79' => 565,
                 'cases_80' => 432,
-                'cases_active' => 66683,
+                'cases_active' => 66682,
                 'cases_adolescent' => 191,
                 'cases_adult' => 3734,
                 'cases_boost' => 53,
@@ -23417,11 +23417,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 216,
                 'cluster_religious' => 86,
                 'cluster_workplace' => 18,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-11-04',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            150 =>
+            150 => 
             array (
                 'cases_0_4' => 342,
                 'cases_12_17' => 173,
@@ -23431,7 +23431,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 633,
                 'cases_70_79' => 481,
                 'cases_80' => 421,
-                'cases_active' => 65968,
+                'cases_active' => 65967,
                 'cases_adolescent' => 173,
                 'cases_adult' => 3215,
                 'cases_boost' => 45,
@@ -23453,11 +23453,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 191,
                 'cluster_religious' => 65,
                 'cluster_workplace' => 35,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-11-05',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            151 =>
+            151 => 
             array (
                 'cases_0_4' => 352,
                 'cases_12_17' => 164,
@@ -23467,7 +23467,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 588,
                 'cases_70_79' => 451,
                 'cases_80' => 414,
-                'cases_active' => 65245,
+                'cases_active' => 65244,
                 'cases_adolescent' => 164,
                 'cases_adult' => 2999,
                 'cases_boost' => 68,
@@ -23489,11 +23489,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 204,
                 'cluster_religious' => 68,
                 'cluster_workplace' => 9,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-11-06',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            152 =>
+            152 => 
             array (
                 'cases_0_4' => 289,
                 'cases_12_17' => 150,
@@ -23503,7 +23503,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 519,
                 'cases_70_79' => 460,
                 'cases_80' => 392,
-                'cases_active' => 64339,
+                'cases_active' => 64338,
                 'cases_adolescent' => 150,
                 'cases_adult' => 2820,
                 'cases_boost' => 60,
@@ -23514,10 +23514,10 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_fvax' => 3072,
                 'cases_import' => 9,
                 'cases_new' => 4343,
-                'cases_pvax' => 77,
+                'cases_pvax' => 76,
                 'cases_recovered' => 5190,
                 'cases_recovered_cumulative' => 2412395,
-                'cases_unvax' => 1134,
+                'cases_unvax' => 1135,
                 'cluster_community' => 0,
                 'cluster_detentionCentre' => 0,
                 'cluster_education' => 29,
@@ -23525,11 +23525,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 166,
                 'cluster_religious' => 46,
                 'cluster_workplace' => 5,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-11-07',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            153 =>
+            153 => 
             array (
                 'cases_0_4' => 312,
                 'cases_12_17' => 150,
@@ -23539,7 +23539,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 565,
                 'cases_70_79' => 452,
                 'cases_80' => 428,
-                'cases_active' => 61481,
+                'cases_active' => 61480,
                 'cases_adolescent' => 150,
                 'cases_adult' => 2924,
                 'cases_boost' => 46,
@@ -23561,11 +23561,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 185,
                 'cluster_religious' => 54,
                 'cluster_workplace' => 10,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-11-08',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            154 =>
+            154 => 
             array (
                 'cases_0_4' => 366,
                 'cases_12_17' => 208,
@@ -23575,7 +23575,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 665,
                 'cases_70_79' => 564,
                 'cases_80' => 398,
-                'cases_active' => 61521,
+                'cases_active' => 61520,
                 'cases_adolescent' => 208,
                 'cases_adult' => 3540,
                 'cases_boost' => 62,
@@ -23597,11 +23597,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 180,
                 'cluster_religious' => 79,
                 'cluster_workplace' => 46,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-11-09',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            155 =>
+            155 => 
             array (
                 'cases_0_4' => 395,
                 'cases_12_17' => 207,
@@ -23611,7 +23611,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 833,
                 'cases_70_79' => 592,
                 'cases_80' => 528,
-                'cases_active' => 62656,
+                'cases_active' => 62655,
                 'cases_adolescent' => 207,
                 'cases_adult' => 4208,
                 'cases_boost' => 83,
@@ -23633,11 +23633,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 215,
                 'cluster_religious' => 69,
                 'cluster_workplace' => 55,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-11-10',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            156 =>
+            156 => 
             array (
                 'cases_0_4' => 409,
                 'cases_12_17' => 245,
@@ -23647,7 +23647,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 839,
                 'cases_70_79' => 620,
                 'cases_80' => 492,
-                'cases_active' => 63593,
+                'cases_active' => 63592,
                 'cases_adolescent' => 245,
                 'cases_adult' => 4147,
                 'cases_boost' => 68,
@@ -23669,11 +23669,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 204,
                 'cluster_religious' => 74,
                 'cluster_workplace' => 24,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-11-11',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            157 =>
+            157 => 
             array (
                 'cases_0_4' => 404,
                 'cases_12_17' => 246,
@@ -23683,15 +23683,15 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 815,
                 'cases_70_79' => 636,
                 'cases_80' => 511,
-                'cases_active' => 64036,
+                'cases_active' => 64035,
                 'cases_adolescent' => 246,
                 'cases_adult' => 4288,
-                'cases_boost' => 67,
+                'cases_boost' => 66,
                 'cases_child' => 1093,
                 'cases_cluster' => 240,
                 'cases_cumulative' => 2535338,
                 'cases_elderly' => 823,
-                'cases_fvax' => 4779,
+                'cases_fvax' => 4780,
                 'cases_import' => 16,
                 'cases_new' => 6517,
                 'cases_pvax' => 105,
@@ -23705,11 +23705,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 235,
                 'cluster_religious' => 77,
                 'cluster_workplace' => 69,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-11-12',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            158 =>
+            158 => 
             array (
                 'cases_0_4' => 378,
                 'cases_12_17' => 178,
@@ -23719,7 +23719,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 788,
                 'cases_70_79' => 586,
                 'cases_80' => 525,
-                'cases_active' => 65089,
+                'cases_active' => 65088,
                 'cases_adolescent' => 178,
                 'cases_adult' => 3839,
                 'cases_boost' => 83,
@@ -23741,11 +23741,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 215,
                 'cluster_religious' => 70,
                 'cluster_workplace' => 28,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-11-13',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            159 =>
+            159 => 
             array (
                 'cases_0_4' => 362,
                 'cases_12_17' => 181,
@@ -23755,7 +23755,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 662,
                 'cases_70_79' => 497,
                 'cases_80' => 482,
-                'cases_active' => 65194,
+                'cases_active' => 65193,
                 'cases_adolescent' => 181,
                 'cases_adult' => 3256,
                 'cases_boost' => 59,
@@ -23777,11 +23777,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 229,
                 'cluster_religious' => 72,
                 'cluster_workplace' => 5,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-11-14',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            160 =>
+            160 => 
             array (
                 'cases_0_4' => 340,
                 'cases_12_17' => 195,
@@ -23791,7 +23791,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 624,
                 'cases_70_79' => 518,
                 'cases_80' => 431,
-                'cases_active' => 65742,
+                'cases_active' => 65741,
                 'cases_adolescent' => 195,
                 'cases_adult' => 3381,
                 'cases_boost' => 64,
@@ -23813,11 +23813,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 175,
                 'cluster_religious' => 71,
                 'cluster_workplace' => 93,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-11-15',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            161 =>
+            161 => 
             array (
                 'cases_0_4' => 363,
                 'cases_12_17' => 220,
@@ -23827,7 +23827,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 696,
                 'cases_70_79' => 609,
                 'cases_80' => 445,
-                'cases_active' => 65096,
+                'cases_active' => 65095,
                 'cases_adolescent' => 220,
                 'cases_adult' => 3508,
                 'cases_boost' => 101,
@@ -23838,10 +23838,10 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_fvax' => 3893,
                 'cases_import' => 17,
                 'cases_new' => 5413,
-                'cases_pvax' => 87,
+                'cases_pvax' => 85,
                 'cases_recovered' => 6013,
                 'cases_recovered_cumulative' => 2461780,
-                'cases_unvax' => 1332,
+                'cases_unvax' => 1334,
                 'cluster_community' => 0,
                 'cluster_detentionCentre' => 5,
                 'cluster_education' => 39,
@@ -23849,11 +23849,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 181,
                 'cluster_religious' => 73,
                 'cluster_workplace' => 16,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-11-16',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            162 =>
+            162 => 
             array (
                 'cases_0_4' => 396,
                 'cases_12_17' => 225,
@@ -23863,7 +23863,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 781,
                 'cases_70_79' => 708,
                 'cases_80' => 498,
-                'cases_active' => 66580,
+                'cases_active' => 66579,
                 'cases_adolescent' => 225,
                 'cases_adult' => 4185,
                 'cases_boost' => 85,
@@ -23874,10 +23874,10 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_fvax' => 4671,
                 'cases_import' => 22,
                 'cases_new' => 6288,
-                'cases_pvax' => 74,
+                'cases_pvax' => 73,
                 'cases_recovered' => 4743,
                 'cases_recovered_cumulative' => 2466523,
-                'cases_unvax' => 1458,
+                'cases_unvax' => 1459,
                 'cluster_community' => 0,
                 'cluster_detentionCentre' => 0,
                 'cluster_education' => 34,
@@ -23885,11 +23885,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 221,
                 'cluster_religious' => 68,
                 'cluster_workplace' => 15,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-11-17',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            163 =>
+            163 => 
             array (
                 'cases_0_4' => 407,
                 'cases_12_17' => 241,
@@ -23899,7 +23899,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 861,
                 'cases_70_79' => 665,
                 'cases_80' => 496,
-                'cases_active' => 67165,
+                'cases_active' => 67164,
                 'cases_adolescent' => 241,
                 'cases_adult' => 4253,
                 'cases_boost' => 123,
@@ -23921,11 +23921,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 259,
                 'cluster_religious' => 77,
                 'cluster_workplace' => 68,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-11-18',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            164 =>
+            164 => 
             array (
                 'cases_0_4' => 468,
                 'cases_12_17' => 228,
@@ -23935,7 +23935,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 863,
                 'cases_70_79' => 651,
                 'cases_80' => 479,
-                'cases_active' => 68444,
+                'cases_active' => 68443,
                 'cases_adolescent' => 228,
                 'cases_adult' => 4193,
                 'cases_boost' => 122,
@@ -23957,11 +23957,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 197,
                 'cluster_religious' => 52,
                 'cluster_workplace' => 40,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-11-19',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            165 =>
+            165 => 
             array (
                 'cases_0_4' => 378,
                 'cases_12_17' => 251,
@@ -23971,7 +23971,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 795,
                 'cases_70_79' => 628,
                 'cases_80' => 458,
-                'cases_active' => 69295,
+                'cases_active' => 69294,
                 'cases_adolescent' => 251,
                 'cases_adult' => 3846,
                 'cases_boost' => 124,
@@ -23993,11 +23993,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 210,
                 'cluster_religious' => 62,
                 'cluster_workplace' => 34,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-11-20',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            166 =>
+            166 => 
             array (
                 'cases_0_4' => 314,
                 'cases_12_17' => 189,
@@ -24007,7 +24007,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 621,
                 'cases_70_79' => 511,
                 'cases_80' => 378,
-                'cases_active' => 68578,
+                'cases_active' => 68577,
                 'cases_adolescent' => 189,
                 'cases_adult' => 3260,
                 'cases_boost' => 89,
@@ -24029,11 +24029,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 158,
                 'cluster_religious' => 68,
                 'cluster_workplace' => 8,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-11-21',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            167 =>
+            167 => 
             array (
                 'cases_0_4' => 306,
                 'cases_12_17' => 200,
@@ -24043,7 +24043,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 620,
                 'cases_70_79' => 516,
                 'cases_80' => 385,
-                'cases_active' => 67794,
+                'cases_active' => 67793,
                 'cases_adolescent' => 200,
                 'cases_adult' => 3205,
                 'cases_boost' => 93,
@@ -24065,11 +24065,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 200,
                 'cluster_religious' => 76,
                 'cluster_workplace' => 42,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-11-22',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            168 =>
+            168 => 
             array (
                 'cases_0_4' => 339,
                 'cases_12_17' => 212,
@@ -24079,7 +24079,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 779,
                 'cases_70_79' => 636,
                 'cases_80' => 435,
-                'cases_active' => 68432,
+                'cases_active' => 68430,
                 'cases_adolescent' => 212,
                 'cases_adult' => 3760,
                 'cases_boost' => 106,
@@ -24101,11 +24101,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 193,
                 'cluster_religious' => 49,
                 'cluster_workplace' => 88,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-11-23',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            169 =>
+            169 => 
             array (
                 'cases_0_4' => 350,
                 'cases_12_17' => 227,
@@ -24115,7 +24115,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 808,
                 'cases_70_79' => 557,
                 'cases_80' => 468,
-                'cases_active' => 69062,
+                'cases_active' => 69060,
                 'cases_adolescent' => 227,
                 'cases_adult' => 3798,
                 'cases_boost' => 146,
@@ -24137,11 +24137,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 194,
                 'cluster_religious' => 83,
                 'cluster_workplace' => 36,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-11-24',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            170 =>
+            170 => 
             array (
                 'cases_0_4' => 394,
                 'cases_12_17' => 245,
@@ -24151,7 +24151,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 801,
                 'cases_70_79' => 641,
                 'cases_80' => 514,
-                'cases_active' => 68554,
+                'cases_active' => 68552,
                 'cases_adolescent' => 245,
                 'cases_adult' => 4033,
                 'cases_boost' => 125,
@@ -24173,11 +24173,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 229,
                 'cluster_religious' => 74,
                 'cluster_workplace' => 28,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-11-25',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            171 =>
+            171 => 
             array (
                 'cases_0_4' => 342,
                 'cases_12_17' => 196,
@@ -24187,7 +24187,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 764,
                 'cases_70_79' => 580,
                 'cases_80' => 420,
-                'cases_active' => 67348,
+                'cases_active' => 67346,
                 'cases_adolescent' => 196,
                 'cases_adult' => 3722,
                 'cases_boost' => 111,
@@ -24209,11 +24209,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 185,
                 'cluster_religious' => 56,
                 'cluster_workplace' => 52,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-11-26',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            172 =>
+            172 => 
             array (
                 'cases_0_4' => 315,
                 'cases_12_17' => 212,
@@ -24223,7 +24223,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 684,
                 'cases_70_79' => 568,
                 'cases_80' => 399,
-                'cases_active' => 67047,
+                'cases_active' => 67045,
                 'cases_adolescent' => 212,
                 'cases_adult' => 3409,
                 'cases_boost' => 110,
@@ -24245,11 +24245,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 174,
                 'cluster_religious' => 58,
                 'cluster_workplace' => 40,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-11-27',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            173 =>
+            173 => 
             array (
                 'cases_0_4' => 272,
                 'cases_12_17' => 155,
@@ -24259,7 +24259,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 564,
                 'cases_70_79' => 482,
                 'cases_80' => 334,
-                'cases_active' => 66242,
+                'cases_active' => 66239,
                 'cases_adolescent' => 155,
                 'cases_adult' => 2818,
                 'cases_boost' => 92,
@@ -24281,11 +24281,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 143,
                 'cluster_religious' => 47,
                 'cluster_workplace' => 30,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-11-28',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            174 =>
+            174 => 
             array (
                 'cases_0_4' => 271,
                 'cases_12_17' => 202,
@@ -24295,7 +24295,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 551,
                 'cases_70_79' => 421,
                 'cases_80' => 331,
-                'cases_active' => 65304,
+                'cases_active' => 65301,
                 'cases_adolescent' => 202,
                 'cases_adult' => 2626,
                 'cases_boost' => 84,
@@ -24317,11 +24317,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 163,
                 'cluster_religious' => 52,
                 'cluster_workplace' => 109,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-11-29',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            175 =>
+            175 => 
             array (
                 'cases_0_4' => 308,
                 'cases_12_17' => 209,
@@ -24331,7 +24331,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 708,
                 'cases_70_79' => 536,
                 'cases_80' => 358,
-                'cases_active' => 64981,
+                'cases_active' => 64978,
                 'cases_adolescent' => 209,
                 'cases_adult' => 3290,
                 'cases_boost' => 104,
@@ -24353,11 +24353,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 165,
                 'cluster_religious' => 60,
                 'cluster_workplace' => 33,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-11-30',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            176 =>
+            176 => 
             array (
                 'cases_0_4' => 338,
                 'cases_12_17' => 197,
@@ -24367,7 +24367,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 767,
                 'cases_70_79' => 546,
                 'cases_80' => 387,
-                'cases_active' => 63586,
+                'cases_active' => 63583,
                 'cases_adolescent' => 197,
                 'cases_adult' => 3668,
                 'cases_boost' => 122,
@@ -24389,11 +24389,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 197,
                 'cluster_religious' => 61,
                 'cluster_workplace' => 33,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-12-01',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            177 =>
+            177 => 
             array (
                 'cases_0_4' => 344,
                 'cases_12_17' => 304,
@@ -24403,7 +24403,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 779,
                 'cases_70_79' => 610,
                 'cases_80' => 410,
-                'cases_active' => 62102,
+                'cases_active' => 62099,
                 'cases_adolescent' => 304,
                 'cases_adult' => 3875,
                 'cases_boost' => 170,
@@ -24425,11 +24425,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 174,
                 'cluster_religious' => 59,
                 'cluster_workplace' => 148,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-12-02',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            178 =>
+            178 => 
             array (
                 'cases_0_4' => 359,
                 'cases_12_17' => 304,
@@ -24439,7 +24439,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 737,
                 'cases_70_79' => 522,
                 'cases_80' => 411,
-                'cases_active' => 62306,
+                'cases_active' => 62303,
                 'cases_adolescent' => 304,
                 'cases_adult' => 3683,
                 'cases_boost' => 147,
@@ -24461,11 +24461,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 167,
                 'cluster_religious' => 48,
                 'cluster_workplace' => 104,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-12-03',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            179 =>
+            179 => 
             array (
                 'cases_0_4' => 330,
                 'cases_12_17' => 211,
@@ -24475,7 +24475,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 648,
                 'cases_70_79' => 500,
                 'cases_80' => 327,
-                'cases_active' => 62484,
+                'cases_active' => 62481,
                 'cases_adolescent' => 211,
                 'cases_adult' => 3298,
                 'cases_boost' => 168,
@@ -24497,11 +24497,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 158,
                 'cluster_religious' => 52,
                 'cluster_workplace' => 52,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-12-04',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            180 =>
+            180 => 
             array (
                 'cases_0_4' => 281,
                 'cases_12_17' => 184,
@@ -24511,7 +24511,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 535,
                 'cases_70_79' => 425,
                 'cases_80' => 330,
-                'cases_active' => 61816,
+                'cases_active' => 61813,
                 'cases_adolescent' => 184,
                 'cases_adult' => 2866,
                 'cases_boost' => 150,
@@ -24533,11 +24533,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 130,
                 'cluster_religious' => 49,
                 'cluster_workplace' => 69,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-12-05',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            181 =>
+            181 => 
             array (
                 'cases_0_4' => 289,
                 'cases_12_17' => 185,
@@ -24547,7 +24547,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 560,
                 'cases_70_79' => 425,
                 'cases_80' => 352,
-                'cases_active' => 60142,
+                'cases_active' => 60139,
                 'cases_adolescent' => 185,
                 'cases_adult' => 2804,
                 'cases_boost' => 131,
@@ -24569,11 +24569,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 141,
                 'cluster_religious' => 49,
                 'cluster_workplace' => 30,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-12-06',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            182 =>
+            182 => 
             array (
                 'cases_0_4' => 305,
                 'cases_12_17' => 229,
@@ -24583,7 +24583,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 673,
                 'cases_70_79' => 490,
                 'cases_80' => 395,
-                'cases_active' => 60254,
+                'cases_active' => 60251,
                 'cases_adolescent' => 229,
                 'cases_adult' => 3314,
                 'cases_boost' => 147,
@@ -24605,11 +24605,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 169,
                 'cluster_religious' => 81,
                 'cluster_workplace' => 36,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-12-07',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            183 =>
+            183 => 
             array (
                 'cases_0_4' => 301,
                 'cases_12_17' => 223,
@@ -24619,7 +24619,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 712,
                 'cases_70_79' => 532,
                 'cases_80' => 378,
-                'cases_active' => 60712,
+                'cases_active' => 60709,
                 'cases_adolescent' => 223,
                 'cases_adult' => 3434,
                 'cases_boost' => 143,
@@ -24641,11 +24641,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 154,
                 'cluster_religious' => 43,
                 'cluster_workplace' => 32,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-12-08',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            184 =>
+            184 => 
             array (
                 'cases_0_4' => 335,
                 'cases_12_17' => 282,
@@ -24655,7 +24655,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 688,
                 'cases_70_79' => 485,
                 'cases_80' => 367,
-                'cases_active' => 60703,
+                'cases_active' => 60700,
                 'cases_adolescent' => 282,
                 'cases_adult' => 3724,
                 'cases_boost' => 152,
@@ -24663,13 +24663,13 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_cluster' => 367,
                 'cases_cumulative' => 2678465,
                 'cases_elderly' => 574,
-                'cases_fvax' => 4035,
+                'cases_fvax' => 4034,
                 'cases_import' => 20,
                 'cases_new' => 5446,
                 'cases_pvax' => 53,
                 'cases_recovered' => 5427,
                 'cases_recovered_cumulative' => 2586821,
-                'cases_unvax' => 1206,
+                'cases_unvax' => 1207,
                 'cluster_community' => 0,
                 'cluster_detentionCentre' => 8,
                 'cluster_education' => 1,
@@ -24677,11 +24677,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 161,
                 'cluster_religious' => 46,
                 'cluster_workplace' => 153,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-12-09',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            185 =>
+            185 => 
             array (
                 'cases_0_4' => 311,
                 'cases_12_17' => 223,
@@ -24691,7 +24691,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 671,
                 'cases_70_79' => 462,
                 'cases_80' => 356,
-                'cases_active' => 60734,
+                'cases_active' => 60731,
                 'cases_adolescent' => 223,
                 'cases_adult' => 3410,
                 'cases_boost' => 157,
@@ -24713,11 +24713,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 163,
                 'cluster_religious' => 62,
                 'cluster_workplace' => 52,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-12-10',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            186 =>
+            186 => 
             array (
                 'cases_0_4' => 269,
                 'cases_12_17' => 192,
@@ -24727,15 +24727,15 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 618,
                 'cases_70_79' => 414,
                 'cases_80' => 340,
-                'cases_active' => 60645,
+                'cases_active' => 60642,
                 'cases_adolescent' => 192,
                 'cases_adult' => 3113,
-                'cases_boost' => 145,
+                'cases_boost' => 144,
                 'cases_child' => 757,
                 'cases_cluster' => 105,
                 'cases_cumulative' => 2688149,
                 'cases_elderly' => 553,
-                'cases_fvax' => 3338,
+                'cases_fvax' => 3339,
                 'cases_import' => 20,
                 'cases_new' => 4626,
                 'cases_pvax' => 38,
@@ -24749,11 +24749,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 154,
                 'cluster_religious' => 59,
                 'cluster_workplace' => 18,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-12-11',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            187 =>
+            187 => 
             array (
                 'cases_0_4' => 201,
                 'cases_12_17' => 143,
@@ -24763,7 +24763,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 428,
                 'cases_70_79' => 361,
                 'cases_80' => 276,
-                'cases_active' => 58707,
+                'cases_active' => 58704,
                 'cases_adolescent' => 143,
                 'cases_adult' => 2318,
                 'cases_boost' => 129,
@@ -24785,11 +24785,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 136,
                 'cluster_religious' => 75,
                 'cluster_workplace' => 42,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-12-12',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            188 =>
+            188 => 
             array (
                 'cases_0_4' => 237,
                 'cases_12_17' => 154,
@@ -24799,7 +24799,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 421,
                 'cases_70_79' => 384,
                 'cases_80' => 296,
-                'cases_active' => 57779,
+                'cases_active' => 57776,
                 'cases_adolescent' => 154,
                 'cases_adult' => 2317,
                 'cases_boost' => 108,
@@ -24821,11 +24821,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 142,
                 'cluster_religious' => 37,
                 'cluster_workplace' => 27,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-12-13',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            189 =>
+            189 => 
             array (
                 'cases_0_4' => 253,
                 'cases_12_17' => 159,
@@ -24835,7 +24835,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 566,
                 'cases_70_79' => 400,
                 'cases_80' => 312,
-                'cases_active' => 57542,
+                'cases_active' => 57539,
                 'cases_adolescent' => 159,
                 'cases_adult' => 2771,
                 'cases_boost' => 138,
@@ -24857,11 +24857,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 149,
                 'cluster_religious' => 50,
                 'cluster_workplace' => 12,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-12-14',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            190 =>
+            190 => 
             array (
                 'cases_0_4' => 220,
                 'cases_12_17' => 139,
@@ -24871,7 +24871,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 550,
                 'cases_70_79' => 378,
                 'cases_80' => 289,
-                'cases_active' => 56862,
+                'cases_active' => 56859,
                 'cases_adolescent' => 139,
                 'cases_adult' => 2720,
                 'cases_boost' => 144,
@@ -24893,11 +24893,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 129,
                 'cluster_religious' => 40,
                 'cluster_workplace' => 49,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-12-15',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            191 =>
+            191 => 
             array (
                 'cases_0_4' => 254,
                 'cases_12_17' => 142,
@@ -24907,7 +24907,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 572,
                 'cases_70_79' => 395,
                 'cases_80' => 343,
-                'cases_active' => 56112,
+                'cases_active' => 56109,
                 'cases_adolescent' => 142,
                 'cases_adult' => 2927,
                 'cases_boost' => 171,
@@ -24929,11 +24929,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 132,
                 'cluster_religious' => 46,
                 'cluster_workplace' => 19,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-12-16',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            192 =>
+            192 => 
             array (
                 'cases_0_4' => 266,
                 'cases_12_17' => 193,
@@ -24943,7 +24943,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 576,
                 'cases_70_79' => 403,
                 'cases_80' => 298,
-                'cases_active' => 55332,
+                'cases_active' => 55329,
                 'cases_adolescent' => 193,
                 'cases_adult' => 2976,
                 'cases_boost' => 179,
@@ -24951,10 +24951,10 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_cluster' => 208,
                 'cases_cumulative' => 2711764,
                 'cases_elderly' => 490,
-                'cases_fvax' => 3173,
+                'cases_fvax' => 3172,
                 'cases_import' => 28,
                 'cases_new' => 4362,
-                'cases_pvax' => 45,
+                'cases_pvax' => 46,
                 'cases_recovered' => 5098,
                 'cases_recovered_cumulative' => 2625244,
                 'cases_unvax' => 965,
@@ -24965,11 +24965,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 128,
                 'cluster_religious' => 64,
                 'cluster_workplace' => 30,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-12-17',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            193 =>
+            193 => 
             array (
                 'cases_0_4' => 271,
                 'cases_12_17' => 142,
@@ -24979,7 +24979,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 526,
                 'cases_70_79' => 386,
                 'cases_80' => 327,
-                'cases_active' => 53943,
+                'cases_active' => 53940,
                 'cases_adolescent' => 142,
                 'cases_adult' => 2757,
                 'cases_boost' => 146,
@@ -25001,11 +25001,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 134,
                 'cluster_religious' => 42,
                 'cluster_workplace' => 4,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-12-18',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            194 =>
+            194 => 
             array (
                 'cases_0_4' => 182,
                 'cases_12_17' => 105,
@@ -25015,7 +25015,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 437,
                 'cases_70_79' => 273,
                 'cases_80' => 249,
-                'cases_active' => 53317,
+                'cases_active' => 53313,
                 'cases_adolescent' => 105,
                 'cases_adult' => 2152,
                 'cases_boost' => 143,
@@ -25023,13 +25023,13 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_cluster' => 88,
                 'cases_cumulative' => 2718955,
                 'cases_elderly' => 390,
-                'cases_fvax' => 2252,
+                'cases_fvax' => 2251,
                 'cases_import' => 37,
                 'cases_new' => 3108,
                 'cases_pvax' => 22,
                 'cases_recovered' => 3701,
                 'cases_recovered_cumulative' => 2634380,
-                'cases_unvax' => 691,
+                'cases_unvax' => 692,
                 'cluster_community' => 0,
                 'cluster_detentionCentre' => 0,
                 'cluster_education' => 18,
@@ -25037,11 +25037,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 119,
                 'cluster_religious' => 22,
                 'cluster_workplace' => 22,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-12-19',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            195 =>
+            195 => 
             array (
                 'cases_0_4' => 196,
                 'cases_12_17' => 99,
@@ -25051,7 +25051,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 314,
                 'cases_70_79' => 235,
                 'cases_80' => 251,
-                'cases_active' => 52055,
+                'cases_active' => 52051,
                 'cases_adolescent' => 99,
                 'cases_adult' => 1659,
                 'cases_boost' => 96,
@@ -25073,11 +25073,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 85,
                 'cluster_religious' => 34,
                 'cluster_workplace' => 5,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-12-20',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            196 =>
+            196 => 
             array (
                 'cases_0_4' => 183,
                 'cases_12_17' => 152,
@@ -25087,7 +25087,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 406,
                 'cases_70_79' => 284,
                 'cases_80' => 252,
-                'cases_active' => 50889,
+                'cases_active' => 50885,
                 'cases_adolescent' => 152,
                 'cases_adult' => 2054,
                 'cases_boost' => 161,
@@ -25109,11 +25109,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 106,
                 'cluster_religious' => 33,
                 'cluster_workplace' => 25,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-12-21',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            197 =>
+            197 => 
             array (
                 'cases_0_4' => 212,
                 'cases_12_17' => 163,
@@ -25123,7 +25123,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 442,
                 'cases_70_79' => 351,
                 'cases_80' => 265,
-                'cases_active' => 49271,
+                'cases_active' => 49267,
                 'cases_adolescent' => 163,
                 'cases_adult' => 2369,
                 'cases_boost' => 169,
@@ -25145,11 +25145,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 149,
                 'cluster_religious' => 30,
                 'cluster_workplace' => 9,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-12-22',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            198 =>
+            198 => 
             array (
                 'cases_0_4' => 235,
                 'cases_12_17' => 133,
@@ -25159,7 +25159,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 480,
                 'cases_70_79' => 344,
                 'cases_80' => 282,
-                'cases_active' => 47754,
+                'cases_active' => 47750,
                 'cases_adolescent' => 133,
                 'cases_adult' => 2387,
                 'cases_boost' => 189,
@@ -25181,11 +25181,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 113,
                 'cluster_religious' => 48,
                 'cluster_workplace' => 2,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-12-23',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            199 =>
+            199 => 
             array (
                 'cases_0_4' => 210,
                 'cases_12_17' => 148,
@@ -25195,7 +25195,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 440,
                 'cases_70_79' => 343,
                 'cases_80' => 267,
-                'cases_active' => 46767,
+                'cases_active' => 46763,
                 'cases_adolescent' => 148,
                 'cases_adult' => 2409,
                 'cases_boost' => 205,
@@ -25217,11 +25217,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 111,
                 'cluster_religious' => 42,
                 'cluster_workplace' => 8,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-12-24',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            200 =>
+            200 => 
             array (
                 'cases_0_4' => 190,
                 'cases_12_17' => 135,
@@ -25231,7 +25231,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 416,
                 'cases_70_79' => 332,
                 'cases_80' => 276,
-                'cases_active' => 45484,
+                'cases_active' => 45480,
                 'cases_adolescent' => 135,
                 'cases_adult' => 2131,
                 'cases_boost' => 212,
@@ -25253,11 +25253,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 121,
                 'cluster_religious' => 34,
                 'cluster_workplace' => 16,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-12-25',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            201 =>
+            201 => 
             array (
                 'cases_0_4' => 180,
                 'cases_12_17' => 120,
@@ -25267,7 +25267,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 364,
                 'cases_70_79' => 293,
                 'cases_80' => 219,
-                'cases_active' => 44706,
+                'cases_active' => 44702,
                 'cases_adolescent' => 120,
                 'cases_adult' => 1855,
                 'cases_boost' => 176,
@@ -25289,11 +25289,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 114,
                 'cluster_religious' => 37,
                 'cluster_workplace' => 4,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-12-26',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            202 =>
+            202 => 
             array (
                 'cases_0_4' => 148,
                 'cases_12_17' => 143,
@@ -25303,7 +25303,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 327,
                 'cases_70_79' => 303,
                 'cases_80' => 214,
-                'cases_active' => 42816,
+                'cases_active' => 42811,
                 'cases_adolescent' => 143,
                 'cases_adult' => 1854,
                 'cases_boost' => 178,
@@ -25325,11 +25325,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 103,
                 'cluster_religious' => 26,
                 'cluster_workplace' => 5,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-12-27',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            203 =>
+            203 => 
             array (
                 'cases_0_4' => 167,
                 'cases_12_17' => 137,
@@ -25339,7 +25339,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 379,
                 'cases_70_79' => 293,
                 'cases_80' => 226,
-                'cases_active' => 42248,
+                'cases_active' => 42243,
                 'cases_adolescent' => 137,
                 'cases_adult' => 1957,
                 'cases_boost' => 180,
@@ -25361,11 +25361,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 85,
                 'cluster_religious' => 41,
                 'cluster_workplace' => 6,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-12-28',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            204 =>
+            204 => 
             array (
                 'cases_0_4' => 192,
                 'cases_12_17' => 145,
@@ -25375,7 +25375,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 458,
                 'cases_70_79' => 377,
                 'cases_80' => 329,
-                'cases_active' => 41581,
+                'cases_active' => 41576,
                 'cases_adolescent' => 145,
                 'cases_adult' => 2530,
                 'cases_boost' => 256,
@@ -25397,11 +25397,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 124,
                 'cluster_religious' => 46,
                 'cluster_workplace' => 5,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-12-29',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            205 =>
+            205 => 
             array (
                 'cases_0_4' => 222,
                 'cases_12_17' => 182,
@@ -25411,15 +25411,15 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 492,
                 'cases_70_79' => 423,
                 'cases_80' => 353,
-                'cases_active' => 41568,
+                'cases_active' => 41562,
                 'cases_adolescent' => 182,
                 'cases_adult' => 2674,
-                'cases_boost' => 302,
+                'cases_boost' => 301,
                 'cases_child' => 578,
                 'cases_cluster' => 87,
                 'cases_cumulative' => 2754513,
                 'cases_elderly' => 546,
-                'cases_fvax' => 2795,
+                'cases_fvax' => 2796,
                 'cases_import' => 366,
                 'cases_new' => 3997,
                 'cases_pvax' => 19,
@@ -25433,11 +25433,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 153,
                 'cluster_religious' => 40,
                 'cluster_workplace' => 2,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-12-30',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            206 =>
+            206 => 
             array (
                 'cases_0_4' => 175,
                 'cases_12_17' => 150,
@@ -25447,7 +25447,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 457,
                 'cases_70_79' => 379,
                 'cases_80' => 275,
-                'cases_active' => 41136,
+                'cases_active' => 41130,
                 'cases_adolescent' => 150,
                 'cases_adult' => 2495,
                 'cases_boost' => 303,
@@ -25469,11 +25469,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 113,
                 'cluster_religious' => 36,
                 'cluster_workplace' => 4,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2021-12-31',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            207 =>
+            207 => 
             array (
                 'cases_0_4' => 195,
                 'cases_12_17' => 151,
@@ -25483,7 +25483,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 462,
                 'cases_70_79' => 321,
                 'cases_80' => 263,
-                'cases_active' => 40950,
+                'cases_active' => 40943,
                 'cases_adolescent' => 151,
                 'cases_adult' => 2296,
                 'cases_boost' => 306,
@@ -25505,11 +25505,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 108,
                 'cluster_religious' => 34,
                 'cluster_workplace' => 4,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2022-01-01',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            208 =>
+            208 => 
             array (
                 'cases_0_4' => 144,
                 'cases_12_17' => 123,
@@ -25519,7 +25519,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 374,
                 'cases_70_79' => 297,
                 'cases_80' => 243,
-                'cases_active' => 40523,
+                'cases_active' => 40516,
                 'cases_adolescent' => 123,
                 'cases_adult' => 1980,
                 'cases_boost' => 240,
@@ -25541,11 +25541,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 97,
                 'cluster_religious' => 32,
                 'cluster_workplace' => 16,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2022-01-02',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            209 =>
+            209 => 
             array (
                 'cases_0_4' => 151,
                 'cases_12_17' => 135,
@@ -25555,7 +25555,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 341,
                 'cases_70_79' => 307,
                 'cases_80' => 244,
-                'cases_active' => 39658,
+                'cases_active' => 39651,
                 'cases_adolescent' => 135,
                 'cases_adult' => 1816,
                 'cases_boost' => 270,
@@ -25577,11 +25577,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 100,
                 'cluster_religious' => 32,
                 'cluster_workplace' => 9,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2022-01-03',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            210 =>
+            210 => 
             array (
                 'cases_0_4' => 154,
                 'cases_12_17' => 139,
@@ -25591,7 +25591,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 377,
                 'cases_70_79' => 318,
                 'cases_80' => 222,
-                'cases_active' => 39623,
+                'cases_active' => 39615,
                 'cases_adolescent' => 139,
                 'cases_adult' => 1875,
                 'cases_boost' => 270,
@@ -25613,11 +25613,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 109,
                 'cluster_religious' => 37,
                 'cluster_workplace' => 16,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2022-01-04',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            211 =>
+            211 => 
             array (
                 'cases_0_4' => 174,
                 'cases_12_17' => 158,
@@ -25627,7 +25627,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 404,
                 'cases_70_79' => 344,
                 'cases_80' => 273,
-                'cases_active' => 39672,
+                'cases_active' => 39664,
                 'cases_adolescent' => 158,
                 'cases_adult' => 2197,
                 'cases_boost' => 311,
@@ -25649,11 +25649,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 137,
                 'cluster_religious' => 35,
                 'cluster_workplace' => 4,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2022-01-05',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            212 =>
+            212 => 
             array (
                 'cases_0_4' => 197,
                 'cases_12_17' => 190,
@@ -25663,7 +25663,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 434,
                 'cases_70_79' => 365,
                 'cases_80' => 296,
-                'cases_active' => 39715,
+                'cases_active' => 39707,
                 'cases_adolescent' => 190,
                 'cases_adult' => 2387,
                 'cases_boost' => 316,
@@ -25685,11 +25685,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 114,
                 'cluster_religious' => 33,
                 'cluster_workplace' => 7,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2022-01-06',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            213 =>
+            213 => 
             array (
                 'cases_0_4' => 213,
                 'cases_12_17' => 177,
@@ -25699,7 +25699,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 447,
                 'cases_70_79' => 336,
                 'cases_80' => 245,
-                'cases_active' => 39636,
+                'cases_active' => 39628,
                 'cases_adolescent' => 177,
                 'cases_adult' => 2249,
                 'cases_boost' => 388,
@@ -25721,11 +25721,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 96,
                 'cluster_religious' => 42,
                 'cluster_workplace' => 4,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2022-01-07',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            214 =>
+            214 => 
             array (
                 'cases_0_4' => 160,
                 'cases_12_17' => 156,
@@ -25735,7 +25735,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 376,
                 'cases_70_79' => 335,
                 'cases_80' => 257,
-                'cases_active' => 39709,
+                'cases_active' => 39700,
                 'cases_adolescent' => 156,
                 'cases_adult' => 2200,
                 'cases_boost' => 339,
@@ -25757,11 +25757,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 120,
                 'cluster_religious' => 30,
                 'cluster_workplace' => 10,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2022-01-08',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            215 =>
+            215 => 
             array (
                 'cases_0_4' => 155,
                 'cases_12_17' => 160,
@@ -25771,15 +25771,15 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 378,
                 'cases_70_79' => 311,
                 'cases_80' => 241,
-                'cases_active' => 39866,
+                'cases_active' => 39857,
                 'cases_adolescent' => 160,
                 'cases_adult' => 1945,
-                'cases_boost' => 346,
+                'cases_boost' => 345,
                 'cases_child' => 430,
                 'cases_cluster' => 52,
                 'cases_cumulative' => 2786219,
                 'cases_elderly' => 343,
-                'cases_fvax' => 1967,
+                'cases_fvax' => 1968,
                 'cases_import' => 323,
                 'cases_new' => 2888,
                 'cases_pvax' => 14,
@@ -25793,11 +25793,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 84,
                 'cluster_religious' => 18,
                 'cluster_workplace' => 4,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2022-01-09',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            216 =>
+            216 => 
             array (
                 'cases_0_4' => 157,
                 'cases_12_17' => 160,
@@ -25807,7 +25807,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 351,
                 'cases_70_79' => 278,
                 'cases_80' => 193,
-                'cases_active' => 39688,
+                'cases_active' => 39678,
                 'cases_adolescent' => 160,
                 'cases_adult' => 1709,
                 'cases_boost' => 294,
@@ -25829,11 +25829,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 91,
                 'cluster_religious' => 50,
                 'cluster_workplace' => 0,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2022-01-10',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            217 =>
+            217 => 
             array (
                 'cases_0_4' => 180,
                 'cases_12_17' => 231,
@@ -25843,7 +25843,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 376,
                 'cases_70_79' => 292,
                 'cases_80' => 215,
-                'cases_active' => 39877,
+                'cases_active' => 39867,
                 'cases_adolescent' => 231,
                 'cases_adult' => 2080,
                 'cases_boost' => 339,
@@ -25865,11 +25865,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 101,
                 'cluster_religious' => 30,
                 'cluster_workplace' => 52,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2022-01-11',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            218 =>
+            218 => 
             array (
                 'cases_0_4' => 171,
                 'cases_12_17' => 168,
@@ -25879,7 +25879,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 399,
                 'cases_70_79' => 293,
                 'cases_80' => 241,
-                'cases_active' => 39857,
+                'cases_active' => 39846,
                 'cases_adolescent' => 168,
                 'cases_adult' => 2151,
                 'cases_boost' => 360,
@@ -25901,11 +25901,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 96,
                 'cluster_religious' => 31,
                 'cluster_workplace' => 49,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2022-01-12',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            219 =>
+            219 => 
             array (
                 'cases_0_4' => 209,
                 'cases_12_17' => 211,
@@ -25915,15 +25915,15 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 442,
                 'cases_70_79' => 335,
                 'cases_80' => 242,
-                'cases_active' => 40228,
+                'cases_active' => 40217,
                 'cases_adolescent' => 211,
                 'cases_adult' => 2482,
-                'cases_boost' => 386,
+                'cases_boost' => 388,
                 'cases_child' => 598,
                 'cases_cluster' => 150,
                 'cases_cumulative' => 2798917,
                 'cases_elderly' => 370,
-                'cases_fvax' => 2474,
+                'cases_fvax' => 2472,
                 'cases_import' => 321,
                 'cases_new' => 3684,
                 'cases_pvax' => 17,
@@ -25937,11 +25937,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 95,
                 'cluster_religious' => 33,
                 'cluster_workplace' => 38,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2022-01-13',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            220 =>
+            220 => 
             array (
                 'cases_0_4' => 186,
                 'cases_12_17' => 209,
@@ -25951,7 +25951,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 396,
                 'cases_70_79' => 289,
                 'cases_80' => 228,
-                'cases_active' => 40513,
+                'cases_active' => 40500,
                 'cases_adolescent' => 209,
                 'cases_adult' => 2301,
                 'cases_boost' => 353,
@@ -25959,10 +25959,10 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_cluster' => 158,
                 'cases_cumulative' => 2802263,
                 'cases_elderly' => 336,
-                'cases_fvax' => 2221,
+                'cases_fvax' => 2220,
                 'cases_import' => 267,
                 'cases_new' => 3346,
-                'cases_pvax' => 22,
+                'cases_pvax' => 23,
                 'cases_recovered' => 3052,
                 'cases_recovered_cumulative' => 2729943,
                 'cases_unvax' => 750,
@@ -25973,11 +25973,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 83,
                 'cluster_religious' => 25,
                 'cluster_workplace' => 99,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2022-01-14',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            221 =>
+            221 => 
             array (
                 'cases_0_4' => 164,
                 'cases_12_17' => 186,
@@ -25987,7 +25987,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 353,
                 'cases_70_79' => 306,
                 'cases_80' => 217,
-                'cases_active' => 40743,
+                'cases_active' => 40730,
                 'cases_adolescent' => 186,
                 'cases_adult' => 2112,
                 'cases_boost' => 355,
@@ -26009,11 +26009,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 74,
                 'cluster_religious' => 20,
                 'cluster_workplace' => 69,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2022-01-15',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            222 =>
+            222 => 
             array (
                 'cases_0_4' => 162,
                 'cases_12_17' => 256,
@@ -26023,15 +26023,15 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 316,
                 'cases_70_79' => 266,
                 'cases_80' => 165,
-                'cases_active' => 41156,
+                'cases_active' => 41142,
                 'cases_adolescent' => 256,
                 'cases_adult' => 2048,
-                'cases_boost' => 342,
+                'cases_boost' => 341,
                 'cases_child' => 429,
                 'cases_cluster' => 292,
                 'cases_cumulative' => 2808347,
                 'cases_elderly' => 260,
-                'cases_fvax' => 2020,
+                'cases_fvax' => 2021,
                 'cases_import' => 263,
                 'cases_new' => 3010,
                 'cases_pvax' => 14,
@@ -26045,11 +26045,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 71,
                 'cluster_religious' => 24,
                 'cluster_workplace' => 183,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2022-01-16',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            223 =>
+            223 => 
             array (
                 'cases_0_4' => 118,
                 'cases_12_17' => 273,
@@ -26059,7 +26059,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 265,
                 'cases_70_79' => 194,
                 'cases_80' => 155,
-                'cases_active' => 40581,
+                'cases_active' => 40564,
                 'cases_adolescent' => 273,
                 'cases_adult' => 1473,
                 'cases_boost' => 265,
@@ -26081,11 +26081,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 66,
                 'cluster_religious' => 18,
                 'cluster_workplace' => 151,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2022-01-17',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            224 =>
+            224 => 
             array (
                 'cases_0_4' => 159,
                 'cases_12_17' => 444,
@@ -26095,15 +26095,15 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 324,
                 'cases_70_79' => 289,
                 'cases_80' => 202,
-                'cases_active' => 40727,
+                'cases_active' => 40704,
                 'cases_adolescent' => 444,
                 'cases_adult' => 2033,
-                'cases_boost' => 394,
+                'cases_boost' => 396,
                 'cases_child' => 449,
                 'cases_cluster' => 388,
                 'cases_cumulative' => 2813934,
                 'cases_elderly' => 312,
-                'cases_fvax' => 2200,
+                'cases_fvax' => 2198,
                 'cases_import' => 274,
                 'cases_new' => 3245,
                 'cases_pvax' => 15,
@@ -26117,11 +26117,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 86,
                 'cluster_religious' => 24,
                 'cluster_workplace' => 297,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2022-01-18',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            225 =>
+            225 => 
             array (
                 'cases_0_4' => 167,
                 'cases_12_17' => 451,
@@ -26131,15 +26131,15 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 337,
                 'cases_70_79' => 297,
                 'cases_80' => 158,
-                'cases_active' => 41107,
+                'cases_active' => 41074,
                 'cases_adolescent' => 451,
                 'cases_adult' => 2095,
-                'cases_boost' => 379,
+                'cases_boost' => 380,
                 'cases_child' => 431,
                 'cases_cluster' => 457,
                 'cases_cumulative' => 2817163,
                 'cases_elderly' => 243,
-                'cases_fvax' => 2189,
+                'cases_fvax' => 2188,
                 'cases_import' => 239,
                 'cases_new' => 3229,
                 'cases_pvax' => 18,
@@ -26153,11 +26153,11 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 64,
                 'cluster_religious' => 21,
                 'cluster_workplace' => 415,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2022-01-19',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
-            226 =>
+            226 => 
             array (
                 'cases_0_4' => 178,
                 'cases_12_17' => 526,
@@ -26167,7 +26167,7 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cases_60_69' => 447,
                 'cases_70_79' => 355,
                 'cases_80' => 220,
-                'cases_active' => 41617,
+                'cases_active' => 41568,
                 'cases_adolescent' => 526,
                 'cases_adult' => 2388,
                 'cases_boost' => 589,
@@ -26189,12 +26189,3324 @@ class CovidCasesMalaysiaTableSeeder extends Seeder
                 'cluster_import' => 91,
                 'cluster_religious' => 32,
                 'cluster_workplace' => 378,
-                'created_at' => '2022-01-21 14:43:57',
+                'created_at' => '2022-04-23 15:29:30',
                 'date' => '2022-01-20',
-                'updated_at' => '2022-01-21 14:43:57',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            227 => 
+            array (
+                'cases_0_4' => 175,
+                'cases_12_17' => 667,
+                'cases_18_29' => 1017,
+                'cases_30_59' => 744,
+                'cases_5_11' => 296,
+                'cases_60_69' => 426,
+                'cases_70_79' => 338,
+                'cases_80' => 240,
+                'cases_active' => 42800,
+                'cases_adolescent' => 667,
+                'cases_adult' => 2525,
+                'cases_boost' => 621,
+                'cases_child' => 471,
+                'cases_cluster' => 672,
+                'cases_cumulative' => 2824973,
+                'cases_elderly' => 354,
+                'cases_fvax' => 2688,
+                'cases_import' => 489,
+                'cases_new' => 4046,
+                'cases_pvax' => 27,
+                'cases_recovered' => 2804,
+                'cases_recovered_cumulative' => 2750261,
+                'cases_unvax' => 710,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 0,
+                'cluster_education' => 5,
+                'cluster_highRisk' => 11,
+                'cluster_import' => 85,
+                'cluster_religious' => 29,
+                'cluster_workplace' => 594,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-01-21',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            228 => 
+            array (
+                'cases_0_4' => 181,
+                'cases_12_17' => 510,
+                'cases_18_29' => 1053,
+                'cases_30_59' => 800,
+                'cases_5_11' => 375,
+                'cases_60_69' => 461,
+                'cases_70_79' => 381,
+                'cases_80' => 242,
+                'cases_active' => 44050,
+                'cases_adolescent' => 510,
+                'cases_adult' => 2695,
+                'cases_boost' => 697,
+                'cases_child' => 556,
+                'cases_cluster' => 441,
+                'cases_cumulative' => 2829089,
+                'cases_elderly' => 335,
+                'cases_fvax' => 2635,
+                'cases_import' => 498,
+                'cases_new' => 4116,
+                'cases_pvax' => 27,
+                'cases_recovered' => 2858,
+                'cases_recovered_cumulative' => 2753119,
+                'cases_unvax' => 757,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 2,
+                'cluster_education' => 3,
+                'cluster_highRisk' => 3,
+                'cluster_import' => 78,
+                'cluster_religious' => 15,
+                'cluster_workplace' => 365,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-01-22',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            229 => 
+            array (
+                'cases_0_4' => 158,
+                'cases_12_17' => 468,
+                'cases_18_29' => 1002,
+                'cases_30_59' => 742,
+                'cases_5_11' => 382,
+                'cases_60_69' => 422,
+                'cases_70_79' => 334,
+                'cases_80' => 223,
+                'cases_active' => 45078,
+                'cases_adolescent' => 468,
+                'cases_adult' => 2500,
+                'cases_boost' => 696,
+                'cases_child' => 540,
+                'cases_cluster' => 532,
+                'cases_cumulative' => 2832945,
+                'cases_elderly' => 332,
+                'cases_fvax' => 2385,
+                'cases_import' => 492,
+                'cases_new' => 3856,
+                'cases_pvax' => 18,
+                'cases_recovered' => 2814,
+                'cases_recovered_cumulative' => 2755933,
+                'cases_unvax' => 757,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 1,
+                'cluster_education' => 4,
+                'cluster_highRisk' => 1,
+                'cluster_import' => 85,
+                'cluster_religious' => 24,
+                'cluster_workplace' => 477,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-01-23',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            230 => 
+            array (
+                'cases_0_4' => 144,
+                'cases_12_17' => 462,
+                'cases_18_29' => 766,
+                'cases_30_59' => 608,
+                'cases_5_11' => 259,
+                'cases_60_69' => 371,
+                'cases_70_79' => 267,
+                'cases_80' => 218,
+                'cases_active' => 45164,
+                'cases_adolescent' => 462,
+                'cases_adult' => 2012,
+                'cases_boost' => 579,
+                'cases_child' => 403,
+                'cases_cluster' => 371,
+                'cases_cumulative' => 2836159,
+                'cases_elderly' => 322,
+                'cases_fvax' => 2015,
+                'cases_import' => 406,
+                'cases_new' => 3214,
+                'cases_pvax' => 12,
+                'cases_recovered' => 3116,
+                'cases_recovered_cumulative' => 2759049,
+                'cases_unvax' => 608,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 0,
+                'cluster_education' => 0,
+                'cluster_highRisk' => 19,
+                'cluster_import' => 78,
+                'cluster_religious' => 26,
+                'cluster_workplace' => 330,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-01-24',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            231 => 
+            array (
+                'cases_0_4' => 183,
+                'cases_12_17' => 588,
+                'cases_18_29' => 1001,
+                'cases_30_59' => 766,
+                'cases_5_11' => 364,
+                'cases_60_69' => 486,
+                'cases_70_79' => 341,
+                'cases_80' => 229,
+                'cases_active' => 45666,
+                'cases_adolescent' => 588,
+                'cases_adult' => 2594,
+                'cases_boost' => 764,
+                'cases_child' => 547,
+                'cases_cluster' => 530,
+                'cases_cumulative' => 2840225,
+                'cases_elderly' => 321,
+                'cases_fvax' => 2504,
+                'cases_import' => 442,
+                'cases_new' => 4066,
+                'cases_pvax' => 20,
+                'cases_recovered' => 3559,
+                'cases_recovered_cumulative' => 2762608,
+                'cases_unvax' => 778,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 0,
+                'cluster_education' => 3,
+                'cluster_highRisk' => 4,
+                'cluster_import' => 75,
+                'cluster_religious' => 17,
+                'cluster_workplace' => 452,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-01-25',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            232 => 
+            array (
+                'cases_0_4' => 178,
+                'cases_12_17' => 634,
+                'cases_18_29' => 1237,
+                'cases_30_59' => 988,
+                'cases_5_11' => 446,
+                'cases_60_69' => 572,
+                'cases_70_79' => 363,
+                'cases_80' => 195,
+                'cases_active' => 46752,
+                'cases_adolescent' => 634,
+                'cases_adult' => 3160,
+                'cases_boost' => 847,
+                'cases_child' => 624,
+                'cases_cluster' => 632,
+                'cases_cumulative' => 2844969,
+                'cases_elderly' => 302,
+                'cases_fvax' => 2923,
+                'cases_import' => 429,
+                'cases_new' => 4744,
+                'cases_pvax' => 27,
+                'cases_recovered' => 3646,
+                'cases_recovered_cumulative' => 2766254,
+                'cases_unvax' => 947,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 5,
+                'cluster_education' => 5,
+                'cluster_highRisk' => 5,
+                'cluster_import' => 82,
+                'cluster_religious' => 25,
+                'cluster_workplace' => 459,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-01-26',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            233 => 
+            array (
+                'cases_0_4' => 223,
+                'cases_12_17' => 957,
+                'cases_18_29' => 1529,
+                'cases_30_59' => 959,
+                'cases_5_11' => 456,
+                'cases_60_69' => 578,
+                'cases_70_79' => 384,
+                'cases_80' => 217,
+                'cases_active' => 47771,
+                'cases_adolescent' => 957,
+                'cases_adult' => 3450,
+                'cases_boost' => 989,
+                'cases_child' => 679,
+                'cases_cluster' => 1014,
+                'cases_cumulative' => 2850408,
+                'cases_elderly' => 331,
+                'cases_fvax' => 3439,
+                'cases_import' => 332,
+                'cases_new' => 5439,
+                'cases_pvax' => 34,
+                'cases_recovered' => 4409,
+                'cases_recovered_cumulative' => 2770663,
+                'cases_unvax' => 977,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 6,
+                'cluster_education' => 7,
+                'cluster_highRisk' => 4,
+                'cluster_import' => 88,
+                'cluster_religious' => 26,
+                'cluster_workplace' => 920,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-01-27',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            234 => 
+            array (
+                'cases_0_4' => 240,
+                'cases_12_17' => 592,
+                'cases_18_29' => 1689,
+                'cases_30_59' => 1116,
+                'cases_5_11' => 570,
+                'cases_60_69' => 603,
+                'cases_70_79' => 350,
+                'cases_80' => 222,
+                'cases_active' => 49995,
+                'cases_adolescent' => 592,
+                'cases_adult' => 3758,
+                'cases_boost' => 1060,
+                'cases_child' => 810,
+                'cases_cluster' => 632,
+                'cases_cumulative' => 2855930,
+                'cases_elderly' => 346,
+                'cases_fvax' => 3268,
+                'cases_import' => 373,
+                'cases_new' => 5522,
+                'cases_pvax' => 22,
+                'cases_recovered' => 3285,
+                'cases_recovered_cumulative' => 2773948,
+                'cases_unvax' => 1172,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 5,
+                'cluster_education' => 3,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 92,
+                'cluster_religious' => 32,
+                'cluster_workplace' => 381,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-01-28',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            235 => 
+            array (
+                'cases_0_4' => 213,
+                'cases_12_17' => 591,
+                'cases_18_29' => 1485,
+                'cases_30_59' => 1054,
+                'cases_5_11' => 524,
+                'cases_60_69' => 545,
+                'cases_70_79' => 350,
+                'cases_80' => 233,
+                'cases_active' => 51358,
+                'cases_adolescent' => 591,
+                'cases_adult' => 3434,
+                'cases_boost' => 1075,
+                'cases_child' => 737,
+                'cases_cluster' => 474,
+                'cases_cumulative' => 2861069,
+                'cases_elderly' => 342,
+                'cases_fvax' => 2994,
+                'cases_import' => 226,
+                'cases_new' => 5139,
+                'cases_pvax' => 29,
+                'cases_recovered' => 3767,
+                'cases_recovered_cumulative' => 2777715,
+                'cases_unvax' => 1041,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 2,
+                'cluster_education' => 0,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 81,
+                'cluster_religious' => 28,
+                'cluster_workplace' => 342,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-01-29',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            236 => 
+            array (
+                'cases_0_4' => 226,
+                'cases_12_17' => 545,
+                'cases_18_29' => 1409,
+                'cases_30_59' => 1034,
+                'cases_5_11' => 478,
+                'cases_60_69' => 527,
+                'cases_70_79' => 336,
+                'cases_80' => 244,
+                'cases_active' => 53209,
+                'cases_adolescent' => 545,
+                'cases_adult' => 3306,
+                'cases_boost' => 1065,
+                'cases_child' => 704,
+                'cases_cluster' => 530,
+                'cases_cumulative' => 2865984,
+                'cases_elderly' => 344,
+                'cases_fvax' => 2799,
+                'cases_import' => 188,
+                'cases_new' => 4915,
+                'cases_pvax' => 31,
+                'cases_recovered' => 3056,
+                'cases_recovered_cumulative' => 2780771,
+                'cases_unvax' => 1020,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 14,
+                'cluster_education' => 7,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 76,
+                'cluster_religious' => 24,
+                'cluster_workplace' => 382,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-01-30',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            237 => 
+            array (
+                'cases_0_4' => 213,
+                'cases_12_17' => 539,
+                'cases_18_29' => 1296,
+                'cases_30_59' => 957,
+                'cases_5_11' => 536,
+                'cases_60_69' => 543,
+                'cases_70_79' => 338,
+                'cases_80' => 231,
+                'cases_active' => 54743,
+                'cases_adolescent' => 539,
+                'cases_adult' => 3134,
+                'cases_boost' => 1113,
+                'cases_child' => 749,
+                'cases_cluster' => 483,
+                'cases_cumulative' => 2870758,
+                'cases_elderly' => 327,
+                'cases_fvax' => 2608,
+                'cases_import' => 152,
+                'cases_new' => 4774,
+                'cases_pvax' => 27,
+                'cases_recovered' => 3232,
+                'cases_recovered_cumulative' => 2784003,
+                'cases_unvax' => 1026,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 8,
+                'cluster_education' => 17,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 80,
+                'cluster_religious' => 16,
+                'cluster_workplace' => 383,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-01-31',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            238 => 
+            array (
+                'cases_0_4' => 277,
+                'cases_12_17' => 530,
+                'cases_18_29' => 1632,
+                'cases_30_59' => 1183,
+                'cases_5_11' => 547,
+                'cases_60_69' => 600,
+                'cases_70_79' => 396,
+                'cases_80' => 244,
+                'cases_active' => 57110,
+                'cases_adolescent' => 530,
+                'cases_adult' => 3811,
+                'cases_boost' => 1293,
+                'cases_child' => 824,
+                'cases_cluster' => 363,
+                'cases_cumulative' => 2876324,
+                'cases_elderly' => 384,
+                'cases_fvax' => 3095,
+                'cases_import' => 227,
+                'cases_new' => 5566,
+                'cases_pvax' => 19,
+                'cases_recovered' => 3187,
+                'cases_recovered_cumulative' => 2787190,
+                'cases_unvax' => 1159,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 4,
+                'cluster_education' => 6,
+                'cluster_highRisk' => 2,
+                'cluster_import' => 105,
+                'cluster_religious' => 35,
+                'cluster_workplace' => 285,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-02-01',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            239 => 
+            array (
+                'cases_0_4' => 270,
+                'cases_12_17' => 497,
+                'cases_18_29' => 1717,
+                'cases_30_59' => 1263,
+                'cases_5_11' => 531,
+                'cases_60_69' => 660,
+                'cases_70_79' => 414,
+                'cases_80' => 245,
+                'cases_active' => 59638,
+                'cases_adolescent' => 497,
+                'cases_adult' => 4054,
+                'cases_boost' => 1357,
+                'cases_child' => 801,
+                'cases_cluster' => 547,
+                'cases_cumulative' => 2882060,
+                'cases_elderly' => 368,
+                'cases_fvax' => 3186,
+                'cases_import' => 183,
+                'cases_new' => 5736,
+                'cases_pvax' => 24,
+                'cases_recovered' => 3196,
+                'cases_recovered_cumulative' => 2790386,
+                'cases_unvax' => 1169,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 12,
+                'cluster_education' => 8,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 89,
+                'cluster_religious' => 34,
+                'cluster_workplace' => 355,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-02-02',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            240 => 
+            array (
+                'cases_0_4' => 295,
+                'cases_12_17' => 488,
+                'cases_18_29' => 1614,
+                'cases_30_59' => 1310,
+                'cases_5_11' => 552,
+                'cases_60_69' => 641,
+                'cases_70_79' => 416,
+                'cases_80' => 251,
+                'cases_active' => 61383,
+                'cases_adolescent' => 488,
+                'cases_adult' => 3981,
+                'cases_boost' => 1509,
+                'cases_child' => 847,
+                'cases_cluster' => 374,
+                'cases_cumulative' => 2887780,
+                'cases_elderly' => 385,
+                'cases_fvax' => 3055,
+                'cases_import' => 130,
+                'cases_new' => 5720,
+                'cases_pvax' => 35,
+                'cases_recovered' => 3968,
+                'cases_recovered_cumulative' => 2794354,
+                'cases_unvax' => 1121,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 14,
+                'cluster_education' => 4,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 102,
+                'cluster_religious' => 32,
+                'cluster_workplace' => 279,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-02-03',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            241 => 
+            array (
+                'cases_0_4' => 325,
+                'cases_12_17' => 581,
+                'cases_18_29' => 2106,
+                'cases_30_59' => 1594,
+                'cases_5_11' => 648,
+                'cases_60_69' => 914,
+                'cases_70_79' => 491,
+                'cases_80' => 335,
+                'cases_active' => 63350,
+                'cases_adolescent' => 581,
+                'cases_adult' => 5105,
+                'cases_boost' => 2042,
+                'cases_child' => 973,
+                'cases_cluster' => 493,
+                'cases_cumulative' => 2895014,
+                'cases_elderly' => 506,
+                'cases_fvax' => 3769,
+                'cases_import' => 234,
+                'cases_new' => 7234,
+                'cases_pvax' => 35,
+                'cases_recovered' => 5254,
+                'cases_recovered_cumulative' => 2799608,
+                'cases_unvax' => 1388,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 5,
+                'cluster_education' => 8,
+                'cluster_highRisk' => 2,
+                'cluster_import' => 129,
+                'cluster_religious' => 42,
+                'cluster_workplace' => 292,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-02-04',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            242 => 
+            array (
+                'cases_0_4' => 424,
+                'cases_12_17' => 712,
+                'cases_18_29' => 2632,
+                'cases_30_59' => 2056,
+                'cases_5_11' => 882,
+                'cases_60_69' => 1058,
+                'cases_70_79' => 647,
+                'cases_80' => 421,
+                'cases_active' => 65910,
+                'cases_adolescent' => 712,
+                'cases_adult' => 6393,
+                'cases_boost' => 2819,
+                'cases_child' => 1306,
+                'cases_cluster' => 358,
+                'cases_cumulative' => 2904131,
+                'cases_elderly' => 644,
+                'cases_fvax' => 4510,
+                'cases_import' => 134,
+                'cases_new' => 9117,
+                'cases_pvax' => 34,
+                'cases_recovered' => 6546,
+                'cases_recovered_cumulative' => 2806154,
+                'cases_unvax' => 1754,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 10,
+                'cluster_education' => 38,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 178,
+                'cluster_religious' => 45,
+                'cluster_workplace' => 235,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-02-05',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            243 => 
+            array (
+                'cases_0_4' => 533,
+                'cases_12_17' => 858,
+                'cases_18_29' => 2757,
+                'cases_30_59' => 2276,
+                'cases_5_11' => 966,
+                'cases_60_69' => 1170,
+                'cases_70_79' => 735,
+                'cases_80' => 502,
+                'cases_active' => 69520,
+                'cases_adolescent' => 858,
+                'cases_adult' => 6938,
+                'cases_boost' => 3039,
+                'cases_child' => 1499,
+                'cases_cluster' => 474,
+                'cases_cumulative' => 2914220,
+                'cases_elderly' => 778,
+                'cases_fvax' => 4994,
+                'cases_import' => 143,
+                'cases_new' => 10089,
+                'cases_pvax' => 31,
+                'cases_recovered' => 6460,
+                'cases_recovered_cumulative' => 2812614,
+                'cases_unvax' => 2025,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 22,
+                'cluster_education' => 12,
+                'cluster_highRisk' => 5,
+                'cluster_import' => 199,
+                'cluster_religious' => 77,
+                'cluster_workplace' => 303,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-02-06',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            244 => 
+            array (
+                'cases_0_4' => 573,
+                'cases_12_17' => 937,
+                'cases_18_29' => 3091,
+                'cases_30_59' => 2348,
+                'cases_5_11' => 1076,
+                'cases_60_69' => 1287,
+                'cases_70_79' => 865,
+                'cases_80' => 545,
+                'cases_active' => 74503,
+                'cases_adolescent' => 937,
+                'cases_adult' => 7591,
+                'cases_boost' => 3339,
+                'cases_child' => 1649,
+                'cases_cluster' => 276,
+                'cases_cumulative' => 2925254,
+                'cases_elderly' => 852,
+                'cases_fvax' => 5510,
+                'cases_import' => 77,
+                'cases_new' => 11034,
+                'cases_pvax' => 43,
+                'cases_recovered' => 6036,
+                'cases_recovered_cumulative' => 2818650,
+                'cases_unvax' => 2142,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 4,
+                'cluster_education' => 15,
+                'cluster_highRisk' => 1,
+                'cluster_import' => 222,
+                'cluster_religious' => 85,
+                'cluster_workplace' => 161,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-02-07',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            245 => 
+            array (
+                'cases_0_4' => 672,
+                'cases_12_17' => 1174,
+                'cases_18_29' => 3930,
+                'cases_30_59' => 2864,
+                'cases_5_11' => 1296,
+                'cases_60_69' => 1691,
+                'cases_70_79' => 1093,
+                'cases_80' => 706,
+                'cases_active' => 83006,
+                'cases_adolescent' => 1174,
+                'cases_adult' => 9578,
+                'cases_boost' => 4497,
+                'cases_child' => 1968,
+                'cases_cluster' => 347,
+                'cases_cumulative' => 2939198,
+                'cases_elderly' => 1117,
+                'cases_fvax' => 6787,
+                'cases_import' => 153,
+                'cases_new' => 13944,
+                'cases_pvax' => 50,
+                'cases_recovered' => 5421,
+                'cases_recovered_cumulative' => 2824071,
+                'cases_unvax' => 2610,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 18,
+                'cluster_education' => 1,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 308,
+                'cluster_religious' => 103,
+                'cluster_workplace' => 235,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-02-08',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            246 => 
+            array (
+                'cases_0_4' => 829,
+                'cases_12_17' => 1581,
+                'cases_18_29' => 4835,
+                'cases_30_59' => 3571,
+                'cases_5_11' => 1544,
+                'cases_60_69' => 2068,
+                'cases_70_79' => 1320,
+                'cases_80' => 849,
+                'cases_active' => 94444,
+                'cases_adolescent' => 1581,
+                'cases_adult' => 11794,
+                'cases_boost' => 5296,
+                'cases_child' => 2373,
+                'cases_cluster' => 726,
+                'cases_cumulative' => 2956332,
+                'cases_elderly' => 1329,
+                'cases_fvax' => 8546,
+                'cases_import' => 130,
+                'cases_new' => 17134,
+                'cases_pvax' => 65,
+                'cases_recovered' => 5681,
+                'cases_recovered_cumulative' => 2829752,
+                'cases_unvax' => 3227,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 35,
+                'cluster_education' => 36,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 360,
+                'cluster_religious' => 120,
+                'cluster_workplace' => 524,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-02-09',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            247 => 
+            array (
+                'cases_0_4' => 907,
+                'cases_12_17' => 1541,
+                'cases_18_29' => 5412,
+                'cases_30_59' => 4107,
+                'cases_5_11' => 1780,
+                'cases_60_69' => 2290,
+                'cases_70_79' => 1583,
+                'cases_80' => 925,
+                'cases_active' => 107798,
+                'cases_adolescent' => 1541,
+                'cases_adult' => 13392,
+                'cases_boost' => 6153,
+                'cases_child' => 2687,
+                'cases_cluster' => 413,
+                'cases_cumulative' => 2975422,
+                'cases_elderly' => 1417,
+                'cases_fvax' => 9216,
+                'cases_import' => 134,
+                'cases_new' => 19090,
+                'cases_pvax' => 74,
+                'cases_recovered' => 5712,
+                'cases_recovered_cumulative' => 2835464,
+                'cases_unvax' => 3647,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 42,
+                'cluster_education' => 0,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 371,
+                'cluster_religious' => 121,
+                'cluster_workplace' => 190,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-02-10',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            248 => 
+            array (
+                'cases_0_4' => 978,
+                'cases_12_17' => 1836,
+                'cases_18_29' => 6192,
+                'cases_30_59' => 4291,
+                'cases_5_11' => 1964,
+                'cases_60_69' => 2548,
+                'cases_70_79' => 1655,
+                'cases_80' => 949,
+                'cases_active' => 122903,
+                'cases_adolescent' => 1836,
+                'cases_adult' => 14686,
+                'cases_boost' => 6845,
+                'cases_child' => 2942,
+                'cases_cluster' => 740,
+                'cases_cumulative' => 2996361,
+                'cases_elderly' => 1455,
+                'cases_fvax' => 10121,
+                'cases_import' => 121,
+                'cases_new' => 20939,
+                'cases_pvax' => 105,
+                'cases_recovered' => 5807,
+                'cases_recovered_cumulative' => 2841271,
+                'cases_unvax' => 3868,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 22,
+                'cluster_education' => 10,
+                'cluster_highRisk' => 6,
+                'cluster_import' => 386,
+                'cluster_religious' => 120,
+                'cluster_workplace' => 449,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-02-11',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            249 => 
+            array (
+                'cases_0_4' => 1076,
+                'cases_12_17' => 1797,
+                'cases_18_29' => 6652,
+                'cases_30_59' => 5108,
+                'cases_5_11' => 1951,
+                'cases_60_69' => 2765,
+                'cases_70_79' => 1796,
+                'cases_80' => 1102,
+                'cases_active' => 140234,
+                'cases_adolescent' => 1797,
+                'cases_adult' => 16321,
+                'cases_boost' => 7794,
+                'cases_child' => 3027,
+                'cases_cluster' => 658,
+                'cases_cumulative' => 3019163,
+                'cases_elderly' => 1640,
+                'cases_fvax' => 10833,
+                'cases_import' => 94,
+                'cases_new' => 22802,
+                'cases_pvax' => 86,
+                'cases_recovered' => 5442,
+                'cases_recovered_cumulative' => 2846713,
+                'cases_unvax' => 4089,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 175,
+                'cluster_education' => 4,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 400,
+                'cluster_religious' => 138,
+                'cluster_workplace' => 279,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-02-12',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            250 => 
+            array (
+                'cases_0_4' => 980,
+                'cases_12_17' => 1608,
+                'cases_18_29' => 6150,
+                'cases_30_59' => 4550,
+                'cases_5_11' => 1822,
+                'cases_60_69' => 2652,
+                'cases_70_79' => 1729,
+                'cases_80' => 1018,
+                'cases_active' => 155546,
+                'cases_adolescent' => 1608,
+                'cases_adult' => 15081,
+                'cases_boost' => 7374,
+                'cases_child' => 2802,
+                'cases_cluster' => 407,
+                'cases_cumulative' => 3040235,
+                'cases_elderly' => 1526,
+                'cases_fvax' => 9774,
+                'cases_import' => 65,
+                'cases_new' => 21072,
+                'cases_pvax' => 92,
+                'cases_recovered' => 5724,
+                'cases_recovered_cumulative' => 2852437,
+                'cases_unvax' => 3832,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 24,
+                'cluster_education' => 1,
+                'cluster_highRisk' => 1,
+                'cluster_import' => 391,
+                'cluster_religious' => 117,
+                'cluster_workplace' => 338,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-02-13',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            251 => 
+            array (
+                'cases_0_4' => 990,
+                'cases_12_17' => 1594,
+                'cases_18_29' => 6286,
+                'cases_30_59' => 4647,
+                'cases_5_11' => 1769,
+                'cases_60_69' => 2723,
+                'cases_70_79' => 1717,
+                'cases_80' => 1030,
+                'cases_active' => 168307,
+                'cases_adolescent' => 1594,
+                'cases_adult' => 15373,
+                'cases_boost' => 7018,
+                'cases_child' => 2759,
+                'cases_cluster' => 610,
+                'cases_cumulative' => 3061550,
+                'cases_elderly' => 1557,
+                'cases_fvax' => 10398,
+                'cases_import' => 81,
+                'cases_new' => 21315,
+                'cases_pvax' => 95,
+                'cases_recovered' => 8517,
+                'cases_recovered_cumulative' => 2860954,
+                'cases_unvax' => 3804,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 10,
+                'cluster_education' => 0,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 382,
+                'cluster_religious' => 145,
+                'cluster_workplace' => 426,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-02-14',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            252 => 
+            array (
+                'cases_0_4' => 1048,
+                'cases_12_17' => 1611,
+                'cases_18_29' => 6095,
+                'cases_30_59' => 4802,
+                'cases_5_11' => 1972,
+                'cases_60_69' => 2930,
+                'cases_70_79' => 1846,
+                'cases_80' => 1126,
+                'cases_active' => 182823,
+                'cases_adolescent' => 1611,
+                'cases_adult' => 15673,
+                'cases_boost' => 7633,
+                'cases_child' => 3020,
+                'cases_cluster' => 448,
+                'cases_cumulative' => 3083683,
+                'cases_elderly' => 1731,
+                'cases_fvax' => 10391,
+                'cases_import' => 80,
+                'cases_new' => 22133,
+                'cases_pvax' => 101,
+                'cases_recovered' => 7584,
+                'cases_recovered_cumulative' => 2868538,
+                'cases_unvax' => 4008,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 16,
+                'cluster_education' => 0,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 452,
+                'cluster_religious' => 153,
+                'cluster_workplace' => 372,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-02-15',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            253 => 
+            array (
+                'cases_0_4' => 1266,
+                'cases_12_17' => 2177,
+                'cases_18_29' => 7874,
+                'cases_30_59' => 6016,
+                'cases_5_11' => 2546,
+                'cases_60_69' => 3622,
+                'cases_70_79' => 2276,
+                'cases_80' => 1273,
+                'cases_active' => 202699,
+                'cases_adolescent' => 2177,
+                'cases_adult' => 19788,
+                'cases_boost' => 9623,
+                'cases_child' => 3812,
+                'cases_cluster' => 1019,
+                'cases_cumulative' => 3111514,
+                'cases_elderly' => 1984,
+                'cases_fvax' => 12944,
+                'cases_import' => 118,
+                'cases_new' => 27831,
+                'cases_pvax' => 159,
+                'cases_recovered' => 7912,
+                'cases_recovered_cumulative' => 2876450,
+                'cases_unvax' => 5105,
+                'cluster_community' => 7,
+                'cluster_detentionCentre' => 8,
+                'cluster_education' => 0,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 542,
+                'cluster_religious' => 169,
+                'cluster_workplace' => 724,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-02-16',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            254 => 
+            array (
+                'cases_0_4' => 1253,
+                'cases_12_17' => 2019,
+                'cases_18_29' => 7430,
+                'cases_30_59' => 5825,
+                'cases_5_11' => 2483,
+                'cases_60_69' => 3462,
+                'cases_70_79' => 2287,
+                'cases_80' => 1207,
+                'cases_active' => 217613,
+                'cases_adolescent' => 2019,
+                'cases_adult' => 19004,
+                'cases_boost' => 9221,
+                'cases_child' => 3736,
+                'cases_cluster' => 757,
+                'cases_cumulative' => 3138215,
+                'cases_elderly' => 1867,
+                'cases_fvax' => 12309,
+                'cases_import' => 132,
+                'cases_new' => 26701,
+                'cases_pvax' => 167,
+                'cases_recovered' => 11744,
+                'cases_recovered_cumulative' => 2888194,
+                'cases_unvax' => 5004,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 24,
+                'cluster_education' => 8,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 484,
+                'cluster_religious' => 176,
+                'cluster_workplace' => 572,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-02-17',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            255 => 
+            array (
+                'cases_0_4' => 1328,
+                'cases_12_17' => 2143,
+                'cases_18_29' => 7666,
+                'cases_30_59' => 6059,
+                'cases_5_11' => 2487,
+                'cases_60_69' => 3653,
+                'cases_70_79' => 2348,
+                'cases_80' => 1370,
+                'cases_active' => 232878,
+                'cases_adolescent' => 2143,
+                'cases_adult' => 19726,
+                'cases_boost' => 9969,
+                'cases_child' => 3815,
+                'cases_cluster' => 726,
+                'cases_cumulative' => 3166023,
+                'cases_elderly' => 2069,
+                'cases_fvax' => 12597,
+                'cases_import' => 119,
+                'cases_new' => 27808,
+                'cases_pvax' => 226,
+                'cases_recovered' => 12488,
+                'cases_recovered_cumulative' => 2900682,
+                'cases_unvax' => 5016,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 28,
+                'cluster_education' => 0,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 542,
+                'cluster_religious' => 157,
+                'cluster_workplace' => 625,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-02-18',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            256 => 
+            array (
+                'cases_0_4' => 1407,
+                'cases_12_17' => 2068,
+                'cases_18_29' => 8050,
+                'cases_30_59' => 6387,
+                'cases_5_11' => 2505,
+                'cases_60_69' => 3771,
+                'cases_70_79' => 2373,
+                'cases_80' => 1412,
+                'cases_active' => 243144,
+                'cases_adolescent' => 2068,
+                'cases_adult' => 20581,
+                'cases_boost' => 10705,
+                'cases_child' => 3912,
+                'cases_cluster' => 536,
+                'cases_cumulative' => 3194848,
+                'cases_elderly' => 2170,
+                'cases_fvax' => 12803,
+                'cases_import' => 91,
+                'cases_new' => 28825,
+                'cases_pvax' => 208,
+                'cases_recovered' => 18514,
+                'cases_recovered_cumulative' => 2919196,
+                'cases_unvax' => 5109,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 12,
+                'cluster_education' => 0,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 567,
+                'cluster_religious' => 191,
+                'cluster_workplace' => 433,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-02-19',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            257 => 
+            array (
+                'cases_0_4' => 1296,
+                'cases_12_17' => 1828,
+                'cases_18_29' => 7593,
+                'cases_30_59' => 5998,
+                'cases_5_11' => 2341,
+                'cases_60_69' => 3497,
+                'cases_70_79' => 2243,
+                'cases_80' => 1223,
+                'cases_active' => 251469,
+                'cases_adolescent' => 1828,
+                'cases_adult' => 19331,
+                'cases_boost' => 10114,
+                'cases_child' => 3637,
+                'cases_cluster' => 595,
+                'cases_cumulative' => 3221680,
+                'cases_elderly' => 1972,
+                'cases_fvax' => 11779,
+                'cases_import' => 68,
+                'cases_new' => 26832,
+                'cases_pvax' => 229,
+                'cases_recovered' => 18459,
+                'cases_recovered_cumulative' => 2937655,
+                'cases_unvax' => 4710,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 26,
+                'cluster_education' => 0,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 554,
+                'cluster_religious' => 195,
+                'cluster_workplace' => 449,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-02-20',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            258 => 
+            array (
+                'cases_0_4' => 1210,
+                'cases_12_17' => 1676,
+                'cases_18_29' => 6798,
+                'cases_30_59' => 5647,
+                'cases_5_11' => 2165,
+                'cases_60_69' => 3389,
+                'cases_70_79' => 2207,
+                'cases_80' => 1242,
+                'cases_active' => 258775,
+                'cases_adolescent' => 1676,
+                'cases_adult' => 18041,
+                'cases_boost' => 9549,
+                'cases_child' => 3375,
+                'cases_cluster' => 275,
+                'cases_cumulative' => 3246779,
+                'cases_elderly' => 1964,
+                'cases_fvax' => 10944,
+                'cases_import' => 85,
+                'cases_new' => 25099,
+                'cases_pvax' => 202,
+                'cases_recovered' => 17749,
+                'cases_recovered_cumulative' => 2955404,
+                'cases_unvax' => 4404,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 3,
+                'cluster_education' => 0,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 535,
+                'cluster_religious' => 187,
+                'cluster_workplace' => 233,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-02-21',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            259 => 
+            array (
+                'cases_0_4' => 1350,
+                'cases_12_17' => 1765,
+                'cases_18_29' => 7402,
+                'cases_30_59' => 6073,
+                'cases_5_11' => 2433,
+                'cases_60_69' => 3634,
+                'cases_70_79' => 2315,
+                'cases_80' => 1373,
+                'cases_active' => 266861,
+                'cases_adolescent' => 1765,
+                'cases_adult' => 19424,
+                'cases_boost' => 10323,
+                'cases_child' => 3783,
+                'cases_cluster' => 428,
+                'cases_cumulative' => 3273958,
+                'cases_elderly' => 2125,
+                'cases_fvax' => 11749,
+                'cases_import' => 120,
+                'cases_new' => 27179,
+                'cases_pvax' => 265,
+                'cases_recovered' => 19037,
+                'cases_recovered_cumulative' => 2974441,
+                'cases_unvax' => 4842,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 13,
+                'cluster_education' => 0,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 568,
+                'cluster_religious' => 184,
+                'cluster_workplace' => 337,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-02-22',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            260 => 
+            array (
+                'cases_0_4' => 1595,
+                'cases_12_17' => 2067,
+                'cases_18_29' => 8591,
+                'cases_30_59' => 6838,
+                'cases_5_11' => 2794,
+                'cases_60_69' => 3926,
+                'cases_70_79' => 2589,
+                'cases_80' => 1549,
+                'cases_active' => 277606,
+                'cases_adolescent' => 2067,
+                'cases_adult' => 21944,
+                'cases_boost' => 12258,
+                'cases_child' => 4389,
+                'cases_cluster' => 629,
+                'cases_cumulative' => 3305157,
+                'cases_elderly' => 2554,
+                'cases_fvax' => 12925,
+                'cases_import' => 119,
+                'cases_new' => 31199,
+                'cases_pvax' => 369,
+                'cases_recovered' => 20399,
+                'cases_recovered_cumulative' => 2994840,
+                'cases_unvax' => 5647,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 13,
+                'cluster_education' => 0,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 739,
+                'cluster_religious' => 266,
+                'cluster_workplace' => 504,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-02-23',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            261 => 
+            array (
+                'cases_0_4' => 1557,
+                'cases_12_17' => 1911,
+                'cases_18_29' => 8445,
+                'cases_30_59' => 7674,
+                'cases_5_11' => 2456,
+                'cases_60_69' => 4581,
+                'cases_70_79' => 2838,
+                'cases_80' => 1692,
+                'cases_active' => 286284,
+                'cases_adolescent' => 1911,
+                'cases_adult' => 23538,
+                'cases_boost' => 13498,
+                'cases_child' => 4013,
+                'cases_cluster' => 543,
+                'cases_cumulative' => 3337227,
+                'cases_elderly' => 2553,
+                'cases_fvax' => 13058,
+                'cases_import' => 209,
+                'cases_new' => 32070,
+                'cases_pvax' => 393,
+                'cases_recovered' => 23332,
+                'cases_recovered_cumulative' => 3018172,
+                'cases_unvax' => 5121,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 96,
+                'cluster_education' => 21,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 620,
+                'cluster_religious' => 241,
+                'cluster_workplace' => 317,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-02-24',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            262 => 
+            array (
+                'cases_0_4' => 1552,
+                'cases_12_17' => 1629,
+                'cases_18_29' => 8667,
+                'cases_30_59' => 6968,
+                'cases_5_11' => 2382,
+                'cases_60_69' => 4242,
+                'cases_70_79' => 2663,
+                'cases_80' => 1634,
+                'cases_active' => 294198,
+                'cases_adolescent' => 1629,
+                'cases_adult' => 22540,
+                'cases_boost' => 12781,
+                'cases_child' => 3934,
+                'cases_cluster' => 525,
+                'cases_cumulative' => 3367871,
+                'cases_elderly' => 2491,
+                'cases_fvax' => 12265,
+                'cases_import' => 257,
+                'cases_new' => 30644,
+                'cases_pvax' => 372,
+                'cases_recovered' => 22678,
+                'cases_recovered_cumulative' => 3040850,
+                'cases_unvax' => 5226,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 45,
+                'cluster_education' => 0,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 652,
+                'cluster_religious' => 205,
+                'cluster_workplace' => 141,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-02-25',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            263 => 
+            array (
+                'cases_0_4' => 1455,
+                'cases_12_17' => 1462,
+                'cases_18_29' => 7455,
+                'cases_30_59' => 6325,
+                'cases_5_11' => 2093,
+                'cases_60_69' => 3808,
+                'cases_70_79' => 2326,
+                'cases_80' => 1428,
+                'cases_active' => 298723,
+                'cases_adolescent' => 1462,
+                'cases_adult' => 19914,
+                'cases_boost' => 11785,
+                'cases_child' => 3548,
+                'cases_cluster' => 372,
+                'cases_cumulative' => 3395170,
+                'cases_elderly' => 2296,
+                'cases_fvax' => 10485,
+                'cases_import' => 256,
+                'cases_new' => 27299,
+                'cases_pvax' => 415,
+                'cases_recovered' => 22710,
+                'cases_recovered_cumulative' => 3063560,
+                'cases_unvax' => 4614,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 40,
+                'cluster_education' => 20,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 646,
+                'cluster_religious' => 222,
+                'cluster_workplace' => 246,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-02-26',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            264 => 
+            array (
+                'cases_0_4' => 1345,
+                'cases_12_17' => 1250,
+                'cases_18_29' => 6683,
+                'cases_30_59' => 5575,
+                'cases_5_11' => 1887,
+                'cases_60_69' => 3296,
+                'cases_70_79' => 2162,
+                'cases_80' => 1363,
+                'cases_active' => 300744,
+                'cases_adolescent' => 1250,
+                'cases_adult' => 17716,
+                'cases_boost' => 10744,
+                'cases_child' => 3232,
+                'cases_cluster' => 270,
+                'cases_cumulative' => 3419636,
+                'cases_elderly' => 2157,
+                'cases_fvax' => 9216,
+                'cases_import' => 246,
+                'cases_new' => 24466,
+                'cases_pvax' => 322,
+                'cases_recovered' => 22380,
+                'cases_recovered_cumulative' => 3085940,
+                'cases_unvax' => 4184,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 4,
+                'cluster_education' => 0,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 585,
+                'cluster_religious' => 209,
+                'cluster_workplace' => 81,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-02-27',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            265 => 
+            array (
+                'cases_0_4' => 1230,
+                'cases_12_17' => 1188,
+                'cases_18_29' => 6042,
+                'cases_30_59' => 5454,
+                'cases_5_11' => 1667,
+                'cases_60_69' => 3191,
+                'cases_70_79' => 2061,
+                'cases_80' => 1321,
+                'cases_active' => 293158,
+                'cases_adolescent' => 1188,
+                'cases_adult' => 16748,
+                'cases_boost' => 10464,
+                'cases_child' => 2897,
+                'cases_cluster' => 154,
+                'cases_cumulative' => 3442736,
+                'cases_elderly' => 2178,
+                'cases_fvax' => 8519,
+                'cases_import' => 298,
+                'cases_new' => 23100,
+                'cases_pvax' => 417,
+                'cases_recovered' => 30624,
+                'cases_recovered_cumulative' => 3116564,
+                'cases_unvax' => 3700,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 5,
+                'cluster_education' => 11,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 636,
+                'cluster_religious' => 221,
+                'cluster_workplace' => 66,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-02-28',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            266 => 
+            array (
+                'cases_0_4' => 1350,
+                'cases_12_17' => 1291,
+                'cases_18_29' => 7065,
+                'cases_30_59' => 5942,
+                'cases_5_11' => 1855,
+                'cases_60_69' => 3460,
+                'cases_70_79' => 2318,
+                'cases_80' => 1602,
+                'cases_active' => 293386,
+                'cases_adolescent' => 1291,
+                'cases_adult' => 18785,
+                'cases_boost' => 11989,
+                'cases_child' => 3205,
+                'cases_cluster' => 484,
+                'cases_cumulative' => 3468590,
+                'cases_elderly' => 2480,
+                'cases_fvax' => 9406,
+                'cases_import' => 448,
+                'cases_new' => 25854,
+                'cases_pvax' => 380,
+                'cases_recovered' => 25548,
+                'cases_recovered_cumulative' => 3142112,
+                'cases_unvax' => 4079,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 52,
+                'cluster_education' => 0,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 645,
+                'cluster_religious' => 233,
+                'cluster_workplace' => 191,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-03-01',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            267 => 
+            array (
+                'cases_0_4' => 1619,
+                'cases_12_17' => 1300,
+                'cases_18_29' => 7385,
+                'cases_30_59' => 6267,
+                'cases_5_11' => 1911,
+                'cases_60_69' => 3767,
+                'cases_70_79' => 2460,
+                'cases_80' => 1690,
+                'cases_active' => 293251,
+                'cases_adolescent' => 1300,
+                'cases_adult' => 19879,
+                'cases_boost' => 12895,
+                'cases_child' => 3530,
+                'cases_cluster' => 362,
+                'cases_cumulative' => 3496090,
+                'cases_elderly' => 2688,
+                'cases_fvax' => 9700,
+                'cases_import' => 428,
+                'cases_new' => 27500,
+                'cases_pvax' => 481,
+                'cases_recovered' => 27557,
+                'cases_recovered_cumulative' => 3169669,
+                'cases_unvax' => 4424,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 54,
+                'cluster_education' => 0,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 748,
+                'cluster_religious' => 250,
+                'cluster_workplace' => 106,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-03-02',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            268 => 
+            array (
+                'cases_0_4' => 1833,
+                'cases_12_17' => 1586,
+                'cases_18_29' => 9003,
+                'cases_30_59' => 7569,
+                'cases_5_11' => 2306,
+                'cases_60_69' => 4253,
+                'cases_70_79' => 2837,
+                'cases_80' => 1884,
+                'cases_active' => 298010,
+                'cases_adolescent' => 1586,
+                'cases_adult' => 23662,
+                'cases_boost' => 15398,
+                'cases_child' => 4139,
+                'cases_cluster' => 472,
+                'cases_cumulative' => 3528557,
+                'cases_elderly' => 2945,
+                'cases_fvax' => 11490,
+                'cases_import' => 413,
+                'cases_new' => 32467,
+                'cases_pvax' => 587,
+                'cases_recovered' => 27629,
+                'cases_recovered_cumulative' => 3197298,
+                'cases_unvax' => 4992,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 40,
+                'cluster_education' => 8,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 775,
+                'cluster_religious' => 286,
+                'cluster_workplace' => 256,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-03-03',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            269 => 
+            array (
+                'cases_0_4' => 1880,
+                'cases_12_17' => 1517,
+                'cases_18_29' => 8977,
+                'cases_30_59' => 7911,
+                'cases_5_11' => 2285,
+                'cases_60_69' => 4498,
+                'cases_70_79' => 3010,
+                'cases_80' => 1865,
+                'cases_active' => 304790,
+                'cases_adolescent' => 1517,
+                'cases_adult' => 24396,
+                'cases_boost' => 16419,
+                'cases_child' => 4165,
+                'cases_cluster' => 472,
+                'cases_cumulative' => 3561766,
+                'cases_elderly' => 3044,
+                'cases_fvax' => 10984,
+                'cases_import' => 441,
+                'cases_new' => 33209,
+                'cases_pvax' => 619,
+                'cases_recovered' => 26352,
+                'cases_recovered_cumulative' => 3223650,
+                'cases_unvax' => 5187,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 27,
+                'cluster_education' => 6,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 863,
+                'cluster_religious' => 316,
+                'cluster_workplace' => 264,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-03-04',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            270 => 
+            array (
+                'cases_0_4' => 1800,
+                'cases_12_17' => 1508,
+                'cases_18_29' => 9184,
+                'cases_30_59' => 8120,
+                'cases_5_11' => 2211,
+                'cases_60_69' => 4610,
+                'cases_70_79' => 2901,
+                'cases_80' => 1942,
+                'cases_active' => 310975,
+                'cases_adolescent' => 1508,
+                'cases_adult' => 24815,
+                'cases_boost' => 17013,
+                'cases_child' => 4011,
+                'cases_cluster' => 394,
+                'cases_cumulative' => 3595172,
+                'cases_elderly' => 3072,
+                'cases_fvax' => 10843,
+                'cases_import' => 342,
+                'cases_new' => 33406,
+                'cases_pvax' => 623,
+                'cases_recovered' => 27143,
+                'cases_recovered_cumulative' => 3250793,
+                'cases_unvax' => 4927,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 75,
+                'cluster_education' => 9,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 807,
+                'cluster_religious' => 323,
+                'cluster_workplace' => 127,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-03-05',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            271 => 
+            array (
+                'cases_0_4' => 1573,
+                'cases_12_17' => 1110,
+                'cases_18_29' => 7310,
+                'cases_30_59' => 6649,
+                'cases_5_11' => 1757,
+                'cases_60_69' => 3766,
+                'cases_70_79' => 2439,
+                'cases_80' => 1622,
+                'cases_active' => 307999,
+                'cases_adolescent' => 1110,
+                'cases_adult' => 20164,
+                'cases_boost' => 14165,
+                'cases_child' => 3330,
+                'cases_cluster' => 216,
+                'cases_cumulative' => 3622607,
+                'cases_elderly' => 2692,
+                'cases_fvax' => 8665,
+                'cases_import' => 254,
+                'cases_new' => 27435,
+                'cases_pvax' => 525,
+                'cases_recovered' => 30335,
+                'cases_recovered_cumulative' => 3281128,
+                'cases_unvax' => 4080,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 9,
+                'cluster_education' => 0,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 757,
+                'cluster_religious' => 313,
+                'cluster_workplace' => 57,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-03-06',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            272 => 
+            array (
+                'cases_0_4' => 1537,
+                'cases_12_17' => 1188,
+                'cases_18_29' => 7235,
+                'cases_30_59' => 6369,
+                'cases_5_11' => 1661,
+                'cases_60_69' => 3731,
+                'cases_70_79' => 2344,
+                'cases_80' => 1590,
+                'cases_active' => 304051,
+                'cases_adolescent' => 1188,
+                'cases_adult' => 19679,
+                'cases_boost' => 13680,
+                'cases_child' => 3198,
+                'cases_cluster' => 487,
+                'cases_cumulative' => 3649463,
+                'cases_elderly' => 2680,
+                'cases_fvax' => 8783,
+                'cases_import' => 211,
+                'cases_new' => 26856,
+                'cases_pvax' => 556,
+                'cases_recovered' => 30726,
+                'cases_recovered_cumulative' => 3311854,
+                'cases_unvax' => 3837,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 3,
+                'cluster_education' => 3,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 792,
+                'cluster_religious' => 298,
+                'cluster_workplace' => 369,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-03-07',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            273 => 
+            array (
+                'cases_0_4' => 1773,
+                'cases_12_17' => 1327,
+                'cases_18_29' => 8820,
+                'cases_30_59' => 7477,
+                'cases_5_11' => 1948,
+                'cases_60_69' => 4253,
+                'cases_70_79' => 2756,
+                'cases_80' => 1840,
+                'cases_active' => 306431,
+                'cases_adolescent' => 1327,
+                'cases_adult' => 23306,
+                'cases_boost' => 16631,
+                'cases_child' => 3721,
+                'cases_cluster' => 498,
+                'cases_cumulative' => 3680953,
+                'cases_elderly' => 3048,
+                'cases_fvax' => 9767,
+                'cases_import' => 473,
+                'cases_new' => 31490,
+                'cases_pvax' => 658,
+                'cases_recovered' => 29035,
+                'cases_recovered_cumulative' => 3340889,
+                'cases_unvax' => 4434,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 34,
+                'cluster_education' => 10,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 869,
+                'cluster_religious' => 339,
+                'cluster_workplace' => 345,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-03-08',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            274 => 
+            array (
+                'cases_0_4' => 1719,
+                'cases_12_17' => 1244,
+                'cases_18_29' => 8097,
+                'cases_30_59' => 7236,
+                'cases_5_11' => 1794,
+                'cases_60_69' => 4142,
+                'cases_70_79' => 2776,
+                'cases_80' => 1921,
+                'cases_active' => 309934,
+                'cases_adolescent' => 1244,
+                'cases_adult' => 22251,
+                'cases_boost' => 16240,
+                'cases_child' => 3513,
+                'cases_cluster' => 327,
+                'cases_cumulative' => 3711199,
+                'cases_elderly' => 3161,
+                'cases_fvax' => 9085,
+                'cases_import' => 418,
+                'cases_new' => 30246,
+                'cases_pvax' => 642,
+                'cases_recovered' => 26653,
+                'cases_recovered_cumulative' => 3367542,
+                'cases_unvax' => 4279,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 15,
+                'cluster_education' => 6,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 917,
+                'cluster_religious' => 323,
+                'cluster_workplace' => 185,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-03-09',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            275 => 
+            array (
+                'cases_0_4' => 1815,
+                'cases_12_17' => 1293,
+                'cases_18_29' => 8125,
+                'cases_30_59' => 7332,
+                'cases_5_11' => 1900,
+                'cases_60_69' => 4174,
+                'cases_70_79' => 2860,
+                'cases_80' => 1851,
+                'cases_active' => 314179,
+                'cases_adolescent' => 1293,
+                'cases_adult' => 22491,
+                'cases_boost' => 16578,
+                'cases_child' => 3715,
+                'cases_cluster' => 282,
+                'cases_cumulative' => 3741986,
+                'cases_elderly' => 3092,
+                'cases_fvax' => 9097,
+                'cases_import' => 608,
+                'cases_new' => 30787,
+                'cases_pvax' => 666,
+                'cases_recovered' => 26457,
+                'cases_recovered_cumulative' => 3393999,
+                'cases_unvax' => 4446,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 14,
+                'cluster_education' => 1,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 905,
+                'cluster_religious' => 336,
+                'cluster_workplace' => 153,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-03-10',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            276 => 
+            array (
+                'cases_0_4' => 1966,
+                'cases_12_17' => 1276,
+                'cases_18_29' => 8768,
+                'cases_30_59' => 7782,
+                'cases_5_11' => 2079,
+                'cases_60_69' => 4329,
+                'cases_70_79' => 3082,
+                'cases_80' => 2060,
+                'cases_active' => 322460,
+                'cases_adolescent' => 1276,
+                'cases_adult' => 23961,
+                'cases_boost' => 18148,
+                'cases_child' => 4045,
+                'cases_cluster' => 309,
+                'cases_cumulative' => 3774786,
+                'cases_elderly' => 3348,
+                'cases_fvax' => 9099,
+                'cases_import' => 541,
+                'cases_new' => 32800,
+                'cases_pvax' => 774,
+                'cases_recovered' => 24444,
+                'cases_recovered_cumulative' => 3418443,
+                'cases_unvax' => 4779,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 42,
+                'cluster_education' => 3,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 927,
+                'cluster_religious' => 361,
+                'cluster_workplace' => 97,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-03-11',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            277 => 
+            array (
+                'cases_0_4' => 1511,
+                'cases_12_17' => 984,
+                'cases_18_29' => 6951,
+                'cases_30_59' => 6227,
+                'cases_5_11' => 1567,
+                'cases_60_69' => 3712,
+                'cases_70_79' => 2482,
+                'cases_80' => 1724,
+                'cases_active' => 323508,
+                'cases_adolescent' => 984,
+                'cases_adult' => 19372,
+                'cases_boost' => 14844,
+                'cases_child' => 3078,
+                'cases_cluster' => 269,
+                'cases_cumulative' => 3801036,
+                'cases_elderly' => 2814,
+                'cases_fvax' => 7130,
+                'cases_import' => 545,
+                'cases_new' => 26250,
+                'cases_pvax' => 708,
+                'cases_recovered' => 25089,
+                'cases_recovered_cumulative' => 3443532,
+                'cases_unvax' => 3568,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 42,
+                'cluster_education' => 3,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 788,
+                'cluster_religious' => 302,
+                'cluster_workplace' => 97,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-03-12',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            278 => 
+            array (
+                'cases_0_4' => 1426,
+                'cases_12_17' => 836,
+                'cases_18_29' => 5952,
+                'cases_30_59' => 5363,
+                'cases_5_11' => 1309,
+                'cases_60_69' => 3028,
+                'cases_70_79' => 2106,
+                'cases_80' => 1448,
+                'cases_active' => 320596,
+                'cases_adolescent' => 836,
+                'cases_adult' => 16449,
+                'cases_boost' => 12768,
+                'cases_child' => 2735,
+                'cases_cluster' => 163,
+                'cases_cumulative' => 3823571,
+                'cases_elderly' => 2436,
+                'cases_fvax' => 6040,
+                'cases_import' => 361,
+                'cases_new' => 22535,
+                'cases_pvax' => 506,
+                'cases_recovered' => 25356,
+                'cases_recovered_cumulative' => 3468888,
+                'cases_unvax' => 3221,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 40,
+                'cluster_education' => 7,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 700,
+                'cluster_religious' => 288,
+                'cluster_workplace' => 8,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-03-13',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            279 => 
+            array (
+                'cases_0_4' => 1380,
+                'cases_12_17' => 744,
+                'cases_18_29' => 5818,
+                'cases_30_59' => 5165,
+                'cases_5_11' => 1273,
+                'cases_60_69' => 3167,
+                'cases_70_79' => 2143,
+                'cases_80' => 1339,
+                'cases_active' => 308665,
+                'cases_adolescent' => 744,
+                'cases_adult' => 16293,
+                'cases_boost' => 12543,
+                'cases_child' => 2653,
+                'cases_cluster' => 180,
+                'cases_cumulative' => 3845601,
+                'cases_elderly' => 2311,
+                'cases_fvax' => 5805,
+                'cases_import' => 394,
+                'cases_new' => 22030,
+                'cases_pvax' => 549,
+                'cases_recovered' => 33872,
+                'cases_recovered_cumulative' => 3502760,
+                'cases_unvax' => 3133,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 7,
+                'cluster_education' => 3,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 677,
+                'cluster_religious' => 295,
+                'cluster_workplace' => 56,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-03-14',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            280 => 
+            array (
+                'cases_0_4' => 1671,
+                'cases_12_17' => 1039,
+                'cases_18_29' => 6936,
+                'cases_30_59' => 6295,
+                'cases_5_11' => 1637,
+                'cases_60_69' => 3590,
+                'cases_70_79' => 2471,
+                'cases_80' => 1679,
+                'cases_active' => 303891,
+                'cases_adolescent' => 1039,
+                'cases_adult' => 19292,
+                'cases_boost' => 15465,
+                'cases_child' => 3308,
+                'cases_cluster' => 340,
+                'cases_cumulative' => 3872135,
+                'cases_elderly' => 2746,
+                'cases_fvax' => 6583,
+                'cases_import' => 691,
+                'cases_new' => 26534,
+                'cases_pvax' => 675,
+                'cases_recovered' => 31234,
+                'cases_recovered_cumulative' => 3533994,
+                'cases_unvax' => 3811,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 7,
+                'cluster_education' => 3,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 767,
+                'cluster_religious' => 300,
+                'cluster_workplace' => 56,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-03-15',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            281 => 
+            array (
+                'cases_0_4' => 1627,
+                'cases_12_17' => 1079,
+                'cases_18_29' => 7429,
+                'cases_30_59' => 6789,
+                'cases_5_11' => 1767,
+                'cases_60_69' => 3923,
+                'cases_70_79' => 2602,
+                'cases_80' => 1762,
+                'cases_active' => 299102,
+                'cases_adolescent' => 1079,
+                'cases_adult' => 20743,
+                'cases_boost' => 16006,
+                'cases_child' => 3394,
+                'cases_cluster' => 235,
+                'cases_cumulative' => 3900433,
+                'cases_elderly' => 2894,
+                'cases_fvax' => 7169,
+                'cases_import' => 697,
+                'cases_new' => 28298,
+                'cases_pvax' => 747,
+                'cases_recovered' => 33009,
+                'cases_recovered_cumulative' => 3567003,
+                'cases_unvax' => 4376,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 40,
+                'cluster_education' => 0,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 783,
+                'cluster_religious' => 349,
+                'cluster_workplace' => 227,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-03-16',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            282 => 
+            array (
+                'cases_0_4' => 1600,
+                'cases_12_17' => 914,
+                'cases_18_29' => 6934,
+                'cases_30_59' => 6514,
+                'cases_5_11' => 1611,
+                'cases_60_69' => 3811,
+                'cases_70_79' => 2504,
+                'cases_80' => 1719,
+                'cases_active' => 296585,
+                'cases_adolescent' => 914,
+                'cases_adult' => 19763,
+                'cases_boost' => 16124,
+                'cases_child' => 3211,
+                'cases_cluster' => 447,
+                'cases_cumulative' => 3927437,
+                'cases_elderly' => 2838,
+                'cases_fvax' => 6318,
+                'cases_import' => 719,
+                'cases_new' => 27004,
+                'cases_pvax' => 758,
+                'cases_recovered' => 29450,
+                'cases_recovered_cumulative' => 3596453,
+                'cases_unvax' => 3804,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 131,
+                'cluster_education' => 3,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 774,
+                'cluster_religious' => 345,
+                'cluster_workplace' => 80,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-03-17',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            283 => 
+            array (
+                'cases_0_4' => 1482,
+                'cases_12_17' => 903,
+                'cases_18_29' => 6227,
+                'cases_30_59' => 5828,
+                'cases_5_11' => 1448,
+                'cases_60_69' => 3363,
+                'cases_70_79' => 2336,
+                'cases_80' => 1488,
+                'cases_active' => 294146,
+                'cases_adolescent' => 903,
+                'cases_adult' => 17754,
+                'cases_boost' => 14336,
+                'cases_child' => 2930,
+                'cases_cluster' => 174,
+                'cases_cumulative' => 3951678,
+                'cases_elderly' => 2517,
+                'cases_fvax' => 5886,
+                'cases_import' => 521,
+                'cases_new' => 24241,
+                'cases_pvax' => 692,
+                'cases_recovered' => 26615,
+                'cases_recovered_cumulative' => 3623068,
+                'cases_unvax' => 3327,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 37,
+                'cluster_education' => 5,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 726,
+                'cluster_religious' => 303,
+                'cluster_workplace' => 74,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-03-18',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            284 => 
+            array (
+                'cases_0_4' => 1379,
+                'cases_12_17' => 842,
+                'cases_18_29' => 5683,
+                'cases_30_59' => 5395,
+                'cases_5_11' => 1404,
+                'cases_60_69' => 3052,
+                'cases_70_79' => 2008,
+                'cases_80' => 1409,
+                'cases_active' => 283076,
+                'cases_adolescent' => 842,
+                'cases_adult' => 16138,
+                'cases_boost' => 13477,
+                'cases_child' => 2783,
+                'cases_cluster' => 324,
+                'cases_cumulative' => 3974019,
+                'cases_elderly' => 2300,
+                'cases_fvax' => 4985,
+                'cases_import' => 524,
+                'cases_new' => 22341,
+                'cases_pvax' => 683,
+                'cases_recovered' => 33347,
+                'cases_recovered_cumulative' => 3656415,
+                'cases_unvax' => 3196,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 72,
+                'cluster_education' => 3,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 616,
+                'cluster_religious' => 275,
+                'cluster_workplace' => 68,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-03-19',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            285 => 
+            array (
+                'cases_0_4' => 1269,
+                'cases_12_17' => 689,
+                'cases_18_29' => 4915,
+                'cases_30_59' => 4565,
+                'cases_5_11' => 1199,
+                'cases_60_69' => 2618,
+                'cases_70_79' => 1893,
+                'cases_80' => 1189,
+                'cases_active' => 273864,
+                'cases_adolescent' => 689,
+                'cases_adult' => 13991,
+                'cases_boost' => 11622,
+                'cases_child' => 2468,
+                'cases_cluster' => 96,
+                'cases_cumulative' => 3993124,
+                'cases_elderly' => 1948,
+                'cases_fvax' => 4211,
+                'cases_import' => 386,
+                'cases_new' => 19105,
+                'cases_pvax' => 578,
+                'cases_recovered' => 28250,
+                'cases_recovered_cumulative' => 3684665,
+                'cases_unvax' => 2694,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 28,
+                'cluster_education' => 2,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 508,
+                'cluster_religious' => 251,
+                'cluster_workplace' => 47,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-03-20',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            286 => 
+            array (
+                'cases_0_4' => 1143,
+                'cases_12_17' => 709,
+                'cases_18_29' => 4424,
+                'cases_30_59' => 4118,
+                'cases_5_11' => 1214,
+                'cases_60_69' => 2466,
+                'cases_70_79' => 1695,
+                'cases_80' => 1114,
+                'cases_active' => 263635,
+                'cases_adolescent' => 709,
+                'cases_adult' => 12703,
+                'cases_boost' => 10507,
+                'cases_child' => 2357,
+                'cases_cluster' => 56,
+                'cases_cumulative' => 4010952,
+                'cases_elderly' => 1900,
+                'cases_fvax' => 4097,
+                'cases_import' => 407,
+                'cases_new' => 17828,
+                'cases_pvax' => 555,
+                'cases_recovered' => 28003,
+                'cases_recovered_cumulative' => 3712668,
+                'cases_unvax' => 2669,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 13,
+                'cluster_education' => 0,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 541,
+                'cluster_religious' => 245,
+                'cluster_workplace' => 24,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-03-21',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            287 => 
+            array (
+                'cases_0_4' => 1296,
+                'cases_12_17' => 780,
+                'cases_18_29' => 5509,
+                'cases_30_59' => 5134,
+                'cases_5_11' => 1447,
+                'cases_60_69' => 2982,
+                'cases_70_79' => 1988,
+                'cases_80' => 1242,
+                'cases_active' => 252491,
+                'cases_adolescent' => 780,
+                'cases_adult' => 15613,
+                'cases_boost' => 13171,
+                'cases_child' => 2743,
+                'cases_cluster' => 173,
+                'cases_cumulative' => 4032435,
+                'cases_elderly' => 2135,
+                'cases_fvax' => 4617,
+                'cases_import' => 394,
+                'cases_new' => 21483,
+                'cases_pvax' => 724,
+                'cases_recovered' => 32561,
+                'cases_recovered_cumulative' => 3745229,
+                'cases_unvax' => 2971,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 44,
+                'cluster_education' => 0,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 591,
+                'cluster_religious' => 302,
+                'cluster_workplace' => 83,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-03-22',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            288 => 
+            array (
+                'cases_0_4' => 1368,
+                'cases_12_17' => 791,
+                'cases_18_29' => 5266,
+                'cases_30_59' => 5515,
+                'cases_5_11' => 1411,
+                'cases_60_69' => 3459,
+                'cases_70_79' => 2183,
+                'cases_80' => 1325,
+                'cases_active' => 248696,
+                'cases_adolescent' => 791,
+                'cases_adult' => 16423,
+                'cases_boost' => 13907,
+                'cases_child' => 2779,
+                'cases_cluster' => 106,
+                'cases_cumulative' => 4054926,
+                'cases_elderly' => 2282,
+                'cases_fvax' => 4691,
+                'cases_import' => 382,
+                'cases_new' => 22491,
+                'cases_pvax' => 727,
+                'cases_recovered' => 26234,
+                'cases_recovered_cumulative' => 3771463,
+                'cases_unvax' => 3166,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 44,
+                'cluster_education' => 0,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 652,
+                'cluster_religious' => 305,
+                'cluster_workplace' => 83,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-03-23',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            289 => 
+            array (
+                'cases_0_4' => 1280,
+                'cases_12_17' => 1051,
+                'cases_18_29' => 6016,
+                'cases_30_59' => 5899,
+                'cases_5_11' => 1613,
+                'cases_60_69' => 3545,
+                'cases_70_79' => 2274,
+                'cases_80' => 1435,
+                'cases_active' => 247450,
+                'cases_adolescent' => 1051,
+                'cases_adult' => 17734,
+                'cases_boost' => 15268,
+                'cases_child' => 2893,
+                'cases_cluster' => 173,
+                'cases_cumulative' => 4079242,
+                'cases_elderly' => 2411,
+                'cases_fvax' => 5152,
+                'cases_import' => 297,
+                'cases_new' => 24316,
+                'cases_pvax' => 862,
+                'cases_recovered' => 25512,
+                'cases_recovered_cumulative' => 3796975,
+                'cases_unvax' => 3034,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 52,
+                'cluster_education' => 0,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 695,
+                'cluster_religious' => 281,
+                'cluster_workplace' => 15,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-03-24',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            290 => 
+            array (
+                'cases_0_4' => 1236,
+                'cases_12_17' => 1023,
+                'cases_18_29' => 5349,
+                'cases_30_59' => 5039,
+                'cases_5_11' => 1675,
+                'cases_60_69' => 3061,
+                'cases_70_79' => 2015,
+                'cases_80' => 1237,
+                'cases_active' => 246923,
+                'cases_adolescent' => 1023,
+                'cases_adult' => 15464,
+                'cases_boost' => 13242,
+                'cases_child' => 2911,
+                'cases_cluster' => 38,
+                'cases_cumulative' => 4101081,
+                'cases_elderly' => 2080,
+                'cases_fvax' => 4719,
+                'cases_import' => 287,
+                'cases_new' => 21839,
+                'cases_pvax' => 872,
+                'cases_recovered' => 22324,
+                'cases_recovered_cumulative' => 3819299,
+                'cases_unvax' => 3006,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 61,
+                'cluster_education' => 0,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 587,
+                'cluster_religious' => 256,
+                'cluster_workplace' => 17,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-03-25',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            291 => 
+            array (
+                'cases_0_4' => 1312,
+                'cases_12_17' => 923,
+                'cases_18_29' => 4938,
+                'cases_30_59' => 4911,
+                'cases_5_11' => 1658,
+                'cases_60_69' => 2958,
+                'cases_70_79' => 1958,
+                'cases_80' => 1244,
+                'cases_active' => 242333,
+                'cases_adolescent' => 923,
+                'cases_adult' => 14765,
+                'cases_boost' => 12840,
+                'cases_child' => 2970,
+                'cases_cluster' => 39,
+                'cases_cumulative' => 4122004,
+                'cases_elderly' => 2082,
+                'cases_fvax' => 4150,
+                'cases_import' => 228,
+                'cases_new' => 20923,
+                'cases_pvax' => 906,
+                'cases_recovered' => 25467,
+                'cases_recovered_cumulative' => 3844766,
+                'cases_unvax' => 3027,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 16,
+                'cluster_education' => 0,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 586,
+                'cluster_religious' => 252,
+                'cluster_workplace' => 16,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-03-26',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            292 => 
+            array (
+                'cases_0_4' => 1105,
+                'cases_12_17' => 757,
+                'cases_18_29' => 4098,
+                'cases_30_59' => 4035,
+                'cases_5_11' => 1298,
+                'cases_60_69' => 2347,
+                'cases_70_79' => 1570,
+                'cases_80' => 992,
+                'cases_active' => 232975,
+                'cases_adolescent' => 757,
+                'cases_adult' => 12050,
+                'cases_boost' => 10582,
+                'cases_child' => 2403,
+                'cases_cluster' => 30,
+                'cases_cumulative' => 4138867,
+                'cases_elderly' => 1647,
+                'cases_fvax' => 3381,
+                'cases_import' => 238,
+                'cases_new' => 16863,
+                'cases_pvax' => 715,
+                'cases_recovered' => 26171,
+                'cases_recovered_cumulative' => 3870937,
+                'cases_unvax' => 2185,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 7,
+                'cluster_education' => 0,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 461,
+                'cluster_religious' => 194,
+                'cluster_workplace' => 18,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-03-27',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            293 => 
+            array (
+                'cases_0_4' => 861,
+                'cases_12_17' => 496,
+                'cases_18_29' => 3046,
+                'cases_30_59' => 3064,
+                'cases_5_11' => 990,
+                'cases_60_69' => 1868,
+                'cases_70_79' => 1278,
+                'cases_80' => 839,
+                'cases_active' => 220709,
+                'cases_adolescent' => 496,
+                'cases_adult' => 9256,
+                'cases_boost' => 8302,
+                'cases_child' => 1851,
+                'cases_cluster' => 51,
+                'cases_cumulative' => 4152203,
+                'cases_elderly' => 1465,
+                'cases_fvax' => 2502,
+                'cases_import' => 189,
+                'cases_new' => 13336,
+                'cases_pvax' => 516,
+                'cases_recovered' => 25552,
+                'cases_recovered_cumulative' => 3896489,
+                'cases_unvax' => 2016,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 11,
+                'cluster_education' => 0,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 438,
+                'cluster_religious' => 188,
+                'cluster_workplace' => 19,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-03-28',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            294 => 
+            array (
+                'cases_0_4' => 970,
+                'cases_12_17' => 642,
+                'cases_18_29' => 3545,
+                'cases_30_59' => 3555,
+                'cases_5_11' => 1201,
+                'cases_60_69' => 2125,
+                'cases_70_79' => 1380,
+                'cases_80' => 891,
+                'cases_active' => 211737,
+                'cases_adolescent' => 642,
+                'cases_adult' => 10605,
+                'cases_boost' => 9214,
+                'cases_child' => 2171,
+                'cases_cluster' => 47,
+                'cases_cumulative' => 4167418,
+                'cases_elderly' => 1545,
+                'cases_fvax' => 3076,
+                'cases_import' => 250,
+                'cases_new' => 15215,
+                'cases_pvax' => 610,
+                'cases_recovered' => 24154,
+                'cases_recovered_cumulative' => 3920643,
+                'cases_unvax' => 2315,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 17,
+                'cluster_education' => 0,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 455,
+                'cluster_religious' => 199,
+                'cluster_workplace' => 29,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-03-29',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            295 => 
+            array (
+                'cases_0_4' => 907,
+                'cases_12_17' => 739,
+                'cases_18_29' => 3787,
+                'cases_30_59' => 3797,
+                'cases_5_11' => 1360,
+                'cases_60_69' => 2163,
+                'cases_70_79' => 1439,
+                'cases_80' => 939,
+                'cases_active' => 206458,
+                'cases_adolescent' => 739,
+                'cases_adult' => 11186,
+                'cases_boost' => 9806,
+                'cases_child' => 2267,
+                'cases_cluster' => 60,
+                'cases_cumulative' => 4183359,
+                'cases_elderly' => 1511,
+                'cases_fvax' => 3143,
+                'cases_import' => 168,
+                'cases_new' => 15941,
+                'cases_pvax' => 691,
+                'cases_recovered' => 21186,
+                'cases_recovered_cumulative' => 3941829,
+                'cases_unvax' => 2301,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 45,
+                'cluster_education' => 0,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 405,
+                'cluster_religious' => 167,
+                'cluster_workplace' => 12,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-03-30',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            296 => 
+            array (
+                'cases_0_4' => 1203,
+                'cases_12_17' => 773,
+                'cases_18_29' => 4427,
+                'cases_30_59' => 4486,
+                'cases_5_11' => 1557,
+                'cases_60_69' => 2585,
+                'cases_70_79' => 1550,
+                'cases_80' => 940,
+                'cases_active' => 206725,
+                'cases_adolescent' => 773,
+                'cases_adult' => 13048,
+                'cases_boost' => 11482,
+                'cases_child' => 2760,
+                'cases_cluster' => 7,
+                'cases_cumulative' => 4201919,
+                'cases_elderly' => 1598,
+                'cases_fvax' => 3418,
+                'cases_import' => 187,
+                'cases_new' => 18560,
+                'cases_pvax' => 800,
+                'cases_recovered' => 18253,
+                'cases_recovered_cumulative' => 3960082,
+                'cases_unvax' => 2860,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 45,
+                'cluster_education' => 0,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 456,
+                'cluster_religious' => 202,
+                'cluster_workplace' => 12,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-03-31',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            297 => 
+            array (
+                'cases_0_4' => 1096,
+                'cases_12_17' => 802,
+                'cases_18_29' => 4192,
+                'cases_30_59' => 4140,
+                'cases_5_11' => 1521,
+                'cases_60_69' => 2311,
+                'cases_70_79' => 1465,
+                'cases_80' => 894,
+                'cases_active' => 206840,
+                'cases_adolescent' => 802,
+                'cases_adult' => 12108,
+                'cases_boost' => 10810,
+                'cases_child' => 2617,
+                'cases_cluster' => 78,
+                'cases_cumulative' => 4219395,
+                'cases_elderly' => 1530,
+                'cases_fvax' => 3179,
+                'cases_import' => 164,
+                'cases_new' => 17476,
+                'cases_pvax' => 804,
+                'cases_recovered' => 17321,
+                'cases_recovered_cumulative' => 3977403,
+                'cases_unvax' => 2683,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 21,
+                'cluster_education' => 0,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 440,
+                'cluster_religious' => 196,
+                'cluster_workplace' => 6,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-04-01',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            298 => 
+            array (
+                'cases_0_4' => 867,
+                'cases_12_17' => 671,
+                'cases_18_29' => 3491,
+                'cases_30_59' => 3600,
+                'cases_5_11' => 1198,
+                'cases_60_69' => 1998,
+                'cases_70_79' => 1274,
+                'cases_80' => 789,
+                'cases_active' => 201125,
+                'cases_adolescent' => 671,
+                'cases_adult' => 10363,
+                'cases_boost' => 9258,
+                'cases_child' => 2065,
+                'cases_cluster' => 36,
+                'cases_cumulative' => 4234087,
+                'cases_elderly' => 1304,
+                'cases_fvax' => 2660,
+                'cases_import' => 218,
+                'cases_new' => 14692,
+                'cases_pvax' => 662,
+                'cases_recovered' => 20383,
+                'cases_recovered_cumulative' => 3997786,
+                'cases_unvax' => 2112,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 5,
+                'cluster_education' => 0,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 361,
+                'cluster_religious' => 154,
+                'cluster_workplace' => 12,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-04-02',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            299 => 
+            array (
+                'cases_0_4' => 743,
+                'cases_12_17' => 598,
+                'cases_18_29' => 2919,
+                'cases_30_59' => 2921,
+                'cases_5_11' => 1010,
+                'cases_60_69' => 1698,
+                'cases_70_79' => 1058,
+                'cases_80' => 692,
+                'cases_active' => 192840,
+                'cases_adolescent' => 598,
+                'cases_adult' => 8596,
+                'cases_boost' => 7632,
+                'cases_child' => 1753,
+                'cases_cluster' => 8,
+                'cases_cumulative' => 4246467,
+                'cases_elderly' => 1140,
+                'cases_fvax' => 2298,
+                'cases_import' => 462,
+                'cases_new' => 12380,
+                'cases_pvax' => 561,
+                'cases_recovered' => 20635,
+                'cases_recovered_cumulative' => 4018421,
+                'cases_unvax' => 1889,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 0,
+                'cluster_education' => 0,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 310,
+                'cluster_religious' => 138,
+                'cluster_workplace' => 6,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-04-03',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            300 => 
+            array (
+                'cases_0_4' => 613,
+                'cases_12_17' => 502,
+                'cases_18_29' => 2363,
+                'cases_30_59' => 2295,
+                'cases_5_11' => 847,
+                'cases_60_69' => 1401,
+                'cases_70_79' => 901,
+                'cases_80' => 573,
+                'cases_active' => 179509,
+                'cases_adolescent' => 502,
+                'cases_adult' => 6960,
+                'cases_boost' => 6075,
+                'cases_child' => 1460,
+                'cases_cluster' => 2,
+                'cases_cumulative' => 4256469,
+                'cases_elderly' => 972,
+                'cases_fvax' => 1973,
+                'cases_import' => 98,
+                'cases_new' => 10002,
+                'cases_pvax' => 464,
+                'cases_recovered' => 23302,
+                'cases_recovered_cumulative' => 4041723,
+                'cases_unvax' => 1490,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 0,
+                'cluster_education' => 0,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 279,
+                'cluster_religious' => 120,
+                'cluster_workplace' => 2,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-04-04',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            301 => 
+            array (
+                'cases_0_4' => 788,
+                'cases_12_17' => 530,
+                'cases_18_29' => 2936,
+                'cases_30_59' => 2934,
+                'cases_5_11' => 988,
+                'cases_60_69' => 1603,
+                'cases_70_79' => 1010,
+                'cases_80' => 604,
+                'cases_active' => 171070,
+                'cases_adolescent' => 530,
+                'cases_adult' => 8483,
+                'cases_boost' => 7485,
+                'cases_child' => 1776,
+                'cases_cluster' => 15,
+                'cases_cumulative' => 4268486,
+                'cases_elderly' => 1014,
+                'cases_fvax' => 2165,
+                'cases_import' => 59,
+                'cases_new' => 12017,
+                'cases_pvax' => 549,
+                'cases_recovered' => 20431,
+                'cases_recovered_cumulative' => 4062154,
+                'cases_unvax' => 1818,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 1,
+                'cluster_education' => 0,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 291,
+                'cluster_religious' => 119,
+                'cluster_workplace' => 14,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-04-05',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            302 => 
+            array (
+                'cases_0_4' => 709,
+                'cases_12_17' => 595,
+                'cases_18_29' => 2719,
+                'cases_30_59' => 2935,
+                'cases_5_11' => 1051,
+                'cases_60_69' => 1737,
+                'cases_70_79' => 1026,
+                'cases_80' => 643,
+                'cases_active' => 162123,
+                'cases_adolescent' => 595,
+                'cases_adult' => 8417,
+                'cases_boost' => 7489,
+                'cases_child' => 1760,
+                'cases_cluster' => 20,
+                'cases_cumulative' => 4280591,
+                'cases_elderly' => 1084,
+                'cases_fvax' => 2283,
+                'cases_import' => 43,
+                'cases_new' => 12105,
+                'cases_pvax' => 571,
+                'cases_recovered' => 21029,
+                'cases_recovered_cumulative' => 4083183,
+                'cases_unvax' => 1762,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 1,
+                'cluster_education' => 0,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 305,
+                'cluster_religious' => 136,
+                'cluster_workplace' => 17,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-04-06',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            303 => 
+            array (
+                'cases_0_4' => 681,
+                'cases_12_17' => 740,
+                'cases_18_29' => 2567,
+                'cases_30_59' => 2937,
+                'cases_5_11' => 1056,
+                'cases_60_69' => 1725,
+                'cases_70_79' => 1094,
+                'cases_80' => 587,
+                'cases_active' => 157496,
+                'cases_adolescent' => 740,
+                'cases_adult' => 8323,
+                'cases_boost' => 7319,
+                'cases_child' => 1737,
+                'cases_cluster' => 44,
+                'cases_cumulative' => 4292585,
+                'cases_elderly' => 1040,
+                'cases_fvax' => 2293,
+                'cases_import' => 25,
+                'cases_new' => 11994,
+                'cases_pvax' => 589,
+                'cases_recovered' => 16603,
+                'cases_recovered_cumulative' => 4099786,
+                'cases_unvax' => 1793,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 10,
+                'cluster_education' => 1,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 294,
+                'cluster_religious' => 159,
+                'cluster_workplace' => 2,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-04-07',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            304 => 
+            array (
+                'cases_0_4' => 758,
+                'cases_12_17' => 850,
+                'cases_18_29' => 3471,
+                'cases_30_59' => 3635,
+                'cases_5_11' => 1166,
+                'cases_60_69' => 2160,
+                'cases_70_79' => 1298,
+                'cases_80' => 744,
+                'cases_active' => 158382,
+                'cases_adolescent' => 850,
+                'cases_adult' => 10564,
+                'cases_boost' => 9605,
+                'cases_child' => 1924,
+                'cases_cluster' => 7,
+                'cases_cumulative' => 4307529,
+                'cases_elderly' => 1251,
+                'cases_fvax' => 2729,
+                'cases_import' => 104,
+                'cases_new' => 14944,
+                'cases_pvax' => 676,
+                'cases_recovered' => 14045,
+                'cases_recovered_cumulative' => 4113831,
+                'cases_unvax' => 1934,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 0,
+                'cluster_education' => 0,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 349,
+                'cluster_religious' => 158,
+                'cluster_workplace' => 6,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-04-08',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            305 => 
+            array (
+                'cases_0_4' => 614,
+                'cases_12_17' => 608,
+                'cases_18_29' => 2361,
+                'cases_30_59' => 2407,
+                'cases_5_11' => 902,
+                'cases_60_69' => 1434,
+                'cases_70_79' => 781,
+                'cases_80' => 556,
+                'cases_active' => 153409,
+                'cases_adolescent' => 608,
+                'cases_adult' => 6983,
+                'cases_boost' => 6078,
+                'cases_child' => 1516,
+                'cases_cluster' => 32,
+                'cases_cumulative' => 4317706,
+                'cases_elderly' => 909,
+                'cases_fvax' => 1933,
+                'cases_import' => 53,
+                'cases_new' => 10177,
+                'cases_pvax' => 471,
+                'cases_recovered' => 15132,
+                'cases_recovered_cumulative' => 4128963,
+                'cases_unvax' => 1695,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 9,
+                'cluster_education' => 0,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 235,
+                'cluster_religious' => 118,
+                'cluster_workplace' => 17,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-04-09',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            306 => 
+            array (
+                'cases_0_4' => 493,
+                'cases_12_17' => 614,
+                'cases_18_29' => 1801,
+                'cases_30_59' => 2001,
+                'cases_5_11' => 757,
+                'cases_60_69' => 1028,
+                'cases_70_79' => 669,
+                'cases_80' => 426,
+                'cases_active' => 145740,
+                'cases_adolescent' => 614,
+                'cases_adult' => 5499,
+                'cases_boost' => 4857,
+                'cases_child' => 1250,
+                'cases_cluster' => 35,
+                'cases_cumulative' => 4325818,
+                'cases_elderly' => 746,
+                'cases_fvax' => 1660,
+                'cases_import' => 25,
+                'cases_new' => 8112,
+                'cases_pvax' => 410,
+                'cases_recovered' => 15765,
+                'cases_recovered_cumulative' => 4144728,
+                'cases_unvax' => 1185,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 0,
+                'cluster_education' => 0,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 219,
+                'cluster_religious' => 101,
+                'cluster_workplace' => 35,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-04-10',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            307 => 
+            array (
+                'cases_0_4' => 484,
+                'cases_12_17' => 551,
+                'cases_18_29' => 1628,
+                'cases_30_59' => 1900,
+                'cases_5_11' => 664,
+                'cases_60_69' => 1090,
+                'cases_70_79' => 669,
+                'cases_80' => 434,
+                'cases_active' => 134408,
+                'cases_adolescent' => 551,
+                'cases_adult' => 5287,
+                'cases_boost' => 4733,
+                'cases_child' => 1148,
+                'cases_cluster' => 82,
+                'cases_cumulative' => 4333557,
+                'cases_elderly' => 751,
+                'cases_fvax' => 1484,
+                'cases_import' => 23,
+                'cases_new' => 7739,
+                'cases_pvax' => 337,
+                'cases_recovered' => 19049,
+                'cases_recovered_cumulative' => 4163777,
+                'cases_unvax' => 1185,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 58,
+                'cluster_education' => 0,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 186,
+                'cluster_religious' => 131,
+                'cluster_workplace' => 23,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-04-11',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            308 => 
+            array (
+                'cases_0_4' => 499,
+                'cases_12_17' => 759,
+                'cases_18_29' => 2000,
+                'cases_30_59' => 2226,
+                'cases_5_11' => 690,
+                'cases_60_69' => 1251,
+                'cases_70_79' => 736,
+                'cases_80' => 480,
+                'cases_active' => 126407,
+                'cases_adolescent' => 759,
+                'cases_adult' => 6213,
+                'cases_boost' => 5524,
+                'cases_child' => 1189,
+                'cases_cluster' => 140,
+                'cases_cumulative' => 4342559,
+                'cases_elderly' => 826,
+                'cases_fvax' => 1891,
+                'cases_import' => 52,
+                'cases_new' => 9002,
+                'cases_pvax' => 380,
+                'cases_recovered' => 16986,
+                'cases_recovered_cumulative' => 4180763,
+                'cases_unvax' => 1207,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 0,
+                'cluster_education' => 0,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 240,
+                'cluster_religious' => 106,
+                'cluster_workplace' => 139,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-04-12',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            309 => 
+            array (
+                'cases_0_4' => 534,
+                'cases_12_17' => 953,
+                'cases_18_29' => 2167,
+                'cases_30_59' => 2412,
+                'cases_5_11' => 867,
+                'cases_60_69' => 1403,
+                'cases_70_79' => 883,
+                'cases_80' => 485,
+                'cases_active' => 120552,
+                'cases_adolescent' => 953,
+                'cases_adult' => 6865,
+                'cases_boost' => 6041,
+                'cases_child' => 1401,
+                'cases_cluster' => 127,
+                'cases_cumulative' => 4352611,
+                'cases_elderly' => 825,
+                'cases_fvax' => 2145,
+                'cases_import' => 21,
+                'cases_new' => 10052,
+                'cases_pvax' => 539,
+                'cases_recovered' => 15893,
+                'cases_recovered_cumulative' => 4196656,
+                'cases_unvax' => 1327,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 0,
+                'cluster_education' => 0,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 232,
+                'cluster_religious' => 108,
+                'cluster_workplace' => 125,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-04-13',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            310 => 
+            array (
+                'cases_0_4' => 662,
+                'cases_12_17' => 1116,
+                'cases_18_29' => 2158,
+                'cases_30_59' => 2581,
+                'cases_5_11' => 914,
+                'cases_60_69' => 1289,
+                'cases_70_79' => 846,
+                'cases_80' => 510,
+                'cases_active' => 117746,
+                'cases_adolescent' => 1116,
+                'cases_adult' => 6874,
+                'cases_boost' => 5924,
+                'cases_child' => 1576,
+                'cases_cluster' => 284,
+                'cases_cumulative' => 4363024,
+                'cases_elderly' => 842,
+                'cases_fvax' => 2242,
+                'cases_import' => 27,
+                'cases_new' => 10413,
+                'cases_pvax' => 501,
+                'cases_recovered' => 13202,
+                'cases_recovered_cumulative' => 4209858,
+                'cases_unvax' => 1746,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 3,
+                'cluster_education' => 0,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 227,
+                'cluster_religious' => 105,
+                'cluster_workplace' => 280,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-04-14',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            311 => 
+            array (
+                'cases_0_4' => 533,
+                'cases_12_17' => 1227,
+                'cases_18_29' => 2043,
+                'cases_30_59' => 2210,
+                'cases_5_11' => 812,
+                'cases_60_69' => 1267,
+                'cases_70_79' => 783,
+                'cases_80' => 479,
+                'cases_active' => 113134,
+                'cases_adolescent' => 1227,
+                'cases_adult' => 6303,
+                'cases_boost' => 5534,
+                'cases_child' => 1345,
+                'cases_cluster' => 405,
+                'cases_cumulative' => 4372697,
+                'cases_elderly' => 794,
+                'cases_fvax' => 2377,
+                'cases_import' => 25,
+                'cases_new' => 9673,
+                'cases_pvax' => 502,
+                'cases_recovered' => 14267,
+                'cases_recovered_cumulative' => 4224125,
+                'cases_unvax' => 1260,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 11,
+                'cluster_education' => 0,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 206,
+                'cluster_religious' => 109,
+                'cluster_workplace' => 394,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-04-15',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            312 => 
+            array (
+                'cases_0_4' => 510,
+                'cases_12_17' => 1257,
+                'cases_18_29' => 2085,
+                'cases_30_59' => 2098,
+                'cases_5_11' => 704,
+                'cases_60_69' => 1311,
+                'cases_70_79' => 764,
+                'cases_80' => 476,
+                'cases_active' => 108483,
+                'cases_adolescent' => 1257,
+                'cases_adult' => 6258,
+                'cases_boost' => 5699,
+                'cases_child' => 1214,
+                'cases_cluster' => 507,
+                'cases_cumulative' => 4382402,
+                'cases_elderly' => 777,
+                'cases_fvax' => 2171,
+                'cases_import' => 30,
+                'cases_new' => 9705,
+                'cases_pvax' => 413,
+                'cases_recovered' => 14346,
+                'cases_recovered_cumulative' => 4238471,
+                'cases_unvax' => 1422,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 0,
+                'cluster_education' => 0,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 200,
+                'cluster_religious' => 101,
+                'cluster_workplace' => 498,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-04-16',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            313 => 
+            array (
+                'cases_0_4' => 317,
+                'cases_12_17' => 708,
+                'cases_18_29' => 1489,
+                'cases_30_59' => 1510,
+                'cases_5_11' => 498,
+                'cases_60_69' => 879,
+                'cases_70_79' => 507,
+                'cases_80' => 343,
+                'cases_active' => 103866,
+                'cases_adolescent' => 708,
+                'cases_adult' => 4385,
+                'cases_boost' => 4009,
+                'cases_child' => 815,
+                'cases_cluster' => 205,
+                'cases_cumulative' => 4389025,
+                'cases_elderly' => 637,
+                'cases_fvax' => 1511,
+                'cases_import' => 13,
+                'cases_new' => 6623,
+                'cases_pvax' => 306,
+                'cases_recovered' => 11233,
+                'cases_recovered_cumulative' => 4249704,
+                'cases_unvax' => 797,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 0,
+                'cluster_education' => 0,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 191,
+                'cluster_religious' => 103,
+                'cluster_workplace' => 205,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-04-17',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            314 => 
+            array (
+                'cases_0_4' => 322,
+                'cases_12_17' => 648,
+                'cases_18_29' => 1608,
+                'cases_30_59' => 1614,
+                'cases_5_11' => 529,
+                'cases_60_69' => 978,
+                'cases_70_79' => 601,
+                'cases_80' => 414,
+                'cases_active' => 96571,
+                'cases_adolescent' => 648,
+                'cases_adult' => 4801,
+                'cases_boost' => 4279,
+                'cases_child' => 851,
+                'cases_cluster' => 80,
+                'cases_cumulative' => 4396165,
+                'cases_elderly' => 704,
+                'cases_fvax' => 1558,
+                'cases_import' => 264,
+                'cases_new' => 7140,
+                'cases_pvax' => 349,
+                'cases_recovered' => 14423,
+                'cases_recovered_cumulative' => 4264127,
+                'cases_unvax' => 954,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 0,
+                'cluster_education' => 0,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 206,
+                'cluster_religious' => 84,
+                'cluster_workplace' => 80,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-04-18',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            315 => 
+            array (
+                'cases_0_4' => 226,
+                'cases_12_17' => 982,
+                'cases_18_29' => 1235,
+                'cases_30_59' => 1304,
+                'cases_5_11' => 468,
+                'cases_60_69' => 796,
+                'cases_70_79' => 425,
+                'cases_80' => 326,
+                'cases_active' => 92015,
+                'cases_adolescent' => 982,
+                'cases_adult' => 3760,
+                'cases_boost' => 3414,
+                'cases_child' => 694,
+                'cases_cluster' => 465,
+                'cases_cumulative' => 4402234,
+                'cases_elderly' => 551,
+                'cases_fvax' => 1654,
+                'cases_import' => 110,
+                'cases_new' => 6069,
+                'cases_pvax' => 325,
+                'cases_recovered' => 10619,
+                'cases_recovered_cumulative' => 4274746,
+                'cases_unvax' => 676,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 0,
+                'cluster_education' => 0,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 161,
+                'cluster_religious' => 64,
+                'cluster_workplace' => 465,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-04-19',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            316 => 
+            array (
+                'cases_0_4' => 324,
+                'cases_12_17' => 978,
+                'cases_18_29' => 1520,
+                'cases_30_59' => 1544,
+                'cases_5_11' => 559,
+                'cases_60_69' => 925,
+                'cases_70_79' => 515,
+                'cases_80' => 363,
+                'cases_active' => 90714,
+                'cases_adolescent' => 978,
+                'cases_adult' => 4504,
+                'cases_boost' => 3991,
+                'cases_child' => 883,
+                'cases_cluster' => 322,
+                'cases_cumulative' => 4409202,
+                'cases_elderly' => 601,
+                'cases_fvax' => 1817,
+                'cases_import' => 32,
+                'cases_new' => 6968,
+                'cases_pvax' => 345,
+                'cases_recovered' => 8267,
+                'cases_recovered_cumulative' => 4283013,
+                'cases_unvax' => 815,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 0,
+                'cluster_education' => 0,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 170,
+                'cluster_religious' => 68,
+                'cluster_workplace' => 322,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-04-20',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            317 => 
+            array (
+                'cases_0_4' => 302,
+                'cases_12_17' => 650,
+                'cases_18_29' => 1311,
+                'cases_30_59' => 1252,
+                'cases_5_11' => 471,
+                'cases_60_69' => 833,
+                'cases_70_79' => 473,
+                'cases_80' => 298,
+                'cases_active' => 88173,
+                'cases_adolescent' => 650,
+                'cases_adult' => 3869,
+                'cases_boost' => 3562,
+                'cases_child' => 773,
+                'cases_cluster' => 129,
+                'cases_cumulative' => 4415101,
+                'cases_elderly' => 506,
+                'cases_fvax' => 1302,
+                'cases_import' => 16,
+                'cases_new' => 5899,
+                'cases_pvax' => 283,
+                'cases_recovered' => 8434,
+                'cases_recovered_cumulative' => 4291447,
+                'cases_unvax' => 752,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 0,
+                'cluster_education' => 0,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 136,
+                'cluster_religious' => 72,
+                'cluster_workplace' => 129,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-04-21',
+                'updated_at' => '2022-04-23 15:29:30',
+            ),
+            318 => 
+            array (
+                'cases_0_4' => 262,
+                'cases_12_17' => 714,
+                'cases_18_29' => 1398,
+                'cases_30_59' => 1462,
+                'cases_5_11' => 490,
+                'cases_60_69' => 839,
+                'cases_70_79' => 539,
+                'cases_80' => 298,
+                'cases_active' => 85404,
+                'cases_adolescent' => 714,
+                'cases_adult' => 4238,
+                'cases_boost' => 3814,
+                'cases_child' => 752,
+                'cases_cluster' => 135,
+                'cases_cumulative' => 4421443,
+                'cases_elderly' => 534,
+                'cases_fvax' => 1509,
+                'cases_import' => 20,
+                'cases_new' => 6342,
+                'cases_pvax' => 307,
+                'cases_recovered' => 9111,
+                'cases_recovered_cumulative' => 4300558,
+                'cases_unvax' => 712,
+                'cluster_community' => 0,
+                'cluster_detentionCentre' => 10,
+                'cluster_education' => 0,
+                'cluster_highRisk' => 0,
+                'cluster_import' => 169,
+                'cluster_religious' => 67,
+                'cluster_workplace' => 125,
+                'created_at' => '2022-04-23 15:29:30',
+                'date' => '2022-04-22',
+                'updated_at' => '2022-04-23 15:29:30',
             ),
         ));
-
-
+        
+        
     }
 }
