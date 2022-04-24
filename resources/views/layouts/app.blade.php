@@ -9,8 +9,8 @@
     <link rel="manifest" href="/manifest.json">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <script src="//unpkg.com/alpinejs" defer></script>
-{!! SEO::generate(true) !!}
-<!-- Global site tag (gtag.js) - Google Analytics -->
+    {!! SEO::generate(true) !!}
+    <!-- Global site tag (gtag.js) - Google Analytics -->
     <script defer src="https://www.googletagmanager.com/gtag/js?id=G-G0TL352WKG"></script>
     <script defer>
         window.dataLayer = window.dataLayer || [];
@@ -60,8 +60,10 @@
                        href="#work">{{__('My Work')}}</a>
                     <a class="px-2 py-2 mt-2 text-md font-bold text-white bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
                        href="#experience">{{__('Experience')}}</a>
-                    <a class="px-2 py-2 mt-2 text-md font-bold text-white bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-                       href="{{route('public.posts.index')}}">{{__('Blog')}}</a>
+                    @if(\App\Models\Post::count() > 0)
+                        <a class="px-2 py-2 mt-2 text-md font-bold text-white bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                           href="{{route('public.posts.index')}}">{{__('Blog')}}</a>
+                    @endif
                 @else
                     @canany(['post_access','work_access','comment_access','tag_access'])
                         <a class="block md:hidden px-2 py-2 mt-2 text-md font-bold text-black bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline @if(request()->is('admin/posts*')) bg-blue-200 dark:bg-blue-700  @else bg-gray-100 dark:bg-gray-700 @endif"
