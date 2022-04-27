@@ -61,7 +61,8 @@ class ImportPandemicService
             return collect(self::url)
                 ->map(function ($url, $key) use ($pool) {
                     $pool->as($key)
-                        ->retry(5, 100, fn($ex, Response $res) => $ex instanceof ConnectException || $res->failed())
+                        ->timeout(30)
+                        ->retry(5, 1000, fn($ex, Response $res) => $ex instanceof ConnectException || $res->failed())
                         ->get($url);
                 })
                 ->toArray();
@@ -69,7 +70,7 @@ class ImportPandemicService
             ->each(fn(Response $res, $key) => $this->recordHolder[$key] = $this->formatToArray($res));
     }
 
-    public static function clearCache()
+    public static function clearCache(): void
     {
         collect(self::url)->each(fn($_, $key) => Cache::forget($key));
     }
