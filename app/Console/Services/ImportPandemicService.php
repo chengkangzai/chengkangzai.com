@@ -61,7 +61,8 @@ class ImportPandemicService
             return collect(self::url)
                 ->map(function ($url, $key) use ($pool) {
                     $pool->as($key)
-                        ->retry(5, 100, fn($ex, Response $res) => $ex instanceof ConnectException || $res->failed())
+                        ->timeout(30)
+                        ->retry(5, 1000, fn($ex, Response $res) => $ex instanceof ConnectException || $res->failed())
                         ->get($url);
                 })
                 ->toArray();
