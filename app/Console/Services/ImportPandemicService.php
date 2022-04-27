@@ -70,7 +70,7 @@ class ImportPandemicService
             ->each(fn(Response $res, $key) => $this->recordHolder[$key] = $this->formatToArray($res));
     }
 
-    public static function clearCache()
+    public static function clearCache(): void
     {
         collect(self::url)->each(fn($_, $key) => Cache::forget($key));
     }
