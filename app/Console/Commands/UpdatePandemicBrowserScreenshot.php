@@ -15,6 +15,7 @@ class UpdatePandemicBrowserScreenshot extends Command
     public function handle(): int
     {
         $this->info('Taking screenshot...');
+
         try {
             BrowsershotLambda::url('https://chengkangzai.com/pandemic')
                 ->select('#covid-stat')
@@ -23,9 +24,11 @@ class UpdatePandemicBrowserScreenshot extends Command
                 ->save(public_path('src/ss_pandemic.png'));
         } catch (CouldNotTakeBrowsershot $e) {
             $this->error($e->getMessage());
+
             return self::FAILURE;
         }
         $this->info('Screenshot taken!');
+
         return self::SUCCESS;
     }
 }
