@@ -40,5 +40,4 @@ class CommentFactory extends Factory
             ];
         });
     }
-
 }

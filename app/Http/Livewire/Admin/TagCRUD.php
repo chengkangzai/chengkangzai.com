@@ -24,6 +24,7 @@ class TagCRUD extends Component
     public function render(): Factory|View|Application
     {
         $tags = Tag::orderByDesc('order_column')->paginate(10);
+
         return view('livewire.admin.tag-crud', compact('tags'))
             ->extends('layouts.admin')
             ->section('content');
@@ -33,6 +34,7 @@ class TagCRUD extends Component
     {
         if (app(TagService::class)->isTagSafeToDelete($tag) == false) {
             $this->addError('', 'The Tag is been used, cant be deleted');
+
             return;
         }
 
@@ -52,5 +54,4 @@ class TagCRUD extends Component
         Session::flash('success', 'Tag updated successfully');
         $this->resetPage();
     }
-
 }

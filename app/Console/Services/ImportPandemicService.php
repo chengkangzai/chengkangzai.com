@@ -27,10 +27,10 @@ use JetBrains\PhpStorm\ArrayShape;
 
 class ImportPandemicService
 {
-    const MOHBaseUrl = 'https://raw.githubusercontent.com/MoH-Malaysia/covid19-public/main';
-    const CITFBaseUrl = 'https://raw.githubusercontent.com/CITF-Malaysia/citf-public/main';
+    public const MOHBaseUrl = 'https://raw.githubusercontent.com/MoH-Malaysia/covid19-public/main';
+    public const CITFBaseUrl = 'https://raw.githubusercontent.com/CITF-Malaysia/citf-public/main';
 
-    const url = [
+    public const url = [
         'CASES_MALAYSIA' => self::MOHBaseUrl . '/epidemic/cases_malaysia.csv',
         'CASES_STATE' => self::MOHBaseUrl . '/epidemic/cases_state.csv',
         'DEATH_MALAYSIA' => self::MOHBaseUrl . '/epidemic/deaths_malaysia.csv',
@@ -62,17 +62,17 @@ class ImportPandemicService
                 ->map(function ($url, $key) use ($pool) {
                     $pool->as($key)
                         ->timeout(30)
-                        ->retry(5, 1000, fn($ex, Response $res) => $ex instanceof ConnectException || $res->failed())
+                        ->retry(5, 1000, fn ($ex, Response $res) => $ex instanceof ConnectException || $res->failed())
                         ->get($url);
                 })
                 ->toArray();
         }))
-            ->each(fn(Response $res, $key) => $this->recordHolder[$key] = $this->formatToArray($res));
+            ->each(fn (Response $res, $key) => $this->recordHolder[$key] = $this->formatToArray($res));
     }
 
     public static function clearCache(): void
     {
-        collect(self::url)->each(fn($_, $key) => Cache::forget($key));
+        collect(self::url)->each(fn ($_, $key) => Cache::forget($key));
     }
 
     #[ArrayShape(['content' => "\Illuminate\Support\Collection", 'exists' => "bool"])]
@@ -81,7 +81,7 @@ class ImportPandemicService
         $content = $this->recordHolder[$key];
         $hash = sha1($content);
         $exists = true;
-        if (!(Cache::has($key) && Cache::get($key) == $hash)) {
+        if (! (Cache::has($key) && Cache::get($key) == $hash)) {
             Cache::put($key, $hash, now()->addDay());
             $exists = false;
         }
@@ -92,7 +92,8 @@ class ImportPandemicService
     private static function takeIndex(array $array, int $index, $mode = 'number'): mixed
     {
         $defaultReturn = $mode == 'string' ? '' : 0;
-        return (!isset($array[$index]) || $array[$index] == '') ? $defaultReturn : $array[$index];
+
+        return (! isset($array[$index]) || $array[$index] == '') ? $defaultReturn : $array[$index];
     }
 
     private function formatToArray(Response $value): Collection
@@ -123,7 +124,6 @@ class ImportPandemicService
             VaxRegState::class => $this->getVaxRegState(),
             default => throw new \Exception('Model not found'),
         };
-
     }
 
     private function getCasesMalaysia(): ?Collection
@@ -134,6 +134,7 @@ class ImportPandemicService
         }
         global $cumCasesMalaysia;
         global $cumRecoveredMalaysia;
+
         return $content
             ->map(function ($record) use (&$cumCasesMalaysia, &$cumRecoveredMalaysia) {
                 $item = str_getcsv(str_replace("\"", "", $record));
@@ -142,6 +143,7 @@ class ImportPandemicService
                 $new_recovered = self::takeIndex($item, 3);
                 $cumRecoveredMalaysia = $new_recovered + $cumRecoveredMalaysia;
                 $i = 0;
+
                 return [
                     'date' => self::takeIndex($item, $i++),
                     'cases_new' => self::takeIndex($item, $i++),
@@ -176,7 +178,6 @@ class ImportPandemicService
                     'cases_recovered_cumulative' => $cumRecoveredMalaysia,
                 ];
             });
-
     }
 
     private function getCasesState(): ?Collection
@@ -214,8 +215,10 @@ class ImportPandemicService
                 $case->cases_60_69 = self::takeIndex($item, $i++);
                 $case->cases_70_79 = self::takeIndex($item, $i++);
                 $case->cases_80 = self::takeIndex($item, $i++);
+
                 return $case;
             });
+
         return $this->calcCumulativeCasesState($data);
     }
 
@@ -224,7 +227,7 @@ class ImportPandemicService
         foreach (CasesState::STATE as $state) {
             $cumCase = 0;
             $cumRecovered = 0;
-            $cases = $collection->filter(fn($case) => $case->state == $state);
+            $cases = $collection->filter(fn ($case) => $case->state == $state);
             foreach ($cases as $case) {
                 $cumCase += $case->cases_new;
                 $case->cases_cumulative = $cumCase;
@@ -233,7 +236,8 @@ class ImportPandemicService
                 $case->cases_recovered_cumulative = $cumRecovered;
             }
         }
-        return $collection->map(fn(CasesState $item) => $item->toArray());
+
+        return $collection->map(fn (CasesState $item) => $item->toArray());
     }
 
     private function getDeathsState(): ?Collection
@@ -259,6 +263,7 @@ class ImportPandemicService
                 $collect->deaths_fvax = self::takeIndex($item, $i++);
                 $collect->deaths_boost = self::takeIndex($item, $i++);
                 $collect->deaths_tat = self::takeIndex($item, $i++);
+
                 return $collect;
             });
 
@@ -271,7 +276,7 @@ class ImportPandemicService
             $cum = 0;
             $cumBid = 0;
             $cumBidDod = 0;
-            $cases = $collection->filter(fn($death) => $death->state == $state);
+            $cases = $collection->filter(fn ($death) => $death->state == $state);
             foreach ($cases as $case) {
                 $cum += $case->deaths_new;
                 $case->deaths_commutative = $cum;
@@ -283,7 +288,8 @@ class ImportPandemicService
                 $case->deaths_bid_dod_cumulative = $cumBidDod;
             }
         }
-        return $collection->map(fn(DeathsState $item) => $item->toArray());
+
+        return $collection->map(fn (DeathsState $item) => $item->toArray());
     }
 
     private function getDeathsMalaysia(): ?Collection
@@ -295,6 +301,7 @@ class ImportPandemicService
         global $cumDeathMalaysia;
         global $cumBidMalaysia;
         global $cumBidDodMalaysia;
+
         return $content
             ->map(function ($record) use ($cumBidDodMalaysia, &$cumDeathMalaysia, &$cumBidMalaysia) {
                 $item = explode(',', $record);
@@ -302,6 +309,7 @@ class ImportPandemicService
                 $cumBidMalaysia = $cumBidMalaysia + self::takeIndex($item, 2);
                 $cumBidDodMalaysia = $cumBidDodMalaysia + self::takeIndex($item, 3);
                 $i = 0;
+
                 return [
                     'date' => self::takeIndex($item, $i++),
                     'deaths_new' => self::takeIndex($item, $i++),
@@ -331,6 +339,7 @@ class ImportPandemicService
             ->map(function ($record) {
                 $item = explode(',', $record);
                 $i = 0;
+
                 return [
                     'date' => self::takeIndex($item, $i++),
                     'rtk_ag' => self::takeIndex($item, $i++),
@@ -350,6 +359,7 @@ class ImportPandemicService
             ->map(function ($record) {
                 $item = explode(',', $record);
                 $i = 0;
+
                 return [
                     'date' => self::takeIndex($item, $i++),
                     'state' => self::takeIndex($item, $i++),
@@ -365,15 +375,17 @@ class ImportPandemicService
         if ($exists) {
             return null;
         }
+
         return $content
             ->map(function ($record) {
                 $item = str_getcsv($record);
                 $i = 0;
+
                 return [
                     'cluster' => self::takeIndex($item, $i++),
                     'state' =>
                         collect(explode(',', self::takeIndex($item, $i++)))
-                            ->map(fn($number) => Population::STATE[$number])
+                            ->map(fn ($number) => Population::STATE[$number])
                             ->implode(','),
                     'district' => self::takeIndex($item, $i++),
                     'date_announced' => self::takeIndex($item, $i++, 'string'),
@@ -399,10 +411,12 @@ class ImportPandemicService
         if ($exists) {
             return null;
         }
+
         return $content
             ->map(function ($record) {
                 $item = explode(',', $record);
                 $i = 0;
+
                 return [
                     'date' => self::takeIndex($item, $i++),
                     'state' => self::takeIndex($item, $i++),
@@ -428,10 +442,12 @@ class ImportPandemicService
         if ($exists) {
             return null;
         }
+
         return $content
             ->map(function ($record) {
                 $item = explode(',', $record);
                 $i = 0;
+
                 return [
                     'date' => self::takeIndex($item, $i++),
                     'state' => self::takeIndex($item, $i++),
@@ -459,10 +475,12 @@ class ImportPandemicService
         if ($exists) {
             return null;
         }
+
         return $content
             ->map(function ($record) {
                 $item = explode(',', $record);
                 $i = 0;
+
                 return [
                     'date' => self::takeIndex($item, $i++),
                     'state' => self::takeIndex($item, $i++),
@@ -486,10 +504,12 @@ class ImportPandemicService
         if ($exists) {
             return null;
         }
+
         return $content
             ->map(function ($record) {
                 $item = explode(',', $record);
                 $i = 0;
+
                 return [
                     'state' => self::takeIndex($item, $i++),
                     'idxs' => self::takeIndex($item, $i++),
@@ -507,10 +527,12 @@ class ImportPandemicService
         if ($exists) {
             return null;
         }
+
         return $content
             ->map(function ($record) {
                 $vax = str_getcsv($record);
                 $i = 0;
+
                 return [
                     'date' => $this->takeIndex($vax, $i++),
                     'daily_partial' => $this->takeIndex($vax, $i++),
@@ -556,10 +578,12 @@ class ImportPandemicService
         if ($exists) {
             return null;
         }
+
         return $content
             ->map(function ($record) {
                 $vax = str_getcsv($record);
                 $i = 0;
+
                 return [
                     'date' => $this->takeIndex($vax, $i++),
                     'state' => $this->takeIndex($vax, $i++),
@@ -603,6 +627,7 @@ class ImportPandemicService
     private function formatVaxReg(array $array): array
     {
         $i = 0;
+
         return [
             'date' => $this->takeIndex($array, $i++),
             'state' => $this->takeIndex($array, $i++),
@@ -614,7 +639,7 @@ class ImportPandemicService
             'children' => $this->takeIndex($array, $i++),
             'elderly' => $this->takeIndex($array, $i++),
             'comorb' => $this->takeIndex($array, $i++),
-            'oku' => $this->takeIndex($array, $i++)
+            'oku' => $this->takeIndex($array, $i++),
         ];
     }
 
@@ -624,7 +649,8 @@ class ImportPandemicService
         if ($exists) {
             return null;
         }
-        return $content->map(fn($record) => $this->formatVaxReg(str_getcsv($record)));
+
+        return $content->map(fn ($record) => $this->formatVaxReg(str_getcsv($record)));
     }
 
     private function getVaxRegState(): ?Collection
@@ -633,6 +659,7 @@ class ImportPandemicService
         if ($exists) {
             return null;
         }
-        return $content->map(fn($record) => $this->formatVaxReg(str_getcsv($record)));
+
+        return $content->map(fn ($record) => $this->formatVaxReg(str_getcsv($record)));
     }
 }

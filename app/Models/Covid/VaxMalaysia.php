@@ -44,4 +44,3 @@ class VaxMalaysia extends Model
         return $query->orderByDesc('date')->take(1);
     }
 }
-

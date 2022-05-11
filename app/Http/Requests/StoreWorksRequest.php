@@ -23,7 +23,7 @@ class StoreWorksRequest extends FormRequest
             'picture' => ['required', 'mimes:jpg,bmp,png,jpeg,gif'],
             'url' => ['nullable', 'string'],
             'github_url' => ['nullable', 'string'],
-            'status' => ['required', 'string']
+            'status' => ['required', 'string'],
         ];
     }
 }

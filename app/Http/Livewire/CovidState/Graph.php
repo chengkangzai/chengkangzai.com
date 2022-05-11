@@ -107,7 +107,7 @@ class Graph extends Component
         $deaths = $this->service->getDeath($this->state, $this->filter);
         $healthCareCategory = $this->service->getHealthCare($this->state, $this->filter);
 
-        $this->date = $cases->pluck('date')->map(fn($date) => Carbon::parse($date)->toDateString());
+        $this->date = $cases->pluck('date')->map(fn ($date) => Carbon::parse($date)->toDateString());
         $this->confirmCase = $cases->pluck('cases_new');
         $this->recoveredCase = $cases->pluck('cases_recovered');
         $this->cumRecoveredCase = $cases->pluck('cases_recovered_cumulative');
@@ -123,5 +123,4 @@ class Graph extends Component
         $this->cat4 = $healthCareCategory->pluck('cat4');
         $this->cat5 = $healthCareCategory->pluck('cat5');
     }
-
 }

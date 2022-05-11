@@ -19,7 +19,6 @@ class ActiveCaseVsHealthCare extends Component
     public Collection $cat4;
     public Collection $cat5;
 
-
     public function render(): Factory|View|Application
     {
         return view('livewire.covid-dashboard.graph.active-case-vs-health-care');

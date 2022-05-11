@@ -19,7 +19,7 @@ class StorePostRequest extends FormRequest
             'title' => ['string', 'required', 'max:255','unique:posts'],
             'tags' => ['array'],
             'status' => ['required', 'string'],
-            'content' => ['required', 'string']
+            'content' => ['required', 'string'],
         ];
     }
 }

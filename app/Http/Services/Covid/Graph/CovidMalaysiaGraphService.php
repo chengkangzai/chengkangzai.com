@@ -10,7 +10,7 @@ class CovidMalaysiaGraphService
 {
     public int|float $cacheSecond;
 
-    const FILTER = [
+    public const FILTER = [
         'TWO_WEEK', 'ONE_MONTH', 'THREE_MONTH', 'SIX_MONTH',
     ];
 
@@ -26,6 +26,7 @@ class CovidMalaysiaGraphService
         })
             ->map(function ($case) {
                 $case->activeCase=($case->cases_cumulative - $case->cases_recovered_cumulative);
+
                 return $case;
             });
     }
@@ -48,6 +49,7 @@ class CovidMalaysiaGraphService
         $PKRCS = Cache::remember(__METHOD__ . 'PKRCS' . $filter, $this->cacheSecond, function () use ($filter) {
             return DB::table('PKRC')->orderByDesc('date')->take($this->getDateScope($filter) * 16)->get(['pkrc_covid', 'date']);
         });
+
         return $this->formatHealthCare($this->getCases($filter), $icu, $hospitals, $PKRCS);
     }
 
@@ -78,5 +80,4 @@ class CovidMalaysiaGraphService
             return $collect;
         });
     }
-
 }

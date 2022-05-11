@@ -21,7 +21,7 @@ class Population extends Model
         'pop_60',
     ];
 
-    const STATE = [
+    public const STATE = [
         0 => 'Malaysia',
         1 => "Johor",
         2 => "Kedah",

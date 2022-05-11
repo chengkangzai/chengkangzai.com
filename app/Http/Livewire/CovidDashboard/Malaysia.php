@@ -2,7 +2,6 @@
 
 namespace App\Http\Livewire\CovidDashboard;
 
-
 use App\Http\Services\Covid\CasesMalaysiaService;
 use App\Models\Covid\CasesMalaysia;
 use App\Models\Covid\DeathsMalaysia;
@@ -17,7 +16,6 @@ use Livewire\Component;
 
 class Malaysia extends Component
 {
-
     public CasesMalaysia $cases;
     public DeathsMalaysia $death;
     public TestMalaysia $test;

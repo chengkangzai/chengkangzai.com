@@ -22,22 +22,24 @@ class CasesStateService
 
     public function getDeath(): Collection
     {
-        return Cache::remember('CasesState.Death', $this->cacheSecond, fn() => DeathsState::latestOne()->get())
+        return Cache::remember('CasesState.Death', $this->cacheSecond, fn () => DeathsState::latestOne()->get())
             ->map(function (DeathsState $deathsState) {
                 $deathsState->date_diffWord = $this->getDiffForHumans($deathsState->date);
+
                 return $deathsState;
             });
     }
 
     public function getCases(): Collection
     {
-        return Cache::remember('CasesState.Cases', $this->cacheSecond, fn() => CasesState::latestOne()->get())
+        return Cache::remember('CasesState.Cases', $this->cacheSecond, fn () => CasesState::latestOne()->get())
             ->map(function (CasesState $cases) {
                 $pop = $this->getPop()[$cases->state];
                 $cases->newPercentage = ($cases->cases_new / $pop) * 100;
                 $cases->cumPercentage = ($cases->cases_cumulative / $pop) * 100;
                 $cases->activeCasePercentage = ($cases->activeCase / $pop) * 100;
                 $cases->date_diffWord = $this->getDiffForHumans($cases->date);
+
                 return $cases;
             });
     }
@@ -52,6 +54,7 @@ class CasesStateService
             ->map(function ($test) {
                 $test->totalTest = $test->rtk_ag + $test->pcr;
                 $test->date_diffWord = $this->getDiffForHumans($test->date);
+
                 return $test;
             });
     }
@@ -59,11 +62,13 @@ class CasesStateService
     public function calcPositiveRate(): Collection
     {
         $tests = $this->getTest()->pluck('totalTest', 'state');
+
         return Cache::remember(__METHOD__, $this->cacheSecond, function () {
             return CasesState::where('date', $this->getTestDateShouldQuery())->get();
         })
             ->map(function ($cases) use ($tests) {
                 $cases->positiveRate = ($cases->cases_new / $tests[$cases->state]) * 100;
+
                 return $cases;
             });
     }
@@ -71,8 +76,10 @@ class CasesStateService
     public function calcFatalityRate(): Collection
     {
         $deaths = $this->getDeath()->pluck('deaths_commutative', 'state');
+
         return $this->getCases()->map(function ($cases) use ($deaths) {
             $cases->fatalityRate = ($deaths[$cases->state] / $cases->cases_cumulative) * 100;
+
             return $cases;
         });
     }
@@ -93,7 +100,7 @@ class CasesStateService
 
     private function getTestDateShouldQuery(): string
     {
-        $dateOfTest = Cache::remember(__METHOD__, $this->cacheSecond, fn() => TestState::query()->orderByDesc('date')->take(1)->get()->first()->date);
+        $dateOfTest = Cache::remember(__METHOD__, $this->cacheSecond, fn () => TestState::query()->orderByDesc('date')->take(1)->get()->first()->date);
         $dateOfCase = $this->getCases()->first()->date;
 
         if ($dateOfCase == $dateOfTest) {
@@ -107,7 +114,6 @@ class CasesStateService
         return $dateOfCase;
     }
 
-
     private function getDiffForHumans($date): string
     {
         return Carbon::parse($date)->locale(app()->getLocale())->diffForHumans(['options' => Carbon::ONE_DAY_WORDS]);
@@ -118,10 +124,9 @@ class CasesStateService
         $collect['cases'] = $this->getCases()->first()->date->toDateString();
         $collect['death'] = $this->getDeath()->first()->date->toDateString();
         $collect['test'] = $this->getTest()->first()->date->toDateString();
-        $collect['cluster'] = Cache::remember(__METHOD__, $this->cacheSecond, fn() => Cluster::orderByDesc('id')->first()->created_at->toDateString());
+        $collect['cluster'] = Cache::remember(__METHOD__, $this->cacheSecond, fn () => Cluster::orderByDesc('id')->first()->created_at->toDateString());
         $collect['test_dateDiffWord'] = $this->getDiffForHumans($this->getTest()->last()->date);
+
         return $collect;
     }
-
-
 }

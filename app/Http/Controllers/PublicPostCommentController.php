@@ -13,13 +13,13 @@ use Illuminate\Support\Facades\Notification;
 
 class PublicPostCommentController extends Controller
 {
-    function store(StoreCommentRequest $request, Post $post): RedirectResponse
+    public function store(StoreCommentRequest $request, Post $post): RedirectResponse
     {
         $comment = $post->comments()->create([
             'name' => $request->name,
             'email' => $request->email,
             'comment' => $request->comment,
-            'status' => Comment::STATUS['PUBLISH']
+            'status' => Comment::STATUS['PUBLISH'],
         ]);
 
         if (App::isProduction()) {

@@ -24,7 +24,7 @@ class MicrosoftGraphService
             'urlAuthorize' => config('azure.authority') . config('azure.authorizeEndpoint'),
             'urlAccessToken' => config('azure.authority') . config('azure.tokenEndpoint'),
             'urlResourceOwnerDetails' => '',
-            'scopes' => config('azure.scopes')
+            'scopes' => config('azure.scopes'),
         ]);
     }
 
@@ -35,6 +35,7 @@ class MicrosoftGraphService
         // Create a Graph client
         $graph = new MicrosoftGraph();
         $graph->setAccessToken($accessToken);
+
         return $graph;
     }
 }

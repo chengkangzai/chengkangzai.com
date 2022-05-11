@@ -26,6 +26,7 @@ class VaxTakenWeekly extends Component
         if ($this->readyToLoad) {
             $this->initVariable();
         }
+
         return view('livewire.covid-vaccination.vax-taken-weekly');
     }
 
@@ -36,6 +37,7 @@ class VaxTakenWeekly extends Component
             ->sortByDesc('date')
             ->map(function (VaxMalaysia $vaxState) {
                 $vaxState->weekYear = $vaxState->date->format('W / y');
+
                 return $vaxState;
             })
             ->groupBy('weekYear')

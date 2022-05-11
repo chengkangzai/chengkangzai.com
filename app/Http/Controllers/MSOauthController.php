@@ -43,12 +43,12 @@ class MSOauthController extends Controller
         $request->session()->forget('oauthState');
         $providedState = $request->query('state');
 
-        if (!isset($expectedState)) {
+        if (! isset($expectedState)) {
             // If there is no expected state in the session, do nothing and redirect to the home page.
             return redirect(route('admin.scheduleConfig.index'));
         }
 
-        if (!isset($providedState) || $expectedState != $providedState) {
+        if (! isset($providedState) || $expectedState != $providedState) {
             return redirect(route('admin.scheduleConfig.index'))
                 ->with('error', 'Invalid auth state')
                 ->with('errorDetail', 'The provided auth state did not match the expected value');
@@ -63,7 +63,7 @@ class MSOauthController extends Controller
             try {
                 // Make the token request
                 $accessToken = $oauthClient->getAccessToken('authorization_code', [
-                    'code' => $authCode
+                    'code' => $authCode,
                 ]);
 
                 $graph = new Graph();
@@ -74,7 +74,6 @@ class MSOauthController extends Controller
                     ->execute();
 
                 $this->tokenService->storeTokens($accessToken, $user, auth()->user());
-
             } catch (IdentityProviderException $e) {
                 return redirect(route('admin.scheduleConfig.index'))
                     ->with('error', 'Error requesting access token')
@@ -90,6 +89,7 @@ class MSOauthController extends Controller
     public function signout(): Redirector|Application|RedirectResponse
     {
         $this->tokenService->clearTokens(auth()->user());
+
         return redirect('/');
     }
 }

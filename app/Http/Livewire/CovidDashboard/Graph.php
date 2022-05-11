@@ -12,7 +12,6 @@ use Livewire\Component;
 
 class Graph extends Component
 {
-
     public string $filter = 'TWO_WEEK';
 
     public Collection $date;
@@ -42,6 +41,7 @@ class Graph extends Component
         $this->initHealthCareVariable($healthCareCategory);
 
         $this->notifyChild();
+
         return view('livewire.covid-dashboard.graph');
     }
 
@@ -76,7 +76,7 @@ class Graph extends Component
 
     public function initCasesVariable(Collection $cases, Collection $deaths): void
     {
-        $this->date = $cases->pluck('date')->map(fn($date) => Carbon::parse($date)->toDateString());
+        $this->date = $cases->pluck('date')->map(fn ($date) => Carbon::parse($date)->toDateString());
         $this->confirmCase = $cases->pluck('cases_new');
         $this->recoveredCase = $cases->pluck('cases_recovered');
         $this->cumRecoveredCase = $cases->pluck('cases_recovered_cumulative');
