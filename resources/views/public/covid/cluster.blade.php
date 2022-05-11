@@ -2,9 +2,7 @@
 
 @section('content')
     @include('partial.rocket')
-    <livewire:cluster-search/>
-
-
+    <livewire:cluster-search />
 @endsection
 
 @section('footer')

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,7 +23,9 @@
         }
 
         gtag('js', new Date());
-        gtag('config', 'G-G0TL352WKG', {cookie_flags: 'SameSite=None;Secure'});
+        gtag('config', 'G-G0TL352WKG', {
+            cookie_flags: 'SameSite=None;Secure'
+        });
     </script>
     <script src="//unpkg.com/alpinejs" defer></script>
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -31,26 +34,28 @@
     @laravelPWA
     @livewireStyles
 </head>
+
 <body>
-<div x-data="{ sidebarOpen: false }" class="flex h-screen bg-gray-200 font-roboto">
-    @include('layouts.navigation')
+    <div x-data="{ sidebarOpen: false }" class="flex h-screen bg-gray-200 font-roboto">
+        @include('layouts.navigation')
 
-    <div class="flex overflow-hidden flex-col flex-1">
-        @include('layouts.header')
+        <div class="flex overflow-hidden flex-col flex-1">
+            @include('layouts.header')
 
-        <main class="overflow-y-auto overflow-x-hidden flex-1 bg-gray-200">
-            <div class="container px-6 py-8 mx-auto">
-                <h3 class="mb-4 text-3xl font-medium text-gray-700">
-                    @yield('header')
-                </h3>
+            <main class="overflow-y-auto overflow-x-hidden flex-1 bg-gray-200">
+                <div class="container px-6 py-8 mx-auto">
+                    <h3 class="mb-4 text-3xl font-medium text-gray-700">
+                        @yield('header')
+                    </h3>
 
-                @yield('content')
-            </div>
-        </main>
+                    @yield('content')
+                </div>
+            </main>
+        </div>
     </div>
-</div>
 </body>
 @livewireScripts
 @livewire('livewire-ui-modal')
 @stack('script')
+
 </html>

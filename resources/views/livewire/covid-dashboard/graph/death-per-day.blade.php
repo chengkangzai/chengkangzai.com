@@ -1,5 +1,5 @@
 <div>
-    <h2 class="text-2xl pb-2">{{__('Deaths')}}</h2>
+    <h2 class="text-2xl pb-2">{{ __('Deaths') }}</h2>
     <hr class="py-2">
     <canvas id="death-case-per-day"></canvas>
 </div>
@@ -19,23 +19,22 @@
             pointBorderWidth: 0.3,
         }
         let deathCareChart = new Chart(
-            deathCareArea,
-            {
+            deathCareArea, {
                 type: 'line',
                 data: {
                     labels: {!! $date !!},
                     datasets: [{
-                        label: '{{__('Deaths')}}',
+                        label: '{{ __('Deaths') }}',
                         backgroundColor: 'rgb(255, 99, 132)',
                         borderColor: 'rgb(255, 99, 132)',
                         data: {!! $deathCase !!},
                     }, {
-                        label: '{{__('Brought in Death (BID) ')}}',
+                        label: '{{ __('Brought in Death (BID) ') }}',
                         backgroundColor: 'rgb(99,120,255)',
                         borderColor: 'rgb(99,120,255)',
                         data: {!! $bidCase !!},
                     }, {
-                        label: '{{__('Died of disease (DOD) ')}}',
+                        label: '{{ __('Died of disease (DOD) ') }}',
                         backgroundColor: 'rgb(201,119,60)',
                         borderColor: 'rgb(201,119,60)',
                         data: {!! $dodCase !!},
@@ -45,30 +44,29 @@
             }
         );
 
-        document.addEventListener('CovidMalaysiaUpdate', function (test) {
+        document.addEventListener('CovidMalaysiaUpdate', function(test) {
             const date = test.detail.date;
             const deathCase = test.detail.deathCase;
             const bidCase = test.detail.bidCase;
             const dodCase = test.detail.dodCase;
             deathCareChart.destroy();
             deathCareChart = new Chart(
-                deathCareArea,
-                {
+                deathCareArea, {
                     type: 'line',
                     data: {
                         labels: date,
                         datasets: [{
-                            label: '{{__('Deaths')}}',
+                            label: '{{ __('Deaths') }}',
                             backgroundColor: 'rgb(255, 99, 132)',
                             borderColor: 'rgb(255, 99, 132)',
                             data: deathCase,
                         }, {
-                            label: '{{__('Brought in Death (BID) ')}}',
+                            label: '{{ __('Brought in Death (BID) ') }}',
                             backgroundColor: 'rgb(99,120,255)',
                             borderColor: 'rgb(99,120,255)',
                             data: bidCase,
                         }, {
-                            label: '{{__('Died of disease (DOD) ')}}',
+                            label: '{{ __('Died of disease (DOD) ') }}',
                             backgroundColor: 'rgb(201,119,60)',
                             borderColor: 'rgb(201,119,60)',
                             data: dodCase,
