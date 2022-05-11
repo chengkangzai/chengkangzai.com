@@ -94,25 +94,23 @@
             <x-divider/>
             <table class="w-full">
                 <tr>
-                    <td class="text-sm font-semibold px-4 py-2">
-                        {{__('Intake Code')}} : {{$config->intake_code}}
-                    </td>
-                    <td class="text-sm font-semibold px-4 py-2">
-                        {{__('Grouping')}} : {{$config->grouping}}
-                    </td>
+                    <td class="text-sm font-semibold px-4 py-2">{{__('Intake code')}}</td>
+                    <td class="text-sm font-semibold px-4 py-2">{{$config->intake_code}}</td>
+                </tr>
+                <tr>
+                    <td class="text-sm font-semibold px-4 py-2">{{__('Grouping')}}</td>
+                    <td class="text-sm font-semibold px-4 py-2">{{$config->grouping}}</td>
+                </tr>
+                <tr>
+                    <td class="text-sm font-semibold px-4 py-2">{{__('Sync weekly')}}</td>
+                    <td class="text-sm font-semibold px-4 py-2">{{$config->is_subscribed ? __('Yes'):__('No')}}</td>
                 </tr>
                 <tr>
                     <td class="text-sm font-semibold px-4 py-2">
                         {{__('Ignored Module')}} :
                     </td>
                     <td class="text-sm font-semibold px-4 py-2">
-                        @foreach($config->except as $ignoredModule)
-                            @if ($loop->last)
-                                {{$ignoredModule}}
-                            @else
-                                {{$ignoredModule}},
-                            @endif
-                        @endforeach
+                        {{$config->except ? implode(', ', $config->except):__('None')}}
                     </td>
                 </tr>
                 <tr>
