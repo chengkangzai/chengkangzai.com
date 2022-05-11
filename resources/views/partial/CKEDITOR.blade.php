@@ -1,4 +1,4 @@
-<script src="{{asset('ckeditor5/build/ckeditor.js')}}"></script>
+<script src="{{ asset('ckeditor5/build/ckeditor.js') }}"></script>
 <script>
     class ImageUploadAdapter {
         constructor(loader) {
@@ -22,8 +22,8 @@
 
         _initRequest() {
             const xhr = this.xhr = new XMLHttpRequest();
-            xhr.open('POST', '{{route('admin.image.store')}}', true);
-            xhr.setRequestHeader('x-csrf-token', '{{csrf_token()}}');
+            xhr.open('POST', '{{ route('admin.image.store') }}', true);
+            xhr.setRequestHeader('x-csrf-token', '{{ csrf_token() }}');
             xhr.responseType = 'json';
         }
 

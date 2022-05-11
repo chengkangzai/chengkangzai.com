@@ -1,5 +1,5 @@
 <div>
-    <h2 class="text-2xl pb-2">{{__('Cases per Day')}}</h2>
+    <h2 class="text-2xl pb-2">{{ __('Cases per Day') }}</h2>
     <hr class="py-2">
     <canvas id="case-per-day"></canvas>
 </div>
@@ -19,18 +19,17 @@
             pointBorderWidth: 0.3,
         }
         let caseChart = new Chart(
-            caseArea,
-            {
+            caseArea, {
                 type: 'line',
                 data: {
                     labels: {!! $date !!},
                     datasets: [{
-                        label: '{{__('Confirm Case')}}',
+                        label: '{{ __('Confirm Case') }}',
                         backgroundColor: 'rgb(255, 99, 132)',
                         borderColor: 'rgb(255, 99, 132)',
                         data: {!! $confirmCase !!},
-                    },{
-                        label: '{{__('Recovered Case')}}',
+                    }, {
+                        label: '{{ __('Recovered Case') }}',
                         backgroundColor: 'rgb(99,120,255)',
                         borderColor: 'rgb(99,120,255)',
                         data: {!! $recoveredCase !!},
@@ -40,24 +39,23 @@
             }
         );
 
-        document.addEventListener('CovidStateUpdate', function (test) {
+        document.addEventListener('CovidStateUpdate', function(test) {
             const date = test.detail.date;
             const confirmCase = test.detail.confirmCase;
             const recoveredCase = test.detail.recoveredCase;
             caseChart.destroy();
             caseChart = new Chart(
-                caseArea,
-                {
+                caseArea, {
                     type: 'line',
                     data: {
                         labels: date,
                         datasets: [{
-                            label: '{{__('Confirm Case')}}',
+                            label: '{{ __('Confirm Case') }}',
                             backgroundColor: 'rgb(255, 99, 132)',
                             borderColor: 'rgb(255, 99, 132)',
                             data: confirmCase,
                         }, {
-                            label: '{{__('Recovered Case')}}',
+                            label: '{{ __('Recovered Case') }}',
                             backgroundColor: 'rgb(99,120,255)',
                             borderColor: 'rgb(99,120,255)',
                             data: recoveredCase,

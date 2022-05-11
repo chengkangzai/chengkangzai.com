@@ -1,5 +1,5 @@
 <div>
-    <h2 class="text-2xl pb-2">{{__('Active Case vs Health Care')}}</h2>
+    <h2 class="text-2xl pb-2">{{ __('Active Case vs Health Care') }}</h2>
     <hr class="py-2">
     <canvas id="active-case-vs-health-care"></canvas>
 </div>
@@ -19,38 +19,37 @@
             pointBorderWidth: 0.3,
         }
         let activeCaseVsHealthCareChart = new Chart(
-            activeCaseVsHealthCareArea,
-            {
+            activeCaseVsHealthCareArea, {
                 type: 'line',
                 data: {
                     labels: {!! $date !!},
                     datasets: [{
-                        label: '{{__('Active Case')}}',
+                        label: '{{ __('Active Case') }}',
                         backgroundColor: '#D97706',
                         borderColor: '#D97706',
                         data: {!! $activeCase !!},
                     }, {
-                        label: '{{__('Home Quarantine')}}',
+                        label: '{{ __('Home Quarantine') }}',
                         backgroundColor: '#FCA5A5',
                         borderColor: '#FCA5A5',
                         data: {!! $cat1 !!},
                     }, {
-                        label: '{{__('PKRC')}}',
+                        label: '{{ __('PKRC') }}',
                         backgroundColor: '#F87171',
                         borderColor: '#F87171',
                         data: {!! $cat2 !!},
                     }, {
-                        label: '{{__('Hospitalized')}}',
+                        label: '{{ __('Hospitalized') }}',
                         backgroundColor: '#EF4444',
                         borderColor: '#EF4444',
                         data: {!! $cat3 !!},
                     }, {
-                        label: '{{__('ICU')}}',
+                        label: '{{ __('ICU') }}',
                         backgroundColor: '#B91C1C',
                         borderColor: '#B91C1C',
                         data: {!! $cat4 !!},
                     }, {
-                        label: '{{__('Ventilated')}}',
+                        label: '{{ __('Ventilated') }}',
                         backgroundColor: '#7F1D1D',
                         borderColor: '#7F1D1D',
                         data: {!! $cat5 !!},
@@ -60,7 +59,7 @@
             }
         );
 
-        document.addEventListener('CovidStateUpdate', function (test) {
+        document.addEventListener('CovidStateUpdate', function(test) {
             const date = test.detail.date;
             const activeCase = test.detail.activeCase;
             const cat1 = test.detail.cat1;
@@ -70,38 +69,37 @@
             const cat5 = test.detail.cat5;
             activeCaseVsHealthCareChart.destroy();
             activeCaseVsHealthCareChart = new Chart(
-                activeCaseVsHealthCareArea,
-                {
+                activeCaseVsHealthCareArea, {
                     type: 'line',
                     data: {
                         labels: date,
                         datasets: [{
-                            label: '{{__('Active Case')}}',
+                            label: '{{ __('Active Case') }}',
                             backgroundColor: '#D97706',
                             borderColor: '#D97706',
                             data: activeCase,
                         }, {
-                            label: '{{__('Home Quarantine')}}',
+                            label: '{{ __('Home Quarantine') }}',
                             backgroundColor: '#FCA5A5',
                             borderColor: '#FCA5A5',
                             data: cat1,
                         }, {
-                            label: '{{__('PKRC')}}',
+                            label: '{{ __('PKRC') }}',
                             backgroundColor: '#F87171',
                             borderColor: '#F87171',
                             data: cat2,
                         }, {
-                            label: '{{__('Hospitalized')}}',
+                            label: '{{ __('Hospitalized') }}',
                             backgroundColor: '#EF4444',
                             borderColor: '#EF4444',
                             data: cat3,
                         }, {
-                            label: '{{__('ICU')}}',
+                            label: '{{ __('ICU') }}',
                             backgroundColor: '#B91C1C',
                             borderColor: '#B91C1C',
                             data: cat4,
                         }, {
-                            label: '{{__('Ventilated')}}',
+                            label: '{{ __('Ventilated') }}',
                             backgroundColor: '#7F1D1D',
                             borderColor: '#7F1D1D',
                             data: cat5,
