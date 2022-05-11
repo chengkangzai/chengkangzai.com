@@ -1,4 +1,4 @@
-<section class="mt-2" wire:init="load" xmlns:wire="">
+<section class="mt-2" wire:init="load" xmlns:wire="" id="covid-stat">
     <div class="sm:grid sm:grid-cols-3 sm:grid-rows-3 sm:gap-2 space-y-2 sm:space-y-0">
         <div class="dark:bg-white bg-gray-50 py-4 sm:py-8 rounded-xl shadow ">
             <h2 class="text-2xl">{{ trans('covid.New_Case', ['day' => $cases->date_diffWord]) }}</h2>
