@@ -3,8 +3,8 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
-use Spatie\Browsershot\Browsershot;
 use Spatie\Browsershot\Exceptions\CouldNotTakeBrowsershot;
+use Wnx\SidecarBrowsershot\BrowsershotLambda;
 
 class UpdatePandemicBrowserScreenshot extends Command
 {
@@ -16,7 +16,7 @@ class UpdatePandemicBrowserScreenshot extends Command
     {
         $this->info('Taking screenshot...');
         try {
-            Browsershot::url('https://chengkangzai.com.test/pandemic##covid-stat')
+            BrowsershotLambda::url('https://chengkangzai.com/pandemic')
                 ->select('#covid-stat')
                 ->windowSize(1920, 1080)
                 ->waitUntilNetworkIdle()
