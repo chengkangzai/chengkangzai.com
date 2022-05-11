@@ -18,17 +18,6 @@ class InjestStation
     public function inject(?Collection $records, string $modelName): void
     {
         /** @var Model $modelName */
-        if (! $records) {
-            $this->console->info("[$modelName] : Not inject as the hash value is the same");
-
-            return;
-        }
-        if ($modelName::count() == $records->count()) {
-            $this->console->info("[$modelName] : Not inject as the data is the same.");
-
-            return;
-        }
-
         // get the table mapped to the model and truncate all data
         $modelName::truncate();
 
@@ -59,5 +48,22 @@ class InjestStation
         }
 
         $this->console->getOutput()->progressFinish();
+    }
+
+    public function shouldUpdate(?Collection $records, string $modelName): bool
+    {
+        /** @var Model $modelName */
+        if (! $records) {
+            $this->console->info("[$modelName] : Not inject as the hash value is the same");
+
+            return false;
+        }
+        if ($modelName::count() == $records->count()) {
+            $this->console->info("[$modelName] : Not inject as the data is the same.");
+
+            return false;
+        }
+
+        return true;
     }
 }

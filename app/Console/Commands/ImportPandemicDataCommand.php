@@ -77,16 +77,21 @@ class ImportPandemicDataCommand extends Command
 
             $this->info('Getting data from Github...');
             $service = new ImportPandemicService();
+            $shouldUpdate = false;
 
             foreach ($this->models as $model) {
                 $record = $service->factory($model);
-                $injectStation->inject($record, $model);
+                if ($injectStation->shouldUpdate($record, $model)) {
+                    $injectStation->inject($record, $model);
+                    $shouldUpdate = true;
+                }
             }
             $runTime = microtime(true) - $time;
             $this->info("Import completed in {$runTime} seconds");
 
-            if (App::isProduction()) {
+            if (App::isProduction() && $shouldUpdate) {
                 Notification::send(new SuperAdminNotifiable(), new ImportTaskSuccessNotification(self::class, $this->models, $runTime));
+                $this->call(UpdatePandemicBrowserScreenshot::class);
             }
         } catch (Exception $e) {
             $this->error($e->getMessage());
