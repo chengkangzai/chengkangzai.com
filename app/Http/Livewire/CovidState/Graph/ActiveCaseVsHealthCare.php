@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Livewire\CovidState\Graph;
 
 use Illuminate\Contracts\Foundation\Application;
@@ -17,7 +18,6 @@ class ActiveCaseVsHealthCare extends Component
     public Collection $cat3;
     public Collection $cat4;
     public Collection $cat5;
-
 
     public function render(): Factory|View|Application
     {

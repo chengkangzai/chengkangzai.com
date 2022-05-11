@@ -8,7 +8,7 @@ use Storage;
 
 class ImageController extends Controller
 {
-    const PUBLIC_PATH = 'chengkangzai.com/images/';
+    public const PUBLIC_PATH = 'chengkangzai.com/images/';
 
     public function store(Request $request): JsonResponse
     {

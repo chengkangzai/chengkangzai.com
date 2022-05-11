@@ -70,6 +70,7 @@ class ImportPandemicDataCommand extends Command
                     $injectStation->truncate($this->models);
                 } else {
                     $this->info('Import cancelled');
+
                     return self::INVALID;
                 }
             }
@@ -92,6 +93,7 @@ class ImportPandemicDataCommand extends Command
             if (App::isProduction()) {
                 Notification::send(new SuperAdminNotifiable(), new ImportTaskFailedNotification($e->getMessage()));
             }
+
             return self::INVALID;
         }
 
@@ -99,5 +101,3 @@ class ImportPandemicDataCommand extends Command
         return self::SUCCESS;
     }
 }
-
-

@@ -20,18 +20,21 @@ class WorksController extends Controller
     public function index(): Factory|View|Application
     {
         $works = Works::withCount('tags')->paginate(10);
+
         return view('admin.work.index', compact('works'));
     }
 
     public function create(): Factory|View|Application
     {
         $tags = Tag::all();
+
         return view('admin.work.create', compact('tags'));
     }
 
     public function store(StoreWorksRequest $request): RedirectResponse
     {
         $path = $request->file('picture')->store(Works::S3_PATH, 's3');
+
         try {
             DB::transaction(function () use ($request, $path) {
                 $work = Works::create([
@@ -45,11 +48,14 @@ class WorksController extends Controller
                 if ($request->get('tags')) {
                     $work->attachTags($request->get('tags'));
                 }
+
                 return $work;
             });
+
             return redirect()->route('admin.works.index')->with('success', __('Work added successfully'));
         } catch (Throwable|Exception $e) {
             Storage::disk('s3')->delete($path);
+
             return redirect()->route('admin.works.index')->withErrors(__('Whoops! Something went wrong. Please try again later.'));
         }
     }
@@ -62,6 +68,7 @@ class WorksController extends Controller
     public function edit(Works $work): Factory|View|Application
     {
         $tags = Tag::all();
+
         return view('admin.work.edit', compact('work', 'tags'));
     }
 
@@ -77,7 +84,7 @@ class WorksController extends Controller
                 $work->update([
                     'name' => $request->get('name'),
                     'description' => $request->get('description'),
-                    'picture_name' => !$request->hasFile('picture') ? $work->picture_name : basename($path),
+                    'picture_name' => ! $request->hasFile('picture') ? $work->picture_name : basename($path),
                     'url' => $request->get('url'),
                     'github_url' => $request->get('github_url'),
                     'status' => $request->get('status'),
@@ -88,8 +95,10 @@ class WorksController extends Controller
                 if ($request->missing('tags')) {
                     $work->tags()->detach();
                 }
+
                 return $work;
             });
+
             return redirect()->route('admin.works.index')->with('success', __('Work updated successfully'));
         } catch (Throwable $e) {
             return redirect()->route('admin.works.index')->withErrors(__('Whoops! Something went wrong. Please try again later.'));
@@ -102,6 +111,7 @@ class WorksController extends Controller
         if (Storage::disk('s3')->exists(Works::S3_PATH . $work->picture_name)) {
             Storage::disk('s3')->delete(Works::S3_PATH . $work->picture_name);
         }
+
         return back();
     }
 }

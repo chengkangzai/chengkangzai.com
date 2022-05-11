@@ -2,7 +2,6 @@
 
 namespace App\Http\Livewire\CovidDashboard;
 
-
 use App\Http\Services\Covid\CasesMalaysiaService;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
@@ -27,6 +26,5 @@ class About extends Component
     public function load()
     {
         $this->readyToLoad = true;
-
     }
 }

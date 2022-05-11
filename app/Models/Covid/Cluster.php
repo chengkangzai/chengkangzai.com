@@ -30,7 +30,7 @@ class Cluster extends Model
         'recovered',
     ];
 
-    const CLUSTER_CATEGORY = [
+    public const CLUSTER_CATEGORY = [
         "import" => "Import",
         "religious" => "Religious",
         "workplace" => "Workplace",
@@ -40,7 +40,7 @@ class Cluster extends Model
         "education" => "Education",
     ];
 
-    const STATE = [
+    public const STATE = [
         "Johor" => "Johor",
         "Kedah" => "Kedah",
         "Kelantan" => "Kelantan",

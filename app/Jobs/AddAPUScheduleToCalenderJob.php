@@ -29,9 +29,12 @@ use Notification;
 
 class AddAPUScheduleToCalenderJob implements ShouldQueue
 {
-    use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
+    use Dispatchable;
+    use InteractsWithQueue;
+    use Queueable;
+    use SerializesModels;
 
-    const CAUSED_BY = [
+    public const CAUSED_BY = [
         'Console' => 'Console',
         'Web' => 'Web',
     ];
@@ -70,10 +73,11 @@ class AddAPUScheduleToCalenderJob implements ShouldQueue
 
                     if ($eventStart == $scheduleStart && $eventEnd == $scheduleEnd) {
                         $isEventCreatedBefore = true;
+
                         break;
                     }
                 }
-                if (!$isEventCreatedBefore) {
+                if (! $isEventCreatedBefore) {
                     $newEvent = $this->formatNewEvent($schedule, $attendees);
                     $this->syncCalendar($newEvent);
                     $syncedSchedule->add($schedule);
@@ -92,11 +96,12 @@ class AddAPUScheduleToCalenderJob implements ShouldQueue
         foreach ($attendeeAddresses as $attendeeAddress) {
             $attendees[] = [
                 'emailAddress' => [
-                    'address' => $attendeeAddress
+                    'address' => $attendeeAddress,
                 ],
-                'type' => 'required'
+                'type' => 'required',
             ];
         }
+
         return $attendees;
     }
 
@@ -120,23 +125,24 @@ class AddAPUScheduleToCalenderJob implements ShouldQueue
             'attendees' => $attendees,
             'start' => [
                 'dateTime' => $schedule->TIME_FROM_ISO,
-                'timeZone' => TimeZoneService::$timeZoneMap['Singapore Standard Time']
+                'timeZone' => TimeZoneService::$timeZoneMap['Singapore Standard Time'],
             ],
             'end' => [
                 'dateTime' => $schedule->TIME_TO_ISO,
-                'timeZone' => TimeZoneService::$timeZoneMap['Singapore Standard Time']
+                'timeZone' => TimeZoneService::$timeZoneMap['Singapore Standard Time'],
             ],
             'body' => [
                 'content' =>
                     "Hi," . $this->user->name . ", you have a class of $schedule->MODULE_NAME with lecturer $schedule->NAME ($schedule->SAMACCOUNTNAME@staffemail.apu.edu.my)" .
                     " at $schedule->ROOM from $schedule->TIME_FROM to $schedule->TIME_TO \n" .
-                    ($this->causeBy == self::CAUSED_BY['Console'] ?
+                    (
+                        $this->causeBy == self::CAUSED_BY['Console'] ?
                         "Sync Schedule will run every Saturday at 06:00 AM (GMT+8 Malaysia Timezone).\n" .
                         "To unsubscribe, please click on the link below: \n" .
                         URL::signedRoute('public.unsubscribe', ['email' => $this->user->email]) : ''
                     ),
-                'contentType' => 'text'
-            ]
+                'contentType' => 'text',
+            ],
         ];
     }
 
@@ -153,7 +159,7 @@ class AddAPUScheduleToCalenderJob implements ShouldQueue
         $startOfWeek = new DateTimeImmutable('sunday -4 week', $timezone);
         $endOfWeek = new DateTimeImmutable('sunday +4 week', $timezone);
 
-        $queryParams = array(
+        $queryParams = [
             'startDateTime' => $startOfWeek->format(DateTimeInterface::ISO8601),
             'endDateTime' => $endOfWeek->format(DateTimeInterface::ISO8601),
             // Only request the properties used by the app
@@ -161,17 +167,17 @@ class AddAPUScheduleToCalenderJob implements ShouldQueue
             // Sort them by start time
             '$orderby' => 'start/dateTime',
             // Limit results to 25
-            '$top' => 50
-        );
+            '$top' => 50,
+        ];
 
         // Append query parameters to the '/me/calendarView' url
         $getEventsUrl = '/me/calendarView?' . http_build_query($queryParams);
 
         return $this->graph->createRequest('GET', $getEventsUrl)
             // Add the user's timezone to the Prefer header
-            ->addHeaders(array(
-                'Prefer' => 'outlook.timezone="' . TimeZoneService::$timeZoneMap["Singapore Standard Time"] . '"'
-            ))
+            ->addHeaders([
+                'Prefer' => 'outlook.timezone="' . TimeZoneService::$timeZoneMap["Singapore Standard Time"] . '"',
+            ])
             ->setReturnType(Model\Event::class)
             ->execute();
     }

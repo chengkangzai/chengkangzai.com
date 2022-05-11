@@ -26,7 +26,7 @@ class CreateModal extends ModalComponent
         $this->validate();
 
         Tag::create([
-            'name' => $this->name
+            'name' => $this->name,
         ]);
 
 

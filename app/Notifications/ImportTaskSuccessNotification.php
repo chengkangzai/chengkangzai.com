@@ -12,6 +12,7 @@ use ReflectionException;
 
 class ImportTaskSuccessNotification extends Notification implements ShouldQueue
 {
+    use Queueable;
     public const COLOR_SUCCESS = '0b6623';
     public const COLOR_WARNING = 'fD6a02';
     public const COLOR_ERROR = 'e32929';
@@ -19,8 +20,6 @@ class ImportTaskSuccessNotification extends Notification implements ShouldQueue
     private string $message;
     private array $model;
     private int $second;
-
-    use Queueable;
 
     public function __construct(string $message, array $model, float $second)
     {
@@ -71,7 +70,7 @@ class ImportTaskSuccessNotification extends Notification implements ShouldQueue
 
     public function toMail($notifiable): MailMessage
     {
-        return (new MailMessage)
+        return (new MailMessage())
             ->subject('Import Task Success')
             ->line('The import task has been successfully completed.');
     }

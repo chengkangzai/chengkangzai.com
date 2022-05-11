@@ -18,12 +18,14 @@ class InjestStation
     public function inject(?Collection $records, string $modelName): void
     {
         /** @var Model $modelName */
-        if (!$records) {
+        if (! $records) {
             $this->console->info("[$modelName] : Not inject as the hash value is the same");
+
             return;
         }
         if ($modelName::count() == $records->count()) {
             $this->console->info("[$modelName] : Not inject as the data is the same.");
+
             return;
         }
 

@@ -10,8 +10,8 @@ class CovidStateGraphService
 {
     public int|float $cacheSecond;
 
-    const FILTER = [
-        'TWO_WEEK', 'ONE_MONTH', 'THREE_MONTH', 'SIX_MONTH', 'ONE_YEAR'
+    public const FILTER = [
+        'TWO_WEEK', 'ONE_MONTH', 'THREE_MONTH', 'SIX_MONTH', 'ONE_YEAR',
     ];
 
     public function __construct()
@@ -26,6 +26,7 @@ class CovidStateGraphService
         })
             ->map(function ($case) {
                 $case->activeCase = $case->cases_cumulative - $case->cases_recovered_cumulative;
+
                 return $case;
             });
     }
@@ -48,6 +49,7 @@ class CovidStateGraphService
         $PKRCS = Cache::remember(__METHOD__ . 'PKRCS' . $state . $filter, $this->cacheSecond, function () use ($filter, $state) {
             return DB::table('PKRC')->where('state', $state)->orderByDesc('date')->take($this->getDateScope($filter))->get(['pkrc_covid', 'date']);
         });
+
         return $this->formatHealthCare($this->getCases($state, $filter), $icu, $hospitals, $PKRCS);
     }
 

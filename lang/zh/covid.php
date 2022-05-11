@@ -1,6 +1,6 @@
 <?php
 
-return array(
+return [
     'New_Case' => ':Day新案例',
     'Deaths' => ':Day死亡',
     'New_recovered_Case' => ':Day新康复案例',
@@ -15,4 +15,4 @@ return array(
     'Percentage_of_Vaccine_Register' => '截止:Day的疫苗登记',
     'Active_Cluster_In_Malaysia' => '截止:Day的活跃感染群',
     'Active_Cases_In_Malaysia' => '截止:Day马来西亚的活跃病例',
-);
+];

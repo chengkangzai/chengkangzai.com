@@ -9,16 +9,17 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Comment extends Model
 {
-    use HasFactory, SoftDeletes;
+    use HasFactory;
+    use SoftDeletes;
 
-    const STATUS = [
+    public const STATUS = [
         'PUBLISH' => 'Published',
         'BLOCKED' => 'Blocked',
-        'SPAM' => 'Spam'
+        'SPAM' => 'Spam',
     ];
 
     protected $fillable = [
-        'comment', 'email', 'name', 'post_id', 'status'
+        'comment', 'email', 'name', 'post_id', 'status',
     ];
 
     /**
@@ -28,6 +29,4 @@ class Comment extends Model
     {
         return $this->belongsTo(Post::class);
     }
-
-
 }

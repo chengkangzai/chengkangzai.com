@@ -10,7 +10,6 @@ use Livewire\Component;
 
 class CasePerDay extends Component
 {
-
     public Collection $date;
     public Collection $confirmCase;
     public Collection $recoveredCase;

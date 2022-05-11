@@ -13,7 +13,6 @@ class ExportPandemicSeederCommand extends Command
 
     public function handle(): int
     {
-
         $this->info('Exporting Covid Database Seeder...');
         //TODO : split it to multiple commands
         Artisan::call('iseed cases_malaysia,cases_states,clusters,deaths_malaysia,deaths_states,hospitals,icus,PKRC,populations,test_malaysia,test_states --classnameprefix=Covid --chunksize=500 --exclude=id');
@@ -46,7 +45,6 @@ class ExportPandemicSeederCommand extends Command
                 unlink(database_path('seeders') . '/' . $filename);
                 $this->info('Moved to Vax Seeder Folder: ' . $filename);
             }
-
         }
 
         return self::SUCCESS;

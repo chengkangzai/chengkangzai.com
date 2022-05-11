@@ -13,7 +13,7 @@ class DeathsState extends Model
 
     protected $dates = ['date', 'create_at', 'updated_at'];
 
-    const STATE = [
+    public const STATE = [
         "Johor" => "Johor",
         "Kedah" => "Kedah",
         "Kelantan" => "Kelantan",

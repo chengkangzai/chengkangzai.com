@@ -30,7 +30,7 @@ class CalendarSyncSuccessNotification extends Notification implements ShouldQueu
 
     public function toMail($notifiable): MailMessage
     {
-        $mail = (new MailMessage)
+        $mail = (new MailMessage())
             ->success()
             ->subject('Calendar Sync Success')
             ->greeting('Hello! ' . $notifiable->name)
@@ -60,6 +60,7 @@ class CalendarSyncSuccessNotification extends Notification implements ShouldQueu
             $mail->line('Quite possibly, there are no events published from APU.');
             $mail->line('If there is schedule in APSpace, please check the schedule settings.');
         }
+
         return $mail;
     }
 

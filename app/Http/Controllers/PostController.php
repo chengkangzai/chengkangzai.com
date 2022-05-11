@@ -18,12 +18,14 @@ class PostController extends Controller
     public function index(): Factory|View|Application
     {
         $posts = Post::withCount(['comments', 'tags'])->with('tags')->paginate(5);
+
         return view('admin.post.index', compact('posts'));
     }
 
     public function create(): Factory|View|Application
     {
         $tags = Tag::all();
+
         return view('admin.post.create', compact('tags'));
     }
 
@@ -35,12 +37,13 @@ class PostController extends Controller
                     'title' => $request->title,
                     'content' => $request->get('content'),
                     'status' => Post::STATUS[$request->get('status')],
-                    'slug' => Str::slug($request->title)
+                    'slug' => Str::slug($request->title),
                 ]);
                 if ($request->get('tags')) {
                     $post->attachTags($request->get('tags'));
                 }
             });
+
             return redirect()->route('admin.posts.index')->with('success', __('Post created successfully'));
         } catch (Throwable $e) {
             return redirect()->route('admin.posts.index')->withErrors(__('Whoops! Something went wrong. Please try again later.'));
@@ -55,6 +58,7 @@ class PostController extends Controller
     public function edit(Post $post): Factory|View|Application
     {
         $tags = Tag::all();
+
         return view('admin.post.edit', compact('post', 'tags'));
     }
 
@@ -66,7 +70,7 @@ class PostController extends Controller
                     'title' => $request->title,
                     'content' => $request->get('content'),
                     'status' => Post::STATUS[$request->get('status')],
-                    'slug' => Str::slug($request->title)
+                    'slug' => Str::slug($request->title),
                 ]);
                 if ($request->get('tags')) {
                     $post->syncTags($request->get('tags'));
@@ -75,6 +79,7 @@ class PostController extends Controller
                     $post->tags()->detach();
                 }
             });
+
             return redirect()->route('admin.posts.index')->with('success', __('Post updated successfully'));
         } catch (Throwable $e) {
             return redirect()->route('admin.posts.index')->withErrors(__('Whoops! Something went wrong. Please try again later.'));
@@ -84,6 +89,7 @@ class PostController extends Controller
     public function destroy(Post $post): RedirectResponse
     {
         $post->delete();
+
         return back()
             ->with('success', __('Post deleted successfully. Whoops! Undo deletion', ['link' => route('admin.posts.restore', $post->id)]));
     }
@@ -94,6 +100,7 @@ class PostController extends Controller
         if ($post->trashed()) {
             $post->restore();
         }
+
         return redirect()->back()->with('message', __('Post restored successfully'));
     }
 }

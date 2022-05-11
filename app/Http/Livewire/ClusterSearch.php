@@ -3,10 +3,10 @@
 namespace App\Http\Livewire;
 
 use App\Models\Covid\Cluster;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
+use Illuminate\Support\Facades\DB;
 use Livewire\Component;
 use Livewire\WithPagination;
 use SEO;
@@ -31,7 +31,7 @@ class ClusterSearch extends Component
         SEO::setDescription(__('A page that help to search or query the Covid-19 cluster in Malaysia'));
         SEO::addImages(Config('app.url').'/src/ss_pandemic.png');
 
-        $this->updated_at = cache()->remember('cluster', 60, fn() => Cluster::orderByDesc('id')->first())->updated_at;
+        $this->updated_at = cache()->remember('cluster', 60, fn () => Cluster::orderByDesc('id')->first())->updated_at;
     }
 
     public function updatedSearch()
@@ -79,8 +79,7 @@ class ClusterSearch extends Component
                     return $query->where('state', $this->state);
                 })
                 ->where('status', '=', 'active')
-                ->paginate()
+                ->paginate(),
         ]);
     }
-
 }

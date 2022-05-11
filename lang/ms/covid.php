@@ -1,6 +1,6 @@
 <?php
 
-return array(
+return [
     'New_Case' => 'Kes Baru :Day',
     'Deaths' => 'Kematian :Day',
     'New_recovered_Case' => 'Kes :Day yang baru dipulihkan',
@@ -15,4 +15,4 @@ return array(
     'Percentage_of_Vaccine_Register' => 'Pada :Day, Pendaftar Vaksin',
     'Active_Cluster_In_Malaysia' => 'Pada :Day, Kluster Aktif Di Malaysia',
     'Active_Cases_In_Malaysia' => 'Pada :Day, Kes Aktif Di Malaysia',
-);
+];

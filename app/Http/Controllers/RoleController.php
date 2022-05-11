@@ -16,12 +16,14 @@ class RoleController extends Controller
     public function index(): Factory|View|Application
     {
         $roles = Role::simplePaginate(10);
+
         return view('admin.role.index', compact('roles'));
     }
 
     public function create(): Factory|View|Application
     {
         $permissions = Permission::pluck('name', 'id');
+
         return view('admin.role.create', compact('permissions'));
     }
 
@@ -29,12 +31,14 @@ class RoleController extends Controller
     {
         $role = Role::create(['name' => $request->name]);
         $role->givePermissionTo($request->get('permissions'));
+
         return redirect()->route('admin.roles.index')->with('success', __('Role created successfully'));
     }
 
     public function show(Role $role): Factory|View|Application
     {
         $role->load(['permissions', 'users']);
+
         return view('admin.role.show', compact('role'));
     }
 
@@ -42,6 +46,7 @@ class RoleController extends Controller
     {
         $permissions = Permission::all();
         $role->load('permissions');
+
         return view('admin.role.edit', compact('role', 'permissions'));
     }
 
@@ -49,6 +54,7 @@ class RoleController extends Controller
     {
         $role->update(['name' => $request->name]);
         $role->syncPermissions($request->get('permissions'));
+
         return redirect()->route('admin.roles.index')->with('success', __('Role updated successfully'));
     }
 
@@ -61,6 +67,7 @@ class RoleController extends Controller
             return redirect()->route('admin.roles.index')->withErrors(__('Role has users assigned to it. Please remove users from this role and try again'));
         }
         $role->delete();
+
         return redirect()->route('admin.roles.index')->with('success', __('Role deleted successfully'));
     }
 }

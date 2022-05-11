@@ -10,7 +10,6 @@ use Spatie\Permission\Models\Role;
 
 class UserFactory extends Factory
 {
-
     protected $model = User::class;
 
     #[ArrayShape(['name' => "string", 'email' => "string", 'email_verified_at' => "\Illuminate\Support\Carbon", 'password' => "string", 'remember_token' => "string"])]

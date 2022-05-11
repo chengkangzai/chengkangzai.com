@@ -12,17 +12,20 @@ use Spatie\Translatable\HasTranslations;
 
 class Works extends Model
 {
-    use HasFactory, SoftDeletes, HasTags, HasTranslations;
+    use HasFactory;
+    use SoftDeletes;
+    use HasTags;
+    use HasTranslations;
 
-    const STATUS = [
+    public const STATUS = [
         'DEACTIVATE' => 0,
         'ACTIVE' => 1,
     ];
 
-    const S3_PATH = 'chengkangzai.com/works';
+    public const S3_PATH = 'chengkangzai.com/works';
 
     protected $fillable = [
-        'name', 'description', 'picture_name', 'url', 'github_url', 'status'
+        'name', 'description', 'picture_name', 'url', 'github_url', 'status',
     ];
 
     private array $translatable = ['description'];

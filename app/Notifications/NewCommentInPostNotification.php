@@ -29,7 +29,7 @@ class NewCommentInPostNotification extends Notification implements ShouldQueue
 
     public function toMail($notifiable): MailMessage
     {
-        return (new MailMessage)
+        return (new MailMessage())
             ->subject('New comment in post !')
             ->line('New comment in post !')
             ->line('Post: ' . $this->post->title)

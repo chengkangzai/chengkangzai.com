@@ -17,12 +17,12 @@ class WorksFactory extends Factory
             'name' => $this->faker->text(20),
             'description' => [
                 "en" => $this->faker->text(100),
-                "zh" => $this->faker->text(100)
+                "zh" => $this->faker->text(100),
             ],
             'picture_name' => $this->faker->text,
             'url' => $this->faker->url,
             'github_url' => $this->faker->url,
-            'status' => $this->faker->boolean
+            'status' => $this->faker->boolean,
         ];
     }
 }
