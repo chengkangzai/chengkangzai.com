@@ -26,7 +26,7 @@ class ScheduleConfigController extends Controller
     public function store(Request $request): RedirectResponse
     {
         $request->user()->scheduleConfig()->create($request->all() + [
-                'is_subscribed' => isset($request->is_subscribed)
+                'is_subscribed' => isset($request->is_subscribed),
             ]);
 
         return redirect()->route('admin.scheduleConfig.index')->with('success', __('Schedule config has been setup'));
@@ -43,7 +43,7 @@ class ScheduleConfigController extends Controller
     public function update(Request $request, ScheduleConfig $scheduleConfig): RedirectResponse
     {
         $scheduleConfig->update($request->all() + [
-                'is_subscribed' => isset($request->is_subscribed)
+                'is_subscribed' => isset($request->is_subscribed),
             ]);
 
         return redirect()->route('admin.scheduleConfig.index')->with('success', __('Schedule config has been updated'));
@@ -52,7 +52,7 @@ class ScheduleConfigController extends Controller
     public function syncNow(): RedirectResponse
     {
         $config = Auth::user()->scheduleConfig;
-        if (!auth()->user()->msOauth()->exists()) {
+        if (! auth()->user()->msOauth()->exists()) {
             return redirect()->route('admin.scheduleConfig.index')->withErrors(__('Please link your microsoft account first'));
         }
         AddAPUScheduleToCalenderJob::dispatch(auth()->user(), $config, AddAPUScheduleToCalenderJob::CAUSED_BY['Web']);
