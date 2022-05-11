@@ -15,7 +15,7 @@ class TokenService
             'tokenExpires' => $accessToken->getExpires(),
             'userName' => $msUser->getDisplayName(),
             'userEmail' => $msUser->getMail() !== null ? $msUser->getMail() : $msUser->getUserPrincipalName(),
-            'userTimeZone' => $msUser->getMailboxSettings()->getTimeZone()
+            'userTimeZone' => $msUser->getMailboxSettings()->getTimeZone(),
         ]);
     }
 
@@ -28,13 +28,13 @@ class TokenService
     {
         $token = $user->msOauth()->first();
 
-        if (!$token) {
+        if (! $token) {
             return '';
         }
 
         // Check if token is expired
         $now = time() + 300;
-        if (!$token->tokenExpires >= $now) {
+        if (! $token->tokenExpires >= $now) {
             return $token->accessToken;
         }
 
@@ -43,7 +43,7 @@ class TokenService
 
         try {
             $newToken = $oauthClient->getAccessToken('refresh_token', [
-                'refresh_token' => $token->refreshToken
+                'refresh_token' => $token->refreshToken,
             ]);
 
             $this->updateTokens($newToken, $user);
@@ -52,7 +52,6 @@ class TokenService
         } catch (IdentityProviderException $e) {
             return '';
         }
-
     }
 
     public function updateTokens($accessToken, User $user)
@@ -60,7 +59,7 @@ class TokenService
         $user->msOauth()->update([
             'accessToken' => $accessToken->getToken(),
             'refreshToken' => $accessToken->getRefreshToken(),
-            'tokenExpires' => $accessToken->getExpires()
+            'tokenExpires' => $accessToken->getExpires(),
         ]);
     }
 }

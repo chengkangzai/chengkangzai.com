@@ -18,6 +18,7 @@ class PublicPostController extends Controller
         $posts = Cache::remember('public-Posts', 60 * 60 * 24, function () {
             return Post::latest()->published()->with('tags')->paginate(10);
         });
+
         return view('public.post.index', compact('posts'));
     }
 
@@ -28,9 +29,10 @@ class PublicPostController extends Controller
         SEOTools::setDescription(Str::words(strip_tags($post->content), 40));
         Cache::remember('public-Posts-' . $post->slug, 60 * 60 * 24, function () use ($post) {
             $post->load('comments');
+
             return $post;
         });
+
         return view('public.post.show', compact('post'));
     }
-
 }

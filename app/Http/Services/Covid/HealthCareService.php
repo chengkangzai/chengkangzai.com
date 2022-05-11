@@ -18,32 +18,35 @@ class HealthCareService
 
     public function getICU()
     {
-        return cache()->remember('HealthCare.ICU', $this->cacheSecond, fn() => ICU::latestOne()->get())
+        return cache()->remember('HealthCare.ICU', $this->cacheSecond, fn () => ICU::latestOne()->get())
             ->map(function (ICU $icu) {
                 if (($icu->icu_covid ?? 0) !== 0 || ($icu->bed_icu_covid ?? 0) !== 0) {
                     $icu->covid_utilization = ($icu->icu_covid / $icu->bed_icu_covid) * 100;
                 }
                 $icu->overall_utilization = $icu->getOverallUtilisationAttribute();
                 $icu->vent_utilization = $icu->getVentilationUtilisationAttribute();
+
                 return $icu;
             });
     }
 
     public function getHospital()
     {
-        return cache()->remember('HealthCare.Hospital', $this->cacheSecond, fn() => Hospital::latestOne()->get())
+        return cache()->remember('HealthCare.Hospital', $this->cacheSecond, fn () => Hospital::latestOne()->get())
             ->map(function (Hospital $hospital) {
                 $hospital->covid_utilization = $hospital->getCovidUtilisationAttribute();
                 $hospital->overall_utilization = $hospital->getOverallUtilisationAttribute();
+
                 return $hospital;
             });
     }
 
     public function getPKRC()
     {
-        return cache()->remember('HealthCare.PKRC', $this->cacheSecond, fn() => PKRC::latestOne()->get())
+        return cache()->remember('HealthCare.PKRC', $this->cacheSecond, fn () => PKRC::latestOne()->get())
             ->map(function (PKRC $pkrc) {
                 $pkrc->covid_utilization = $pkrc->getOverallUtilisationAttribute();
+
                 return $pkrc;
             });
     }
@@ -57,6 +60,7 @@ class HealthCareService
                 $pkrcBed = $this->getPKRC()->pluck('beds', 'state')[$icu['state']] ?? 0;
 
                 $icu->totalCovidBed = $icuBed + $hospitalBed + $pkrcBed;
+
                 return $icu;
             });
     }
@@ -70,6 +74,7 @@ class HealthCareService
                 $pkrcOccupy = $this->getPKRC()->pluck('pkrc_covid', 'state')->get($icu['state']);
 
                 $icu->totalOccupy = $icuOccupy + $hospitalOccupy + $pkrcOccupy;
+
                 return $icu;
             });
     }
@@ -83,9 +88,8 @@ class HealthCareService
                 $pkrcUtil = $this->getICU()->pluck('covid_utilization', 'state')[$icu['state']] ?? 0;
 
                 $icu->utilPrecent = ($icuUtil + $hospitalUtil + $pkrcUtil) / 3;
+
                 return $icu;
             });
     }
-
-
 }

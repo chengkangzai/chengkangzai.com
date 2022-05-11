@@ -80,7 +80,7 @@ class AuthTest extends TestCase
             ->assertValid([
                 'name',
                 'email',
-                'password_confirmation'
+                'password_confirmation',
             ]);
 
 
@@ -95,7 +95,6 @@ class AuthTest extends TestCase
                 'email',
                 'password',
             ]);
-
     }
 
     public function test_can_register()
@@ -119,7 +118,6 @@ class AuthTest extends TestCase
         $response->assertSee('Reset Password');
         $response->assertSee('Email');
         $response->assertSee('Send Password Reset Link');
-
     }
 
     public function test_can_open_reset_password()

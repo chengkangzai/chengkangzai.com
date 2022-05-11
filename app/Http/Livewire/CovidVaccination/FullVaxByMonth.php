@@ -35,6 +35,7 @@ class FullVaxByMonth extends Component
             ->get(['date', 'state', 'cumul_full'])
             ->map(function (VaxState $vaxState) {
                 $vaxState->monthYear = $vaxState->date->format('M Y');
+
                 return $vaxState;
             })
             ->sortByDesc

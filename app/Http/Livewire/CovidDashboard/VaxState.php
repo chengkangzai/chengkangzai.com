@@ -48,14 +48,15 @@ class VaxState extends Component
         $this->vaxRegPrecent = collect($array);
     }
 
-    #[NoReturn] public function render(VaxStateService $service): Factory|View|Application
-    {
-        if ($this->readyToLoad) {
-            $this->initVariable($service);
-        }
+    #[NoReturn]
+ public function render(VaxStateService $service): Factory|View|Application
+ {
+     if ($this->readyToLoad) {
+         $this->initVariable($service);
+     }
 
-        return view('livewire.covid-dashboard.vax-state');
-    }
+     return view('livewire.covid-dashboard.vax-state');
+ }
 
     public function load()
     {

@@ -23,7 +23,7 @@ class CasesMalaysiaService
 
     public function getClusterCount()
     {
-        return Cache::remember('CasesMalaysia.ClusterCount', $this->cacheSecond, fn() => Cluster::whereStatus('active')->count());
+        return Cache::remember('CasesMalaysia.ClusterCount', $this->cacheSecond, fn () => Cluster::whereStatus('active')->count());
     }
 
     public function calcFatalityRate(): float|int
@@ -33,9 +33,10 @@ class CasesMalaysiaService
 
     public function getDeath()
     {
-        return Cache::remember('CasesMalaysia.Death', $this->cacheSecond, fn() => DeathsMalaysia::latestOne()->get())
+        return Cache::remember('CasesMalaysia.Death', $this->cacheSecond, fn () => DeathsMalaysia::latestOne()->get())
             ->map(function (DeathsMalaysia $deaths) {
                 $deaths->date_diffWord = $this->getDiffForHumans($deaths->date);
+
                 return $deaths;
             })
             ->first();
@@ -43,7 +44,7 @@ class CasesMalaysiaService
 
     public function getCases()
     {
-        return Cache::remember('CasesMalaysia.Cases', $this->cacheSecond, fn() => CasesMalaysia::latestOne()->get())
+        return Cache::remember('CasesMalaysia.Cases', $this->cacheSecond, fn () => CasesMalaysia::latestOne()->get())
             ->map(function (CasesMalaysia $cases) {
                 $pop = $this->getPop();
                 $cases->newPercentage = ($cases->cases_new / $pop) * 100;
@@ -51,6 +52,7 @@ class CasesMalaysiaService
                 $cases->activeCasePercentage = ($cases->activeCase / $pop) * 100;
 
                 $cases->date_diffWord = $this->getDiffForHumans($cases->date);
+
                 return $cases;
             })
             ->first();
@@ -59,11 +61,13 @@ class CasesMalaysiaService
     public function calcPositiveRate()
     {
         $tests = $this->getTest();
+
         return Cache::remember(__METHOD__, $this->cacheSecond, function () {
             return CasesMalaysia::where('date', $this->getTestDateShouldQuery())->get();
         })
             ->map(function ($cases) use ($tests) {
                 $cases->positiveRate = ($cases->cases_new / $tests->totalTest) * 100;
+
                 return $cases;
             })
             ->first();
@@ -76,6 +80,7 @@ class CasesMalaysiaService
         })
             ->map(function ($test) {
                 $test->date_diffWord = $this->getDiffForHumans($test->date);
+
                 return $test;
             })
             ->first();
@@ -83,7 +88,7 @@ class CasesMalaysiaService
 
     private function getTestDateShouldQuery(): string
     {
-        $dateOfTest = Cache::remember(__METHOD__, $this->cacheSecond, fn() => TestMalaysia::orderByDesc('date')->take(1)->get()->first()->date);
+        $dateOfTest = Cache::remember(__METHOD__, $this->cacheSecond, fn () => TestMalaysia::orderByDesc('date')->take(1)->get()->first()->date);
         $dateOfCase = $this->getCases()->date;
 
         if ($dateOfCase == $dateOfTest) {
@@ -93,12 +98,13 @@ class CasesMalaysiaService
         if ($dateOfTest < $dateOfCase) {
             return $dateOfTest;
         }
+
         return $dateOfCase;
     }
 
     public function getVax(string $filter = Population::POP_FILTER['ALL_POPULATION'])
     {
-        return Cache::remember('CasesMalaysia.VaxMalaysia', $this->cacheSecond, fn() => VaxMalaysia::latestOne()->get())
+        return Cache::remember('CasesMalaysia.VaxMalaysia', $this->cacheSecond, fn () => VaxMalaysia::latestOne()->get())
             ->map(function (VaxMalaysia $vaxMalaysia) use ($filter) {
                 $pop = $this->getPop($filter);
                 $vaxMalaysia->firstDosePercent = ($vaxMalaysia->cumul_partial / $pop) * 100;
@@ -116,11 +122,12 @@ class CasesMalaysiaService
 
     public function getVaxReg(string $filter = Population::POP_FILTER['ALL_POPULATION'])
     {
-        return Cache::remember('CasesMalaysia.VaxRegMalaysia', $this->cacheSecond, fn() => VaxRegMalaysia::latestOne()->get())
+        return Cache::remember('CasesMalaysia.VaxRegMalaysia', $this->cacheSecond, fn () => VaxRegMalaysia::latestOne()->get())
             ->map(function ($vaxRegMalaysia) use ($filter) {
                 $vaxRegMalaysia->registeredPrecent = ($vaxRegMalaysia->total / $this->getPop($filter)) * 100;
 
                 $vaxRegMalaysia->date_diffWord = $this->getDiffForHumans($vaxRegMalaysia->date);
+
                 return $vaxRegMalaysia;
             })
             ->first();
@@ -131,6 +138,7 @@ class CasesMalaysiaService
         return Cache::remember(__METHOD__, $this->cacheSecond, function () {
             $cluster = Cluster::orderByDesc('id')->first();
             $cluster->date_diffWord = $this->getDiffForHumans($cluster->created_at);
+
             return $cluster;
         });
     }
@@ -144,16 +152,18 @@ class CasesMalaysiaService
         $collect['vax'] = $this->getVax()->date->toDateString();
         $collect['vaxReg'] = $this->getVaxReg()->date->toDateString();
         $collect['test_dateDiffWord'] = $this->getDiffForHumans($this->getTest()->date);
+
         return $collect;
     }
 
     public function getPop(string $filter = Population::POP_FILTER['ALL_POPULATION'])
     {
-        return Cache::remember('Population', $this->cacheSecond, fn() => Population::all())
+        return Cache::remember('Population', $this->cacheSecond, fn () => Population::all())
             ->where('Idxs', 0)
             ->map(function (Population $population) {
                 $population->pop_18 = $population->pop_18 + $population->pop_60;
                 $population->pop_12 = $population->pop_12 + $population->pop_18;
+
                 return $population;
             })
             ->first()

@@ -11,7 +11,8 @@ use Illuminate\Queue\SerializesModels;
 
 class NewUserRegisteredNotification extends Notification implements ShouldQueue
 {
-    use Queueable, SerializesModels;
+    use Queueable;
+    use SerializesModels;
 
     private User $user;
 
@@ -27,7 +28,7 @@ class NewUserRegisteredNotification extends Notification implements ShouldQueue
 
     public function toMail($notifiable): MailMessage
     {
-        return (new MailMessage)
+        return (new MailMessage())
             ->subject(__('New user registered'))
             ->line(__('A new user has registered.'))
             ->line(__('Name: ') . $this->user->name)

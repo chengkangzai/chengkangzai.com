@@ -20,7 +20,7 @@ class TestState extends Model
         'pcr',
     ];
 
-    const STATE = [
+    public const STATE = [
         "Johor" => "Johor",
         "Kedah" => "Kedah",
         "Kelantan" => "Kelantan",

@@ -38,7 +38,7 @@ class VaxState extends Model
         'updated_at',
     ];
 
-    const STATE = [
+    public const STATE = [
         "Johor" => "Johor",
         "Kedah" => "Kedah",
         "Kelantan" => "Kelantan",

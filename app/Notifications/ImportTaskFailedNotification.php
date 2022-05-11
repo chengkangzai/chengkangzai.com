@@ -18,7 +18,6 @@ class ImportTaskFailedNotification extends Notification implements ShouldQueue
         $this->message = $message;
     }
 
-
     public function via($notifiable): array
     {
         return ['mail'];
@@ -26,7 +25,7 @@ class ImportTaskFailedNotification extends Notification implements ShouldQueue
 
     public function toMail($notifiable): MailMessage
     {
-        return (new MailMessage)
+        return (new MailMessage())
             ->subject('Import failed')
             ->error()
             ->line('The import task failed with the following exception:')

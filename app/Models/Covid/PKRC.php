@@ -31,7 +31,7 @@ class PKRC extends Model
         'pkrc_noncovid',
     ];
 
-    const STATE = [
+    public const STATE = [
         "Johor" => "Johor",
         "Kedah" => "Kedah",
         "Kelantan" => "Kelantan",
@@ -60,10 +60,11 @@ class PKRC extends Model
         return $this->pkrc_covid + $this->pkrc_noncovid + $this->pkrc_pui;
     }
 
-    #[Pure] public function getOverallUtilisationAttribute(): float|int
-    {
-        return ($this->getTotalPatientAttribute() / ($this->beds ?: 1)) * 100;
-    }
+    #[Pure]
+ public function getOverallUtilisationAttribute(): float|int
+ {
+     return ($this->getTotalPatientAttribute() / ($this->beds ?: 1)) * 100;
+ }
 
     public function scopeStateWithTake(Builder $query, string $state, int $take): Builder
     {

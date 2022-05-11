@@ -14,18 +14,19 @@ use Illuminate\Http\RedirectResponse;
 use Password;
 use Spatie\Permission\Models\Role;
 
-
 class UserController extends Controller
 {
     public function index(): Factory|View|Application
     {
         $users = User::with('roles')->simplePaginate(10);
+
         return view('admin.user.index', compact('users'));
     }
 
     public function create(): Factory|View|Application
     {
         $roles = Role::all();
+
         return view('admin.user.create', compact('roles'));
     }
 
@@ -39,6 +40,7 @@ class UserController extends Controller
     public function show(User $user): Factory|View|Application
     {
         $user->load('roles');
+
         return view('admin.user.show', compact('user'));
     }
 
@@ -46,6 +48,7 @@ class UserController extends Controller
     {
         $roles = Role::all();
         $user->load('roles');
+
         return view('admin.user.edit', compact('user', 'roles'));
     }
 
@@ -53,6 +56,7 @@ class UserController extends Controller
     {
         $user->update($request->all());
         $user->syncRoles($request->get('role'));
+
         return redirect()->route('admin.users.index')->with('success', __('User updated successfully'));
     }
 
@@ -60,6 +64,7 @@ class UserController extends Controller
     {
         $user->scheduleConfig()->delete();
         $user->delete();
+
         return redirect()->route('admin.users.index')->with('success', __('User deleted successfully'));
     }
 
@@ -72,7 +77,7 @@ class UserController extends Controller
     {
         $user->update([
             'name' => $request->name,
-            'password' => Hash::make($request->get('new_password'))
+            'password' => Hash::make($request->get('new_password')),
         ]);
 
         return redirect()->route('admin.home')->with('success', __('Password changed successfully'));
@@ -81,6 +86,7 @@ class UserController extends Controller
     public function sendForgetPassword(User $user): RedirectResponse
     {
         Password::sendResetLink(['email' => $user->email]);
+
         return redirect()->route('admin.users.index')->with('success', __('Reset Email sent successfully'));
     }
 }

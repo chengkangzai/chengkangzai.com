@@ -30,7 +30,7 @@ class Hospital extends Model
         'hosp_noncovid',
     ];
 
-    const STATE = [
+    public const STATE = [
         "Johor" => "Johor",
         "Kedah" => "Kedah",
         "Kelantan" => "Kelantan",
@@ -54,21 +54,19 @@ class Hospital extends Model
         return $query->orderByDesc('date')->take(16)->orderBy('state');
     }
 
-
     public function getTotalPatientAttribute()
     {
         return $this->hosp_covid + $this->hosp_noncovid + $this->hosp_pui;
     }
 
-
-    #[Pure] public function getOverallUtilisationAttribute(): float|int
-    {
-        return ($this->getTotalPatientAttribute() / ($this->beds ?? 1)) * 100;
-    }
+    #[Pure]
+ public function getOverallUtilisationAttribute(): float|int
+ {
+     return ($this->getTotalPatientAttribute() / ($this->beds ?? 1)) * 100;
+ }
 
     public function getCovidUtilisationAttribute(): float|int
     {
-
         return ($this->hosp_covid / ($this->beds_covid ?? 1)) * 100;
     }
 

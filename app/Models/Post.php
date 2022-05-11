@@ -11,15 +11,17 @@ use Spatie\Tags\HasTags;
 
 class Post extends Model
 {
-    use HasFactory, SoftDeletes, HasTags;
+    use HasFactory;
+    use SoftDeletes;
+    use HasTags;
 
-    const STATUS = [
+    public const STATUS = [
         'PUBLISH' => 'Published',
         'DRAFT' => 'Draft',
     ];
 
     protected $fillable = [
-        'content', 'title', 'status', 'slug'
+        'content', 'title', 'status', 'slug',
     ];
 
     /**

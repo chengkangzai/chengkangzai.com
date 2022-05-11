@@ -26,6 +26,7 @@ class HighLowVaxTakenWeekly extends Component
         if ($this->readyToLoad) {
             $this->initVariable();
         }
+
         return view('livewire.covid-vaccination.high-low-vax-taken-weekly');
     }
 
@@ -36,6 +37,7 @@ class HighLowVaxTakenWeekly extends Component
             ->sortByDesc('date')
             ->map(function (VaxMalaysia $vaxState) {
                 $vaxState->weekYear = $vaxState->date->format('W / y');
+
                 return $vaxState;
             })
             ->groupBy('weekYear')
@@ -96,11 +98,12 @@ class HighLowVaxTakenWeekly extends Component
     {
         // TODO return with date as well to we dont need to declare a variable
         return collect()
-            ->when(!$isMax, function ($collection) use ($vax, $vaccineTypes) {
+            ->when(! $isMax, function ($collection) use ($vax, $vaccineTypes) {
                 collect($vaccineTypes)
                     ->each(function ($type) use ($vax, $collection) {
                         $collection->push(['name' => $type, 'value' => $vax->min($type)]);
                     });
+
                 return $collection;
             })
             ->when($isMax, function ($collection) use ($vax, $vaccineTypes) {
@@ -108,10 +111,11 @@ class HighLowVaxTakenWeekly extends Component
                     ->each(function ($type) use ($vax, $collection) {
                         $collection->push(['name' => $type, 'value' => $vax->max($type)]);
                     });
+
                 return $collection;
             })
-            ->when(!$isMax, fn($collection) => $collection->sortBy('value'))
-            ->when($isMax, fn($collection) => $collection->sortByDesc('value'))
+            ->when(! $isMax, fn ($collection) => $collection->sortBy('value'))
+            ->when($isMax, fn ($collection) => $collection->sortByDesc('value'))
             ->first();
     }
 

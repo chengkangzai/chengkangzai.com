@@ -32,7 +32,6 @@ class AppServiceProvider extends ServiceProvider
         }
 
         $this->registerClearCacheOnModel();
-
     }
 
     public function registerClearCacheOnModel()

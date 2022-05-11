@@ -24,6 +24,7 @@ class PublicIndexController extends Controller
         $works = Cache::remember('public-Works', 60 * 60 * 24, function () {
             return Works::active()->take(6)->get();
         });
+
         return view('welcome', compact('works', 'rank'));
     }
 }
