@@ -367,7 +367,7 @@
                                                                 and solve some of the problems.') }}
                             </p>
                             <p class="text-sm leading-snug tracking-wide pt-2 text-white">
-                                {{ __('December') }} 2020 - {{ __('Present') }}
+                                {{ __('December') }} 2018 - {{ __('November') }} 2021
                             </p>
                         </div>
                     </div>
