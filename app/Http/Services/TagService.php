@@ -17,7 +17,7 @@ class TagService
      */
     public function isTagSafeToDelete(Tag $tag): bool
     {
-        $works = Works::all();
+        $works = Works::with('tags')->get();
         foreach ($works as $work) {
             foreach ($work->tags as $smallTag) {
                 if ($smallTag->id == $tag->id) {
@@ -26,7 +26,7 @@ class TagService
             }
         }
 
-        $posts = Post::all();
+        $posts = Post::with('tags')->get();
         foreach ($posts as $post) {
             foreach ($post->tags as $smallTag) {
                 if ($smallTag->id == $tag->id) {

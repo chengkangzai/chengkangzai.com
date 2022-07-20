@@ -3,15 +3,12 @@
 namespace App\Jobs;
 
 use App\Http\Services\MicrosoftGraphService;
-use App\Http\Services\TimeZoneService;
 use App\Models\ScheduleConfig;
 use App\Models\User;
 use App\Notifications\CalendarSyncSuccessNotification;
 use Carbon\Carbon;
 use Chengkangzai\ApuSchedule\ApuSchedule;
-use DateTimeImmutable;
 use DateTimeInterface;
-use DateTimeZone;
 use Exception;
 use GuzzleHttp\Exception\GuzzleException;
 use Illuminate\Bus\Queueable;
@@ -63,20 +60,7 @@ class AddAPUScheduleToCalenderJob implements ShouldQueue
             $events = $this->getEvent();
             $syncedSchedule = collect();
             foreach ($schedules as $schedule) {
-                $isEventCreatedBefore = false;
-                foreach ($events as $event) {
-                    $eventStart = Carbon::parse($event->getStart()->getDateTime())->format(DateTimeInterface::ISO8601);
-                    $eventEnd = Carbon::parse($event->getEnd()->getDateTime())->format(DateTimeInterface::ISO8601);
-
-                    $scheduleStart = Carbon::parse($schedule->TIME_FROM_ISO)->format(DateTimeInterface::ISO8601);
-                    $scheduleEnd = Carbon::parse($schedule->TIME_TO_ISO)->format(DateTimeInterface::ISO8601);
-
-                    if ($eventStart == $scheduleStart && $eventEnd == $scheduleEnd) {
-                        $isEventCreatedBefore = true;
-
-                        break;
-                    }
-                }
+                $isEventCreatedBefore = $this->isCreatedBefore($events, $schedule);
                 if (! $isEventCreatedBefore) {
                     $newEvent = $this->formatNewEvent($schedule, $attendees);
                     $this->syncCalendar($newEvent);
@@ -125,11 +109,11 @@ class AddAPUScheduleToCalenderJob implements ShouldQueue
             'attendees' => $attendees,
             'start' => [
                 'dateTime' => $schedule->TIME_FROM_ISO,
-                'timeZone' => TimeZoneService::$timeZoneMap['Singapore Standard Time'],
+                'timeZone' => 'Asia/Kuala_Lumpur',
             ],
             'end' => [
                 'dateTime' => $schedule->TIME_TO_ISO,
-                'timeZone' => TimeZoneService::$timeZoneMap['Singapore Standard Time'],
+                'timeZone' => 'Asia/Kuala_Lumpur',
             ],
             'body' => [
                 'content' =>
@@ -153,15 +137,9 @@ class AddAPUScheduleToCalenderJob implements ShouldQueue
      */
     private function getEvent(): array
     {
-        $timezone = new DateTimeZone(TimeZoneService::$timeZoneMap["Singapore Standard Time"]);
-
-        // Get start and end of week
-        $startOfWeek = new DateTimeImmutable('sunday -4 week', $timezone);
-        $endOfWeek = new DateTimeImmutable('sunday +4 week', $timezone);
-
         $queryParams = [
-            'startDateTime' => $startOfWeek->format(DateTimeInterface::ISO8601),
-            'endDateTime' => $endOfWeek->format(DateTimeInterface::ISO8601),
+            'startDateTime' => now()->subWeeks(4)->startOfDay()->toIso8601String(),
+            'endDateTime' => now()->addWeeks(4)->startOfDay()->toIso8601String(),
             // Only request the properties used by the app
             '$select' => 'subject,organizer,start,end',
             // Sort them by start time
@@ -174,11 +152,31 @@ class AddAPUScheduleToCalenderJob implements ShouldQueue
         $getEventsUrl = '/me/calendarView?' . http_build_query($queryParams);
 
         return $this->graph->createRequest('GET', $getEventsUrl)
-            // Add the user's timezone to the Prefer header
+            // Add the user's timezone to Prefer header
             ->addHeaders([
-                'Prefer' => 'outlook.timezone="' . TimeZoneService::$timeZoneMap["Singapore Standard Time"] . '"',
+                'Prefer' => 'outlook.timezone="' . 'Asia/Kuala_Lumpur' . '"',
             ])
             ->setReturnType(Model\Event::class)
             ->execute();
+    }
+
+    private function isCreatedBefore(array $events, $schedule): bool
+    {
+        $isEventCreatedBefore = false;
+        foreach ($events as $event) {
+            $eventStart = Carbon::parse($event->getStart()->getDateTime())->format(DateTimeInterface::ISO8601);
+            $eventEnd = Carbon::parse($event->getEnd()->getDateTime())->format(DateTimeInterface::ISO8601);
+
+            $scheduleStart = Carbon::parse($schedule->TIME_FROM_ISO)->format(DateTimeInterface::ISO8601);
+            $scheduleEnd = Carbon::parse($schedule->TIME_TO_ISO)->format(DateTimeInterface::ISO8601);
+
+            if ($eventStart == $scheduleStart && $eventEnd == $scheduleEnd) {
+                $isEventCreatedBefore = true;
+
+                break;
+            }
+        }
+
+        return $isEventCreatedBefore;
     }
 }
