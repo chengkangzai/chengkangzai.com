@@ -8,9 +8,7 @@ use App\Models\User;
 use App\Notifications\CalendarSyncSuccessNotification;
 use Carbon\Carbon;
 use Chengkangzai\ApuSchedule\ApuSchedule;
-use DateTimeImmutable;
 use DateTimeInterface;
-use DateTimeZone;
 use Exception;
 use GuzzleHttp\Exception\GuzzleException;
 use Illuminate\Bus\Queueable;
@@ -178,6 +176,7 @@ class AddAPUScheduleToCalenderJob implements ShouldQueue
                 break;
             }
         }
+
         return $isEventCreatedBefore;
     }
 }
