@@ -420,6 +420,9 @@
                                    rel="noreferrer" target="_blank">
                                     {{ __('SMART SD') }}</a>.
                             </p>
+                            <p class="text-sm leading-snug tracking-wide pt-2 text-white">
+                                {{ __('April') }} 2020 - {{ __('July') }} 2020
+                            </p>
                         </div>
                     </div>
 
