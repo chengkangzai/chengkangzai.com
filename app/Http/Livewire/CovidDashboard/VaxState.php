@@ -15,15 +15,8 @@ class VaxState extends Component
 {
     public Collection $daily_partial;
     public Collection $daily_full;
-
-    public Collection $cumul_partial;
-    public Collection $cumul_full;
-
-    public Collection $daily_partialPrecent;
-    public Collection $daily_fullPrecent;
-
-    public Collection $cumul_partialPrecent;
-    public Collection $cumul_fullPrecent;
+    public Collection $daily_booster;
+    public Collection $daily_booster2;
 
     public Collection $vaxReg;
     public Collection $vaxRegPrecent;
@@ -38,12 +31,8 @@ class VaxState extends Component
         $array = ["Johor" => 0, "Kedah" => 0, "Kelantan" => 0, "Melaka" => 0, "Negeri Sembilan" => 0, "Pahang" => 0, "Pulau Pinang" => 0, "Perak" => 0, "Perlis" => 0, "Sabah" => 0, "Sarawak" => 0, "Selangor" => 0, "Terengganu" => 0, "W.P. Kuala Lumpur" => 0, "W.P. Labuan" => 0, "W.P. Putrajaya" => 0,];
         $this->daily_partial = collect($array);
         $this->daily_full = collect($array);
-        $this->cumul_partial = collect($array);
-        $this->cumul_full = collect($array);
-        $this->daily_partialPrecent = collect($array);
-        $this->daily_fullPrecent = collect($array);
-        $this->cumul_partialPrecent = collect($array);
-        $this->cumul_fullPrecent = collect($array);
+        $this->daily_booster = collect($array);
+        $this->daily_booster2 = collect($array);
         $this->vaxReg = collect($array);
         $this->vaxRegPrecent = collect($array);
     }
@@ -76,14 +65,9 @@ class VaxState extends Component
         $this->timestamp = $vax->first()->date->toDateString();
 
         $this->daily_partial = $vax->pluck('daily_partial', 'state');
-        $this->cumul_partial = $vax->pluck('cumul_partial', 'state');
-        $this->daily_partialPrecent = $vax->pluck('firstDoseDailyPercent', 'state');
-        $this->cumul_partialPrecent = $vax->pluck('firstDoseCumulPercent', 'state');
-
         $this->daily_full = $vax->pluck('daily_full', 'state');
-        $this->cumul_full = $vax->pluck('cumul_full', 'state');
-        $this->daily_fullPrecent = $vax->pluck('secondDoseDailyPercent', 'state');
-        $this->cumul_fullPrecent = $vax->pluck('secondDoseCumulPercent', 'state');
+        $this->daily_booster = $vax->pluck('daily_booster', 'state');
+        $this->daily_booster2 = $vax->pluck('daily_booster2', 'state');
 
         $this->vaxReg = $vaxReg->pluck('total', 'state');
         $this->vaxRegPrecent = $vaxReg->pluck('registeredPrecent', 'state');
