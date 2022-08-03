@@ -15,25 +15,7 @@ class ICU extends Model
 
     protected $dates = ['date', 'create_at', 'updated_at'];
 
-    protected $fillable = [
-        'id',
-        'date',
-        'state',
-        'bed_icu',
-        'bed_icu_rep',
-        'bed_icu_total',
-        'bed_icu_covid',
-        'vent',
-        'vent_port',
-        'icu_covid',
-        'icu_pui',
-        'icu_noncovid',
-        'vent_covid',
-        'vent_pui',
-        'vent_noncovid',
-        'vent_used',
-        'vent_port_used',
-    ];
+    protected $guarded = [];
 
     public const STATE = [
         "Johor" => "Johor",

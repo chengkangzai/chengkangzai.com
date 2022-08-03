@@ -11,15 +11,7 @@ class Population extends Model
 
     protected $dates = ['create_at', 'updated_at'];
 
-    protected $fillable = [
-        'id',
-        'state',
-        'idxs',
-        'pop',
-        'pop_12',
-        'pop_18',
-        'pop_60',
-    ];
+    protected $guarded = [];
 
     public const STATE = [
         0 => 'Malaysia',

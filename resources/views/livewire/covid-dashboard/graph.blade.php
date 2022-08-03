@@ -9,7 +9,7 @@
                 <div>
                     <label>
                         {{ __('Filter By') }} :
-                        <select class="bg-white ring ring-gray-200 mx-2 px-4 py-1 rounded" wire:model="filter">
+                        <select class="bg-white ring ring-gray-200 mx-2 rounded" wire:model="filter">
                             <option disabled>-----</option>
                             @foreach (\App\Http\Services\Covid\Graph\CovidMalaysiaGraphService::FILTER as $filter)
                                 <option value="{{ $filter }}">

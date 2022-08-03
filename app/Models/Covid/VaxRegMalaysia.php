@@ -14,19 +14,7 @@ class VaxRegMalaysia extends Model
 
     public const CREATED_AT = 'date';
 
-    protected $fillable = [
-        'id',
-        'state',
-        'total',
-        'phase2',
-        'mysj',
-        'call',
-        'web',
-        'children',
-        'elderly',
-        'comorb',
-        'oku',
-    ];
+    protected $guarded = [];
 
     public function scopeLatestOne(Builder $query): Builder
     {

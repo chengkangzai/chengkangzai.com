@@ -32,20 +32,7 @@ class DeathsState extends Model
         "W.P. Putrajaya" => "W.P. Putrajaya",
     ];
 
-    protected $fillable = [
-        'id',
-        'date',
-        'state',
-        'deaths_new',
-        'deaths_bid',
-        'deaths_commutative',
-        'deaths_bid_cumulative',
-        'deaths_bid_dod',
-        'deaths_bid_dod_cumulative',
-        'deaths_pvax',
-        'deaths_fvax',
-        'deaths_tat',
-    ];
+    protected $guarded = [];
 
     public function scopeLatestOne(Builder $query): Builder
     {

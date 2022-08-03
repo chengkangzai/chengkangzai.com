@@ -12,13 +12,7 @@ class TestState extends Model
 
     protected $dates = ['date', 'create_at', 'updated_at'];
 
-    protected $fillable = [
-        'id',
-        'date',
-        'state',
-        'rtk_ag',
-        'pcr',
-    ];
+    protected $guarded = [];
 
     public const STATE = [
         "Johor" => "Johor",

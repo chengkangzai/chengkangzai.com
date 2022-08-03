@@ -13,22 +13,7 @@ class Hospital extends Model
 
     protected $dates = ['date', 'create_at', 'updated_at'];
 
-    protected $fillable = [
-        'id',
-        'date',
-        'state',
-        'beds',
-        'beds_covid',
-        'beds_noncrit',
-        'admitted_covid',
-        'admitted_total',
-        'discharged_pui',
-        'discharged_covid',
-        'discharged_total',
-        'hosp_covid',
-        'hosp_pui',
-        'hosp_noncovid',
-    ];
+    protected $guarded = [];
 
     public const STATE = [
         "Johor" => "Johor",
