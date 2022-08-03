@@ -7,7 +7,7 @@
         <div class="container space-y-2 sm:space-y-0 sm:flex sm:flex-row-reverse">
             <label>
                 {{ __('Filter By') }} :
-                <select class="bg-white ring ring-gray-200 mx-2 px-4 py-1 rounded" wire:model="state">
+                <select class="bg-white ring ring-gray-200 mx-2 rounded" wire:model="state">
                     <option disabled>-----</option>
                     @foreach (\App\Models\Covid\CasesState::STATE as $key => $filter)
                         <option value="{{ $key }}">
@@ -21,7 +21,7 @@
 
     <div class="sm:grid sm:grid-cols-4 sm:grid-rows-3 sm:gap-2 space-y-2 sm:space-y-0">
         <div
-            class="dark:bg-white bg-gray-50 rounded-xl shadow p-4 sm:py-8 sm:row-span-2 sm:py-40 px-4 self-center place-self-stretch">
+            class="dark:bg-white bg-gray-50 rounded-xl shadow p-4 sm:row-span-2 sm:py-32 px-4 self-center place-self-stretch">
             {{-- TODO : Change the wording of "ICU,PKRC, Hospital to dynamically" --}}
             <h2 class="text-2xl pb-2">{{ __('Inflow and Out Flow of Hospital and ICU') }}</h2>
             <hr class="mx-4 sm:py-2">
