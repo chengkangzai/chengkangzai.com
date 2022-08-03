@@ -12,23 +12,7 @@ class Cluster extends Model
 
     protected $dates = ['date_announced', 'date_last_onset', 'created_at', 'updated_at'];
 
-    protected $fillable = [
-        'id',
-        'cluster',
-        'state',
-        'district',
-        'date_announced',
-        'date_last_onset',
-        'category',
-        'status',
-        'cases_new',
-        'cases_total',
-        'cases_active',
-        'tests',
-        'icu',
-        'deaths',
-        'recovered',
-    ];
+    protected $guarded = [];
 
     public const CLUSTER_CATEGORY = [
         "import" => "Import",

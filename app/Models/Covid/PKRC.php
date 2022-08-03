@@ -15,21 +15,7 @@ class PKRC extends Model
 
     protected $dates = ['date', 'create_at', 'updated_at'];
 
-    protected $fillable = [
-        'id',
-        'date',
-        'state',
-        'beds',
-        'admitted_pui',
-        'admitted_covid',
-        'admitted_total',
-        'discharge_pui',
-        'discharge_covid',
-        'discharge_total',
-        'pkrc_covid',
-        'pkrc_pui',
-        'pkrc_noncovid',
-    ];
+    protected $guarded = [];
 
     public const STATE = [
         "Johor" => "Johor",

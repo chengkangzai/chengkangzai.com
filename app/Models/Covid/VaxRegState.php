@@ -12,19 +12,7 @@ class VaxRegState extends Model
 
     protected $dates = ['date', 'create_at', 'updated_at'];
 
-    protected $fillable = [
-        'id',
-        'state',
-        'total',
-        'phase2',
-        'mysj',
-        'call',
-        'web',
-        'children',
-        'elderly',
-        'comorb',
-        'oku',
-    ];
+    protected $guarded = [];
 
     public function scopeLatestOne(Builder $query): Builder
     {

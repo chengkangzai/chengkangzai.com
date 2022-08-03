@@ -14,19 +14,7 @@ class DeathsMalaysia extends Model
 
     protected $dates = ['date', 'create_at', 'updated_at'];
 
-    protected $fillable = [
-        'id',
-        'date',
-        'deaths_new',
-        'deaths_new_cumulative',
-        'deaths_bid',
-        'deaths_bid_cumulative',
-        'deaths_bid_dod',
-        'deaths_bid_dod_cumulative',
-        'deaths_pvax',
-        'deaths_fvax',
-        'deaths_tat',
-    ];
+    protected $guarded = [];
 
     public function scopeLatestOne(Builder $query): Builder
     {

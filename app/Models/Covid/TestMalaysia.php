@@ -14,12 +14,7 @@ class TestMalaysia extends Model
 
     protected $dates = ['date', 'create_at', 'updated_at'];
 
-    protected $fillable = [
-        'id',
-        'date',
-        'rtk_ag',
-        'pcr',
-    ];
+    protected $guarded = [];
 
     public function scopeLatestOne(Builder $query): Builder
     {

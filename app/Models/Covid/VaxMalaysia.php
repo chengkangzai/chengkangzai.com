@@ -14,30 +14,7 @@ class VaxMalaysia extends Model
 
     public const CREATED_AT = 'date';
 
-    protected $fillable = [
-        'id',
-        'date',
-        'daily_partial',
-        'daily_full',
-        'daily',
-        'daily_partial_child',
-        'daily_full_child',
-        'cumul_partial',
-        'cumul_full',
-        'cumul',
-        'cumul_partial_child',
-        'cumul_full_child',
-        'pfizer1',
-        'pfizer2',
-        'sinovac1',
-        'sinovac2',
-        'astra1',
-        'astra2',
-        'cansino',
-        'pending',
-        'created_at',
-        'updated_at',
-    ];
+    protected $guarded = [];
 
     public function scopeLatestOne(Builder $query): Builder
     {
