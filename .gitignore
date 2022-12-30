@@ -13,6 +13,7 @@ npm-debug.log
 yarn-error.log
 /.idea
 /storage
+/public/sitemap.xml
 /public/js/app.js
 /public/css/app.css
 .phpstorm.meta.php
