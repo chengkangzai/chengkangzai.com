@@ -7,7 +7,7 @@
                     <a href="{{ route('public.posts.index') }}"
                         class="text-blue-600 block dark:text-blue-400 underline">{{ __('Blog') }}</a>
                 @endif
-                <a href="{{ route('public.pandemic.index') }}"
+                <a href="https://pandemic.chengkangzai.com"
                     class="text-blue-600 block dark:text-blue-400 underline">{{ __('Covid Dashboard') }}</a>
             </div>
         </div>
@@ -57,7 +57,7 @@
                     <a href="{{ route('public.posts.index') }}"
                         class="text-blue-600 block dark:text-blue-400 underline">{{ __('Blog') }}</a>
                 @endif
-                <a href="{{ route('public.pandemic.index') }}"
+                <a href="https://pandemic.chengkangzai.com"
                     class="text-blue-600 block dark:text-blue-400 underline">{{ __('Covid Dashboard') }}</a>
             </div>
         </div>
