@@ -8,7 +8,6 @@ use App\Http\Controllers\MSOauthController;
 use App\Http\Controllers\PermissionController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\PublicIndexController;
-use App\Http\Controllers\PublicPandemicController;
 use App\Http\Controllers\PublicPostCommentController;
 use App\Http\Controllers\PublicPostController;
 use App\Http\Controllers\RoleController;
@@ -16,7 +15,6 @@ use App\Http\Controllers\ScheduleConfigController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\WorksController;
 use App\Http\Livewire\Admin\TagCRUD;
-use App\Http\Livewire\CovidVaccination\Vaccination;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
@@ -41,12 +39,7 @@ Route::group(['as' => 'public.'], function () {
         Route::get('/', [PublicPostController::class, 'index'])->name('index');
         Route::get('{post:slug}', [PublicPostController::class, 'show'])->name('show');
     });
-    Route::group(['prefix' => 'pandemic', 'as' => 'pandemic.'], function () {
-        Route::get('/', [PublicPandemicController::class, 'index'])->name('index');
-        Route::view('clusters', 'public.covid.cluster')->name('clusters');
-        Route::get('state', [PublicPandemicController::class, 'state'])->name('state');
-        Route::get('vaccination', Vaccination::class)->name('vaccination');
-    });
+
     Route::resource('posts.comments', PublicPostCommentController::class)->only(['store']);
 
     Route::get('unsubscribe/{email}', function ($email) {

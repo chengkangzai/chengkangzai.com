@@ -71,9 +71,9 @@
                             {{ __('SEE MY RESUME') }}
                         </a>
 
-                        <a role="button" href="{{ route('public.pandemic.index') }}"
+                        <a role="button" href="https://pandemic.chengkangzai.com"
                            class="flex items-center px-6 py-2 mt-auto font-semibold text-white dark:text-black transition duration-300 ease-in-out transform bg-black dark:bg-white rounded-lg hover:bg-gray-800 dark:hover:bg-gray-200 hover:to-black dark:hover:to-white focus:shadow-outline focus:outline-none focus:ring-2 ring-black ring-offset-current ring-offset-2">
-                            {{ __('Covid-19 Dashboard') }}
+                            {{ __('Covid Dashboard') }}
                         </a>
                     </div>
                     <div

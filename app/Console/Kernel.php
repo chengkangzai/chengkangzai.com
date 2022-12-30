@@ -3,7 +3,6 @@
 namespace App\Console;
 
 use App\Console\Commands\GenerateSiteMap;
-use App\Console\Commands\ImportPandemicDataCommand;
 use App\Console\Commands\SyncScheduleToCalendarCommand;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
@@ -30,8 +29,6 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $schedule->command(ImportPandemicDataCommand::class)->hourly();
-
         $schedule->command(BackupCommand::class)->daily()->at('03:00');
         $schedule->command(CleanupCommand::class)->daily()->at('03:00');
         $schedule->command(MonitorCommand::class)->daily()->at('03:00');
