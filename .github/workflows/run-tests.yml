@@ -28,7 +28,7 @@ jobs:
       - name: Build front-end assets
         run: |
           npm install
-          npm run dev
+          npm run build
 
       - name: Setup .env file
         run: |
