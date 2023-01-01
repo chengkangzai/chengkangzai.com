@@ -55,17 +55,16 @@
                 <form action="{{ route('public.posts.comments.store', $post) }}" method="post">
                     @csrf
                     <div class="w-full space-x-4 mx-auto flex mb-3">
-                        <input id="name" type="text" placeholder="{{ __('Name (required)') }} " name="name" required
-                            aria-label="Name"
+                        <input id="name" type="text" placeholder="{{ __('Name (required)') }} " name="name"
+                            required aria-label="Name"
                             class="w-1/2 text-center border border-gray-400 text-gray-800 placeholder-gray-400 rounded focus:shadow-outline py-2" />
-                        <input id="email" type="email" placeholder="{{ __('Email (required)') }} " name="email" required
-                            aria-label="Email"
+                        <input id="email" type="email" placeholder="{{ __('Email (required)') }} " name="email"
+                            required aria-label="Email"
                             class="w-1/2 text-center border border-gray-400 text-gray-800 placeholder-gray-400 rounded focus:shadow-outline py-2" />
                     </div>
                     <textarea required aria-label="Your Comment" name="comment"
                         class="w-full shadow-inner p-4 border border-gray-400 mb-4 rounded-lg focus:shadow-outline text-2xl dark:text-black"
-                        placeholder="{{ __('Drop your Comment here') }}" cols="6" rows="6"
-                        id="comment_content"></textarea>
+                        placeholder="{{ __('Drop your Comment here') }}" cols="6" rows="6" id="comment_content"></textarea>
                     <button class="font-bold py-2 px-4 w-full bg-violet-600 text-lg text-white shadow-md rounded-lg ">
                         {{ __('Comment') }}
                     </button>

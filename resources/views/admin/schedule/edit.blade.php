@@ -40,7 +40,8 @@
                             {{ __('Select your Intake Code') }}
                             <select name="intake_code" id="intake_code" onchange="renderGrouping(this)"
                                 class="appearance-none block w-full bg-white border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 font-normal text-base">
-                                <option value="" hidden="" disabled="">{{ __('Select your Intake Code') }}</option>
+                                <option value="" hidden="" disabled="">{{ __('Select your Intake Code') }}
+                                </option>
                                 @foreach (\Chengkangzai\ApuSchedule\ApuSchedule::getIntakes() as $intakeCode)
                                     <option value="{{ $intakeCode }}"
                                         {{ $intakeCode == $scheduleConfig->intake_code ? 'selected' : '' }}>

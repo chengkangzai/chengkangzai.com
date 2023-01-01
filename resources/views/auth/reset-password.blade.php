@@ -24,7 +24,8 @@
                 <input type="hidden" name="email" value="{{ request()->email }}">
                 <label class="block">
                     <span class="text-gray-700 text-sm">{{ __('Email') }}</span>
-                    <input type="email" name="email" class="form-input mt-1 block w-full rounded-md focus:border-indigo-600">
+                    <input type="email" name="email"
+                        class="form-input mt-1 block w-full rounded-md focus:border-indigo-600">
                 </label>
 
                 <label class="block mt-3">

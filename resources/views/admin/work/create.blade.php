@@ -125,9 +125,8 @@
                 @foreach (old('tags') as $tag)
                     "{{ $tag }}",
                 @endforeach
-            @endif],
-            maxItems: 10
+            @endif ],
+        maxItems: 10
         });
     </script>
-
 @endpush

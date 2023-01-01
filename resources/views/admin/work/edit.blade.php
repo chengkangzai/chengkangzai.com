@@ -126,9 +126,8 @@
         new TomSelect('#tags', {
             @foreach ($work->tags as $tag)
                 "{{ $tag->name }}",
-            @endforeach],
-            maxItems: 10
+            @endforeach ],
+        maxItems: 10
         });
     </script>
-
 @endpush

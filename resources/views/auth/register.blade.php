@@ -20,7 +20,8 @@
                 @csrf
                 <label class="block">
                     <span class="text-gray-700 text-sm">{{ __('Your name') }}</span>
-                    <input type="text" name="name" class="form-input mt-1 block w-full rounded-md focus:border-indigo-600">
+                    <input type="text" name="name"
+                        class="form-input mt-1 block w-full rounded-md focus:border-indigo-600">
                 </label>
 
                 <label class="block">

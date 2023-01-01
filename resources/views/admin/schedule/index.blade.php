@@ -36,7 +36,8 @@
                             {{ __('Select your Intake Code') }}
                             <select name="intake_code" onchange="renderGrouping(this)"
                                 class="appearance-none block w-full bg-white border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 font-normal text-base">
-                                <option value="" hidden="" disabled="">{{ __('Select your Intake Code') }}</option>
+                                <option value="" hidden="" disabled="">{{ __('Select your Intake Code') }}
+                                </option>
                                 @foreach (\Chengkangzai\ApuSchedule\ApuSchedule::getIntakes() as $intakeCode)
                                     <option value="{{ $intakeCode }}">{{ $intakeCode }}</option>
                                 @endforeach
@@ -49,7 +50,8 @@
                             {{ __('Select your Grouping') }}
                             <select name="grouping" disabled
                                 class="appearance-none block w-full bg-white border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 font-normal text-base">
-                                <option value="" hidden="" disabled="" selected>{{ __('Select your Grouping First') }}
+                                <option value="" hidden="" disabled="" selected>
+                                    {{ __('Select your Grouping First') }}
                                 </option>
                             </select>
                         </label>
@@ -75,7 +77,7 @@
     @else
         <div class="w-full rounded rounded-md border rounded-md border-gray-500 bg-white">
             <h2 class="sm:text-xl py-2 px-4">
-                {{ __('Hello :name, you are already setup your schedule and the schedule will be sync to your calendar whenever its updated',['name' => auth()->user()->name ?? '']) }}
+                {{ __('Hello :name, you are already setup your schedule and the schedule will be sync to your calendar whenever its updated', ['name' => auth()->user()->name ?? '']) }}
             </h2>
             <div class="block my-2">
                 <a href="{{ route('admin.scheduleConfig.edit', $config) }}"
@@ -185,10 +187,10 @@
 
                 @foreach ($events as $event)
                     calendar.addEvent({
-                    title: '{{ $event->MODID }}',
-                    start: '{{ $event->TIME_FROM_ISO }}',
-                    end: '{{ $event->TIME_TO_ISO }}',
-                
+                        title: '{{ $event->MODID }}',
+                        start: '{{ $event->TIME_FROM_ISO }}',
+                        end: '{{ $event->TIME_TO_ISO }}',
+
                     });
                 @endforeach
 
