@@ -6,7 +6,7 @@
 @endpush
 
 @section('header')
-    <h3 class="text-gray-700 text-3xl font-medium">{{ __('Dashboard') }}</h3>
+    <h3 class="text-3xl font-medium text-gray-700">{{ __('Dashboard') }}</h3>
 @endsection
 
 @section('content')
@@ -14,7 +14,7 @@
     @include('partial.success-card')
     <div class="container mx-auto px-6 py-8">
         <div class="mt-4">
-            <div class="flex flex-wrap -mx-6 gap-2 sm:gap-0 ">
+            <div class="-mx-6 flex flex-wrap gap-2 sm:gap-0">
                 <x-dashboard-item-card title="{{ __('Total Users') }}" :count="\App\Models\User::count()"
                     link="{{ route('admin.users.index') }}">
                     <x-slot name="icon">
@@ -72,7 +72,7 @@
     @if ($config)
         <div>
             <h2 class="text-center text-3xl font-bold">{{ __('Your Schedule') }}</h2>
-            <div id='calendar' class="w-full text-base md:w-1/2 mx-auto mt-4 bg-white p-4 rounded rounded-md"></div>
+            <div id='calendar' class="mx-auto mt-4 w-full rounded rounded-md bg-white p-4 text-base md:w-1/2"></div>
         </div>
     @endif
 @endsection

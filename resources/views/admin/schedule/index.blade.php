@@ -10,7 +10,7 @@
 @endsection
 
 @section('content')
-    <div class="py-3 px-5 mb-2 rounded-md text-base border border-gray-500 bg-white">
+    <div class="mb-2 rounded-md border border-gray-500 bg-white py-3 px-5 text-base">
         <ul class="flex">
             <li><a href="{{ route('admin.home') }}" class="underline hover:text-gray-500">{{ __('Home') }}</a>
             </li>
@@ -22,20 +22,20 @@
     @include('partial.error-card')
 
     @if (!$config)
-        <div class="w-full bg-white border rounded-md border-gray-500">
-            <h2 class="sm:text-xl py-2 px-4">
+        <div class="w-full rounded-md border border-gray-500 bg-white">
+            <h2 class="py-2 px-4 sm:text-xl">
                 {{ __('Hi, Looks like you are first time to use the system, please submit your detail') }}
             </h2>
         </div>
         <form action="{{ route('admin.scheduleConfig.store') }}" method="POST">
             @csrf
-            <div class="w-full md:w-1/2 mx-auto mt-4 bg-white rounded rounded-md border-gray-500">
-                <div class="flex flex-wrap -mx-3 mb-6 p-4">
+            <div class="mx-auto mt-4 w-full rounded rounded-md border-gray-500 bg-white md:w-1/2">
+                <div class="-mx-3 mb-6 flex flex-wrap p-4">
                     <div class="w-full px-3">
-                        <label class="block uppercase tracking-wide text-xs font-bold mb-2">
+                        <label class="mb-2 block text-xs font-bold uppercase tracking-wide">
                             {{ __('Select your Intake Code') }}
                             <select name="intake_code" onchange="renderGrouping(this)"
-                                class="appearance-none block w-full bg-white border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 font-normal text-base">
+                                class="block w-full appearance-none rounded border border-gray-200 bg-white py-3 px-4 text-base font-normal leading-tight focus:border-gray-500 focus:bg-white focus:outline-none">
                                 <option value="" hidden="" disabled="">{{ __('Select your Intake Code') }}
                                 </option>
                                 @foreach (\Chengkangzai\ApuSchedule\ApuSchedule::getIntakes() as $intakeCode)
@@ -46,10 +46,10 @@
                     </div>
 
                     <div class="w-full px-3">
-                        <label class="block uppercase tracking-wide text-xs font-bold mb-2">
+                        <label class="mb-2 block text-xs font-bold uppercase tracking-wide">
                             {{ __('Select your Grouping') }}
                             <select name="grouping" disabled
-                                class="appearance-none block w-full bg-white border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 font-normal text-base">
+                                class="block w-full appearance-none rounded border border-gray-200 bg-white py-3 px-4 text-base font-normal leading-tight focus:border-gray-500 focus:bg-white focus:outline-none">
                                 <option value="" hidden="" disabled="" selected>
                                     {{ __('Select your Grouping First') }}
                                 </option>
@@ -58,7 +58,7 @@
                     </div>
 
                     <div class="w-full px-3">
-                        <label class="block uppercase tracking-wide text-xs font-bold mb-2">
+                        <label class="mb-2 block text-xs font-bold uppercase tracking-wide">
                             <input type="checkbox" value="1" name="is_subscribed"
                                 {{ old('is_subscribed') ? 'checked' : '' }}>
                             {{ __('Sync my schedule weekly') }}
@@ -67,7 +67,7 @@
 
                     <div class="w-full px-3">
                         <button type="submit"
-                            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                            class="focus:shadow-outline rounded bg-blue-500 py-2 px-4 font-bold text-white hover:bg-blue-700 focus:outline-none">
                             {{ __('Save Configuration') }}
                         </button>
                     </div>
@@ -75,52 +75,52 @@
             </div>
         </form>
     @else
-        <div class="w-full rounded rounded-md border rounded-md border-gray-500 bg-white">
-            <h2 class="sm:text-xl py-2 px-4">
+        <div class="w-full rounded rounded-md rounded-md border border-gray-500 bg-white">
+            <h2 class="py-2 px-4 sm:text-xl">
                 {{ __('Hello :name, you are already setup your schedule and the schedule will be sync to your calendar whenever its updated', ['name' => auth()->user()->name ?? '']) }}
             </h2>
-            <div class="block my-2">
+            <div class="my-2 block">
                 <a href="{{ route('admin.scheduleConfig.edit', $config) }}"
-                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline ml-2">
+                    class="focus:shadow-outline ml-2 rounded bg-blue-500 py-2 px-4 font-bold text-white hover:bg-blue-700 focus:outline-none">
                     {{ __('Edit') }}
                 </a>
                 <a href="{{ route('admin.schedule.syncNow') }}"
-                    class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline ml-2">
+                    class="focus:shadow-outline ml-2 rounded bg-red-500 py-2 px-4 font-bold text-white hover:bg-red-700 focus:outline-none">
                     {{ __('Sync it NOW!') }}
                 </a>
             </div>
             <x-divider />
             <table class="w-full">
                 <tr>
-                    <td class="text-sm font-semibold px-4 py-2">{{ __('Intake code') }}</td>
-                    <td class="text-sm font-semibold px-4 py-2">{{ $config->intake_code }}</td>
+                    <td class="px-4 py-2 text-sm font-semibold">{{ __('Intake code') }}</td>
+                    <td class="px-4 py-2 text-sm font-semibold">{{ $config->intake_code }}</td>
                 </tr>
                 <tr>
-                    <td class="text-sm font-semibold px-4 py-2">{{ __('Grouping') }}</td>
-                    <td class="text-sm font-semibold px-4 py-2">{{ $config->grouping }}</td>
+                    <td class="px-4 py-2 text-sm font-semibold">{{ __('Grouping') }}</td>
+                    <td class="px-4 py-2 text-sm font-semibold">{{ $config->grouping }}</td>
                 </tr>
                 <tr>
-                    <td class="text-sm font-semibold px-4 py-2">{{ __('Sync weekly') }}</td>
-                    <td class="text-sm font-semibold px-4 py-2">{{ $config->is_subscribed ? __('Yes') : __('No') }}</td>
+                    <td class="px-4 py-2 text-sm font-semibold">{{ __('Sync weekly') }}</td>
+                    <td class="px-4 py-2 text-sm font-semibold">{{ $config->is_subscribed ? __('Yes') : __('No') }}</td>
                 </tr>
                 <tr>
-                    <td class="text-sm font-semibold px-4 py-2">
+                    <td class="px-4 py-2 text-sm font-semibold">
                         {{ __('Ignored Module') }} :
                     </td>
-                    <td class="text-sm font-semibold px-4 py-2">
+                    <td class="px-4 py-2 text-sm font-semibold">
                         {{ $config->except ? implode(', ', $config->except) : __('None') }}
                     </td>
                 </tr>
                 <tr>
-                    <td class="text-sm font-semibold px-4 py-2">
+                    <td class="px-4 py-2 text-sm font-semibold">
                         {{ __('Linked to Microsoft ?') }} :
                     </td>
                     @if (auth()->user()->msOauth()->exists())
-                        <td class="text-sm font-semibold px-4 py-2">
+                        <td class="px-4 py-2 text-sm font-semibold">
                             {{ __('YES') }}
                         </td>
                     @else
-                        <td class="text-sm font-semibold px-4 py-2">
+                        <td class="px-4 py-2 text-sm font-semibold">
                             {{ __('NO') }}
                             (<a href="{{ route('admin.schedule.msOAuth.signin') }}">
                                 {{ __('Click here to link your account') }}
@@ -135,7 +135,7 @@
             <div>
                 <h2 class="text-center text-3xl font-bold">{{ __('Your Schedule') }}</h2>
                 <div id='calendar'
-                    class="w-full text-base md:w-1/2 mx-auto mt-4 border border-gray-500 bg-white p-4 rounded rounded-md">
+                    class="mx-auto mt-4 w-full rounded rounded-md border border-gray-500 bg-white p-4 text-base md:w-1/2">
                 </div>
             </div>
         @endif

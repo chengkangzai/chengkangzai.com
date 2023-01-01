@@ -3,7 +3,7 @@
 @section('content')
     <div class="mt-8">
         <div class="mt-4">
-            <div class="py-3 px-5 mb-2 rounded-md text-base border border-gray-500 bg-white">
+            <div class="mb-2 rounded-md border border-gray-500 bg-white py-3 px-5 text-base">
                 <ul class="flex">
                     <li><a href="{{ route('admin.home') }}" class="underline hover:text-gray-500">{{ __('Home') }}</a>
                     </li>
@@ -12,12 +12,12 @@
                 </ul>
             </div>
             @include('partial.error-card')
-            <div class="p-6 bg-white rounded-md shadow-md">
-                <h2 class="text-lg text-gray-700 font-semibold capitalize">{{ __('Edit') }} {{ __('My Profile') }}</h2>
+            <div class="rounded-md bg-white p-6 shadow-md">
+                <h2 class="text-lg font-semibold capitalize text-gray-700">{{ __('Edit') }} {{ __('My Profile') }}</h2>
 
                 <form action="{{ route('admin.user.changePassword', auth()->user()) }}" method="POST">
                     @csrf
-                    <div class="space-y-4 mt-4">
+                    <div class="mt-4 space-y-4">
                         <div class="md:w-1/2">
                             <label class="text-gray-700">{{ __('Name') }}
                                 <x-input type="text" name="name" id="name"
@@ -51,9 +51,9 @@
 
                     </div>
 
-                    <div class="flex mt-4">
+                    <div class="mt-4 flex">
                         <button
-                            class="px-4 py-2 bg-gray-800 text-gray-200 rounded-md hover:bg-gray-700 focus:outline-none focus:bg-gray-700">
+                            class="rounded-md bg-gray-800 px-4 py-2 text-gray-200 hover:bg-gray-700 focus:bg-gray-700 focus:outline-none">
                             {{ __('Submit') }}
                         </button>
                     </div>

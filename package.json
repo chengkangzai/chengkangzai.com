@@ -2,17 +2,19 @@
     "private": true,
     "scripts": {
         "dev": "vite",
-        "build": "vite build"
+        "build": "vite build",
+        "format": "blade-formatter resources/**/*.blade.php --sort-tailwindcss-classes --sort-html-attributes --write"
     },
     "devDependencies": {
         "@tailwindcss/forms": "^0.4.0",
         "autoprefixer": "^10.4.2",
         "axios": "^0.21",
+        "blade-formatter": "^1.32.2",
+        "laravel-vite-plugin": "^0.6.0",
         "lodash": "^4.17.19",
         "postcss": "^8.4.5",
         "postcss-import": "^14.0.1",
         "tailwindcss": "^3.0.13",
-        "vite": "^3.0.2",
-        "laravel-vite-plugin": "^0.6.0"
+        "vite": "^3.0.2"
     }
 }

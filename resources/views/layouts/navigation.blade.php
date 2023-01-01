@@ -1,9 +1,9 @@
 <div :class="sidebarOpen ? 'block' : 'hidden'" @click="sidebarOpen = false"
-    class="fixed z-20 inset-0 bg-black opacity-50 transition-opacity lg:hidden"></div>
+    class="fixed inset-0 z-20 bg-black opacity-50 transition-opacity lg:hidden"></div>
 
 <div :class="sidebarOpen ? 'translate-x-0 ease-out' : '-translate-x-full ease-in'"
-    class="fixed z-30 inset-y-0 left-0 w-64 transition duration-300 transform bg-gray-900 overflow-y-auto lg:translate-x-0 lg:static lg:inset-0">
-    <div class="flex items-center justify-center mt-8">
+    class="fixed inset-y-0 left-0 z-30 w-64 overflow-y-auto bg-gray-900 transition duration-300 lg:static lg:inset-0 lg:translate-x-0">
+    <div class="mt-8 flex items-center justify-center">
         <div class="flex items-center">
             <svg class="h-12 w-12" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -14,7 +14,7 @@
                     fill="white" />
             </svg>
 
-            <span class="text-white text-2xl mx-2 font-semibold">{{ __('Dashboard') }}</span>
+            <span class="mx-2 text-2xl font-semibold text-white">{{ __('Dashboard') }}</span>
         </div>
     </div>
 
@@ -101,7 +101,7 @@
 
             <x-nav-link href="{{ route('admin.users.index') }}" :active="request()->is('admin/users*')">
                 <x-slot name="icon">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z">

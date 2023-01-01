@@ -13,7 +13,7 @@
 
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    @vite(['resources/css/app.css'])
     <script defer src="https://www.googletagmanager.com/gtag/js?id=G-G0TL352WKG"></script>
     <script defer>
         window.dataLayer = window.dataLayer || [];
@@ -28,7 +28,6 @@
         });
     </script>
     <script src="//unpkg.com/alpinejs" defer></script>
-    <script src="{{ asset('js/app.js') }}" defer></script>
     @stack('cdn')
     @stack('style')
     @laravelPWA
@@ -36,14 +35,14 @@
 </head>
 
 <body>
-    <div x-data="{ sidebarOpen: false }" class="flex h-screen bg-gray-200 font-roboto">
+    <div x-data="{ sidebarOpen: false }" class="font-roboto flex h-screen bg-gray-200">
         @include('layouts.navigation')
 
-        <div class="flex overflow-hidden flex-col flex-1">
+        <div class="flex flex-1 flex-col overflow-hidden">
             @include('layouts.header')
 
-            <main class="overflow-y-auto overflow-x-hidden flex-1 bg-gray-200">
-                <div class="container px-6 py-8 mx-auto">
+            <main class="flex-1 overflow-y-auto overflow-x-hidden bg-gray-200">
+                <div class="container mx-auto px-6 py-8">
                     <h3 class="mb-4 text-3xl font-medium text-gray-700">
                         @yield('header')
                     </h3>

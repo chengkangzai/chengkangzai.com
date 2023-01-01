@@ -5,15 +5,15 @@
 
 @section('content')
     @include('partial.rocket')
-    <div class="xl:w-8/12 md:w-10/12 mx-auto pt-20 ">
+    <div class="mx-auto pt-20 md:w-10/12 xl:w-8/12">
         @include('partial.public-heading', [
             'title' => __('Just Random Sharing Blog for tech'),
         ])
 
-        <div class="flex flex-wrap -m-4 dark:text-white w-full mx-auto mb-6">
-            <div class="mx-auto text-center pb-8 ">
-                <h1 class="text-4xl font-bold py-4"> {{ $post->title }} </h1>
-                <span class="mr-3 inline-flex items-center leading-none text-sm py-1 ">
+        <div class="-m-4 mx-auto mb-6 flex w-full flex-wrap dark:text-white">
+            <div class="mx-auto pb-8 text-center">
+                <h1 class="py-4 text-4xl font-bold"> {{ $post->title }} </h1>
+                <span class="mr-3 inline-flex items-center py-1 text-sm leading-none">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -21,7 +21,7 @@
                     </svg>
                     {{ $post->updated_at->diffForHumans() }}
                 </span>
-                <span class="mr-3 inline-flex items-center leading-none text-sm py-1">
+                <span class="mr-3 inline-flex items-center py-1 text-sm leading-none">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -38,34 +38,34 @@
                 </span>
             </div>
             <div class="w-screen">
-                <div id="editor" class="w-screen mx-auto hidden">
+                <div id="editor" class="mx-auto hidden w-screen">
                     {!! $post->content !!}
                 </div>
             </div>
         </div>
 
-        <div class="flex flex-wrap dark:text-white w-full mx-auto pb-4 pt-4">
+        <div class="mx-auto flex w-full flex-wrap pb-4 pt-4 dark:text-white">
             <div class="mx-auto mb-6">
-                <h3 class="text-2xl text-center">{{ __('Comment Section') }}</h3>
+                <h3 class="text-center text-2xl">{{ __('Comment Section') }}</h3>
             </div>
-            <div class="w-full mb-2">
+            <div class="mb-2 w-full">
                 @include('partial.error-card')
             </div>
-            <section class="rounded-b-lg w-full">
+            <section class="w-full rounded-b-lg">
                 <form action="{{ route('public.posts.comments.store', $post) }}" method="post">
                     @csrf
-                    <div class="w-full space-x-4 mx-auto flex mb-3">
+                    <div class="mx-auto mb-3 flex w-full space-x-4">
                         <input id="name" type="text" placeholder="{{ __('Name (required)') }} " name="name"
                             required aria-label="Name"
-                            class="w-1/2 text-center border border-gray-400 text-gray-800 placeholder-gray-400 rounded focus:shadow-outline py-2" />
+                            class="focus:shadow-outline w-1/2 rounded border border-gray-400 py-2 text-center text-gray-800 placeholder-gray-400" />
                         <input id="email" type="email" placeholder="{{ __('Email (required)') }} " name="email"
                             required aria-label="Email"
-                            class="w-1/2 text-center border border-gray-400 text-gray-800 placeholder-gray-400 rounded focus:shadow-outline py-2" />
+                            class="focus:shadow-outline w-1/2 rounded border border-gray-400 py-2 text-center text-gray-800 placeholder-gray-400" />
                     </div>
                     <textarea required aria-label="Your Comment" name="comment"
-                        class="w-full shadow-inner p-4 border border-gray-400 mb-4 rounded-lg focus:shadow-outline text-2xl dark:text-black"
+                        class="focus:shadow-outline mb-4 w-full rounded-lg border border-gray-400 p-4 text-2xl shadow-inner dark:text-black"
                         placeholder="{{ __('Drop your Comment here') }}" cols="6" rows="6" id="comment_content"></textarea>
-                    <button class="font-bold py-2 px-4 w-full bg-violet-600 text-lg text-white shadow-md rounded-lg ">
+                    <button class="w-full rounded-lg bg-violet-600 py-2 px-4 text-lg font-bold text-white shadow-md">
                         {{ __('Comment') }}
                     </button>
                 </form>
@@ -73,21 +73,21 @@
                 <div id="task-comments" class="pt-4">
                     @forelse($post->comments as $comment)
                         <div
-                            class="bg-white dark:bg-gray-700 rounded-lg p-3 flex flex-col justify-center items-center md:items-start shadow-lg mb-4">
-                            <div class="flex flex-row justify-center mr-2">
+                            class="mb-4 flex flex-col items-center justify-center rounded-lg bg-white p-3 shadow-lg dark:bg-gray-700 md:items-start">
+                            <div class="mr-2 flex flex-row justify-center">
                                 <img alt="avatar" width="48" height="48"
-                                    class="rounded-full w-10 h-10 mr-4 shadow-lg mb-4 bg-white"
+                                    class="mr-4 mb-4 h-10 w-10 rounded-full bg-white shadow-lg"
                                     src="https://cdn1.iconfinder.com/data/icons/technology-devices-2/100/Profile-512.png">
                                 <h3
-                                    class="text-violet-600 dark:text-violet-300 font-semibold text-lg text-center md:text-left ">
+                                    class="text-center text-lg font-semibold text-violet-600 dark:text-violet-300 md:text-left">
                                     {{ $comment->name }}</h3>
                             </div>
-                            <p class="text-gray-600 dark:text-gray-200 text-lg text-center md:text-left w-9/12 ">
+                            <p class="w-9/12 text-center text-lg text-gray-600 dark:text-gray-200 md:text-left">
                                 {{ $comment->comment }}
                             </p>
                         </div>
                     @empty
-                        <p class="text-gray-800 dark:text-white text-lg block text-center w-full ">
+                        <p class="block w-full text-center text-lg text-gray-800 dark:text-white">
                             {{ __('Its empty down here...') }}
                         </p>
                     @endforelse
