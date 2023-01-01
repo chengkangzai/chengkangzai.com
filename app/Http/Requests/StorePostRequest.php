@@ -12,11 +12,11 @@ class StorePostRequest extends FormRequest
         return true;
     }
 
-    #[ArrayShape(['title' => "string[]", 'tags' => "string[]", 'status' => "string[]", 'content' => "string[]"])]
+    #[ArrayShape(['title' => 'string[]', 'tags' => 'string[]', 'status' => 'string[]', 'content' => 'string[]'])]
     public function rules(): array
     {
         return [
-            'title' => ['string', 'required', 'max:255','unique:posts'],
+            'title' => ['string', 'required', 'max:255', 'unique:posts'],
             'tags' => ['array'],
             'status' => ['required', 'string'],
             'content' => ['required', 'string'],

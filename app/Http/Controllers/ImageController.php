@@ -14,7 +14,7 @@ class ImageController extends Controller
     {
         $fileName = $request->file('upload')->getClientOriginalName();
 
-        $s = Storage::disk('s3')->put(self::PUBLIC_PATH . $fileName, $request->file('upload'), 'public');
+        $s = Storage::disk('s3')->put(self::PUBLIC_PATH.$fileName, $request->file('upload'), 'public');
         $url = Storage::disk('s3')->url($s);
 
         return response()->json(['url' => $url]);

@@ -27,7 +27,7 @@ class PublicPostController extends Controller
         abort_if($post->status !== Post::STATUS['PUBLISH'], 404);
         SEOTools::setTitle(Str::words($post->title, 60));
         SEOTools::setDescription(Str::words(strip_tags($post->content), 40));
-        Cache::remember('public-Posts-' . $post->slug, 60 * 60 * 24, function () use ($post) {
+        Cache::remember('public-Posts-'.$post->slug, 60 * 60 * 24, function () use ($post) {
             $post->load('comments');
 
             return $post;

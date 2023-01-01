@@ -7,16 +7,18 @@ use Tests\TestCase;
 class LocaleTest extends TestCase
 {
     private mixed $msLocale;
+
     private mixed $enLocale;
+
     private mixed $zhLocale;
 
     public function setUp(): void
     {
         parent::setUp();
 
-        $this->enLocale = json_decode(file_get_contents(lang_path() . '/en.json'), true);
-        $this->zhLocale = json_decode(file_get_contents(lang_path() . '/zh.json'), true);
-        $this->msLocale = json_decode(file_get_contents(lang_path() . '/ms.json'), true);
+        $this->enLocale = json_decode(file_get_contents(lang_path().'/en.json'), true);
+        $this->zhLocale = json_decode(file_get_contents(lang_path().'/zh.json'), true);
+        $this->msLocale = json_decode(file_get_contents(lang_path().'/ms.json'), true);
     }
 
     public function test_en_translate_is_not_empty()

@@ -11,7 +11,7 @@ class PostFactory extends Factory
 {
     protected $model = Post::class;
 
-    #[ArrayShape(['title' => "string", 'content' => "string", 'status' => "string", 'slug' => "string"])]
+    #[ArrayShape(['title' => 'string', 'content' => 'string', 'status' => 'string', 'slug' => 'string'])]
     public function definition(): array
     {
         $title = $this->faker->text(100);

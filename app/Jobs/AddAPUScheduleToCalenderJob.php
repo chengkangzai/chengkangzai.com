@@ -37,8 +37,11 @@ class AddAPUScheduleToCalenderJob implements ShouldQueue
     ];
 
     private MicrosoftGraph $graph;
+
     private User $user;
+
     private ScheduleConfig $config;
+
     private ?string $causeBy;
 
     public function __construct(User $user, ScheduleConfig $config, string|null $causeBy)
@@ -101,7 +104,7 @@ class AddAPUScheduleToCalenderJob implements ShouldQueue
             ->execute();
     }
 
-    #[ArrayShape(['subject' => "", 'attendees' => "array", 'start' => "array", 'end' => "array", 'body' => "string[]"])]
+    #[ArrayShape(['subject' => '', 'attendees' => 'array', 'start' => 'array', 'end' => 'array', 'body' => 'string[]'])]
     private function formatNewEvent($schedule, array $attendees): array
     {
         return [
@@ -116,13 +119,12 @@ class AddAPUScheduleToCalenderJob implements ShouldQueue
                 'timeZone' => 'Asia/Kuala_Lumpur',
             ],
             'body' => [
-                'content' =>
-                    "Hi," . $this->user->name . ", you have a class of $schedule->MODULE_NAME with lecturer $schedule->NAME ($schedule->SAMACCOUNTNAME@staffemail.apu.edu.my)" .
-                    " at $schedule->ROOM from $schedule->TIME_FROM to $schedule->TIME_TO \n" .
+                'content' => 'Hi,'.$this->user->name.", you have a class of $schedule->MODULE_NAME with lecturer $schedule->NAME ($schedule->SAMACCOUNTNAME@staffemail.apu.edu.my)".
+                    " at $schedule->ROOM from $schedule->TIME_FROM to $schedule->TIME_TO \n".
                     (
                         $this->causeBy == self::CAUSED_BY['Console'] ?
-                        "Sync Schedule will run every Saturday at 06:00 AM (GMT+8 Malaysia Timezone).\n" .
-                        "To unsubscribe, please click on the link below: \n" .
+                        "Sync Schedule will run every Saturday at 06:00 AM (GMT+8 Malaysia Timezone).\n".
+                        "To unsubscribe, please click on the link below: \n".
                         URL::signedRoute('public.unsubscribe', ['email' => $this->user->email]) : ''
                     ),
                 'contentType' => 'text',
@@ -149,12 +151,12 @@ class AddAPUScheduleToCalenderJob implements ShouldQueue
         ];
 
         // Append query parameters to the '/me/calendarView' url
-        $getEventsUrl = '/me/calendarView?' . http_build_query($queryParams);
+        $getEventsUrl = '/me/calendarView?'.http_build_query($queryParams);
 
         return $this->graph->createRequest('GET', $getEventsUrl)
             // Add the user's timezone to Prefer header
             ->addHeaders([
-                'Prefer' => 'outlook.timezone="' . 'Asia/Kuala_Lumpur' . '"',
+                'Prefer' => 'outlook.timezone="'.'Asia/Kuala_Lumpur'.'"',
             ])
             ->setReturnType(Model\Event::class)
             ->execute();

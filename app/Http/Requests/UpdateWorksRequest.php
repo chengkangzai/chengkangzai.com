@@ -12,7 +12,7 @@ class UpdateWorksRequest extends FormRequest
         return true;
     }
 
-    #[ArrayShape(['name' => "string[]", 'description.en' => "string[]", 'description.zh' => "string[]", 'tags' => "string[]", 'picture' => "string[]", 'url' => "string[]", 'github_url' => "string[]", 'status' => "string[]"])]
+    #[ArrayShape(['name' => 'string[]', 'description.en' => 'string[]', 'description.zh' => 'string[]', 'tags' => 'string[]', 'picture' => 'string[]', 'url' => 'string[]', 'github_url' => 'string[]', 'status' => 'string[]'])]
     public function rules(): array
     {
         return [

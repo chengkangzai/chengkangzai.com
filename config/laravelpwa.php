@@ -14,35 +14,35 @@ return [
         'icons' => [
             '72x72' => [
                 'path' => '/images/icons/icon-72x72.png',
-                'purpose' => 'any maskable'
+                'purpose' => 'any maskable',
             ],
             '96x96' => [
                 'path' => '/images/icons/icon-96x96.png',
-                'purpose' => 'any maskable'
+                'purpose' => 'any maskable',
             ],
             '128x128' => [
                 'path' => '/images/icons/icon-128x128.png',
-                'purpose' => 'any maskable'
+                'purpose' => 'any maskable',
             ],
             '144x144' => [
                 'path' => '/images/icons/icon-144x144.png',
-                'purpose' => 'any maskable'
+                'purpose' => 'any maskable',
             ],
             '152x152' => [
                 'path' => '/images/icons/icon-152x152.png',
-                'purpose' => 'any maskable'
+                'purpose' => 'any maskable',
             ],
             '192x192' => [
                 'path' => '/images/icons/icon-192x192.png',
-                'purpose' => 'any maskable'
+                'purpose' => 'any maskable',
             ],
             '384x384' => [
                 'path' => '/images/icons/icon-384x384.png',
-                'purpose' => 'any maskable'
+                'purpose' => 'any maskable',
             ],
             '512x512' => [
                 'path' => '/images/icons/icon-512x512.png',
-                'purpose' => 'any maskable'
+                'purpose' => 'any maskable',
             ],
         ],
         'splash' => [
@@ -58,6 +58,6 @@ return [
             '2048x2732' => '/images/icons/splash-2048x2732.png',
         ],
         'shortcuts' => [],
-        'custom' => []
-    ]
+        'custom' => [],
+    ],
 ];

@@ -36,6 +36,7 @@ class RoleSeeder extends Seeder
         $user->givePermissionTo('profile_password_edit');
         $user->givePermissionTo($permissions->filter(function (Permission $permission) {
             $prefix = explode('_', $permission->name)[0];
+
             return $prefix != 'role'
                 && $prefix != 'permission'
                 && $prefix != 'user'

@@ -73,7 +73,7 @@ class AuthTest extends TestCase
             'name' => $this->faker->name,
             'email' => $this->faker->safeEmail(),
             'password' => $password,
-            'password_confirmation' => $password . 'asda',
+            'password_confirmation' => $password.'asda',
         ])
             ->assertInvalid('password')
             ->assertSessionHasErrors('password')
@@ -82,7 +82,6 @@ class AuthTest extends TestCase
                 'email',
                 'password_confirmation',
             ]);
-
 
         $this->post(route('register'), [
             'name' => '',

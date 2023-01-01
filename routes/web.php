@@ -44,7 +44,7 @@ Route::group(['as' => 'public.'], function () {
 
     Route::get('unsubscribe/{email}', function ($email) {
         User::where('email', $email)->firstOrFail()->scheduleConfig()->firstOrFail()->updateOrFail(['is_subscribed' => false]);
-        echo "You have been successfully unsubscribe";
+        echo 'You have been successfully unsubscribe';
     })->name('unsubscribe')->middleware('signed');
 });
 

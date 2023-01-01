@@ -11,6 +11,7 @@ use Spatie\Tags\Tag;
 class EditModal extends ModalComponent
 {
     public $tag;
+
     public mixed $name;
 
     public array $rules = [

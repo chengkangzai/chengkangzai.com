@@ -12,7 +12,7 @@ class TagService
      * This method will check if the tag is not been used.
      * [Warning] Take a lot of query !!!
      *
-     * @param Tag $tag
+     * @param  Tag  $tag
      * @return bool
      */
     public function isTagSafeToDelete(Tag $tag): bool

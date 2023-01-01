@@ -31,10 +31,10 @@ class NewUserRegisteredNotification extends Notification implements ShouldQueue
         return (new MailMessage())
             ->subject(__('New user registered'))
             ->line(__('A new user has registered.'))
-            ->line(__('Name: ') . $this->user->name)
-            ->line(__('Email: ') . $this->user->email)
-            ->line(__('Role: ') . $this->user->roles()->first()->name)
-            ->line(__('Date: ') . $this->user->created_at)
+            ->line(__('Name: ').$this->user->name)
+            ->line(__('Email: ').$this->user->email)
+            ->line(__('Role: ').$this->user->roles()->first()->name)
+            ->line(__('Date: ').$this->user->created_at)
             ->action(__('View user'), route('admin.users.show', $this->user->id));
     }
 

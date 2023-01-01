@@ -14,7 +14,7 @@ class UpdateUserPasswordRequest extends FormRequest
         return true;
     }
 
-    #[ArrayShape(['name' => "string[]", 'email' => "array", 'password' => "string[]"])]
+    #[ArrayShape(['name' => 'string[]', 'email' => 'array', 'password' => 'string[]'])]
     public function rules(): array
     {
         return [

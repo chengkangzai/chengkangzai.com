@@ -14,6 +14,7 @@ class NewCommentInPostNotification extends Notification implements ShouldQueue
     use Queueable;
 
     private Comment $comment;
+
     private Post $post;
 
     public function __construct(Comment $comment, Post $post)
@@ -32,10 +33,10 @@ class NewCommentInPostNotification extends Notification implements ShouldQueue
         return (new MailMessage())
             ->subject('New comment in post !')
             ->line('New comment in post !')
-            ->line('Post: ' . $this->post->title)
-            ->line('Comment: ' . $this->comment->comment)
-            ->line('Author: ' . $this->comment->name)
-            ->line('Email: ' . $this->comment->email)
+            ->line('Post: '.$this->post->title)
+            ->line('Comment: '.$this->comment->comment)
+            ->line('Author: '.$this->comment->name)
+            ->line('Email: '.$this->comment->email)
             ->action('View Post', route('public.posts.show', $this->post));
     }
 

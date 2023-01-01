@@ -77,7 +77,7 @@ class WorksController extends Controller
         try {
             DB::transaction(function () use ($request, $work) {
                 if ($request->hasFile('picture')) {
-                    Storage::disk('s3')->delete(Works::S3_PATH . $work->picture_name);
+                    Storage::disk('s3')->delete(Works::S3_PATH.$work->picture_name);
                     $path = $request->file('picture')->store(Works::S3_PATH, 's3');
                 }
 
@@ -108,8 +108,8 @@ class WorksController extends Controller
     public function destroy(Works $work): RedirectResponse
     {
         $work->delete();
-        if (Storage::disk('s3')->exists(Works::S3_PATH . $work->picture_name)) {
-            Storage::disk('s3')->delete(Works::S3_PATH . $work->picture_name);
+        if (Storage::disk('s3')->exists(Works::S3_PATH.$work->picture_name)) {
+            Storage::disk('s3')->delete(Works::S3_PATH.$work->picture_name);
         }
 
         return back();

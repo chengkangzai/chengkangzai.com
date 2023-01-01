@@ -12,7 +12,7 @@ class StoreRoleRequest extends FormRequest
         return true;
     }
 
-    #[ArrayShape(['name' => "string", 'permissions' => "string"])]
+    #[ArrayShape(['name' => 'string', 'permissions' => 'string'])]
     public function rules(): array
     {
         return [

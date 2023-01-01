@@ -15,8 +15,8 @@ class PublicIndexController extends Controller
 {
     public function index(): Factory|View|Application
     {
-        $age = Carbon::parse("1999-05-03")->age;
-        SEOTools::setTitle(__('Ching Cheng Kang') . " - " . __('Profile'));
+        $age = Carbon::parse('1999-05-03')->age;
+        SEOTools::setTitle(__('Ching Cheng Kang').' - '.__('Profile'));
         SEOTools::setDescription(__("I'm :age-year-old Malaysian that passionate about making software that simplify people's life.", ['age' => $age]));
 
         $rank = app(GetTopGithubCommitRankService::class)->getTopGithubCommitRank();

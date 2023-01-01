@@ -12,7 +12,7 @@ class UpdateUserRequest extends FormRequest
         return true;
     }
 
-    #[ArrayShape(['name' => "string", 'email' => "string", 'password' => "string", 'role' => "string"])]
+    #[ArrayShape(['name' => 'string', 'email' => 'string', 'password' => 'string', 'role' => 'string'])]
     public function rules(): array
     {
         return [

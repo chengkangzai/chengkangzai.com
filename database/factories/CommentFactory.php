@@ -11,7 +11,7 @@ class CommentFactory extends Factory
 {
     protected $model = Comment::class;
 
-    #[ArrayShape(['comment' => "string", 'email' => "string", 'name' => "string", 'status' => "string", 'post_id' => "mixed"])]
+    #[ArrayShape(['comment' => 'string', 'email' => 'string', 'name' => 'string', 'status' => 'string', 'post_id' => 'mixed'])]
     public function definition(): array
     {
         return [
@@ -34,7 +34,7 @@ class CommentFactory extends Factory
 
     public function markAsSpam($id): CommentFactory
     {
-        return $this->state(function (array $attributes) use ($id) {
+        return $this->state(function (array $attributes) {
             return [
                 'status' => Comment::STATUS['SPAM'],
             ];

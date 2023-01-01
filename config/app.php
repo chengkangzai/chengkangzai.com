@@ -42,7 +42,7 @@ return [
     |
     */
 
-    'debug' => (bool)env('APP_DEBUG', false),
+    'debug' => (bool) env('APP_DEBUG', false),
 
     /*
     |--------------------------------------------------------------------------
@@ -197,13 +197,12 @@ return [
         // 'Redis' => Illuminate\Support\Facades\Redis::class,
     ])->toArray(),
 
-
     /*
      * My Own Configurations
      */
     'webhook' => [
         'discord' => [
-            'spam' => env('DISCORD_WEBHOOK_POST')
-        ]
-    ]
+            'spam' => env('DISCORD_WEBHOOK_POST'),
+        ],
+    ],
 ];

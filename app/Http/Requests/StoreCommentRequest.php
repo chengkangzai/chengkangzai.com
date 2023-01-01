@@ -12,13 +12,13 @@ class StoreCommentRequest extends FormRequest
         return true;
     }
 
-    #[ArrayShape(['name' => "string[]", 'email' => "string[]", 'comment' => "string[]"])]
+    #[ArrayShape(['name' => 'string[]', 'email' => 'string[]', 'comment' => 'string[]'])]
     public function rules(): array
     {
         return [
-            'name' => ['required', 'string',],
-            'email' => ['required', 'email',],
-            'comment' => ['required', 'string',],
+            'name' => ['required', 'string'],
+            'email' => ['required', 'email'],
+            'comment' => ['required', 'string'],
         ];
     }
 }

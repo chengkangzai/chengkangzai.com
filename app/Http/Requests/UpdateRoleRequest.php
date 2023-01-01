@@ -12,11 +12,11 @@ class UpdateRoleRequest extends FormRequest
         return true;
     }
 
-    #[ArrayShape(['name' => "string", 'permissions' => "string", 'permissions.*' => "string"])]
+    #[ArrayShape(['name' => 'string', 'permissions' => 'string', 'permissions.*' => 'string'])]
     public function rules(): array
     {
         return [
-            'name' => 'required|unique:roles,name,' . $this->route('role')->id,
+            'name' => 'required|unique:roles,name,'.$this->route('role')->id,
             'permissions' => 'array',
             'permissions.*' => 'integer|exists:permissions,id',
         ];

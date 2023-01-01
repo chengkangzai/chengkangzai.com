@@ -37,6 +37,6 @@ class Works extends Model
 
     public function getImgLinkAttribute(): string
     {
-        return Storage::disk('s3')->temporaryUrl(self::S3_PATH . '/' . $this->picture_name, now()->addMinutes(5));
+        return Storage::disk('s3')->temporaryUrl(self::S3_PATH.'/'.$this->picture_name, now()->addMinutes(5));
     }
 }

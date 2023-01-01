@@ -15,6 +15,7 @@ class CalendarSyncSuccessNotification extends Notification implements ShouldQueu
     use Queueable;
 
     private ScheduleConfig $config;
+
     private Collection $calendarEvents;
 
     public function __construct(ScheduleConfig $config, Collection $calendarEvents)
@@ -33,10 +34,10 @@ class CalendarSyncSuccessNotification extends Notification implements ShouldQueu
         $mail = (new MailMessage())
             ->success()
             ->subject('Calendar Sync Success')
-            ->greeting('Hello! ' . $notifiable->name)
+            ->greeting('Hello! '.$notifiable->name)
             ->line('The calendar sync was successful.')
-            ->line('Intake: ' . $this->config->intake_code)
-            ->line('Grouping: ' . $this->config->grouping);
+            ->line('Intake: '.$this->config->intake_code)
+            ->line('Grouping: '.$this->config->grouping);
 
         if ($this->calendarEvents->isNotEmpty()) {
             $mail->line('The following events were created:');
