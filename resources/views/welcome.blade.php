@@ -362,7 +362,22 @@
                             class="order-1 bg-indigo-600 rounded-lg shadow-xl w-5/12 px-6 py-4 transform hover:scale-110 transition duration-300">
                             <h3 class="mb-3 font-bold text-white text-xl">{{ __('Technical Assistant in APU') }}</h3>
                             <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
-                                {{ __('As a Technical Assistant (a group of around 50 members), we managed to maintain the excellent condition of 400+ PC, 100+ Projectors, and countless student and staff laptops and solve some of the problems.') }}
+                                -
+                                {{ __('Setting up and maintaining equipment and technology in classrooms, labs, and other facilities') }}
+                            </p>
+                            <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
+                                -
+                                {{ __('Troubleshooting technical problems and providing technical support to faculty, students, and staff') }}
+                            </p>
+                            <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
+                                - {{ __('Managing and maintaining the university\'s computer and network systems') }}
+                            </p>
+                            <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
+                                -
+                                {{ __('Coordinating and scheduling maintenance and repairs of equipment and technology') }}
+                            </p>
+                            <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
+                                - {{ __('Maintaining inventory and ordering supplies as needed') }}
                             </p>
                             <p class="text-sm leading-snug tracking-wide pt-2 text-white">
                                 {{ Carbon\Carbon::parse('2018-12-01')->translatedFormat('F Y') }} -
@@ -384,15 +399,17 @@
                             </h3>
                             <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
                                 -
-                                {{ __("Led a team of technical assistants to provide support services to the university's accommodation unit.") }}
-                                <br>
-                                - {{ __("Work together with ISP's technician regarding network issue") }}
-                                <br>
+                                {{ __('Led a team of technical assistants to provide support services to the university\'s accommodation unit.') }}
+                            </p>
+                            <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
+                                - {{ __('Work together with ISP\'s technician regarding network issue') }}
+                            </p>
+                            <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
                                 - {{ __('Ensure the network accessibility within the university campus') }}
-                                <br>
+                            </p>
+                            <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
                                 -
                                 {{ __('Maintain, manage, and monitor technical facilities and infrastructure within the campus') }}
-                                <br>
                             </p>
                         </div>
                     </div>
@@ -412,10 +429,16 @@
                                 </a>
                             </h3>
                             <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
-                                {{ __('As an intern, I managed to fix the migration file and prepare the bootstrap seeder with the most optimal speed and solve multiple frontend problems by using Laravel for the in-house application') }}
-                                <a href="https://strateqgroup.com/smart-managed-services/" class="underline"
-                                    rel="noreferrer" target="_blank">
-                                    {{ __('SMART SD') }}</a>.
+                                - {{ __('Successfully fixed the migration file for the company\'s internal application') }}
+                            </p>
+                            <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
+                                - {{ __('Improved the speed and efficiency of the bootstrap seeder using Laravel') }}
+                            </p>
+                            <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
+                                -
+                                {{ __('Troubleshooted and resolved multiple frontend issues within the in-house application') }}
+                                (<a href="https://strateqgroup.com/smart-managed-services/" class="underline"
+                                    rel="noreferrer" target="_blank">{{ __('SMART SD') }}</a>.)
                             </p>
                             <p class="text-sm leading-snug tracking-wide pt-2 text-white">
                                 {{ Carbon\Carbon::parse('2018-04-01')->translatedFormat('F Y') }} -
@@ -526,6 +549,42 @@
                             </p>
                             <p class="text-sm leading-snug tracking-wide pt-2 text-white">
                                 {{ Carbon\Carbon::parse('2022-10-01')->translatedFormat('F Y') }}
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="mb-8 flex justify-between items-center w-full">
+                        <div class="order-1 w-5/12"></div>
+                        <div
+                            class="z-20 flex items-center order-1 bg-gray-800  dark:bg-gray-100 shadow-xl w-8 h-8 rounded-full transform hover:scale-125 transition duration-300">
+                            <p class="mx-auto font-semibold text-lg text-white dark:text-black">9</p>
+                        </div>
+                        <div
+                            class="order-1 bg-blue-600 rounded-lg shadow-xl w-5/12 px-6 py-4 transform hover:scale-110 transition duration-300">
+                            <h3 class="mb-3 font-bold text-white text-xl">
+                                {{ __('Chief Technology Officer at') }}
+                                <a class="underline" rel="noreferrer" target="_blank" href="https://pixalink.io/">
+                                    {{ __('Pixalink') }}
+                                </a>
+                            </h3>
+                            <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
+                                - {{ __('Responsible for the overall technology strategy and execution.') }}
+                            </p>
+                            <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
+                                - {{ __('Driving innovation and staying ahead of technological trends in the company.') }}
+                            </p>
+                            <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
+                                -
+                                {{ __('Closely with the CEO and other senior executives to identify and implement new technologies that give the company a competitive edge.') }}
+                            </p>
+                            <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
+                                -
+                                {{ __('Involved in fundraising and building partnerships with other companies or organizations.') }}
+                            </p>
+                            <p class="text-sm leading-snug tracking-wide pt-2 text-white">
+                                {{ Carbon\Carbon::parse('2022-10-01')->translatedFormat('F Y') }}
+                                - {{ __('Present') }}
                             </p>
                         </div>
 
