@@ -186,7 +186,6 @@
 
                 <div
                     class="h-full transform rounded-lg bg-gray-50 px-5 py-8 text-gray-800 shadow-lg transition duration-300 hover:scale-110 dark:bg-gray-800">
-                    >
                     <div class="mb-10 w-full">
                         <p class="pb-3 text-center text-2xl text-black dark:text-white">{{ __('Get in touch') }}</p>
                         <div class="space-x-4 space-y-2">
