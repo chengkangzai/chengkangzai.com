@@ -340,7 +340,8 @@
                             <h3 class="mb-3 font-bold text-white text-xl">
                                 {{ __('Persuade Study in') }}
                                 <a class="underline" rel="noreferrer" target="_blank" href="https://www.apu.edu.my/">
-                                    {{ __('Asia Pacific University') }}</a>
+                                    {{ __('Asia Pacific University') }}
+                                </a>
                             </h3>
                             <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
                                 {{ __('Major :') }}
@@ -350,7 +351,7 @@
                                 </a>
                             </p>
                             <p class="text-sm leading-snug tracking-wide pt-2 text-white">
-                                {{ __('May') }} 2018
+                                {{ Carbon\Carbon::parse('2018-05-01')->translatedFormat('F Y')  }}
                             </p>
 
                         </div>
@@ -369,7 +370,8 @@
                                 {{ __('As a Technical Assistant (a group of around 50 members), we managed to maintain the excellent condition of 400+ PC, 100+ Projectors, and countless student and staff laptops and solve some of the problems.') }}
                             </p>
                             <p class="text-sm leading-snug tracking-wide pt-2 text-white">
-                                {{ __('December') }} 2018 - {{ __('November') }} 2021
+                                {{ Carbon\Carbon::parse('2018-12-01')->translatedFormat('F Y')  }} -
+                                {{ Carbon\Carbon::parse('2021-11-01')->translatedFormat('F Y')  }}
                             </p>
                         </div>
                     </div>
@@ -421,7 +423,8 @@
                                     {{ __('SMART SD') }}</a>.
                             </p>
                             <p class="text-sm leading-snug tracking-wide pt-2 text-white">
-                                {{ __('April') }} 2020 - {{ __('July') }} 2020
+                                {{ Carbon\Carbon::parse('2018-04-01')->translatedFormat('F Y')  }} -
+                                {{ Carbon\Carbon::parse('2018-07-01')->translatedFormat('F Y')  }}
                             </p>
                         </div>
                     </div>
@@ -444,13 +447,13 @@
                                    class="underline" rel="noreferrer" target="_blank">
                                     {{ __('Diploma in Information Technology with a specialism in Software Engineering') }}
                                 </a>
-                                {{ __('with CGPA of 3.47') }}
+                            <span>{{ __('with CGPA of', ['cgpa'=>'3.47']) }}</span>
                             </p>
                             <small class="text-xs line-through text-gray-100">
-                                {{ __('Only if i can round off to 4.0<') }}
+                                {{ __('Only if i can round off to 4.0') }}
                             </small>
                             <p class="text-sm leading-snug tracking-wide pt-2 text-white">
-                                {{ __('September') }} 2020
+                                {{ Carbon\Carbon::parse('2020-09-01')->translatedFormat('F Y')  }}
                             </p>
                         </div>
 
@@ -476,7 +479,7 @@
                                     {{ __('BSc (Hons) in Software Engineering') }} </a>
                             </p>
                             <p class="text-sm leading-snug tracking-wide pt-2 text-white">
-                                {{ __('September') }} 2020
+                                {{ Carbon\Carbon::parse('2020-09-01')->translatedFormat('F Y')  }}
                             </p>
                         </div>
                     </div>
@@ -499,7 +502,8 @@
                                 {{ __('As a intern, I was responsible for the development of the in house Custom Content Management(CMS) System and various Hotel Website of the company with the use of .NET and .NET Core technology.') }}
                             </p>
                             <p class="text-sm leading-snug tracking-wide pt-2 text-white">
-                                {{ __('July') }} 2021 - {{ __('November') }} 2021
+                                {{\Carbon\Carbon::parse('2021-07-01')->translatedFormat('F Y')}} -
+                                {{\Carbon\Carbon::parse('2021-11-01')->translatedFormat('F Y')}}
                             </p>
                         </div>
 
@@ -515,7 +519,8 @@
                             class="order-1 bg-blue-600 rounded-lg shadow-xl w-5/12 px-6 py-4 transform hover:scale-110 transition duration-300">
                             <h3 class="mb-3 font-bold text-white text-xl">{{ __('Graduated from') }}
                                 <a class="underline" rel="noreferrer" target="_blank" href="https://www.apu.edu.my/">
-                                    {{ __('Asia Pacific University') }}</a>
+                                    {{ __('Asia Pacific University') }}
+                                </a>
                             </h3>
                             <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
                                 {{ __('Major :') }}
@@ -523,10 +528,10 @@
                                    class="underline" rel="noreferrer" target="_blank">
                                     {{ __('BSc (Hons) in Software Engineering') }}
                                 </a>
-                                {{--                                    {{ __('with CGPA of 3.47') }}--}}
+                                {{ __('with CGPA of', ['cgpa'=> '3.56' ]) }}
                             </p>
                             <p class="text-sm leading-snug tracking-wide pt-2 text-white">
-                                {{ __('October') }} 2022
+                                {{ Carbon\Carbon::parse('2022-10-01')->translatedFormat('F Y') }}
                             </p>
                         </div>
 
@@ -544,10 +549,9 @@
             '{{ __('Laravel Developer') }}',
             @if ($rank >= 1)
                 '{{ __('No x in most active GitHub users in Malaysia', ['rank' => $rank]) }}',
-            @endif '{{ __('Fullstack Developer') }}',
+            @endif
+            '{{ __('Fullstack Developer') }}',
             '{{ __('Web Developer') }}',
-            '{{ __('Angular Developer') }}',
-            '{{ __('Ionic Developer') }}',
             '{{ __('Firebase Developer') }}',
             '{{ __('Self-learner') }}'
         ];
