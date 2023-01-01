@@ -266,14 +266,7 @@
                                     class="mt-2 mt-4 mb-4 flex w-full items-start text-center leading-none dark:text-white">
                                     <span class="inline">
                                         {{ __('Build with') }}
-                                        @foreach ($work->tags as $tag)
-                                            @if ($loop->last)
-                                                {{ $tag->name }}
-                                            @else
-                                                {{ $tag->name }},
-                                            @endif
-                                        @endforeach
-
+                                        {{$work->tags->map->name->join(', ')}}
                                     </span>
                                 </div>
                             @endif
