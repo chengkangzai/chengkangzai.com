@@ -25,7 +25,7 @@
             cookie_flags: 'SameSite=None;Secure'
         });
     </script>
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    @vite(['resources/css/app.css'])
     @laravelPWA
     @livewireStyles
     @stack('cdn')

@@ -13,7 +13,7 @@
 
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    @vite(['resources/css/app.css'])
     <script defer src="https://www.googletagmanager.com/gtag/js?id=G-G0TL352WKG"></script>
     <script defer>
         window.dataLayer = window.dataLayer || [];
