@@ -2,7 +2,8 @@
     "private": true,
     "scripts": {
         "dev": "vite",
-        "build": "vite build"
+        "build": "vite build",
+        "format": "blade-formatter resources/**/*.blade.php --sort-tailwindcss-classes --sort-html-attributes --write"
     },
     "devDependencies": {
         "@tailwindcss/forms": "^0.4.0",
