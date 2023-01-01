@@ -266,7 +266,7 @@
                                     class="mt-2 mt-4 mb-4 flex w-full items-start text-center leading-none dark:text-white">
                                     <span class="inline">
                                         {{ __('Build with') }}
-                                        {{$work->tags->map->name->join(', ')}}
+                                        {{ $work->tags->map->name->join(', ') }}
                                     </span>
                                 </div>
                             @endif
