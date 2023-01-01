@@ -66,12 +66,12 @@
                     </p>
                     <div class="flex flex-col justify-center space-y-2 lg:flex-row lg:space-x-2">
                         <a role="button" href="{{ asset('resume.pdf') }}"
-                            class="focus:shadow-outline mt-auto flex transform items-center rounded-lg bg-black px-6 py-2 font-semibold text-white ring-black ring-offset-2 ring-offset-current transition duration-300 ease-in-out hover:bg-gray-800 hover:to-black focus:outline-none focus:ring-2 dark:bg-white dark:text-black dark:hover:bg-gray-200 dark:hover:to-white">
+                            class="focus:shadow-outline mt-auto flex items-center rounded-lg bg-black px-6 py-2 font-semibold text-white ring-black ring-offset-2 ring-offset-current transition duration-300 ease-in-out hover:bg-gray-800 hover:to-black focus:outline-none focus:ring-2 dark:bg-white dark:text-black dark:hover:bg-gray-200 dark:hover:to-white">
                             {{ __('SEE MY RESUME') }}
                         </a>
 
                         <a role="button" href="https://pandemic.chengkangzai.com"
-                            class="focus:shadow-outline mt-auto flex transform items-center rounded-lg bg-black px-6 py-2 font-semibold text-white ring-black ring-offset-2 ring-offset-current transition duration-300 ease-in-out hover:bg-gray-800 hover:to-black focus:outline-none focus:ring-2 dark:bg-white dark:text-black dark:hover:bg-gray-200 dark:hover:to-white">
+                            class="focus:shadow-outline mt-auto flex items-center rounded-lg bg-black px-6 py-2 font-semibold text-white ring-black ring-offset-2 ring-offset-current transition duration-300 ease-in-out hover:bg-gray-800 hover:to-black focus:outline-none focus:ring-2 dark:bg-white dark:text-black dark:hover:bg-gray-200 dark:hover:to-white">
                             {{ __('Covid Dashboard') }}
                         </a>
                     </div>
@@ -94,98 +94,81 @@
 
         </section>
 
-        <section id="about-me">
+        <section id="about-me" class="mx-2 md:mx-0">
             <a href="#about-me"
-                class="my-8 md:mb-2 text-3xl font-black text-black block text-center w-full dark:text-white lg:text-3xl md:text-2xl">{{ __('About me') }}</a>
-            <div class="flex flex-wrap w-full mx-auto pb-8">
-                <div
-                    class="md:w-1/3 w-full flex items-center justify-center px-5 py-8 transform hover:scale-110 transition duration-300">
-                    <div x-data="{ cn: true }"
-                        class="w-full mx-auto rounded-lg bg-gray-50 dark:bg-gray-800 shadow-lg px-5 pt-5 my5 pb-10 text-gray-800">
-                        <div class="w-full mb-10">
-                            <div>
-                                <p title="{{ __('Click me to translate') }}"
-                                    class="text-right text-black dark:text-white text-xl animate-bounce" role="button">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" @click="cn = !cn"
-                                        viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6 right-0 animate-bounce">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
-                                    </svg>
-                                </p>
-                                <p class="text-2xl text-black text-center pb-3 dark:text-white">
-                                    {{ __('What I believe in') }}</p>
-                            </div>
-                            <div class="text-3xl text-indigo-500 text-left leading-tight h-3">“</div>
-                            <ul x-show="cn">
-                                <li class="text-white text-gray-600 dark:text-gray-200 text-center px-5">1.
-                                    面对问题是解决问题的第一步。
-                                </li>
-                                <li class="text-white text-gray-600 dark:text-gray-200 text-center px-5">2.
-                                    把小问题解决了，就没有大问题。
-                                </li>
-                                <li class="text-white text-gray-600 dark:text-gray-200 text-center px-5">3.
-                                    把所有的小问题都解决了，就根本没有问题。
-                                </li>
-                                <li class="text-white text-gray-600 dark:text-gray-200 text-center px-5">4.
-                                    你不解决问题，问题会解决你。
-                                </li>
-                            </ul>
-                            <ol x-show="!cn">
-                                <li class="text-white text-gray-600 dark:text-gray-200 text-center px-5">1.
-                                    Facing the problem is the first matter of the business.
-                                </li>
-                                <li class="text-white text-gray-600 dark:text-gray-200 text-center px-5">2.
-                                    When small problem is fixed, there will not have major problem.
-                                </li>
-                                <li class="text-white text-gray-600 dark:text-gray-200 text-center px-5">3.
-                                    When all small problem are fixed, there will not have any problem.
-                                </li>
-                                <li class="text-white text-gray-600 dark:text-gray-200 text-center px-5">4.
-                                    If you dont settle the problem, the problem will try to settle you.
-                                </li>
-                            </ol>
-                            <p class="text-sm text-gray-600 text-center px-5">
+                class="my-8 mx-2 block w-full text-center text-3xl font-black text-black dark:text-white md:mb-6 md:text-2xl lg:text-3xl">
+                {{ __('About me') }}
+            </a>
+            <div class="grid place-items-stretch gap-8 pb-8 md:grid-cols-3">
+                <div class="rounded-lg bg-gray-50 px-5 py-8 text-gray-800 shadow-lg transition duration-300 hover:scale-110 dark:bg-gray-800"
+                    x-data="{ cn: true }">
+                    <p title="{{ __('Click me to translate') }}"
+                        class="animate-bounce text-right text-xl text-black dark:text-white" role="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" @click="cn = !cn" viewBox="0 0 24 24"
+                            stroke="currentColor" class="right-0 h-6 w-6 animate-bounce">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
+                        </svg>
+                    </p>
+                    <p class="pb-3 text-center text-2xl text-black dark:text-white">
+                        {{ __('What I believe in') }}
+                    </p>
+                    <div class="h-3 text-left text-3xl leading-tight text-indigo-500">“</div>
+                    <ul x-show="cn">
+                        <li class="px-5 text-center text-white text-gray-600 dark:text-gray-200">
+                            1. 面对问题是解决问题的第一步。
+                        </li>
+                        <li class="px-5 text-center text-white text-gray-600 dark:text-gray-200">
+                            2. 把小问题解决了，就没有大问题。
+                        </li>
+                        <li class="px-5 text-center text-white text-gray-600 dark:text-gray-200">
+                            3. 把所有的小问题都解决了，就根本没有问题。
+                        </li>
+                        <li class="px-5 text-center text-white text-gray-600 dark:text-gray-200">
+                            4. 你不解决问题，问题会解决你。
+                        </li>
+                    </ul>
+                    <ol x-show="!cn">
+                        <li class="px-5 text-center text-white text-gray-600 dark:text-gray-200">
+                            1. Facing the problem is the first matter of the business.
+                        </li>
+                        <li class="px-5 text-center text-white text-gray-600 dark:text-gray-200">
+                            2. When small problem is fixed, there will not have major problem.
+                        </li>
+                        <li class="px-5 text-center text-white text-gray-600 dark:text-gray-200">
+                            3. When all small problem are fixed, there will not have any problem.
+                        </li>
+                        <li class="px-5 text-center text-white text-gray-600 dark:text-gray-200">
+                            4. If you don't settle the problem, the problem will try to settle you.
+                        </li>
+                    </ol>
+                    <div class="-mt-3 h-3 text-right text-3xl leading-tight text-indigo-500">”</div>
+                    <p class="text-md text-center font-bold text-indigo-700 dark:text-indigo-400" x-show="cn">
+                        柯文哲</p>
+                    <p class="text-md text-center font-bold text-indigo-700 dark:text-indigo-400" x-show="!cn">
+                        Ko Wen-Je</p>
+                    <p class="text-center text-xs text-gray-700 dark:text-gray-400">@KP_Taipei</p>
+                </div>
 
-                            </p>
-                            <div class="text-3xl text-indigo-500 text-right leading-tight h-3 -mt-3">”</div>
-                        </div>
-                        <div class="w-full">
-                            <p class="text-md text-indigo-700 dark:text-indigo-400 font-bold text-center" x-show="cn">
-                                柯文哲</p>
-                            <p class="text-md text-indigo-700 dark:text-indigo-400 font-bold text-center" x-show="!cn">
-                                Ko Wen-Je</p>
-                            <p class="text-xs text-gray-700 dark:text-gray-400 text-center">@KP_Taipei</p>
-                        </div>
+                <div
+                    class="rounded-lg bg-gray-50 px-5 py-8 text-gray-800 shadow-lg transition duration-300 hover:scale-110 dark:bg-gray-800">
+                    <div class="w-full text-center">
+                        <p class="pb-3 text-center text-2xl text-black dark:text-white">$whoami</p>
+                        <p class="px-5 text-white text-gray-600 dark:text-gray-200">
+                            {{ __("I'm :age-year-old Malaysian that passionate about making software that simplify people's life.", ['age' => \Carbon\Carbon::parse('1999-05-03')->age]) }}
+                        </p>
+                        <br>
+                        @if ($rank >= 1)
+                            <a class="px-5 text-white text-gray-600 underline dark:text-gray-200"
+                                href="https://commits.top/malaysia.html" aria-label="Linkt to Commits.top" rel="noreferrer">
+                                {{ __('No x in most active GitHub users in Malaysia', ['rank' => $rank]) }}
+                            </a>
+                        @endif
                     </div>
                 </div>
 
                 <div
-                    class="md:w-1/3 w-full flex items-center justify-center px-5 py-8 transform hover:scale-110 transition duration-300">
-                    <div class="w-full mx-auto rounded-lg bg-gray-50 dark:bg-gray-800 shadow-lg text-gray-800 py-11">
-                        <div class="w-full mb-10 text-center">
-                            <p class="text-2xl text-black text-center pb-3 dark:text-white ">$whoami</p>
-                            <p class="text-white text-gray-600 dark:text-gray-200 px-5 ">
-                                {{ __("I'm :age-year-old Malaysian that passionate about making software that simplify people's life.", ['age' => \Carbon\Carbon::parse('1999-05-03')->age]) }}
-                            </p>
-                            <br>
-                            @if ($rank >= 1)
-                                <a class="text-white text-gray-600 dark:text-gray-200 px-5 underline"
-                                    href="https://commits.top/malaysia.html" aria-label="Linkt to Commits.top"
-                                    rel="noreferrer">
-                                    {{ __('No x in most active GitHub users in Malaysia', ['rank' => $rank]) }}
-                                </a>
-                            @endif
-                            <br> <br>
-                            <p class="text-white text-gray-600 dark:text-gray-200 px-5">
-                                {{ __('My knowledge in this field are currently self-experience & academically, so they might look fundamental and simple in the meantime.') }}
-                            </p>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div
-                    class="h-full transform rounded-lg bg-gray-50 px-5 py-8 text-gray-800 shadow-lg transition duration-300 hover:scale-110 dark:bg-gray-800">
+                    class="rounded-lg bg-gray-50 px-5 py-8 text-gray-800 shadow-lg transition duration-300 hover:scale-110 dark:bg-gray-800">
                     <div class="mb-10 w-full">
                         <p class="pb-3 text-center text-2xl text-black dark:text-white">{{ __('Get in touch') }}</p>
                         <div class="space-x-4 space-y-2">
@@ -234,25 +217,23 @@
             </div>
         </section>
 
-        <section class="-m-4 mx-auto flex w-full flex-wrap pb-20 dark:text-white md:pb-0" id="work">
-            <div class="w-full">
-                <a href="#work"
-                    class="mb-2 block text-center text-2xl font-black text-black dark:text-white md:text-2xl lg:text-3xl">
-                    {{ __('These are some of my Work') }} :3 </a>
-            </div>
+        @if ($works->isNotEmpty())
+            <section class="mx-auto flex w-full flex-wrap pb-20 dark:text-white" id="work">
+                <div class="w-full">
+                    <a href="#work"
+                        class="mb-2 block text-center text-2xl font-black text-black dark:text-white md:text-2xl lg:text-3xl">
+                        {{ __('These are some of my Work') }} :3 </a>
+                </div>
 
-            @forelse($works as $work)
-                <div class="flex items-center justify-center px-5 py-8 sm:w-full md:w-1/3">
-                    <div
-                        class="mx-auto w-full transform rounded-lg bg-gray-50 px-5 text-gray-800 shadow-lg transition duration-300 hover:scale-110 dark:bg-gray-800">
-                        <div class="mb-10 mt-5 w-full">
-                            <div class="w-full">
-                                <a href="{{ $work->url ?? '#' }}" target="_blank" rel="noreferrer"
-                                    aria-label="Link to open {{ $work->name }}">
-                                    <img src="{{ $work->imgLink ?? '#' }}" alt="{{ __('Image for the work') }}"
-                                        loading="lazy" class="mb-3 h-72 w-full rounded-lg object-cover">
-                                </a>
-                            </div>
+                <div class="grid place-items-stretch gap-8 pb-8 md:grid-cols-3">
+                    @foreach ($works as $work)
+                        <div
+                            class="flex flex-col gap-2 rounded-lg bg-gray-50 p-4 text-gray-800 shadow-lg transition duration-300 hover:scale-110 dark:bg-gray-800">
+                            <a href="{{ $work->url ?? '#' }}" target="_blank" rel="noreferrer"
+                                aria-label="Link to open {{ $work->name }}">
+                                <img src="{{ $work->imgLink ?? '#' }}" alt="{{ __('Image for the work') }}"
+                                    loading="lazy" class="h-72 w-full rounded-lg object-cover">
+                            </a>
                             <h2 class="title-font mb-2 text-2xl font-bold dark:text-white">{{ $work->name }} </h2>
                             <p class="text-base leading-relaxed dark:text-white">{{ $work->description }}</p>
                             <div
@@ -297,24 +278,17 @@
                                 </div>
                             @endif
                         </div>
-
-                    </div>
+                    @endforeach
                 </div>
-            @empty
-                <div class="border-lg mt-6 w-full rounded-lg border">
-                    <h6 class="my-20 text-center text-xl font-black text-black dark:text-white lg:text-2xl">
-                        {{ __('No Active Work now') }} @@
-                    </h6>
-                </div>
-            @endforelse
-        </section>
+            </section>
+        @endif
 
         <section class="hidden md:block md:py-32" id="experience">
-            <div id="roadmap"
-                class="container mx-auto h-full min-h-full w-full flex-wrap rounded-lg bg-gray-50 dark:bg-gray-800">
+            <div id="roadmap" class="container mx-auto flex-wrap rounded-lg bg-gray-50 dark:bg-gray-800">
                 <a href="#experience"
                     class="mb-2 block py-12 text-center text-2xl font-black text-black dark:text-white md:text-2xl lg:text-3xl">
-                    {{ __('My Experiences') }}</a>
+                    {{ __('My Experiences') }}
+                </a>
                 <hr>
                 <div class="wrap relative h-full overflow-hidden p-10">
                     <div class="border-2-2 absolute h-full border border-gray-700 border-opacity-20 dark:border-white"
@@ -322,11 +296,11 @@
                     <div class="right-timeline mb-8 flex w-full items-center justify-between">
                         <div class="order-1 w-5/12"></div>
                         <div
-                            class="z-20 order-1 flex h-8 w-8 transform items-center rounded-full bg-gray-600 shadow-xl transition duration-300 hover:scale-125 dark:bg-gray-100">
+                            class="z-20 order-1 flex h-8 w-8 items-center rounded-full bg-gray-600 shadow-xl transition duration-300 hover:scale-125 dark:bg-gray-100">
                             <p class="mx-auto text-lg font-semibold text-white dark:text-black">1</p>
                         </div>
                         <div
-                            class="order-1 w-5/12 transform rounded-lg bg-blue-700 px-6 py-4 shadow-xl transition duration-300 hover:scale-110">
+                            class="order-1 w-5/12 rounded-lg bg-blue-700 px-6 py-4 shadow-xl transition duration-300 hover:scale-110">
                             <h3 class="mb-3 text-xl font-bold text-white">
                                 {{ __('Persuade Study in') }}
                                 <a class="underline" rel="noreferrer" target="_blank" href="https://www.apu.edu.my/">
@@ -350,11 +324,11 @@
                     <div class="left-timeline mb-8 flex w-full flex-row-reverse items-center justify-between">
                         <div class="order-1 w-5/12"></div>
                         <div
-                            class="z-20 order-1 flex h-8 w-8 transform items-center rounded-full bg-gray-800 shadow-xl transition duration-300 hover:scale-125 dark:bg-gray-100">
+                            class="z-20 order-1 flex h-8 w-8 items-center rounded-full bg-gray-800 shadow-xl transition duration-300 hover:scale-125 dark:bg-gray-100">
                             <p class="mx-auto text-lg font-semibold text-white dark:text-black">2</p>
                         </div>
                         <div
-                            class="order-1 w-5/12 transform rounded-lg bg-indigo-600 px-6 py-4 shadow-xl transition duration-300 hover:scale-110">
+                            class="order-1 w-5/12 rounded-lg bg-indigo-600 px-6 py-4 shadow-xl transition duration-300 hover:scale-110">
                             <h3 class="mb-3 text-xl font-bold text-white">{{ __('Technical Assistant in APU') }}</h3>
                             <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
                                 -
@@ -384,11 +358,11 @@
                     <div class="right-timeline mb-8 flex w-full items-center justify-between">
                         <div class="order-1 w-5/12"></div>
                         <div
-                            class="z-20 order-1 flex h-8 w-8 transform items-center rounded-full bg-gray-800 shadow-xl transition duration-300 hover:scale-125 dark:bg-gray-100">
+                            class="z-20 order-1 flex h-8 w-8 items-center rounded-full bg-gray-800 shadow-xl transition duration-300 hover:scale-125 dark:bg-gray-100">
                             <p class="mx-auto text-lg font-semibold text-white dark:text-black">3</p>
                         </div>
                         <div
-                            class="order-1 w-5/12 transform rounded-lg bg-blue-600 px-6 py-4 shadow-xl transition duration-300 hover:scale-110">
+                            class="order-1 w-5/12 rounded-lg bg-blue-600 px-6 py-4 shadow-xl transition duration-300 hover:scale-110">
                             <h3 class="mb-3 text-xl font-bold text-white">
                                 {{ __('Technical Assistant') }}, {{ __('Head of Accommodation Team in APU') }}
                             </h3>
@@ -412,11 +386,11 @@
                     <div class="left-timeline mb-8 flex w-full flex-row-reverse items-center justify-between">
                         <div class="order-1 w-5/12"></div>
                         <div
-                            class="z-20 order-1 flex h-8 w-8 transform items-center rounded-full bg-gray-800 shadow-xl transition duration-300 hover:scale-125 dark:bg-gray-100">
+                            class="z-20 order-1 flex h-8 w-8 items-center rounded-full bg-gray-800 shadow-xl transition duration-300 hover:scale-125 dark:bg-gray-100">
                             <p class="mx-auto text-lg font-semibold text-white dark:text-black">4</p>
                         </div>
                         <div
-                            class="order-1 w-5/12 transform rounded-lg bg-indigo-600 px-6 py-4 shadow-xl transition duration-300 hover:scale-110">
+                            class="order-1 w-5/12 rounded-lg bg-indigo-600 px-6 py-4 shadow-xl transition duration-300 hover:scale-110">
                             <h3 class="mb-3 text-xl font-bold text-white">{{ __('Intern as Junior Web Developer in') }}
                                 <a href="https://strateqgroup.com/prs/" class="underline" rel="noreferrer"
                                     target="_blank">
@@ -445,11 +419,11 @@
                     <div class="right-timeline mb-8 flex w-full items-center justify-between">
                         <div class="order-1 w-5/12"></div>
                         <div
-                            class="z-20 order-1 flex h-8 w-8 transform items-center rounded-full bg-gray-800 shadow-xl transition duration-300 hover:scale-125 dark:bg-gray-100">
+                            class="z-20 order-1 flex h-8 w-8 items-center rounded-full bg-gray-800 shadow-xl transition duration-300 hover:scale-125 dark:bg-gray-100">
                             <p class="mx-auto text-lg font-semibold text-white dark:text-black">5</p>
                         </div>
                         <div
-                            class="order-1 w-5/12 transform rounded-lg bg-blue-600 px-6 py-4 shadow-xl transition duration-300 hover:scale-110">
+                            class="order-1 w-5/12 rounded-lg bg-blue-600 px-6 py-4 shadow-xl transition duration-300 hover:scale-110">
                             <h3 class="mb-3 text-xl font-bold text-white">{{ __('Graduated from') }}
                                 <a class="underline" rel="noreferrer" target="_blank" href="https://www.apu.edu.my/">
                                     {{ __('Asia Pacific University') }}</a>
@@ -475,11 +449,11 @@
                     <div class="left-timeline mb-8 flex w-full flex-row-reverse items-center justify-between">
                         <div class="order-1 w-5/12"></div>
                         <div
-                            class="z-20 order-1 flex h-8 w-8 transform items-center rounded-full bg-gray-800 shadow-xl transition duration-300 hover:scale-125 dark:bg-gray-100">
+                            class="z-20 order-1 flex h-8 w-8 items-center rounded-full bg-gray-800 shadow-xl transition duration-300 hover:scale-125 dark:bg-gray-100">
                             <p class="mx-auto text-lg font-semibold text-white dark:text-black">6</p>
                         </div>
                         <div
-                            class="order-1 w-5/12 transform rounded-lg bg-indigo-600 px-6 py-4 shadow-xl transition duration-300 hover:scale-110">
+                            class="order-1 w-5/12 rounded-lg bg-indigo-600 px-6 py-4 shadow-xl transition duration-300 hover:scale-110">
                             <h3 class="mb-3 text-xl font-bold text-white">{{ __('Continue to persuade study in') }}
                                 <a class="underline" rel="noreferrer" target="_blank" href="https://www.apu.edu.my/">
                                     {{ __('Asia Pacific University') }}
@@ -500,11 +474,11 @@
                     <div class="right-timeline mb-8 flex w-full items-center justify-between">
                         <div class="order-1 w-5/12"></div>
                         <div
-                            class="z-20 order-1 flex h-8 w-8 transform items-center rounded-full bg-gray-800 shadow-xl transition duration-300 hover:scale-125 dark:bg-gray-100">
+                            class="z-20 order-1 flex h-8 w-8 items-center rounded-full bg-gray-800 shadow-xl transition duration-300 hover:scale-125 dark:bg-gray-100">
                             <p class="mx-auto text-lg font-semibold text-white dark:text-black">7</p>
                         </div>
                         <div
-                            class="order-1 w-5/12 transform rounded-lg bg-blue-600 px-6 py-4 shadow-xl transition duration-300 hover:scale-110">
+                            class="order-1 w-5/12 rounded-lg bg-blue-600 px-6 py-4 shadow-xl transition duration-300 hover:scale-110">
                             <h3 class="mb-3 text-xl font-bold text-white">{{ __('Internship at') }}
                                 <a class="underline" href="https://www.mysoftinn.com/" rel="noreferrer" target="_blank">
                                     Softinn Solutions
@@ -524,11 +498,11 @@
                     <div class="left-timeline mb-8 flex w-full flex-row-reverse items-center justify-between">
                         <div class="order-1 w-5/12"></div>
                         <div
-                            class="z-20 order-1 flex h-8 w-8 transform items-center rounded-full bg-gray-800 shadow-xl transition duration-300 hover:scale-125 dark:bg-gray-100">
+                            class="z-20 order-1 flex h-8 w-8 items-center rounded-full bg-gray-800 shadow-xl transition duration-300 hover:scale-125 dark:bg-gray-100">
                             <p class="mx-auto text-lg font-semibold text-white dark:text-black">8</p>
                         </div>
                         <div
-                            class="order-1 w-5/12 transform rounded-lg bg-blue-600 px-6 py-4 shadow-xl transition duration-300 hover:scale-110">
+                            class="order-1 w-5/12 rounded-lg bg-blue-600 px-6 py-4 shadow-xl transition duration-300 hover:scale-110">
                             <h3 class="mb-3 text-xl font-bold text-white">{{ __('Graduated from') }}
                                 <a class="underline" rel="noreferrer" target="_blank" href="https://www.apu.edu.my/">
                                     {{ __('Asia Pacific University') }}
@@ -552,11 +526,11 @@
                     <div class="mb-8 flex w-full items-center justify-between">
                         <div class="order-1 w-5/12"></div>
                         <div
-                            class="z-20 order-1 flex h-8 w-8 transform items-center rounded-full bg-gray-800 shadow-xl transition duration-300 hover:scale-125 dark:bg-gray-100">
+                            class="z-20 order-1 flex h-8 w-8 items-center rounded-full bg-gray-800 shadow-xl transition duration-300 hover:scale-125 dark:bg-gray-100">
                             <p class="mx-auto text-lg font-semibold text-white dark:text-black">9</p>
                         </div>
                         <div
-                            class="order-1 w-5/12 transform rounded-lg bg-blue-600 px-6 py-4 shadow-xl transition duration-300 hover:scale-110">
+                            class="order-1 w-5/12 rounded-lg bg-blue-600 px-6 py-4 shadow-xl transition duration-300 hover:scale-110">
                             <h3 class="mb-3 text-xl font-bold text-white">
                                 {{ __('Chief Technology Officer at') }}
                                 <a class="underline" rel="noreferrer" target="_blank" href="https://pixalink.io/">
