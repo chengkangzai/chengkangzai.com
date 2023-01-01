@@ -1,6 +1,6 @@
 @if ($errors->any())
     <div role="alert"
-        class="block text-sm text-left text-red-600 bg-red-200 border border-red-400 h-auto flex items-center p-4 rounded-lg">
+        class="block flex h-auto items-center rounded-lg border border-red-400 bg-red-200 p-4 text-left text-sm text-red-600">
         <ul>
             @foreach ($errors->all() as $error)
                 <li class="flex items-start">

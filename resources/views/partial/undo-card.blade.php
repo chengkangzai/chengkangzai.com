@@ -1,6 +1,6 @@
 @if (session('undo'))
-    <div class="mb-2 w-4/5 mx-auto">
-        <div class="block text-sm text-left text-black font-bold bg-yellow-200 border border-yellow-400 h-auto flex items-center p-4 rounded-sm"
+    <div class="mx-auto mb-2 w-4/5">
+        <div class="block flex h-auto items-center rounded-sm border border-yellow-400 bg-yellow-200 p-4 text-left text-sm font-bold text-black"
             role="alert">
             {!! session('undo') !!}
         </div>

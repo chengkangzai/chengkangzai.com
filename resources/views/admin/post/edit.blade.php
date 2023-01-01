@@ -16,7 +16,7 @@
 @section('content')
     <div class="mt-8">
         <div class="mt-4">
-            <div class="py-3 px-5 mb-2 rounded-md text-base border border-gray-500 bg-white">
+            <div class="mb-2 rounded-md border border-gray-500 bg-white py-3 px-5 text-base">
                 <ul class="flex">
                     <li><a href="{{ route('admin.home') }}" class="underline hover:text-gray-500">{{ __('Home') }}</a>
                     </li>
@@ -31,13 +31,13 @@
                 </ul>
             </div>
             @include('partial.error-card')
-            <div class="p-6 bg-white rounded-md shadow-md">
-                <h2 class="text-lg text-gray-700 font-semibold capitalize">{{ __('Edit') }} {{ $post->title }}</h2>
+            <div class="rounded-md bg-white p-6 shadow-md">
+                <h2 class="text-lg font-semibold capitalize text-gray-700">{{ __('Edit') }} {{ $post->title }}</h2>
 
                 <form action="{{ route('admin.posts.update', $post) }}" method="POST">
                     @method('PUT')
                     @csrf
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-4">
+                    <div class="mt-4 grid grid-cols-1 gap-6 sm:grid-cols-2">
                         <div class="sm:col-span-2">
                             <label class="text-gray-700">{{ __('Title') }}
                                 <x-input type="text" name="title" value="{{ old('title', $post->title) }}" />
@@ -47,7 +47,7 @@
                         <div>
                             <label class="text-gray-700">{{ __('Tags') }}
                                 <select id="tags" name="tags[]" multiple
-                                    class="w-full border border-gray-400 text-gray-800 placeholder-gray-400 rounded focus:border-transparent focus:outline-none focus:shadow-outline px-3 py-2">
+                                    class="focus:shadow-outline w-full rounded border border-gray-400 px-3 py-2 text-gray-800 placeholder-gray-400 focus:border-transparent focus:outline-none">
                                     @foreach ($tags as $tag)
                                         <option value="{{ $tag->name }}"
                                             {{ $post->tags->contains($tag->name) ? 'selected' : '' }}>
@@ -61,7 +61,7 @@
                         <div>
                             <label class="text-gray-700">{{ __('Status') }}
                                 <select id="status" name="status"
-                                    class="w-full border border-gray-400 text-gray-800 placeholder-gray-400 rounded focus:border-transparent focus:outline-none focus:shadow-outline px-3 py-2">
+                                    class="focus:shadow-outline w-full rounded border border-gray-400 px-3 py-2 text-gray-800 placeholder-gray-400 focus:border-transparent focus:outline-none">
                                     @foreach (\App\Models\Post::STATUS as $key => $value)
                                         <option value="{{ $key }}" {{ $post->status == $key ? 'selected' : '' }}>
                                             {{ $value }}
@@ -74,14 +74,14 @@
                         <div class="col-span-2">
                             <label class="text-gray-700">{{ __('Content') }}
                                 <textarea name="content" id="editor"
-                                    class="w-full border border-gray-400 text-gray-800 placeholder-gray-400 rounded focus:border-transparent focus:outline-none focus:shadow-outline px-3 py-2">{!! old('content', $post->content) !!}</textarea>
+                                    class="focus:shadow-outline w-full rounded border border-gray-400 px-3 py-2 text-gray-800 placeholder-gray-400 focus:border-transparent focus:outline-none">{!! old('content', $post->content) !!}</textarea>
                             </label>
                         </div>
                     </div>
 
-                    <div class="flex mt-4">
+                    <div class="mt-4 flex">
                         <button
-                            class="px-4 py-2 bg-gray-800 text-gray-200 rounded-md hover:bg-gray-700 focus:outline-none focus:bg-gray-700">
+                            class="rounded-md bg-gray-800 px-4 py-2 text-gray-200 hover:bg-gray-700 focus:bg-gray-700 focus:outline-none">
                             {{ __('Submit') }}
                         </button>
                     </div>

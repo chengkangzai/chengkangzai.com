@@ -2,7 +2,7 @@
     @section('header')
         {{ __('Tags') }}
     @endsection
-    <div class="py-3 px-5 mb-2 rounded-md text-base border border-gray-500 bg-white">
+    <div class="mb-2 rounded-md border border-gray-500 bg-white py-3 px-5 text-base">
         <ul class="flex">
             <li><a href="{{ route('admin.home') }}" class="underline hover:text-gray-500">{{ __('Home') }}</a>
             </li>
@@ -11,49 +11,49 @@
         </ul>
     </div>
 
-    <div class="flex flex-row-reverse overflow-hidden w-full">
-        <x-button class="text-base my-1" wire:click="$emit('openModal', 'admin.tag.create-modal')">
+    <div class="flex w-full flex-row-reverse overflow-hidden">
+        <x-button class="my-1 text-base" wire:click="$emit('openModal', 'admin.tag.create-modal')">
             {{ __('Create Tag') }}
         </x-button>
     </div>
 
-    <div class="flex flex-col mt-8">
+    <div class="mt-8 flex flex-col">
         @include('partial.error-card')
         @include('partial.success-card')
-        <div class="-my-2 py-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
+        <div class="-my-2 overflow-x-auto py-2 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
             <div
-                class="align-middle inline-block min-w-full shadow overflow-hidden sm:rounded-lg border-b border-gray-200">
+                class="inline-block min-w-full overflow-hidden border-b border-gray-200 align-middle shadow sm:rounded-lg">
                 <table class="min-w-full">
                     <thead>
                         <tr>
                             <th
-                                class="px-6 py-3 border-b border-gray-200 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+                                class="border-b border-gray-200 bg-gray-50 px-6 py-3 text-left text-xs font-medium uppercase leading-4 tracking-wider text-gray-500">
                                 {{ __('Title') }}
                             </th>
-                            <th class="px-6 py-3 border-b border-gray-200 bg-gray-50"></th>
+                            <th class="border-b border-gray-200 bg-gray-50 px-6 py-3"></th>
                         </tr>
                     </thead>
 
                     <tbody class="bg-white">
                         @foreach ($tags as $tag)
                             <tr>
-                                <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+                                <td class="whitespace-no-wrap border-b border-gray-200 px-6 py-4">
                                     <div class="flex items-center">
                                         <div class="ml-4">
-                                            <div class="text-sm leading-5 font-medium text-gray-900">{{ $tag->name }}
+                                            <div class="text-sm font-medium leading-5 text-gray-900">{{ $tag->name }}
                                             </div>
                                         </div>
                                     </div>
                                 </td>
                                 <td
-                                    class="px-6 py-4 whitespace-no-wrap text-right border-b border-gray-200 text-sm leading-5 font-medium">
+                                    class="whitespace-no-wrap border-b border-gray-200 px-6 py-4 text-right text-sm font-medium leading-5">
                                     <button
                                         wire:click="$emit('openModal', 'admin.tag.edit-modal', {{ json_encode(['tag' => $tag->id]) }})"
-                                        class="inline-block py-1 px-3 text-center rounded-md text-white text-sm bg-blue-600 hover:bg-blue-500">
+                                        class="inline-block rounded-md bg-blue-600 py-1 px-3 text-center text-sm text-white hover:bg-blue-500">
                                         {{ __('Edit') }}
                                     </button>
                                     <button wire:click="remove({{ $tag }})"
-                                        class="inline-block py-1 px-3 text-center rounded-md text-white text-sm bg-red-600 hover:bg-red-500">
+                                        class="inline-block rounded-md bg-red-600 py-1 px-3 text-center text-sm text-white hover:bg-red-500">
                                         {{ __('Remove') }}
                                     </button>
                                 </td>
@@ -61,7 +61,7 @@
                         @endforeach
                     </tbody>
                 </table>
-                <div class="flex flex-col items-center px-5 py-5 bg-white border-t xs:flex-row xs:justify-between">
+                <div class="xs:flex-row xs:justify-between flex flex-col items-center border-t bg-white px-5 py-5">
                     {{ $tags->links() }}
                 </div>
             </div>
