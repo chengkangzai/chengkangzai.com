@@ -20,8 +20,8 @@
                     <div class="space-y-4 mt-4">
                         <div class="md:w-1/2">
                             <label class="text-gray-700">{{ __('Name') }}
-                                <x-input type="text" name="name" id="name" value="{{ old('name', auth()->user()->name) }}"
-                                    required />
+                                <x-input type="text" name="name" id="name"
+                                    value="{{ old('name', auth()->user()->name) }}" required />
                             </label>
                         </div>
 

@@ -5,6 +5,6 @@
 ])
 
 <a href="{{ $href }}"
-    {{ $attributes->merge(['type' => 'submit','class' => 'inline-block py-1 px-3 text-center rounded-md text-white text-sm ' . $bg . ' ' . $hoverBg]) }}>
+    {{ $attributes->merge(['type' => 'submit', 'class' => 'inline-block py-1 px-3 text-center rounded-md text-white text-sm ' . $bg . ' ' . $hoverBg]) }}>
     {{ $slot }}
 </a>
