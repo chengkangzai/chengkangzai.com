@@ -25,6 +25,11 @@ jobs:
         run: |
           composer install --no-scripts
 
+      - name: Build front-end assets
+        run: |
+          npm install
+          npm run dev
+
       - name: Setup .env file
         run: |
           cp .env.ci .env
