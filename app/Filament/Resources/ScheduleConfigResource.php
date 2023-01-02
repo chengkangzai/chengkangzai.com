@@ -11,6 +11,7 @@ use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
+use Illuminate\Database\Eloquent\Builder;
 
 class ScheduleConfigResource extends Resource
 {
@@ -97,5 +98,11 @@ class ScheduleConfigResource extends Resource
     public static function canCreate(): bool
     {
         return ScheduleConfig::whereBelongsTo(auth()->user())->count() === 0;
+    }
+
+    public static function getEloquentQuery(): Builder
+    {
+        return parent::getEloquentQuery()
+            ->whereBelongsTo(auth()->user());
     }
 }
