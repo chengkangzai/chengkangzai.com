@@ -16,17 +16,17 @@ class ViewUser extends ViewRecord
     {
         return [
             Actions\EditAction::make(),
-            //            Actions\Action::make('send_reset_password_email')
-            //                ->label('Send Reset Password Email')
-            //                ->action(function () {
-            //                    Password::broker(config('filament-breezy.reset_broker', config('auth.defaults.passwords')))
-            //                        ->sendResetLink(['email' => $this->record->email]);
-            //
-            //                    Notification::make('Reset password email sent.')
-            //                        ->success()
-            //                        ->body('The reset password email has been sent.')
-            //                        ->send();
-            //                }),
+            Actions\Action::make('send_reset_password_email')
+                ->label('Send Reset Password Email')
+                ->action(function () {
+                    Password::broker(config('auth.defaults.passwords'))
+                        ->sendResetLink(['email' => $this->record->email]);
+
+                    Notification::make('Reset password email sent.')
+                        ->success()
+                        ->body('The reset password email has been sent.')
+                        ->send();
+                }),
         ];
     }
 }
