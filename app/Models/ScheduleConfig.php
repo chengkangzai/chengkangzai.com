@@ -3,14 +3,12 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class ScheduleConfig extends Model
 {
-    use HasFactory;
-
     protected $fillable = ['intake_code', 'grouping', 'except', 'emails', 'user_id', 'is_subscribed'];
 
     public function user(): BelongsTo
@@ -18,14 +16,12 @@ class ScheduleConfig extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function setExceptAttribute($value)
+    public function except(): Attribute
     {
-        $this->attributes['except'] = implode(',', $value);
-    }
-
-    public function getExceptAttribute($value): array
-    {
-        return is_null($value) ? [] : explode(',', $value);
+        return new Attribute(
+            get: fn ($value) => is_null($value) ? [] : explode(',', $value),
+            set: fn ($value) => implode(',', $value)
+        );
     }
 
     public function scopeSubscribed($query): Builder

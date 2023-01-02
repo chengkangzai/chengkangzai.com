@@ -2,7 +2,6 @@
 
 namespace Database\Seeders;
 
-use App\Models\Post;
 use Illuminate\Database\Seeder;
 use Spatie\Tags\Tag;
 
@@ -25,7 +24,5 @@ class TagsSeeder extends Seeder
             'Synology',
             'DSM',
         ]);
-
-        Post::inRandomOrder()->first()->attachTag(Tag::findFromString('Laravel'));
     }
 }

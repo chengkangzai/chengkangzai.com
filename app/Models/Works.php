@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -35,8 +36,11 @@ class Works extends Model
         return $query->where('status', '1');
     }
 
-    public function getImgLinkAttribute(): string
+    public function imgLink(): Attribute
     {
-        return Storage::disk('s3')->temporaryUrl(self::S3_PATH.'/'.$this->picture_name, now()->addMinutes(5));
+        return new Attribute(
+            get: fn () => Storage::disk('s3')
+                ->temporaryUrl(self::S3_PATH.'/'.$this->picture_name, now()->addMinutes(5))
+        );
     }
 }

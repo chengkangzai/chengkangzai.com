@@ -3,10 +3,6 @@
         <div class="space-y-4 text-left sm:px-8">
             <div>
                 <p class="text-xl font-black text-violet-600 dark:text-violet-400">{{ __('Navigation') }}</p>
-                @if (\App\Models\Post::published()->count() > 0)
-                    <a href="{{ route('public.posts.index') }}"
-                        class="block text-blue-600 underline dark:text-blue-400">{{ __('Blog') }}</a>
-                @endif
                 <a href="https://pandemic.chengkangzai.com"
                     class="block text-blue-600 underline dark:text-blue-400">{{ __('Covid Dashboard') }}</a>
             </div>
@@ -53,10 +49,6 @@
         <div class="my-2 space-y-4 text-center">
             <div>
                 <p class="text-xl font-black text-violet-600 dark:text-violet-400">{{ __('Navigation') }}</p>
-                @if (\App\Models\Post::published()->count() > 0)
-                    <a href="{{ route('public.posts.index') }}"
-                        class="block text-blue-600 underline dark:text-blue-400">{{ __('Blog') }}</a>
-                @endif
                 <a href="https://pandemic.chengkangzai.com"
                     class="block text-blue-600 underline dark:text-blue-400">{{ __('Covid Dashboard') }}</a>
             </div>

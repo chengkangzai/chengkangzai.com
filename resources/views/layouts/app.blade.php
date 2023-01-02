@@ -59,71 +59,13 @@
                     class="hidden flex-grow flex-col pb-4 md:flex md:flex-row md:justify-end md:pb-0">
                     <a class="text-md focus:shadow-outline mt-2 animate-pulse rounded-lg bg-transparent px-2 py-2 font-bold text-white hover:bg-gray-200 hover:text-gray-900 focus:bg-gray-200 focus:text-gray-900 focus:outline-none dark:bg-transparent dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:bg-gray-600 dark:focus:text-white md:mt-0 md:ml-4"
                         href="https://pandemic.chengkangzai.com/">{{ __('Covid Dashboard') }}</a>
-                    @if (request()->is('/'))
-                        <a class="text-md focus:shadow-outline mt-2 rounded-lg bg-transparent px-2 py-2 font-bold text-white hover:bg-gray-200 hover:text-gray-900 focus:bg-gray-200 focus:text-gray-900 focus:outline-none dark:bg-transparent dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:bg-gray-600 dark:focus:text-white md:mt-0 md:ml-4"
-                            href="#about-me">{{ __('About Me') }}</a>
-                        <a class="text-md focus:shadow-outline mt-2 rounded-lg bg-transparent px-2 py-2 font-bold text-white hover:bg-gray-200 hover:text-gray-900 focus:bg-gray-200 focus:text-gray-900 focus:outline-none dark:bg-transparent dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:bg-gray-600 dark:focus:text-white md:mt-0 md:ml-4"
-                            href="#work">{{ __('My Work') }}</a>
-                        <a class="text-md focus:shadow-outline mt-2 rounded-lg bg-transparent px-2 py-2 font-bold text-white hover:bg-gray-200 hover:text-gray-900 focus:bg-gray-200 focus:text-gray-900 focus:outline-none dark:bg-transparent dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:bg-gray-600 dark:focus:text-white md:mt-0 md:ml-4"
-                            href="#experience">{{ __('Experience') }}</a>
-                        @if (\App\Models\Post::published()->count() > 0)
-                            <a class="text-md focus:shadow-outline mt-2 rounded-lg bg-transparent px-2 py-2 font-bold text-white hover:bg-gray-200 hover:text-gray-900 focus:bg-gray-200 focus:text-gray-900 focus:outline-none dark:bg-transparent dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:bg-gray-600 dark:focus:text-white md:mt-0 md:ml-4"
-                                href="{{ route('public.posts.index') }}">{{ __('Blog') }}</a>
-                        @endif
-                    @else
-                        @canany(['post_access', 'work_access', 'comment_access', 'tag_access'])
-                            <a class="text-md focus:shadow-outline @if (request()->is('admin/posts*')) bg-blue-200 dark:bg-blue-700  @else bg-gray-100 dark:bg-gray-700 @endif mt-2 block rounded-lg bg-transparent px-2 py-2 font-bold text-black hover:bg-gray-200 hover:text-gray-900 focus:bg-gray-200 focus:text-gray-900 focus:outline-none dark:bg-transparent dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:bg-gray-600 dark:focus:text-white md:mt-0 md:ml-4 md:hidden"
-                                href="{{ route('admin.posts.index') }}">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="inline h-5 w-5" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                                </svg>
-                                {{ __('Post') }}
-                            </a>
-                            <a class="text-md focus:shadow-outline @if (request()->is('admin/works*')) bg-blue-200 dark:bg-blue-700  @else bg-gray-100 dark:bg-gray-700 @endif mt-2 block rounded-lg bg-transparent px-2 py-2 font-bold text-black hover:bg-gray-200 hover:text-gray-900 focus:bg-gray-200 focus:text-gray-900 focus:outline-none dark:bg-transparent dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:bg-gray-600 dark:focus:text-white md:mt-0 md:ml-4 md:hidden"
-                                href="{{ route('admin.works.index') }}">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="inline h-5 w-5" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                                </svg>
-                                {{ __('Work') }}
-                            </a>
-                            <a class="text-md focus:shadow-outline @if (request()->is('admin/comment*')) bg-blue-200 dark:bg-blue-700  @else bg-gray-100 dark:bg-gray-700 @endif mt-2 block rounded-lg bg-transparent px-2 py-2 font-bold text-black hover:bg-gray-200 hover:text-gray-900 focus:bg-gray-200 focus:text-gray-900 focus:outline-none dark:bg-transparent dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:bg-gray-600 dark:focus:text-white md:mt-0 md:ml-4 md:hidden"
-                                href="{{ route('admin.comment.index') }}">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="inline h-5 w-5" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
-                                </svg>
-                                {{ __('Comments') }}
-                            </a>
-                            <a class="text-md focus:shadow-outline @if (request()->is('admin/tags*')) bg-blue-200 dark:bg-blue-700  @else bg-gray-100 dark:bg-gray-700 @endif mt-2 block rounded-lg bg-transparent px-2 py-2 font-bold text-black hover:bg-gray-200 hover:text-gray-900 focus:bg-gray-200 focus:text-gray-900 focus:outline-none dark:bg-transparent dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:bg-gray-600 dark:focus:text-white md:mt-0 md:ml-4 md:hidden"
-                                href="{{ route('admin.tags.index') }}">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="inline h-5 w-5" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
-                                </svg>
-                                {{ __('Tags') }}
-                            </a>
-                        @endcanany
+                    <a class="text-md focus:shadow-outline mt-2 rounded-lg bg-transparent px-2 py-2 font-bold text-white hover:bg-gray-200 hover:text-gray-900 focus:bg-gray-200 focus:text-gray-900 focus:outline-none dark:bg-transparent dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:bg-gray-600 dark:focus:text-white md:mt-0 md:ml-4"
+                        href="#about-me">{{ __('About Me') }}</a>
+                    <a class="text-md focus:shadow-outline mt-2 rounded-lg bg-transparent px-2 py-2 font-bold text-white hover:bg-gray-200 hover:text-gray-900 focus:bg-gray-200 focus:text-gray-900 focus:outline-none dark:bg-transparent dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:bg-gray-600 dark:focus:text-white md:mt-0 md:ml-4"
+                        href="#work">{{ __('My Work') }}</a>
+                    <a class="text-md focus:shadow-outline mt-2 rounded-lg bg-transparent px-2 py-2 font-bold text-white hover:bg-gray-200 hover:text-gray-900 focus:bg-gray-200 focus:text-gray-900 focus:outline-none dark:bg-transparent dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:bg-gray-600 dark:focus:text-white md:mt-0 md:ml-4"
+                        href="#experience">{{ __('Experience') }}</a>
 
-                        @canany(['schedule_access'])
-                            <a class="text-md focus:shadow-outline @if (request()->is('admin/scheduleConfig*')) bg-blue-200 dark:bg-blue-700  @else bg-gray-100 dark:bg-gray-700 @endif mt-2 block rounded-lg bg-transparent px-2 py-2 font-bold text-black hover:bg-gray-200 hover:text-gray-900 focus:bg-gray-200 focus:text-gray-900 focus:outline-none dark:bg-transparent dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:bg-gray-600 dark:focus:text-white md:mt-0 md:ml-4 md:hidden"
-                                href="{{ route('admin.scheduleConfig.index') }}">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="inline h-5 w-5" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                                </svg>
-                                {{ __('Schedule') }}
-                            </a>
-                        @endcanany
-                    @endif
                     <div @click.away="open = false" class="relative" x-data="{ open: false }">
                         <button @click="open = !open" aria-label="Drop Down trigger"
                             class="text-md focus:shadow-outline flex w-full flex-row items-center rounded-lg bg-transparent px-2 py-2 text-left font-bold text-white hover:bg-gray-200 hover:text-black hover:text-gray-900 focus:bg-gray-200 focus:text-gray-900 focus:outline-none dark:bg-transparent dark:hover:bg-gray-600 dark:hover:text-white dark:focus:bg-gray-600 dark:focus:text-white md:mt-0 md:ml-4 md:inline md:w-auto">
@@ -143,11 +85,9 @@
                             </span>
                         </button>
                         <div x-show="open" x-transition:enter="transition ease-out duration-100"
-                            x-transition:enter-start="opacity-0 scale-95"
-                            x-transition:enter-end="opacity-100 scale-100"
+                            x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100"
                             x-transition:leave="transition ease-in duration-75"
-                            x-transition:leave-start="opacity-100 scale-100"
-                            x-transition:leave-end="opacity-0 scale-95"
+                            x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-95"
                             class="absolute right-0 mt-2 w-full origin-top-right rounded-md shadow-lg md:w-48">
                             <div class="rounded-md bg-white px-2 py-2 shadow dark:bg-gray-800">
                                 <a class="@if (app()->getLocale() == 'en') bg-gray-200 dark:bg-gray-600 @endif focus:shadow-outline mt-2 block rounded-lg bg-transparent px-4 py-2 text-sm font-semibold hover:bg-gray-200 hover:text-gray-900 focus:bg-gray-200 focus:text-gray-900 focus:outline-none dark:bg-transparent dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:bg-gray-600 dark:focus:text-white md:mt-0"
@@ -161,15 +101,9 @@
                     </div>
                     @auth
                         <div class="relative mt-2 space-x-2 md:ml-2">
-                            @if (request()->is('admin/*'))
-                                <a href="{{ url('/') }}"
-                                    class="my-auto rounded border border-gray-100 bg-transparent px-2 py-2 font-semibold leading-none text-white hover:bg-gray-100 hover:text-gray-700">
-                                    {{ __('Main Page') }}</a>
-                            @else
-                                <a href="{{ route('admin.home') }}"
-                                    class="my-auto rounded border border-gray-100 bg-transparent px-2 py-2 font-semibold leading-none text-white hover:bg-gray-100 hover:text-gray-700">
-                                    {{ __('Home') }}</a>
-                            @endif
+                            <a href="{{ route('filament.auth.login') }}"
+                                class="my-auto rounded border border-gray-100 bg-transparent px-2 py-2 font-semibold leading-none text-white hover:bg-gray-100 hover:text-gray-700">
+                                {{ __('Home') }}</a>
                             <a href="{{ route('logout') }}"
                                 onclick="event.preventDefault();document.getElementById('logout-form').submit();"
                                 class="my-auto rounded border border-gray-100 bg-transparent px-2 py-2 font-semibold leading-none text-white hover:bg-gray-100 hover:text-gray-700">
@@ -192,13 +126,9 @@
         </header>
 
         <div class="flex flex-1 flex-col md:flex-row">
-            <main
-                class="@if (!request()->is('admin*')) dark:bg-black @else dark:bg-gray-800 @endif w-full flex-1 bg-white md:px-0">
+            <main class="w-full flex-1 bg-white dark:bg-black md:px-0">
                 @yield('content')
             </main>
-            @if (request()->is('admin/*'))
-                <nav class="order-first md:w-64">@include('layouts.sidebar')</nav>
-            @endif
         </div>
 
         @yield('footer')
