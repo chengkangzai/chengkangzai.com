@@ -13,6 +13,7 @@
         "barryvdh/laravel-translation-manager": "^0.6.2",
         "bugsnag/bugsnag-laravel": "^2.0",
         "chengkangzai/laravel-apu-schedule": "^2.0.0",
+        "filament/filament": "^2.0",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.4",
         "hammerstone/sidecar": "^0.3.9",
