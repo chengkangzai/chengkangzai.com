@@ -66,21 +66,8 @@
                             href="#work">{{ __('My Work') }}</a>
                         <a class="text-md focus:shadow-outline mt-2 rounded-lg bg-transparent px-2 py-2 font-bold text-white hover:bg-gray-200 hover:text-gray-900 focus:bg-gray-200 focus:text-gray-900 focus:outline-none dark:bg-transparent dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:bg-gray-600 dark:focus:text-white md:mt-0 md:ml-4"
                             href="#experience">{{ __('Experience') }}</a>
-                        @if (\App\Models\Post::published()->count() > 0)
-                            <a class="text-md focus:shadow-outline mt-2 rounded-lg bg-transparent px-2 py-2 font-bold text-white hover:bg-gray-200 hover:text-gray-900 focus:bg-gray-200 focus:text-gray-900 focus:outline-none dark:bg-transparent dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:bg-gray-600 dark:focus:text-white md:mt-0 md:ml-4"
-                                href="{{ route('public.posts.index') }}">{{ __('Blog') }}</a>
-                        @endif
                     @else
                         @canany(['post_access', 'work_access', 'comment_access', 'tag_access'])
-                            <a class="text-md focus:shadow-outline @if (request()->is('admin/posts*')) bg-blue-200 dark:bg-blue-700  @else bg-gray-100 dark:bg-gray-700 @endif mt-2 block rounded-lg bg-transparent px-2 py-2 font-bold text-black hover:bg-gray-200 hover:text-gray-900 focus:bg-gray-200 focus:text-gray-900 focus:outline-none dark:bg-transparent dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:bg-gray-600 dark:focus:text-white md:mt-0 md:ml-4 md:hidden"
-                                href="{{ route('admin.posts.index') }}">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="inline h-5 w-5" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                                </svg>
-                                {{ __('Post') }}
-                            </a>
                             <a class="text-md focus:shadow-outline @if (request()->is('admin/works*')) bg-blue-200 dark:bg-blue-700  @else bg-gray-100 dark:bg-gray-700 @endif mt-2 block rounded-lg bg-transparent px-2 py-2 font-bold text-black hover:bg-gray-200 hover:text-gray-900 focus:bg-gray-200 focus:text-gray-900 focus:outline-none dark:bg-transparent dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:bg-gray-600 dark:focus:text-white md:mt-0 md:ml-4 md:hidden"
                                 href="{{ route('admin.works.index') }}">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="inline h-5 w-5" fill="none"
@@ -89,15 +76,6 @@
                                         d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                                 </svg>
                                 {{ __('Work') }}
-                            </a>
-                            <a class="text-md focus:shadow-outline @if (request()->is('admin/comment*')) bg-blue-200 dark:bg-blue-700  @else bg-gray-100 dark:bg-gray-700 @endif mt-2 block rounded-lg bg-transparent px-2 py-2 font-bold text-black hover:bg-gray-200 hover:text-gray-900 focus:bg-gray-200 focus:text-gray-900 focus:outline-none dark:bg-transparent dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:bg-gray-600 dark:focus:text-white md:mt-0 md:ml-4 md:hidden"
-                                href="{{ route('admin.comment.index') }}">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="inline h-5 w-5" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
-                                </svg>
-                                {{ __('Comments') }}
                             </a>
                             <a class="text-md focus:shadow-outline @if (request()->is('admin/tags*')) bg-blue-200 dark:bg-blue-700  @else bg-gray-100 dark:bg-gray-700 @endif mt-2 block rounded-lg bg-transparent px-2 py-2 font-bold text-black hover:bg-gray-200 hover:text-gray-900 focus:bg-gray-200 focus:text-gray-900 focus:outline-none dark:bg-transparent dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:bg-gray-600 dark:focus:text-white md:mt-0 md:ml-4 md:hidden"
                                 href="{{ route('admin.tags.index') }}">
