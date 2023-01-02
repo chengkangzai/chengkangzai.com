@@ -33,6 +33,7 @@ class ScheduleConfigPolicy
         if ($user->scheduleConfig()->exists()) {
             return false;
         }
+
         return true;
     }
 
