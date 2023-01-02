@@ -58,10 +58,10 @@ class WorksResource extends Resource
                         return str($fileName)->explode('/')->last();
                     })
                     ->image()
-                    ->required(fn(string $context) => $context === 'create')
+                    ->required(fn (string $context) => $context === 'create')
                     ->hiddenOn('view'),
                 Forms\Components\Placeholder::make('Image')
-                    ->content(fn($record) => new HtmlString("<img src='$record->img_link' class='rounded' alt='Image'/>"))
+                    ->content(fn ($record) => new HtmlString("<img src='$record->img_link' class='rounded' alt='Image'/>"))
                     ->visibleOn('view'),
 
             ]);

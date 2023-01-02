@@ -29,7 +29,7 @@ class EditWorks extends EditRecord
 
     protected function mutateFormDataBeforeSave(array $data): array
     {
-        if (!isset($data['picture_name'])) {
+        if (! isset($data['picture_name'])) {
             $data['picture_name'] = $this->record->picture_name;
         }
 
