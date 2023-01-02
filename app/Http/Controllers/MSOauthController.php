@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Filament\Resources\ScheduleConfigResource;
 use App\Http\Services\MicrosoftGraphService;
 use App\Http\Services\TokenService;
 use Illuminate\Contracts\Foundation\Application;
@@ -82,7 +83,7 @@ class MSOauthController extends Controller
             }
         }
 
-        return redirect(route('admin.scheduleConfig.index'))
+        return redirect(ScheduleConfigResource::getUrl('index'))
             ->with('error', $request->query('error'))
             ->with('errorDetail', $request->query('error_description'));
     }

@@ -17,8 +17,6 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             PermissionSeeder::class,
             RoleSeeder::class,
-            PostSeeder::class,
-            CommentSeeder::class,
             TagsSeeder::class,
             WorksSeeder::class,
         ]);
