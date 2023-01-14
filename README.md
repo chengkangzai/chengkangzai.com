@@ -11,7 +11,6 @@ A personal website that serve as a personal profile, blog and a Covid Dashboard 
 - [Composer](https://getcomposer.org/doc/00-intro.md)
 - [PHP8](https://www.php.net/downloads.php#v8.0.11)
 - [Node 14](https://nodejs.org/en/download/)
-- [Docker](https://www.docker.com/get-started)
 
 #### Getting the repo
 Start by cloning the repository.
@@ -37,33 +36,31 @@ In below section, assuming you done setting alias `sail` as `./vendor/bin/sail`
 
 Installing Composer dependencies
 ```shell
-sail composer install
+composer install
 ```
-Installing NPM dependencies and build it
+Installing NPM dependencies and build frontend it
 ```shell
-sail npm install
-sail npm run dev
+npm install
+npm run dev
 ```
 #### Setting up laravel
 Generate Application Key 
 ```shell
-sail php artisan key:generate
+php artisan key:generate
 ```
+Now you should set up your enviroment variable especially database variable
+
 Migrate the database and seed the data
 ```shell
-sail php artisan migrate --seed
+php artisan migrate --seed
 ```
 #### FINALLY
 Turn up the Docker
 ```shell
-sail up
+php artisan serve
 ```
-visit `http://localhost/` to see the website 
+visit `http://localhost:8000/` to see the website 
 
-#### Turn off the docker
-```shell
-sail down 
-```
 
 ## Contributing
 Any contribution is welcome
