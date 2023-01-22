@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Services\GetTopGithubCommitRankService;
 use App\Models\Works;
+use App\Services\GetTopGithubCommitRankService;
 use Artesaos\SEOTools\Facades\SEOTools;
 use Carbon\Carbon;
 use Illuminate\Contracts\Foundation\Application;

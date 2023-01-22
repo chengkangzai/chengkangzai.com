@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Filament\Resources\ScheduleConfigResource;
-use App\Http\Services\MicrosoftGraphService;
-use App\Http\Services\TokenService;
+use App\Services\MicrosoftGraphService;
+use App\Services\TokenService;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;

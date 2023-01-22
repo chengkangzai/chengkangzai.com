@@ -2,10 +2,10 @@
 
 namespace App\Jobs;
 
-use App\Http\Services\MicrosoftGraphService;
 use App\Models\ScheduleConfig;
 use App\Models\User;
 use App\Notifications\CalendarSyncSuccessNotification;
+use App\Services\MicrosoftGraphService;
 use Carbon\Carbon;
 use Chengkangzai\ApuSchedule\ApuSchedule;
 use DateTimeInterface;
