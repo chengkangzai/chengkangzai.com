@@ -2,10 +2,10 @@
 
 namespace App\Filament\Resources\ScheduleConfigResource\Widgets;
 
-use afiqiqmal\MalaysiaHoliday\MalaysiaHoliday;
 use App\Models\ScheduleConfig;
 use Carbon\Carbon;
 use Chengkangzai\ApuSchedule\ApuSchedule;
+use Http;
 use Saade\FilamentFullCalendar\Widgets\Concerns\CantManageEvents;
 use Saade\FilamentFullCalendar\Widgets\FullCalendarWidget;
 use Str;
@@ -34,30 +34,35 @@ class CalendarWidget extends FullCalendarWidget
 
     public function getViewData(): array
     {
-        $config = ScheduleConfig::firstWhere('user_id', auth()->id());
-        $holiday = MalaysiaHoliday::make()->fromState('Kuala Lumpur', now()->year)->get()['data'];
-        $holidays = collect($holiday[0]['collection'][0]['data'])
-            ->map(function ($item) {
-                return [
-                    'id' => $item['name'],
-                    'title' => $item['name'],
-                    'start' => Carbon::parse($item['date'])->startOfDay(),
-                    'allDay' => true,
-                ];
-            });
+        $apuHoliday = Http::get('https://2o7wc015dc.execute-api.ap-southeast-1.amazonaws.com/dev/v2/transix/holiday/active')
+            ->json();
+        $holidays = collect($apuHoliday)
+            ->where('year', now()->year)
+            ->pluck('holidays')
+            ->flatten(1)
+            ->map(fn ($item) => [
+                'id' => $item['id'],
+                'title' => $item['holiday_name'],
+                'start' => Carbon::parse($item['holiday_start_date']),
+                'end' => Carbon::parse($item['holiday_end_date']),
+                'allDay' => true,
+            ]);
 
-        return ApuSchedule::getSchedule(
+        $config = ScheduleConfig::firstWhere('user_id', auth()->id());
+        $schedules = ApuSchedule::getSchedule(
             intake: $config->intake_code,
             grouping: $config->grouping,
             ignore: $config->except
         )
-            ->map(fn($item) => [
+            ->map(fn ($item) => [
                 'id' => $item->CLASS_CODE,
                 'title' => Str::title($item->MODULE_NAME),
                 'start' => Carbon::parse($item->TIME_FROM_ISO),
                 'end' => Carbon::parse($item->TIME_TO_ISO),
             ])
-            ->values()
+            ->values();
+
+        return $schedules
             ->merge($holidays)
             ->toArray();
     }
