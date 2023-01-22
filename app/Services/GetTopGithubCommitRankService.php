@@ -6,25 +6,19 @@ use Illuminate\Support\Facades\Http;
 
 class GetTopGithubCommitRankService
 {
-    public function getTopGithubCommitRank(): string|int
+    public function getTopGithubCommitRank(): int
     {
         $response = Http::get('https://commits.top/malaysia.html');
-        $thml = $response->body();
-        $datas = explode('<tbody>', $thml)[1];
-        $datas = explode('</tbody', $datas)[0];
-        $datas = explode('<tr>', $datas);
+        $body = $response->body();
+        $rows = str($body)
+            ->between('<tbody>', '</tbody>')
+            ->explode('<tr>');
 
-        array_shift($datas);
-        $rank = 0;
-        foreach ($datas as $data) {
-            $record = explode('<td>', $data);
-            $index = explode('.</td>', $record[1])[0];
-            $url = explode('</a>', explode('">', $record[2])[1])[0];
-            if (preg_match('/chengkangzai/i', $url)) {
-                $rank = $index;
-            }
-        }
-
-        return $rank;
+        return collect($rows)
+            ->filter(fn($item) => str($item)->contains('chengkangzai'))
+            ->map(fn($_, $index) => $index)
+            ->whenEmpty(fn() => collect([0 => 0]))
+            ->values()
+            ->first();
     }
 }
