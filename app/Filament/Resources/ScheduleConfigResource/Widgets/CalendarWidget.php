@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\ScheduleConfigResource\Widgets;
 
+use afiqiqmal\MalaysiaHoliday\MalaysiaHoliday;
 use App\Models\ScheduleConfig;
 use Carbon\Carbon;
 use Chengkangzai\ApuSchedule\ApuSchedule;
@@ -22,7 +23,7 @@ class CalendarWidget extends FullCalendarWidget
 
         'initialView' => 'timeGridWeek',
         'nowIndicator' => true,
-        'allDaySlot' => false,
+        'allDaySlot' => true,
         'contentHeight' => 700,
 
         'slotMinTime' => '08:00:00',
@@ -34,19 +35,30 @@ class CalendarWidget extends FullCalendarWidget
     public function getViewData(): array
     {
         $config = ScheduleConfig::firstWhere('user_id', auth()->id());
+        $holiday = MalaysiaHoliday::make()->fromState('Kuala Lumpur', now()->year)->get()['data'];
+        $holidays = collect($holiday[0]['collection'][0]['data'])
+            ->map(function ($item) {
+                return [
+                    'id' => $item['name'],
+                    'title' => $item['name'],
+                    'start' => Carbon::parse($item['date'])->startOfDay(),
+                    'allDay' => true,
+                ];
+            });
 
         return ApuSchedule::getSchedule(
             intake: $config->intake_code,
             grouping: $config->grouping,
             ignore: $config->except
         )
-            ->map(fn ($item) => [
+            ->map(fn($item) => [
                 'id' => $item->CLASS_CODE,
                 'title' => Str::title($item->MODULE_NAME),
                 'start' => Carbon::parse($item->TIME_FROM_ISO),
                 'end' => Carbon::parse($item->TIME_TO_ISO),
             ])
             ->values()
+            ->merge($holidays)
             ->toArray();
     }
 }

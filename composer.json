@@ -9,6 +9,7 @@
     "license": "MIT",
     "require": {
         "php": "^8.0",
+        "afiqiqmal/malaysiaholiday": "^2.1",
         "artesaos/seotools": "^0.22.0",
         "barryvdh/laravel-translation-manager": "^0.6.2",
         "chengkangzai/laravel-apu-schedule": "^2.0.0",
