@@ -34,8 +34,9 @@ class CalendarWidget extends FullCalendarWidget
     public function getViewData(): array
     {
         $config = ScheduleConfig::firstWhere('user_id', auth()->id());
+
         return ApuSchedule::getSchedule($config->intake_code, $config->grouping, $config->except)
-            ->map(fn($item) => [
+            ->map(fn ($item) => [
                 'id' => $item->CLASS_CODE,
                 'title' => Str::title($item->MODULE_NAME),
                 'start' => Carbon::parse($item->TIME_FROM_ISO),
