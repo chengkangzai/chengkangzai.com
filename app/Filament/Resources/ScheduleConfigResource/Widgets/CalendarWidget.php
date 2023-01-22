@@ -25,8 +25,8 @@ class CalendarWidget extends FullCalendarWidget
         'allDaySlot' => false,
         'contentHeight' => 700,
 
-        'slotMinTime' => '07:00:00',
-        'slotMaxTime' => '24:00:00',
+        'slotMinTime' => '08:00:00',
+        'slotMaxTime' => '19:00:00',
 
         'editable' => false,
     ];
@@ -34,8 +34,13 @@ class CalendarWidget extends FullCalendarWidget
     public function getViewData(): array
     {
         $config = ScheduleConfig::firstWhere('user_id', auth()->id());
-        return ApuSchedule::getSchedule($config->intake_code, $config->grouping, $config->except)
-            ->map(fn($item) => [
+
+        return ApuSchedule::getSchedule(
+            intake: $config->intake_code,
+            grouping: $config->grouping,
+            ignore: $config->except
+        )
+            ->map(fn ($item) => [
                 'id' => $item->CLASS_CODE,
                 'title' => Str::title($item->MODULE_NAME),
                 'start' => Carbon::parse($item->TIME_FROM_ISO),
