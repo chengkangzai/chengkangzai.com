@@ -30,7 +30,7 @@ class CalendarWidget extends FullCalendarWidget
         'slotMaxTime' => '19:00:00',
 
         'editable' => false,
-        'weekdends' => false,
+        'weekends' => false,
     ];
 
     public function getViewData(): array
