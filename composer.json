@@ -24,6 +24,7 @@
         "league/oauth2-client": "^2.6",
         "livewire/livewire": "^2.5",
         "microsoft/microsoft-graph": "^1.46",
+        "saade/filament-fullcalendar": "^1.6",
         "silviolleite/laravelpwa": "^2.0",
         "spatie/browsershot": "^3.53",
         "spatie/laravel-backup": "^8.1",

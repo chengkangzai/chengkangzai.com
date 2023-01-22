@@ -30,10 +30,6 @@ class ScheduleConfigPolicy
 
     public function create(User $user): bool
     {
-        if ($user->scheduleConfig()->exists()) {
-            return false;
-        }
-
         return true;
     }
 
