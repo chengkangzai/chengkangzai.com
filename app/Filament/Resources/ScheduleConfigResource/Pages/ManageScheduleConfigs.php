@@ -53,4 +53,11 @@ class ManageScheduleConfigs extends ManageRecords
             return __('please link your microsoft account first');
         }
     }
+
+    protected function getFooterWidgets(): array
+    {
+        return [
+            ScheduleConfigResource\Widgets\CalendarWidget::class,
+        ];
+    }
 }
