@@ -4,6 +4,8 @@ namespace App\Filament\Resources\ScheduleConfigResource\Pages;
 
 use App\Filament\Resources\ScheduleConfigResource;
 use App\Jobs\AddAPUScheduleToCalenderJob;
+use App\Models\MicrosoftOauth;
+use App\Models\ScheduleConfig;
 use Filament\Notifications\Notification;
 use Filament\Pages\Actions;
 use Filament\Resources\Pages\ManageRecords;
@@ -14,34 +16,35 @@ class ManageScheduleConfigs extends ManageRecords
 
     protected function getActions(): array
     {
+        $user = auth()->user();
+        $msOauthExists = MicrosoftOauth::whereBelongsTo($user)->exists();
+        $scheduleConfigExists = ScheduleConfig::whereBelongsTo($user)->exists();
+
         return [
             Actions\Action::make('link_microsoft_account')
                 ->url(route('admin.schedule.msOAuth.signin'))
-                ->hidden(fn () => auth()->user()->msOauth()->exists()),
+                ->hidden(fn() => $msOauthExists),
             Actions\CreateAction::make()
-                ->mutateFormDataUsing(function (array $data) {
-                    $data['user_id'] = auth()->user()->id;
+                ->mutateFormDataUsing(function (array $data) use ($user) {
+                    $data['user_id'] = $user->id;
 
                     return $data;
                 })
-                ->visible(fn () => auth()->user()->msOauth()->exists() && auth()->user()->scheduleConfig()->doesntExist()),
+                ->visible(fn() => $msOauthExists && !$scheduleConfigExists),
             Actions\Action::make('sync_now')
-                ->action(function () {
-                    $job = new AddAPUScheduleToCalenderJob(
-                        user: auth()->user(),
-                        config: auth()->user()->scheduleConfig()->first(),
+                ->action(function () use ($user) {
+                    AddAPUScheduleToCalenderJob::dispatch(
+                        user: $user,
+                        config: $user->scheduleConfig()->first(),
                         causeBy: AddAPUScheduleToCalenderJob::CAUSED_BY['Web']
                     );
-
-                    dispatch($job);
 
                     Notification::make('Syncing...')
                         ->success()
                         ->body(__('Schedule has been queued for sync, it will take a few minutes'))
                         ->send();
                 })
-                ->visible(fn () => auth()->user()->msOauth()->exists() && auth()->user()->scheduleConfig()->exists()),
-
+                ->visible(fn() => $msOauthExists && $scheduleConfigExists),
         ];
     }
 
@@ -49,9 +52,8 @@ class ManageScheduleConfigs extends ManageRecords
     {
         if (auth()->user()->msOauth()->exists()) {
             return __('You have not created any schedule config yet');
-        } else {
-            return __('please link your microsoft account first');
         }
+        return __('please link your microsoft account first');
     }
 
     protected function getFooterWidgets(): array
