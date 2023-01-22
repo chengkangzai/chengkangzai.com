@@ -23,14 +23,14 @@ class ManageScheduleConfigs extends ManageRecords
         return [
             Actions\Action::make('link_microsoft_account')
                 ->url(route('admin.schedule.msOAuth.signin'))
-                ->hidden(fn() => $msOauthExists),
+                ->hidden(fn () => $msOauthExists),
             Actions\CreateAction::make()
                 ->mutateFormDataUsing(function (array $data) use ($user) {
                     $data['user_id'] = $user->id;
 
                     return $data;
                 })
-                ->visible(fn() => $msOauthExists && !$scheduleConfigExists),
+                ->visible(fn () => $msOauthExists && ! $scheduleConfigExists),
             Actions\Action::make('sync_now')
                 ->action(function () use ($user) {
                     AddAPUScheduleToCalenderJob::dispatch(
@@ -44,7 +44,7 @@ class ManageScheduleConfigs extends ManageRecords
                         ->body(__('Schedule has been queued for sync, it will take a few minutes'))
                         ->send();
                 })
-                ->visible(fn() => $msOauthExists && $scheduleConfigExists),
+                ->visible(fn () => $msOauthExists && $scheduleConfigExists),
         ];
     }
 
@@ -53,6 +53,7 @@ class ManageScheduleConfigs extends ManageRecords
         if (auth()->user()->msOauth()->exists()) {
             return __('You have not created any schedule config yet');
         }
+
         return __('please link your microsoft account first');
     }
 
