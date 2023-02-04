@@ -4,8 +4,8 @@ namespace App\Filament\Resources\ScheduleConfigResource\Widgets;
 
 use App\Models\ScheduleConfig;
 use Carbon\Carbon;
+use Chengkangzai\ApuSchedule\ApuHoliday;
 use Chengkangzai\ApuSchedule\ApuSchedule;
-use Http;
 use Saade\FilamentFullCalendar\Widgets\Concerns\CantManageEvents;
 use Saade\FilamentFullCalendar\Widgets\FullCalendarWidget;
 use Str;
@@ -35,12 +35,7 @@ class CalendarWidget extends FullCalendarWidget
 
     public function getViewData(): array
     {
-        $apuHoliday = Http::get('https://2o7wc015dc.execute-api.ap-southeast-1.amazonaws.com/dev/v2/transix/holiday/active')
-            ->json();
-        $holidays = collect($apuHoliday)
-            ->where('year', now()->year)
-            ->pluck('holidays')
-            ->flatten(1)
+        $holidays = ApuHoliday::getByYear(Carbon::now()->year)
             ->map(fn ($item) => [
                 'id' => $item['id'],
                 'title' => $item['holiday_name'],
