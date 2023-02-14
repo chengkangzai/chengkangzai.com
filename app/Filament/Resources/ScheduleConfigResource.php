@@ -97,7 +97,8 @@ class ScheduleConfigResource extends Resource
 
     public static function canCreate(): bool
     {
-        return ScheduleConfig::whereBelongsTo(auth()->user())->count() === 0;
+//        return ScheduleConfig::whereBelongsTo(auth()->user())->count() === 0;
+        return true;
     }
 
     public static function getEloquentQuery(): Builder
