@@ -24,13 +24,7 @@ class ListScheduleConfigs extends ListRecords
             Actions\Action::make('link_microsoft_account')
                 ->url(route('admin.schedule.msOAuth.signin'))
                 ->hidden(fn () => $msOauthExists),
-            Actions\CreateAction::make()
-                ->mutateFormDataUsing(function (array $data) use ($user) {
-                    $data['user_id'] = $user->id;
-
-                    return $data;
-                })
-                ->visible(fn () => $msOauthExists && ! $scheduleConfigExists),
+            Actions\CreateAction::make(),
             Actions\Action::make('sync_now')
                 ->action(function () use ($user) {
                     ScheduleConfig::whereBelongsTo($user)

@@ -98,11 +98,6 @@ class ScheduleConfigResource extends Resource
         ];
     }
 
-    public static function canCreate(): bool
-    {
-        return true;
-    }
-
     public static function getEloquentQuery(): Builder
     {
         return parent::getEloquentQuery()
