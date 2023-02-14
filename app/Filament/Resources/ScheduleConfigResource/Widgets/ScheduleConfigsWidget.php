@@ -7,6 +7,7 @@ use Carbon\Carbon;
 use Carbon\CarbonPeriod;
 use Chengkangzai\ApuSchedule\ApuHoliday;
 use Chengkangzai\ApuSchedule\ApuSchedule;
+use Illuminate\Support\Collection;
 use Saade\FilamentFullCalendar\Widgets\Concerns\CantManageEvents;
 use Saade\FilamentFullCalendar\Widgets\FullCalendarWidget;
 use Str;
@@ -39,8 +40,8 @@ class ScheduleConfigsWidget extends FullCalendarWidget
         $holidays = cache()->remember(
             key: 'apu-holiday',
             ttl: CarbonPeriod::weeks(14)->interval,
-            callback: fn () => ApuHoliday::getByYear(Carbon::now()->year)
-                ->map(fn ($item) => [
+            callback: fn() => ApuHoliday::getByYear(Carbon::now()->year)
+                ->map(fn($item) => [
                     'id' => $item['id'],
                     'title' => $item['holiday_name'],
                     'start' => Carbon::parse($item['holiday_start_date']),
@@ -51,24 +52,38 @@ class ScheduleConfigsWidget extends FullCalendarWidget
 
         $schedules = ScheduleConfig::whereBelongsTo(auth()->user())
             ->get()
-            ->map(fn ($item) => cache()
+            ->map(fn($item) => cache()
                 ->remember(
-                    key: 'apu-schedule-'.$item->id,
+                    key: 'apu-schedule-' . $item->id,
                     ttl: CarbonPeriod::weeks(14)->interval,
-                    callback: fn () => ApuSchedule::getSchedule(
+                    callback: fn() => ApuSchedule::getSchedule(
                         intake: $item->intake_code,
                         grouping: $item->grouping,
                         ignore: $item->except
                     )
                 )
             )
-            ->map(fn ($item) => $item->map(fn ($item) => [
+            ->map(function (Collection $item) {
+                $COLOR = collect([
+                    'red', 'maroon', 'blue', 'navy', 'teal', 'darkgreen', 'darkorchid', 'deeppink', 'lightsalmon', 'royalblue', 'skyblue'
+                ])->random();
+
+                $item->map(function ($i) use ($COLOR) {
+                    $i->randomColor = $COLOR;
+
+                    return $i;
+                });
+
+                return $item;
+            })
+            ->flatten(1)
+            ->map(fn($item) => [
                 'id' => $item->CLASS_CODE,
                 'title' => Str::title($item->MODULE_NAME),
                 'start' => Carbon::parse($item->TIME_FROM_ISO),
                 'end' => Carbon::parse($item->TIME_TO_ISO),
-            ]))
-            ->flatten(1)
+                'color' => $item->randomColor,
+            ])
             ->values();
 
         return $schedules
