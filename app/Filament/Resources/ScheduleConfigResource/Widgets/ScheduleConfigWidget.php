@@ -11,9 +11,11 @@ use Saade\FilamentFullCalendar\Widgets\Concerns\CantManageEvents;
 use Saade\FilamentFullCalendar\Widgets\FullCalendarWidget;
 use Str;
 
-class CalendarWidget extends FullCalendarWidget
+class ScheduleConfigWidget extends FullCalendarWidget
 {
     use CantManageEvents;
+
+    public ScheduleConfig $record;
 
     public array $fullCalendarConfig = [
         'headerToolbar' => [
@@ -49,26 +51,22 @@ class CalendarWidget extends FullCalendarWidget
                 ])
         );
 
-        $schedules = ScheduleConfig::whereBelongsTo(auth()->user())
-            ->get()
-            ->map(fn ($item) => cache()
-                ->remember(
-                    key: 'apu-schedule-'.$item->id,
-                    ttl: CarbonPeriod::weeks(14)->interval,
-                    callback: fn () => ApuSchedule::getSchedule(
-                        intake: $item->intake_code,
-                        grouping: $item->grouping,
-                        ignore: $item->except
-                    )
+        $schedules = cache()
+            ->remember(
+                key: 'apu-schedule-'.$this->record->id,
+                ttl: CarbonPeriod::weeks(14)->interval,
+                callback: fn () => ApuSchedule::getSchedule(
+                    intake: $this->record->intake_code,
+                    grouping: $this->record->grouping,
+                    ignore: $this->record->except
                 )
             )
-            ->map(fn ($item) => $item->map(fn ($item) => [
+            ->map(fn ($item) => [
                 'id' => $item->CLASS_CODE,
                 'title' => Str::title($item->MODULE_NAME),
                 'start' => Carbon::parse($item->TIME_FROM_ISO),
                 'end' => Carbon::parse($item->TIME_TO_ISO),
-            ]))
-            ->flatten(1)
+            ])
             ->values();
 
         return $schedules

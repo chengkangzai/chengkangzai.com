@@ -8,9 +8,9 @@ use App\Models\MicrosoftOauth;
 use App\Models\ScheduleConfig;
 use Filament\Notifications\Notification;
 use Filament\Pages\Actions;
-use Filament\Resources\Pages\ManageRecords;
+use Filament\Resources\Pages\ListRecords;
 
-class ManageScheduleConfigs extends ManageRecords
+class ListScheduleConfigs extends ListRecords
 {
     protected static string $resource = ScheduleConfigResource::class;
 
@@ -33,11 +33,13 @@ class ManageScheduleConfigs extends ManageRecords
                 ->visible(fn () => $msOauthExists && ! $scheduleConfigExists),
             Actions\Action::make('sync_now')
                 ->action(function () use ($user) {
-                    AddAPUScheduleToCalenderJob::dispatch(
-                        user: $user,
-                        config: $user->scheduleConfig()->first(),
-                        causeBy: AddAPUScheduleToCalenderJob::CAUSED_BY['Web']
-                    );
+                    ScheduleConfig::whereBelongsTo($user)
+                        ->get()
+                        ->each(fn ($scheduleConfig) => AddAPUScheduleToCalenderJob::dispatch(
+                            user: $user,
+                            config: $scheduleConfig,
+                            causeBy: AddAPUScheduleToCalenderJob::CAUSED_BY['Web']
+                        ));
 
                     Notification::make('Syncing...')
                         ->success()
@@ -60,7 +62,7 @@ class ManageScheduleConfigs extends ManageRecords
     protected function getFooterWidgets(): array
     {
         return [
-            ScheduleConfigResource\Widgets\CalendarWidget::class,
+            ScheduleConfigResource\Widgets\ScheduleConfigsWidget::class,
         ];
     }
 }
