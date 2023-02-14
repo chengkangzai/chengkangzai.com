@@ -91,13 +91,11 @@ class ScheduleConfigResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ManageScheduleConfigs::route('/'),
+            'index' => Pages\ListScheduleConfigs::route('/'),
+            'create' => Pages\CreateScheduleConfig::route('/create'),
+            'edit' => Pages\EditScheduleConfig::route('/{record}/edit'),
+            'view' => Pages\ViewScheduleConfig::route('/{record}'),
         ];
-    }
-
-    public static function canCreate(): bool
-    {
-        return ScheduleConfig::whereBelongsTo(auth()->user())->count() === 0;
     }
 
     public static function getEloquentQuery(): Builder

@@ -4,15 +4,18 @@ namespace App\Filament\Resources\ScheduleConfigResource\Widgets;
 
 use App\Models\ScheduleConfig;
 use Carbon\Carbon;
+use Carbon\CarbonPeriod;
 use Chengkangzai\ApuSchedule\ApuHoliday;
 use Chengkangzai\ApuSchedule\ApuSchedule;
 use Saade\FilamentFullCalendar\Widgets\Concerns\CantManageEvents;
 use Saade\FilamentFullCalendar\Widgets\FullCalendarWidget;
 use Str;
 
-class CalendarWidget extends FullCalendarWidget
+class ScheduleConfigWidget extends FullCalendarWidget
 {
     use CantManageEvents;
+
+    public ScheduleConfig $record;
 
     public array $fullCalendarConfig = [
         'headerToolbar' => [
@@ -35,21 +38,29 @@ class CalendarWidget extends FullCalendarWidget
 
     public function getViewData(): array
     {
-        $holidays = ApuHoliday::getByYear(Carbon::now()->year)
-            ->map(fn ($item) => [
-                'id' => $item['id'],
-                'title' => $item['holiday_name'],
-                'start' => Carbon::parse($item['holiday_start_date']),
-                'end' => Carbon::parse($item['holiday_end_date']),
-                'allDay' => true,
-            ]);
+        $holidays = cache()->remember(
+            key: 'apu-holiday',
+            ttl: CarbonPeriod::weeks(14)->interval,
+            callback: fn () => ApuHoliday::getByYear(Carbon::now()->year)
+                ->map(fn ($item) => [
+                    'id' => $item['id'],
+                    'title' => $item['holiday_name'],
+                    'start' => Carbon::parse($item['holiday_start_date']),
+                    'end' => Carbon::parse($item['holiday_end_date']),
+                    'allDay' => true,
+                ])
+        );
 
-        $config = ScheduleConfig::firstWhere('user_id', auth()->id());
-        $schedules = ApuSchedule::getSchedule(
-            intake: $config->intake_code,
-            grouping: $config->grouping,
-            ignore: $config->except
-        )
+        $schedules = cache()
+            ->remember(
+                key: 'apu-schedule-'.$this->record->id,
+                ttl: CarbonPeriod::weeks(14)->interval,
+                callback: fn () => ApuSchedule::getSchedule(
+                    intake: $this->record->intake_code,
+                    grouping: $this->record->grouping,
+                    ignore: $this->record->except
+                )
+            )
             ->map(fn ($item) => [
                 'id' => $item->CLASS_CODE,
                 'title' => Str::title($item->MODULE_NAME),
