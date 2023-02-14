@@ -40,8 +40,8 @@ class ScheduleConfigsWidget extends FullCalendarWidget
         $holidays = cache()->remember(
             key: 'apu-holiday',
             ttl: CarbonPeriod::weeks(14)->interval,
-            callback: fn() => ApuHoliday::getByYear(Carbon::now()->year)
-                ->map(fn($item) => [
+            callback: fn () => ApuHoliday::getByYear(Carbon::now()->year)
+                ->map(fn ($item) => [
                     'id' => $item['id'],
                     'title' => $item['holiday_name'],
                     'start' => Carbon::parse($item['holiday_start_date']),
@@ -52,11 +52,11 @@ class ScheduleConfigsWidget extends FullCalendarWidget
 
         $schedules = ScheduleConfig::whereBelongsTo(auth()->user())
             ->get()
-            ->map(fn($item) => cache()
+            ->map(fn ($item) => cache()
                 ->remember(
-                    key: 'apu-schedule-' . $item->id,
+                    key: 'apu-schedule-'.$item->id,
                     ttl: CarbonPeriod::weeks(14)->interval,
-                    callback: fn() => ApuSchedule::getSchedule(
+                    callback: fn () => ApuSchedule::getSchedule(
                         intake: $item->intake_code,
                         grouping: $item->grouping,
                         ignore: $item->except
@@ -65,7 +65,7 @@ class ScheduleConfigsWidget extends FullCalendarWidget
             )
             ->map(function (Collection $item) {
                 $COLOR = collect([
-                    'red', 'maroon', 'blue', 'navy', 'teal', 'darkgreen', 'darkorchid', 'deeppink', 'lightsalmon', 'royalblue', 'skyblue'
+                    'red', 'maroon', 'blue', 'navy', 'teal', 'darkgreen', 'darkorchid', 'deeppink', 'lightsalmon', 'royalblue', 'skyblue',
                 ])->random();
 
                 $item->map(function ($i) use ($COLOR) {
@@ -77,7 +77,7 @@ class ScheduleConfigsWidget extends FullCalendarWidget
                 return $item;
             })
             ->flatten(1)
-            ->map(fn($item) => [
+            ->map(fn ($item) => [
                 'id' => $item->CLASS_CODE,
                 'title' => Str::title($item->MODULE_NAME),
                 'start' => Carbon::parse($item->TIME_FROM_ISO),
