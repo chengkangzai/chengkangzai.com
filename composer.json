@@ -14,7 +14,7 @@
         "chengkangzai/laravel-apu-schedule": "^2.1.0",
         "filament/filament": "^2.17.14",
         "guzzlehttp/guzzle": "^7.5",
-        "hammerstone/sidecar": "^0.3.12",
+        "hammerstone/sidecar": "^0.4.0",
         "laravel-notification-channels/webhook": "^2.4",
         "laravel/fortify": "^1.16",
         "laravel/framework": "^9.52.4",
@@ -34,7 +34,7 @@
         "spatie/laravel-translatable": "^6.3",
         "tanmuhittin/laravel-google-translate": "^2.2",
         "wire-elements/modal": "^1.0.7",
-        "wnx/sidecar-browsershot": "^1.6.3"
+        "wnx/sidecar-browsershot": "^1.6.4"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.8.1",

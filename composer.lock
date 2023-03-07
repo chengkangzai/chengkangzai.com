@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "719d5038f16b5a652d0ec4731f01e163",
+    "content-hash": "d38c2858e6a20b8f3014e1520deead5a",
     "packages": [
         {
             "name": "akaunting/laravel-money",
@@ -2568,31 +2568,31 @@
         },
         {
             "name": "hammerstone/sidecar",
-            "version": "v0.3.12",
+            "version": "v0.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hammerstonedev/sidecar.git",
-                "reference": "b519523d789ccb5f11ee40a266aa3ac3578b0a76"
+                "reference": "19bd73bdaceb7dd6a65c9c663e87ce06d62b825d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hammerstonedev/sidecar/zipball/b519523d789ccb5f11ee40a266aa3ac3578b0a76",
-                "reference": "b519523d789ccb5f11ee40a266aa3ac3578b0a76",
+                "url": "https://api.github.com/repos/hammerstonedev/sidecar/zipball/19bd73bdaceb7dd6a65c9c663e87ce06d62b825d",
+                "reference": "19bd73bdaceb7dd6a65c9c663e87ce06d62b825d",
                 "shasum": ""
             },
             "require": {
                 "aws/aws-sdk-php": "^3.216.1",
                 "guzzlehttp/guzzle": "^6.3|^7.2",
-                "illuminate/console": "^7.0|^8.0|^9.0",
-                "illuminate/filesystem": "^7.0|^8.0|^9.0",
-                "illuminate/support": "^7.0|^8.0|^9.0",
+                "illuminate/console": "^8.0|^9.0|^10",
+                "illuminate/filesystem": "^8.0|^9.0|^10",
+                "illuminate/support": "^8.0|^9.0|^10",
                 "maennchen/zipstream-php": "^2.1",
-                "php": "^7.2|^8.0"
+                "php": "^7.3|^8.0"
             },
             "require-dev": {
                 "mockery/mockery": "^1.3.3",
-                "orchestra/testbench": "^5|^6|^7",
-                "phpunit/phpunit": "^8|^9"
+                "orchestra/testbench": "^5|^6|^7|^8",
+                "phpunit/phpunit": ">=8.5.23|^9"
             },
             "type": "library",
             "extra": {
@@ -2620,9 +2620,9 @@
             "description": "A Laravel package to deploy Lambda functions alongside your main application.",
             "support": {
                 "issues": "https://github.com/hammerstonedev/sidecar/issues",
-                "source": "https://github.com/hammerstonedev/sidecar/tree/v0.3.12"
+                "source": "https://github.com/hammerstonedev/sidecar/tree/v0.4.0"
             },
-            "time": "2022-05-22T19:22:08+00:00"
+            "time": "2023-02-28T20:15:15+00:00"
         },
         {
             "name": "intervention/image",
@@ -9966,20 +9966,20 @@
         },
         {
             "name": "wnx/sidecar-browsershot",
-            "version": "v1.6.3",
+            "version": "v1.6.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/stefanzweifel/sidecar-browsershot.git",
-                "reference": "1f05237c9ffe7f2460e1c17ffc3a518daa029d6f"
+                "reference": "5569f497031a19ffebb7dedec8072d49802151a3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/stefanzweifel/sidecar-browsershot/zipball/1f05237c9ffe7f2460e1c17ffc3a518daa029d6f",
-                "reference": "1f05237c9ffe7f2460e1c17ffc3a518daa029d6f",
+                "url": "https://api.github.com/repos/stefanzweifel/sidecar-browsershot/zipball/5569f497031a19ffebb7dedec8072d49802151a3",
+                "reference": "5569f497031a19ffebb7dedec8072d49802151a3",
                 "shasum": ""
             },
             "require": {
-                "hammerstone/sidecar": "^0.3.7",
+                "hammerstone/sidecar": "^0.4.0",
                 "illuminate/contracts": "^8.0|^9.0|^10.0",
                 "php": "^8.0",
                 "spatie/browsershot": "^3.52",
@@ -10038,7 +10038,7 @@
             ],
             "support": {
                 "issues": "https://github.com/stefanzweifel/sidecar-browsershot/issues",
-                "source": "https://github.com/stefanzweifel/sidecar-browsershot/tree/v1.6.3"
+                "source": "https://github.com/stefanzweifel/sidecar-browsershot/tree/v1.6.4"
             },
             "funding": [
                 {
@@ -10046,7 +10046,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-02-27T08:53:23+00:00"
+            "time": "2023-03-02T20:21:16+00:00"
         },
         {
             "name": "yandex/translate-api",
