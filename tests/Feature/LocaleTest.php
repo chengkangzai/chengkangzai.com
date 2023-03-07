@@ -16,9 +16,9 @@ class LocaleTest extends TestCase
     {
         parent::setUp();
 
-        $this->enLocale = json_decode(file_get_contents(lang_path().'/en.json'), true);
-        $this->zhLocale = json_decode(file_get_contents(lang_path().'/zh.json'), true);
-        $this->msLocale = json_decode(file_get_contents(lang_path().'/ms.json'), true);
+        $this->enLocale = json_decode(file_get_contents(__DIR__.'/../../lang/en.json'), true);
+        $this->zhLocale = json_decode(file_get_contents(__DIR__.'/../../lang/zh.json'), true);
+        $this->msLocale = json_decode(file_get_contents(__DIR__.'/../../lang/ms.json'), true);
     }
 
     public function test_en_translate_is_not_empty()
