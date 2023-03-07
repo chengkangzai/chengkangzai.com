@@ -8,7 +8,7 @@
     ],
     "license": "MIT",
     "require": {
-        "php": "^8.0",
+        "php": "^8.1",
         "artesaos/seotools": "^v1.1.0",
         "barryvdh/laravel-translation-manager": "^0.6.4",
         "chengkangzai/laravel-apu-schedule": "^2.1.0",
@@ -17,7 +17,7 @@
         "hammerstone/sidecar": "^0.4.0",
         "laravel-notification-channels/webhook": "^2.4",
         "laravel/fortify": "^1.16",
-        "laravel/framework": "^9.52.4",
+        "laravel/framework": "^10.0",
         "laravel/tinker": "^2.8.1",
         "league/flysystem-aws-s3-v3": "^3.12.2",
         "league/oauth2-client": "^2.6.1",
@@ -43,9 +43,9 @@
         "laravel/pint": "^1.6.0",
         "laravel/sail": "^1.21.1",
         "mockery/mockery": "^1.5.1",
-        "nunomaduro/collision": "^6.4",
-        "phpunit/phpunit": "^9.6.4",
-        "spatie/laravel-ignition": "^1.6.4"
+        "nunomaduro/collision": "^7.0",
+        "phpunit/phpunit": "^10.0",
+        "spatie/laravel-ignition": "^2.0"
     },
     "autoload": {
         "psr-4": {
@@ -97,6 +97,6 @@
             "dealerdirect/phpcodesniffer-composer-installer": true
         }
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "prefer-stable": true
 }
