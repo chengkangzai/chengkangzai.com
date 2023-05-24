@@ -17,9 +17,9 @@ class GetTopGithubCommitRankService
                 ->explode('<tr>');
 
             return collect($rows)
-                ->filter(fn($item) => str($item)->contains('chengkangzai'))
-                ->map(fn($_, $index) => $index)
-                ->whenEmpty(fn() => collect([0 => 0]))
+                ->filter(fn ($item) => str($item)->contains('chengkangzai'))
+                ->map(fn ($_, $index) => $index)
+                ->whenEmpty(fn () => collect([0 => 0]))
                 ->values()
                 ->first();
         } catch (Exception $exception) {

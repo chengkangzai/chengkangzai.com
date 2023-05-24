@@ -14,7 +14,7 @@ class WorksSeeder extends Seeder
      */
     public function run()
     {
-//        Works::factory()->count(10)->create();
+        //        Works::factory()->count(10)->create();
         $work = Works::Create([
             'name' => 'What to Ear Huh',
             'description' => [
