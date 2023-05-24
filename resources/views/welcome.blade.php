@@ -57,7 +57,7 @@
                     </h1>
                     <div style="min-height: 40px">
                         <span id="typed"
-                            class="inline-block text-left text-2xl text-base leading-relaxed text-gray-500 dark:text-gray-200">
+                            class="inline-block text-left text-base leading-relaxed text-gray-500 dark:text-gray-200">
                             {{ __('Laravel Developer') }}
                         </span>
                     </div>
@@ -115,30 +115,30 @@
                     </p>
                     <div class="h-3 text-left text-3xl leading-tight text-indigo-500">“</div>
                     <ul x-show="cn">
-                        <li class="px-5 text-center text-white text-gray-600 dark:text-gray-200">
+                        <li class="px-5 text-center text-gray-600 dark:text-gray-200">
                             1. 面对问题是解决问题的第一步。
                         </li>
-                        <li class="px-5 text-center text-white text-gray-600 dark:text-gray-200">
+                        <li class="px-5 text-center text-gray-600 dark:text-gray-200">
                             2. 把小问题解决了，就没有大问题。
                         </li>
-                        <li class="px-5 text-center text-white text-gray-600 dark:text-gray-200">
+                        <li class="px-5 text-center text-gray-600 dark:text-gray-200">
                             3. 把所有的小问题都解决了，就根本没有问题。
                         </li>
-                        <li class="px-5 text-center text-white text-gray-600 dark:text-gray-200">
+                        <li class="px-5 text-center text-gray-600 dark:text-gray-200">
                             4. 你不解决问题，问题会解决你。
                         </li>
                     </ul>
                     <ol x-show="!cn">
-                        <li class="px-5 text-center text-white text-gray-600 dark:text-gray-200">
+                        <li class="px-5 text-center text-gray-600 dark:text-gray-200">
                             1. Facing the problem is the first matter of the business.
                         </li>
-                        <li class="px-5 text-center text-white text-gray-600 dark:text-gray-200">
+                        <li class="px-5 text-center text-gray-600 dark:text-gray-200">
                             2. When small problem is fixed, there will not have major problem.
                         </li>
-                        <li class="px-5 text-center text-white text-gray-600 dark:text-gray-200">
+                        <li class="px-5 text-center text-gray-600 dark:text-gray-200">
                             3. When all small problem are fixed, there will not have any problem.
                         </li>
-                        <li class="px-5 text-center text-white text-gray-600 dark:text-gray-200">
+                        <li class="px-5 text-center text-gray-600 dark:text-gray-200">
                             4. If you don't settle the problem, the problem will try to settle you.
                         </li>
                     </ol>
@@ -154,14 +154,14 @@
                     class="rounded-lg bg-gray-50 px-5 py-8 text-gray-800 shadow-lg transition duration-300 hover:scale-110 dark:bg-gray-800">
                     <div class="w-full text-center">
                         <p class="pb-3 text-center text-2xl text-black dark:text-white">$whoami</p>
-                        <p class="px-5 text-white text-gray-600 dark:text-gray-200">
+                        <p class="px-5 text-gray-600 dark:text-gray-200">
                             {{ __("I'm :age-year-old Malaysian that passionate about making software that simplify people's life.", ['age' => \Carbon\Carbon::parse('1999-05-03')->age]) }}
                         </p>
                         <br>
                         @if ($rank >= 1)
-                            <a class="px-5 text-white text-gray-600 underline dark:text-gray-200"
-                                href="https://commits.top/malaysia.html" aria-label="Linkt to Commits.top" rel="noreferrer">
-                                {{ __('No x in most active GitHub users in Malaysia', ['rank' => $rank]) }}
+                            <a class="px-5 text-gray-600 underline dark:text-gray-200"
+                                href="https://github.com/gayanvoice/top-github-users/blob/main/markdown/public_contributions/malaysia.md" aria-label="Link to Top Github User" rel="noreferrer">
+                                {{ __('No :rank in most active GitHub users in Malaysia', ['rank' => $rank]) }}
                             </a>
                         @endif
                     </div>
@@ -173,7 +173,7 @@
                         <p class="pb-3 text-center text-2xl text-black dark:text-white">{{ __('Get in touch') }}</p>
                         <div class="space-x-4 space-y-2">
                             <p></p>
-                            <p class="text-white text-gray-600 dark:text-gray-200">
+                            <p class="text-gray-600 dark:text-gray-200">
                                 <svg class="inline fill-current text-blue-600" viewBox="0 0 512 512" width="35"
                                     height="35">
                                     <path xmlns="http://www.w3.org/2000/svg"
@@ -182,7 +182,7 @@
                                 <a class="text-lg underline" rel="noreferrer" target="_blank" aria-label="My Github Profile"
                                     href="https://www.github.com/chengkangzai">@chengkangzai</a>
                             </p>
-                            <p class="text-white text-gray-600 dark:text-gray-200">
+                            <p class="text-gray-600 dark:text-gray-200">
                                 <svg class="inline fill-current text-blue-600" viewBox="0 0 512 512" width="35"
                                     height="35">
                                     <path
@@ -192,7 +192,7 @@
                                     aria-label="My Linkedin Profile"
                                     href="https://www.linkedin.com/in/chingchengkang/">Ching Cheng Kang</a>
                             </p>
-                            <p class="text-white text-gray-600 dark:text-gray-200">
+                            <p class="text-gray-600 dark:text-gray-200">
                                 <svg class="inline fill-current text-blue-600" viewBox="0 0 512 512" width="35"
                                     height="35">
                                     <path
@@ -202,7 +202,7 @@
                                     aria-label="My Twitter Account"
                                     href="https://twitter.com/chengkangzai">@chengkangzai</a>
                             </p>
-                            <p class="text-white text-gray-600 dark:text-gray-200">
+                            <p class="text-gray-600 dark:text-gray-200">
                                 <svg fill="none" class="inline text-blue-600" viewBox="0 0 24 24" width="35"
                                     height="35" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -237,9 +237,9 @@
                             <h2 class="title-font mb-2 text-2xl font-bold dark:text-white">{{ $work->name }} </h2>
                             <p class="text-base leading-relaxed dark:text-white">{{ $work->description }}</p>
                             <div
-                                class="mt-2 mt-4 mb-4 flex w-full items-start space-x-2 text-center leading-none text-blue-700 dark:text-blue-400">
+                                class="my-4 flex w-full items-start space-x-2 text-center leading-none text-blue-700 dark:text-blue-400">
                                 @if ($work->url)
-                                    <a rel="noopener" target="_blank" href="{{ $work->url ?? '#' }}"
+                                    <a rel="noopener" target="_blank" href="{{ $work->url }}"
                                         aria-label="Link to open {{ $work->name }}">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
                                             viewBox="0 0 24 24" class="fill-current dark:text-blue-400">
@@ -263,7 +263,7 @@
                             </div>
                             @if ($work->tags->count() !== 0)
                                 <div
-                                    class="mt-2 mt-4 mb-4 flex w-full items-start text-center leading-none dark:text-white">
+                                    class="my-4 flex w-full items-start text-center leading-none dark:text-white">
                                     <span class="inline">
                                         {{ __('Build with') }}
                                         {{ $work->tags->map->name->join(', ') }}

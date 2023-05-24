@@ -10,7 +10,7 @@ class GetTopGithubCommitRankService
     public function getTopGithubCommitRank(): int
     {
         try {
-            $response = Http::get('https://commits.top/malaysia.html');
+            $response = Http::get('https://raw.githubusercontent.com/gayanvoice/top-github-users/main/markdown/public_contributions/malaysia.md');
             $body = $response->body();
             $rows = str($body)
                 ->between('<tbody>', '</tbody>')
