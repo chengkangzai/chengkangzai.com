@@ -61,7 +61,7 @@
                             {{ __('Laravel Developer') }}
                         </span>
                     </div>
-                    <p class="text-dark-600 mt-2 mb-8 w-full text-left text-sm dark:text-gray-400">
+                    <p class="text-dark-600 mb-8 mt-2 w-full text-left text-sm dark:text-gray-400">
                         ⚡️ {{ __('Fun fact: I convert Coffee to Code') }} ☕️
                     </p>
                     <div class="flex flex-col justify-center space-y-2 lg:flex-row lg:space-x-2">
@@ -96,7 +96,7 @@
 
         <section id="about-me" class="mx-2 md:mx-0">
             <a href="#about-me"
-                class="my-8 mx-2 block w-full text-center text-3xl font-black text-black dark:text-white md:mb-6 md:text-2xl lg:text-3xl">
+                class="mx-2 my-8 block w-full text-center text-3xl font-black text-black dark:text-white md:mb-6 md:text-2xl lg:text-3xl">
                 {{ __('About me') }}
             </a>
             <div class="grid place-items-stretch gap-8 pb-8 md:grid-cols-3">
@@ -160,7 +160,8 @@
                         <br>
                         @if ($rank >= 1)
                             <a class="px-5 text-gray-600 underline dark:text-gray-200"
-                                href="https://github.com/gayanvoice/top-github-users/blob/main/markdown/public_contributions/malaysia.md" aria-label="Link to Top Github User" rel="noreferrer">
+                                href="https://github.com/gayanvoice/top-github-users/blob/main/markdown/public_contributions/malaysia.md"
+                                aria-label="Link to Top Github User" rel="noreferrer">
                                 {{ __('No :rank in most active GitHub users in Malaysia', ['rank' => $rank]) }}
                             </a>
                         @endif
@@ -262,8 +263,7 @@
                                 @endif
                             </div>
                             @if ($work->tags->count() !== 0)
-                                <div
-                                    class="my-4 flex w-full items-start text-center leading-none dark:text-white">
+                                <div class="my-4 flex w-full items-start text-center leading-none dark:text-white">
                                     <span class="inline">
                                         {{ __('Build with') }}
                                         {{ $work->tags->map->name->join(', ') }}
