@@ -18,11 +18,11 @@ use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Support\Facades\URL;
 use JetBrains\PhpStorm\ArrayShape;
-use Log;
+use Illuminate\Support\Facades\Log;
 use Microsoft\Graph\Exception\GraphException;
 use Microsoft\Graph\Graph as MicrosoftGraph;
 use Microsoft\Graph\Model;
-use Notification;
+use Illuminate\Support\Facades\Notification;
 
 class AddAPUScheduleToCalenderJob implements ShouldQueue
 {

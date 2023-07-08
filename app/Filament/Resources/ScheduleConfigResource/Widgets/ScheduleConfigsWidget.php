@@ -10,7 +10,7 @@ use Chengkangzai\ApuSchedule\ApuSchedule;
 use Illuminate\Support\Collection;
 use Saade\FilamentFullCalendar\Widgets\Concerns\CantManageEvents;
 use Saade\FilamentFullCalendar\Widgets\FullCalendarWidget;
-use Str;
+use Illuminate\Support\Str;
 
 class ScheduleConfigsWidget extends FullCalendarWidget
 {

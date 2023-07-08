@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\Rule;
 use Laravel\Fortify\Contracts\CreatesNewUsers;
-use Notification;
+use Illuminate\Support\Facades\Notification;
 use Spatie\Permission\Models\Role;
 
 class CreateNewUser implements CreatesNewUsers
