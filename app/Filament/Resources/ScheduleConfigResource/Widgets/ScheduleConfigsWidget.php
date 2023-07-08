@@ -8,9 +8,9 @@ use Carbon\CarbonPeriod;
 use Chengkangzai\ApuSchedule\ApuHoliday;
 use Chengkangzai\ApuSchedule\ApuSchedule;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Str;
 use Saade\FilamentFullCalendar\Widgets\Concerns\CantManageEvents;
 use Saade\FilamentFullCalendar\Widgets\FullCalendarWidget;
-use Illuminate\Support\Str;
 
 class ScheduleConfigsWidget extends FullCalendarWidget
 {
