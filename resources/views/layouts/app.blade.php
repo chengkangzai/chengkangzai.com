@@ -134,7 +134,6 @@
         @yield('footer')
     </div>
     @livewireScripts
-    @livewire('livewire-ui-modal')
     @stack('script')
 </body>
 

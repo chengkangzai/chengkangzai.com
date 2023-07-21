@@ -141,7 +141,6 @@ return [
         'register' => [
             Widgets\AccountWidget::class,
             Widgets\FilamentInfoWidget::class,
-            \App\Filament\Resources\ScheduleConfigResource\Widgets\ScheduleConfigsWidget::class,
         ],
     ],
 

@@ -29,13 +29,3 @@ Route::group(['as' => 'public.'], function () {
         echo 'You have been successfully unsubscribe';
     })->name('unsubscribe')->middleware('signed');
 });
-
-/**
- * Admin Page
- */
-Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'web'], 'as' => 'admin.'], function () {
-    Route::group(['prefix' => 'schedule', 'as' => 'schedule.'], function () {
-        Route::get('msOAuth', [MSOauthController::class, 'signin'])->name('msOAuth.signin');
-        Route::get('msOAuth/callback', [MSOauthController::class, 'callback'])->name('msOAuth.callback');
-    });
-});
