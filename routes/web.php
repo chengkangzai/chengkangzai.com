@@ -1,7 +1,6 @@
 <?php
 
 use App\Http\Controllers\LocaleController;
-use App\Http\Controllers\MSOauthController;
 use App\Http\Controllers\PublicIndexController;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
