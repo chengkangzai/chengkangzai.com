@@ -12,7 +12,7 @@ class LocaleTest extends TestCase
 
     private mixed $zhLocale;
 
-    public function setUp(): void
+    protected function setUp(): void
     {
         parent::setUp();
 
