@@ -42,9 +42,9 @@ class AuthTest extends TestCase
 
     public function test_can_login()
     {
-        $email = $this->faker->email;
+        $email = $this->faker->email();
         $user = User::create([
-            'name' => $this->faker->name,
+            'name' => $this->faker->name(),
             'email' => $email,
             'password' => bcrypt('password'),
         ]);
@@ -68,9 +68,9 @@ class AuthTest extends TestCase
 
     public function test_register_invalid()
     {
-        $password = $this->faker->password;
+        $password = $this->faker->password();
         $this->post(route('register'), [
-            'name' => $this->faker->name,
+            'name' => $this->faker->name(),
             'email' => $this->faker->safeEmail(),
             'password' => $password,
             'password_confirmation' => $password.'asda',
@@ -100,7 +100,7 @@ class AuthTest extends TestCase
     {
         $password = $this->faker->password(8);
         $response = $this->post(route('register'), [
-            'name' => $this->faker->name,
+            'name' => $this->faker->name(),
             'email' => $this->faker->safeEmail(),
             'password' => $password,
             'password_confirmation' => $password,
