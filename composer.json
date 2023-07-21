@@ -1,7 +1,7 @@
 {
     "name": "chengkangzai/chengkangzai.com",
     "type": "project",
-    "description": "A personal website that serve as a personal profile, blog and a Covid Dashboard for Malaysia.",
+    "description": "A personal website that serve as a personal profile",
     "keywords": [
         "framework",
         "laravel"
