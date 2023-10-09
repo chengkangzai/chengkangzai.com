@@ -24,6 +24,6 @@ jobs:
         run: node_modules/.bin/blade-formatter --write resources/**/*.blade.php --sort-tailwindcss-classes --sort-html-attributes
 
       - name: Commit changes
-        uses: stefanzweifel/git-auto-commit-action@v4
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: Fix styling
