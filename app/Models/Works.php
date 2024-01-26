@@ -14,9 +14,9 @@ use Spatie\Translatable\HasTranslations;
 class Works extends Model
 {
     use HasFactory;
-    use SoftDeletes;
     use HasTags;
     use HasTranslations;
+    use SoftDeletes;
 
     public const STATUS = [
         'DEACTIVATE' => 0,
