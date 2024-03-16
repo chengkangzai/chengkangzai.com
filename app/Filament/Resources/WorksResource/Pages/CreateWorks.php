@@ -4,6 +4,7 @@ namespace App\Filament\Resources\WorksResource\Pages;
 
 use App\Filament\Resources\WorksResource;
 use Filament\Resources\Pages\CreateRecord;
+use Illuminate\Support\Facades\Cache;
 
 class CreateWorks extends CreateRecord
 {
@@ -25,5 +26,10 @@ class CreateWorks extends CreateRecord
     protected function getRedirectUrl(): string
     {
         return $this->previousUrl ?? WorksResource::getUrl('index');
+    }
+
+    public function afterCreate(): void
+    {
+        Cache::delete('public-Works');
     }
 }

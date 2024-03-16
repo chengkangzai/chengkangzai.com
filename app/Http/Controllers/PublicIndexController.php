@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Cache;
 
 class PublicIndexController extends Controller
 {
-    public function index(): Factory|View|Application
+    public function index(): View
     {
         $age = Carbon::parse('1999-05-03')->age;
         SEOTools::setTitle(__('Ching Cheng Kang').' - '.__('Profile'));
