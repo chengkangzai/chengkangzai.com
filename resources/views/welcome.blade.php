@@ -52,7 +52,7 @@
             <div class="container mx-auto flex min-h-screen flex-col items-center px-5 md:flex-row lg:px-28">
                 <div
                     class="flex min-h-screen w-full flex-col items-start py-16 text-left sm:min-h-full sm:py-8 lg:w-3/5 lg:flex-grow">
-                    <h1 class="title-font mb-8 text-5xl font-bold tracking-tighter text-black dark:text-white lg:text-5xl">
+                    <h1 class="title-font mb-8 text-5xl font-bold tracking-tighter text-black lg:text-5xl dark:text-white">
                         {{ __('Hi, I am') }} <br> {{ __('Ching Cheng Kang') }} (CCK) <span class="wave">👋🏻</span>
                     </h1>
                     <div style="min-height: 40px">
@@ -96,7 +96,7 @@
 
         <section id="about-me" class="mx-2 md:mx-0">
             <a href="#about-me"
-                class="mx-2 my-8 block w-full text-center text-3xl font-black text-black dark:text-white md:mb-6 md:text-2xl lg:text-3xl">
+                class="mx-2 my-8 block w-full text-center text-3xl font-black text-black md:mb-6 md:text-2xl lg:text-3xl dark:text-white">
                 {{ __('About me') }}
             </a>
             <div class="grid place-items-stretch gap-8 pb-8 md:grid-cols-3">
@@ -222,7 +222,7 @@
             <section class="mx-auto flex w-full flex-wrap pb-20 dark:text-white" id="work">
                 <div class="w-full">
                     <a href="#work"
-                        class="mb-2 block text-center text-2xl font-black text-black dark:text-white md:text-2xl lg:text-3xl">
+                        class="mb-2 block text-center text-2xl font-black text-black md:text-2xl lg:text-3xl dark:text-white">
                         {{ __('These are some of my Work') }} :3 </a>
                 </div>
 
@@ -279,7 +279,7 @@
         <section class="hidden md:block md:py-32" id="experience">
             <div id="roadmap" class="container mx-auto flex-wrap rounded-lg bg-gray-50 dark:bg-gray-800">
                 <a href="#experience"
-                    class="mb-2 block py-12 text-center text-2xl font-black text-black dark:text-white md:text-2xl lg:text-3xl">
+                    class="mb-2 block py-12 text-center text-2xl font-black text-black md:text-2xl lg:text-3xl dark:text-white">
                     {{ __('My Experiences') }}
                 </a>
                 <hr>
