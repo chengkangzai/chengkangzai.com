@@ -30,7 +30,7 @@ class UploadResumePage extends Page implements HasForms
     public function mount(): void
     {
         $this->form->fill([
-            'resume' => 'resume.pdf'
+            'resume' => 'resume.pdf',
         ]);
     }
 
@@ -48,7 +48,7 @@ class UploadResumePage extends Page implements HasForms
             Placeholder::make('preview')
                 ->columnSpanFull()
                 ->visible(Storage::disk('public')->exists('resume.pdf'))
-                ->content(new HtmlString('<iframe src="' . asset('resume.pdf') . '" width="100%" height="800px"></iframe>')),
+                ->content(new HtmlString('<iframe src="'.asset('resume.pdf').'" width="100%" height="800px"></iframe>')),
         ]);
     }
 

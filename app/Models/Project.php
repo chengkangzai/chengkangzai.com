@@ -11,10 +11,10 @@ use Spatie\Translatable\HasTranslations;
 
 class Project extends Model implements HasMedia
 {
+    use HasTags;
     use HasTranslations;
     use InteractsWithMedia;
     use SoftDeletes;
-    use HasTags;
 
     public array $translatable = ['description'];
 

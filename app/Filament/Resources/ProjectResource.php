@@ -92,7 +92,7 @@ class ProjectResource extends Resource
 
                 TextColumn::make('description')
                     ->limit(30)
-                    ->tooltip(fn(?string $state) => $state),
+                    ->tooltip(fn (?string $state) => $state),
 
                 TextColumn::make('github_url')
                     ->toggleable()

@@ -20,7 +20,7 @@ class PublicIndexController
             'projects' => $works,
             'rank' => $rank,
             'SEOData' => new SEOData(
-                title: __('Ching Cheng Kang') . ' - ' . __('Profile'),
+                title: __('Ching Cheng Kang').' - '.__('Profile'),
                 description: __("I'm :age-year-old Malaysian that passionate about making software that simplify people's life.", ['age' => $age]),
             ),
         ]);
