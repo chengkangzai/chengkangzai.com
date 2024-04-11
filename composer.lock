@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ec19422091a3124cea4599c4271c984b",
+    "content-hash": "36fe00dfa7d81a76db5cfe369e007c29",
     "packages": [
         {
             "name": "anourvalar/eloquent-serialize",
@@ -1037,78 +1037,6 @@
                 }
             ],
             "time": "2024-02-05T11:56:58+00:00"
-        },
-        {
-            "name": "dotswan/filament-grapesjs-v3",
-            "version": "v1.0.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/dotswan/filament-grapesjs-v3.git",
-                "reference": "244ddb0658e8c32ecd1dc74cbef48d4bfdae3b52"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/dotswan/filament-grapesjs-v3/zipball/244ddb0658e8c32ecd1dc74cbef48d4bfdae3b52",
-                "reference": "244ddb0658e8c32ecd1dc74cbef48d4bfdae3b52",
-                "shasum": ""
-            },
-            "require": {
-                "filament/filament": "^3.0",
-                "illuminate/contracts": "^10.0 || ^11.0",
-                "php": "^8.1",
-                "spatie/laravel-package-tools": "^1.15.0"
-            },
-            "require-dev": {
-                "laravel/pint": "^1.0",
-                "nunomaduro/collision": "^7.9",
-                "nunomaduro/larastan": "^2.0.1",
-                "orchestra/testbench": "^8.0",
-                "pestphp/pest": "^2.0",
-                "pestphp/pest-plugin-arch": "^2.0",
-                "pestphp/pest-plugin-laravel": "^2.0",
-                "phpstan/extension-installer": "^1.1",
-                "phpstan/phpstan-deprecation-rules": "^1.0",
-                "phpstan/phpstan-phpunit": "^1.0"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Dotswan\\FilamentGrapesjs\\FilamentGrapesJsServiceProvider"
-                    ],
-                    "aliases": {
-                        "FilamentGrapesjs": "Dotswan\\FilamentGrapesjs\\Facades\\FilamentGrapesjs"
-                    }
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Dotswan\\FilamentGrapesjs\\": "src/",
-                    "Dotswan\\FilamentGrapesjs\\Database\\Factories\\": "database/factories/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Dotswan",
-                    "email": "tech@dotswan.com",
-                    "role": "Developer"
-                }
-            ],
-            "homepage": "https://github.com/dotswan/filament-grapesjs-v3",
-            "keywords": [
-                "dotswan",
-                "filament-grapesjs-v3",
-                "laravel"
-            ],
-            "support": {
-                "issues": "https://github.com/dotswan/filament-grapesjs-v3/issues",
-                "source": "https://github.com/dotswan/filament-grapesjs-v3"
-            },
-            "time": "2024-03-25T09:35:46+00:00"
         },
         {
             "name": "dragonmantank/cron-expression",
@@ -5324,56 +5252,6 @@
                 }
             ],
             "time": "2024-02-26T18:08:49+00:00"
-        },
-        {
-            "name": "silviolleite/laravelpwa",
-            "version": "2.0.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/silviolleite/laravel-pwa.git",
-                "reference": "5f7135d2ee870af01793c9fdf6b1b932b546e20e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/silviolleite/laravel-pwa/zipball/5f7135d2ee870af01793c9fdf6b1b932b546e20e",
-                "reference": "5f7135d2ee870af01793c9fdf6b1b932b546e20e",
-                "shasum": ""
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "LaravelPWA\\Providers\\LaravelPWAServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "LaravelPWA\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Silvio Luis Leite",
-                    "email": "silviolleite@gmail.com"
-                }
-            ],
-            "description": "Looks like an app, feels like an app, but NOT an app.",
-            "keywords": [
-                "laravel",
-                "php",
-                "progressive web apps",
-                "pwa"
-            ],
-            "support": {
-                "issues": "https://github.com/silviolleite/laravel-pwa/issues",
-                "source": "https://github.com/silviolleite/laravel-pwa/tree/2.0.3"
-            },
-            "time": "2020-08-20T12:19:16+00:00"
         },
         {
             "name": "spatie/color",
