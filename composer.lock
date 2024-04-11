@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6d6072bcfdbf87aeaeaf014c82048886",
+    "content-hash": "5975321216200819ca757e79e6411aa2",
     "packages": [
         {
             "name": "anourvalar/eloquent-serialize",
@@ -276,6 +276,55 @@
                 }
             ],
             "time": "2023-01-15T23:15:59+00:00"
+        },
+        {
+            "name": "brick/varexporter",
+            "version": "0.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/brick/varexporter.git",
+                "reference": "2fd038f7c9d12d468130c6e1b3ce06e4160a7dbb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/brick/varexporter/zipball/2fd038f7c9d12d468130c6e1b3ce06e4160a7dbb",
+                "reference": "2fd038f7c9d12d468130c6e1b3ce06e4160a7dbb",
+                "shasum": ""
+            },
+            "require": {
+                "nikic/php-parser": "^4.0",
+                "php": "^7.4 || ^8.0"
+            },
+            "require-dev": {
+                "php-coveralls/php-coveralls": "^2.2",
+                "phpunit/phpunit": "^8.5 || ^9.0",
+                "vimeo/psalm": "5.15.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Brick\\VarExporter\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A powerful alternative to var_export(), which can export closures and objects without __set_state()",
+            "keywords": [
+                "var_export"
+            ],
+            "support": {
+                "issues": "https://github.com/brick/varexporter/issues",
+                "source": "https://github.com/brick/varexporter/tree/0.4.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/BenMorel",
+                    "type": "github"
+                }
+            ],
+            "time": "2023-09-01T21:10:07+00:00"
         },
         {
             "name": "carbonphp/carbon-doctrine-types",
@@ -3948,27 +3997,25 @@
         },
         {
             "name": "nikic/php-parser",
-            "version": "v5.0.2",
+            "version": "v4.19.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "139676794dc1e9231bf7bcd123cfc0c99182cb13"
+                "reference": "4e1b88d21c69391150ace211e9eaf05810858d0b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/139676794dc1e9231bf7bcd123cfc0c99182cb13",
-                "reference": "139676794dc1e9231bf7bcd123cfc0c99182cb13",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/4e1b88d21c69391150ace211e9eaf05810858d0b",
+                "reference": "4e1b88d21c69391150ace211e9eaf05810858d0b",
                 "shasum": ""
             },
             "require": {
-                "ext-ctype": "*",
-                "ext-json": "*",
                 "ext-tokenizer": "*",
-                "php": ">=7.4"
+                "php": ">=7.1"
             },
             "require-dev": {
                 "ircmaxell/php-yacc": "^0.0.7",
-                "phpunit/phpunit": "^7.0 || ^8.0 || ^9.0"
+                "phpunit/phpunit": "^6.5 || ^7.0 || ^8.0 || ^9.0"
             },
             "bin": [
                 "bin/php-parse"
@@ -3976,7 +4023,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "5.0-dev"
+                    "dev-master": "4.9-dev"
                 }
             },
             "autoload": {
@@ -4000,9 +4047,9 @@
             ],
             "support": {
                 "issues": "https://github.com/nikic/PHP-Parser/issues",
-                "source": "https://github.com/nikic/PHP-Parser/tree/v5.0.2"
+                "source": "https://github.com/nikic/PHP-Parser/tree/v4.19.1"
             },
-            "time": "2024-03-05T20:51:40+00:00"
+            "time": "2024-03-17T08:10:35+00:00"
         },
         {
             "name": "nunomaduro/termwind",
@@ -5952,6 +5999,158 @@
                 }
             ],
             "time": "2023-12-25T11:46:58+00:00"
+        },
+        {
+            "name": "statikbe/laravel-chained-translator",
+            "version": "2.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/statikbe/laravel-chained-translator.git",
+                "reference": "dc837abd57c89165a2c41c7e8edbeb9c7d42e278"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/statikbe/laravel-chained-translator/zipball/dc837abd57c89165a2c41c7e8edbeb9c7d42e278",
+                "reference": "dc837abd57c89165a2c41c7e8edbeb9c7d42e278",
+                "shasum": ""
+            },
+            "require": {
+                "brick/varexporter": "^0.4",
+                "laravel/framework": "^9.0|^10.0|^11.0",
+                "php": "^8.0|^8.1|^8.2"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Statikbe\\LaravelChainedTranslator\\TranslationServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/Helpers/helpers.php"
+                ],
+                "psr-4": {
+                    "Statikbe\\LaravelChainedTranslator\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kobe Christiaensen",
+                    "email": "kobe@statik.be"
+                },
+                {
+                    "name": "Sten Govaerts",
+                    "email": "sten@statik.be"
+                },
+                {
+                    "name": "Johan Maes",
+                    "email": "johan@statik.be"
+                },
+                {
+                    "name": "Kayalion"
+                }
+            ],
+            "description": "The Laravel Chained Translator can combine several translators that can override each others translations.",
+            "keywords": [
+                "Chain",
+                "chained",
+                "content manager",
+                "custom",
+                "customer",
+                "laravel",
+                "statik",
+                "statikbe",
+                "translations"
+            ],
+            "support": {
+                "issues": "https://github.com/statikbe/laravel-chained-translator/issues",
+                "source": "https://github.com/statikbe/laravel-chained-translator/tree/2.4.0"
+            },
+            "time": "2024-03-14T14:27:13+00:00"
+        },
+        {
+            "name": "statikbe/laravel-filament-chained-translation-manager",
+            "version": "v3.2.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/statikbe/laravel-filament-chained-translation-manager.git",
+                "reference": "23a0499b55fd61685e54ab626934b6b37baaed31"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/statikbe/laravel-filament-chained-translation-manager/zipball/23a0499b55fd61685e54ab626934b6b37baaed31",
+                "reference": "23a0499b55fd61685e54ab626934b6b37baaed31",
+                "shasum": ""
+            },
+            "require": {
+                "filament/filament": "^3.0",
+                "illuminate/contracts": "^10.0|^11.0",
+                "php": "^8.1|^8.2",
+                "spatie/laravel-package-tools": "^1.14.0",
+                "statikbe/laravel-chained-translator": "^2.3"
+            },
+            "require-dev": {
+                "laravel/pint": "^1.0",
+                "nunomaduro/collision": "^7.0||^8.0",
+                "nunomaduro/larastan": "^2.4",
+                "orchestra/testbench": "^8.0",
+                "pestphp/pest": "^2.0",
+                "pestphp/pest-plugin-laravel": "^2.0",
+                "phpstan/extension-installer": "^1.2",
+                "phpstan/phpstan-deprecation-rules": "^1.1",
+                "phpstan/phpstan-phpunit": "^1.3",
+                "phpunit/phpunit": "^10.0|^11.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Statikbe\\FilamentTranslationManager\\FilamentTranslationManagerServiceProvider"
+                    ],
+                    "aliases": {
+                        "FilamentTranslationManager": "Statikbe\\FilamentTranslationManager\\FilamentTranslationManager"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Statikbe\\FilamentTranslationManager\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kobe Christiaensen",
+                    "email": "kobe@statik.be",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Sten Govaerts",
+                    "email": "sten@statik.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A translation manager tool for Laravel Filament, that makes use of the Laravel Chained Translator.",
+            "homepage": "https://github.com/statikbe/laravel-filament-chained-translation-manager",
+            "keywords": [
+                "laravel",
+                "laravel-filament-chained-translation-manager",
+                "statikbe"
+            ],
+            "support": {
+                "issues": "https://github.com/statikbe/laravel-filament-chained-translation-manager/issues",
+                "source": "https://github.com/statikbe/laravel-filament-chained-translation-manager/tree/v3.2.3"
+            },
+            "time": "2024-03-21T08:27:07+00:00"
         },
         {
             "name": "symfony/clock",
