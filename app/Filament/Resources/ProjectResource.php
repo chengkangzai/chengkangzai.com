@@ -22,6 +22,7 @@ use Filament\Tables\Filters\TrashedFilter;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Mvenghaus\FilamentPluginTranslatableInline\Forms\Components\TranslatableContainer;
 
 class ProjectResource extends Resource
 {
@@ -35,31 +36,24 @@ class ProjectResource extends Resource
 
     public static function form(Form $form): Form
     {
-        return $form
+        return $form->columns(3)
             ->schema([
-                TextInput::make('name')
-                    ->required(),
-
-                SpatieTagsInput::make('tags')
-                    ->required(),
-
-                Toggle::make('is_active')
-                    ->inline(false)
-                    ->required(),
-
-                MarkdownEditor::make('description')
-                    ->columnSpanFull()
-                    ->required(),
-
                 Section::make([
+                    TextInput::make('name')
+                        ->required(),
+
+                    SpatieTagsInput::make('tags')
+                        ->required(),
+
+                    Toggle::make('is_active')
+                        ->inline(false)
+                        ->required(),
+
                     TextInput::make('github_url')
                         ->url(),
 
                     TextInput::make('url')
                         ->url(),
-                ])->columns(2),
-
-                Section::make([
                     SpatieMediaLibraryFileUpload::make('thumbnail')
                         ->required()
                         ->collection('thumbnail')
@@ -67,15 +61,23 @@ class ProjectResource extends Resource
                         ->imageEditor()
                         ->imageCropAspectRatio('16:9')
                         ->maxFiles(1),
-                ])->columns(2),
+                ])->compact()->columnSpan(2),
+
+                Section::make([
+                    TranslatableContainer::make(
+                        MarkdownEditor::make('description')
+                            ->columnSpanFull()
+                            ->required(),
+                    ),
+                ])->compact()->columnSpan(1),
 
                 Placeholder::make('created_at')
                     ->label('Created Date')
-                    ->content(fn (?Project $record): string => $record?->created_at?->diffForHumans() ?? '-'),
+                    ->content(fn(?Project $record): string => $record?->created_at?->diffForHumans() ?? '-'),
 
                 Placeholder::make('updated_at')
                     ->label('Last Modified Date')
-                    ->content(fn (?Project $record): string => $record?->updated_at?->diffForHumans() ?? '-'),
+                    ->content(fn(?Project $record): string => $record?->updated_at?->diffForHumans() ?? '-'),
             ]);
     }
 
@@ -92,15 +94,15 @@ class ProjectResource extends Resource
 
                 TextColumn::make('description')
                     ->limit(30)
-                    ->tooltip(fn (?string $state) => $state),
+                    ->tooltip(fn(?string $state) => $state),
 
                 TextColumn::make('github_url')
                     ->toggleable()
-                    ->url(fn (?string $state) => $state, true),
+                    ->url(fn(?string $state) => $state, true),
 
                 TextColumn::make('url')
                     ->toggleable()
-                    ->url(fn (?string $state) => $state, true),
+                    ->url(fn(?string $state) => $state, true),
 
                 ToggleColumn::make('is_active'),
             ])
