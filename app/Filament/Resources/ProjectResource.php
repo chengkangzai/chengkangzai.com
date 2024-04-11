@@ -65,6 +65,7 @@ class ProjectResource extends Resource
                         ->collection('thumbnail')
                         ->image()
                         ->imageEditor()
+                        ->imageCropAspectRatio('16:9')
                         ->maxFiles(1),
                 ])->columns(2),
 
@@ -101,7 +102,7 @@ class ProjectResource extends Resource
                     ->toggleable()
                     ->url(fn (?string $state) => $state, true),
 
-                ToggleColumn::make('status'),
+                ToggleColumn::make('is_active'),
             ])
             ->filters([
                 TrashedFilter::make(),

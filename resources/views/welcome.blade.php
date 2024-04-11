@@ -1,172 +1,597 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@php use App\Models\Project; @endphp
+@php
+/** @var Project[] $projects */
+@endphp
+@section('seo')
+    {!! seo()->for($SEOData) !!}
+@endsection
+@extends('layouts.app')
+@push('style')
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
 
-        <title>Laravel</title>
+        .wave {
+            animation-duration: 2.2s;
+            animation-iteration-count: infinite;
+            animation-name: wave;
+            display: inline-block;
+            transform-origin: 70% 70%;
+        }
 
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
+        @keyframes wave {
+            0% {
+                transform: rotate(0deg);
+            }
 
-        <!-- Styles -->
-        <style>
-            /* ! tailwindcss v3.4.1 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:Figtree, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]{display:none}*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }.absolute{position:absolute}.relative{position:relative}.-left-20{left:-5rem}.top-0{top:0px}.-bottom-16{bottom:-4rem}.-left-16{left:-4rem}.-mx-3{margin-left:-0.75rem;margin-right:-0.75rem}.mt-4{margin-top:1rem}.mt-6{margin-top:1.5rem}.flex{display:flex}.grid{display:grid}.hidden{display:none}.aspect-video{aspect-ratio:16 / 9}.size-12{width:3rem;height:3rem}.size-5{width:1.25rem;height:1.25rem}.size-6{width:1.5rem;height:1.5rem}.h-12{height:3rem}.h-40{height:10rem}.h-full{height:100%}.min-h-screen{min-height:100vh}.w-full{width:100%}.w-\[calc\(100\%\+8rem\)\]{width:calc(100% + 8rem)}.w-auto{width:auto}.max-w-\[877px\]{max-width:877px}.max-w-2xl{max-width:42rem}.flex-1{flex:1 1 0%}.shrink-0{flex-shrink:0}.grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.flex-col{flex-direction:column}.items-start{align-items:flex-start}.items-center{align-items:center}.items-stretch{align-items:stretch}.justify-end{justify-content:flex-end}.justify-center{justify-content:center}.gap-2{gap:0.5rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.self-center{align-self:center}.overflow-hidden{overflow:hidden}.rounded-\[10px\]{border-radius:10px}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-md{border-radius:0.375rem}.rounded-sm{border-radius:0.125rem}.bg-\[\#FF2D20\]\/10{background-color:rgb(255 45 32 / 0.1)}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity))}.bg-gradient-to-b{background-image:linear-gradient(to bottom, var(--tw-gradient-stops))}.from-transparent{--tw-gradient-from:transparent var(--tw-gradient-from-position);--tw-gradient-to:rgb(0 0 0 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.via-white{--tw-gradient-to:rgb(255 255 255 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), #fff var(--tw-gradient-via-position), var(--tw-gradient-to)}.to-white{--tw-gradient-to:#fff var(--tw-gradient-to-position)}.stroke-\[\#FF2D20\]{stroke:#FF2D20}.object-cover{object-fit:cover}.object-top{object-position:top}.p-6{padding:1.5rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-10{padding-top:2.5rem;padding-bottom:2.5rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.py-16{padding-top:4rem;padding-bottom:4rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.pt-3{padding-top:0.75rem}.text-center{text-align:center}.font-sans{font-family:Figtree, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-sm\/relaxed{font-size:0.875rem;line-height:1.625}.text-xl{font-size:1.25rem;line-height:1.75rem}.font-semibold{font-weight:600}.text-black{--tw-text-opacity:1;color:rgb(0 0 0 / var(--tw-text-opacity))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.underline{-webkit-text-decoration-line:underline;text-decoration-line:underline}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.shadow-\[0px_14px_34px_0px_rgba\(0\2c 0\2c 0\2c 0\.08\)\]{--tw-shadow:0px 14px 34px 0px rgba(0,0,0,0.08);--tw-shadow-colored:0px 14px 34px 0px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.ring-1{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.ring-transparent{--tw-ring-color:transparent}.ring-white\/\[0\.05\]{--tw-ring-color:rgb(255 255 255 / 0.05)}.drop-shadow-\[0px_4px_34px_rgba\(0\2c 0\2c 0\2c 0\.06\)\]{--tw-drop-shadow:drop-shadow(0px 4px 34px rgba(0,0,0,0.06));filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.drop-shadow-\[0px_4px_34px_rgba\(0\2c 0\2c 0\2c 0\.25\)\]{--tw-drop-shadow:drop-shadow(0px 4px 34px rgba(0,0,0,0.25));filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-300{transition-duration:300ms}.selection\:bg-\[\#FF2D20\] *::selection{--tw-bg-opacity:1;background-color:rgb(255 45 32 / var(--tw-bg-opacity))}.selection\:text-white *::selection{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.selection\:bg-\[\#FF2D20\]::selection{--tw-bg-opacity:1;background-color:rgb(255 45 32 / var(--tw-bg-opacity))}.selection\:text-white::selection{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.hover\:text-black:hover{--tw-text-opacity:1;color:rgb(0 0 0 / var(--tw-text-opacity))}.hover\:text-black\/70:hover{color:rgb(0 0 0 / 0.7)}.hover\:ring-black\/20:hover{--tw-ring-color:rgb(0 0 0 / 0.2)}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.focus-visible\:ring-1:focus-visible{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.focus-visible\:ring-\[\#FF2D20\]:focus-visible{--tw-ring-opacity:1;--tw-ring-color:rgb(255 45 32 / var(--tw-ring-opacity))}@media (min-width: 640px){.sm\:size-16{width:4rem;height:4rem}.sm\:size-6{width:1.5rem;height:1.5rem}.sm\:pt-5{padding-top:1.25rem}}@media (min-width: 768px){.md\:row-span-3{grid-row:span 3 / span 3}}@media (min-width: 1024px){.lg\:col-start-2{grid-column-start:2}.lg\:h-16{height:4rem}.lg\:max-w-7xl{max-width:80rem}.lg\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.lg\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.lg\:flex-col{flex-direction:column}.lg\:items-end{align-items:flex-end}.lg\:justify-center{justify-content:center}.lg\:gap-8{gap:2rem}.lg\:p-10{padding:2.5rem}.lg\:pb-10{padding-bottom:2.5rem}.lg\:pt-0{padding-top:0px}.lg\:text-\[\#FF2D20\]{--tw-text-opacity:1;color:rgb(255 45 32 / var(--tw-text-opacity))}}@media (prefers-color-scheme: dark){.dark\:block{display:block}.dark\:hidden{display:none}.dark\:bg-black{--tw-bg-opacity:1;background-color:rgb(0 0 0 / var(--tw-bg-opacity))}.dark\:bg-zinc-900{--tw-bg-opacity:1;background-color:rgb(24 24 27 / var(--tw-bg-opacity))}.dark\:via-zinc-900{--tw-gradient-to:rgb(24 24 27 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), #18181b var(--tw-gradient-via-position), var(--tw-gradient-to)}.dark\:to-zinc-900{--tw-gradient-to:#18181b var(--tw-gradient-to-position)}.dark\:text-white\/50{color:rgb(255 255 255 / 0.5)}.dark\:text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.dark\:text-white\/70{color:rgb(255 255 255 / 0.7)}.dark\:ring-zinc-800{--tw-ring-opacity:1;--tw-ring-color:rgb(39 39 42 / var(--tw-ring-opacity))}.dark\:hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.dark\:hover\:text-white\/70:hover{color:rgb(255 255 255 / 0.7)}.dark\:hover\:text-white\/80:hover{color:rgb(255 255 255 / 0.8)}.dark\:hover\:ring-zinc-700:hover{--tw-ring-opacity:1;--tw-ring-color:rgb(63 63 70 / var(--tw-ring-opacity))}.dark\:focus-visible\:ring-\[\#FF2D20\]:focus-visible{--tw-ring-opacity:1;--tw-ring-color:rgb(255 45 32 / var(--tw-ring-opacity))}.dark\:focus-visible\:ring-white:focus-visible{--tw-ring-opacity:1;--tw-ring-color:rgb(255 255 255 / var(--tw-ring-opacity))}}
-        </style>
-    </head>
-    <body class="font-sans antialiased dark:bg-black dark:text-white/50">
-        <div class="bg-gray-50 text-black/50 dark:bg-black dark:text-white/50">
-            <img id="background" class="absolute -left-20 top-0 max-w-[877px]" src="https://laravel.com/assets/img/welcome/background.svg" />
-            <div class="relative min-h-screen flex flex-col items-center justify-center selection:bg-[#FF2D20] selection:text-white">
-                <div class="relative w-full max-w-2xl px-6 lg:max-w-7xl">
-                    <header class="grid grid-cols-2 items-center gap-2 py-10 lg:grid-cols-3">
-                        <div class="flex lg:justify-center lg:col-start-2">
-                            <svg class="h-12 w-auto text-white lg:h-16 lg:text-[#FF2D20]" viewBox="0 0 62 65" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M61.8548 14.6253C61.8778 14.7102 61.8895 14.7978 61.8897 14.8858V28.5615C61.8898 28.737 61.8434 28.9095 61.7554 29.0614C61.6675 29.2132 61.5409 29.3392 61.3887 29.4265L49.9104 36.0351V49.1337C49.9104 49.4902 49.7209 49.8192 49.4118 49.9987L25.4519 63.7916C25.3971 63.8227 25.3372 63.8427 25.2774 63.8639C25.255 63.8714 25.2338 63.8851 25.2101 63.8913C25.0426 63.9354 24.8666 63.9354 24.6991 63.8913C24.6716 63.8838 24.6467 63.8689 24.6205 63.8589C24.5657 63.8389 24.5084 63.8215 24.456 63.7916L0.501061 49.9987C0.348882 49.9113 0.222437 49.7853 0.134469 49.6334C0.0465019 49.4816 0.000120578 49.3092 0 49.1337L0 8.10652C0 8.01678 0.0124642 7.92953 0.0348998 7.84477C0.0423783 7.8161 0.0598282 7.78993 0.0697995 7.76126C0.0884958 7.70891 0.105946 7.65531 0.133367 7.6067C0.152063 7.5743 0.179485 7.54812 0.20192 7.51821C0.230588 7.47832 0.256763 7.43719 0.290416 7.40229C0.319084 7.37362 0.356476 7.35243 0.388883 7.32751C0.425029 7.29759 0.457436 7.26518 0.498568 7.2415L12.4779 0.345059C12.6296 0.257786 12.8015 0.211853 12.9765 0.211853C13.1515 0.211853 13.3234 0.257786 13.475 0.345059L25.4531 7.2415H25.4556C25.4955 7.26643 25.5292 7.29759 25.5653 7.32626C25.5977 7.35119 25.6339 7.37362 25.6625 7.40104C25.6974 7.43719 25.7224 7.47832 25.7523 7.51821C25.7735 7.54812 25.8021 7.5743 25.8196 7.6067C25.8483 7.65656 25.8645 7.70891 25.8844 7.76126C25.8944 7.78993 25.9118 7.8161 25.9193 7.84602C25.9423 7.93096 25.954 8.01853 25.9542 8.10652V33.7317L35.9355 27.9844V14.8846C35.9355 14.7973 35.948 14.7088 35.9704 14.6253C35.9792 14.5954 35.9954 14.5692 36.0053 14.5405C36.0253 14.4882 36.0427 14.4346 36.0702 14.386C36.0888 14.3536 36.1163 14.3274 36.1375 14.2975C36.1674 14.2576 36.1923 14.2165 36.2272 14.1816C36.2559 14.1529 36.292 14.1317 36.3244 14.1068C36.3618 14.0769 36.3942 14.0445 36.4341 14.0208L48.4147 7.12434C48.5663 7.03694 48.7383 6.99094 48.9133 6.99094C49.0883 6.99094 49.2602 7.03694 49.4118 7.12434L61.3899 14.0208C61.4323 14.0457 61.4647 14.0769 61.5021 14.1055C61.5333 14.1305 61.5694 14.1529 61.5981 14.1803C61.633 14.2165 61.6579 14.2576 61.6878 14.2975C61.7103 14.3274 61.7377 14.3536 61.7551 14.386C61.7838 14.4346 61.8 14.4882 61.8199 14.5405C61.8312 14.5692 61.8474 14.5954 61.8548 14.6253ZM59.893 27.9844V16.6121L55.7013 19.0252L49.9104 22.3593V33.7317L59.8942 27.9844H59.893ZM47.9149 48.5566V37.1768L42.2187 40.4299L25.953 49.7133V61.2003L47.9149 48.5566ZM1.99677 9.83281V48.5566L23.9562 61.199V49.7145L12.4841 43.2219L12.4804 43.2194L12.4754 43.2169C12.4368 43.1945 12.4044 43.1621 12.3682 43.1347C12.3371 43.1097 12.3009 43.0898 12.2735 43.0624L12.271 43.0586C12.2386 43.0275 12.2162 42.9888 12.1887 42.9539C12.1638 42.9203 12.1339 42.8916 12.114 42.8567L12.1127 42.853C12.0903 42.8156 12.0766 42.7707 12.0604 42.7283C12.0442 42.6909 12.023 42.656 12.013 42.6161C12.0005 42.5688 11.998 42.5177 11.9931 42.4691C11.9881 42.4317 11.9781 42.3943 11.9781 42.3569V15.5801L6.18848 12.2446L1.99677 9.83281ZM12.9777 2.36177L2.99764 8.10652L12.9752 13.8513L22.9541 8.10527L12.9752 2.36177H12.9777ZM18.1678 38.2138L23.9574 34.8809V9.83281L19.7657 12.2459L13.9749 15.5801V40.6281L18.1678 38.2138ZM48.9133 9.14105L38.9344 14.8858L48.9133 20.6305L58.8909 14.8846L48.9133 9.14105ZM47.9149 22.3593L42.124 19.0252L37.9323 16.6121V27.9844L43.7219 31.3174L47.9149 33.7317V22.3593ZM24.9533 47.987L39.59 39.631L46.9065 35.4555L36.9352 29.7145L25.4544 36.3242L14.9907 42.3482L24.9533 47.987Z" fill="currentColor"/></svg>
-                        </div>
-                        @if (Route::has('login'))
-                            <nav class="-mx-3 flex flex-1 justify-end">
-                                @auth
-                                    <a
-                                        href="{{ url('/dashboard') }}"
-                                        class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
-                                    >
-                                        Dashboard
-                                    </a>
-                                @else
-                                    <a
-                                        href="{{ route('login') }}"
-                                        class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
-                                    >
-                                        Log in
-                                    </a>
+            10% {
+                transform: rotate(-10deg);
+            }
 
-                                    @if (Route::has('register'))
-                                        <a
-                                            href="{{ route('register') }}"
-                                            class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
-                                        >
-                                            Register
-                                        </a>
-                                    @endif
-                                @endauth
-                            </nav>
-                        @endif
-                    </header>
+            20% {
+                transform: rotate(12deg);
+            }
 
-                    <main class="mt-6">
-                        <div class="grid gap-6 lg:grid-cols-2 lg:gap-8">
-                            <a
-                                href="https://laravel.com/docs"
-                                id="docs-card"
-                                class="flex flex-col items-start gap-6 overflow-hidden rounded-lg bg-white p-6 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] transition duration-300 hover:text-black/70 hover:ring-black/20 focus:outline-none focus-visible:ring-[#FF2D20] md:row-span-3 lg:p-10 lg:pb-10 dark:bg-zinc-900 dark:ring-zinc-800 dark:hover:text-white/70 dark:hover:ring-zinc-700 dark:focus-visible:ring-[#FF2D20]"
-                            >
-                                <div id="screenshot-container" class="relative flex w-full flex-1 items-stretch">
-                                    <img
-                                        src="https://laravel.com/assets/img/welcome/docs-light.svg"
-                                        alt="Laravel documentation screenshot"
-                                        class="aspect-video h-full w-full flex-1 rounded-[10px] object-top object-cover drop-shadow-[0px_4px_34px_rgba(0,0,0,0.06)] dark:hidden"
-                                        onerror="
-                                            document.getElementById('screenshot-container').classList.add('!hidden');
-                                            document.getElementById('docs-card').classList.add('!row-span-1');
-                                            document.getElementById('docs-card-content').classList.add('!flex-row');
-                                            document.getElementById('background').classList.add('!hidden');
-                                        "
-                                    />
-                                    <img
-                                        src="https://laravel.com/assets/img/welcome/docs-dark.svg"
-                                        alt="Laravel documentation screenshot"
-                                        class="hidden aspect-video h-full w-full flex-1 rounded-[10px] object-top object-cover drop-shadow-[0px_4px_34px_rgba(0,0,0,0.25)] dark:block"
-                                    />
-                                    <div
-                                        class="absolute -bottom-16 -left-16 h-40 w-[calc(100%+8rem)] bg-gradient-to-b from-transparent via-white to-white dark:via-zinc-900 dark:to-zinc-900"
-                                    ></div>
-                                </div>
+            30% {
+                transform: rotate(-10deg);
+            }
 
-                                <div class="relative flex items-center gap-6 lg:items-end">
-                                    <div id="docs-card-content" class="flex items-start gap-6 lg:flex-col">
-                                        <div class="flex size-12 shrink-0 items-center justify-center rounded-full bg-[#FF2D20]/10 sm:size-16">
-                                            <svg class="size-5 sm:size-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path fill="#FF2D20" d="M23 4a1 1 0 0 0-1.447-.894L12.224 7.77a.5.5 0 0 1-.448 0L2.447 3.106A1 1 0 0 0 1 4v13.382a1.99 1.99 0 0 0 1.105 1.79l9.448 4.728c.14.065.293.1.447.1.154-.005.306-.04.447-.105l9.453-4.724a1.99 1.99 0 0 0 1.1-1.789V4ZM3 6.023a.25.25 0 0 1 .362-.223l7.5 3.75a.251.251 0 0 1 .138.223v11.2a.25.25 0 0 1-.362.224l-7.5-3.75a.25.25 0 0 1-.138-.22V6.023Zm18 11.2a.25.25 0 0 1-.138.224l-7.5 3.75a.249.249 0 0 1-.329-.099.249.249 0 0 1-.033-.12V9.772a.251.251 0 0 1 .138-.224l7.5-3.75a.25.25 0 0 1 .362.224v11.2Z"/><path fill="#FF2D20" d="m3.55 1.893 8 4.048a1.008 1.008 0 0 0 .9 0l8-4.048a1 1 0 0 0-.9-1.785l-7.322 3.706a.506.506 0 0 1-.452 0L4.454.108a1 1 0 0 0-.9 1.785H3.55Z"/></svg>
-                                        </div>
+            40% {
+                transform: rotate(10deg);
+            }
 
-                                        <div class="pt-3 sm:pt-5 lg:pt-0">
-                                            <h2 class="text-xl font-semibold text-black dark:text-white">Documentation</h2>
+            50% {
+                transform: rotate(0deg);
+            }
 
-                                            <p class="mt-4 text-sm/relaxed">
-                                                Laravel has wonderful documentation covering every aspect of the framework. Whether you are a newcomer or have prior experience with Laravel, we recommend reading our documentation from beginning to end.
-                                            </p>
-                                        </div>
-                                    </div>
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+    </style>
+@endpush
 
-                                    <svg class="size-6 shrink-0 stroke-[#FF2D20]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"/></svg>
-                                </div>
-                            </a>
+@section('content')
+    @include('partial.rocket')
+    <div class="mx-auto md:w-11/12">
+        <section class="text-gray-700">
+            <div class="container mx-auto flex min-h-screen flex-col items-center px-5 md:flex-row lg:px-28">
+                <div
+                    class="flex min-h-screen w-full flex-col items-start py-16 text-left sm:min-h-full sm:py-8 lg:w-3/5 lg:flex-grow">
+                    <h1 class="title-font mb-8 text-5xl font-bold tracking-tighter text-black lg:text-5xl dark:text-white">
+                        {{ __('Hi, I am') }} <br> {{ __('Ching Cheng Kang') }} (CCK) <span class="wave">👋🏻</span>
+                    </h1>
+                    <div style="min-height: 40px">
+                        <span id="typed"
+                              class="inline-block text-left text-base leading-relaxed text-gray-500 dark:text-gray-200">
+                            {{ __('Laravel Developer') }}
+                        </span>
+                    </div>
+                    <p class="text-dark-600 mb-8 mt-2 w-full text-left text-sm dark:text-gray-400">
+                        ⚡️ {{ __('Fun fact: I convert Coffee to Code') }} ☕️
+                    </p>
+                    <div class="flex flex-col justify-center space-y-2 lg:flex-row lg:space-x-2">
+                        <a role="button" href="{{ asset('resume.pdf') }}"
+                           class="focus:shadow-outline mt-auto flex items-center rounded-lg bg-black px-6 py-2 font-semibold text-white ring-black ring-offset-2 ring-offset-current transition duration-300 ease-in-out hover:bg-gray-800 hover:to-black focus:outline-none focus:ring-2 dark:bg-white dark:text-black dark:hover:bg-gray-200 dark:hover:to-white">
+                            {{ __('SEE MY RESUME') }}
+                        </a>
 
-                            <a
-                                href="https://laracasts.com"
-                                class="flex items-start gap-4 rounded-lg bg-white p-6 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] transition duration-300 hover:text-black/70 hover:ring-black/20 focus:outline-none focus-visible:ring-[#FF2D20] lg:pb-10 dark:bg-zinc-900 dark:ring-zinc-800 dark:hover:text-white/70 dark:hover:ring-zinc-700 dark:focus-visible:ring-[#FF2D20]"
-                            >
-                                <div class="flex size-12 shrink-0 items-center justify-center rounded-full bg-[#FF2D20]/10 sm:size-16">
-                                    <svg class="size-5 sm:size-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><g fill="#FF2D20"><path d="M24 8.25a.5.5 0 0 0-.5-.5H.5a.5.5 0 0 0-.5.5v12a2.5 2.5 0 0 0 2.5 2.5h19a2.5 2.5 0 0 0 2.5-2.5v-12Zm-7.765 5.868a1.221 1.221 0 0 1 0 2.264l-6.626 2.776A1.153 1.153 0 0 1 8 18.123v-5.746a1.151 1.151 0 0 1 1.609-1.035l6.626 2.776ZM19.564 1.677a.25.25 0 0 0-.177-.427H15.6a.106.106 0 0 0-.072.03l-4.54 4.543a.25.25 0 0 0 .177.427h3.783c.027 0 .054-.01.073-.03l4.543-4.543ZM22.071 1.318a.047.047 0 0 0-.045.013l-4.492 4.492a.249.249 0 0 0 .038.385.25.25 0 0 0 .14.042h5.784a.5.5 0 0 0 .5-.5v-2a2.5 2.5 0 0 0-1.925-2.432ZM13.014 1.677a.25.25 0 0 0-.178-.427H9.101a.106.106 0 0 0-.073.03l-4.54 4.543a.25.25 0 0 0 .177.427H8.4a.106.106 0 0 0 .073-.03l4.54-4.543ZM6.513 1.677a.25.25 0 0 0-.177-.427H2.5A2.5 2.5 0 0 0 0 3.75v2a.5.5 0 0 0 .5.5h1.4a.106.106 0 0 0 .073-.03l4.54-4.543Z"/></g></svg>
-                                </div>
-
-                                <div class="pt-3 sm:pt-5">
-                                    <h2 class="text-xl font-semibold text-black dark:text-white">Laracasts</h2>
-
-                                    <p class="mt-4 text-sm/relaxed">
-                                        Laracasts offers thousands of video tutorials on Laravel, PHP, and JavaScript development. Check them out, see for yourself, and massively level up your development skills in the process.
-                                    </p>
-                                </div>
-
-                                <svg class="size-6 shrink-0 self-center stroke-[#FF2D20]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"/></svg>
-                            </a>
-
-                            <a
-                                href="https://laravel-news.com"
-                                class="flex items-start gap-4 rounded-lg bg-white p-6 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] transition duration-300 hover:text-black/70 hover:ring-black/20 focus:outline-none focus-visible:ring-[#FF2D20] lg:pb-10 dark:bg-zinc-900 dark:ring-zinc-800 dark:hover:text-white/70 dark:hover:ring-zinc-700 dark:focus-visible:ring-[#FF2D20]"
-                            >
-                                <div class="flex size-12 shrink-0 items-center justify-center rounded-full bg-[#FF2D20]/10 sm:size-16">
-                                    <svg class="size-5 sm:size-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><g fill="#FF2D20"><path d="M8.75 4.5H5.5c-.69 0-1.25.56-1.25 1.25v4.75c0 .69.56 1.25 1.25 1.25h3.25c.69 0 1.25-.56 1.25-1.25V5.75c0-.69-.56-1.25-1.25-1.25Z"/><path d="M24 10a3 3 0 0 0-3-3h-2V2.5a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2V20a3.5 3.5 0 0 0 3.5 3.5h17A3.5 3.5 0 0 0 24 20V10ZM3.5 21.5A1.5 1.5 0 0 1 2 20V3a.5.5 0 0 1 .5-.5h14a.5.5 0 0 1 .5.5v17c0 .295.037.588.11.874a.5.5 0 0 1-.484.625L3.5 21.5ZM22 20a1.5 1.5 0 1 1-3 0V9.5a.5.5 0 0 1 .5-.5H21a1 1 0 0 1 1 1v10Z"/><path d="M12.751 6.047h2a.75.75 0 0 1 .75.75v.5a.75.75 0 0 1-.75.75h-2A.75.75 0 0 1 12 7.3v-.5a.75.75 0 0 1 .751-.753ZM12.751 10.047h2a.75.75 0 0 1 .75.75v.5a.75.75 0 0 1-.75.75h-2A.75.75 0 0 1 12 11.3v-.5a.75.75 0 0 1 .751-.753ZM4.751 14.047h10a.75.75 0 0 1 .75.75v.5a.75.75 0 0 1-.75.75h-10A.75.75 0 0 1 4 15.3v-.5a.75.75 0 0 1 .751-.753ZM4.75 18.047h7.5a.75.75 0 0 1 .75.75v.5a.75.75 0 0 1-.75.75h-7.5A.75.75 0 0 1 4 19.3v-.5a.75.75 0 0 1 .75-.753Z"/></g></svg>
-                                </div>
-
-                                <div class="pt-3 sm:pt-5">
-                                    <h2 class="text-xl font-semibold text-black dark:text-white">Laravel News</h2>
-
-                                    <p class="mt-4 text-sm/relaxed">
-                                        Laravel News is a community driven portal and newsletter aggregating all of the latest and most important news in the Laravel ecosystem, including new package releases and tutorials.
-                                    </p>
-                                </div>
-
-                                <svg class="size-6 shrink-0 self-center stroke-[#FF2D20]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"/></svg>
-                            </a>
-
-                            <div class="flex items-start gap-4 rounded-lg bg-white p-6 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] transition duration-300 hover:text-black/70 hover:ring-black/20 focus:outline-none focus-visible:ring-[#FF2D20] lg:pb-10 dark:bg-zinc-900 dark:ring-zinc-800 dark:hover:text-white/70 dark:hover:ring-zinc-700 dark:focus-visible:ring-[#FF2D20]">
-                                <div class="flex size-12 shrink-0 items-center justify-center rounded-full bg-[#FF2D20]/10 sm:size-16">
-                                    <svg class="size-5 sm:size-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                                        <g fill="#FF2D20">
-                                            <path
-                                                d="M16.597 12.635a.247.247 0 0 0-.08-.237 2.234 2.234 0 0 1-.769-1.68c.001-.195.03-.39.084-.578a.25.25 0 0 0-.09-.267 8.8 8.8 0 0 0-4.826-1.66.25.25 0 0 0-.268.181 2.5 2.5 0 0 1-2.4 1.824.045.045 0 0 0-.045.037 12.255 12.255 0 0 0-.093 3.86.251.251 0 0 0 .208.214c2.22.366 4.367 1.08 6.362 2.118a.252.252 0 0 0 .32-.079 10.09 10.09 0 0 0 1.597-3.733ZM13.616 17.968a.25.25 0 0 0-.063-.407A19.697 19.697 0 0 0 8.91 15.98a.25.25 0 0 0-.287.325c.151.455.334.898.548 1.328.437.827.981 1.594 1.619 2.28a.249.249 0 0 0 .32.044 29.13 29.13 0 0 0 2.506-1.99ZM6.303 14.105a.25.25 0 0 0 .265-.274 13.048 13.048 0 0 1 .205-4.045.062.062 0 0 0-.022-.07 2.5 2.5 0 0 1-.777-.982.25.25 0 0 0-.271-.149 11 11 0 0 0-5.6 2.815.255.255 0 0 0-.075.163c-.008.135-.02.27-.02.406.002.8.084 1.598.246 2.381a.25.25 0 0 0 .303.193 19.924 19.924 0 0 1 5.746-.438ZM9.228 20.914a.25.25 0 0 0 .1-.393 11.53 11.53 0 0 1-1.5-2.22 12.238 12.238 0 0 1-.91-2.465.248.248 0 0 0-.22-.187 18.876 18.876 0 0 0-5.69.33.249.249 0 0 0-.179.336c.838 2.142 2.272 4 4.132 5.353a.254.254 0 0 0 .15.048c1.41-.01 2.807-.282 4.117-.802ZM18.93 12.957l-.005-.008a.25.25 0 0 0-.268-.082 2.21 2.21 0 0 1-.41.081.25.25 0 0 0-.217.2c-.582 2.66-2.127 5.35-5.75 7.843a.248.248 0 0 0-.09.299.25.25 0 0 0 .065.091 28.703 28.703 0 0 0 2.662 2.12.246.246 0 0 0 .209.037c2.579-.701 4.85-2.242 6.456-4.378a.25.25 0 0 0 .048-.189 13.51 13.51 0 0 0-2.7-6.014ZM5.702 7.058a.254.254 0 0 0 .2-.165A2.488 2.488 0 0 1 7.98 5.245a.093.093 0 0 0 .078-.062 19.734 19.734 0 0 1 3.055-4.74.25.25 0 0 0-.21-.41 12.009 12.009 0 0 0-10.4 8.558.25.25 0 0 0 .373.281 12.912 12.912 0 0 1 4.826-1.814ZM10.773 22.052a.25.25 0 0 0-.28-.046c-.758.356-1.55.635-2.365.833a.25.25 0 0 0-.022.48c1.252.43 2.568.65 3.893.65.1 0 .2 0 .3-.008a.25.25 0 0 0 .147-.444c-.526-.424-1.1-.917-1.673-1.465ZM18.744 8.436a.249.249 0 0 0 .15.228 2.246 2.246 0 0 1 1.352 2.054c0 .337-.08.67-.23.972a.25.25 0 0 0 .042.28l.007.009a15.016 15.016 0 0 1 2.52 4.6.25.25 0 0 0 .37.132.25.25 0 0 0 .096-.114c.623-1.464.944-3.039.945-4.63a12.005 12.005 0 0 0-5.78-10.258.25.25 0 0 0-.373.274c.547 2.109.85 4.274.901 6.453ZM9.61 5.38a.25.25 0 0 0 .08.31c.34.24.616.561.8.935a.25.25 0 0 0 .3.127.631.631 0 0 1 .206-.034c2.054.078 4.036.772 5.69 1.991a.251.251 0 0 0 .267.024c.046-.024.093-.047.141-.067a.25.25 0 0 0 .151-.23A29.98 29.98 0 0 0 15.957.764a.25.25 0 0 0-.16-.164 11.924 11.924 0 0 0-2.21-.518.252.252 0 0 0-.215.076A22.456 22.456 0 0 0 9.61 5.38Z"
-                                            />
-                                        </g>
-                                    </svg>
-                                </div>
-
-                                <div class="pt-3 sm:pt-5">
-                                    <h2 class="text-xl font-semibold text-black dark:text-white">Vibrant Ecosystem</h2>
-
-                                    <p class="mt-4 text-sm/relaxed">
-                                        Laravel's robust library of first-party tools and libraries, such as <a href="https://forge.laravel.com" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white dark:focus-visible:ring-[#FF2D20]">Forge</a>, <a href="https://vapor.laravel.com" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Vapor</a>, <a href="https://nova.laravel.com" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Nova</a>, <a href="https://envoyer.io" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Envoyer</a>, and <a href="https://herd.laravel.com" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Herd</a> help you take your projects to the next level. Pair them with powerful open source libraries like <a href="https://laravel.com/docs/billing" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Cashier</a>, <a href="https://laravel.com/docs/dusk" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Dusk</a>, <a href="https://laravel.com/docs/broadcasting" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Echo</a>, <a href="https://laravel.com/docs/horizon" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Horizon</a>, <a href="https://laravel.com/docs/sanctum" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Sanctum</a>, <a href="https://laravel.com/docs/telescope" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Telescope</a>, and more.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </main>
-
-                    <footer class="py-16 text-center text-sm text-black dark:text-white/70">
-                        Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
-                    </footer>
+                        <a role="button" href="https://pandemic.chengkangzai.com"
+                           class="focus:shadow-outline mt-auto flex items-center rounded-lg bg-black px-6 py-2 font-semibold text-white ring-black ring-offset-2 ring-offset-current transition duration-300 ease-in-out hover:bg-gray-800 hover:to-black focus:outline-none focus:ring-2 dark:bg-white dark:text-black dark:hover:bg-gray-200 dark:hover:to-white">
+                            {{ __('Covid Dashboard') }}
+                        </a>
+                    </div>
+                    <div
+                        class="container mx-auto mt-28 flex w-full flex-col items-center text-center align-bottom sm:mt-8 sm:items-start">
+                        <a href="#about-me" aria-label="Skip to about me ">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 animate-bounce" fill="none"
+                                 viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="w-full sm:w-1/2 lg:w-5/6 lg:max-w-lg">
+                    <img class="mx-auto rounded-lg object-cover object-center lg:w-4/5" alt="hero"
+                         src="{{ asset('src/bighead.jpeg') }}" width="409" height="341">
                 </div>
             </div>
-        </div>
-    </body>
-</html>
+
+        </section>
+
+        <section id="about-me" class="mx-2 md:mx-0">
+            <a href="#about-me"
+               class="mx-2 my-8 block w-full text-center text-3xl font-black text-black md:mb-6 md:text-2xl lg:text-3xl dark:text-white">
+                {{ __('About me') }}
+            </a>
+            <div class="grid place-items-stretch gap-8 pb-8 md:grid-cols-3">
+                <div
+                    class="rounded-lg bg-gray-50 px-5 py-8 text-gray-800 shadow-lg transition duration-300 hover:scale-110 dark:bg-gray-800"
+                    x-data="{ cn: true }">
+                    <p title="{{ __('Click me to translate') }}"
+                       class="animate-bounce text-right text-xl text-black dark:text-white" role="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" @click="cn = !cn" viewBox="0 0 24 24"
+                             stroke="currentColor" class="right-0 h-6 w-6 animate-bounce">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                  d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/>
+                        </svg>
+                    </p>
+                    <p class="pb-3 text-center text-2xl text-black dark:text-white">
+                        {{ __('What I believe in') }}
+                    </p>
+                    <div class="h-3 text-left text-3xl leading-tight text-indigo-500">“</div>
+                    <ul x-show="cn">
+                        <li class="px-5 text-center text-gray-600 dark:text-gray-200">
+                            1. 面对问题是解决问题的第一步。
+                        </li>
+                        <li class="px-5 text-center text-gray-600 dark:text-gray-200">
+                            2. 把小问题解决了，就没有大问题。
+                        </li>
+                        <li class="px-5 text-center text-gray-600 dark:text-gray-200">
+                            3. 把所有的小问题都解决了，就根本没有问题。
+                        </li>
+                        <li class="px-5 text-center text-gray-600 dark:text-gray-200">
+                            4. 你不解决问题，问题会解决你。
+                        </li>
+                    </ul>
+                    <ol x-show="!cn">
+                        <li class="px-5 text-center text-gray-600 dark:text-gray-200">
+                            1. Facing the problem is the first matter of the business.
+                        </li>
+                        <li class="px-5 text-center text-gray-600 dark:text-gray-200">
+                            2. When small problem is fixed, there will not have major problem.
+                        </li>
+                        <li class="px-5 text-center text-gray-600 dark:text-gray-200">
+                            3. When all small problem are fixed, there will not have any problem.
+                        </li>
+                        <li class="px-5 text-center text-gray-600 dark:text-gray-200">
+                            4. If you don't settle the problem, the problem will try to settle you.
+                        </li>
+                    </ol>
+                    <div class="-mt-3 h-3 text-right text-3xl leading-tight text-indigo-500">”</div>
+                    <p class="text-md text-center font-bold text-indigo-700 dark:text-indigo-400" x-show="cn">
+                        柯文哲</p>
+                    <p class="text-md text-center font-bold text-indigo-700 dark:text-indigo-400" x-show="!cn">
+                        Ko Wen-Je</p>
+                    <p class="text-center text-xs text-gray-700 dark:text-gray-400">@KP_Taipei</p>
+                </div>
+
+                <div
+                    class="rounded-lg bg-gray-50 px-5 py-8 text-gray-800 shadow-lg transition duration-300 hover:scale-110 dark:bg-gray-800">
+                    <div class="w-full text-center">
+                        <p class="pb-3 text-center text-2xl text-black dark:text-white">$whoami</p>
+                        <p class="px-5 text-gray-600 dark:text-gray-200">
+                            {{ __("I'm :age-year-old Malaysian that passionate about making software that simplify people's life.", ['age' => \Carbon\Carbon::parse('1999-05-03')->age]) }}
+                        </p>
+                        <br>
+                        @if ($rank >= 1)
+                            <a class="px-5 text-gray-600 underline dark:text-gray-200"
+                               href="https://github.com/gayanvoice/top-github-users/blob/main/markdown/public_contributions/malaysia.md"
+                               aria-label="Link to Top Github User" rel="noreferrer">
+                                {{ __('No :rank in most active GitHub users in Malaysia', ['rank' => $rank]) }}
+                            </a>
+                        @endif
+                    </div>
+                </div>
+
+                <div
+                    class="rounded-lg bg-gray-50 px-5 py-8 text-gray-800 shadow-lg transition duration-300 hover:scale-110 dark:bg-gray-800">
+                    <div class="mb-10 w-full">
+                        <p class="pb-3 text-center text-2xl text-black dark:text-white">{{ __('Get in touch') }}</p>
+                        <div class="space-x-4 space-y-2">
+                            <p></p>
+                            <p class="text-gray-600 dark:text-gray-200">
+                                <svg class="inline fill-current text-blue-600" viewBox="0 0 512 512" width="35"
+                                     height="35">
+                                    <path xmlns="http://www.w3.org/2000/svg"
+                                          d="M256 32C132.3 32 32 134.9 32 261.7c0 101.5 64.2 187.5 153.2 217.9a17.56 17.56 0 003.8.4c8.3 0 11.5-6.1 11.5-11.4 0-5.5-.2-19.9-.3-39.1a102.4 102.4 0 01-22.6 2.7c-43.1 0-52.9-33.5-52.9-33.5-10.2-26.5-24.9-33.6-24.9-33.6-19.5-13.7-.1-14.1 1.4-14.1h.1c22.5 2 34.3 23.8 34.3 23.8 11.2 19.6 26.2 25.1 39.6 25.1a63 63 0 0025.6-6c2-14.8 7.8-24.9 14.2-30.7-49.7-5.8-102-25.5-102-113.5 0-25.1 8.7-45.6 23-61.6-2.3-5.8-10-29.2 2.2-60.8a18.64 18.64 0 015-.5c8.1 0 26.4 3.1 56.6 24.1a208.21 208.21 0 01112.2 0c30.2-21 48.5-24.1 56.6-24.1a18.64 18.64 0 015 .5c12.2 31.6 4.5 55 2.2 60.8 14.3 16.1 23 36.6 23 61.6 0 88.2-52.4 107.6-102.3 113.3 8 7.1 15.2 21.1 15.2 42.5 0 30.7-.3 55.5-.3 63 0 5.4 3.1 11.5 11.4 11.5a19.35 19.35 0 004-.4C415.9 449.2 480 363.1 480 261.7 480 134.9 379.7 32 256 32z"/>
+                                </svg>
+                                <a class="text-lg underline" rel="noreferrer" target="_blank"
+                                   aria-label="My Github Profile"
+                                   href="https://www.github.com/chengkangzai">@chengkangzai</a>
+                            </p>
+                            <p class="text-gray-600 dark:text-gray-200">
+                                <svg class="inline fill-current text-blue-600" viewBox="0 0 512 512" width="35"
+                                     height="35">
+                                    <path
+                                        d="M444.17,32H70.28C49.85,32,32,46.7,32,66.89V441.61C32,461.91,49.85,480,70.28,480H444.06C464.6,480,480,461.79,480,441.61V66.89C480.12,46.7,464.6,32,444.17,32ZM170.87,405.43H106.69V205.88h64.18ZM141,175.54h-.46c-20.54,0-33.84-15.29-33.84-34.43,0-19.49,13.65-34.42,34.65-34.42s33.85,14.82,34.31,34.42C175.65,160.25,162.35,175.54,141,175.54ZM405.43,405.43H341.25V296.32c0-26.14-9.34-44-32.56-44-17.74,0-28.24,12-32.91,23.69-1.75,4.2-2.22,9.92-2.22,15.76V405.43H209.38V205.88h64.18v27.77c9.34-13.3,23.93-32.44,57.88-32.44,42.13,0,74,27.77,74,87.64Z"/>
+                                </svg>
+                                <a class="text-lg underline" rel="noreferrer" target="_blank"
+                                   aria-label="My Linkedin Profile"
+                                   href="https://www.linkedin.com/in/chingchengkang/">Ching Cheng Kang</a>
+                            </p>
+                            <p class="text-gray-600 dark:text-gray-200">
+                                <svg class="inline fill-current text-blue-600" viewBox="0 0 512 512" width="35"
+                                     height="35">
+                                    <path
+                                        d="M496,109.5a201.8,201.8,0,0,1-56.55,15.3,97.51,97.51,0,0,0,43.33-53.6,197.74,197.74,0,0,1-62.56,23.5A99.14,99.14,0,0,0,348.31,64c-54.42,0-98.46,43.4-98.46,96.9a93.21,93.21,0,0,0,2.54,22.1,280.7,280.7,0,0,1-203-101.3A95.69,95.69,0,0,0,36,130.4C36,164,53.53,193.7,80,211.1A97.5,97.5,0,0,1,35.22,199v1.2c0,47,34,86.1,79,95a100.76,100.76,0,0,1-25.94,3.4,94.38,94.38,0,0,1-18.51-1.8c12.51,38.5,48.92,66.5,92.05,67.3A199.59,199.59,0,0,1,39.5,405.6,203,203,0,0,1,16,404.2,278.68,278.68,0,0,0,166.74,448c181.36,0,280.44-147.7,280.44-275.8,0-4.2-.11-8.4-.31-12.5A198.48,198.48,0,0,0,496,109.5Z"/>
+                                </svg>
+                                <a class="text-lg underline" rel="noreferrer" target="_blank"
+                                   aria-label="My Twitter Account"
+                                   href="https://twitter.com/chengkangzai">@chengkangzai</a>
+                            </p>
+                            <p class="text-gray-600 dark:text-gray-200">
+                                <svg fill="none" class="inline text-blue-600" viewBox="0 0 24 24" width="35"
+                                     height="35" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                          d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                </svg>
+                                <a class="text-lg underline" rel="noreferrer" target="_blank" aria-label="Contact me !"
+                                   href="mailto:hi@chengkangzai.com">hi@chengkangzai.com</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        @if ($projects->isNotEmpty())
+            <section class="mx-auto flex w-full flex-wrap pb-20 dark:text-white" id="work">
+                <div class="w-full">
+                    <a href="#work"
+                       class="mb-2 block text-center text-2xl font-black text-black md:text-2xl lg:text-3xl dark:text-white">
+                        {{ __('These are some of my Work') }} :3 </a>
+                </div>
+
+                <div class="grid place-items-stretch gap-8 pb-8 md:grid-cols-3">
+                    @foreach ($projects as $project)
+                        <div
+                            class="flex flex-col gap-2 rounded-lg bg-gray-50 p-4 text-gray-800 shadow-lg transition duration-300 hover:scale-110 dark:bg-gray-800">
+                            <a href="{{ $project->url ?? '#' }}" target="_blank" rel="noreferrer"
+                               aria-label="Link to open {{ $project->name }}">
+                                <img src="{{ $project->getFirstMediaUrl('thumbnail') ?? '#' }}" alt="{{ __('Image for the work') }}"
+                                     loading="lazy" class="h-72 w-full rounded-lg object-cover">
+                            </a>
+                            <h2 class="title-font mb-2 text-2xl font-bold dark:text-white">{{ $project->name }} </h2>
+                            <p class="text-base leading-relaxed dark:text-white">{{ $project->description }}</p>
+                            <div
+                                class="my-4 flex w-full items-start space-x-2 text-center leading-none text-blue-700 dark:text-blue-400">
+                                @if ($project->url)
+                                    <a rel="noopener" target="_blank" href="{{ $project->url }}"
+                                       aria-label="Link to open {{ $project->name }}">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                                             viewBox="0 0 24 24" class="fill-current dark:text-blue-400">
+                                            <path
+                                                d="M16.36,14C16.44,13.34 16.5,12.68 16.5,12C16.5,11.32 16.44,10.66 16.36,10H19.74C19.9,10.64 20,11.31 20,12C20,12.69 19.9,13.36 19.74,14M14.59,19.56C15.19,18.45 15.65,17.25 15.97,16H18.92C17.96,17.65 16.43,18.93 14.59,19.56M14.34,14H9.66C9.56,13.34 9.5,12.68 9.5,12C9.5,11.32 9.56,10.65 9.66,10H14.34C14.43,10.65 14.5,11.32 14.5,12C14.5,12.68 14.43,13.34 14.34,14M12,19.96C11.17,18.76 10.5,17.43 10.09,16H13.91C13.5,17.43 12.83,18.76 12,19.96M8,8H5.08C6.03,6.34 7.57,5.06 9.4,4.44C8.8,5.55 8.35,6.75 8,8M5.08,16H8C8.35,17.25 8.8,18.45 9.4,19.56C7.57,18.93 6.03,17.65 5.08,16M4.26,14C4.1,13.36 4,12.69 4,12C4,11.31 4.1,10.64 4.26,10H7.64C7.56,10.66 7.5,11.32 7.5,12C7.5,12.68 7.56,13.34 7.64,14M12,4.03C12.83,5.23 13.5,6.57 13.91,8H10.09C10.5,6.57 11.17,5.23 12,4.03M18.92,8H15.97C15.65,6.75 15.19,5.55 14.59,4.44C16.43,5.07 17.96,6.34 18.92,8M12,2C6.47,2 2,6.5 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z">
+                                            </path>
+                                        </svg>
+                                    </a>
+                                @endif
+                                @if ($project->github_url)
+                                    <a href="{{ $project->github_url }}" rel="noopener" target="_blank"
+                                       aria-label="Link to open Project Repository">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                                             viewBox="0 0 24 24" class="fill-current dark:text-white">
+                                            <path
+                                                d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z">
+                                            </path>
+                                        </svg>
+                                    </a>
+                                @endif
+                            </div>
+                            @if ($project->tags->count() !== 0)
+                                <div class="my-4 flex w-full items-start text-center leading-none dark:text-white">
+                                    <span class="inline">
+                                        {{ __('Build with') }}
+                                        {{ $project->tags->map->name->join(', ') }}
+                                    </span>
+                                </div>
+                            @endif
+                        </div>
+                    @endforeach
+                </div>
+            </section>
+        @endif
+
+        <section class="hidden md:block md:py-32" id="experience">
+            <div id="roadmap" class="container mx-auto flex-wrap rounded-lg bg-gray-50 dark:bg-gray-800">
+                <a href="#experience"
+                   class="mb-2 block py-12 text-center text-2xl font-black text-black md:text-2xl lg:text-3xl dark:text-white">
+                    {{ __('My Experiences') }}
+                </a>
+                <hr>
+                <div class="wrap relative h-full overflow-hidden p-10">
+                    <div class="border-2-2 absolute h-full border border-gray-700 border-opacity-20 dark:border-white"
+                         style="left: 50%"></div>
+                    <div class="right-timeline mb-8 flex w-full items-center justify-between">
+                        <div class="order-1 w-5/12"></div>
+                        <div
+                            class="z-20 order-1 flex h-8 w-8 items-center rounded-full bg-gray-600 shadow-xl transition duration-300 hover:scale-125 dark:bg-gray-100">
+                            <p class="mx-auto text-lg font-semibold text-white dark:text-black">1</p>
+                        </div>
+                        <div
+                            class="order-1 w-5/12 rounded-lg bg-blue-700 px-6 py-4 shadow-xl transition duration-300 hover:scale-110">
+                            <h3 class="mb-3 text-xl font-bold text-white">
+                                {{ __('Persuade Study in') }}
+                                <a class="underline" rel="noreferrer" target="_blank" href="https://www.apu.edu.my/">
+                                    {{ __('Asia Pacific University') }}
+                                </a>
+                            </h3>
+                            <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
+                                {{ __('Major :') }}
+                                <a href="https://www.apu.edu.my/our-courses/pre-university-studies/diploma-programmes/diploma-information-communication-technology"
+                                   class="underline" rel="noreferrer" target="_blank">
+                                    {{ __('Diploma in Information Technology with a specialism in Software Engineering') }}
+                                </a>
+                            </p>
+                            <p class="pt-2 text-sm leading-snug tracking-wide text-white">
+                                {{ Carbon\Carbon::parse('2018-05-01')->translatedFormat('F Y') }}
+                            </p>
+
+                        </div>
+                    </div>
+
+                    <div class="left-timeline mb-8 flex w-full flex-row-reverse items-center justify-between">
+                        <div class="order-1 w-5/12"></div>
+                        <div
+                            class="z-20 order-1 flex h-8 w-8 items-center rounded-full bg-gray-800 shadow-xl transition duration-300 hover:scale-125 dark:bg-gray-100">
+                            <p class="mx-auto text-lg font-semibold text-white dark:text-black">2</p>
+                        </div>
+                        <div
+                            class="order-1 w-5/12 rounded-lg bg-indigo-600 px-6 py-4 shadow-xl transition duration-300 hover:scale-110">
+                            <h3 class="mb-3 text-xl font-bold text-white">{{ __('Technical Assistant in APU') }}</h3>
+                            <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
+                                -
+                                {{ __('Setting up and maintaining equipment and technology in classrooms, labs, and other facilities') }}
+                            </p>
+                            <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
+                                -
+                                {{ __('Troubleshooting technical problems and providing technical support to faculty, students, and staff') }}
+                            </p>
+                            <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
+                                - {{ __('Managing and maintaining the university\'s computer and network systems') }}
+                            </p>
+                            <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
+                                -
+                                {{ __('Coordinating and scheduling maintenance and repairs of equipment and technology') }}
+                            </p>
+                            <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
+                                - {{ __('Maintaining inventory and ordering supplies as needed') }}
+                            </p>
+                            <p class="pt-2 text-sm leading-snug tracking-wide text-white">
+                                {{ Carbon\Carbon::parse('2018-12-01')->translatedFormat('F Y') }} -
+                                {{ Carbon\Carbon::parse('2021-11-01')->translatedFormat('F Y') }}
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="right-timeline mb-8 flex w-full items-center justify-between">
+                        <div class="order-1 w-5/12"></div>
+                        <div
+                            class="z-20 order-1 flex h-8 w-8 items-center rounded-full bg-gray-800 shadow-xl transition duration-300 hover:scale-125 dark:bg-gray-100">
+                            <p class="mx-auto text-lg font-semibold text-white dark:text-black">3</p>
+                        </div>
+                        <div
+                            class="order-1 w-5/12 rounded-lg bg-blue-600 px-6 py-4 shadow-xl transition duration-300 hover:scale-110">
+                            <h3 class="mb-3 text-xl font-bold text-white">
+                                {{ __('Technical Assistant') }}, {{ __('Head of Accommodation Team in APU') }}
+                            </h3>
+                            <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
+                                -
+                                {{ __('Led a team of technical assistants to provide support services to the university\'s accommodation unit.') }}
+                            </p>
+                            <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
+                                - {{ __('Work together with ISP\'s technician regarding network issue') }}
+                            </p>
+                            <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
+                                - {{ __('Ensure the network accessibility within the university campus') }}
+                            </p>
+                            <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
+                                -
+                                {{ __('Maintain, manage, and monitor technical facilities and infrastructure within the campus') }}
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="left-timeline mb-8 flex w-full flex-row-reverse items-center justify-between">
+                        <div class="order-1 w-5/12"></div>
+                        <div
+                            class="z-20 order-1 flex h-8 w-8 items-center rounded-full bg-gray-800 shadow-xl transition duration-300 hover:scale-125 dark:bg-gray-100">
+                            <p class="mx-auto text-lg font-semibold text-white dark:text-black">4</p>
+                        </div>
+                        <div
+                            class="order-1 w-5/12 rounded-lg bg-indigo-600 px-6 py-4 shadow-xl transition duration-300 hover:scale-110">
+                            <h3 class="mb-3 text-xl font-bold text-white">{{ __('Intern as Junior Web Developer in') }}
+                                <a href="https://strateqgroup.com/prs/" class="underline" rel="noreferrer"
+                                   target="_blank">
+                                    Strateq Group (PRS)
+                                </a>
+                            </h3>
+                            <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
+                                - {{ __('Successfully fixed the migration file for the company\'s internal application') }}
+                            </p>
+                            <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
+                                - {{ __('Improved the speed and efficiency of the bootstrap seeder using Laravel') }}
+                            </p>
+                            <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
+                                -
+                                {{ __('Troubleshooted and resolved multiple frontend issues within the in-house application') }}
+                                (<a href="https://strateqgroup.com/smart-managed-services/" class="underline"
+                                    rel="noreferrer" target="_blank">{{ __('SMART SD') }}</a>.)
+                            </p>
+                            <p class="pt-2 text-sm leading-snug tracking-wide text-white">
+                                {{ Carbon\Carbon::parse('2018-04-01')->translatedFormat('F Y') }} -
+                                {{ Carbon\Carbon::parse('2018-07-01')->translatedFormat('F Y') }}
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="right-timeline mb-8 flex w-full items-center justify-between">
+                        <div class="order-1 w-5/12"></div>
+                        <div
+                            class="z-20 order-1 flex h-8 w-8 items-center rounded-full bg-gray-800 shadow-xl transition duration-300 hover:scale-125 dark:bg-gray-100">
+                            <p class="mx-auto text-lg font-semibold text-white dark:text-black">5</p>
+                        </div>
+                        <div
+                            class="order-1 w-5/12 rounded-lg bg-blue-600 px-6 py-4 shadow-xl transition duration-300 hover:scale-110">
+                            <h3 class="mb-3 text-xl font-bold text-white">{{ __('Graduated from') }}
+                                <a class="underline" rel="noreferrer" target="_blank" href="https://www.apu.edu.my/">
+                                    {{ __('Asia Pacific University') }}</a>
+                            </h3>
+                            <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
+                                {{ __('Graduated from') }}
+                                <a href="https://www.apu.edu.my/our-courses/pre-university-studies/diploma-programmes/diploma-information-communication-technology"
+                                   class="underline" rel="noreferrer" target="_blank">
+                                    {{ __('Diploma in Information Technology with a specialism in Software Engineering') }}
+                                </a>
+                                <span>{{ __('with CGPA of', ['cgpa' => '3.47']) }}</span>
+                            </p>
+                            <small class="text-xs text-gray-100 line-through">
+                                {{ __('Only if i can round off to 4.0') }}
+                            </small>
+                            <p class="pt-2 text-sm leading-snug tracking-wide text-white">
+                                {{ Carbon\Carbon::parse('2020-09-01')->translatedFormat('F Y') }}
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="left-timeline mb-8 flex w-full flex-row-reverse items-center justify-between">
+                        <div class="order-1 w-5/12"></div>
+                        <div
+                            class="z-20 order-1 flex h-8 w-8 items-center rounded-full bg-gray-800 shadow-xl transition duration-300 hover:scale-125 dark:bg-gray-100">
+                            <p class="mx-auto text-lg font-semibold text-white dark:text-black">6</p>
+                        </div>
+                        <div
+                            class="order-1 w-5/12 rounded-lg bg-indigo-600 px-6 py-4 shadow-xl transition duration-300 hover:scale-110">
+                            <h3 class="mb-3 text-xl font-bold text-white">{{ __('Continue to persuade study in') }}
+                                <a class="underline" rel="noreferrer" target="_blank" href="https://www.apu.edu.my/">
+                                    {{ __('Asia Pacific University') }}
+                                </a>
+                            </h3>
+                            <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
+                                {{ __('Major :') }}
+                                <a href="https://www.apu.edu.my/our-courses/undergraduate-studies/school-computing-technology/bsc-hons-software-engineering"
+                                   class="underline" rel="noreferrer" target="_blank">
+                                    {{ __('BSc (Hons) in Software Engineering') }} </a>
+                            </p>
+                            <p class="pt-2 text-sm leading-snug tracking-wide text-white">
+                                {{ Carbon\Carbon::parse('2020-09-01')->translatedFormat('F Y') }}
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="right-timeline mb-8 flex w-full items-center justify-between">
+                        <div class="order-1 w-5/12"></div>
+                        <div
+                            class="z-20 order-1 flex h-8 w-8 items-center rounded-full bg-gray-800 shadow-xl transition duration-300 hover:scale-125 dark:bg-gray-100">
+                            <p class="mx-auto text-lg font-semibold text-white dark:text-black">7</p>
+                        </div>
+                        <div
+                            class="order-1 w-5/12 rounded-lg bg-blue-600 px-6 py-4 shadow-xl transition duration-300 hover:scale-110">
+                            <h3 class="mb-3 text-xl font-bold text-white">{{ __('Internship at') }}
+                                <a class="underline" href="https://www.mysoftinn.com/" rel="noreferrer" target="_blank">
+                                    Softinn Solutions
+                                </a>
+                            </h3>
+                            <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
+                                {{ __('As a intern, I was responsible for the development of the in house Custom Content Management(CMS) System and various Hotel Website of the company with the use of .NET and .NET Core technology.') }}
+                            </p>
+                            <p class="pt-2 text-sm leading-snug tracking-wide text-white">
+                                {{ \Carbon\Carbon::parse('2021-07-01')->translatedFormat('F Y') }} -
+                                {{ \Carbon\Carbon::parse('2021-11-01')->translatedFormat('F Y') }}
+                            </p>
+                        </div>
+
+
+                    </div>
+                    <div class="left-timeline mb-8 flex w-full flex-row-reverse items-center justify-between">
+                        <div class="order-1 w-5/12"></div>
+                        <div
+                            class="z-20 order-1 flex h-8 w-8 items-center rounded-full bg-gray-800 shadow-xl transition duration-300 hover:scale-125 dark:bg-gray-100">
+                            <p class="mx-auto text-lg font-semibold text-white dark:text-black">8</p>
+                        </div>
+                        <div
+                            class="order-1 w-5/12 rounded-lg bg-blue-600 px-6 py-4 shadow-xl transition duration-300 hover:scale-110">
+                            <h3 class="mb-3 text-xl font-bold text-white">{{ __('Graduated from') }}
+                                <a class="underline" rel="noreferrer" target="_blank" href="https://www.apu.edu.my/">
+                                    {{ __('Asia Pacific University') }}
+                                </a>
+                            </h3>
+                            <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
+                                {{ __('Major :') }}
+                                <a href="https://www.apu.edu.my/our-courses/pre-university-studies/diploma-programmes/diploma-information-communication-technology"
+                                   class="underline" rel="noreferrer" target="_blank">
+                                    {{ __('BSc (Hons) in Software Engineering') }}
+                                </a>
+                                {{ __('with CGPA of', ['cgpa' => '3.56']) }}
+                            </p>
+                            <p class="pt-2 text-sm leading-snug tracking-wide text-white">
+                                {{ Carbon\Carbon::parse('2022-10-01')->translatedFormat('F Y') }}
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="mb-8 flex w-full items-center justify-between">
+                        <div class="order-1 w-5/12"></div>
+                        <div
+                            class="z-20 order-1 flex h-8 w-8 items-center rounded-full bg-gray-800 shadow-xl transition duration-300 hover:scale-125 dark:bg-gray-100">
+                            <p class="mx-auto text-lg font-semibold text-white dark:text-black">9</p>
+                        </div>
+                        <div
+                            class="order-1 w-5/12 rounded-lg bg-blue-600 px-6 py-4 shadow-xl transition duration-300 hover:scale-110">
+                            <h3 class="mb-3 text-xl font-bold text-white">
+                                {{ __('Chief Technology Officer at') }}
+                                <a class="underline" rel="noreferrer" target="_blank" href="https://pixalink.io/">
+                                    {{ __('Pixalink') }}
+                                </a>
+                            </h3>
+                            <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
+                                - {{ __('Responsible for the overall technology strategy and execution.') }}
+                            </p>
+                            <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
+                                - {{ __('Driving innovation and staying ahead of technological trends in the company.') }}
+                            </p>
+                            <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
+                                -
+                                {{ __('Closely with the CEO and other senior executives to identify and implement new technologies that give the company a competitive edge.') }}
+                            </p>
+                            <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
+                                -
+                                {{ __('Involved in fundraising and building partnerships with other companies or organizations.') }}
+                            </p>
+                            <p class="pt-2 text-sm leading-snug tracking-wide text-white">
+                                {{ Carbon\Carbon::parse('2022-10-01')->translatedFormat('F Y') }}
+                                - {{ __('Present') }}
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+@endsection
+
+@push('script')
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        const string = [
+            '{{ __('Laravel Developer') }}',
+            @if ($rank >= 1)
+                '{{ __('No x in most active GitHub users in Malaysia', ['rank' => $rank]) }}',
+            @endif
+                '{{ __('Fullstack Developer') }}',
+            '{{ __('Web Developer') }}',
+            '{{ __('Firebase Developer') }}',
+            '{{ __('Self-learner') }}'
+        ];
+        new Typed('#typed', {
+            strings: string,
+            typeSpeed: 40,
+            backSpeed: 60,
+            loop: true,
+            showCursor: false,
+            repeat: true,
+            backDelay: 1000,
+            startDelay: 1500,
+        });
+    </script>
+@endpush
+
+@section('footer')
+    @include('layouts.footer')
+@endsection

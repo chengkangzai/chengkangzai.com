@@ -14,7 +14,7 @@ return new class extends Migration
             $table->json('description');
             $table->string('github_url')->nullable();
             $table->string('url')->nullable();
-            $table->boolean('status')->default(1);
+            $table->boolean('is_active')->default(1);
             $table->softDeletes();
             $table->timestamps();
         });

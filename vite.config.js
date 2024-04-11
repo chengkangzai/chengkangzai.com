@@ -8,4 +8,6 @@ export default defineConfig({
             refresh: true,
         }),
     ],
+    valetTls: 'chengkangzai-v2.com.test', // [!tl add]
+    detectTls: 'chengkangzai-v2.com.test', // [!tl add]
 });

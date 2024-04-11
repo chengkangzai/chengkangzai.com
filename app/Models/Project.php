@@ -23,13 +23,13 @@ class Project extends Model implements HasMedia
         'description',
         'github_url',
         'url',
-        'status',
+        'is_active',
     ];
 
     protected function casts(): array
     {
         return [
-            'status' => 'boolean',
+            'is_active' => 'boolean',
         ];
     }
 
