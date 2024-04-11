@@ -10,7 +10,7 @@
     <link rel="manifest" href="/manifest.json">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <script src="//unpkg.com/alpinejs" defer></script>
-    @yield('pwa')
+    @yield('seo')
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script defer src="https://www.googletagmanager.com/gtag/js?id=G-G0TL352WKG"></script>
     <script defer>

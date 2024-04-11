@@ -2,10 +2,10 @@
 @php
 /** @var Project[] $projects */
 @endphp
+@extends('layouts.app')
 @section('seo')
     {!! seo()->for($SEOData) !!}
 @endsection
-@extends('layouts.app')
 @push('style')
     <style>
         html {
