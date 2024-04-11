@@ -6,8 +6,6 @@ use App\Models\Works;
 use App\Services\GetTopGithubCommitRankService;
 use Artesaos\SEOTools\Facades\SEOTools;
 use Carbon\Carbon;
-use Illuminate\Contracts\Foundation\Application;
-use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\Cache;
 
