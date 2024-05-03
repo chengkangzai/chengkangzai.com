@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\ProjectResource\Pages;
 use App\Models\Project;
+use Filament\Forms\Components\Actions\Action;
 use Filament\Forms\Components\MarkdownEditor;
 use Filament\Forms\Components\Placeholder;
 use Filament\Forms\Components\Section;
@@ -50,9 +51,21 @@ class ProjectResource extends Resource
                         ->required(),
 
                     TextInput::make('github_url')
+                        ->suffixActions([
+                            Action::make('preview')
+                                ->icon('heroicon-o-arrow-top-right-on-square')
+                                ->visible(fn(?string $state) => $state !== null)
+                                ->url(fn(?string $state) => $state)
+                        ])
                         ->url(),
 
                     TextInput::make('url')
+                        ->suffixActions([
+                            Action::make('preview')
+                                ->icon('heroicon-o-arrow-top-right-on-square')
+                                ->visible(fn(?string $state) => $state !== null)
+                                ->url(fn(?string $state) => $state)
+                        ])
                         ->url(),
                     SpatieMediaLibraryFileUpload::make('thumbnail')
                         ->required()
