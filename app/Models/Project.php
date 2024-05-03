@@ -26,6 +26,7 @@ class Project extends Model implements HasMedia
         'github_url',
         'url',
         'is_active',
+        'sort',
     ];
 
     protected function casts(): array

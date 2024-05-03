@@ -18,6 +18,7 @@ class ProjectFactory extends Factory
             'github_url' => $this->faker->url(),
             'url' => $this->faker->url(),
             'is_active' => $this->faker->boolean(),
+            'sort'=> $this->faker->numberBetween(1, 10),
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
         ];

@@ -111,14 +111,18 @@ class ProjectResource extends Resource
 
                 TextColumn::make('github_url')
                     ->toggleable()
+                    ->toggledHiddenByDefault()
                     ->url(fn(?string $state) => $state, true),
 
                 TextColumn::make('url')
                     ->toggleable()
+                    ->toggledHiddenByDefault()
                     ->url(fn(?string $state) => $state, true),
 
                 ToggleColumn::make('is_active'),
             ])
+            ->reorderable('sort')
+            ->defaultSort('sort')
             ->filters([
                 TrashedFilter::make(),
             ])
