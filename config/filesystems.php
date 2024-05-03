@@ -36,6 +36,12 @@ return [
             'throw' => false,
         ],
 
+        'local-seed' => [
+            'driver' => 'local',
+            'root' => storage_path('seed'),
+            'throw' => false,
+        ],
+
         'public' => [
             'driver' => 'local',
             'root' => storage_path('app/public'),

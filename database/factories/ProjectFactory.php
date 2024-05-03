@@ -18,9 +18,21 @@ class ProjectFactory extends Factory
             'github_url' => $this->faker->url(),
             'url' => $this->faker->url(),
             'is_active' => $this->faker->boolean(),
-            'sort'=> $this->faker->numberBetween(1, 10),
+            'sort' => Project::count(),
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
         ];
+    }
+
+    public function configure(): ProjectFactory
+    {
+        return $this->afterCreating(function (Project $project) {
+            if ($project->tags()->count() === 0) {
+                $project->attachTags(['tag1', 'tag2']);
+            }
+
+            $project->addMediaFromUrl('https://via.placeholder.com/150')
+                ->toMediaCollection('thumbnail');
+        });
     }
 }

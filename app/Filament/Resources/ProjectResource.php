@@ -109,6 +109,9 @@ class ProjectResource extends Resource
                     ->limit(30)
                     ->tooltip(fn(?string $state) => $state),
 
+                TextColumn::make('tags.name')
+                    ->badge(),
+
                 TextColumn::make('github_url')
                     ->toggleable()
                     ->toggledHiddenByDefault()
