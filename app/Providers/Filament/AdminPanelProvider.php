@@ -26,6 +26,7 @@ class AdminPanelProvider extends PanelProvider
     {
         return $panel
             ->default()
+            ->homeUrl('/')
             ->id('admin')
             ->path('admin')
             ->login()
