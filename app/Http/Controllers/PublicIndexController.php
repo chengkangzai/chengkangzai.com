@@ -25,4 +25,9 @@ class PublicIndexController
             ),
         ]);
     }
+
+    public function card()
+    {
+        return view('card');
+    }
 }
