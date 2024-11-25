@@ -6,6 +6,7 @@ use App\Models\Project;
 use App\Services\GetTopGithubCommitRankService;
 use Carbon\Carbon;
 use Illuminate\Contracts\View\View;
+use Illuminate\Support\Facades\Storage;
 use RalphJSmit\Laravel\SEO\Support\SEOData;
 
 class PublicIndexController
@@ -29,5 +30,16 @@ class PublicIndexController
     public function card()
     {
         return view('card');
+    }
+
+    public function resume()
+    {
+        $path = 'resume.pdf';
+
+        if (!Storage::disk('public')->exists($path)) {
+            abort(404);
+        }
+
+        return Storage::disk('public')->download($path);
     }
 }
