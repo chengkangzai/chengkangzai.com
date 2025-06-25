@@ -138,16 +138,16 @@
                     </ul>
                     <ol x-show="!cn">
                         <li class="px-5 text-center text-gray-600 dark:text-gray-200">
-                            1. Facing the problem is the first matter of the business.
+                            1. Facing the problem is the first step.
                         </li>
                         <li class="px-5 text-center text-gray-600 dark:text-gray-200">
-                            2. When small problem is fixed, there will not have major problem.
+                            2. When small problems are fixed, there won't be major problems.
                         </li>
                         <li class="px-5 text-center text-gray-600 dark:text-gray-200">
-                            3. When all small problem are fixed, there will not have any problem.
+                            3. When all small problems are fixed, there won't be any problems.
                         </li>
                         <li class="px-5 text-center text-gray-600 dark:text-gray-200">
-                            4. If you don't settle the problem, the problem will try to settle you.
+                            4. If you don't solve the problem, the problem will solve you.
                         </li>
                     </ol>
                     <div class="-mt-3 h-3 text-right text-3xl leading-tight text-indigo-500">”</div>
@@ -232,7 +232,7 @@
                 <div class="w-full">
                     <a href="#work"
                        class="mb-2 block text-center text-2xl font-black text-black md:text-2xl lg:text-3xl dark:text-white">
-                        {{ __('These are some of my Work') }} :3 </a>
+                        {{ __('These are some of my Work') }}</a>
                 </div>
 
                 <div class="grid place-items-stretch gap-8 pb-8 md:grid-cols-3">
@@ -547,7 +547,7 @@
                             </p>
                             <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
                                 -
-                                {{ __('Closely with the CEO and other senior executives to identify and implement new technologies that give the company a competitive edge.') }}
+                                {{ __('Working closely with the CEO and other senior executives to identify and implement new technologies that give the company a competitive edge.') }}
                             </p>
                             <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
                                 -
