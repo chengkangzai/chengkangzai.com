@@ -197,7 +197,8 @@
                         {{ __('What I believe in') }}
                     </h3>
                     <div class="h-3 text-left text-3xl leading-tight text-indigo-500">“</div>
-                    <ul x-show="cn" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 transform scale-95" x-transition:enter-end="opacity-100 transform scale-100" x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100 transform scale-100" x-transition:leave-end="opacity-0 transform scale-95">
+                    <div class="relative min-h-[140px]">
+                        <ul x-show="cn" x-transition:enter="transition ease-out duration-300 delay-150" x-transition:enter-start="opacity-0 transform scale-95" x-transition:enter-end="opacity-100 transform scale-100" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 transform scale-100" x-transition:leave-end="opacity-0 transform scale-95" class="absolute inset-0">
                         <li class="px-5 text-center text-gray-600 dark:text-gray-200 leading-relaxed">
                             1. 面对问题是解决问题的第一步。
                         </li>
@@ -210,8 +211,8 @@
                         <li class="px-5 text-center text-gray-600 dark:text-gray-200 leading-relaxed">
                             4. 你不解决问题，问题会解决你。
                         </li>
-                    </ul>
-                    <ol x-show="!cn" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 transform scale-95" x-transition:enter-end="opacity-100 transform scale-100" x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100 transform scale-100" x-transition:leave-end="opacity-0 transform scale-95">
+                        </ul>
+                        <ol x-show="!cn" x-transition:enter="transition ease-out duration-300 delay-150" x-transition:enter-start="opacity-0 transform scale-95" x-transition:enter-end="opacity-100 transform scale-100" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 transform scale-100" x-transition:leave-end="opacity-0 transform scale-95" class="absolute inset-0">
                         <li class="px-5 text-center text-gray-600 dark:text-gray-200 leading-relaxed">
                             1. Facing the problem is the first step.
                         </li>
@@ -224,12 +225,15 @@
                         <li class="px-5 text-center text-gray-600 dark:text-gray-200 leading-relaxed">
                             4. If you don't solve the problem, the problem will solve you.
                         </li>
-                    </ol>
+                        </ol>
+                    </div>
                     <div class="-mt-3 h-3 text-right text-3xl leading-tight text-indigo-500">”</div>
-                    <p class="text-md text-center font-bold text-indigo-700 dark:text-indigo-400" x-show="cn" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 transform translate-y-2" x-transition:enter-end="opacity-100 transform translate-y-0" x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100 transform translate-y-0" x-transition:leave-end="opacity-0 transform translate-y-2">
-                        柯文哲</p>
-                    <p class="text-md text-center font-bold text-indigo-700 dark:text-indigo-400" x-show="!cn" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 transform translate-y-2" x-transition:enter-end="opacity-100 transform translate-y-0" x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100 transform translate-y-0" x-transition:leave-end="opacity-0 transform translate-y-2">
-                        Ko Wen-Je</p>
+                    <div class="relative h-6">
+                        <p class="text-md text-center font-bold text-indigo-700 dark:text-indigo-400 absolute inset-0" x-show="cn" x-transition:enter="transition ease-out duration-300 delay-150" x-transition:enter-start="opacity-0 transform translate-y-2" x-transition:enter-end="opacity-100 transform translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 transform translate-y-0" x-transition:leave-end="opacity-0 transform translate-y-2">
+                            柯文哲</p>
+                        <p class="text-md text-center font-bold text-indigo-700 dark:text-indigo-400 absolute inset-0" x-show="!cn" x-transition:enter="transition ease-out duration-300 delay-150" x-transition:enter-start="opacity-0 transform translate-y-2" x-transition:enter-end="opacity-100 transform translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 transform translate-y-0" x-transition:leave-end="opacity-0 transform translate-y-2">
+                            Ko Wen-Je</p>
+                    </div>
                     <p class="text-center text-xs text-gray-700 dark:text-gray-400">@KP_Taipei</p>
                 </div>
 
