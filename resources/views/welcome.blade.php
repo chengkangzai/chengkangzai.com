@@ -193,11 +193,16 @@
                             </svg>
                         </div>
                     </div>
-                    <h3 class="pb-4 text-center text-2xl font-semibold leading-tight text-black dark:text-white">
-                        {{ __('What I believe in') }}
-                    </h3>
+                    <div class="relative pb-4 h-8">
+                        <h3 class="absolute inset-0 text-center text-2xl font-semibold leading-tight text-black dark:text-white" x-show="cn" x-transition:enter="transition ease-out duration-300 delay-150" x-transition:enter-start="opacity-0 transform translate-y-2" x-transition:enter-end="opacity-100 transform translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 transform translate-y-0" x-transition:leave-end="opacity-0 transform translate-y-2">
+                            我所相信的
+                        </h3>
+                        <h3 class="absolute inset-0 text-center text-2xl font-semibold leading-tight text-black dark:text-white" x-show="!cn" x-transition:enter="transition ease-out duration-300 delay-150" x-transition:enter-start="opacity-0 transform translate-y-2" x-transition:enter-end="opacity-100 transform translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 transform translate-y-0" x-transition:leave-end="opacity-0 transform translate-y-2">
+                            What I believe in
+                        </h3>
+                    </div>
                     <div class="h-3 text-left text-3xl leading-tight text-indigo-500">“</div>
-                    <div class="relative min-h-[140px]">
+                    <div class="relative min-h-[180px] mb-4">
                         <ul x-show="cn" x-transition:enter="transition ease-out duration-300 delay-150" x-transition:enter-start="opacity-0 transform scale-95" x-transition:enter-end="opacity-100 transform scale-100" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 transform scale-100" x-transition:leave-end="opacity-0 transform scale-95" class="absolute inset-0">
                         <li class="px-5 text-center text-gray-600 dark:text-gray-200 leading-relaxed">
                             1. 面对问题是解决问题的第一步。
@@ -228,7 +233,7 @@
                         </ol>
                     </div>
                     <div class="-mt-3 h-3 text-right text-3xl leading-tight text-indigo-500">”</div>
-                    <div class="relative h-6">
+                    <div class="relative h-8 mt-2">
                         <p class="text-md text-center font-bold text-indigo-700 dark:text-indigo-400 absolute inset-0" x-show="cn" x-transition:enter="transition ease-out duration-300 delay-150" x-transition:enter-start="opacity-0 transform translate-y-2" x-transition:enter-end="opacity-100 transform translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 transform translate-y-0" x-transition:leave-end="opacity-0 transform translate-y-2">
                             柯文哲</p>
                         <p class="text-md text-center font-bold text-indigo-700 dark:text-indigo-400 absolute inset-0" x-show="!cn" x-transition:enter="transition ease-out duration-300 delay-150" x-transition:enter-start="opacity-0 transform translate-y-2" x-transition:enter-end="opacity-100 transform translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 transform translate-y-0" x-transition:leave-end="opacity-0 transform translate-y-2">
@@ -281,48 +286,85 @@
                                 </svg>
                             </div>
                         </div>
-                        <h3 class="pb-4 text-center text-2xl font-semibold leading-tight text-black dark:text-white">{{ __('Get in touch') }}</h3>
-                        <div class="space-x-4 space-y-2">
-                            <p></p>
-                            <p class="text-gray-600 dark:text-gray-200 leading-relaxed">
-                                <svg class="inline fill-current text-blue-600" viewBox="0 0 512 512" width="35"
-                                     height="35">
-                                    <path xmlns="http://www.w3.org/2000/svg"
-                                          d="M256 32C132.3 32 32 134.9 32 261.7c0 101.5 64.2 187.5 153.2 217.9a17.56 17.56 0 003.8.4c8.3 0 11.5-6.1 11.5-11.4 0-5.5-.2-19.9-.3-39.1a102.4 102.4 0 01-22.6 2.7c-43.1 0-52.9-33.5-52.9-33.5-10.2-26.5-24.9-33.6-24.9-33.6-19.5-13.7-.1-14.1 1.4-14.1h.1c22.5 2 34.3 23.8 34.3 23.8 11.2 19.6 26.2 25.1 39.6 25.1a63 63 0 0025.6-6c2-14.8 7.8-24.9 14.2-30.7-49.7-5.8-102-25.5-102-113.5 0-25.1 8.7-45.6 23-61.6-2.3-5.8-10-29.2 2.2-60.8a18.64 18.64 0 015-.5c8.1 0 26.4 3.1 56.6 24.1a208.21 208.21 0 01112.2 0c30.2-21 48.5-24.1 56.6-24.1a18.64 18.64 0 015 .5c12.2 31.6 4.5 55 2.2 60.8 14.3 16.1 23 36.6 23 61.6 0 88.2-52.4 107.6-102.3 113.3 8 7.1 15.2 21.1 15.2 42.5 0 30.7-.3 55.5-.3 63 0 5.4 3.1 11.5 11.4 11.5a19.35 19.35 0 004-.4C415.9 449.2 480 363.1 480 261.7 480 134.9 379.7 32 256 32z"/>
+                        <h3 class="pb-6 text-center text-2xl font-semibold leading-tight text-black dark:text-white">{{ __('Get in touch') }}</h3>
+                        <div class="space-y-4">
+                            <!-- Email - Primary CTA -->
+                            <a href="mailto:hi@chengkangzai.com" 
+                               class="group flex items-center p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-800 hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-all duration-200 hover:scale-[1.02]"
+                               aria-label="Send me an email">
+                                <div class="flex items-center justify-center w-10 h-10 bg-blue-100 dark:bg-blue-800 rounded-full mr-4 group-hover:bg-blue-200 dark:group-hover:bg-blue-700 transition-colors">
+                                    <svg class="w-5 h-5 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                    </svg>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="text-sm font-medium text-blue-600 dark:text-blue-400">Email</div>
+                                    <div class="text-base text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">hi@chengkangzai.com</div>
+                                </div>
+                                <svg class="w-4 h-4 text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
                                 </svg>
-                                <a class="text-lg underline" rel="noreferrer" target="_blank"
-                                   aria-label="My Github Profile"
-                                   href="https://www.github.com/chengkangzai">@chengkangzai</a>
-                            </p>
-                            <p class="text-gray-600 dark:text-gray-200 leading-relaxed">
-                                <svg class="inline fill-current text-blue-600" viewBox="0 0 512 512" width="35"
-                                     height="35">
-                                    <path
-                                        d="M444.17,32H70.28C49.85,32,32,46.7,32,66.89V441.61C32,461.91,49.85,480,70.28,480H444.06C464.6,480,480,461.79,480,441.61V66.89C480.12,46.7,464.6,32,444.17,32ZM170.87,405.43H106.69V205.88h64.18ZM141,175.54h-.46c-20.54,0-33.84-15.29-33.84-34.43,0-19.49,13.65-34.42,34.65-34.42s33.85,14.82,34.31,34.42C175.65,160.25,162.35,175.54,141,175.54ZM405.43,405.43H341.25V296.32c0-26.14-9.34-44-32.56-44-17.74,0-28.24,12-32.91,23.69-1.75,4.2-2.22,9.92-2.22,15.76V405.43H209.38V205.88h64.18v27.77c9.34-13.3,23.93-32.44,57.88-32.44,42.13,0,74,27.77,74,87.64Z"/>
-                                </svg>
-                                <a class="text-lg underline" rel="noreferrer" target="_blank"
-                                   aria-label="My Linkedin Profile"
-                                   href="https://www.linkedin.com/in/chingchengkang/">Ching Cheng Kang</a>
-                            </p>
-                            <p class="text-gray-600 dark:text-gray-200 leading-relaxed">
-                                <svg class="inline fill-current text-blue-600" viewBox="0 0 512 512" width="35"
-                                     height="35">
-                                    <path
-                                        d="M496,109.5a201.8,201.8,0,0,1-56.55,15.3,97.51,97.51,0,0,0,43.33-53.6,197.74,197.74,0,0,1-62.56,23.5A99.14,99.14,0,0,0,348.31,64c-54.42,0-98.46,43.4-98.46,96.9a93.21,93.21,0,0,0,2.54,22.1,280.7,280.7,0,0,1-203-101.3A95.69,95.69,0,0,0,36,130.4C36,164,53.53,193.7,80,211.1A97.5,97.5,0,0,1,35.22,199v1.2c0,47,34,86.1,79,95a100.76,100.76,0,0,1-25.94,3.4,94.38,94.38,0,0,1-18.51-1.8c12.51,38.5,48.92,66.5,92.05,67.3A199.59,199.59,0,0,1,39.5,405.6,203,203,0,0,1,16,404.2,278.68,278.68,0,0,0,166.74,448c181.36,0,280.44-147.7,280.44-275.8,0-4.2-.11-8.4-.31-12.5A198.48,198.48,0,0,0,496,109.5Z"/>
-                                </svg>
-                                <a class="text-lg underline" rel="noreferrer" target="_blank"
-                                   aria-label="My Twitter Account"
-                                   href="https://twitter.com/chengkangzai">@chengkangzai</a>
-                            </p>
-                            <p class="text-gray-600 dark:text-gray-200 leading-relaxed">
-                                <svg fill="none" class="inline text-blue-600" viewBox="0 0 24 24" width="35"
-                                     height="35" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                          d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                                </svg>
-                                <a class="text-lg underline" rel="noreferrer" target="_blank" aria-label="Contact me !"
-                                   href="mailto:hi@chengkangzai.com">hi@chengkangzai.com</a>
-                            </p>
+                            </a>
+
+                            <!-- Social Links -->
+                            <div class="grid grid-cols-1 gap-3">
+                                <!-- GitHub -->
+                                <a href="https://www.github.com/chengkangzai" 
+                                   target="_blank" rel="noreferrer"
+                                   class="group flex items-center p-4 bg-gray-50 dark:bg-gray-800/50 rounded-lg border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700/50 transition-all duration-200 hover:scale-[1.02]"
+                                   aria-label="My GitHub Profile">
+                                    <div class="flex items-center justify-center w-10 h-10 bg-gray-100 dark:bg-gray-700 rounded-full mr-4 group-hover:bg-gray-200 dark:group-hover:bg-gray-600 transition-colors">
+                                        <svg class="w-5 h-5 text-gray-600 dark:text-gray-300" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                        </svg>
+                                    </div>
+                                    <div class="flex-1">
+                                        <div class="text-sm font-medium text-gray-600 dark:text-gray-400">GitHub</div>
+                                        <div class="text-base text-gray-900 dark:text-white group-hover:text-gray-700 dark:group-hover:text-gray-200 transition-colors">@chengkangzai</div>
+                                    </div>
+                                    <svg class="w-4 h-4 text-gray-400 group-hover:text-gray-600 dark:group-hover:text-gray-300 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                    </svg>
+                                </a>
+
+                                <!-- LinkedIn -->
+                                <a href="https://www.linkedin.com/in/chingchengkang/" 
+                                   target="_blank" rel="noreferrer"
+                                   class="group flex items-center p-4 bg-gray-50 dark:bg-gray-800/50 rounded-lg border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700/50 transition-all duration-200 hover:scale-[1.02]"
+                                   aria-label="My LinkedIn Profile">
+                                    <div class="flex items-center justify-center w-10 h-10 bg-blue-100 dark:bg-blue-900 rounded-full mr-4 group-hover:bg-blue-200 dark:group-hover:bg-blue-800 transition-colors">
+                                        <svg class="w-5 h-5 text-blue-600 dark:text-blue-400" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                        </svg>
+                                    </div>
+                                    <div class="flex-1">
+                                        <div class="text-sm font-medium text-gray-600 dark:text-gray-400">LinkedIn</div>
+                                        <div class="text-base text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">Ching Cheng Kang</div>
+                                    </div>
+                                    <svg class="w-4 h-4 text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                    </svg>
+                                </a>
+
+                                <!-- Twitter -->
+                                <a href="https://twitter.com/chengkangzai" 
+                                   target="_blank" rel="noreferrer"
+                                   class="group flex items-center p-4 bg-gray-50 dark:bg-gray-800/50 rounded-lg border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700/50 transition-all duration-200 hover:scale-[1.02]"
+                                   aria-label="My Twitter Account">
+                                    <div class="flex items-center justify-center w-10 h-10 bg-sky-100 dark:bg-sky-900 rounded-full mr-4 group-hover:bg-sky-200 dark:group-hover:bg-sky-800 transition-colors">
+                                        <svg class="w-5 h-5 text-sky-600 dark:text-sky-400" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                                        </svg>
+                                    </div>
+                                    <div class="flex-1">
+                                        <div class="text-sm font-medium text-gray-600 dark:text-gray-400">Twitter</div>
+                                        <div class="text-base text-gray-900 dark:text-white group-hover:text-sky-600 dark:group-hover:text-sky-400 transition-colors">@chengkangzai</div>
+                                    </div>
+                                    <svg class="w-4 h-4 text-gray-400 group-hover:text-sky-600 dark:group-hover:text-sky-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
