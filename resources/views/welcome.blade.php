@@ -65,8 +65,11 @@
                         {{ __('Hi, I am') }} <br> {{ __('Ching Cheng Kang') }} (CCK) <span class="wave">👋🏻</span>
                     </h1>
                     <div class="mb-3 sm:mb-0" style="min-height: 40px" data-aos="fade-up" data-aos-delay="200">
+                        <div id="typed-skeleton" class="animate-pulse">
+                            <div class="h-6 bg-gray-300 dark:bg-gray-600 rounded w-48 sm:w-64"></div>
+                        </div>
                         <span id="typed"
-                              class="inline-block text-left text-sm sm:text-lg leading-relaxed tracking-wide text-gray-600 dark:text-gray-200">
+                              class="inline-block text-left text-sm sm:text-lg leading-relaxed tracking-wide text-gray-600 dark:text-gray-200 hidden">
                             {{ __('Laravel Developer') }}
                         </span>
                     </div>
@@ -183,11 +186,18 @@
                             </svg>
                         </button>
                     </div>
+                    <div class="flex items-center justify-center mb-4">
+                        <div class="flex items-center justify-center w-12 h-12 bg-indigo-100 dark:bg-indigo-900 rounded-full">
+                            <svg class="w-6 h-6 text-indigo-600 dark:text-indigo-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
+                            </svg>
+                        </div>
+                    </div>
                     <h3 class="pb-4 text-center text-2xl font-semibold leading-tight text-black dark:text-white">
                         {{ __('What I believe in') }}
                     </h3>
                     <div class="h-3 text-left text-3xl leading-tight text-indigo-500">“</div>
-                    <ul x-show="cn">
+                    <ul x-show="cn" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 transform scale-95" x-transition:enter-end="opacity-100 transform scale-100" x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100 transform scale-100" x-transition:leave-end="opacity-0 transform scale-95">
                         <li class="px-5 text-center text-gray-600 dark:text-gray-200 leading-relaxed">
                             1. 面对问题是解决问题的第一步。
                         </li>
@@ -201,7 +211,7 @@
                             4. 你不解决问题，问题会解决你。
                         </li>
                     </ul>
-                    <ol x-show="!cn">
+                    <ol x-show="!cn" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 transform scale-95" x-transition:enter-end="opacity-100 transform scale-100" x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100 transform scale-100" x-transition:leave-end="opacity-0 transform scale-95">
                         <li class="px-5 text-center text-gray-600 dark:text-gray-200 leading-relaxed">
                             1. Facing the problem is the first step.
                         </li>
@@ -216,9 +226,9 @@
                         </li>
                     </ol>
                     <div class="-mt-3 h-3 text-right text-3xl leading-tight text-indigo-500">”</div>
-                    <p class="text-md text-center font-bold text-indigo-700 dark:text-indigo-400" x-show="cn">
+                    <p class="text-md text-center font-bold text-indigo-700 dark:text-indigo-400" x-show="cn" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 transform translate-y-2" x-transition:enter-end="opacity-100 transform translate-y-0" x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100 transform translate-y-0" x-transition:leave-end="opacity-0 transform translate-y-2">
                         柯文哲</p>
-                    <p class="text-md text-center font-bold text-indigo-700 dark:text-indigo-400" x-show="!cn">
+                    <p class="text-md text-center font-bold text-indigo-700 dark:text-indigo-400" x-show="!cn" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 transform translate-y-2" x-transition:enter-end="opacity-100 transform translate-y-0" x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100 transform translate-y-0" x-transition:leave-end="opacity-0 transform translate-y-2">
                         Ko Wen-Je</p>
                     <p class="text-center text-xs text-gray-700 dark:text-gray-400">@KP_Taipei</p>
                 </div>
@@ -228,6 +238,13 @@
                     data-aos="fade-up" data-aos-delay="200">
                     <div class="w-full text-center flex-grow flex flex-col justify-between">
                         <div>
+                            <div class="flex items-center justify-center mb-4">
+                                <div class="flex items-center justify-center w-12 h-12 bg-green-100 dark:bg-green-900 rounded-full">
+                                    <svg class="w-6 h-6 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+                                    </svg>
+                                </div>
+                            </div>
                             <h3 class="pb-4 text-center text-2xl font-semibold leading-tight text-black dark:text-white font-mono">$whoami</h3>
                             <p class="px-5 text-gray-600 dark:text-gray-200 leading-relaxed tracking-wide">
                                 {{ __("I'm :age-year-old Malaysian that passionate about making software that simplify people's life.", ['age' => \Carbon\Carbon::parse('1999-05-03')->age]) }}
@@ -236,7 +253,10 @@
                         
                         @if ($rank >= 1)
                             <div class="mt-6 pt-4 border-t border-gray-200 dark:border-gray-600">
-                                <a class="px-5 text-sm text-gray-500 underline dark:text-gray-400 leading-relaxed tracking-wide hover:text-gray-700 dark:hover:text-gray-200 transition-colors"
+                                <div id="github-rank-skeleton" class="animate-pulse px-5 hidden">
+                                    <div class="h-4 bg-gray-300 dark:bg-gray-600 rounded w-64"></div>
+                                </div>
+                                <a id="github-rank-content" class="px-5 text-sm text-gray-500 underline dark:text-gray-400 leading-relaxed tracking-wide hover:text-gray-700 dark:hover:text-gray-200 transition-colors"
                                    href="https://github.com/gayanvoice/top-github-users/blob/main/markdown/public_contributions/malaysia.md"
                                    aria-label="Link to Top Github User" rel="noreferrer">
                                     {{ __('No :rank in most active GitHub users in Malaysia', ['rank' => $rank]) }}
@@ -250,6 +270,13 @@
                     class="rounded-lg bg-gray-50 px-6 py-10 text-gray-800 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 dark:bg-gray-800 flex flex-col h-full"
                     data-aos="fade-left" data-aos-delay="200">
                     <div class="w-full flex-grow">
+                        <div class="flex items-center justify-center mb-4">
+                            <div class="flex items-center justify-center w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-full">
+                                <svg class="w-6 h-6 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+                                </svg>
+                            </div>
+                        </div>
                         <h3 class="pb-4 text-center text-2xl font-semibold leading-tight text-black dark:text-white">{{ __('Get in touch') }}</h3>
                         <div class="space-x-4 space-y-2">
                             <p></p>
@@ -677,6 +704,16 @@
             '{{ __('Firebase Developer') }}',
             '{{ __('Self-learner') }}'
         ];
+        // Show skeleton initially, hide after typed.js starts
+        const typedSkeleton = document.getElementById('typed-skeleton');
+        const typedElement = document.getElementById('typed');
+        
+        // Hide skeleton and show typed content when ready
+        setTimeout(() => {
+            if (typedSkeleton) typedSkeleton.style.display = 'none';
+            if (typedElement) typedElement.classList.remove('hidden');
+        }, 1500);
+
         new Typed('#typed', {
             strings: string,
             typeSpeed: 40,
