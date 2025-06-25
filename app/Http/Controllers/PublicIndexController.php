@@ -36,7 +36,7 @@ class PublicIndexController
     {
         $path = 'resume.pdf';
 
-        if (!Storage::disk('public')->exists($path)) {
+        if (! Storage::disk('public')->exists($path)) {
             abort(404);
         }
 

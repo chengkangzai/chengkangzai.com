@@ -73,11 +73,11 @@ class ProjectResource extends Resource
 
                 Placeholder::make('created_at')
                     ->label('Created Date')
-                    ->content(fn(?Project $record): string => $record?->created_at?->diffForHumans() ?? '-'),
+                    ->content(fn (?Project $record): string => $record?->created_at?->diffForHumans() ?? '-'),
 
                 Placeholder::make('updated_at')
                     ->label('Last Modified Date')
-                    ->content(fn(?Project $record): string => $record?->updated_at?->diffForHumans() ?? '-'),
+                    ->content(fn (?Project $record): string => $record?->updated_at?->diffForHumans() ?? '-'),
             ]);
     }
 
@@ -94,15 +94,15 @@ class ProjectResource extends Resource
 
                 TextColumn::make('description')
                     ->limit(30)
-                    ->tooltip(fn(?string $state) => $state),
+                    ->tooltip(fn (?string $state) => $state),
 
                 TextColumn::make('github_url')
                     ->toggleable()
-                    ->url(fn(?string $state) => $state, true),
+                    ->url(fn (?string $state) => $state, true),
 
                 TextColumn::make('url')
                     ->toggleable()
-                    ->url(fn(?string $state) => $state, true),
+                    ->url(fn (?string $state) => $state, true),
 
                 ToggleColumn::make('is_active'),
             ])
