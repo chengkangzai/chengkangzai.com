@@ -7,6 +7,7 @@
     {!! seo()->for($SEOData) !!}
 @endsection
 @push('style')
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
     <style>
         html {
             scroll-behavior: smooth;
@@ -59,19 +60,22 @@
             <div class="container mx-auto flex min-h-screen flex-col items-center px-5 md:flex-row lg:px-28">
                 <div
                     class="flex min-h-[40vh] sm:min-h-screen w-full flex-col items-center sm:items-start justify-start sm:justify-center py-16 sm:py-16 text-center sm:text-left lg:w-3/5 lg:flex-grow">
-                    <h1 class="title-font mb-4 sm:mb-8 text-3xl sm:text-5xl font-extrabold tracking-tight text-gray-900 lg:text-6xl dark:text-white">
+                    <h1 class="title-font mb-4 sm:mb-8 text-3xl sm:text-5xl font-extrabold tracking-tight text-gray-900 lg:text-6xl dark:text-white"
+                        data-aos="fade-up" data-aos-duration="1000">
                         {{ __('Hi, I am') }} <br> {{ __('Ching Cheng Kang') }} (CCK) <span class="wave">👋🏻</span>
                     </h1>
-                    <div class="mb-3 sm:mb-0" style="min-height: 40px">
+                    <div class="mb-3 sm:mb-0" style="min-height: 40px" data-aos="fade-up" data-aos-delay="200">
                         <span id="typed"
                               class="inline-block text-left text-sm sm:text-lg leading-relaxed tracking-wide text-gray-600 dark:text-gray-200">
                             {{ __('Laravel Developer') }}
                         </span>
                     </div>
-                    <p class="mb-6 sm:mb-8 mt-1 sm:mt-2 w-full text-sm sm:text-base leading-relaxed tracking-wide text-gray-600 dark:text-gray-300">
+                    <p class="mb-6 sm:mb-8 mt-1 sm:mt-2 w-full text-sm sm:text-base leading-relaxed tracking-wide text-gray-600 dark:text-gray-300"
+                       data-aos="fade-up" data-aos-delay="200">
                         ⚡️ {{ __('Fun fact: I convert Coffee to Code') }} ☕️
                     </p>
-                    <div class="flex flex-col sm:flex-row justify-center sm:justify-start space-y-3 sm:space-y-0 sm:space-x-3 w-full sm:w-auto">
+                    <div class="flex flex-col sm:flex-row justify-center sm:justify-start space-y-3 sm:space-y-0 sm:space-x-3 w-full sm:w-auto"
+                         data-aos="fade-up" data-aos-delay="200">
                         <a role="button" href="{{ asset('resume.pdf') }}"
                            class="focus:shadow-outline flex items-center justify-center rounded-lg bg-black px-4 sm:px-6 py-2 text-sm sm:text-base font-semibold text-white ring-black ring-offset-2 ring-offset-current transition duration-300 ease-in-out hover:bg-gray-800 hover:to-black focus:outline-none focus:ring-2 dark:bg-white dark:text-black dark:hover:bg-gray-200 dark:hover:to-white">
                             {{ __('SEE MY RESUME') }}
@@ -94,7 +98,7 @@
                     </div>
                 </div>
                 <div class="w-full sm:w-1/2 lg:w-5/6 lg:max-w-lg px-4 sm:px-0 mt-8 sm:mt-0">
-                    <div class="relative mx-auto w-4/5 sm:w-full lg:w-4/5 group">
+                    <div class="relative mx-auto w-4/5 sm:w-full lg:w-4/5 group" data-aos="zoom-in" data-aos-delay="200">
                         <!-- Animated background gradient -->
                         <div class="absolute -inset-2 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl blur opacity-20 sm:opacity-30 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
                         
@@ -158,13 +162,15 @@
         </section>
 
         <section id="about-me" class="mx-2 md:mx-auto md:w-11/12 py-16 md:py-24">
-            <h2 class="mb-12 md:mb-16 text-center text-4xl md:text-5xl font-bold tracking-tight text-gray-900 dark:text-white">
+            <h2 class="mb-12 md:mb-16 text-center text-4xl md:text-5xl font-bold tracking-tight text-gray-900 dark:text-white"
+                data-aos="fade-up">
                 {{ __('About me') }}
             </h2>
             <div class="grid gap-8 md:gap-12 pb-8 md:grid-cols-3 md:h-auto">
                 <div
                     class="rounded-lg bg-gray-50 px-6 py-10 text-gray-800 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 dark:bg-gray-800 flex flex-col h-full"
-                    x-data="{ cn: true }">
+                    x-data="{ cn: true }"
+                    data-aos="fade-right" data-aos-delay="200">
                     <div class="flex justify-between items-start mb-2">
                         <div class="flex-1"></div>
                         <button title="{{ __('Click me to translate') }}"
@@ -218,7 +224,8 @@
                 </div>
 
                 <div
-                    class="rounded-lg bg-gray-50 px-6 py-10 text-gray-800 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 dark:bg-gray-800 flex flex-col h-full">
+                    class="rounded-lg bg-gray-50 px-6 py-10 text-gray-800 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 dark:bg-gray-800 flex flex-col h-full"
+                    data-aos="fade-up" data-aos-delay="200">
                     <div class="w-full text-center flex-grow flex flex-col justify-between">
                         <div>
                             <h3 class="pb-4 text-center text-2xl font-semibold leading-tight text-black dark:text-white font-mono">$whoami</h3>
@@ -240,7 +247,8 @@
                 </div>
 
                 <div
-                    class="rounded-lg bg-gray-50 px-6 py-10 text-gray-800 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 dark:bg-gray-800 flex flex-col h-full">
+                    class="rounded-lg bg-gray-50 px-6 py-10 text-gray-800 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 dark:bg-gray-800 flex flex-col h-full"
+                    data-aos="fade-left" data-aos-delay="200">
                     <div class="w-full flex-grow">
                         <h3 class="pb-4 text-center text-2xl font-semibold leading-tight text-black dark:text-white">{{ __('Get in touch') }}</h3>
                         <div class="space-x-4 space-y-2">
@@ -293,14 +301,16 @@
         @if ($projects->isNotEmpty())
             <section class="mx-auto flex w-full flex-wrap py-16 md:py-24 dark:text-white md:mx-auto md:w-11/12" id="work">
                 <div class="w-full">
-                    <h2 class="mb-12 md:mb-16 text-center text-4xl md:text-5xl font-bold tracking-tight text-gray-900 dark:text-white">
+                    <h2 class="mb-12 md:mb-16 text-center text-4xl md:text-5xl font-bold tracking-tight text-gray-900 dark:text-white"
+                        data-aos="fade-up">
                         {{ __('These are some of my Work') }}</h2>
                 </div>
 
                 <div class="grid place-items-stretch gap-8 md:gap-12 pb-8 md:grid-cols-3">
                     @foreach ($projects as $project)
                         <div
-                            class="flex flex-col gap-3 rounded-lg bg-gray-50 p-6 text-gray-800 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 dark:bg-gray-800">
+                            class="flex flex-col gap-3 rounded-lg bg-gray-50 p-6 text-gray-800 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 dark:bg-gray-800"
+                            data-aos="fade-up" data-aos-delay="{{ $loop->index * 100 }}">
                             <a href="{{ $project->url ?? '#' }}" target="_blank" rel="noreferrer"
                                aria-label="Link to open {{ $project->name }}">
                                 <img src="{{ $project->getFirstMediaUrl('thumbnail') ?? '#' }}" alt="{{ __('Image for the work') }}"
@@ -349,14 +359,16 @@
 
         <section class="hidden md:block py-16 md:py-24" id="experience">
             <div id="roadmap" class="container mx-auto flex-wrap rounded-lg bg-gray-50 dark:bg-gray-800">
-                <h2 class="mb-12 md:mb-16 py-12 text-center text-4xl md:text-5xl font-bold tracking-tight text-gray-900 dark:text-white">
+                <h2 class="mb-12 md:mb-16 py-12 text-center text-4xl md:text-5xl font-bold tracking-tight text-gray-900 dark:text-white"
+                    data-aos="fade-up">
                     {{ __('My Experiences') }}
                 </h2>
                 <hr>
                 <div class="wrap relative h-full overflow-hidden p-10">
                     <div class="border-2-2 absolute h-full border border-gray-700 border-opacity-20 dark:border-white"
                          style="left: 50%"></div>
-                    <div class="right-timeline mb-8 flex w-full items-center justify-between">
+                    <div class="right-timeline mb-8 flex w-full items-center justify-between"
+                         data-aos="fade-left" data-aos-delay="200">
                         <div class="order-1 w-5/12"></div>
                         <div
                             class="z-20 order-1 flex h-8 w-8 items-center rounded-full bg-gray-600 shadow-xl transition duration-300 hover:scale-125 dark:bg-gray-100">
@@ -384,7 +396,8 @@
                         </div>
                     </div>
 
-                    <div class="left-timeline mb-8 flex w-full flex-row-reverse items-center justify-between">
+                    <div class="left-timeline mb-8 flex w-full flex-row-reverse items-center justify-between"
+                         data-aos="fade-right" data-aos-delay="200">
                         <div class="order-1 w-5/12"></div>
                         <div
                             class="z-20 order-1 flex h-8 w-8 items-center rounded-full bg-gray-800 shadow-xl transition duration-300 hover:scale-125 dark:bg-gray-100">
@@ -418,7 +431,8 @@
                         </div>
                     </div>
 
-                    <div class="right-timeline mb-8 flex w-full items-center justify-between">
+                    <div class="right-timeline mb-8 flex w-full items-center justify-between"
+                         data-aos="fade-left" data-aos-delay="200">
                         <div class="order-1 w-5/12"></div>
                         <div
                             class="z-20 order-1 flex h-8 w-8 items-center rounded-full bg-gray-800 shadow-xl transition duration-300 hover:scale-125 dark:bg-gray-100">
@@ -446,7 +460,8 @@
                         </div>
                     </div>
 
-                    <div class="left-timeline mb-8 flex w-full flex-row-reverse items-center justify-between">
+                    <div class="left-timeline mb-8 flex w-full flex-row-reverse items-center justify-between"
+                         data-aos="fade-right" data-aos-delay="200">
                         <div class="order-1 w-5/12"></div>
                         <div
                             class="z-20 order-1 flex h-8 w-8 items-center rounded-full bg-gray-800 shadow-xl transition duration-300 hover:scale-125 dark:bg-gray-100">
@@ -479,7 +494,8 @@
                         </div>
                     </div>
 
-                    <div class="right-timeline mb-8 flex w-full items-center justify-between">
+                    <div class="right-timeline mb-8 flex w-full items-center justify-between"
+                         data-aos="fade-left" data-aos-delay="200">
                         <div class="order-1 w-5/12"></div>
                         <div
                             class="z-20 order-1 flex h-8 w-8 items-center rounded-full bg-gray-800 shadow-xl transition duration-300 hover:scale-125 dark:bg-gray-100">
@@ -509,7 +525,8 @@
 
                     </div>
 
-                    <div class="left-timeline mb-8 flex w-full flex-row-reverse items-center justify-between">
+                    <div class="left-timeline mb-8 flex w-full flex-row-reverse items-center justify-between"
+                         data-aos="fade-right" data-aos-delay="200">
                         <div class="order-1 w-5/12"></div>
                         <div
                             class="z-20 order-1 flex h-8 w-8 items-center rounded-full bg-gray-800 shadow-xl transition duration-300 hover:scale-125 dark:bg-gray-100">
@@ -534,7 +551,8 @@
                         </div>
                     </div>
 
-                    <div class="right-timeline mb-8 flex w-full items-center justify-between">
+                    <div class="right-timeline mb-8 flex w-full items-center justify-between"
+                         data-aos="fade-left" data-aos-delay="200">
                         <div class="order-1 w-5/12"></div>
                         <div
                             class="z-20 order-1 flex h-8 w-8 items-center rounded-full bg-gray-800 shadow-xl transition duration-300 hover:scale-125 dark:bg-gray-100">
@@ -558,7 +576,8 @@
 
 
                     </div>
-                    <div class="left-timeline mb-8 flex w-full flex-row-reverse items-center justify-between">
+                    <div class="left-timeline mb-8 flex w-full flex-row-reverse items-center justify-between"
+                         data-aos="fade-right" data-aos-delay="200">
                         <div class="order-1 w-5/12"></div>
                         <div
                             class="z-20 order-1 flex h-8 w-8 items-center rounded-full bg-gray-800 shadow-xl transition duration-300 hover:scale-125 dark:bg-gray-100">
@@ -586,7 +605,8 @@
 
                     </div>
 
-                    <div class="mb-8 flex w-full items-center justify-between">
+                    <div class="mb-8 flex w-full items-center justify-between"
+                         data-aos="fade-left" data-aos-delay="200">
                         <div class="order-1 w-5/12"></div>
                         <div
                             class="z-20 order-1 flex h-8 w-8 items-center rounded-full bg-gray-800 shadow-xl transition duration-300 hover:scale-125 dark:bg-gray-100">
@@ -628,7 +648,24 @@
 @endsection
 
 @push('script')
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800, // Animation duration
+            easing: 'ease-in-out', // Easing function
+            once: true, // Whether animation should happen only once
+            offset: 50, // Offset from the original trigger point
+            delay: 0, // Delay before animation starts
+            anchorPlacement: 'top-bottom', // Anchor placement
+            disable: function() {
+                // Disable AOS on mobile if animations cause performance issues
+                var maxWidth = 768;
+                return window.innerWidth < maxWidth && 'mobile' || false;
+            }
+        });
+    </script>
     <script>
         const string = [
             '{{ __('Laravel Developer') }}',
