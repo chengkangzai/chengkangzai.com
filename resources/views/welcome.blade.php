@@ -59,16 +59,16 @@
             <div class="container mx-auto flex min-h-screen flex-col items-center px-5 md:flex-row lg:px-28">
                 <div
                     class="flex min-h-[40vh] sm:min-h-screen w-full flex-col items-center sm:items-start justify-start sm:justify-center py-16 sm:py-16 text-center sm:text-left lg:w-3/5 lg:flex-grow">
-                    <h1 class="title-font mb-4 sm:mb-8 text-3xl sm:text-5xl font-bold tracking-tighter text-black lg:text-5xl dark:text-white">
+                    <h1 class="title-font mb-4 sm:mb-8 text-3xl sm:text-5xl font-extrabold tracking-tight text-gray-900 lg:text-6xl dark:text-white">
                         {{ __('Hi, I am') }} <br> {{ __('Ching Cheng Kang') }} (CCK) <span class="wave">👋🏻</span>
                     </h1>
                     <div class="mb-3 sm:mb-0" style="min-height: 40px">
                         <span id="typed"
-                              class="inline-block text-left text-sm sm:text-base leading-relaxed text-gray-500 dark:text-gray-200">
+                              class="inline-block text-left text-sm sm:text-lg leading-relaxed tracking-wide text-gray-600 dark:text-gray-200">
                             {{ __('Laravel Developer') }}
                         </span>
                     </div>
-                    <p class="text-dark-600 mb-6 sm:mb-8 mt-1 sm:mt-2 w-full text-xs sm:text-sm dark:text-gray-400">
+                    <p class="mb-6 sm:mb-8 mt-1 sm:mt-2 w-full text-sm sm:text-base leading-relaxed tracking-wide text-gray-600 dark:text-gray-300">
                         ⚡️ {{ __('Fun fact: I convert Coffee to Code') }} ☕️
                     </p>
                     <div class="flex flex-col sm:flex-row justify-center sm:justify-start space-y-3 sm:space-y-0 sm:space-x-3 w-full sm:w-auto">
@@ -157,52 +157,55 @@
 
         </section>
 
-        <section id="about-me" class="mx-2 md:mx-auto md:w-11/12">
-            <a href="#about-me"
-               class="mx-2 my-8 block w-full text-center text-3xl font-black text-black md:mb-6 md:text-2xl lg:text-3xl dark:text-white">
+        <section id="about-me" class="mx-2 md:mx-auto md:w-11/12 py-16 md:py-24">
+            <h2 class="mb-12 md:mb-16 text-center text-4xl md:text-5xl font-bold tracking-tight text-gray-900 dark:text-white">
                 {{ __('About me') }}
-            </a>
-            <div class="grid place-items-stretch gap-8 pb-8 md:grid-cols-3">
+            </h2>
+            <div class="grid gap-8 md:gap-12 pb-8 md:grid-cols-3 md:h-auto">
                 <div
-                    class="rounded-lg bg-gray-50 px-5 py-8 text-gray-800 shadow-lg transition duration-300 hover:scale-110 dark:bg-gray-800"
+                    class="rounded-lg bg-gray-50 px-6 py-10 text-gray-800 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 dark:bg-gray-800 flex flex-col h-full"
                     x-data="{ cn: true }">
-                    <p title="{{ __('Click me to translate') }}"
-                       class="animate-bounce text-right text-xl text-black dark:text-white" role="button">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" @click="cn = !cn" viewBox="0 0 24 24"
-                             stroke="currentColor" class="right-0 h-6 w-6 animate-bounce">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/>
-                        </svg>
-                    </p>
-                    <p class="pb-3 text-center text-2xl text-black dark:text-white">
+                    <div class="flex justify-between items-start mb-2">
+                        <div class="flex-1"></div>
+                        <button title="{{ __('Click me to translate') }}"
+                                class="text-gray-400 hover:text-gray-600 dark:text-gray-500 dark:hover:text-gray-300 transition-colors"
+                                @click="cn = !cn">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                 stroke="currentColor" class="h-5 w-5">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <h3 class="pb-4 text-center text-2xl font-semibold leading-tight text-black dark:text-white">
                         {{ __('What I believe in') }}
-                    </p>
+                    </h3>
                     <div class="h-3 text-left text-3xl leading-tight text-indigo-500">“</div>
                     <ul x-show="cn">
-                        <li class="px-5 text-center text-gray-600 dark:text-gray-200">
+                        <li class="px-5 text-center text-gray-600 dark:text-gray-200 leading-relaxed">
                             1. 面对问题是解决问题的第一步。
                         </li>
-                        <li class="px-5 text-center text-gray-600 dark:text-gray-200">
+                        <li class="px-5 text-center text-gray-600 dark:text-gray-200 leading-relaxed">
                             2. 把小问题解决了，就没有大问题。
                         </li>
-                        <li class="px-5 text-center text-gray-600 dark:text-gray-200">
+                        <li class="px-5 text-center text-gray-600 dark:text-gray-200 leading-relaxed">
                             3. 把所有的小问题都解决了，就根本没有问题。
                         </li>
-                        <li class="px-5 text-center text-gray-600 dark:text-gray-200">
+                        <li class="px-5 text-center text-gray-600 dark:text-gray-200 leading-relaxed">
                             4. 你不解决问题，问题会解决你。
                         </li>
                     </ul>
                     <ol x-show="!cn">
-                        <li class="px-5 text-center text-gray-600 dark:text-gray-200">
+                        <li class="px-5 text-center text-gray-600 dark:text-gray-200 leading-relaxed">
                             1. Facing the problem is the first step.
                         </li>
-                        <li class="px-5 text-center text-gray-600 dark:text-gray-200">
+                        <li class="px-5 text-center text-gray-600 dark:text-gray-200 leading-relaxed">
                             2. When small problems are fixed, there won't be major problems.
                         </li>
-                        <li class="px-5 text-center text-gray-600 dark:text-gray-200">
+                        <li class="px-5 text-center text-gray-600 dark:text-gray-200 leading-relaxed">
                             3. When all small problems are fixed, there won't be any problems.
                         </li>
-                        <li class="px-5 text-center text-gray-600 dark:text-gray-200">
+                        <li class="px-5 text-center text-gray-600 dark:text-gray-200 leading-relaxed">
                             4. If you don't solve the problem, the problem will solve you.
                         </li>
                     </ol>
@@ -215,30 +218,34 @@
                 </div>
 
                 <div
-                    class="rounded-lg bg-gray-50 px-5 py-8 text-gray-800 shadow-lg transition duration-300 hover:scale-110 dark:bg-gray-800">
-                    <div class="w-full text-center">
-                        <p class="pb-3 text-center text-2xl text-black dark:text-white">$whoami</p>
-                        <p class="px-5 text-gray-600 dark:text-gray-200">
-                            {{ __("I'm :age-year-old Malaysian that passionate about making software that simplify people's life.", ['age' => \Carbon\Carbon::parse('1999-05-03')->age]) }}
-                        </p>
-                        <br>
+                    class="rounded-lg bg-gray-50 px-6 py-10 text-gray-800 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 dark:bg-gray-800 flex flex-col h-full">
+                    <div class="w-full text-center flex-grow flex flex-col justify-between">
+                        <div>
+                            <h3 class="pb-4 text-center text-2xl font-semibold leading-tight text-black dark:text-white font-mono">$whoami</h3>
+                            <p class="px-5 text-gray-600 dark:text-gray-200 leading-relaxed tracking-wide">
+                                {{ __("I'm :age-year-old Malaysian that passionate about making software that simplify people's life.", ['age' => \Carbon\Carbon::parse('1999-05-03')->age]) }}
+                            </p>
+                        </div>
+                        
                         @if ($rank >= 1)
-                            <a class="px-5 text-gray-600 underline dark:text-gray-200"
-                               href="https://github.com/gayanvoice/top-github-users/blob/main/markdown/public_contributions/malaysia.md"
-                               aria-label="Link to Top Github User" rel="noreferrer">
-                                {{ __('No :rank in most active GitHub users in Malaysia', ['rank' => $rank]) }}
-                            </a>
+                            <div class="mt-6 pt-4 border-t border-gray-200 dark:border-gray-600">
+                                <a class="px-5 text-sm text-gray-500 underline dark:text-gray-400 leading-relaxed tracking-wide hover:text-gray-700 dark:hover:text-gray-200 transition-colors"
+                                   href="https://github.com/gayanvoice/top-github-users/blob/main/markdown/public_contributions/malaysia.md"
+                                   aria-label="Link to Top Github User" rel="noreferrer">
+                                    {{ __('No :rank in most active GitHub users in Malaysia', ['rank' => $rank]) }}
+                                </a>
+                            </div>
                         @endif
                     </div>
                 </div>
 
                 <div
-                    class="rounded-lg bg-gray-50 px-5 py-8 text-gray-800 shadow-lg transition duration-300 hover:scale-110 dark:bg-gray-800">
-                    <div class="mb-10 w-full">
-                        <p class="pb-3 text-center text-2xl text-black dark:text-white">{{ __('Get in touch') }}</p>
+                    class="rounded-lg bg-gray-50 px-6 py-10 text-gray-800 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 dark:bg-gray-800 flex flex-col h-full">
+                    <div class="w-full flex-grow">
+                        <h3 class="pb-4 text-center text-2xl font-semibold leading-tight text-black dark:text-white">{{ __('Get in touch') }}</h3>
                         <div class="space-x-4 space-y-2">
                             <p></p>
-                            <p class="text-gray-600 dark:text-gray-200">
+                            <p class="text-gray-600 dark:text-gray-200 leading-relaxed">
                                 <svg class="inline fill-current text-blue-600" viewBox="0 0 512 512" width="35"
                                      height="35">
                                     <path xmlns="http://www.w3.org/2000/svg"
@@ -248,7 +255,7 @@
                                    aria-label="My Github Profile"
                                    href="https://www.github.com/chengkangzai">@chengkangzai</a>
                             </p>
-                            <p class="text-gray-600 dark:text-gray-200">
+                            <p class="text-gray-600 dark:text-gray-200 leading-relaxed">
                                 <svg class="inline fill-current text-blue-600" viewBox="0 0 512 512" width="35"
                                      height="35">
                                     <path
@@ -258,7 +265,7 @@
                                    aria-label="My Linkedin Profile"
                                    href="https://www.linkedin.com/in/chingchengkang/">Ching Cheng Kang</a>
                             </p>
-                            <p class="text-gray-600 dark:text-gray-200">
+                            <p class="text-gray-600 dark:text-gray-200 leading-relaxed">
                                 <svg class="inline fill-current text-blue-600" viewBox="0 0 512 512" width="35"
                                      height="35">
                                     <path
@@ -268,7 +275,7 @@
                                    aria-label="My Twitter Account"
                                    href="https://twitter.com/chengkangzai">@chengkangzai</a>
                             </p>
-                            <p class="text-gray-600 dark:text-gray-200">
+                            <p class="text-gray-600 dark:text-gray-200 leading-relaxed">
                                 <svg fill="none" class="inline text-blue-600" viewBox="0 0 24 24" width="35"
                                      height="35" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -284,24 +291,23 @@
         </section>
 
         @if ($projects->isNotEmpty())
-            <section class="mx-auto flex w-full flex-wrap pb-20 dark:text-white md:mx-auto md:w-11/12" id="work">
+            <section class="mx-auto flex w-full flex-wrap py-16 md:py-24 dark:text-white md:mx-auto md:w-11/12" id="work">
                 <div class="w-full">
-                    <a href="#work"
-                       class="mb-2 block text-center text-2xl font-black text-black md:text-2xl lg:text-3xl dark:text-white">
-                        {{ __('These are some of my Work') }}</a>
+                    <h2 class="mb-12 md:mb-16 text-center text-4xl md:text-5xl font-bold tracking-tight text-gray-900 dark:text-white">
+                        {{ __('These are some of my Work') }}</h2>
                 </div>
 
-                <div class="grid place-items-stretch gap-8 pb-8 md:grid-cols-3">
+                <div class="grid place-items-stretch gap-8 md:gap-12 pb-8 md:grid-cols-3">
                     @foreach ($projects as $project)
                         <div
-                            class="flex flex-col gap-2 rounded-lg bg-gray-50 p-4 text-gray-800 shadow-lg transition duration-300 hover:scale-110 dark:bg-gray-800">
+                            class="flex flex-col gap-3 rounded-lg bg-gray-50 p-6 text-gray-800 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 dark:bg-gray-800">
                             <a href="{{ $project->url ?? '#' }}" target="_blank" rel="noreferrer"
                                aria-label="Link to open {{ $project->name }}">
                                 <img src="{{ $project->getFirstMediaUrl('thumbnail') ?? '#' }}" alt="{{ __('Image for the work') }}"
                                      loading="lazy" class="h-72 w-full rounded-lg object-cover">
                             </a>
-                            <h2 class="title-font mb-2 text-2xl font-bold dark:text-white">{{ $project->name }} </h2>
-                            <p class="text-base leading-relaxed dark:text-white">{{ $project->description }}</p>
+                            <h3 class="title-font mb-3 text-2xl font-semibold leading-tight dark:text-white">{{ $project->name }}</h3>
+                            <p class="text-base leading-relaxed text-gray-600 dark:text-gray-200">{{ $project->description }}</p>
                             <div
                                 class="my-4 flex w-full items-start space-x-2 text-center leading-none text-blue-700 dark:text-blue-400">
                                 @if ($project->url)
@@ -341,12 +347,11 @@
             </section>
         @endif
 
-        <section class="hidden md:block md:py-32" id="experience">
+        <section class="hidden md:block py-16 md:py-24" id="experience">
             <div id="roadmap" class="container mx-auto flex-wrap rounded-lg bg-gray-50 dark:bg-gray-800">
-                <a href="#experience"
-                   class="mb-2 block py-12 text-center text-2xl font-black text-black md:text-2xl lg:text-3xl dark:text-white">
+                <h2 class="mb-12 md:mb-16 py-12 text-center text-4xl md:text-5xl font-bold tracking-tight text-gray-900 dark:text-white">
                     {{ __('My Experiences') }}
-                </a>
+                </h2>
                 <hr>
                 <div class="wrap relative h-full overflow-hidden p-10">
                     <div class="border-2-2 absolute h-full border border-gray-700 border-opacity-20 dark:border-white"
