@@ -54,38 +54,38 @@
 
 @section('content')
     @include('partial.rocket')
-    <div class="mx-auto md:w-11/12">
-        <section class="text-gray-700">
+    <div class="mx-auto ">
+        <section class="relative text-gray-700 bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-blue-900">
             <div class="container mx-auto flex min-h-screen flex-col items-center px-5 md:flex-row lg:px-28">
                 <div
-                    class="flex min-h-screen w-full flex-col items-start py-16 text-left sm:min-h-full sm:py-8 lg:w-3/5 lg:flex-grow">
-                    <h1 class="title-font mb-8 text-5xl font-bold tracking-tighter text-black lg:text-5xl dark:text-white">
+                    class="flex min-h-[40vh] sm:min-h-screen w-full flex-col items-center sm:items-start justify-start sm:justify-center py-16 sm:py-16 text-center sm:text-left lg:w-3/5 lg:flex-grow">
+                    <h1 class="title-font mb-4 sm:mb-8 text-3xl sm:text-5xl font-bold tracking-tighter text-black lg:text-5xl dark:text-white">
                         {{ __('Hi, I am') }} <br> {{ __('Ching Cheng Kang') }} (CCK) <span class="wave">👋🏻</span>
                     </h1>
-                    <div style="min-height: 40px">
+                    <div class="mb-3 sm:mb-0" style="min-height: 40px">
                         <span id="typed"
-                              class="inline-block text-left text-base leading-relaxed text-gray-500 dark:text-gray-200">
+                              class="inline-block text-left text-sm sm:text-base leading-relaxed text-gray-500 dark:text-gray-200">
                             {{ __('Laravel Developer') }}
                         </span>
                     </div>
-                    <p class="text-dark-600 mb-8 mt-2 w-full text-left text-sm dark:text-gray-400">
+                    <p class="text-dark-600 mb-6 sm:mb-8 mt-1 sm:mt-2 w-full text-xs sm:text-sm dark:text-gray-400">
                         ⚡️ {{ __('Fun fact: I convert Coffee to Code') }} ☕️
                     </p>
-                    <div class="flex flex-col justify-center space-y-2 lg:flex-row lg:space-x-2">
+                    <div class="flex flex-col sm:flex-row justify-center sm:justify-start space-y-3 sm:space-y-0 sm:space-x-3 w-full sm:w-auto">
                         <a role="button" href="{{ asset('resume.pdf') }}"
-                           class="focus:shadow-outline mt-auto flex items-center rounded-lg bg-black px-6 py-2 font-semibold text-white ring-black ring-offset-2 ring-offset-current transition duration-300 ease-in-out hover:bg-gray-800 hover:to-black focus:outline-none focus:ring-2 dark:bg-white dark:text-black dark:hover:bg-gray-200 dark:hover:to-white">
+                           class="focus:shadow-outline flex items-center justify-center rounded-lg bg-black px-4 sm:px-6 py-2 text-sm sm:text-base font-semibold text-white ring-black ring-offset-2 ring-offset-current transition duration-300 ease-in-out hover:bg-gray-800 hover:to-black focus:outline-none focus:ring-2 dark:bg-white dark:text-black dark:hover:bg-gray-200 dark:hover:to-white">
                             {{ __('SEE MY RESUME') }}
                         </a>
 
                         <a role="button" href="https://pandemic.chengkangzai.com"
-                           class="focus:shadow-outline mt-auto flex items-center rounded-lg bg-black px-6 py-2 font-semibold text-white ring-black ring-offset-2 ring-offset-current transition duration-300 ease-in-out hover:bg-gray-800 hover:to-black focus:outline-none focus:ring-2 dark:bg-white dark:text-black dark:hover:bg-gray-200 dark:hover:to-white">
+                           class="focus:shadow-outline flex items-center justify-center rounded-lg bg-black px-4 sm:px-6 py-2 text-sm sm:text-base font-semibold text-white ring-black ring-offset-2 ring-offset-current transition duration-300 ease-in-out hover:bg-gray-800 hover:to-black focus:outline-none focus:ring-2 dark:bg-white dark:text-black dark:hover:bg-gray-200 dark:hover:to-white">
                             {{ __('Covid Dashboard') }}
                         </a>
                     </div>
                     <div
-                        class="container mx-auto mt-28 flex w-full flex-col items-center text-center align-bottom sm:mt-8 sm:items-start">
+                        class="container mx-auto mt-8 sm:mt-28 flex w-full flex-col items-center text-center align-bottom sm:items-start">
                         <a href="#about-me" aria-label="Skip to about me ">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 animate-bounce" fill="none"
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 sm:h-8 sm:w-8 animate-bounce" fill="none"
                                  viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                       d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
@@ -93,15 +93,71 @@
                         </a>
                     </div>
                 </div>
-                <div class="w-full sm:w-1/2 lg:w-5/6 lg:max-w-lg">
-                    <img class="mx-auto rounded-lg object-cover object-center lg:w-4/5" alt="hero"
-                         src="{{ asset('src/bighead.jpeg') }}" width="409" height="341">
+                <div class="w-full sm:w-1/2 lg:w-5/6 lg:max-w-lg px-4 sm:px-0 mt-8 sm:mt-0">
+                    <div class="relative mx-auto w-4/5 sm:w-full lg:w-4/5 group">
+                        <!-- Animated background gradient -->
+                        <div class="absolute -inset-2 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl blur opacity-20 sm:opacity-30 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
+                        
+                        <!-- Profile image -->
+                        <img class="relative mx-auto rounded-2xl object-cover object-center shadow-2xl ring-2 ring-white/20 backdrop-blur w-full h-auto max-w-sm sm:max-w-sm" alt="hero"
+                             src="{{ asset('src/bighead.jpeg') }}">
+                        
+                        
+                        <!-- Floating skill icons - Hidden on mobile, visible on SM+ -->
+                        <div class="hidden sm:block absolute -top-4 -left-4 bg-white dark:bg-gray-800 rounded-full p-3 shadow-lg animate-bounce" style="animation-delay: 0s;">
+                            @svg('si-html5', 'w-6 h-6 text-orange-500')
+                        </div>
+                        
+                        <div class="hidden sm:block absolute top-8 -right-8 bg-white dark:bg-gray-800 rounded-full p-3 shadow-lg animate-bounce" style="animation-delay: 0.5s;">
+                            @svg('si-alpinedotjs', 'w-6 h-6 text-teal-500')
+                        </div>
+                        
+                        <div class="hidden sm:block absolute bottom-8 -left-8 bg-white dark:bg-gray-800 rounded-full p-3 shadow-lg animate-bounce" style="animation-delay: 1s;">
+                            @svg('si-laravel', 'w-6 h-6 text-red-500')
+                        </div>
+                        
+                        <div class="hidden sm:block absolute top-16 left-8 bg-white dark:bg-gray-800 rounded-full p-3 shadow-lg animate-bounce" style="animation-delay: 1.5s;">
+                            @svg('si-javascript', 'w-6 h-6 text-yellow-500')
+                        </div>
+                        
+                        <div class="hidden sm:block absolute bottom-16 -right-4 bg-white dark:bg-gray-800 rounded-full p-3 shadow-lg animate-bounce" style="animation-delay: 2s;">
+                            @svg('si-livewire', 'w-6 h-6 text-pink-500')
+                        </div>
+                        
+                        <div class="hidden sm:block absolute -top-8 right-8 bg-white dark:bg-gray-800 rounded-full p-3 shadow-lg animate-bounce" style="animation-delay: 2.5s;">
+                            @svg('si-filament', 'w-6 h-6 text-amber-500')
+                        </div>
+                        
+                    </div>
+                    
+                    <!-- Mobile tech badges - visible only on mobile, outside the glow effect -->
+                    <div class="flex sm:hidden justify-center space-x-3 mt-6">
+                        <div class="bg-white dark:bg-gray-800 rounded-full p-2.5 shadow-lg ring-1 ring-gray-200 dark:ring-gray-600">
+                            @svg('si-html5', 'w-5 h-5 text-orange-500')
+                        </div>
+                        <div class="bg-white dark:bg-gray-800 rounded-full p-2.5 shadow-lg ring-1 ring-gray-200 dark:ring-gray-600">
+                            @svg('si-alpinedotjs', 'w-5 h-5 text-teal-500')
+                        </div>
+                        <div class="bg-white dark:bg-gray-800 rounded-full p-2.5 shadow-lg ring-1 ring-gray-200 dark:ring-gray-600">
+                            @svg('si-laravel', 'w-5 h-5 text-red-500')
+                        </div>
+                        <div class="bg-white dark:bg-gray-800 rounded-full p-2.5 shadow-lg ring-1 ring-gray-200 dark:ring-gray-600">
+                            @svg('si-javascript', 'w-5 h-5 text-yellow-500')
+                        </div>
+                        <div class="bg-white dark:bg-gray-800 rounded-full p-2.5 shadow-lg ring-1 ring-gray-200 dark:ring-gray-600">
+                            @svg('si-livewire', 'w-5 h-5 text-pink-500')
+                        </div>
+                        <div class="bg-white dark:bg-gray-800 rounded-full p-2.5 shadow-lg ring-1 ring-gray-200 dark:ring-gray-600">
+                            @svg('si-filament', 'w-5 h-5 text-amber-500')
+                        </div>
+                    </div>
+                    </div>
                 </div>
             </div>
 
         </section>
 
-        <section id="about-me" class="mx-2 md:mx-0">
+        <section id="about-me" class="mx-2 md:mx-auto md:w-11/12">
             <a href="#about-me"
                class="mx-2 my-8 block w-full text-center text-3xl font-black text-black md:mb-6 md:text-2xl lg:text-3xl dark:text-white">
                 {{ __('About me') }}
@@ -228,7 +284,7 @@
         </section>
 
         @if ($projects->isNotEmpty())
-            <section class="mx-auto flex w-full flex-wrap pb-20 dark:text-white" id="work">
+            <section class="mx-auto flex w-full flex-wrap pb-20 dark:text-white md:mx-auto md:w-11/12" id="work">
                 <div class="w-full">
                     <a href="#work"
                        class="mb-2 block text-center text-2xl font-black text-black md:text-2xl lg:text-3xl dark:text-white">
@@ -572,7 +628,7 @@
         const string = [
             '{{ __('Laravel Developer') }}',
             @if ($rank >= 1)
-                '{{ __('No x in most active GitHub users in Malaysia', ['rank' => $rank]) }}',
+                '{{ __('No :rank in most active GitHub users in Malaysia', ['rank' => $rank]) }}',
             @endif
                 '{{ __('Fullstack Developer') }}',
             '{{ __('Web Developer') }}',
