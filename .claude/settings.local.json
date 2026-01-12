@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(composer upgrade:*)",
+      "Bash(composer bump:*)",
+      "Bash(./vendor/bin/pest)",
+      "Bash(./vendor/bin/pint)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(npm upgrade)",
+      "Bash(npm audit:*)",
+      "Bash(npm run build:*)",
+      "Bash(npm info:*)",
+      "Bash(npm view:*)",
+      "Bash(npm install:*)",
+      "WebFetch(domain:techicons.dev)",
+      "mcp__puppeteer__puppeteer_screenshot",
+      "Bash(composer require:*)"
+    ],
+    "deny": []
+  }
+}
