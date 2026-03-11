@@ -13,6 +13,7 @@
         "filament/spatie-laravel-translatable-plugin": "^3.3.47",
         "laravel/framework": "^11.47.0",
         "laravel/tinker": "^2.11.0",
+        "league/flysystem-aws-s3-v3": "^3.32",
         "mvenghaus/filament-plugin-translatable-inline": "^3.0.8",
         "ralphjsmit/laravel-seo": "^1.7.2",
         "statikbe/laravel-filament-chained-translation-manager": "^3.3.0"
