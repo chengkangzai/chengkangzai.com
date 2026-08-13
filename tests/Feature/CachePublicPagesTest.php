@@ -1,25 +1,31 @@
 <?php
 
-namespace Tests\Feature;
+use App\Models\User;
 
-use Tests\TestCase;
+it('serves public pages with public cache headers and no cookies', function (string $uri) {
+    $response = $this->get($uri);
 
-class CachePublicPagesTest extends TestCase
-{
-    public function test_public_pages_get_public_cache_headers(): void
-    {
-        $response = $this->get('/');
+    $response->assertOk();
+    expect((string) $response->headers->get('Cache-Control'))
+        ->toContain('public')
+        ->toContain('s-maxage=86400');
+    expect($response->headers->getCookies())->toBeEmpty();
+})->with(['/', '/card']);
 
-        $response->assertOk();
-        $this->assertStringContainsString('public', (string) $response->headers->get('Cache-Control'));
-        $this->assertStringContainsString('s-maxage=86400', (string) $response->headers->get('Cache-Control'));
-        $this->assertEmpty($response->headers->getCookies());
-    }
+it('does not cache the admin panel', function () {
+    $response = $this->get('/admin/login');
 
-    public function test_admin_pages_are_not_cached(): void
-    {
-        $response = $this->get('/admin/login');
+    expect((string) $response->headers->get('Cache-Control'))->not->toContain('s-maxage');
+});
 
-        $this->assertStringNotContainsString('s-maxage', (string) $response->headers->get('Cache-Control'));
-    }
-}
+it('does not cache responses for authenticated users', function () {
+    $response = $this->actingAs(User::factory()->make())->get('/');
+
+    expect((string) $response->headers->get('Cache-Control'))->not->toContain('s-maxage');
+});
+
+it('does not cache error responses', function () {
+    $response = $this->get('/definitely-missing-page');
+
+    expect((string) $response->headers->get('Cache-Control'))->not->toContain('s-maxage');
+});
