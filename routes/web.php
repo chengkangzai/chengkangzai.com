@@ -9,5 +9,6 @@ Route::group(['as' => 'public.'], function () {
     Route::get('/locale/{locale}', [LocaleController::class, 'changeLocale'])->name('setLocale');
     Route::get('/card', [PublicIndexController::class, 'card'])->name('card');
     Route::get('/resume.pdf', [PublicIndexController::class, 'resume'])->name('resume');
+    Route::get('/resume-preview.pdf', [PublicIndexController::class, 'resumePreview'])->name('resumePreview');
     Route::redirect('resume', 'resume.pdf');
 });

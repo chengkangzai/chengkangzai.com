@@ -46,8 +46,10 @@ class UploadResumePage extends Page implements HasForms
 
             TextEntry::make('preview')
                 ->columnSpanFull()
-                ->visible(Storage::disk('public')->exists('resume.pdf'))
-                ->state(new HtmlString('<iframe src="'.asset('resume.pdf').'" width="100%" height="800px"></iframe>'))
+                ->visible(fn (): bool => Storage::disk('public')->exists('resume.pdf'))
+                ->state(fn (): HtmlString => new HtmlString(
+                    '<iframe src="'.route('public.resumePreview', ['v' => Storage::disk('public')->lastModified('resume.pdf')]).'" width="100%" height="800px"></iframe>'
+                ))
                 ->html(),
         ]);
     }

@@ -42,4 +42,15 @@ class PublicIndexController
 
         return Storage::disk('public')->download($path);
     }
+
+    public function resumePreview()
+    {
+        $path = 'resume.pdf';
+
+        if (! Storage::disk('public')->exists($path)) {
+            abort(404);
+        }
+
+        return Storage::disk('public')->response($path);
+    }
 }
