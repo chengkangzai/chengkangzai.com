@@ -56,17 +56,17 @@
 @section('content')
     @include('partial.rocket')
     <div class="mx-auto ">
-        <section class="relative text-gray-700 bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-blue-900">
+        <section class="relative text-gray-700 bg-linear-to-br from-blue-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-blue-900">
             <div class="container mx-auto flex min-h-screen flex-col items-center px-5 md:flex-row lg:px-28">
                 <div
-                    class="flex min-h-[40vh] sm:min-h-screen w-full flex-col items-center sm:items-start justify-start sm:justify-center py-16 sm:py-16 text-center sm:text-left lg:w-3/5 lg:flex-grow">
+                    class="flex min-h-[40vh] sm:min-h-screen w-full flex-col items-center sm:items-start justify-start sm:justify-center py-16 sm:py-16 text-center sm:text-left lg:w-3/5 lg:grow">
                     <h1 class="title-font mb-4 sm:mb-8 text-3xl sm:text-5xl font-extrabold tracking-tight text-gray-900 lg:text-6xl dark:text-white"
                         data-aos="fade-up" data-aos-duration="1000">
                         {{ __('Hi, I am') }} <br> {{ __('Ching Cheng Kang') }} (CCK) <span class="wave">👋🏻</span>
                     </h1>
                     <div class="mb-3 sm:mb-0" style="min-height: 40px" data-aos="fade-up" data-aos-delay="200">
                         <div id="typed-skeleton" class="animate-pulse">
-                            <div class="h-6 bg-gray-300 dark:bg-gray-600 rounded w-48 sm:w-64"></div>
+                            <div class="h-6 bg-gray-300 dark:bg-gray-600 rounded-sm w-48 sm:w-64"></div>
                         </div>
                         <span id="typed"
                               class="inline-block text-left text-sm sm:text-lg leading-relaxed tracking-wide text-gray-600 dark:text-gray-200 hidden">
@@ -80,12 +80,12 @@
                     <div class="flex flex-col sm:flex-row justify-center sm:justify-start space-y-3 sm:space-y-0 sm:space-x-3 w-full sm:w-auto"
                          data-aos="fade-up" data-aos-delay="200">
                         <a role="button" href="{{ asset('resume.pdf') }}"
-                           class="focus:shadow-outline flex items-center justify-center rounded-lg bg-black px-4 sm:px-6 py-2 text-sm sm:text-base font-semibold text-white ring-black ring-offset-2 ring-offset-current transition duration-300 ease-in-out hover:bg-gray-800 hover:to-black focus:outline-none focus:ring-2 dark:bg-white dark:text-black dark:hover:bg-gray-200 dark:hover:to-white">
+                           class="focus:shadow-outline flex items-center justify-center rounded-lg bg-black px-4 sm:px-6 py-2 text-sm sm:text-base font-semibold text-white ring-black ring-offset-2 ring-offset-current transition duration-300 ease-in-out hover:bg-gray-800 hover:to-black focus:outline-hidden focus:ring-2 dark:bg-white dark:text-black dark:hover:bg-gray-200 dark:hover:to-white">
                             {{ __('SEE MY RESUME') }}
                         </a>
 
                         <a role="button" href="https://pandemic.chengkangzai.com"
-                           class="focus:shadow-outline flex items-center justify-center rounded-lg bg-black px-4 sm:px-6 py-2 text-sm sm:text-base font-semibold text-white ring-black ring-offset-2 ring-offset-current transition duration-300 ease-in-out hover:bg-gray-800 hover:to-black focus:outline-none focus:ring-2 dark:bg-white dark:text-black dark:hover:bg-gray-200 dark:hover:to-white">
+                           class="focus:shadow-outline flex items-center justify-center rounded-lg bg-black px-4 sm:px-6 py-2 text-sm sm:text-base font-semibold text-white ring-black ring-offset-2 ring-offset-current transition duration-300 ease-in-out hover:bg-gray-800 hover:to-black focus:outline-hidden focus:ring-2 dark:bg-white dark:text-black dark:hover:bg-gray-200 dark:hover:to-white">
                             {{ __('Covid Dashboard') }}
                         </a>
                     </div>
@@ -103,10 +103,10 @@
                 <div class="w-full sm:w-1/2 lg:w-5/6 lg:max-w-lg px-4 sm:px-0 mt-8 sm:mt-0">
                     <div class="relative mx-auto w-4/5 sm:w-full lg:w-4/5 group" data-aos="zoom-in" data-aos-delay="200">
                         <!-- Animated background gradient -->
-                        <div class="absolute -inset-2 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl blur opacity-20 sm:opacity-30 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
+                        <div class="absolute -inset-2 bg-linear-to-r from-blue-600 to-purple-600 rounded-2xl blur-sm opacity-20 sm:opacity-30 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
                         
                         <!-- Profile image -->
-                        <img class="relative mx-auto rounded-2xl object-cover object-center shadow-2xl ring-2 ring-white/20 backdrop-blur w-full h-auto max-w-sm sm:max-w-sm" alt="hero"
+                        <img class="relative mx-auto rounded-2xl object-cover object-center shadow-2xl ring-2 ring-white/20 backdrop-blur-sm w-full h-auto max-w-sm sm:max-w-sm" alt="hero"
                              src="{{ asset('src/bighead.jpeg') }}">
                         
                         
@@ -245,7 +245,7 @@
                 <div
                     class="rounded-lg bg-gray-50 px-6 py-10 text-gray-800 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 dark:bg-gray-800 flex flex-col h-full"
                     data-aos="fade-up" data-aos-delay="200">
-                    <div class="w-full text-center flex-grow flex flex-col justify-between">
+                    <div class="w-full text-center grow flex flex-col justify-between">
                         <div>
                             <div class="flex items-center justify-center mb-4">
                                 <div class="flex items-center justify-center w-12 h-12 bg-green-100 dark:bg-green-900 rounded-full">
@@ -263,7 +263,7 @@
                         @if ($rank >= 1)
                             <div class="mt-6 pt-4 border-t border-gray-200 dark:border-gray-600">
                                 <div id="github-rank-skeleton" class="animate-pulse px-5 hidden">
-                                    <div class="h-4 bg-gray-300 dark:bg-gray-600 rounded w-64"></div>
+                                    <div class="h-4 bg-gray-300 dark:bg-gray-600 rounded-sm w-64"></div>
                                 </div>
                                 <a id="github-rank-content" class="px-5 text-sm text-gray-500 underline dark:text-gray-400 leading-relaxed tracking-wide hover:text-gray-700 dark:hover:text-gray-200 transition-colors"
                                    href="https://github.com/gayanvoice/top-github-users/blob/main/markdown/public_contributions/malaysia.md"
@@ -278,7 +278,7 @@
                 <div
                     class="rounded-lg bg-gray-50 px-6 py-10 text-gray-800 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 dark:bg-gray-800 flex flex-col h-full"
                     data-aos="fade-left" data-aos-delay="200">
-                    <div class="w-full flex-grow">
+                    <div class="w-full grow">
                         <div class="flex items-center justify-center mb-4">
                             <div class="flex items-center justify-center w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-full">
                                 <svg class="w-6 h-6 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -438,7 +438,7 @@
                 </h2>
                 <hr>
                 <div class="wrap relative h-full overflow-hidden p-10">
-                    <div class="border-2-2 absolute h-full border border-gray-700 border-opacity-20 dark:border-white"
+                    <div class="border-2-2 absolute h-full border border-gray-700/20 dark:border-white"
                          style="left: 50%"></div>
                     <div class="right-timeline mb-8 flex w-full items-center justify-between"
                          data-aos="fade-left" data-aos-delay="200">
@@ -455,7 +455,7 @@
                                     {{ __('Asia Pacific University') }}
                                 </a>
                             </h3>
-                            <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
+                            <p class="text-sm font-medium leading-snug tracking-wide text-white">
                                 {{ __('Major :') }}
                                 <a href="https://www.apu.edu.my/our-courses/pre-university-studies/diploma-programmes/diploma-information-communication-technology"
                                    class="underline" rel="noreferrer" target="_blank">
@@ -479,22 +479,22 @@
                         <div
                             class="order-1 w-5/12 rounded-lg bg-indigo-600 px-6 py-4 shadow-xl transition duration-300 hover:scale-110">
                             <h3 class="mb-3 text-xl font-bold text-white">{{ __('Technical Assistant in APU') }}</h3>
-                            <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
+                            <p class="text-sm font-medium leading-snug tracking-wide text-white">
                                 -
                                 {{ __('Setting up and maintaining equipment and technology in classrooms, labs, and other facilities') }}
                             </p>
-                            <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
+                            <p class="text-sm font-medium leading-snug tracking-wide text-white">
                                 -
                                 {{ __('Troubleshooting technical problems and providing technical support to faculty, students, and staff') }}
                             </p>
-                            <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
+                            <p class="text-sm font-medium leading-snug tracking-wide text-white">
                                 - {{ __('Managing and maintaining the university\'s computer and network systems') }}
                             </p>
-                            <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
+                            <p class="text-sm font-medium leading-snug tracking-wide text-white">
                                 -
                                 {{ __('Coordinating and scheduling maintenance and repairs of equipment and technology') }}
                             </p>
-                            <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
+                            <p class="text-sm font-medium leading-snug tracking-wide text-white">
                                 - {{ __('Maintaining inventory and ordering supplies as needed') }}
                             </p>
                             <p class="pt-2 text-sm leading-snug tracking-wide text-white">
@@ -516,17 +516,17 @@
                             <h3 class="mb-3 text-xl font-bold text-white">
                                 {{ __('Technical Assistant') }}, {{ __('Head of Accommodation Team in APU') }}
                             </h3>
-                            <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
+                            <p class="text-sm font-medium leading-snug tracking-wide text-white">
                                 -
                                 {{ __('Led a team of technical assistants to provide support services to the university\'s accommodation unit.') }}
                             </p>
-                            <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
+                            <p class="text-sm font-medium leading-snug tracking-wide text-white">
                                 - {{ __('Work together with ISP\'s technician regarding network issue') }}
                             </p>
-                            <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
+                            <p class="text-sm font-medium leading-snug tracking-wide text-white">
                                 - {{ __('Ensure the network accessibility within the university campus') }}
                             </p>
-                            <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
+                            <p class="text-sm font-medium leading-snug tracking-wide text-white">
                                 -
                                 {{ __('Maintain, manage, and monitor technical facilities and infrastructure within the campus') }}
                             </p>
@@ -548,13 +548,13 @@
                                     Strateq Group (PRS)
                                 </a>
                             </h3>
-                            <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
+                            <p class="text-sm font-medium leading-snug tracking-wide text-white">
                                 - {{ __('Successfully fixed the migration file for the company\'s internal application') }}
                             </p>
-                            <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
+                            <p class="text-sm font-medium leading-snug tracking-wide text-white">
                                 - {{ __('Improved the speed and efficiency of the bootstrap seeder using Laravel') }}
                             </p>
-                            <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
+                            <p class="text-sm font-medium leading-snug tracking-wide text-white">
                                 -
                                 {{ __('Troubleshooted and resolved multiple frontend issues within the in-house application') }}
                                 (<a href="https://strateqgroup.com/smart-managed-services/" class="underline"
@@ -580,7 +580,7 @@
                                 <a class="underline" rel="noreferrer" target="_blank" href="https://www.apu.edu.my/">
                                     {{ __('Asia Pacific University') }}</a>
                             </h3>
-                            <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
+                            <p class="text-sm font-medium leading-snug tracking-wide text-white">
                                 {{ __('Graduated from') }}
                                 <a href="https://www.apu.edu.my/our-courses/pre-university-studies/diploma-programmes/diploma-information-communication-technology"
                                    class="underline" rel="noreferrer" target="_blank">
@@ -612,7 +612,7 @@
                                     {{ __('Asia Pacific University') }}
                                 </a>
                             </h3>
-                            <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
+                            <p class="text-sm font-medium leading-snug tracking-wide text-white">
                                 {{ __('Major :') }}
                                 <a href="https://www.apu.edu.my/our-courses/undergraduate-studies/school-computing-technology/bsc-hons-software-engineering"
                                    class="underline" rel="noreferrer" target="_blank">
@@ -638,7 +638,7 @@
                                     Softinn Solutions
                                 </a>
                             </h3>
-                            <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
+                            <p class="text-sm font-medium leading-snug tracking-wide text-white">
                                 {{ __('As a intern, I was responsible for the development of the in house Custom Content Management(CMS) System and various Hotel Website of the company with the use of .NET and .NET Core technology.') }}
                             </p>
                             <p class="pt-2 text-sm leading-snug tracking-wide text-white">
@@ -663,7 +663,7 @@
                                     {{ __('Asia Pacific University') }}
                                 </a>
                             </h3>
-                            <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
+                            <p class="text-sm font-medium leading-snug tracking-wide text-white">
                                 {{ __('Major :') }}
                                 <a href="https://www.apu.edu.my/our-courses/pre-university-studies/diploma-programmes/diploma-information-communication-technology"
                                    class="underline" rel="noreferrer" target="_blank">
@@ -693,17 +693,17 @@
                                     {{ __('Pixalink') }}
                                 </a>
                             </h3>
-                            <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
+                            <p class="text-sm font-medium leading-snug tracking-wide text-white">
                                 - {{ __('Responsible for the overall technology strategy and execution.') }}
                             </p>
-                            <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
+                            <p class="text-sm font-medium leading-snug tracking-wide text-white">
                                 - {{ __('Driving innovation and staying ahead of technological trends in the company.') }}
                             </p>
-                            <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
+                            <p class="text-sm font-medium leading-snug tracking-wide text-white">
                                 -
                                 {{ __('Working closely with the CEO and other senior executives to identify and implement new technologies that give the company a competitive edge.') }}
                             </p>
-                            <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
+                            <p class="text-sm font-medium leading-snug tracking-wide text-white">
                                 -
                                 {{ __('Involved in fundraising and building partnerships with other companies or organizations.') }}
                             </p>
