@@ -2,19 +2,20 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\ProjectResource\Pages;
+use App\Filament\Resources\ProjectResource\Pages\CreateProject;
+use App\Filament\Resources\ProjectResource\Pages\EditProject;
+use App\Filament\Resources\ProjectResource\Pages\ListProjects;
 use App\Models\Project;
+use Filament\Actions\EditAction;
 use Filament\Forms\Components\MarkdownEditor;
-use Filament\Forms\Components\Placeholder;
-use Filament\Forms\Components\Section;
 use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
 use Filament\Forms\Components\SpatieTagsInput;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
-use Filament\Forms\Form;
-use Filament\Resources\Concerns\Translatable;
+use Filament\Infolists\Components\TextEntry;
 use Filament\Resources\Resource;
-use Filament\Tables\Actions\EditAction;
+use Filament\Schemas\Components\Section;
+use Filament\Schemas\Schema;
 use Filament\Tables\Columns\SpatieMediaLibraryImageColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Columns\ToggleColumn;
@@ -22,7 +23,8 @@ use Filament\Tables\Filters\TrashedFilter;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
-use Mvenghaus\FilamentPluginTranslatableInline\Forms\Components\TranslatableContainer;
+use LaraZeus\SpatieTranslatable\Resources\Concerns\Translatable;
+use Parfaitementweb\FilamentPluginTranslatableInline\Forms\Components\TranslatableContainer;
 
 class ProjectResource extends Resource
 {
@@ -32,11 +34,11 @@ class ProjectResource extends Resource
 
     protected static ?string $slug = 'projects';
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-rectangle-stack';
 
-    public static function form(Form $form): Form
+    public static function form(Schema $schema): Schema
     {
-        return $form->columns(3)
+        return $schema->columns(3)
             ->schema([
                 Section::make([
                     TextInput::make('name')
@@ -59,7 +61,8 @@ class ProjectResource extends Resource
                         ->collection('thumbnail')
                         ->image()
                         ->imageEditor()
-                        ->imageCropAspectRatio('16:9')
+                        ->imageAspectRatio('16:9')
+                        ->automaticallyCropImagesToAspectRatio()
                         ->maxFiles(1),
                 ])->compact()->columnSpan(2),
 
@@ -71,13 +74,13 @@ class ProjectResource extends Resource
                     ),
                 ])->compact()->columnSpan(1),
 
-                Placeholder::make('created_at')
+                TextEntry::make('created_at')
                     ->label('Created Date')
-                    ->content(fn (?Project $record): string => $record?->created_at?->diffForHumans() ?? '-'),
+                    ->state(fn (?Project $record): string => $record?->created_at?->diffForHumans() ?? '-'),
 
-                Placeholder::make('updated_at')
+                TextEntry::make('updated_at')
                     ->label('Last Modified Date')
-                    ->content(fn (?Project $record): string => $record?->updated_at?->diffForHumans() ?? '-'),
+                    ->state(fn (?Project $record): string => $record?->updated_at?->diffForHumans() ?? '-'),
             ]);
     }
 
@@ -109,10 +112,10 @@ class ProjectResource extends Resource
             ->filters([
                 TrashedFilter::make(),
             ])
-            ->actions([
+            ->recordActions([
                 EditAction::make(),
             ])
-            ->bulkActions([
+            ->toolbarActions([
                 //
             ]);
     }
@@ -120,9 +123,9 @@ class ProjectResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListProjects::route('/'),
-            'create' => Pages\CreateProject::route('/create'),
-            'edit' => Pages\EditProject::route('/{record}/edit'),
+            'index' => ListProjects::route('/'),
+            'create' => CreateProject::route('/create'),
+            'edit' => EditProject::route('/{record}/edit'),
         ];
     }
 

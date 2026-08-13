@@ -3,27 +3,26 @@
 namespace App\Filament\Pages;
 
 use Filament\Actions\Action;
-use Filament\Forms\ComponentContainer;
 use Filament\Forms\Components\FileUpload;
-use Filament\Forms\Components\Placeholder;
 use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Forms\Contracts\HasForms;
-use Filament\Forms\Form;
+use Filament\Infolists\Components\TextEntry;
 use Filament\Notifications\Notification;
 use Filament\Pages\Page;
+use Filament\Schemas\Schema;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\HtmlString;
 
 /**
- * @property ComponentContainer $form
+ * @property Schema $form
  */
 class UploadResumePage extends Page implements HasForms
 {
     use InteractsWithForms;
 
-    protected static ?string $navigationIcon = 'heroicon-o-document-text';
+    protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-document-text';
 
-    protected static string $view = 'filament.pages.upload-resume-page';
+    protected string $view = 'filament.pages.upload-resume-page';
 
     public array $data = [];
 
@@ -34,9 +33,9 @@ class UploadResumePage extends Page implements HasForms
         ]);
     }
 
-    public function form(Form $form): Form
+    public function form(Schema $schema): Schema
     {
-        return $form->columns(2)->statePath('data')->schema([
+        return $schema->columns(2)->statePath('data')->schema([
             FileUpload::make('resume')
                 ->acceptedFileTypes(['application/pdf'])
                 ->openable()
@@ -45,10 +44,11 @@ class UploadResumePage extends Page implements HasForms
                 ->directory('resume')
                 ->visibility('public'),
 
-            Placeholder::make('preview')
+            TextEntry::make('preview')
                 ->columnSpanFull()
                 ->visible(Storage::disk('public')->exists('resume.pdf'))
-                ->content(new HtmlString('<iframe src="'.asset('resume.pdf').'" width="100%" height="800px"></iframe>')),
+                ->state(new HtmlString('<iframe src="'.asset('resume.pdf').'" width="100%" height="800px"></iframe>'))
+                ->html(),
         ]);
     }
 

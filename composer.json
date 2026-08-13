@@ -5,27 +5,28 @@
     "keywords": ["laravel", "framework"],
     "license": "MIT",
     "require": {
-        "php": "^8.2",
-        "codeat3/blade-simple-icons": "^7.22",
-        "filament/filament": "^3.3.49",
-        "filament/spatie-laravel-media-library-plugin": "^3.3.49",
-        "filament/spatie-laravel-tags-plugin": "^3.3.49",
-        "filament/spatie-laravel-translatable-plugin": "^3.3.49",
-        "laravel/framework": "^11.48.0",
-        "laravel/tinker": "^2.11.1",
-        "league/flysystem-aws-s3-v3": "^3.32",
-        "mvenghaus/filament-plugin-translatable-inline": "^3.0.8",
-        "ralphjsmit/laravel-seo": "^1.7.3",
-        "statikbe/laravel-filament-chained-translation-manager": "^3.3.0"
+        "php": "^8.4",
+        "codeat3/blade-simple-icons": "^8.12",
+        "filament/filament": "^5.7",
+        "filament/spatie-laravel-media-library-plugin": "^5.7",
+        "filament/spatie-laravel-tags-plugin": "^5.7",
+        "lara-zeus/spatie-translatable": "^2.0",
+        "laravel/framework": "^13.25",
+        "laravel/tinker": "^3.0",
+        "league/flysystem-aws-s3-v3": "^3.35",
+        "parfaitementweb/filament-plugin-translatable-inline": "^4.1",
+        "ralphjsmit/laravel-seo": "^1.8",
+        "statikbe/laravel-filament-chained-translation-manager": "^4.3"
     },
     "require-dev": {
         "fakerphp/faker": "^1.24.1",
-        "laravel/pint": "^1.28.0",
+        "laravel/pint": "^1.30",
         "mockery/mockery": "^1.6.12",
-        "nunomaduro/collision": "^8.5.0",
-        "pestphp/pest": "^2.36.1",
-        "pestphp/pest-plugin-laravel": "^2.4",
-        "spatie/laravel-ignition": "^2.11.0"
+        "nunomaduro/collision": "^8.9",
+        "pestphp/pest": "^5.1",
+        "pestphp/pest-plugin-laravel": "^5.0",
+        "rector/rector": "^2.6",
+        "spatie/laravel-ignition": "^2.12"
     },
     "autoload": {
         "psr-4": {
