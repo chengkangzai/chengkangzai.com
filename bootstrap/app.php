@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Middleware\CachePublicPages;
 use App\Http\Middleware\SetLocaleMiddleware;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
@@ -13,6 +14,7 @@ return Application::configure(basePath: dirname(__DIR__))
     )
     ->withMiddleware(function (Middleware $middleware) {
         $middleware->appendToGroup('web', SetLocaleMiddleware::class);
+        $middleware->prependToGroup('web', CachePublicPages::class);
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //
