@@ -1,6 +1,17 @@
+# Crawlers with no value for a personal site; each visit resets the hibernation idle timer.
 User-agent: PetalBot
+User-agent: AhrefsBot
+User-agent: SemrushBot
+User-agent: MJ12bot
+User-agent: DotBot
+User-agent: Bytespider
+User-agent: DataForSeoBot
+User-agent: BLEXBot
+User-agent: Amazonbot
+User-agent: YandexBot
 Disallow: /
 
 User-agent: *
-Disallow:
+Disallow: /admin
+Disallow: /livewire
 Sitemap: https://chengkangzai.com/sitemap.xml
